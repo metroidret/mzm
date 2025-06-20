@@ -374,8 +374,8 @@ SECTIONS {
         . = 0x000058d8; gSendNonzeroCheck = .;
         . = 0x000058da; gRecvNonzeroCheck = .;
 
-        . = 0x000058e0; src/libgcc/fp-bit-base.o(.bss);
-        . = 0x000058f8; src/libgcc/float.o(.bss);
+        . = 0x000058e0; *libgcc.a:dp-bit.o(.bss);
+        . = 0x000058f8; *libgcc.a:fp-bit.o(.bss);
         . = 0x00005910; gTrackData8 = .;
         . = 0x00005950; gTrackData3 = .;
         . = 0x00005990; gTrackData1 = .;
@@ -593,11 +593,21 @@ SECTIONS {
         src/transfer.o(.text);
         src/link.o(.text);
 
-        asm/libgcc.o(.text);
-        asm/disasm_0x0808af18.o(.text);
-        src/libgcc/fp-bit-base.o(.text);
-        src/libgcc/float.o(.text);
-        src/libgcc/libgcc.o(.text);
+        *libgcc.a:_call_via_rX.o(.text);
+        *libgcc.a:_divsi3.o(.text);
+        *libgcc.a:_dvmd_tls.o(.text);
+        *libgcc.a:_fixunsdfsi.o(.text);
+        *libgcc.a:_modsi3.o(.text);
+        *libgcc.a:_udivsi3.o(.text);
+        *libgcc.a:_umodsi3.o(.text);
+
+        *libgcc.a:dp-bit.o(.text);
+        *libgcc.a:fp-bit.o(.text);
+        *libgcc.a:_lshrdi3.o(.text);
+        *libgcc.a:_muldi3.o(.text);
+        *libgcc.a:_muldi3.o(.text);
+        *libgcc.a:_negdi2.o(.text);
+        *libc.a:memcpy.o(.text);
     } >rom
 
     .rodata : ALIGN(2) {
