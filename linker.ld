@@ -9,6 +9,8 @@ gUnk_Audio0x64 = 0x64;
 gUnk_Audio0x194F700 = 0x194F700;
 gUnk_Audio0x50 = 0x50;
 
+__nes_metroid_load_address = 0x87D8000;
+
 SECTIONS {
     ewram (NOLOAD) : ALIGN(4) {
         . = 0x00002000; gClipdataCollisionTypes = .;
@@ -1271,7 +1273,7 @@ SECTIONS {
         src/data/rooms/ridley/Bg3.o(.rodata);
 
         src/data/tilesets/tilesets_set5.o(.rodata);
-        
+
         src/data/rooms/tourian/Tourian_0.o(.rodata);
         src/data/rooms/tourian/Tourian_1.o(.rodata);
         src/data/rooms/tourian/Tourian_2.o(.rodata);
@@ -1319,7 +1321,7 @@ SECTIONS {
         src/data/rooms/crateria/Crateria_20.o(.rodata);
         src/data/rooms/crateria/Crateria_21.o(.rodata);
         src/data/rooms/crateria/Bg3.o(.rodata);
-        
+
         src/data/tilesets/tilesets_set7.o(.rodata);
 
         src/data/rooms/chozodia/Chozodia_0.o(.rodata);
@@ -1426,7 +1428,7 @@ SECTIONS {
         src/data/animated_tiles_data.o(.rodata);
         src/data/shortcut_pointers.o(.rodata);
         src/data/cable_link_data.o(.rodata);
-        sTransferRom_After = .; 
+        sTransferRom_After = .;
         src/data/samus_sprites_pointers.o(.rodata);
         src/data/frame_data_pointers.o(.rodata);
         src/data/engine_pointers.o(.rodata);
@@ -1464,10 +1466,11 @@ SECTIONS {
         src/data/internal_ending_and_gallery_data.o(.rodata);
         src/data/internal_chozodia_escape_data.o(.rodata);
         src/data/internal_io_transfer_data.o(.rodata);
+    } >rom
 
-        . = 0x7d8000 - SIZEOF(.text);
+    nes_metroid_data __nes_metroid_load_address : ALIGN(2) {
         src/data/nes_metroid.o(.rodata);
-    } >rom =0xff
+    } >rom
 
     /* DWARF debug sections.
        Symbols in the DWARF debugging sections are relative to the beginning
