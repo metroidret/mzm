@@ -299,48 +299,50 @@ void agbmain(void)
                 break;
 
             case GM_DEBUG_MENU:
-                #ifdef DEBUG
-                if (BootDebugSubroutine())
+                for (;;)
                 {
-                    gGameModeSub1 = 0;
-
-                    switch (gGameModeSub2)
+                    #ifdef DEBUG
+                    if (BootDebugSubroutine())
                     {
-                        case 1:
-                            gMainGameMode = GM_INGAME;
-                            break;
-                        case 2:
-                            gMainGameMode = GM_INTRO;
-                            break;
-                        case 3:
-                            gMainGameMode = GM_MAP_SCREEN;
-                            break;
-                        case 6:
-                            gMainGameMode = GM_DEMO;
-                            break;
-                        case 8:
-                            gMainGameMode = GM_CUTSCENE;
-                            gGameModeSub2 = 0x10;
-                            break;
-                        case 7:
-                            gMainGameMode = GM_TOURIAN_ESCAPE;
-                            gGameModeSub2 = 0x10;
-                            break;
-                        case 5:
-                            gMainGameMode = GM_CREDITS;
-                            break;
-                        case 4:
-                            gMainGameMode = GM_CHOZODIA_ESCAPE;
-                            break;
-                        default:
-                            gMainGameMode = GM_DEBUG_MENU;
-                            gWrittenToBLDY_NonGameplay = 0;
-                            break;
+                        gGameModeSub1 = 0;
+    
+                        switch (gGameModeSub2)
+                        {
+                            case 1:
+                                gMainGameMode = GM_INGAME;
+                                break;
+                            case 2:
+                                gMainGameMode = GM_INTRO;
+                                break;
+                            case 3:
+                                gMainGameMode = GM_MAP_SCREEN;
+                                break;
+                            case 6:
+                                gMainGameMode = GM_DEMO;
+                                break;
+                            case 8:
+                                gMainGameMode = GM_CUTSCENE;
+                                gGameModeSub2 = 0x10;
+                                break;
+                            case 7:
+                                gMainGameMode = GM_TOURIAN_ESCAPE;
+                                gGameModeSub2 = 0x10;
+                                break;
+                            case 5:
+                                gMainGameMode = GM_CREDITS;
+                                break;
+                            case 4:
+                                gMainGameMode = GM_CHOZODIA_ESCAPE;
+                                break;
+                            default:
+                                gMainGameMode = GM_DEBUG_MENU;
+                                gWrittenToBLDY_NonGameplay = 0;
+                                break;
+                        }
                     }
+                    break;
+                    #endif // DEBUG
                 }
-                #else // !DEBUG
-                for (;;) {}
-                #endif // DEBUG
                 break;
         }
         
