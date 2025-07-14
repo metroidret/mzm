@@ -8,6 +8,7 @@
 #include "structs/intro.h"
 #include "structs/menus/game_over.h"
 #include "structs/ending_and_gallery.h"
+#include "structs/menus/language_select.h"
 #include "structs/menus/pause_screen.h"
 #include "structs/menus/title_screen.h"
 #include "structs/menus/erase_sram.h"
@@ -27,19 +28,22 @@ struct InGameData {
 };
 
 union NonGameplayRam {
-    struct CutsceneData cutscene;
+    #ifdef REGION_EU
+    struct LanguageSelectData languageSelect;
+    #endif // REGION_EU
     struct IntroData intro;
-    struct GameOverData gameOver;
-    struct EndingData ending;
-    struct PauseScreenData pauseScreen;
     struct TitleScreenData titleScreen;
-    struct EraseSramData eraseSram;
     struct FileSelectData fileSelect;
-    struct FusionGalleryData fusionGallery;
-    struct ChozodiaEscapeData chozodiaEscape;
-    struct TourianEscapeData tourianEscape;
-    struct BootDebugData bootDebug;
     struct InGameData inGame;
+    struct PauseScreenData pauseScreen;
+    struct GameOverData gameOver;
+    struct ChozodiaEscapeData chozodiaEscape;
+    struct EndingData ending;
+    struct TourianEscapeData tourianEscape;
+    struct CutsceneData cutscene;
+    struct FusionGalleryData fusionGallery;
+    struct EraseSramData eraseSram;
+    struct BootDebugData bootDebug;
 };
 
 union EwramData {

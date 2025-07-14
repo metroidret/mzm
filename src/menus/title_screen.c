@@ -48,12 +48,33 @@ static struct TitleScreenAnimatedPalette sTitleScreenAnimatedPaletteTemplates[4]
     },
 };
 
+#ifdef REGION_EU
+static const u8* sRomInfoStringPointers[1] = {
+    sTitleScreenRomInfoTime
+};
+#else // !REGION_EU
 static const u8* sRomInfoStringPointers[4] = {
     sTitleScreenRomInfoTime,
     sTitleScreenRomInfoRegionJPN,
     sTitleScreenRomInfoRegionEUR,
     sTitleScreenRomInfoRegionUSA,
 };
+#endif // REGION_EU
+
+#ifdef REGION_EU
+static const u32** sTitleScreenMenuGfxPointers[(LANGUAGE_END - LANGUAGE_ENGLISH) * 2] = {
+    sTitleScreenEnglishMenuGfx_Top,
+    sTitleScreenEnglishMenuGfx_Bottom,
+    sTitleScreenGermanMenuGfx_Top,
+    sTitleScreenGermanMenuGfx_Bottom,
+    sTitleScreenFrenchMenuGfx_Top,
+    sTitleScreenFrenchMenuGfx_Bottom,
+    sTitleScreenItalianMenuGfx_Top,
+    sTitleScreenItalianMenuGfx_Bottom,
+    sTitleScreenSpanishMenuGfx_Top,
+    sTitleScreenSpanishMenuGfx_Bottom,
+};
+#endif // !REGION_EU
 
 static u8 sTitleScreenCometsFlags[2][2] = {
     [0] = {
@@ -917,10 +938,15 @@ u32 TitleScreenProcessBottomSparkle(struct TitleScreenOamTiming* pTiming, struct
 /**
  * @brief 770f8 | a8 | Checks if a demo should play
  * 
- * @return s8 0 = Nothing, 1 = Input, 2 = Demo start
+ * @return u32 0 = Nothing, 1 = Input, 2 = Demo start
  */
-s8 TitleScreenCheckPlayEffects(void)
+u32 TitleScreenCheckPlayEffects(void)
 {
+    #ifdef REGION_EU
+    u32 tmp1;
+    u32 tmp2;
+    #endif // REGION_EU
+
     TITLE_SCREEN_DATA.demoTimer++;
     if (TITLE_SCREEN_DATA.demoTimer > 60 * 17)
         return 2;
@@ -953,7 +979,40 @@ s8 TitleScreenCheckPlayEffects(void)
             TITLE_SCREEN_DATA.unk_F = TRUE;
     }
     else if (gChangedInput & (KEY_A | KEY_START))
+    {
+        #ifdef REGION_EU
+        tmp1 = TITLE_SCREEN_DATA.oamTimings[2].unk_1 ? 3 : 1;
+        tmp2 = tmp1;
+        return tmp2;
+        #else // !REGION
         return 1;
+        #endif // REGION_EU
+    }
+
+    #ifdef REGION_EU
+    if (gChangedInput & (KEY_UP | KEY_DOWN))
+    {
+        tmp2 = FALSE;
+
+        if (gChangedInput & KEY_UP && TITLE_SCREEN_DATA.oamTimings[2].unk_1 != 0)
+        {
+            TITLE_SCREEN_DATA.oamTimings[2].unk_1 = 0;
+            tmp2 = TRUE;
+        }
+        else if (gChangedInput & KEY_DOWN && TITLE_SCREEN_DATA.oamTimings[2].unk_1 == 0)
+        {
+            TITLE_SCREEN_DATA.oamTimings[2].unk_1 = 1;
+            tmp2 = TRUE;
+        }
+
+        if (tmp2)
+        {
+            SoundPlay(0x1FA);
+            unk_779fc(TITLE_SCREEN_DATA.oamTimings[2].unk_1);
+            TITLE_SCREEN_DATA.demoTimer = 0;
+        }
+    }
+    #endif // REGION_EU
 
     #ifdef DEBUG
     if (gChangedInput & KEY_L)
@@ -1018,14 +1077,27 @@ u32 TitleScreenSubroutine(void)
                     gGameModeSub1 = 3;
                 }
                 #ifdef DEBUG
+                #ifdef REGION_EU
+                else if (gGameModeSub2 == 4)
+                #else // !REGION_EU
                 else if (gGameModeSub2 == 3)
+                #endif // REGION_EU
                 {
                     gGameModeSub1 = 5;
                 }
                 #endif // DEBUG
                 else
                 {
-                    SoundPlay(SOUND_TITLE_SCREEN_PRESSING_START);
+                    #ifdef REGION_EU
+                    if (gGameModeSub2 == 3)
+                    {
+                        SoundPlay(SOUND_ACCEPT_CONFIRM_MENU);
+                    }
+                    else
+                    #endif // REGION_EU
+                    {
+                        SoundPlay(SOUND_TITLE_SCREEN_PRESSING_START);
+                    }
                     TITLE_SCREEN_DATA.animatedPalettes[2] = sTitleScreenAnimatedPaletteTemplates[3];
                     gGameModeSub1 = 3;
                 }
@@ -1122,7 +1194,7 @@ u32 TitleScreenIdle(void)
             break;
 
         case TITLE_SCREEN_IDLE_STAGE_IDLE:
-            ret = TitleScreenCheckPlayEffects();
+            ret = (s8)TitleScreenCheckPlayEffects();
     }
 
     return ret;
@@ -1204,6 +1276,11 @@ void TitleScreenInit(void)
 
     SET_BACKDROP_COLOR(COLOR_BLACK);
 
+    #ifdef REGION_EU
+    DmaTransfer(3, &sTitleScreenUnselectedMenuPal, PALRAM_BASE + 0x1E0, sizeof(sTitleScreenUnselectedMenuPal), 16);
+    TITLE_SCREEN_DATA.oamTimings[2].unk_1 = 0;
+    #endif // REGION_EU
+
     TitleScreenLoadPageData(&sTitleScreenPageData[0]);
     TitleScreenLoadPageData(&sTitleScreenPageData[1]);
 
@@ -1234,6 +1311,12 @@ void TitleScreenInit(void)
     DmaTransfer(3, VRAM_BASE + 0x4000, (void*)sEwramPointer, 0x4000, 16);
 
     CallLZ77UncompVram(sTitleScreenSparklesGfx, VRAM_OBJ);
+
+    #ifdef REGION_EU
+    CallLZ77UncompVram(sTitleScreenMenuGfxPointers[(gLanguage - LANGUAGE_ENGLISH) * 2], VRAM_BASE + 0xE800);
+    CallLZ77UncompVram(sTitleScreenMenuGfxPointers[(gLanguage - LANGUAGE_ENGLISH) * 2 + 1], VRAM_BASE + 0xEC00);
+    TitleScreenSetMenuPalette(TITLE_SCREEN_DATA.oamTimings[2].unk_1);
+    #endif // REGION_EU
 
     // Undefined
     TitleScreenSetBGCNTPageData(&sTitleScreenPageData[0]);
@@ -1327,6 +1410,63 @@ void TitleScreenVBlank_Empty(void)
 {
     vu8 c = 0;
 }
+
+#ifdef REGION_EU
+/**
+ * @brief Sets the palette for "Start Game" and "Language" on the title screen
+ * 
+ * @param param0 Which option is selected
+ */
+static void TitleScreenSetMenuPalette(u8 param0)
+{
+    s32 temp;
+    u16* dst1;
+    u16* dst2;
+    u16 i;
+
+    // Set "Start Game" palette
+    dst1 = VRAM_BASE + 0x352 + sTitleScreenPageData[0].tiletablePage * 0x800;
+    dst2 = dst1 + 0x20;
+
+    if (param0 == 0)
+    {
+        for (i = 0; i < 12; i++, dst1++, dst2++)
+        {
+            *dst1 = (*dst1 & 0x3FF) | 0xD000;
+            *dst2 = (*dst2 & 0x3FF) | 0xD000;
+        }
+    }
+    else
+    {
+        for (i = 0; i < 12; i++, dst1++, dst2++)
+        {
+            *dst1 |= 0xF000;
+            *dst2 |= 0xF000;
+        }
+    }
+
+    // Set "Language" palette
+    dst1 = VRAM_BASE + 0x3D6 + sTitleScreenPageData[0].tiletablePage * 0x800;
+    dst2 = dst1 + 0x20;
+
+    if (param0 != 0)
+    {
+        for (i = 0; i < 8; i++, dst1++, dst2++)
+        {
+            *dst1 = (*dst1 & 0x3FF) | 0xD000;
+            *dst2 = (*dst2 & 0x3FF) | 0xD000;
+        }
+    }
+    else
+    {
+        for (i = 0; i < 8; i++, dst1++, dst2++)
+        {
+            *dst1 |= 0xF000;
+            *dst2 |= 0xF000;
+        }
+    }
+}
+#endif // REGION_EU
 
 /**
  * @brief 777d8 | 4c | Changes the copyright symbol

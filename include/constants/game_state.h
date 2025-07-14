@@ -47,8 +47,14 @@ MAKE_ENUM(s8, Language) {
 #ifdef REGION_JP
 #define LANGUAGE_DEFAULT LANGUAGE_JAPANESE
 #else // !REGION_JP
+// US and EU default to English
 #define LANGUAGE_DEFAULT LANGUAGE_ENGLISH
 #endif // REGION_JP
+
+/**
+ * @brief Condition to check if the language is not a valid European language
+ */
+#define INVALID_EU_LANGUAGE(lang) ((lang) < LANGUAGE_ENGLISH || (lang) >= LANGUAGE_END)
 
 MAKE_ENUM(s8, PauseScreenFlag) {
     PAUSE_SCREEN_NONE,

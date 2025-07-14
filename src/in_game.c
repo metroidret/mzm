@@ -64,14 +64,18 @@ u32 InGameMainLoop(void)
             break;
 
         case SUB_GAME_MODE_DOOR_TRANSITION:
+            #ifndef REGION_EU
             IoWriteRegisters();
+            #endif // !REGION_EU
             if (ColorFadingFinishDoorTransition()) // Undefined
                 gGameModeSub1++;
             break;
 
         case SUB_GAME_MODE_PLAYING:
             DemoMainLoop();
+            #ifndef REGION_EU
             IoWriteRegisters();
+            #endif // !REGION_EU
 
             #ifdef DEBUG
             // Check for no-clip input
@@ -110,7 +114,9 @@ u32 InGameMainLoop(void)
             break;
 
         case SUB_GAME_MODE_LOADING_ROOM:
+            #ifndef REGION_EU
             IoWriteRegistersDuringTransition();
+            #endif // !REGION_EU
             if (ColorFadingProcess())
             {
                 gGameModeSub1 = 0;
@@ -120,7 +126,9 @@ u32 InGameMainLoop(void)
             break;
 
         case SUB_GAME_MODE_DYING:
+            #ifndef REGION_EU
             IoWriteRegisters();
+            #endif // !REGION_EU
             SamusUpdate();
             RoomUpdateGfxInfo();
             break;
@@ -223,6 +231,31 @@ void SetVBlankCodeInGame(void)
             CallbackSetVblank(VBlankCodeInGame);
     }
 }
+
+#ifdef REGION_EU
+/**
+ * @brief Calls IoWriteRegisters based on gGameModeSub1
+ * 
+ */
+void InGameIoWriteRegisters(void)
+{
+    switch (gGameModeSub1)
+    {
+        case 0:
+            break;
+        case SUB_GAME_MODE_DOOR_TRANSITION:
+        case SUB_GAME_MODE_PLAYING:
+        case SUB_GAME_MODE_DYING:
+            IoWriteRegisters();
+            break;
+        case SUB_GAME_MODE_LOADING_ROOM:
+            IoWriteRegistersDuringTransition();
+            break;
+        case SUB_GAME_MODE_NO_CLIP:
+            break;
+    }
+}
+#endif // REGION_EU
 
 /**
  * @brief c734 | 160 | Transfers Samus's graphics/palette to VRAM

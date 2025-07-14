@@ -1,5 +1,6 @@
 #include "syscalls.h"
 #include "data/generic_data.h"
+#include "data/menus/language_select_data.h"
 
 #include "gba.h"
 #include "audio/track_internal.h"
@@ -17,6 +18,10 @@ void agbmain(void)
     while (TRUE)
     {
         gVblankActive = FALSE;
+        #ifdef REGION_EU
+        if (gMainGameMode == GM_INGAME || gMainGameMode == GM_DEMO)
+            InGameIoWriteRegisters();
+        #endif // REGION_EU
         UpdateAudio();
 
         if (gResetGame)
@@ -67,6 +72,9 @@ void agbmain(void)
                 #endif // DEBUG
                 if (TitleScreenSubroutine())
                 {
+                    #ifdef REGION_EU
+                    gGameModeSub1 = 0;
+                    #endif // REGION_EU
                     if (gGameModeSub2 == 1)
                     {
                         gMainGameMode = GM_FILE_SELECT;
@@ -76,6 +84,13 @@ void agbmain(void)
                         DemoStart();
                         gMainGameMode = GM_DEMO;
                     }
+                    #ifdef REGION_EU
+                    else if (gGameModeSub2 == 3)
+                    {
+                        gMainGameMode = GM_SOFT_RESET;
+                        gGameModeSub1 = sLanguageSelectGameModeSub1Values[1];
+                    }
+                    #endif // REGION_EU
                     else
                     {
                         #ifdef DEBUG

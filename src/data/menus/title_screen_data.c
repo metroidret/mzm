@@ -5,6 +5,10 @@
 const u16 sTitleScreenPal[15 * 16] = INCBIN_U16("data/menus/TitleScreen/Palette.pal");
 const u16 sTitleScreenPromptPal[5 * 16] = INCBIN_U16("data/menus/TitleScreen/Prompt.pal");
 
+#ifdef REGION_EU
+const u16 sTitleScreenUnselectedMenuPal[1 * 16] = INCBIN_U16("data/menus/TitleScreen/UnselectedMenu.pal");
+#endif // REGION_EU
+
 static const u16 sTitleScreenOam_Comet_Frame0[OAM_DATA_SIZE(1)] = {
     0x1,
     0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x6000
@@ -144,6 +148,20 @@ const u32 sTitleScreenSparklesGfx[256] = INCBIN_U32("data/menus/TitleScreen/Spar
 const u32 sTitleScreenSpaceBackgroundGfx[3203] = INCBIN_U32("data/menus/TitleScreen/SpaceBackground.gfx.lz");
 const u32 sTitleScreenSpaceBackgroundDecorationGfx[797] = INCBIN_U32("data/menus/TitleScreen/SpaceBackgroundDecoration.gfx.lz");
 const u32 sTitleScreenSpaceAndGroundBackgroundGfx[1920] = INCBIN_U32("data/menus/TitleScreen/SpaceAndGroundBackground.gfx.lz");
+
+#ifdef REGION_EU
+const u32 sTitleScreenEnglishMenuGfx_Top[85] = INCBIN_U32("data/menus/TitleScreen/EnglishMenu_Top.gfx.lz");
+const u32 sTitleScreenEnglishMenuGfx_Bottom[72] = INCBIN_U32("data/menus/TitleScreen/EnglishMenu_Bottom.gfx.lz");
+const u32 sTitleScreenGermanMenuGfx_Top[89] = INCBIN_U32("data/menus/TitleScreen/GermanMenu_Top.gfx.lz");
+const u32 sTitleScreenGermanMenuGfx_Bottom[75] = INCBIN_U32("data/menus/TitleScreen/GermanMenu_Bottom.gfx.lz");
+const u32 sTitleScreenFrenchMenuGfx_Top[63] = INCBIN_U32("data/menus/TitleScreen/FrenchMenu_Top.gfx.lz");
+const u32 sTitleScreenFrenchMenuGfx_Bottom[55] = INCBIN_U32("data/menus/TitleScreen/FrenchMenu_Bottom.gfx.lz");
+const u32 sTitleScreenItalianMenuGfx_Top[79] = INCBIN_U32("data/menus/TitleScreen/ItalianMenu_Top.gfx.lz");
+const u32 sTitleScreenItalianMenuGfx_Bottom[62] = INCBIN_U32("data/menus/TitleScreen/ItalianMenu_Bottom.gfx.lz");
+const u32 sTitleScreenSpanishMenuGfx_Top[64] = INCBIN_U32("data/menus/TitleScreen/SpanishMenu_Top.gfx.lz");
+const u32 sTitleScreenSpanishMenuGfx_Bottom[45] = INCBIN_U32("data/menus/TitleScreen/SpanishMenu_Bottom.gfx.lz");
+#endif // REGION_EU
+
 const u32 sTitleScreenTitleTileTable[199] = INCBIN_U32("data/menus/TitleScreen/Title.tt");
 const u32 sTitleScreenSpaceBackgroundTileTable[702] = INCBIN_U32("data/menus/TitleScreen/SpaceBackground.tt");
 

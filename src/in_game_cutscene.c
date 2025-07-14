@@ -160,7 +160,9 @@ u32 InGameCutsceneSamusCloseUp(InGameCutsceneScene cutsceneNumber, InGameCutscen
         case 13:
             if (SramProcessIntroSave())
             {
+                #ifndef REGION_EU
                 SramWrite_Language();
+                #endif // !REGION_EU
                 result = 1;
             }
             break;

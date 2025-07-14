@@ -10,11 +10,29 @@
 extern const u16 sTitleScreenPal[15 * 16];
 extern const u16 sTitleScreenPromptPal[5 * 16];
 
+#ifdef REGION_EU
+const u16 sTitleScreenUnselectedMenuPal[1 * 16];
+#endif // REGION_EU
+
 extern const u32 sTitleScreenTitleGfx[1095];
 extern const u32 sTitleScreenSparklesGfx[256];
 extern const u32 sTitleScreenSpaceBackgroundGfx[3203];
 extern const u32 sTitleScreenSpaceBackgroundDecorationGfx[797];
 extern const u32 sTitleScreenSpaceAndGroundBackgroundGfx[1920];
+
+#ifdef REGION_EU
+extern const u32 sTitleScreenEnglishMenuGfx_Top[85];
+extern const u32 sTitleScreenEnglishMenuGfx_Bottom[72];
+extern const u32 sTitleScreenGermanMenuGfx_Top[89];
+extern const u32 sTitleScreenGermanMenuGfx_Bottom[75];
+extern const u32 sTitleScreenFrenchMenuGfx_Top[63];
+extern const u32 sTitleScreenFrenchMenuGfx_Bottom[55];
+extern const u32 sTitleScreenItalianMenuGfx_Top[79];
+extern const u32 sTitleScreenItalianMenuGfx_Bottom[62];
+extern const u32 sTitleScreenSpanishMenuGfx_Top[64];
+extern const u32 sTitleScreenSpanishMenuGfx_Bottom[45];
+#endif // REGION_EU
+
 extern const u32 sTitleScreenTitleTileTable[199];
 extern const u32 sTitleScreenSpaceBackgroundTileTable[702];
 

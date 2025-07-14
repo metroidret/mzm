@@ -4666,20 +4666,34 @@
     "path": "menus/FileSelect/Characters.gfx.lz",
     "count": {
       "us": 1531,
-      "eu": 331,
       "jp": 1531,
       "us_beta": 1531
     },
     "addr": {
       "us": 4558356,
-      "eu": 4606164,
       "jp": 4558448,
       "us_beta": 4602920
     },
     "size": 4
   },
   {
-    "path": "menus/FileSelect/TextEnglish.gfx.lz",
+    "path": "menus/FileSelect/AreaNames.gfx.lz",
+    "count": 331,
+    "addr": {
+      "eu": 4606164
+    },
+    "size": 4
+  },
+  {
+    "path": "menus/FileSelect/BgIcons.gfx.lz",
+    "count": 651,
+    "addr": {
+      "eu": 4607488
+    },
+    "size": 4
+  },
+  {
+    "path": "menus/FileSelect/OptionsTextEnglish.gfx.lz",
     "count": 345,
     "addr": {
       "us": 4564480,
@@ -4690,7 +4704,7 @@
     "size": 4
   },
   {
-    "path": "menus/FileSelect/TextGerman.gfx.lz",
+    "path": "menus/FileSelect/OptionsTextGerman.gfx.lz",
     "count": {
       "us": 345,
       "eu": 347,
@@ -4706,7 +4720,7 @@
     "size": 4
   },
   {
-    "path": "menus/FileSelect/TextFrench.gfx.lz",
+    "path": "menus/FileSelect/OptionsTextFrench.gfx.lz",
     "count": {
       "us": 345,
       "eu": 362,
@@ -4722,7 +4736,7 @@
     "size": 4
   },
   {
-    "path": "menus/FileSelect/TextItalian.gfx.lz",
+    "path": "menus/FileSelect/OptionsTextItalian.gfx.lz",
     "count": {
       "us": 345,
       "eu": 350,
@@ -4738,7 +4752,7 @@
     "size": 4
   },
   {
-    "path": "menus/FileSelect/TextSpanish.gfx.lz",
+    "path": "menus/FileSelect/OptionsTextSpanish.gfx.lz",
     "count": {
       "us": 345,
       "eu": 388,
@@ -4754,7 +4768,87 @@
     "size": 4
   },
   {
-    "path": "menus/FileSelect/Icons.gfx.lz",
+    "path": "data/menus/FileSelect/LargeTextEnglish.gfx.lz",
+    "count": 332,
+    "addr": {
+      "eu": 4617260
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/FileSelect/LargeTextGerman.gfx.lz",
+    "count": 391,
+    "addr": {
+      "eu": 4618588
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/FileSelect/LargeTextFrench.gfx.lz",
+    "count": 392,
+    "addr": {
+      "eu": 4620152
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/FileSelect/LargeTextItalian.gfx.lz",
+    "count": 353,
+    "addr": {
+      "eu": 4621720
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/FileSelect/LargeTextSpanish.gfx.lz",
+    "count": 364,
+    "addr": {
+      "eu": 4623132
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/FileSelect/DifficultyTextEnglish.gfx.lz",
+    "count": 67,
+    "addr": {
+      "eu": 4624588
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/FileSelect/DifficultyTextGerman.gfx.lz",
+    "count": 70,
+    "addr": {
+      "eu": 4624856
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/FileSelect/DifficultyTextFrench.gfx.lz",
+    "count": 71,
+    "addr": {
+      "eu": 4625136
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/FileSelect/DifficultyTextItalian.gfx.lz",
+    "count": 71,
+    "addr": {
+      "eu": 4625420
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/FileSelect/DifficultyTextSpanish.gfx.lz",
+    "count": 70,
+    "addr": {
+      "eu": 4625704
+    },
+    "size": 4
+  },
+  {
+    "path": "menus/FileSelect/ObjIcons.gfx.lz",
     "count": 1722,
     "addr": {
       "us": 4571380,
@@ -4978,6 +5072,30 @@
       "eu": 4587488,
       "jp": 4539772,
       "us_beta": 4584244
+    },
+    "size": 4
+  },
+  {
+    "path": "menus/LanguageSelect/Background.pal",
+    "count": 256,
+    "addr": {
+      "eu": 4639120
+    },
+    "size": 2
+  },
+  {
+    "path": "menus/LanguageSelect/Background.gfx.lz",
+    "count": 145,
+    "addr": {
+      "eu": 4639632
+    },
+    "size": 4
+  },
+  {
+    "path": "menus/LanguageSelect/Background.tt",
+    "count": 95,
+    "addr": {
+      "eu": 4640212
     },
     "size": 4
   },
@@ -5774,6 +5892,14 @@
     "size": 2
   },
   {
+    "path": "menus/TitleScreen/UnselectedMenu.pal",
+    "count": 16,
+    "addr": {
+      "eu": 4530060
+    },
+    "size": 2
+  },
+  {
     "path": "menus/TitleScreen/Title.gfx.lz",
     "count": 1095,
     "addr": {
@@ -5825,6 +5951,86 @@
       "eu": 4551744,
       "jp": 4506840,
       "us_beta": 4551312
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/TitleScreen/EnglishMenu_Top.gfx.lz",
+    "count": 85,
+    "addr": {
+      "eu": 4559424
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/TitleScreen/EnglishMenu_Bottom.gfx.lz",
+    "count": 72,
+    "addr": {
+      "eu": 4559764
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/TitleScreen/GermanMenu_Top.gfx.lz",
+    "count": 89,
+    "addr": {
+      "eu": 4560052
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/TitleScreen/GermanMenu_Bottom.gfx.lz",
+    "count": 75,
+    "addr": {
+      "eu": 4560408
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/TitleScreen/FrenchMenu_Top.gfx.lz",
+    "count": 63,
+    "addr": {
+      "eu": 4560708
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/TitleScreen/FrenchMenu_Bottom.gfx.lz",
+    "count": 55,
+    "addr": {
+      "eu": 4560960
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/TitleScreen/ItalianMenu_Top.gfx.lz",
+    "count": 79,
+    "addr": {
+      "eu": 4561180
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/TitleScreen/ItalianMenu_Bottom.gfx.lz",
+    "count": 62,
+    "addr": {
+      "eu": 4561496
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/TitleScreen/SpanishMenu_Top.gfx.lz",
+    "count": 64,
+    "addr": {
+      "eu": 4561744
+    },
+    "size": 4
+  },
+  {
+    "path": "data/menus/TitleScreen/SpanishMenu_Bottom.gfx.lz",
+    "count": 45,
+    "addr": {
+      "eu": 4562000
     },
     "size": 4
   },

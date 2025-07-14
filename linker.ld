@@ -1073,6 +1073,11 @@ SECTIONS {
         src/data/menus/title_screen_data.o(.rodata);
         src/data/menus/game_over_data.o(.rodata);
         src/data/menus/file_select_data.o(.rodata);
+
+#ifdef REGION_EU
+        src/data/menus/language_select_data.o(.rodata);
+#endif
+
         src/data/intro_data.o(.rodata);
         src/data/tourian_escape_data.o(.rodata);
         src/data/fusion_gallery_data.o(.rodata);

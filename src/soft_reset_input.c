@@ -7,6 +7,8 @@
 #include "structs/audio.h"
 #include "structs/game_state.h"
 
+#include "data/menus/language_select_data.h"
+
 #define SOFT_RESET_KEYS (KEY_A | KEY_B | KEY_START | KEY_SELECT)
 
 /**
@@ -75,10 +77,19 @@ void SoftReset(void)
     gGameModeSub2 = 0;
     gResetGame = 0;
     gStereoFlag = 0;
+
+    #ifdef REGION_EU
+    if (INVALID_EU_LANGUAGE(gLanguage))
+    {
+        gMainGameMode = GM_SOFT_RESET;
+        gGameModeSub1 = sLanguageSelectGameModeSub1Values[1];
+    }
+    #endif
+
     gButtonInput = KEY_NONE;
     gPreviousButtonInput = KEY_NONE;
     gChangedInput = KEY_NONE;
 
-    WRITE_16(REG_IF, 0xffff);
+    WRITE_16(REG_IF, USHORT_MAX);
     WRITE_16(REG_IME, TRUE);
 }

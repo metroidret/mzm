@@ -6,6 +6,9 @@
 
 u32 InGameMainLoop(void);
 void SetVBlankCodeInGame(void);
+#ifdef REGION_EU
+void InGameIoWriteRegisters(void)
+#endif // REGION_EU
 void TransferSamusGraphics(u32 updatePalette, struct SamusPhysics* pPhysics);
 void VBlankCodeInGameLoad(void);
 void TransferSamusAndBgGraphics(void);
