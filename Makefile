@@ -21,13 +21,13 @@ ifeq ($(REGION),us_beta)
 	PAD_TO = 0x09000000
 endif
 
-# ifeq ($(REGION),eu)
-# 	TARGET = mzm_eu
-# 	GAME_TITLE = ZEROMISSIONP
-# 	GAME_CODE = BMXP
-# 	CPPFLAGS += -DREGION_EU
-#	ASFLAGS += --defsym REGION_EU=1
-# endif
+ifeq ($(REGION),eu)
+	TARGET = mzm_eu
+	GAME_TITLE = ZEROMISSIONP
+	GAME_CODE = BMXP
+	CPPFLAGS += -DREGION_EU
+	ASFLAGS += --defsym REGION_EU=1
+endif
 
 ifeq ($(REGION),jp)
 	TARGET = mzm_jp
@@ -216,7 +216,7 @@ tools/%: tools/%.c
 	$Q$(HOSTCC) $< $(HOSTCFLAGS) $(HOSTCPPFLAGS) -o $@
 
 .PHONY: us us_debug us_beta jp jp_debug
-# eu eu_debug cn cn_debug
+# cn cn_debug
 
 us:
 	$(MAKE) REGION=us
@@ -225,10 +225,10 @@ us_debug:
 us_beta:
 	$(MAKE) REGION=us_beta
 
-# eu:
-# 	$(MAKE) REGION=eu
-# eu_debug:
-# 	$(MAKE) REGION=eu DEBUG=1
+eu:
+	$(MAKE) REGION=eu
+eu_debug:
+	$(MAKE) REGION=eu DEBUG=1
 
 jp:
 	$(MAKE) REGION=jp
