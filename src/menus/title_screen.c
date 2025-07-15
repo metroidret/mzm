@@ -21,6 +21,10 @@
 #include "structs/game_state.h"
 #include "structs/samus.h"
 
+#ifdef REGION_EU
+static void TitleScreenSetMenuPalette(u8 param0);
+#endif // REGION_EU
+
 static struct TitleScreenAnimatedPalette sTitleScreenAnimatedPaletteTemplates[4] = {
     [0] = {
         .paletteRow = 0,
@@ -62,7 +66,7 @@ static const u8* sRomInfoStringPointers[4] = {
 #endif // REGION_EU
 
 #ifdef REGION_EU
-static const u32** sTitleScreenMenuGfxPointers[(LANGUAGE_END - LANGUAGE_ENGLISH) * 2] = {
+static const u32* sTitleScreenMenuGfxPointers[(LANGUAGE_END - LANGUAGE_ENGLISH) * 2] = {
     sTitleScreenEnglishMenuGfx_Top,
     sTitleScreenEnglishMenuGfx_Bottom,
     sTitleScreenGermanMenuGfx_Top,
@@ -72,7 +76,7 @@ static const u32** sTitleScreenMenuGfxPointers[(LANGUAGE_END - LANGUAGE_ENGLISH)
     sTitleScreenItalianMenuGfx_Top,
     sTitleScreenItalianMenuGfx_Bottom,
     sTitleScreenSpanishMenuGfx_Top,
-    sTitleScreenSpanishMenuGfx_Bottom,
+    sTitleScreenSpanishMenuGfx_Bottom
 };
 #endif // !REGION_EU
 
@@ -1247,7 +1251,11 @@ void TitleScreenInit(void)
 {
     CallbackSetVblank(TitleScreenVBlank_Empty);
 
+    #ifdef REGION_EU
+    BitFill(3, 0, &gNonGameplayRam, sizeof(gNonGameplayRam), 32);
+    #else // !REGION_EU
     DMA_FILL_32(3, 0, &gNonGameplayRam, sizeof(gNonGameplayRam))
+    #endif // REGION_EU
 
     TITLE_SCREEN_DATA.bldcnt = BLDCNT_SCREEN_FIRST_TARGET | BLDCNT_BRIGHTNESS_DECREASE_EFFECT;
 
@@ -1264,7 +1272,11 @@ void TitleScreenInit(void)
     
     gOamXOffset_NonGameplay = gOamYOffset_NonGameplay = 0;
 
+    #ifdef REGION_EU
+    BitFill(3, 0, &gSamusPhysics, sizeof(gSamusPhysics), 32);
+    #else // !REGION_EU
     DMA_FILL_32(3, 0, &gSamusPhysics, sizeof(gSamusPhysics));
+    #endif // REGION_EU
 
     gBootDebugActive = FALSE;
     gDebugMode = FALSE;

@@ -7,11 +7,18 @@
 
 #include "constants/cutscene.h"
 #include "constants/audio.h"
+#include "constants/menus/pause_screen.h"
 
 #include "structs/menus/language_select.h"
 #include "structs/display.h"
 #include "structs/game_state.h"
 #include "structs/cutscene.h"
+
+#ifdef REGION_EU
+static void LanguageSelectChangeHighlight(u8 highlight, u8 language);
+static void LanguageSelectUpdateHighlightAnimation(struct LanguageColorAnimation* pAnim);
+static u32 LanguageSelectSubroutine(void);
+#endif // REGION_EU
 
 /**
  * @brief 7ef9c | 54 | Subroutine for a soft reset
@@ -118,7 +125,7 @@ u32 SoftResetSubroutine(void)
  * @param highlight Whether to highlight the language
  * @param language The language to change
  */
-void LanguageSelectChangeHighlight(u8 highlight, u8 language)
+static void LanguageSelectChangeHighlight(u8 highlight, u8 language)
 {
     u16 i;
     u16* dst1;
@@ -159,7 +166,7 @@ void LanguageSelectChangeHighlight(u8 highlight, u8 language)
  * 
  * @param pAnim Pointer to LanguageColorAnimation data
  */
-void LanguageSelectUpdateHighlightAnimation(struct LanguageColorAnimation* pAnim)
+static void LanguageSelectUpdateHighlightAnimation(struct LanguageColorAnimation* pAnim)
 {
     if (pAnim->timer != 0)
     {
@@ -181,11 +188,11 @@ void LanguageSelectUpdateHighlightAnimation(struct LanguageColorAnimation* pAnim
  * 
  * @return u32 bool, language selected
  */
-u32 LanguageSelectSubroutine(void)
+static u32 LanguageSelectSubroutine(void)
 {
     s32 language;
 
-    CheckForMaintainedInput(1);
+    CheckForMaintainedInput(MAINTAINED_INPUT_SPEED_SLOW);
 
     if (gChangedInput & (KEY_A | KEY_START))
     {

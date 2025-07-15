@@ -33,7 +33,7 @@ extern const u32 sTitleScreenSpanishMenuGfx_Top[64];
 extern const u32 sTitleScreenSpanishMenuGfx_Bottom[45];
 #endif // REGION_EU
 
-extern const u32 sTitleScreenTitleTileTable[199];
+extern const u32 sTitleScreenTitleTileTable[];
 extern const u32 sTitleScreenSpaceBackgroundTileTable[702];
 
 extern const u8 sTitleScreenRomInfoPosition[4];

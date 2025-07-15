@@ -162,7 +162,7 @@ const u32 sTitleScreenSpanishMenuGfx_Top[64] = INCBIN_U32("data/menus/TitleScree
 const u32 sTitleScreenSpanishMenuGfx_Bottom[45] = INCBIN_U32("data/menus/TitleScreen/SpanishMenu_Bottom.gfx.lz");
 #endif // REGION_EU
 
-const u32 sTitleScreenTitleTileTable[199] = INCBIN_U32("data/menus/TitleScreen/Title.tt");
+const u32 sTitleScreenTitleTileTable[] = INCBIN_U32("data/menus/TitleScreen/Title.tt");
 const u32 sTitleScreenSpaceBackgroundTileTable[702] = INCBIN_U32("data/menus/TitleScreen/SpaceBackground.tt");
 
 const u8 sTitleScreenRomInfoPosition[4] = {
