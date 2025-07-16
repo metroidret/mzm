@@ -58,10 +58,10 @@ extern const u32 sChozoHintBackgroundTileTable[577];
 
 extern const u32 sEquipmentNamesHiraganaGfx[411];
 extern const u32 sEquipmentNamesEnglishGfx[380];
-extern const u32 sEquipmentNamesGermanGfx[380];
-extern const u32 sEquipmentNamesFrenchGfx[380];
-extern const u32 sEquipmentNamesItalianGfx[380];
-extern const u32 sEquipmentNamesSpanishGfx[380];
+extern const u32 sEquipmentNamesGermanGfx[];
+extern const u32 sEquipmentNamesFrenchGfx[];
+extern const u32 sEquipmentNamesItalianGfx[];
+extern const u32 sEquipmentNamesSpanishGfx[];
 
 extern const u32 sMapScreenAreaNamesHiraganaGfx[198];
 
@@ -69,15 +69,15 @@ extern const u32 sMenuNamesHiraganaGfx[113];
 extern const u32 sMenuNamesEnglishGfx[92];
 extern const u32 sMenuNamesGermanGfx[97];
 extern const u32 sMenuNamesFrenchGfx[91];
-extern const u32 sMenuNamesItalianGfx[92];
-extern const u32 sMenuNamesSpanishGfx[96];
+extern const u32 sMenuNamesItalianGfx[];
+extern const u32 sMenuNamesSpanishGfx[];
 
 extern const u32 sMapScreenUnknownItemsNamesHiraganaGfx[76];
 extern const u32 sMapScreenUnknownItemsNamesEnglishGfx[65];
-extern const u32 sMapScreenUnknownItemsNamesGermanGfx[68];
-extern const u32 sMapScreenUnknownItemsNamesFrenchGfx[68];
-extern const u32 sMapScreenUnknownItemsNamesItalianGfx[67];
-extern const u32 sMapScreenUnknownItemsNamesSpanishGfx[69];
+extern const u32 sMapScreenUnknownItemsNamesGermanGfx[];
+extern const u32 sMapScreenUnknownItemsNamesFrenchGfx[];
+extern const u32 sMapScreenUnknownItemsNamesItalianGfx[];
+extern const u32 sMapScreenUnknownItemsNamesSpanishGfx[];
 
 extern const u32 sMapScreenChozoStatueAreaNamesHiraganaGfx[154];
 
@@ -120,7 +120,13 @@ extern const struct OamArray sPauseScreenBossIconsOam[BOSS_ICON_OAM_ID_END];
 extern const struct OamArray sPauseScreenTargetsOam[TARGET_OAM_END];
 extern const struct OamArray sPauseScreenWorldMapOam[WORLD_MAP_OAM_ID_END];
 
-extern const u8 sMaintainedInputDelays[8];
+#ifdef REGION_EU
+extern const u8 sMaintainedInputDelays_Fast[7];
+extern const u8 sMaintainedInputDelays_Slow[4];
+extern const u8 sMaintainedInputDelaysLastSet[MAINTAINED_INPUT_SPEED_COUNT];
+#else // !REGION_EU
+extern const u8 sMaintainedInputDelays_Fast[8];
+#endif // REGION_EU
 
 extern const u8 sMapScreenAreaIds[MAX_AMOUNT_OF_AREAS];
 extern const u8 sMapScreenAreasViewOrder[MAX_AMOUNT_OF_AREAS];

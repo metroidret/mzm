@@ -80,11 +80,15 @@ void SramRead_All(void)
     SramRead_MostRecentSaveFile();
     SramRead_TimeAttack();
 
+    #ifdef REGION_EU
+    SramRead_Language();
+    #else // !REGION_EU
     if (SramRead_Language())
     {
         gLanguage = LANGUAGE_DEFAULT;
         SramWrite_Language();
     }
+    #endif // REGION_EU
 }
 
 /**
@@ -2056,9 +2060,11 @@ void unk_7584c(u8 param_1)
                 gDebugMode = FALSE;            
             }
 
-            #ifdef REGION_JP
+            #if defined(REGION_EU)
+            if (INVALID_EU_LANGUAGE(gLanguage))
+            #elif defined(REGION_JP)
             if (gLanguage > LANGUAGE_HIRAGANA)
-            #endif // REGION_JP
+            #endif
             {
                 gLanguage = LANGUAGE_DEFAULT;
             }

@@ -1,5 +1,6 @@
 #include "data/chozodia_escape_data.h"
 #include "data/tourian_escape_data.h"
+#include "constants/game_state.h"
 
 const u16 sChozodiaEscapeShipHeatingUpPal[8 * 16] = INCBIN_U16("data/chozodia_escape/ShipHeatingUp.pal");
 const u16 sChozodiaEscapeGroundHeatingUpPal[8 * 16] = INCBIN_U16("data/chozodia_escape/GroundHeatingUp.pal");
@@ -315,6 +316,95 @@ const u16 sChozodiaEscapeOam_MissionAccomplishedHiragana_Frame0[OAM_DATA_SIZE(9)
     OBJ_SHAPE_VERTICAL | 0xf8, 0x37, 0xb0
 };
 
+#ifdef REGION_EU
+
+const u16 sChozodiaEscapeOam_MissionAccomplishedGerman_Frame0[OAM_DATA_SIZE(21)] = {
+    21,
+    0xf5, OBJ_SIZE_16x16 | 0x1a2, 0xf,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1af, 0x110,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1b4, 0x146,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1bd, 0x146,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1c6, 0x110,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1cb, 0x140,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1d4, 0x118,
+    0xf5, OBJ_SIZE_16x16 | 0x1e4, 0x100,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1ee, 0x102,
+    OBJ_SHAPE_VERTICAL | 0xf8, 0x1f7, 0x10c,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x0, 0x108,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x9, 0x146,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x12, 0x104,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1b, 0x10e,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x24, 0x114,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x29, 0x140,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x32, 0x146,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x3b, 0x146,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x44, 0x108,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x4d, 0x118,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x58, 0xb0
+};
+
+const u16 sChozodiaEscapeOam_MissionAccomplishedFrench_Frame0[OAM_DATA_SIZE(15)] = {
+    15,
+    0xf5, OBJ_SIZE_16x16 | 0x1bd, 0xf,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1ca, 0x110,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1cf, 0x146,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1d8, 0x146,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1e1, 0x110,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1e6, 0x140,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1ef, 0x118,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1ff, 0x144,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x8, 0x154,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x11, 0x14a,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1a, 0x146,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x23, 0x146,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x2c, 0x110,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x31, 0x108,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x3b, 0xb0
+};
+
+const u16 sChozodiaEscapeOam_MissionAccomplishedItalian_Frame0[OAM_DATA_SIZE(17)] = {
+    17,
+    0xf5, OBJ_SIZE_16x16 | 0x1b2, 0xf,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1bf, 0x110,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1c4, 0x146,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1cd, 0x146,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1d6, 0x110,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1db, 0x140,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1e4, 0x118,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1ed, 0x108,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1fd, 0x104,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x6, 0x140,
+    0xf5, OBJ_SIZE_16x16 | 0xf, 0x116,
+    OBJ_SHAPE_VERTICAL | 0xf7, 0x1c, 0x142,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x25, 0x110,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x2a, 0x14a,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x33, 0x148,
+    0xf5, OBJ_SIZE_16x16 | 0x3c, 0x100,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x47, 0xb0
+};
+
+const u16 sChozodiaEscapeOam_MissionAccomplishedSpanish_Frame0[OAM_DATA_SIZE(16)] = {
+    16,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1b6, 0xb1,
+    0xf5, OBJ_SIZE_16x16 | 0x1be, 0xf,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1cb, 0x110,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1d0, 0x146,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1d9, 0x110,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1de, 0x156,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1e7, 0x118,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1f6, 0x104,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1ff, 0x14a,
+    0xf5, OBJ_SIZE_16x16 | 0x8, 0x116,
+    OBJ_SHAPE_VERTICAL | 0xf7, 0x15, 0x142,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x1f, 0x114,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x25, 0x110,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x2a, 0x106,
+    0xf5, OBJ_SIZE_16x16 | 0x33, 0x100,
+    OBJ_SHAPE_VERTICAL | 0xf5, 0x40, 0xb0
+};
+
+#endif // REGION_EU
+
 const u8 sChozodiaEscapeHeatingUpPalOffsets[8] = {
     0 * 16, 1 * 16, 2 * 16, 3 * 16,
     4 * 16, 5 * 16, 6 * 16, 7 * 16,
@@ -350,6 +440,18 @@ const u16 sChozodiaEscape_5ca0f8[8][2] = {
     [7] = { BLOCK_SIZE + HALF_BLOCK_SIZE + 8, BLOCK_SIZE + HALF_BLOCK_SIZE + 8 },
 };
 
+#ifdef REGION_EU
+const u16* sChozodiaEscapeOamPointers_MissionAccomplished[LANGUAGE_END] = {
+    [LANGUAGE_JAPANESE] = sChozodiaEscapeOam_MissionAccomplishedEnglish_Frame0,
+    [LANGUAGE_HIRAGANA] = sChozodiaEscapeOam_MissionAccomplishedHiragana_Frame0,
+    [LANGUAGE_ENGLISH] = sChozodiaEscapeOam_MissionAccomplishedEnglish_Frame0,
+    [LANGUAGE_GERMAN] = sChozodiaEscapeOam_MissionAccomplishedGerman_Frame0,
+    [LANGUAGE_FRENCH] = sChozodiaEscapeOam_MissionAccomplishedFrench_Frame0,
+    [LANGUAGE_ITALIAN] = sChozodiaEscapeOam_MissionAccomplishedItalian_Frame0,
+    [LANGUAGE_SPANISH] = sChozodiaEscapeOam_MissionAccomplishedSpanish_Frame0
+};
+#endif // REGION_EU
+
 const u32 sChozodiaEscapeCraterBackgroundGfx[5227] = INCBIN_U32("data/chozodia_escape/CraterBackground.gfx.lz");
 const u32 sChozodiaEscapeCraterBackgroundTileTable[418] = INCBIN_U32("data/chozodia_escape/CraterBackground.tt");
 
@@ -362,4 +464,4 @@ const u32 sChozodiaEscapeZebesSkyTileTable[418] = INCBIN_U32("data/chozodia_esca
 const u32 sChozodiaEscapeSamusInBlueShipGfx[2699] = INCBIN_U32("data/chozodia_escape/SamusInBlueShip.gfx.lz");
 const u32 sChozodiaEscapeSamusInBlueShipTileTable[368] = INCBIN_U32("data/chozodia_escape/SamusInBlueShip.tt");
 
-const u32 sChozodiaEscapeMissionAccomplishedLettersGfx[414] = INCBIN_U32("data/chozodia_escape/MissionAccomplishedLetters.gfx.lz");
+const u32 sChozodiaEscapeMissionAccomplishedLettersGfx[] = INCBIN_U32("data/chozodia_escape/MissionAccomplishedLetters.gfx.lz");

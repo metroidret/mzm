@@ -21,6 +21,7 @@
 #include "constants/text.h"
 #include "constants/game_state.h"
 #include "constants/menus/file_select.h"
+#include "constants/menus/pause_screen.h"
 
 #include "structs/audio.h"
 #include "structs/cable_link.h"
@@ -79,20 +80,38 @@ static s8 sSaveFileAreasId[12] = {
     [11] = AREA_BRINSTAR,
 };
 
-static const u32* sFileSelectTextGfxPointers[LANGUAGE_END - 2] = {
-    [LANGUAGE_ENGLISH - 2] = sFileSelectTextEnglishGfx,
-    #ifdef REGION_US_BETA
-    [LANGUAGE_GERMAN - 2] = sFileSelectTextGermanGfx,
-    [LANGUAGE_FRENCH - 2] = sFileSelectTextFrenchGfx,
-    [LANGUAGE_ITALIAN - 2] = sFileSelectTextItalianGfx,
-    [LANGUAGE_SPANISH - 2] = sFileSelectTextSpanishGfx
-    #else // !REGION_US_BETA
-    [LANGUAGE_GERMAN - 2] = sFileSelectTextEnglishGfx,
-    [LANGUAGE_FRENCH - 2] = sFileSelectTextEnglishGfx,
-    [LANGUAGE_ITALIAN - 2] = sFileSelectTextEnglishGfx,
-    [LANGUAGE_SPANISH - 2] = sFileSelectTextEnglishGfx
-    #endif // REGION_US_BETA
+static const u32* sFileSelectOptionsTextGfxPointers[LANGUAGE_END - LANGUAGE_ENGLISH] = {
+    [LANGUAGE_ENGLISH - LANGUAGE_ENGLISH] = sFileSelectOptionsTextEnglishGfx,
+    #if defined(DEBUG) || defined(REGION_EU)
+    [LANGUAGE_GERMAN - LANGUAGE_ENGLISH] = sFileSelectOptionsTextGermanGfx,
+    [LANGUAGE_FRENCH - LANGUAGE_ENGLISH] = sFileSelectOptionsTextFrenchGfx,
+    [LANGUAGE_ITALIAN - LANGUAGE_ENGLISH] = sFileSelectOptionsTextItalianGfx,
+    [LANGUAGE_SPANISH - LANGUAGE_ENGLISH] = sFileSelectOptionsTextSpanishGfx
+    #else // !(DEBUG || REGION_EU)
+    [LANGUAGE_GERMAN - LANGUAGE_ENGLISH] = sFileSelectOptionsTextEnglishGfx,
+    [LANGUAGE_FRENCH - LANGUAGE_ENGLISH] = sFileSelectOptionsTextEnglishGfx,
+    [LANGUAGE_ITALIAN - LANGUAGE_ENGLISH] = sFileSelectOptionsTextEnglishGfx,
+    [LANGUAGE_SPANISH - LANGUAGE_ENGLISH] = sFileSelectOptionsTextEnglishGfx
+    #endif // DEBUG || REGION_EU
 };
+
+#ifdef REGION_EU
+static const u32* sFileSelectLargeTextGfxPointers[LANGUAGE_END - LANGUAGE_ENGLISH] = {
+    [LANGUAGE_ENGLISH - LANGUAGE_ENGLISH] = sFileSelectLargeTextEnglishGfx,
+    [LANGUAGE_GERMAN - LANGUAGE_ENGLISH] = sFileSelectLargeTextGermanGfx,
+    [LANGUAGE_FRENCH - LANGUAGE_ENGLISH] = sFileSelectLargeTextFrenchGfx,
+    [LANGUAGE_ITALIAN - LANGUAGE_ENGLISH] = sFileSelectLargeTextItalianGfx,
+    [LANGUAGE_SPANISH - LANGUAGE_ENGLISH] = sFileSelectLargeTextSpanishGfx
+};
+
+static const u32* sFileSelectDifficultyTextGfxPointers[LANGUAGE_END - LANGUAGE_ENGLISH] = {
+    [LANGUAGE_ENGLISH - LANGUAGE_ENGLISH] = sFileSelectDifficultyTextEnglishGfx,
+    [LANGUAGE_GERMAN - LANGUAGE_ENGLISH] = sFileSelectDifficultyTextGermanGfx,
+    [LANGUAGE_FRENCH - LANGUAGE_ENGLISH] = sFileSelectDifficultyTextFrenchGfx,
+    [LANGUAGE_ITALIAN - LANGUAGE_ENGLISH] = sFileSelectDifficultyTextItalianGfx,
+    [LANGUAGE_SPANISH - LANGUAGE_ENGLISH] = sFileSelectDifficultyTextSpanishGfx
+};
+#endif // REGION_EU
 
 static struct FileSelectMenuCursors sFileSelectMenuCursors_Empty = {
     .confirmCopy = 1,
@@ -2949,7 +2968,11 @@ static u8 OptionsSubroutine(void)
             break;
 
         case 2:
+            #ifdef REGION_EU
+            CheckForMaintainedInput(MAINTAINED_INPUT_SPEED_FAST);
+            #else // !REGION_EU
             CheckForMaintainedInput();
+            #endif // REGION_EU
 
             if (!gChangedInput)
                 break;
@@ -4519,7 +4542,9 @@ static void FileSelectSetLanguage(void)
 
     i = FALSE;
 
-    #ifdef REGION_JP
+    #if defined(REGION_EU)
+    if (INVALID_EU_LANGUAGE(gLanguage))
+    #elif defined(REGION_JP)
     if (gLanguage > LANGUAGE_HIRAGANA)
     #else // !REGION_JP
     if (gLanguage != LANGUAGE_ENGLISH)
@@ -4582,9 +4607,17 @@ static void FileSelectInit(void)
     DmaTransfer(3, sFileSelectIconsPal, PALRAM_OBJ, sizeof(sFileSelectIconsPal), 16);
     SET_BACKDROP_COLOR(COLOR_BLACK);
 
+    #ifdef REGION_EU
+    CallLZ77UncompVram(sFileSelectAreaNamesGfx, VRAM_BASE + 0x2400);
+    CallLZ77UncompVram(sFileSelectBgIconsGfx, VRAM_BASE + 0x3800);
+    CallLZ77UncompVram(sFileSelectLargeTextGfxPointers[gLanguage - LANGUAGE_ENGLISH], VRAM_BASE + 0x4800);
+    CallLZ77UncompVram(sFileSelectDifficultyTextGfxPointers[gLanguage - LANGUAGE_ENGLISH], VRAM_BASE + 0x3400);
+    #else // !REGION_EU
     CallLZ77UncompVram(sFileSelectCharactersGfx, VRAM_BASE + 0x400);
+    #endif // REGION_EU
+
     CallLZ77UncompVram(sFileSelectChozoBackgroundGfx, VRAM_BASE + 0x8000);
-    CallLZ77UncompVram(sFileSelectIconsGfx, VRAM_OBJ);
+    CallLZ77UncompVram(sFileSelectObjIconsGfx, VRAM_OBJ);
 
     // If not on JP, the translations for "Copy", "Erase", and "Options" are blanked out,
     // and the options menu text is replaced with the appropriate language. Debug allows
@@ -4594,8 +4627,10 @@ static void FileSelectInit(void)
     if (gLanguage >= LANGUAGE_ENGLISH)
     #endif // DEBUG
     {
+        #ifndef REGION_EU
         BitFill(3, 0, VRAM_BASE + 0x400, 0x800, 16);
-        CallLZ77UncompVram(sFileSelectTextGfxPointers[gLanguage - LANGUAGE_ENGLISH], VRAM_BASE + 0xC00);
+        #endif // !REGION_EU
+        CallLZ77UncompVram(sFileSelectOptionsTextGfxPointers[gLanguage - LANGUAGE_ENGLISH], VRAM_BASE + 0xC00);
     }
     #endif // DEBUG || !REGION_JP
 
@@ -5183,7 +5218,11 @@ static u8 FileSelectUpdateSubMenu(void)
     {
         case 0:
             result = 0;
+            #ifdef REGION_EU
+            CheckForMaintainedInput(MAINTAINED_INPUT_SPEED_FAST);
+            #else // !REGION_EU
             CheckForMaintainedInput();
+            #endif // REGION_EU
 
             if (gChangedInput)
             {

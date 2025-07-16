@@ -314,4 +314,10 @@ enum ChozoStatueHintSubroutineStage {
 #define TARGET_MOVEMENT_FLAG  (1 << 0)
 #define TARGET_SCROLLING_FLAG (1 << 1)
 
+enum MaintainedInputSpeed {
+    MAINTAINED_INPUT_SPEED_FAST,
+    MAINTAINED_INPUT_SPEED_SLOW,
+    MAINTAINED_INPUT_SPEED_COUNT
+};
+
 #endif

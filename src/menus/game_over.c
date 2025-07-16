@@ -310,7 +310,7 @@ static void GameOverInit(void)
     LZ77UncompVRAM(sGameOver_454520, VRAM_BASE);
     DmaTransfer(3, VRAM_BASE + 0x1800, VRAM_BASE + 0x1000, 0x1800 - 0x1000, 32);
     LZ77UncompVRAM(sGameOverTextAndBackgroundGfx, VRAM_BASE + 0x4000);
-    LZ77UncompVRAM(sFileSelectIconsGfx, VRAM_OBJ);
+    LZ77UncompVRAM(sFileSelectObjIconsGfx, VRAM_OBJ);
     LZ77UncompVRAM(sGameOverTextPromptGfxPointers[gLanguage], VRAM_BASE + 0xA800);
 
     WRITE_16(REG_BG0CNT, CREATE_BGCNT(1, 0, BGCNT_HIGH_PRIORITY, BGCNT_SIZE_256x256));

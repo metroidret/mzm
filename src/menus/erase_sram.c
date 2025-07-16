@@ -377,7 +377,7 @@ static void EraseSramInit(void)
     #elif defined(REGION_JP)
     if (ERASE_SRAM_DATA.language > LANGUAGE_HIRAGANA)
     #else // !(DEBUG || REGION_JP)
-    if (ERASE_SRAM_DATA.language < LANGUAGE_ENGLISH || ERASE_SRAM_DATA.language >= LANGUAGE_END)
+    if (INVALID_EU_LANGUAGE(ERASE_SRAM_DATA.language))
     #endif
     {
         ERASE_SRAM_DATA.language = LANGUAGE_DEFAULT;
@@ -385,8 +385,14 @@ static void EraseSramInit(void)
 
     while (READ_16(REG_VCOUNT) >= 21 && READ_16(REG_VCOUNT) <= SCREEN_SIZE_Y);
 
+    #ifdef REGION_EU
+    DmaTransfer(3, sEraseSramMenuBackgroundPal, PALRAM_BASE, 13 * PAL_ROW_SIZE, 16);
+    DmaTransfer(3, sEraseSramMenuObjectsPal, PALRAM_OBJ, sizeof(sEraseSramMenuObjectsPal), 16);
+    #else // !REGION_EU
     DMA_SET(3, sEraseSramMenuBackgroundPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, (13 * PAL_ROW_SIZE) / sizeof(u16)));
     DMA_SET(3, sEraseSramMenuObjectsPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, sizeof(sEraseSramMenuObjectsPal) / sizeof(u16)));
+    #endif // REGION_EU
+    
     SET_BACKDROP_COLOR(COLOR_BLACK);
 
     LZ77UncompVRAM(sEraseSramMenuFirstBoxGfx, VRAM_BASE + 0x1000);

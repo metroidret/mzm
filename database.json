@@ -2490,7 +2490,7 @@
     "size": 4
   },
   {
-    "path": "ending/Text.gfx.lz",
+    "path": "ending/TextEnglish.gfx.lz",
     "count": 803,
     "addr": {
       "us": 5895592,
@@ -2501,13 +2501,45 @@
     "size": 4
   },
   {
-    "path": "ending/TextJap.gfx.lz",
+    "path": "ending/TextHiragana.gfx.lz",
     "count": 511,
     "addr": {
       "us": 5898804,
       "eu": 5959364,
       "jp": 5899076,
       "us_beta": 5943368
+    },
+    "size": 4
+  },
+  {
+    "path": "ending/TextFrench.gfx.lz",
+    "count": 759,
+    "addr": {
+      "eu": 5961408
+    },
+    "size": 4
+  },
+  {
+    "path": "ending/TextGerman.gfx.lz",
+    "count": 726,
+    "addr": {
+      "eu": 5964444
+    },
+    "size": 4
+  },
+  {
+    "path": "ending/TextItalian.gfx.lz",
+    "count": 883,
+    "addr": {
+      "eu": 5967348
+    },
+    "size": 4
+  },
+  {
+    "path": "ending/TextSpanish.gfx.lz",
+    "count": 773,
+    "addr": {
+      "eu": 5970880
     },
     "size": 4
   },
@@ -2534,13 +2566,45 @@
     "size": 1
   },
   {
-    "path": "ending/NumbersMisc.gfx.lz",
+    "path": "ending/NumbersMiscEnglish.gfx.lz",
     "count": 218,
     "addr": {
       "us": 5902128,
       "eu": 5975252,
       "jp": 5902400,
       "us_beta": 5946692
+    },
+    "size": 4
+  },
+  {
+    "path": "ending/NumbersMiscGerman.gfx.lz",
+    "count": 209,
+    "addr": {
+      "eu": 5976124
+    },
+    "size": 4
+  },
+  {
+    "path": "ending/NumbersMiscFrench.gfx.lz",
+    "count": 217,
+    "addr": {
+      "eu": 5976960
+    },
+    "size": 4
+  },
+  {
+    "path": "ending/NumbersMiscItalian.gfx.lz",
+    "count": 208,
+    "addr": {
+      "eu": 5977828
+    },
+    "size": 4
+  },
+  {
+    "path": "ending/NumbersMiscSpanish.gfx.lz",
+    "count": 225,
+    "addr": {
+      "eu": 5978660
     },
     "size": 4
   },
@@ -4768,7 +4832,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/FileSelect/LargeTextEnglish.gfx.lz",
+    "path": "menus/FileSelect/LargeTextEnglish.gfx.lz",
     "count": 332,
     "addr": {
       "eu": 4617260
@@ -4776,7 +4840,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/FileSelect/LargeTextGerman.gfx.lz",
+    "path": "menus/FileSelect/LargeTextGerman.gfx.lz",
     "count": 391,
     "addr": {
       "eu": 4618588
@@ -4784,7 +4848,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/FileSelect/LargeTextFrench.gfx.lz",
+    "path": "menus/FileSelect/LargeTextFrench.gfx.lz",
     "count": 392,
     "addr": {
       "eu": 4620152
@@ -4792,7 +4856,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/FileSelect/LargeTextItalian.gfx.lz",
+    "path": "menus/FileSelect/LargeTextItalian.gfx.lz",
     "count": 353,
     "addr": {
       "eu": 4621720
@@ -4800,7 +4864,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/FileSelect/LargeTextSpanish.gfx.lz",
+    "path": "menus/FileSelect/LargeTextSpanish.gfx.lz",
     "count": 364,
     "addr": {
       "eu": 4623132
@@ -4808,7 +4872,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/FileSelect/DifficultyTextEnglish.gfx.lz",
+    "path": "menus/FileSelect/DifficultyTextEnglish.gfx.lz",
     "count": 67,
     "addr": {
       "eu": 4624588
@@ -4816,7 +4880,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/FileSelect/DifficultyTextGerman.gfx.lz",
+    "path": "menus/FileSelect/DifficultyTextGerman.gfx.lz",
     "count": 70,
     "addr": {
       "eu": 4624856
@@ -4824,7 +4888,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/FileSelect/DifficultyTextFrench.gfx.lz",
+    "path": "menus/FileSelect/DifficultyTextFrench.gfx.lz",
     "count": 71,
     "addr": {
       "eu": 4625136
@@ -4832,7 +4896,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/FileSelect/DifficultyTextItalian.gfx.lz",
+    "path": "menus/FileSelect/DifficultyTextItalian.gfx.lz",
     "count": 71,
     "addr": {
       "eu": 4625420
@@ -4840,7 +4904,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/FileSelect/DifficultyTextSpanish.gfx.lz",
+    "path": "menus/FileSelect/DifficultyTextSpanish.gfx.lz",
     "count": 70,
     "addr": {
       "eu": 4625704
@@ -5955,7 +6019,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/TitleScreen/EnglishMenu_Top.gfx.lz",
+    "path": "menus/TitleScreen/EnglishMenu_Top.gfx.lz",
     "count": 85,
     "addr": {
       "eu": 4559424
@@ -5963,7 +6027,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/TitleScreen/EnglishMenu_Bottom.gfx.lz",
+    "path": "menus/TitleScreen/EnglishMenu_Bottom.gfx.lz",
     "count": 72,
     "addr": {
       "eu": 4559764
@@ -5971,7 +6035,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/TitleScreen/GermanMenu_Top.gfx.lz",
+    "path": "menus/TitleScreen/GermanMenu_Top.gfx.lz",
     "count": 89,
     "addr": {
       "eu": 4560052
@@ -5979,7 +6043,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/TitleScreen/GermanMenu_Bottom.gfx.lz",
+    "path": "menus/TitleScreen/GermanMenu_Bottom.gfx.lz",
     "count": 75,
     "addr": {
       "eu": 4560408
@@ -5987,7 +6051,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/TitleScreen/FrenchMenu_Top.gfx.lz",
+    "path": "menus/TitleScreen/FrenchMenu_Top.gfx.lz",
     "count": 63,
     "addr": {
       "eu": 4560708
@@ -5995,7 +6059,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/TitleScreen/FrenchMenu_Bottom.gfx.lz",
+    "path": "menus/TitleScreen/FrenchMenu_Bottom.gfx.lz",
     "count": 55,
     "addr": {
       "eu": 4560960
@@ -6003,7 +6067,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/TitleScreen/ItalianMenu_Top.gfx.lz",
+    "path": "menus/TitleScreen/ItalianMenu_Top.gfx.lz",
     "count": 79,
     "addr": {
       "eu": 4561180
@@ -6011,7 +6075,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/TitleScreen/ItalianMenu_Bottom.gfx.lz",
+    "path": "menus/TitleScreen/ItalianMenu_Bottom.gfx.lz",
     "count": 62,
     "addr": {
       "eu": 4561496
@@ -6019,7 +6083,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/TitleScreen/SpanishMenu_Top.gfx.lz",
+    "path": "menus/TitleScreen/SpanishMenu_Top.gfx.lz",
     "count": 64,
     "addr": {
       "eu": 4561744
@@ -6027,7 +6091,7 @@
     "size": 4
   },
   {
-    "path": "data/menus/TitleScreen/SpanishMenu_Bottom.gfx.lz",
+    "path": "menus/TitleScreen/SpanishMenu_Bottom.gfx.lz",
     "count": 45,
     "addr": {
       "eu": 4562000

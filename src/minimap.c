@@ -690,12 +690,11 @@ void MinimapDraw(void)
 
         tmp = &src[yPosition * MINIMAP_SIZE + xPosition];
 
+        do {
         #ifndef BUGFIX
         // BUG: uses uninitalized variables
         tmp1 = tmp2 & 0xC00;
         #endif // !BUGFIX
-
-        do {
         flip = (*tmp & 0xC00) >> 0xA;
         } while(0);
 
@@ -707,8 +706,10 @@ void MinimapDraw(void)
         tile = *tmp & 0x3ff;
         } while(0);
         
+        #ifndef REGION_EU
         if (gLanguage == LANGUAGE_HIRAGANA && tile > MINIMAP_TILE_BACKGROUND)
             tile += 0x20;
+        #endif // !REGION_EU
 
         tile <<= 5;
         sMinimapTilesCopyGfxFunctionPointers[flip](dst, &tile, palette);

@@ -15,6 +15,30 @@
 #include "structs/ending_and_gallery.h"
 #include "structs/game_state.h"
 
+#define SETUP_ENDING_TEXT_OAM(endingOam, i) \
+{ \
+    ENDING_DATA.oamLength = ARRAY_SIZE(endingOam) + 6; \
+    for (i = 0; i < ARRAY_SIZE(endingOam); i++) \
+    { \
+        ENDING_DATA.oamTypes[i + 6] = endingOam[i].type; \
+        ENDING_DATA.endingLettersSpawnDelay[i + 6] = endingOam[i].spawnDelay; \
+        ENDING_DATA.unk_160[i + 6] = endingOam[i].unk_2; \
+        ENDING_DATA.oamXPositions[i + 6] = endingOam[i].xPosition; \
+        ENDING_DATA.oamYPositions[i + 6] = endingOam[i].yPosition; \
+        ENDING_DATA.oamFramePointers[i + 6] = endingOam[i].pFrame; \
+    } \
+}
+
+#define SETUP_ENDING_FULL_LINES_OAM(endingOam) \
+{ \
+    ENDING_DATA.oamTypes[line] = endingOam[line].type; \
+    ENDING_DATA.endingLettersSpawnDelay[line] = endingOam[line].spawnDelay; \
+    ENDING_DATA.unk_160[line] = endingOam[line].unk_2; \
+    ENDING_DATA.oamXPositions[line] = endingOam[line].xPosition; \
+    ENDING_DATA.oamYPositions[line] = endingOam[line].yPosition; \
+    ENDING_DATA.oamFramePointers[line] = endingOam[line].pFrame; \
+}
+
 /**
  * @brief 84c34 | 48 | Checks if an ending letter should display
  * 
@@ -42,92 +66,113 @@ static void EndingImageLoadTextOAM(u32 set)
 {
     s32 i;
 
+    #ifdef REGION_EU
+    switch (ENDING_DATA.language)
+    {
+        case LANGUAGE_GERMAN:
+            if (set == ENDING_IMAGE_OAM_SET_CLEAR_TIME)
+            {
+                SETUP_ENDING_TEXT_OAM(sEndingImageOam_ClearTime_German, i);
+            }
+            else
+            {
+                SETUP_ENDING_TEXT_OAM(sEndingImageOam_Collecting_German, i);
+            }
+            break;
+
+        case LANGUAGE_FRENCH:
+            if (set == ENDING_IMAGE_OAM_SET_CLEAR_TIME)
+            {
+                SETUP_ENDING_TEXT_OAM(sEndingImageOam_ClearTime_French, i);
+            }
+            else
+            {
+                SETUP_ENDING_TEXT_OAM(sEndingImageOam_Collecting_French, i);
+            }
+            break;
+
+        case LANGUAGE_ITALIAN:
+            if (set == ENDING_IMAGE_OAM_SET_CLEAR_TIME)
+            {
+                SETUP_ENDING_TEXT_OAM(sEndingImageOam_ClearTime_Italian, i);
+            }
+            else if (set == ENDING_IMAGE_OAM_SET_YOUR_RATE)
+            {
+                SETUP_ENDING_TEXT_OAM(sEndingImageOam_YourRate_Italian, i);
+            }
+            else
+            {
+                SETUP_ENDING_TEXT_OAM(sEndingImageOam_Collecting_Italian, i);
+            }
+            break;
+
+        case LANGUAGE_SPANISH:
+            if (set == ENDING_IMAGE_OAM_SET_CLEAR_TIME)
+            {
+                SETUP_ENDING_TEXT_OAM(sEndingImageOam_ClearTime_Spanish, i);
+            }
+            else
+            {
+                SETUP_ENDING_TEXT_OAM(sEndingImageOam_Collecting_Spanish, i);
+            }
+            break;
+
+        case LANGUAGE_HIRAGANA:
+            if (set == ENDING_IMAGE_OAM_SET_CLEAR_TIME)
+            {
+                SETUP_ENDING_TEXT_OAM(sEndingImageOam_ClearTime_Hiragana, i);
+            }
+            else
+            {
+                SETUP_ENDING_TEXT_OAM(sEndingImageOam_Collecting_Hiragana, i);
+            }
+            break;
+
+        default:
+            // Japanese and English
+            if (set == ENDING_IMAGE_OAM_SET_CLEAR_TIME)
+            {
+                SETUP_ENDING_TEXT_OAM(sEndingImageOam_ClearTime_English, i);
+            }
+            else if (set == ENDING_IMAGE_OAM_SET_YOUR_RATE)
+            {
+                SETUP_ENDING_TEXT_OAM(sEndingImageOam_YourRate_English, i);
+            }
+            else
+            {
+                SETUP_ENDING_TEXT_OAM(sEndingImageOam_Collecting_English, i);
+            }
+            break;
+    }
+    #else // !REGION_EU
     if (ENDING_DATA.language == LANGUAGE_HIRAGANA)
     {
         if (set == ENDING_IMAGE_OAM_SET_CLEAR_TIME)
         {
-            ENDING_DATA.oamLength = ARRAY_SIZE(sEndingImageOam_ClearTime_Hiragana) + 6;
-
-            for (i = 0; i < ARRAY_SIZE(sEndingImageOam_ClearTime_Hiragana); i++)
-            {
-                ENDING_DATA.oamTypes[i + 6] = sEndingImageOam_ClearTime_Hiragana[i].type;
-                ENDING_DATA.endingLettersSpawnDelay[i + 6] = sEndingImageOam_ClearTime_Hiragana[i].spawnDelay;
-                ENDING_DATA.unk_160[i + 6] = sEndingImageOam_ClearTime_Hiragana[i].unk_2;
-
-                ENDING_DATA.oamXPositions[i + 6] = sEndingImageOam_ClearTime_Hiragana[i].xPosition;
-                ENDING_DATA.oamYPositions[i + 6] = sEndingImageOam_ClearTime_Hiragana[i].yPosition;
-
-                ENDING_DATA.oamFramePointers[i + 6] = sEndingImageOam_ClearTime_Hiragana[i].pFrame;
-            }
+            SETUP_ENDING_TEXT_OAM(sEndingImageOam_ClearTime_Hiragana, i);
         }
         else
         {
-            ENDING_DATA.oamLength = ARRAY_SIZE(sEndingImageOam_Collecting_Hiragana) + 6;
-
-            for (i = 0; i < ARRAY_SIZE(sEndingImageOam_Collecting_Hiragana); i++)
-            {
-                ENDING_DATA.oamTypes[i + 6] = sEndingImageOam_Collecting_Hiragana[i].type;
-                ENDING_DATA.endingLettersSpawnDelay[i + 6] = sEndingImageOam_Collecting_Hiragana[i].spawnDelay;
-                ENDING_DATA.unk_160[i + 6] = sEndingImageOam_Collecting_Hiragana[i].unk_2;
-
-                ENDING_DATA.oamXPositions[i + 6] = sEndingImageOam_Collecting_Hiragana[i].xPosition;
-                ENDING_DATA.oamYPositions[i + 6] = sEndingImageOam_Collecting_Hiragana[i].yPosition;
-
-                ENDING_DATA.oamFramePointers[i + 6] = sEndingImageOam_Collecting_Hiragana[i].pFrame;
-            }
+            SETUP_ENDING_TEXT_OAM(sEndingImageOam_Collecting_Hiragana, i);
         }
     }
     else
     {
+        // Japanese and English
         if (set == ENDING_IMAGE_OAM_SET_CLEAR_TIME)
         {
-            ENDING_DATA.oamLength = ARRAY_SIZE(sEndingImageOam_ClearTime_English) + 6;
-
-            for (i = 0; i < ARRAY_SIZE(sEndingImageOam_ClearTime_English); i++)
-            {
-                ENDING_DATA.oamTypes[i + 6] = sEndingImageOam_ClearTime_English[i].type;
-                ENDING_DATA.endingLettersSpawnDelay[i + 6] = sEndingImageOam_ClearTime_English[i].spawnDelay;
-                ENDING_DATA.unk_160[i + 6] = sEndingImageOam_ClearTime_English[i].unk_2;
-
-                ENDING_DATA.oamXPositions[i + 6] = sEndingImageOam_ClearTime_English[i].xPosition;
-                ENDING_DATA.oamYPositions[i + 6] = sEndingImageOam_ClearTime_English[i].yPosition;
-
-                ENDING_DATA.oamFramePointers[i + 6] = sEndingImageOam_ClearTime_English[i].pFrame;
-            }
+            SETUP_ENDING_TEXT_OAM(sEndingImageOam_ClearTime_English, i);
         }
         else if (set == ENDING_IMAGE_OAM_SET_YOUR_RATE)
         {
-            ENDING_DATA.oamLength = ARRAY_SIZE(sEndingImageOam_YourRate_English) + 6;
-
-            for (i = 0; i < ARRAY_SIZE(sEndingImageOam_YourRate_English); i++)
-            {
-                ENDING_DATA.oamTypes[i + 6] = sEndingImageOam_YourRate_English[i].type;
-                ENDING_DATA.endingLettersSpawnDelay[i + 6] = sEndingImageOam_YourRate_English[i].spawnDelay;
-                ENDING_DATA.unk_160[i + 6] = sEndingImageOam_YourRate_English[i].unk_2;
-
-                ENDING_DATA.oamXPositions[i + 6] = sEndingImageOam_YourRate_English[i].xPosition;
-                ENDING_DATA.oamYPositions[i + 6] = sEndingImageOam_YourRate_English[i].yPosition;
-
-                ENDING_DATA.oamFramePointers[i + 6] = sEndingImageOam_YourRate_English[i].pFrame;
-            }
+            SETUP_ENDING_TEXT_OAM(sEndingImageOam_YourRate_English, i);
         }
         else
         {
-            ENDING_DATA.oamLength = ARRAY_SIZE(sEndingImageOam_Collecting_English) + 6;
-
-            for (i = 0; i < ARRAY_SIZE(sEndingImageOam_Collecting_English); i++)
-            {
-                ENDING_DATA.oamTypes[i + 6] = sEndingImageOam_Collecting_English[i].type;
-                ENDING_DATA.endingLettersSpawnDelay[i + 6] = sEndingImageOam_Collecting_English[i].spawnDelay;
-                ENDING_DATA.unk_160[i + 6] = sEndingImageOam_Collecting_English[i].unk_2;
-
-                ENDING_DATA.oamXPositions[i + 6] = sEndingImageOam_Collecting_English[i].xPosition;
-                ENDING_DATA.oamYPositions[i + 6] = sEndingImageOam_Collecting_English[i].yPosition;
-
-                ENDING_DATA.oamFramePointers[i + 6] = sEndingImageOam_Collecting_English[i].pFrame;
-            }
+            SETUP_ENDING_TEXT_OAM(sEndingImageOam_Collecting_English, i);
         }
     }
+    #endif // REGION_EU
 }
 
 /**
@@ -139,24 +184,43 @@ static void EndingImageDisplayLinePermanently(u32 line)
 {
     s32 i;
 
+    #ifdef REGION_EU
+    switch (ENDING_DATA.language)
+    {
+        case LANGUAGE_GERMAN:
+            SETUP_ENDING_FULL_LINES_OAM(sEndingImageOam_FullLines_German);
+            break;
+
+        case LANGUAGE_FRENCH:
+            SETUP_ENDING_FULL_LINES_OAM(sEndingImageOam_FullLines_French);
+            break;
+
+        case LANGUAGE_ITALIAN:
+            SETUP_ENDING_FULL_LINES_OAM(sEndingImageOam_FullLines_Italian);
+            break;
+
+        case LANGUAGE_SPANISH:
+            SETUP_ENDING_FULL_LINES_OAM(sEndingImageOam_FullLines_Spanish);
+            break;
+
+        case LANGUAGE_HIRAGANA:
+            SETUP_ENDING_FULL_LINES_OAM(sEndingImageOam_FullLines_Hiragana);
+            break;
+
+        default:
+            SETUP_ENDING_FULL_LINES_OAM(sEndingImageOam_FullLines_English);
+            break;
+    }
+    #else // !REGION_EU
     if (ENDING_DATA.language == LANGUAGE_HIRAGANA)
     {
-        ENDING_DATA.oamTypes[line] = sEndingImageOam_FullLines_Hiragana[line].type;
-        ENDING_DATA.endingLettersSpawnDelay[line] = sEndingImageOam_FullLines_Hiragana[line].spawnDelay;
-        ENDING_DATA.unk_160[line] = sEndingImageOam_FullLines_Hiragana[line].unk_2;
-        ENDING_DATA.oamXPositions[line] = sEndingImageOam_FullLines_Hiragana[line].xPosition;
-        ENDING_DATA.oamYPositions[line] = sEndingImageOam_FullLines_Hiragana[line].yPosition;
-        ENDING_DATA.oamFramePointers[line] = sEndingImageOam_FullLines_Hiragana[line].pFrame;
+        SETUP_ENDING_FULL_LINES_OAM(sEndingImageOam_FullLines_Hiragana);
     }
     else
     {
-        ENDING_DATA.oamTypes[line] = sEndingImageOam_FullLines_English[line].type;
-        ENDING_DATA.endingLettersSpawnDelay[line] = sEndingImageOam_FullLines_English[line].spawnDelay;
-        ENDING_DATA.unk_160[line] = sEndingImageOam_FullLines_English[line].unk_2;
-        ENDING_DATA.oamXPositions[line] = sEndingImageOam_FullLines_English[line].xPosition;
-        ENDING_DATA.oamYPositions[line] = sEndingImageOam_FullLines_English[line].yPosition;
-        ENDING_DATA.oamFramePointers[line] = sEndingImageOam_FullLines_English[line].pFrame;
+        SETUP_ENDING_FULL_LINES_OAM(sEndingImageOam_FullLines_English);
     }
+    #endif // REGION_EU
 
     for (i  = 0; i < ENDING_DATA.oamLength - 6; i++)
         ENDING_DATA.oamTypes[i + 6] = ENDING_OAM_TYPE_NONE;
@@ -566,12 +630,12 @@ static u8 CreditsDisplayLine(u32 line)
                     break;
                 }
                 
-                if ((u8)(pCredits->text[i] - 0x41) < 0x1A)
+                if (pCredits->text[i] >= 'A' && pCredits->text[i] <= 'Z')
                 {
                     ENDING_DATA.creditLineTilemap_1[tilemapOffset] = pCredits->text[i] + (tile - 1);
                     ENDING_DATA.creditLineTilemap_2[tilemapOffset] = pCredits->text[i] + (tile + 0x1F);
                 }
-                else if ((u8)(pCredits->text[i] - 0x61) < 0x1A)
+                else if (pCredits->text[i] >= 'a' && pCredits->text[i] <= 'z')
                 {
                     ENDING_DATA.creditLineTilemap_1[tilemapOffset] = pCredits->text[i] + (tile + 0x1F);
                     ENDING_DATA.creditLineTilemap_2[tilemapOffset] = pCredits->text[i] + (tile + 0x3F);
@@ -593,6 +657,22 @@ static u8 CreditsDisplayLine(u32 line)
                     ENDING_DATA.creditLineTilemap_1[tilemapOffset] = tile + 0x9A;
                     ENDING_DATA.creditLineTilemap_2[tilemapOffset] = tile + 0xBA;
                 }
+                #ifdef REGION_EU
+                else if (pCredits->text[i] == 0x23) // ó
+                {
+                    ENDING_DATA.creditLineTilemap_1[tilemapOffset] = tile + 0x9B;
+                    ENDING_DATA.creditLineTilemap_2[tilemapOffset] = tile + 0xBB;
+                }
+                else if (pCredits->text[i] == 0x24) // ß
+                {
+                    ENDING_DATA.creditLineTilemap_1[tilemapOffset] = tile + 0x5D;
+                    ENDING_DATA.creditLineTilemap_2[tilemapOffset] = tile + 0x7D;
+                }
+                else if (pCredits->text[i] == 0x25) // acute accent (´)
+                {
+                    ENDING_DATA.creditLineTilemap_2[tilemapOffset] = tile + 0x7E;
+                }
+                #endif // REGION_EU
 
                 i++;
                 tilemapOffset++;
@@ -1264,22 +1344,68 @@ static void EndingImageInit(void)
     LZ77UncompVRAM(sEndingImagesTopTileTablePointers[endingNbr], VRAM_BASE + 0xE000);
     LZ77UncompVRAM(sEndingImagesHalfTileTablePointers[endingNbr], VRAM_BASE + 0xF800);
     BitFill(3, 0x4FF04FF, VRAM_BASE + 0xE800, 0x800, 0x20);
+    #ifdef REGION_EU
+    DmaTransfer(3, sEndingImagesPalPointers[endingNbr], PALRAM_BASE, PAL_SIZE, 16);
+    #else // !REGION_EU
     DMA_SET(3, sEndingImagesPalPointers[endingNbr], PALRAM_BASE, C_32_2_16(DMA_ENABLE, 0x100));
+    #endif // REGION_EU
 
     ENDING_DATA.completionPercentage = energyNbr + missilesNbr + superMissilesNbr + powerBombNbr + abilityCount;
 
-    LZ77UncompVRAM(sEndingImageNumbersMiscGfx, VRAM_OBJ);
+    #ifndef REGION_EU
+    LZ77UncompVRAM(sEndingImageNumbersMiscEnglishGfx, VRAM_OBJ);
+    #endif // !REGION_EU
 
     ENDING_DATA.language = gLanguage;
+
+    #ifdef REGION_EU
+    switch (ENDING_DATA.language)
+    {
+        case LANGUAGE_GERMAN:
+            LZ77UncompVRAM(sEndingImageNumbersMiscGermanGfx, VRAM_OBJ);
+            LZ77UncompVRAM(sEndingImageTextGermanGfx, VRAM_BASE + 0x11000);
+            break;
+        
+        case LANGUAGE_FRENCH:
+            LZ77UncompVRAM(sEndingImageNumbersMiscFrenchGfx, VRAM_OBJ);
+            LZ77UncompVRAM(sEndingImageTextFrenchGfx, VRAM_BASE + 0x11000);
+            break;
+
+        case LANGUAGE_ITALIAN:
+            LZ77UncompVRAM(sEndingImageNumbersMiscItalianGfx, VRAM_OBJ);
+            LZ77UncompVRAM(sEndingImageTextItalianGfx, VRAM_BASE + 0x11000);
+            break;
+
+        case LANGUAGE_SPANISH:
+            LZ77UncompVRAM(sEndingImageNumbersMiscSpanishGfx, VRAM_OBJ);
+            LZ77UncompVRAM(sEndingImageTextSpanishGfx, VRAM_BASE + 0x11000);
+            break;
+
+        case LANGUAGE_HIRAGANA:
+            LZ77UncompVRAM(sEndingImageNumbersMiscEnglishGfx, VRAM_OBJ);
+            LZ77UncompVRAM(sEndingImageTextHiraganaGfx, VRAM_BASE + 0x11000);
+            break;
+
+        default:
+            LZ77UncompVRAM(sEndingImageNumbersMiscEnglishGfx, VRAM_OBJ);
+            LZ77UncompVRAM(sEndingImageTextEnglishGfx, VRAM_BASE + 0x11000);
+            break;
+    }
+    #else // !REGION_EU
     if (gLanguage > LANGUAGE_ENGLISH)
         ENDING_DATA.language = LANGUAGE_ENGLISH;
 
     if (ENDING_DATA.language == LANGUAGE_HIRAGANA)
-        LZ77UncompVRAM(sEndingImageTextJapGfx, VRAM_BASE + 0x11000);
+        LZ77UncompVRAM(sEndingImageTextHiraganaGfx, VRAM_BASE + 0x11000);
     else
-        LZ77UncompVRAM(sEndingImageTextGfx, VRAM_BASE + 0x11000);
+        LZ77UncompVRAM(sEndingImageTextEnglishGfx, VRAM_BASE + 0x11000);
+    #endif // REGION_EU
 
+    #ifdef REGION_EU
+    DmaTransfer(3, sEndingImageTextPal, PALRAM_OBJ, sizeof(sEndingImageTextPal), 16);
+    #else // !REGION_EU
     DMA_SET(3, sEndingImageTextPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sEndingImageTextPal)));
+    #endif // REGION_EU
 
     EndingImageLoadIGTAndPercentageGraphics();
     WRITE_16(REG_BG0CNT, CREATE_BGCNT(0, 28, BGCNT_HIGH_PRIORITY, BGCNT_SIZE_256x512));
@@ -1388,7 +1514,12 @@ static void EndingImageDisplayText(void)
             
         palette = sEndingImageNewRecordPalettes[ENDING_DATA.newRecordPaletteTimer / 6];
 
-        src = sEndingImageOam_NewRecord;
+        #ifdef REGION_EU
+        src = sEndingImageOamPointers_NewRecord[ENDING_DATA.language];
+        #else // !REGION_EU
+        src = sEndingImageOam_NewRecordEnglish;
+        #endif // REGION_EU
+
         part = *src++;
         nextSlot += MOD_AND(part, 0x100);
 

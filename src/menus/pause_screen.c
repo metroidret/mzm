@@ -169,6 +169,13 @@ const u32* sMinimapDataPointers[AREA_COUNT] = {
     [AREA_TEST_3] = sTestMinimap
 };
 
+#ifdef REGION_EU
+static const u8* const sMaintainedInputDelaysPointers[2] = {
+    [MAINTAINED_INPUT_SPEED_FAST] = sMaintainedInputDelays_Fast,
+    [MAINTAINED_INPUT_SPEED_SLOW] = sMaintainedInputDelays_Slow,
+};
+#endif // REGION_EU
+
 /**
  * @brief 68168 | 60 | Initialize the pause screen for fading
  * 
@@ -2863,7 +2870,11 @@ u32 PauseScreenCallCurrentSubroutine(void)
     u32 leaving;
 
     leaving = FALSE;
+    #ifdef REGION_EU
+    CheckForMaintainedInput(MAINTAINED_INPUT_SPEED_FAST);
+    #else // !REGION_EU
     CheckForMaintainedInput();
+    #endif // REGION_EU
 
     APPLY_DELTA_TIME_INC(PAUSE_SCREEN_DATA.subroutineInfo.timer);
 
@@ -3638,10 +3649,17 @@ s32 PauseScreenEasySleepInit(void)
 
         case 6:
             // Format easy sleep tilemap
+            #ifdef REGION_EU
+            DmaTransfer(3, &PAUSE_SCREEN_EWRAM.unk_6000[0], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_1[0x1C0], 0x40 * sizeof(u16), 16);
+            DmaTransfer(3, &PAUSE_SCREEN_EWRAM.unk_6000[0x200], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_1[0x3C0], 0x40 * sizeof(u16), 16);
+            DmaTransfer(3, &PAUSE_SCREEN_EWRAM.unk_6000[0xE0], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_2[0x1C0],  0x40 * sizeof(u16), 16);
+            DmaTransfer(3, &PAUSE_SCREEN_EWRAM.unk_6000[0x2E0], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_2[0x3C0], 0x40 * sizeof(u16), 16);
+            #else // !REGION_EU
             DMA_SET(3, &PAUSE_SCREEN_EWRAM.unk_6000[0], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_1[0x1C0], C_32_2_16(DMA_ENABLE, 0x40));
             DMA_SET(3, &PAUSE_SCREEN_EWRAM.unk_6000[0x200], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_1[0x3C0], C_32_2_16(DMA_ENABLE, 0x40));
             DMA_SET(3, &PAUSE_SCREEN_EWRAM.unk_6000[0xE0], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_2[0x1C0],  C_32_2_16(DMA_ENABLE, 0x40));
             DMA_SET(3, &PAUSE_SCREEN_EWRAM.unk_6000[0x2E0], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_2[0x3C0], C_32_2_16(DMA_ENABLE, 0x40));
+            #endif // REGION_EU
             break;
 
         case 7:
@@ -3777,7 +3795,11 @@ s32 PauseScreenQuitEasySleep(void)
  * @brief 6c0e0 | 74 | Updates the maintained input
  * 
  */
+#ifdef REGION_EU
+void CheckForMaintainedInput(u8 speed)
+#else // !REGION_EU
 void CheckForMaintainedInput(void)
+#endif // REGION_EU
 {
     gPrevChangedInput = gChangedInput;
 
@@ -3794,7 +3816,11 @@ void CheckForMaintainedInput(void)
     }
 
     // Check delay threshold
-    if (gMaintainedInputData.delay >= sMaintainedInputDelays[gMaintainedInputData.set])
+    #ifdef REGION_EU
+    if (gMaintainedInputData.delay >= sMaintainedInputDelaysPointers[speed][gMaintainedInputData.set])
+    #else // !REGION_EU
+    if (gMaintainedInputData.delay >= sMaintainedInputDelays_Fast[gMaintainedInputData.set])
+    #endif // REGION_EU
     {
         // Apply to changed input
         gChangedInput |= gButtonInput & KEY_ALL_DIRECTIONS;
@@ -3803,7 +3829,13 @@ void CheckForMaintainedInput(void)
         gMaintainedInputData.delay = 0;
 
         // Update set
-        if (gMaintainedInputData.set < ARRAY_SIZE(sMaintainedInputDelays) - 2)
+        #ifdef REGION_EU
+        if (gMaintainedInputData.set < sMaintainedInputDelaysLastSet[speed])
+        #else // !REGION_EU
+        if (gMaintainedInputData.set < ARRAY_SIZE(sMaintainedInputDelays_Fast) - 2)
+        #endif // REGION_EU
+        {
             gMaintainedInputData.set++;
+        }
     }
 }

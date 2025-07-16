@@ -44,6 +44,10 @@ s32 PauseScreenStatusScreenInit(void);
 s32 PauseScreenQuitStatusScreen(void);
 s32 PauseScreenEasySleepInit(void);
 s32 PauseScreenQuitEasySleep(void);
+#ifdef REGION_EU
+void CheckForMaintainedInput(u8 speed);
+#else // !REGION_EU
 void CheckForMaintainedInput(void);
+#endif // REGION_EU
 
 #endif /* PAUSE_SCREEN_MENU_H */

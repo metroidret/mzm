@@ -1109,8 +1109,12 @@ static u8 ChozodiaEscapeMissionAccomplished(void)
             LZ77UncompVRAM(sChozodiaEscapeMissionAccomplishedLettersGfx, VRAM_OBJ);
 
             // Load the "correct" palette for samus in blue ship, makes her visible
+            #ifdef REGION_EU
+            DmaTransfer(3, sChozodiaEscapeSamusInBlueShipPal, PALRAM_OBJ, sizeof(sChozodiaEscapeSamusInBlueShipPal), 16);
+            #else // !REGION_EU
             DMA_SET(3, sChozodiaEscapeSamusInBlueShipPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sChozodiaEscapeSamusInBlueShipPal)));
-            
+            #endif // REGION_EU
+
             CHOZODIA_ESCAPE_DATA.dispcnt = DCNT_BG0 | DCNT_BG1 | DCNT_BG2 | DCNT_OBJ;
             break;
 
@@ -1125,6 +1129,11 @@ static u8 ChozodiaEscapeMissionAccomplished(void)
         case CONVERT_SECONDS(1.f + 1.f / 15):
             // Setup mission accomplished OAM
             CHOZODIA_ESCAPE_DATA.oamTypes[CHOZODIA_ESCAPE_OAM_MISSION_ACCOMPLISHED]++;
+            
+            #ifdef REGION_EU
+            CHOZODIA_ESCAPE_DATA.oamPointers[CHOZODIA_ESCAPE_OAM_MISSION_ACCOMPLISHED] =
+                sChozodiaEscapeOamPointers_MissionAccomplished[gLanguage];
+            #else // !REGION_EU
             if (gLanguage == LANGUAGE_HIRAGANA)
             {
                 CHOZODIA_ESCAPE_DATA.oamPointers[CHOZODIA_ESCAPE_OAM_MISSION_ACCOMPLISHED] =
@@ -1135,6 +1144,7 @@ static u8 ChozodiaEscapeMissionAccomplished(void)
                 CHOZODIA_ESCAPE_DATA.oamPointers[CHOZODIA_ESCAPE_OAM_MISSION_ACCOMPLISHED] =
                     sChozodiaEscapeOam_MissionAccomplishedEnglish_Frame0;
             }
+            #endif // REGION_EU
 
             CHOZODIA_ESCAPE_DATA.oamFrames[CHOZODIA_ESCAPE_OAM_MISSION_ACCOMPLISHED] = 1;
             CHOZODIA_ESCAPE_DATA.oamXPositions[CHOZODIA_ESCAPE_OAM_MISSION_ACCOMPLISHED] = SCREEN_X_MIDDLE;

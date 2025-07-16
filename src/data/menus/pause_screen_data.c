@@ -2796,10 +2796,10 @@ const u32 sChozoHintBackgroundTileTable[577] = INCBIN_U32("data/menus/PauseScree
 
 const u32 sEquipmentNamesHiraganaGfx[411] = INCBIN_U32("data/menus/PauseScreen/EquipmentNamesHiragana.gfx.lz");
 const u32 sEquipmentNamesEnglishGfx[380] = INCBIN_U32("data/menus/PauseScreen/EquipmentNamesEnglish.gfx.lz");
-const u32 sEquipmentNamesGermanGfx[380] = INCBIN_U32("data/menus/PauseScreen/EquipmentNamesGerman.gfx.lz");
-const u32 sEquipmentNamesFrenchGfx[380] = INCBIN_U32("data/menus/PauseScreen/EquipmentNamesFrench.gfx.lz");
-const u32 sEquipmentNamesItalianGfx[380] = INCBIN_U32("data/menus/PauseScreen/EquipmentNamesItalian.gfx.lz");
-const u32 sEquipmentNamesSpanishGfx[380] = INCBIN_U32("data/menus/PauseScreen/EquipmentNamesSpanish.gfx.lz");
+const u32 sEquipmentNamesGermanGfx[] = INCBIN_U32("data/menus/PauseScreen/EquipmentNamesGerman.gfx.lz");
+const u32 sEquipmentNamesFrenchGfx[] = INCBIN_U32("data/menus/PauseScreen/EquipmentNamesFrench.gfx.lz");
+const u32 sEquipmentNamesItalianGfx[] = INCBIN_U32("data/menus/PauseScreen/EquipmentNamesItalian.gfx.lz");
+const u32 sEquipmentNamesSpanishGfx[] = INCBIN_U32("data/menus/PauseScreen/EquipmentNamesSpanish.gfx.lz");
 
 
 const u32 sMapScreenAreaNamesHiraganaGfx[198] = INCBIN_U32("data/menus/PauseScreen/MapScreenAreaNamesHiragana.gfx.lz");
@@ -2808,15 +2808,16 @@ const u32 sMenuNamesHiraganaGfx[113] = INCBIN_U32("data/menus/PauseScreen/MenuNa
 const u32 sMenuNamesEnglishGfx[92] = INCBIN_U32("data/menus/PauseScreen/MenuNamesEnglish.gfx.lz");
 const u32 sMenuNamesGermanGfx[97] = INCBIN_U32("data/menus/PauseScreen/MenuNamesGerman.gfx.lz");
 const u32 sMenuNamesFrenchGfx[91] = INCBIN_U32("data/menus/PauseScreen/MenuNamesFrench.gfx.lz");
-const u32 sMenuNamesItalianGfx[92] = INCBIN_U32("data/menus/PauseScreen/MenuNamesItalian.gfx.lz");
-const u32 sMenuNamesSpanishGfx[96] = INCBIN_U32("data/menus/PauseScreen/MenuNamesSpanish.gfx.lz");
+const u32 sMenuNamesItalianGfx[] = INCBIN_U32("data/menus/PauseScreen/MenuNamesItalian.gfx.lz");
+const u32 sMenuNamesSpanishGfx[] = INCBIN_U32("data/menus/PauseScreen/MenuNamesSpanish.gfx.lz");
 
 const u32 sMapScreenUnknownItemsNamesHiraganaGfx[76] = INCBIN_U32("data/menus/PauseScreen/MapScreenUnknownItemsNamesHiragana.gfx.lz");
 const u32 sMapScreenUnknownItemsNamesEnglishGfx[65] = INCBIN_U32("data/menus/PauseScreen/MapScreenUnknownItemsNamesEnglish.gfx.lz");
-const u32 sMapScreenUnknownItemsNamesGermanGfx[68] = INCBIN_U32("data/menus/PauseScreen/MapScreenUnknownItemsNamesGerman.gfx.lz");
-const u32 sMapScreenUnknownItemsNamesFrenchGfx[68] = INCBIN_U32("data/menus/PauseScreen/MapScreenUnknownItemsNamesFrench.gfx.lz");
-const u32 sMapScreenUnknownItemsNamesItalianGfx[67] = INCBIN_U32("data/menus/PauseScreen/MapScreenUnknownItemsNamesItalian.gfx.lz");
-const u32 sMapScreenUnknownItemsNamesSpanishGfx[69] = INCBIN_U32("data/menus/PauseScreen/MapScreenUnknownItemsNamesSpanish.gfx.lz");
+const u32 sMapScreenUnknownItemsNamesGermanGfx[] = INCBIN_U32("data/menus/PauseScreen/MapScreenUnknownItemsNamesGerman.gfx.lz");
+const u32 sMapScreenUnknownItemsNamesFrenchGfx[] = INCBIN_U32("data/menus/PauseScreen/MapScreenUnknownItemsNamesFrench.gfx.lz");
+const u32 sMapScreenUnknownItemsNamesItalianGfx[] = INCBIN_U32("data/menus/PauseScreen/MapScreenUnknownItemsNamesItalian.gfx.lz");
+const u32 sMapScreenUnknownItemsNamesSpanishGfx[] = INCBIN_U32("data/menus/PauseScreen/MapScreenUnknownItemsNamesSpanish.gfx.lz");
+
 const u32 sMapScreenChozoStatueAreaNamesHiraganaGfx[154] = INCBIN_U32("data/menus/PauseScreen/MapScreenChozoStatueAreaNamesHiragana.gfx.lz");
 
 const struct MenuOamData sMenuOamData_Empty = {
@@ -3822,9 +3823,24 @@ const struct OamArray sPauseScreenWorldMapOam[WORLD_MAP_OAM_ID_END] = {
 };
 
 
-const u8 sMaintainedInputDelays[8] = {
+#ifdef REGION_EU
+const u8 sMaintainedInputDelays_Fast[7] = {
+#else // !REGION_EU
+const u8 sMaintainedInputDelays_Fast[8] = {
+#endif // REGION_EU
     20, 4, 4, 4, 4, 4, 2
 };
+
+#ifdef REGION_EU
+const u8 sMaintainedInputDelays_Slow[4] = {
+    20, 8, 8, 6
+};
+
+const u8 sMaintainedInputDelaysLastSet[MAINTAINED_INPUT_SPEED_COUNT] = {
+    [MAINTAINED_INPUT_SPEED_FAST] = ARRAY_SIZE(sMaintainedInputDelays_Fast) - 1,
+    [MAINTAINED_INPUT_SPEED_SLOW] = ARRAY_SIZE(sMaintainedInputDelays_Slow) - 1
+};
+#endif // REGION_EU
 
 const u8 sMapScreenAreaIds[MAX_AMOUNT_OF_AREAS] = {
     AREA_BRINSTAR,

@@ -3,6 +3,7 @@
 
 #include "types.h"
 #include "constants/ending_and_gallery.h"
+#include "constants/game_state.h"
 #include "structs/ending_and_gallery.h"
 #include "oam.h"
 
@@ -13,7 +14,7 @@ extern const u16 sEndingImageTextPal[14 * 16];
 
 // ...
 
-extern const u16 sEndingImageOam_NewRecord[OAM_DATA_SIZE(6)];
+extern const u16 sEndingImageOam_NewRecordEnglish[OAM_DATA_SIZE(6)];
 
 // ...
 
@@ -37,6 +38,21 @@ extern const struct EndingImageOam sEndingImageOam_Collecting_English[17];
 extern const struct EndingImageOam sEndingImageOam_FullLines_Hiragana[ENDING_IMAGE_LINE_END];
 extern const struct EndingImageOam sEndingImageOam_ClearTime_Hiragana[6];
 extern const struct EndingImageOam sEndingImageOam_Collecting_Hiragana[11];
+#ifdef REGION_EU
+extern const struct EndingImageOam sEndingImageOam_FullLines_German[ENDING_IMAGE_LINE_END];
+extern const struct EndingImageOam sEndingImageOam_ClearTime_German[13];
+extern const struct EndingImageOam sEndingImageOam_Collecting_German[14];
+extern const struct EndingImageOam sEndingImageOam_FullLines_French[ENDING_IMAGE_LINE_END];
+extern const struct EndingImageOam sEndingImageOam_ClearTime_French[16];
+extern const struct EndingImageOam sEndingImageOam_Collecting_French[20];
+extern const struct EndingImageOam sEndingImageOam_FullLines_Italian[ENDING_IMAGE_LINE_END];
+extern const struct EndingImageOam sEndingImageOam_ClearTime_Italian[18];
+extern const struct EndingImageOam sEndingImageOam_YourRate_Italian[11];
+extern const struct EndingImageOam sEndingImageOam_Collecting_Italian[17];
+extern const struct EndingImageOam sEndingImageOam_FullLines_Spanish[ENDING_IMAGE_LINE_END];
+extern const struct EndingImageOam sEndingImageOam_ClearTime_Spanish[15];
+extern const struct EndingImageOam sEndingImageOam_Collecting_Spanish[19];
+#endif // REGION_EU
 
 extern const u32* const sEndingImagesTopGfxPointers[ENDING_IMAGE_COUNT];
 extern const u32* const sEndingImagesBottomGfxPointers[ENDING_IMAGE_COUNT];
@@ -55,17 +71,33 @@ extern const u16* const sEndingWhitePalPointers[4];
 extern const u8 sEndingImage_54e2dc[8];
 extern const u8 sEndingImageNewRecordPalettes[12];
 
-extern const u32 sCreditsCharactersGfx[615];
+#ifdef REGION_EU
+extern const u16* sEndingImageOamPointers_NewRecord[LANGUAGE_END];
+#endif // REGION_EU
+
+extern const u32 sCreditsCharactersGfx[];
 
 // ...
 
-extern const u32 sEndingImageTextGfx[803];
-extern const u32 sEndingImageTextJapGfx[511];
+extern const u32 sEndingImageTextEnglishGfx[803];
+extern const u32 sEndingImageTextHiraganaGfx[511];
+#ifdef REGION_EU
+extern const u32 sEndingImageTextFrenchGfx[759];
+extern const u32 sEndingImageTextGermanGfx[726];
+extern const u32 sEndingImageTextItalianGfx[883];
+extern const u32 sEndingImageTextSpanishGfx[773];
+#endif // REGION_EU
 
 extern const u8 sEndingImageNumbersGfx_Upper[10 * 64];
 extern const u8 sEndingImageNumbersGfx_Lower[10 * 64];
 
-extern const u32 sEndingImageNumbersMiscGfx[218];
+extern const u32 sEndingImageNumbersMiscEnglishGfx[218];
+#ifdef REGION_EU
+extern const u32 sEndingImageNumbersMiscGermanGfx[209];
+extern const u32 sEndingImageNumbersMiscFrenchGfx[217];
+extern const u32 sEndingImageNumbersMiscItalianGfx[208];
+extern const u32 sEndingImageNumbersMiscSpanishGfx[225];
+#endif // REGION_EU
 extern const u32 sEndingSamusPosingSpaceBackgroundGfx[2938];
 extern const u32 sEndingSamusPosingSpaceBackgroundTileTable[412];
 extern const u32 sEndingLightGfx[743];
