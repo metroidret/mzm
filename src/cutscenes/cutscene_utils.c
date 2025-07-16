@@ -451,7 +451,16 @@ void CutsceneInit(void)
     gNextOamSlot = 0;
     ResetFreeOam();
 
-    WRITE_16(REG_BLDCNT, CUTSCENE_DATA.bldcnt = 0xFF);
+    #ifdef REGION_EU
+    if (sCutsceneData[gCurrentCutscene].preBgFading >= COLOR_FADING_SLOW_WHITE)
+    {
+        WRITE_16(REG_BLDCNT, CUTSCENE_DATA.bldcnt = 0xBF);
+    }
+    else
+    #endif // REGION_EU
+    {
+        WRITE_16(REG_BLDCNT, CUTSCENE_DATA.bldcnt = 0xFF);
+    }
 
     WRITE_16(REG_BLDY, gWrittenToBldy_NonGameplay = BLDY_MAX_VALUE);
 
@@ -1287,6 +1296,9 @@ u8 CutsceneStartBackgroundFading(u8 type)
             break;
 
         case COLOR_FADING_WHITE:
+        #ifdef REGION_EU
+        case 9:
+        #endif // REGION_EU
             BitFill(3, 0, PALRAM_BASE, PALRAM_SIZE, 16);
             DmaTransfer(3, PALRAM_BASE, PAL_WITH_FADE, PALRAM_SIZE, 16);
 
@@ -1320,14 +1332,22 @@ u8 CutsceneStartBackgroundFading(u8 type)
             CUTSCENE_DATA.fadingType = COLOR_FADING_TYPE_OUT;
             break;
 
+        #ifdef REGION_EU
+        case 10:
+        #else // !REGION_EU
         case COLOR_FADING_SLOW_WHITE:
+        #endif // REGION_EU
             CUTSCENE_DATA.fadingStage = 2;
             CUTSCENE_DATA.fadingIntensity = 2;
             CUTSCENE_DATA.fadingMaxDelay = 0;
             CUTSCENE_DATA.fadingType = COLOR_FADING_TYPE_UNK;
             break;
 
+        #ifdef REGION_EU
+        case 11:
+        #else // !REGION_EU
         case COLOR_FADING_SLOW_BLACK:
+        #endif // REGION_EU
             CUTSCENE_DATA.fadingStage = 2;
             CUTSCENE_DATA.fadingIntensity = 1;
             CUTSCENE_DATA.fadingMaxDelay = 4;

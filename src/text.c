@@ -138,11 +138,11 @@ void TextDrawCharacter(u16 charID, u32* dst, u16 indent, u8 color)
     s32 palette;
     u32* dstGfx;
     const u32* srcGfx;
+    s32 pass;
     s32 size;
     u32 pixelSrc;
     u32 pixelDst;
     u8 width;
-    s32 pass;
     u32 value;
     s32 i;
 
@@ -262,7 +262,9 @@ void TextDrawCharacter(u16 charID, u32* dst, u16 indent, u8 color)
             }
         }
         else
+        {
             DmaTransfer(3, srcGfx, dstGfx, size * 4, 16);
+        }
 
         dstGfx = dst + ((indent & 0xFF) / 8) * 8 + pass * 0x100;
         dstGfx += (indent / 256) * 0x200;
@@ -271,7 +273,17 @@ void TextDrawCharacter(u16 charID, u32* dst, u16 indent, u8 color)
         else
             srcGfx = gCurrentCharacterGfx;
 
+        #ifdef REGION_EU
+        palette = indent;
+        palette &= 7;
+        // If next char position is within same line, and next char position is
+        // on a tile boundary, and char width is not an exact tile multiple,
+        // increment char width
+        if (indent + width < 224 && (indent + width) % 8 == 0 && width % 8 != 0)
+            width++;
+        #else // !REGION_EU
         palette = indent & 7;
+        #endif // REGION_EU
 
         if (palette != 0)
         {
@@ -539,7 +551,14 @@ void TextDrawMessageCharacter(u16 charID, u32* dst, u16 indent, u8 color)
         else
             srcGfx = gCurrentCharacterGfx;
 
+        #ifdef REGION_EU
+        palette = indent;
+        palette &= 7;
+        if (indent + width < 224 && (indent + width) % 8 == 0 && width % 8 != 0)
+            width++;
+        #else // !REGION_EU
         palette = indent & 7;
+        #endif // REGION_EU
 
         if (palette != 0)
         {

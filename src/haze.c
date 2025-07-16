@@ -232,6 +232,10 @@ void HazeSetupCode(u8 hazeValue)
 
             PowerBombYellowTint(0);
 
+            #ifdef REGION_EU
+            WRITE_16(COLOR_DATA_BG_EWRAM, COLOR_WHITE);
+            #endif // REGION_EU
+
             if (gIoRegistersBackup.Dispcnt_NonGameplay & DCNT_BG0 && gCurrentRoomEntry.bg0Prop != BG_PROP_DISABLE_TRANSPARENCY)
                 gWrittenToDispcnt = READ_16(REG_DISPCNT) ^ DCNT_BG0;
 

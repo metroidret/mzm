@@ -2808,14 +2808,19 @@ void SamusUpdateHitboxMovingDirection(void)
     pPhysics->touchingTopBlock = FALSE;
     pPhysics->unk_5A = 0;
 
-    pPhysics->horizontalMovingDirection = HDMOVING_NONE;
-    pPhysics->verticalMovingDirection = VDMOVING_NONE;
+    #ifdef REGION_EU
+    if (pPhysics->standingStatus != STANDING_NOT_IN_CONTROL)
+    #endif // REGION_EU
+    {
+        pPhysics->horizontalMovingDirection = HDMOVING_NONE;
+        pPhysics->verticalMovingDirection = VDMOVING_NONE;
 
-    // Update horizontal moving direction
-    if (pData->xPosition > gPreviousXPosition)
-        pPhysics->horizontalMovingDirection = HDMOVING_RIGHT;
-    else if (pData->xPosition < gPreviousXPosition)
-        pPhysics->horizontalMovingDirection = HDMOVING_LEFT;
+        // Update horizontal moving direction
+        if (pData->xPosition > gPreviousXPosition)
+            pPhysics->horizontalMovingDirection = HDMOVING_RIGHT;
+        else if (pData->xPosition < gPreviousXPosition)
+            pPhysics->horizontalMovingDirection = HDMOVING_LEFT;
+    }
 
     // Update vertical moving direction
     if (gUnk_03004FC9 == 0)
@@ -6635,16 +6640,21 @@ SamusPose SamusExecutePoseSubroutine(struct SamusData* pData)
     pEquipment = &gEquipment;
     pHazard = &gSamusHazardDamage;
 
-    // Update hazard damage
-    if (SamusTakeHazardDamage(pData, pEquipment, pHazard))
+    #ifdef REGION_EU
+    if (gGameModeSub1 != 0)
+    #endif // REGION_EU
     {
-        // Getting knocked back or died, abort
-        return SPOSE_HURT_REQUEST;
+        // Update hazard damage
+        if (SamusTakeHazardDamage(pData, pEquipment, pHazard))
+        {
+            // Getting knocked back or died, abort
+            return SPOSE_HURT_REQUEST;
+        }
     }
 
     // Update weapon cooldown
-    if (pWeapon->cooldown != 0)
-        pWeapon->cooldown--;
+    if (gSamusWeaponInfo.cooldown != 0)
+        gSamusWeaponInfo.cooldown--;
 
     // Check play speedbooster charge sound
     if (pData->shinesparkTimer != 0 && pData->pose != SPOSE_DELAY_BEFORE_SHINESPARKING && pData->pose != SPOSE_DELAY_BEFORE_BALLSPARKING)
@@ -6659,7 +6669,14 @@ SamusPose SamusExecutePoseSubroutine(struct SamusData* pData)
 
     // Update weapon highlight
     if (pEquipment->suitType != SUIT_SUITLESS)
-        SamusSetHighlightedWeapon(pData, pWeapon, pEquipment);
+    {
+        #ifdef REGION_EU
+        if (pData->pose != SPOSE_DYING)
+        #endif // REGION_EU
+        {
+            SamusSetHighlightedWeapon(pData, pWeapon, pEquipment);
+        }
+    }
 
     // Update spinning
     SamusSetSpinningPose(pData, pEquipment);

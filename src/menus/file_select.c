@@ -847,9 +847,15 @@ static void OptionsUpdateStereoOam(u16 flags)
         FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_RIGHT_ARROW].xPosition = FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_ID].xPosition;
         FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_RIGHT_ARROW].yPosition = FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_ID].yPosition;
 
+        #ifdef REGION_EU
+        FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_ID].priority = BGCNT_LOW_MID_PRIORITY;
+        FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_LEFT_ARROW].priority = BGCNT_LOW_MID_PRIORITY;
+        FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_RIGHT_ARROW].priority = BGCNT_LOW_MID_PRIORITY;
+        #else // !REGION_EU
         FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_ID].priority = BGCNT_LOW_PRIORITY;
         FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_LEFT_ARROW].priority = BGCNT_LOW_PRIORITY;
         FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_RIGHT_ARROW].priority = BGCNT_LOW_PRIORITY;
+        #endif // REGION_EU
     }
 }
 
@@ -869,9 +875,10 @@ static void FileScreenProcessText(void)
     u8 newIdQueue[2];
     u32* dst;
     s32 var_0;
-    u8 result;
-    u32 dstType;
+    #ifdef REGION_EU
+    s32 i;
     u32 flag;
+    #endif // REGION_EU
 
     switch (FILE_SELECT_DATA.processTextStage)
     {
@@ -887,32 +894,108 @@ static void FileScreenProcessText(void)
             else
                 var_0 = 0;
 
-            dstType = sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1];
-
-            if (dstType == 3 || dstType == 1)
+            if (sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1] == 3 ||
+                sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1] == 1)
             {
+                #ifdef REGION_EU
+                BitFill(3, (u16)var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]], 0x1000, 16);
+                #else // !REGION_EU
                 dma_fill16(3, var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]], 0x1000);
+                #endif // REGION_EU
             }
-            else if (dstType == 2)
+            else if (sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1] == 2)
             {
+                #ifdef REGION_EU
+                BitFill(3, (u16)var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]], 0x200, 16);
+                BitFill(3, (u16)var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x100, 0x200, 16);
+                BitFill(3, (u16)var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x180, 0x800, 16);
+                #else // !REGION_EU
                 dma_fill16(3, var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]], 0x200);
                 dma_fill16(3, var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x400, 0x200);
                 dma_fill16(3, var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x600, 0x800);
+                #endif // REGION_EU
             }
             else
             {
+                #ifdef REGION_EU
+                BitFill(3, (u16)var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]], 0x800, 16);
+                #else // !REGION_EU
                 dma_fill16(3, var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]], 0x800);
+                #endif // REGION_EU
 
                 if (sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][2] == 3)
                 {
+                    #ifdef REGION_EU
+                    BitFill(3, (u16)var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x200, 0x200, 16);
+                    BitFill(3, (u16)var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x300, 0x200, 16);
+                    #else // !REGION_EU
                     dma_fill16(3, var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x800, 0x200);
                     dma_fill16(3, var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0xC00, 0x200);
+                    #endif // REGION_EU
                 }
             }
 
             FILE_SELECT_DATA.processTextStage++;
             break;
 
+        #ifdef REGION_EU
+        case FILE_SCREEN_PROCESS_TEXT_STAGE_LINE:
+            i = 8;
+
+            if (gCurrentMessage.line > 3 || gCurrentMessage.messageEnded)
+            {
+                i = 0;
+            }
+            else
+            {
+                dst = sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]];
+
+                if (gCurrentMessage.line & 2)
+                    dst += 0x200;
+    
+                if (gCurrentMessage.line & 1)
+                {
+                    dst += 0x80;
+                
+                    if (sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1] == 2)
+                        dst += 0x100;
+                }
+            }
+
+            if (i == 0)
+            {
+                gCurrentMessage.stage = 3;
+                break;
+            }
+
+            while (i != 0)
+            {
+                var_0 = TextProcessCurrentMessage(&gCurrentMessage, sFileScreenTextPointers[gLanguage][sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][0]], dst);
+
+                switch (var_0)
+                {
+                    case TEXT_STATE_ENDED:
+                        FILE_SELECT_DATA.processTextStage++;
+
+                    case TEXT_STATE_NEW_LINE:
+                        gCurrentMessage.indent = 0;
+                        flag = TRUE;
+                        break;
+
+                    default:
+                        flag = FALSE;
+                }
+                if (flag)
+                    break;
+                
+                if (gCurrentMessage.line > 3)
+                    break;
+
+                i--;
+            }
+            break;
+
+        #else // !REGION_EU
         case FILE_SCREEN_PROCESS_TEXT_STAGE_LINE_1:
         case FILE_SCREEN_PROCESS_TEXT_STAGE_LINE_2:
         case FILE_SCREEN_PROCESS_TEXT_STAGE_LINE_3:
@@ -952,6 +1035,7 @@ static void FileScreenProcessText(void)
                 }
             }
             break;
+        #endif // REGION_EU
 
         case FILE_SCREEN_PROCESS_TEXT_STAGE_UPDATE_QUEUE:
             FILE_SELECT_DATA.messageInfoIdQueue[0] = UCHAR_MAX;
@@ -3307,7 +3391,11 @@ static u8 OptionsSoundTestSubroutine(void)
             FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_PANEL].yPosition =
                 FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_ID].yPosition;
 
+            #ifdef REGION_EU
+            FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_PANEL].priority = BGCNT_LOW_MID_PRIORITY;
+            #else // !REGION_EU
             FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_PANEL].priority = BGCNT_LOW_PRIORITY;
+            #endif // REGION_EU
             FILE_SELECT_DATA.subroutineStage++;
             break;
 

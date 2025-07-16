@@ -554,9 +554,14 @@ u32 InGameCutsceneUpgradingSuit(InGameCutsceneScene cutsceneNumber, InGameCutsce
             gDisablePause = FALSE;
             gDefaultTransparency.unk_0 = FALSE;
 
+            #ifdef REGION_EU
+            ended = 5;
+            #else // !REGION_EU
             // Since this cutscene never returns 5, this function is still called even after it ended
             // it's on stage 20 so technically nothing happens, but it's a weird oversight
             ended = TRUE;
+            #endif // REGION_EU
+            break;
     }
 
     if (changeStage)

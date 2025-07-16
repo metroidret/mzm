@@ -110,13 +110,23 @@ static u8 ZiplineMoving(void)
         {
             gCurrentSprite.xPosition += velocity;
             if (samusGrabbing)
+            {
                 gSamusData.xPosition += velocity;
+                #ifdef REGION_EU
+                gSamusPhysics.horizontalMovingDirection = HDMOVING_RIGHT;
+                #endif // REGION_EU
+            }
         }
         else
         {
             gCurrentSprite.xPosition -= velocity;
             if (samusGrabbing)
+            {
                 gSamusData.xPosition -= velocity;
+                #ifdef REGION_EU
+                gSamusPhysics.horizontalMovingDirection = HDMOVING_LEFT;
+                #endif // REGION_EU
+            }
         }
     }
 

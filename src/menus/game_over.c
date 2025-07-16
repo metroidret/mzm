@@ -285,7 +285,11 @@ static void GameOverInit(void)
 {
     CallbackSetVblank(GameOverVBlank_Empty);
 
+    #ifdef REGION_EU
+    BitFill(3, 0, &gNonGameplayRam, sizeof(gNonGameplayRam), 32);
+    #else // !REGION_EU
     DMA_FILL_32(3, 0, &gNonGameplayRam, sizeof(gNonGameplayRam));
+    #endif // REGION_EU
 
     WRITE_16(REG_BLDCNT, GAME_OVER_DATA.bldcnt = BLDCNT_SCREEN_FIRST_TARGET | BLDCNT_BRIGHTNESS_INCREASE_EFFECT);
 
@@ -349,7 +353,11 @@ static void GameOverInit_Debug(void)
 {
     CallbackSetVblank(GameOverVBlank_Empty);
 
+    #ifdef REGION_EU
+    BitFill(3, 0, &gNonGameplayRam, sizeof(gNonGameplayRam), 32);
+    #else // !REGION_EU
     DMA_FILL_32(3, 0, &gNonGameplayRam, sizeof(gNonGameplayRam));
+    #endif
 
     WRITE_16(REG_BLDCNT, GAME_OVER_DATA.bldcnt = BLDCNT_SCREEN_FIRST_TARGET | BLDCNT_BRIGHTNESS_INCREASE_EFFECT);
 
