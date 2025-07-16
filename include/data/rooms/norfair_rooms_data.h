@@ -150,11 +150,11 @@ extern const u8 sNorfair_19_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(7)];
 extern const u8 sNorfair_19_Bg0[656];
 
 extern const u8 sNorfair_6_Scrolls[SCROLL_DATA_SIZE(4)];
-extern const u8 sNorfair_20_Clipdata[451];
+extern const u8 sNorfair_20_Clipdata[];
 extern const u8 sNorfair_20_Bg2[724];
-extern const u8 sNorfair_20_Bg1[965];
+extern const u8 sNorfair_20_Bg1[];
 extern const u8 sNorfair_20_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(9)];
-extern const u8 sNorfair_20_Bg0[559];
+extern const u8 sNorfair_20_Bg0[];
 
 extern const u8 sNorfair_21_Clipdata[210];
 extern const u8 sNorfair_21_Bg2[28];
@@ -294,11 +294,11 @@ extern const u8 sNorfair_42_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(3)];
 extern const u8 sNorfair_42_Bg0[91];
 
 extern const u8 sNorfair_14_Scrolls[SCROLL_DATA_SIZE(1)];
-extern const u8 sNorfair_43_Clipdata[486];
+extern const u8 sNorfair_43_Clipdata[];
 extern const u8 sNorfair_43_Bg2[1237];
-extern const u8 sNorfair_43_Bg1[1405];
+extern const u8 sNorfair_43_Bg1[];
 extern const u8 sNorfair_43_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(3)];
-extern const u8 sNorfair_43_Bg0[489];
+extern const u8 sNorfair_43_Bg0[];
 
 extern const u8 sNorfair_44_Clipdata[85];
 extern const u8 sNorfair_44_Bg1[162];
@@ -340,7 +340,7 @@ extern const u8 sNorfair_50_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(1)];
 
 extern const u8 sNorfair_51_Clipdata[32];
 extern const u8 sNorfair_51_Bg2[505];
-extern const u8 sNorfair_51_Bg1[458];
+extern const u8 sNorfair_51_Bg1[];
 extern const u8 sNorfair_51_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(1)];
 extern const u8 sNorfair_51_Bg0[270];
 

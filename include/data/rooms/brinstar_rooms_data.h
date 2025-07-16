@@ -60,9 +60,9 @@ extern const u8 sBrinstar_6_Bg0[186];
 
 
 extern const u8 sBrinstar_7_Clipdata[692];
-extern const u8 sBrinstar_7_Bg2[313];
+extern const u8 sBrinstar_7_Bg2[];
 extern const u8 sBrinstar_7_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(19)];
-extern const u8 sBrinstar_7_Bg1[1962];
+extern const u8 sBrinstar_7_Bg1[];
 extern const u8 sBrinstar_7_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(18)];
 
 

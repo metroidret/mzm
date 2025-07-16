@@ -14,7 +14,7 @@ extern const u8 sWater_Bg0[548];
 extern const u8 sSaveRoom_Bg3[1132];
 
 extern const u32 sTileset_8_Gfx[2752];
-extern const u32 sTileset_17_Gfx[2032];
+extern const u32 sTileset_17_Gfx[];
 extern const u32 sTileset_34_Gfx[1569];
 extern const u32 sTileset_37_Gfx[2026];
 extern const u32 sTileset_53_Gfx[1742];
@@ -48,7 +48,7 @@ extern const u16 sTileset_18_Pal[14 * 16];
 extern const u16 sTileset_20_Pal[14 * 16];
 
 extern const u8 sTileset_8_Tilemap[4228];
-extern const u8 sTileset_17_Tilemap[4228];
+extern const u8 sTileset_17_Tilemap[];
 extern const u8 sTileset_34_Tilemap[4228];
 extern const u8 sTileset_37_Tilemap[4228];
 extern const u8 sTileset_53_Tilemap[4228];

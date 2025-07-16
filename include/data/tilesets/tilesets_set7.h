@@ -5,7 +5,7 @@
 
 extern const u32 sTileset_10_Gfx[3663];
 extern const u32 sTileset_52_Gfx[3073];
-extern const u32 sTileset_74_Gfx[3034];
+extern const u32 sTileset_74_Gfx[];
 extern const u32 sTileset_66_Gfx[1010];
 extern const u32 sTileset_77_Gfx[633];
 extern const u32 sTileset_44_Gfx[2791];

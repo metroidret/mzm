@@ -12,7 +12,7 @@ const u8 sWater_Bg0[548] = INCBIN_U8("data/rooms/Water_Bg0.rle");
 const u8 sSaveRoom_Bg3[1132] = INCBIN_U8("data/rooms/SaveRoom_Bg3.rle");
 
 const u32 sTileset_8_Gfx[2752] = INCBIN_U32("data/tilesets/8.gfx.lz");
-const u32 sTileset_17_Gfx[2032] = INCBIN_U32("data/tilesets/17.gfx.lz");
+const u32 sTileset_17_Gfx[] = INCBIN_U32("data/tilesets/17.gfx.lz");
 const u32 sTileset_34_Gfx[1569] = INCBIN_U32("data/tilesets/34.gfx.lz");
 const u32 sTileset_37_Gfx[2026] = INCBIN_U32("data/tilesets/37.gfx.lz");
 const u32 sTileset_53_Gfx[1742] = INCBIN_U32("data/tilesets/53.gfx.lz");
@@ -46,7 +46,7 @@ const u16 sTileset_18_Pal[14 * 16] = INCBIN_U16("data/tilesets/18.pal");
 const u16 sTileset_20_Pal[14 * 16] = INCBIN_U16("data/tilesets/20.pal");
 
 const u8 sTileset_8_Tilemap[4228] = INCBIN_U8("data/tilesets/8.tm");
-const u8 sTileset_17_Tilemap[4228] = INCBIN_U8("data/tilesets/17.tm");
+const u8 sTileset_17_Tilemap[] = INCBIN_U8("data/tilesets/17.tm");
 const u8 sTileset_34_Tilemap[4228] = INCBIN_U8("data/tilesets/34.tm");
 const u8 sTileset_37_Tilemap[4228] = INCBIN_U8("data/tilesets/37.tm");
 const u8 sTileset_53_Tilemap[4228] = INCBIN_U8("data/tilesets/53.tm");

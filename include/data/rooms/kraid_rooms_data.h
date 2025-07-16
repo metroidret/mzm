@@ -116,11 +116,11 @@ extern const u8 sKraid_16_Bg2[14];
 extern const u8 sKraid_16_Bg1[171];
 extern const u8 sKraid_16_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(1)];
 
-extern const u8 sKraid_17_Clipdata[201];
+extern const u8 sKraid_17_Clipdata[];
 extern const u8 sKraid_17_Bg2[114];
 extern const u8 sKraid_17_Bg1[493];
 extern const u8 sKraid_17_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(5)];
-extern const u8 sKraid_17_Bg0[173];
+extern const u8 sKraid_17_Bg0[];
 
 extern const u8 sKraid_18_Clipdata[111];
 extern const u8 sKraid_18_Bg2[137];

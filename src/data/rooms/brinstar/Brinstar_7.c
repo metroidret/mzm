@@ -3,7 +3,7 @@
 
 const u8 sBrinstar_7_Clipdata[692] = INCBIN_U8("data/rooms/brinstar/Brinstar_7_Clipdata.gfx");
 
-const u8 sBrinstar_7_Bg2[313] = INCBIN_U8("data/rooms/brinstar/Brinstar_7_Bg2.gfx");
+const u8 sBrinstar_7_Bg2[] = INCBIN_U8("data/rooms/brinstar/Brinstar_7_Bg2.gfx");
 
 const u8 sBrinstar_7_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(19)] = {
 	12, 5, SPRITESET_IDX(2),
@@ -27,7 +27,7 @@ const u8 sBrinstar_7_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(19)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sBrinstar_7_Bg1[1962] = INCBIN_U8("data/rooms/brinstar/Brinstar_7_Bg1.gfx");
+const u8 sBrinstar_7_Bg1[] = INCBIN_U8("data/rooms/brinstar/Brinstar_7_Bg1.gfx");
 
 const u8 sBrinstar_7_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(18)] = {
 	6, 10, SPRITESET_IDX(5),
