@@ -441,7 +441,7 @@ const u16 sChozodiaEscape_5ca0f8[8][2] = {
 };
 
 #ifdef REGION_EU
-const u16* sChozodiaEscapeOamPointers_MissionAccomplished[LANGUAGE_END] = {
+const u16 * const sChozodiaEscapeOamPointers_MissionAccomplished[LANGUAGE_END] = {
     [LANGUAGE_JAPANESE] = sChozodiaEscapeOam_MissionAccomplishedEnglish_Frame0,
     [LANGUAGE_HIRAGANA] = sChozodiaEscapeOam_MissionAccomplishedHiragana_Frame0,
     [LANGUAGE_ENGLISH] = sChozodiaEscapeOam_MissionAccomplishedEnglish_Frame0,

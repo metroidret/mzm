@@ -72,7 +72,7 @@ extern const u8 sEndingImage_54e2dc[8];
 extern const u8 sEndingImageNewRecordPalettes[12];
 
 #ifdef REGION_EU
-extern const u16* sEndingImageOamPointers_NewRecord[LANGUAGE_END];
+extern const u16 * const sEndingImageOamPointers_NewRecord[LANGUAGE_END];
 #endif // REGION_EU
 
 extern const u32 sCreditsCharactersGfx[];

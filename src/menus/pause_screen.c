@@ -170,7 +170,7 @@ const u32* sMinimapDataPointers[AREA_COUNT] = {
 };
 
 #ifdef REGION_EU
-static const u8* const sMaintainedInputDelaysPointers[2] = {
+static const u8* sMaintainedInputDelaysPointers[2] = {
     [MAINTAINED_INPUT_SPEED_FAST] = sMaintainedInputDelays_Fast,
     [MAINTAINED_INPUT_SPEED_SLOW] = sMaintainedInputDelays_Slow,
 };

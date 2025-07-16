@@ -5408,7 +5408,7 @@ const u8 sEndingImageNewRecordPalettes[12] = {
 
 // TODO: Fix
 #ifdef REGION_EU
-const u16* sEndingImageOamPointers_NewRecord[LANGUAGE_END] = {
+const u16 * const sEndingImageOamPointers_NewRecord[LANGUAGE_END] = {
     [LANGUAGE_JAPANESE] = sEndingImageOam_NewRecordEnglish,
     [LANGUAGE_HIRAGANA] = sEndingImageOam_NewRecordEnglish,
     [LANGUAGE_ENGLISH] = sEndingImageOam_NewRecordEnglish,

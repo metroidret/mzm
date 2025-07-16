@@ -78,7 +78,7 @@ static const u32* sTitleScreenMenuGfxPointers[(LANGUAGE_END - LANGUAGE_ENGLISH) 
     sTitleScreenSpanishMenuGfx_Top,
     sTitleScreenSpanishMenuGfx_Bottom
 };
-#endif // !REGION_EU
+#endif // REGION_EU
 
 static u8 sTitleScreenCometsFlags[2][2] = {
     [0] = {
@@ -1012,7 +1012,7 @@ u32 TitleScreenCheckPlayEffects(void)
         if (tmp2)
         {
             SoundPlay(0x1FA);
-            unk_779fc(TITLE_SCREEN_DATA.oamTimings[2].unk_1);
+            TitleScreenSetMenuPalette(TITLE_SCREEN_DATA.oamTimings[2].unk_1);
             TITLE_SCREEN_DATA.demoTimer = 0;
         }
     }

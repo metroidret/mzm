@@ -11,7 +11,7 @@ extern const u16 sTitleScreenPal[15 * 16];
 extern const u16 sTitleScreenPromptPal[5 * 16];
 
 #ifdef REGION_EU
-const u16 sTitleScreenUnselectedMenuPal[1 * 16];
+extern const u16 sTitleScreenUnselectedMenuPal[1 * 16];
 #endif // REGION_EU
 
 extern const u32 sTitleScreenTitleGfx[1095];
