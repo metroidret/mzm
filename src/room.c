@@ -987,7 +987,11 @@ void RoomUpdateHatchFlashingAnimation(void)
             if (gHatchFlashingAnimation.row2 >= 6)
                 gHatchFlashingAnimation.row2 = 0;
 
+            #ifdef REGION_EU
+            DmaTransfer(3, &pPalette[gHatchFlashingAnimation.row2 * PAL_ROW + 6], PALRAM_BASE + 2 * PAL_ROW_SIZE + 6 * sizeof(u16), 2 * sizeof(u16), 16);
+            #else // !REGION_EU
             DMA_SET(3, &pPalette[gHatchFlashingAnimation.row2 * PAL_ROW + 6], PALRAM_BASE + 2 * PAL_ROW_SIZE + 6 * sizeof(u16), C_32_2_16(DMA_ENABLE, 2));
+            #endif // REGION_EU
         }
     }
 }

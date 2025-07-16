@@ -277,29 +277,59 @@ static void EndingImageLoadIGTAndPercentageGraphics(void)
     if (hoursTens != 0)
     {
         offset = hoursTens * 64;
+        #ifdef REGION_EU
+        DmaTransfer(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ, 64, 16);
+        DmaTransfer(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x400, 64, 16);
+        #else // !REGION_EU
         DMA_SET(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ, C_32_2_16(DMA_ENABLE, 64 / 2));
         DMA_SET(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x400, C_32_2_16(DMA_ENABLE, 64 / 2));
+        #endif // REGION_EU
     }
 
     offset = hoursOnes * 64;
+    #ifdef REGION_EU
+    DmaTransfer(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x040, 64, 16);
+    DmaTransfer(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x440, 64, 16);
+    #else // !REGION_EU
     DMA_SET(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x040, C_32_2_16(DMA_ENABLE, 64 / 2));
     DMA_SET(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x440, C_32_2_16(DMA_ENABLE, 64 / 2));
+    #endif // REGION_EU
 
     offset = minutesTens * 64;
+    #ifdef REGION_EU
+    DmaTransfer(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x0A0, 64, 16);
+    DmaTransfer(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x4A0, 64, 16);
+    #else // !REGION_EU
     DMA_SET(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x0A0, C_32_2_16(DMA_ENABLE, 64 / 2));
     DMA_SET(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x4A0, C_32_2_16(DMA_ENABLE, 64 / 2));
+    #endif // REGION_EU
 
     offset = minutesOnes * 64;
+    #ifdef REGION_EU
+    DmaTransfer(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x0E0, 64, 16);
+    DmaTransfer(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x4E0, 64, 16);
+    #else // !REGION_EU
     DMA_SET(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x0E0, C_32_2_16(DMA_ENABLE, 64 / 2));
     DMA_SET(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x4E0, C_32_2_16(DMA_ENABLE, 64 / 2));
+    #endif // REGION_EU
 
     offset = secondsTens * 64;
+    #ifdef REGION_EU
+    DmaTransfer(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x140, 64, 16);
+    DmaTransfer(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x540, 64, 16);
+    #else // !REGION_EU
     DMA_SET(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x140, C_32_2_16(DMA_ENABLE, 64 / 2));
     DMA_SET(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x540, C_32_2_16(DMA_ENABLE, 64 / 2));
+    #endif // REGION_EU
 
     offset = secondsOnes * 64;
+    #ifdef REGION_EU
+    DmaTransfer(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x180, 64, 16);
+    DmaTransfer(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x580, 64, 16);
+    #else // !REGION_EU
     DMA_SET(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x180, C_32_2_16(DMA_ENABLE, 64 / 2));
     DMA_SET(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x580, C_32_2_16(DMA_ENABLE, 64 / 2));
+    #endif // REGION_EU
 
     percentageHundreds = 0;
     hoursOnes = 0; // percentageTens
@@ -320,20 +350,35 @@ static void EndingImageLoadIGTAndPercentageGraphics(void)
     if (percentageHundreds != 0)
     {
         offset = percentageHundreds * 64;
+        #ifdef REGION_EU
+        DmaTransfer(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x1C0, 64, 16);
+        DmaTransfer(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x5C0, 64, 16);
+        #else // !REGION_EU
         DMA_SET(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x1C0, C_32_2_16(DMA_ENABLE, 64 / 2));
         DMA_SET(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x5C0, C_32_2_16(DMA_ENABLE, 64 / 2));
+        #endif // REGION_EU
     }
     
     if (percentageHundreds != 0 || hoursOnes != 0)
     {
         offset = hoursOnes * 64;
+        #ifdef REGION_EU
+        DmaTransfer(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x200, 64, 16);
+        DmaTransfer(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x600, 64, 16);
+        #else // !REGION_EU
         DMA_SET(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x200, C_32_2_16(DMA_ENABLE, 64 / 2));
         DMA_SET(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x600, C_32_2_16(DMA_ENABLE, 64 / 2));
+        #endif // REGION_EU
     }
 
     offset = minutesTens * 64;
+    #ifdef REGION_EU
+    DmaTransfer(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x240, 64, 16);
+    DmaTransfer(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x640, 64, 16);
+    #else // !REGION_EU
     DMA_SET(3, &sEndingImageNumbersGfx_Upper[offset], VRAM_OBJ + 0x240, C_32_2_16(DMA_ENABLE, 64 / 2));
     DMA_SET(3, &sEndingImageNumbersGfx_Lower[offset], VRAM_OBJ + 0x640, C_32_2_16(DMA_ENABLE, 64 / 2));
+    #endif // REGION_EU
 }
 
 /**
@@ -446,8 +491,13 @@ static void CreditsInit(void)
     LZ77UncompVRAM(sCreditsChozoWallBottomTileTable, VRAM_BASE + 0xD800);
     LZ77UncompVRAM(sCreditsCharactersGfx, VRAM_BASE + 0x8000);
 
+    #ifdef REGION_EU
+    DmaTransfer(3, sCreditsChozoWallPal, PALRAM_BASE, sizeof(sCreditsChozoWallPal), 16);
+    DmaTransfer(3, sCreditsCharactersPal, PALRAM_BASE + 13 * PAL_ROW_SIZE, sizeof(sCreditsCharactersPal), 16);
+    #else // !REGION_EU
     DMA_SET(3, sCreditsChozoWallPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sCreditsChozoWallPal)));
     DMA_SET(3, sCreditsCharactersPal, PALRAM_BASE + 13 * PAL_ROW_SIZE, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sCreditsCharactersPal)));
+    #endif // REGION_EU
 
     WRITE_16(REG_BG0CNT, CREATE_BGCNT(2, 30, BGCNT_HIGH_PRIORITY, BGCNT_SIZE_256x256));
     WRITE_16(REG_BG1CNT, CREATE_BGCNT(2, 31, BGCNT_HIGH_MID_PRIORITY, BGCNT_SIZE_256x256));
@@ -847,7 +897,11 @@ static u8 CreditsChozoWallZoom(void)
     {
         case 0:
             LZ77UncompVRAM(sCreditsChozoWallBottomZoomedGfx, VRAM_BASE);
+            #ifdef REGION_EU
+            DmaTransfer(3, sCreditsChozoWallPal, PALRAM_BASE, sizeof(sCreditsChozoWallPal), 16);
+            #else // !REGION_EU
             DMA_SET(3, sCreditsChozoWallPal, PALRAM_BASE, DMA_ENABLE << 16 | ARRAY_SIZE(sCreditsChozoWallPal));
+            #endif // REGION_EU
             gBg0YPosition = 0;
             gWrittenToBldalpha_L = 0;
             gWrittenToBldalpha_H = 16;
@@ -961,7 +1015,11 @@ static void EndScreenInit(void)
     BitFill(3, 0, VRAM_BASE + 0xD800, 0x800, 32);
     BitFill(3, 0, VRAM_BASE + 0xE800, 0x800, 32);
 
+    #ifdef REGION_EU
+    DmaTransfer(3, sEndingPosingPal, PALRAM_BASE, sizeof(sEndingPosingPal), 16);
+    #else // !REGION_EU
     DMA_SET(3, sEndingPosingPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sEndingPosingPal)));
+    #endif // REGION_EU
 
     WRITE_16(REG_BG0CNT, CREATE_BGCNT(2, 30, BGCNT_HIGH_PRIORITY, BGCNT_SIZE_256x256));
     WRITE_16(REG_BG1CNT, CREATE_BGCNT(0, 26, BGCNT_HIGH_MID_PRIORITY, BGCNT_SIZE_512x256));
@@ -970,7 +1028,11 @@ static void EndScreenInit(void)
     
     gNextOamSlot = 0;
     ResetFreeOam();
+    #ifdef REGION_EU
+    DmaTransfer(3, gOamData, OAM_BASE, OAM_SIZE, 32);
+    #else // !REGION_EU
     DMA_SET(3, gOamData, OAM_BASE, C_32_2_16(DMA_ENABLE | DMA_32BIT, OAM_SIZE / sizeof(u32)));
+    #endif // REGION_EU
 
     gBg0XPosition = 0;
     gBg0YPosition = 0;
@@ -1152,8 +1214,13 @@ static u8 EndScreenSamusPosing(void)
                 ENDING_DATA.oamTypes[1] = 16;
                 break;
             }
+            #ifdef REGION_EU
+            DmaTransfer(3, sEndingWhitePalPointers[(u8)temp / 4],
+                PALRAM_BASE, sizeof(sEndingPosingPal_White1), 16);
+            #else // !REGION_EU
             DMA_SET(3, sEndingWhitePalPointers[(u8)temp / 4],
                 PALRAM_BASE, DMA_ENABLE << 16 | ARRAY_SIZE(sEndingPosingPal_White1));
+            #endif // REGION_EU
             break;
 
         case 4:
@@ -1283,7 +1350,11 @@ static u8 EndScreenSamusPosing(void)
             break;
 
         case 19:
+            #ifdef REGION_EU
+            DmaTransfer(3, sEndingPosingPal, PALRAM_BASE, 5 * PAL_ROW_SIZE, 16);
+            #else // !REGION_EU
             DMA_SET(3, sEndingPosingPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, 0x50));
+            #endif // REGION_EU
             ENDING_DATA.oamTypes[1]++;
             break;
 
@@ -1675,7 +1746,11 @@ static void UnlockedOptionsInit(void)
     BitFill(3, -1, VRAM_BASE + 0x7FE0, 0x20, 32);
     BitFill(3, 0xF3FFF3FF, VRAM_BASE + 0x8800, 0x800, 32);
 
+    #ifdef REGION_EU
+    DmaTransfer(3, sUnlockedOptionsPal, PALRAM_BASE + 15 * PAL_ROW_SIZE, sizeof(sUnlockedOptionsPal), 16);
+    #else // !REGION_EU
     DMA_SET(3, sUnlockedOptionsPal, PALRAM_BASE + 15 * PAL_ROW_SIZE, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sUnlockedOptionsPal)));
+    #endif // REGION_EU
 
     WRITE_16(REG_BG0CNT, CREATE_BGCNT(0, 16, BGCNT_HIGH_PRIORITY, BGCNT_SIZE_256x256));
     WRITE_16(REG_BG1CNT, CREATE_BGCNT(0, 17, BGCNT_HIGH_MID_PRIORITY, BGCNT_SIZE_256x256));

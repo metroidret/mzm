@@ -3,6 +3,7 @@
 #include "macros.h"
 #include "complex_oam.h" // Required
 #include "text.h"
+#include "dma.h"
 
 #include "data/shortcut_pointers.h"
 #include "data/intro_data.h"
@@ -23,7 +24,11 @@
  */
 static void IntroVBlank(void)
 {
+    #ifdef REGION_EU
+    DmaTransfer(3, gOamData, OAM_BASE, OAM_SIZE, 32);
+    #else // !REGION_EU
     DMA_SET(3, gOamData, OAM_BASE, C_32_2_16(DMA_ENABLE | DMA_32BIT, OAM_SIZE / sizeof(u32)));
+    #endif // REGION_EU
 
     WRITE_16(REG_DISPCNT, INTRO_DATA.dispcnt);
     WRITE_16(REG_BLDCNT, INTRO_DATA.bldcnt);
@@ -80,9 +85,15 @@ static void IntroInit(void)
     LZ77UncompVRAM(sIntroSpaceBackgroundTileTable, VRAM_BASE + 0x8000);
     LZ77UncompVRAM(sIntro_47920c, VRAM_BASE + 0x9000);
 
+    #ifdef REGION_EU
+    DmaTransfer(3, sIntroTextAndShipPal, PALRAM_OBJ, sizeof(sIntroTextAndShipPal), 16);
+    DmaTransfer(3, sIntroTextAndShipPal, PALRAM_BASE, sizeof(sIntroTextAndShipPal), 16);
+    DmaTransfer(3, sIntroPal_45f9d4, PALRAM_BASE + 15 * PAL_ROW_SIZE, sizeof(sIntroPal_45f9d4), 16);
+    #else // !REGION_EU
     DMA_SET(3, sIntroTextAndShipPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sIntroTextAndShipPal)));
     DMA_SET(3, sIntroTextAndShipPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sIntroTextAndShipPal)));
     DMA_SET(3, sIntroPal_45f9d4, PALRAM_BASE + 15 * PAL_ROW_SIZE, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sIntroPal_45f9d4)));
+    #endif // REGION_EU
 
     WRITE_16(REG_BG0CNT, CREATE_BGCNT(0, 16, BGCNT_HIGH_PRIORITY, BGCNT_SIZE_256x256));
     WRITE_16(REG_BG1CNT, CREATE_BGCNT(0, 18, BGCNT_HIGH_MID_PRIORITY, BGCNT_SIZE_256x256));
@@ -691,8 +702,13 @@ static u8 IntroViewOfZebes(void)
 
         case DELTA_TIME * 2:
             LZ77UncompVRAM(sIntroViewOfZebesTileTable, VRAM_BASE + 0x8000);
+            #ifdef REGION_EU
+            DmaTransfer(3, sIntroViewOfZebesPal, PALRAM_BASE, sizeof(sIntroViewOfZebesPal), 16);
+            DmaTransfer(3, sIntroViewOfZebesPal, PALRAM_OBJ, sizeof(sIntroViewOfZebesPal), 16);
+            #else // !REGION_EU
             DMA_SET(3, sIntroViewOfZebesPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sIntroViewOfZebesPal)));
             DMA_SET(3, sIntroViewOfZebesPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sIntroViewOfZebesPal)));
+            #endif // REGION_EU
             gBg0XPosition = QUARTER_BLOCK_SIZE;
             break;
 
@@ -902,19 +918,35 @@ static u8 IntroFuzz(void)
     switch (MOD_AND(INTRO_DATA.unk_A, 8))
     {
         case 0:
+            #ifdef REGION_EU
+            DmaTransfer(3, sIntroFuzzRandomValues_1, INTRO_DATA.fuzzPalette, sizeof(INTRO_DATA.fuzzPalette), 16);
+            #else // !REGION_EU
             DMA_SET(3, sIntroFuzzRandomValues_1, INTRO_DATA.fuzzPalette, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(INTRO_DATA.fuzzPalette)));
+            #endif // REGION_EU
             break;
 
         case 2:
+            #ifdef REGION_EU
+            DmaTransfer(3, sIntroFuzzRandomValues_2, INTRO_DATA.fuzzPalette, sizeof(INTRO_DATA.fuzzPalette), 16);
+            #else // !REGION_EU
             DMA_SET(3, sIntroFuzzRandomValues_2, INTRO_DATA.fuzzPalette, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(INTRO_DATA.fuzzPalette)));
+            #endif // REGION_EU
             break;
 
         case 4:
+            #ifdef REGION_EU
+            DmaTransfer(3, sTimeAttackPasswordCharacters, INTRO_DATA.fuzzPalette, sizeof(INTRO_DATA.fuzzPalette), 16);
+            #else // !REGION_EU
             DMA_SET(3, sTimeAttackPasswordCharacters, INTRO_DATA.fuzzPalette, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(INTRO_DATA.fuzzPalette)));
+            #endif // REGION_EU
             break;
 
         case 6:
+            #ifdef REGION_EU
+            DmaTransfer(3, sSpriteYHalfRadius[1], INTRO_DATA.fuzzPalette, sizeof(INTRO_DATA.fuzzPalette), 16);
+            #else // !REGION_EU
             DMA_SET(3, sSpriteYHalfRadius[1], INTRO_DATA.fuzzPalette, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(INTRO_DATA.fuzzPalette)));
+            #endif // REGION_EU
             break;
     }
 

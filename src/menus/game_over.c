@@ -307,7 +307,11 @@ static void GameOverInit(void)
 
     DmaTransfer(3, sGameOverMenuPal, PALRAM_BASE, sizeof(sGameOverMenuPal), 16);
     SET_BACKDROP_COLOR(COLOR_BLACK);
+    #ifdef REGION_EU
+    DmaTransfer(3, sFileSelectIconsPal, PALRAM_OBJ, sizeof(sFileSelectIconsPal), 16);
+    #else // !REGION_EU
     DMA_SET(3, sFileSelectIconsPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sFileSelectIconsPal)));
+    #endif // REGION_EU
 
     LZ77UncompVRAM(sGameOverBackgroundTileTable, VRAM_BASE + 0x1800);
     LZ77UncompVRAM(sGameOverTextTileTable, VRAM_BASE + 0x800);

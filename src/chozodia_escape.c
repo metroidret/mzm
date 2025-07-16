@@ -437,8 +437,13 @@ static void ChozodiaEscapeInit(void)
     LZ77UncompVRAM(sCutscene_3b5168_TileTable, VRAM_BASE + 0xA800);
     LZ77UncompVRAM(sCutsceneZebesMotherShipBackgroundTileTable, VRAM_BASE + 0xB000);
 
+    #ifdef REGION_EU
+    DmaTransfer(3, sCutsceneZebesPal, PALRAM_BASE, sizeof(sCutsceneZebesPal), 16);
+    DmaTransfer(3, sCutsceneMotherShipPal, PALRAM_OBJ, sizeof(sCutsceneMotherShipPal), 16);
+    #else // !REGION_EU
     DMA_SET(3, sCutsceneZebesPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sCutsceneZebesPal)));
     DMA_SET(3, sCutsceneMotherShipPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sCutsceneMotherShipPal)));
+    #endif // REGION_EU
 
     WRITE_16(REG_BG0CNT, CREATE_BGCNT(2, 20, BGCNT_HIGH_PRIORITY, BGCNT_SIZE_256x256));
     WRITE_16(REG_BG1CNT, CREATE_BGCNT(2, 21, BGCNT_HIGH_MID_PRIORITY, BGCNT_SIZE_256x256));
@@ -790,8 +795,13 @@ static u8 ChozodiaEscapeShipBlowingUp(void)
             LZ77UncompVRAM(sChozodiaEscapeCraterBackgroundTileTable, VRAM_BASE + 0xE800);
             LZ77UncompVRAM(sMotherShipExplodingFlashTileTable, VRAM_BASE + 0xF000);
 
-            DMA_SET(3, sChozodiaEscapeShipExplodingPal, PALRAM_BASE, DMA_ENABLE << 16 | ARRAY_SIZE(sChozodiaEscapeShipExplodingPal) - 16 * 2);
+            #ifdef REGION_EU
+            DmaTransfer(3, sChozodiaEscapeShipExplodingPal, PALRAM_BASE, sizeof(sChozodiaEscapeShipExplodingPal) - PAL_ROW_SIZE * 2, 16);
+            DmaTransfer(3, sMotherShipBlowingUpExplosionsPal, PALRAM_OBJ, sizeof(sMotherShipBlowingUpExplosionsPal), 16);
+            #else // !REGION_EU
+            DMA_SET(3, sChozodiaEscapeShipExplodingPal, PALRAM_BASE, DMA_ENABLE << 16 | ARRAY_SIZE(sChozodiaEscapeShipExplodingPal) - PAL_ROW * 2);
             DMA_SET(3, sMotherShipBlowingUpExplosionsPal, PALRAM_OBJ, DMA_ENABLE << 16 | ARRAY_SIZE(sMotherShipBlowingUpExplosionsPal));
+            #endif // REGION_EU
 
             WRITE_16(REG_BG0CNT, CREATE_BGCNT(2, 30, BGCNT_HIGH_PRIORITY, BGCNT_SIZE_256x256));
             WRITE_16(REG_BG1CNT, CREATE_BGCNT(0, 29, BGCNT_HIGH_MID_PRIORITY, BGCNT_SIZE_256x256));
@@ -968,10 +978,17 @@ static u8 ChozodiaEscapeShipLeavingPlanet(void)
             LZ77UncompVRAM(sChozodiaEscapeZebesSkyTileTable, VRAM_BASE + 0xF000);
             LZ77UncompVRAM(sChozodiaEscapeSamusInBlueShipTileTable, VRAM_BASE + 0xF800);
             
+            #ifdef REGION_EU
+            DmaTransfer(3, sChozodiaEscapeMissionAccomplishedPal, PALRAM_BASE,
+                sizeof(sChozodiaEscapeMissionAccomplishedPal), 16);
+            DmaTransfer(3, sChozodiaEscapeMissionAccomplishedPal, PALRAM_OBJ,
+                sizeof(sChozodiaEscapeMissionAccomplishedPal), 16);
+            #else // !REGION_EU
             DMA_SET(3, sChozodiaEscapeMissionAccomplishedPal, PALRAM_BASE,
                 DMA_ENABLE << 16 | ARRAY_SIZE(sChozodiaEscapeMissionAccomplishedPal));
             DMA_SET(3, sChozodiaEscapeMissionAccomplishedPal, PALRAM_OBJ,
                 DMA_ENABLE << 16 | ARRAY_SIZE(sChozodiaEscapeMissionAccomplishedPal));
+            #endif // REGION_EU
 
             // Setup ship object
             CHOZODIA_ESCAPE_DATA.oamTypes[CHOZODIA_ESCAPE_OAM_BLUE_SHIP]++;

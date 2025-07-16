@@ -754,8 +754,14 @@ void TextDrawLocation(u8 locationText, u8 gfxSlot)
     pText = sLocationTextPointers[gLanguage][locationText];
     TextDrawLocationTextCharacters(1, &pText);
 
+    
+    #ifdef REGION_EU
+    DmaTransfer(3, EWRAM_BASE, VRAM_BASE + 0x14000 + gfxSlot * 0x800, 0xE0 * sizeof(u32), 32);
+    DmaTransfer(3, EWRAM_BASE + 0x400, VRAM_BASE + 0x14400 + gfxSlot * 0x800, 0xE0 * sizeof(u32), 32);
+    #else // !REGION_EU
     DMA_SET(3, EWRAM_BASE, VRAM_BASE + 0x14000 + gfxSlot * 0x800, C_32_2_16(DMA_ENABLE | DMA_32BIT, 0xE0));
     DMA_SET(3, EWRAM_BASE + 0x400, VRAM_BASE + 0x14400 + gfxSlot * 0x800, C_32_2_16(DMA_ENABLE | DMA_32BIT, 0xE0));
+    #endif // REGION_EU
 }
 
 /**

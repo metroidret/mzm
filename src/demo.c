@@ -184,8 +184,13 @@ void DemoEnd(void)
     if (gDemoState == DEMO_STATE_RECORDING_DEBUG)
     {
         // Debug, forward demo input and duration to SRAM, and save it flash
+        #ifdef REGION_EU
+        DmaTransfer(3, gDemoInputData, gSramDemoInputData, sizeof(gSramDemoInputData), 16);
+        DmaTransfer(3, gDemoInputDuration, gSramDemoInputDuration, sizeof(gSramDemoInputDuration), 16);
+        #else // !REGION_EU
         DMA_SET(3, gDemoInputData, gSramDemoInputData, C_32_2_16(DMA_ENABLE, sizeof(gSramDemoInputData) / 2));
         DMA_SET(3, gDemoInputDuration, gSramDemoInputDuration, C_32_2_16(DMA_ENABLE, sizeof(gSramDemoInputDuration) / 2));
+        #endif // REGION_EU
     
         DoSramOperation(SRAM_OPERATION_SAVE_RECORDED_DEMO);
 
