@@ -15,6 +15,12 @@ extern const u16 sEndingImageTextPal[14 * 16];
 // ...
 
 extern const u16 sEndingImageOam_NewRecordEnglish[OAM_DATA_SIZE(6)];
+#ifdef REGION_EU
+extern const u16 sEndingImageOam_NewRecordFrench[OAM_DATA_SIZE(4)];
+extern const u16 sEndingImageOam_NewRecordItalian[OAM_DATA_SIZE(6)];
+extern const u16 sEndingImageOam_NewRecordSpanish[OAM_DATA_SIZE(6)];
+extern const u16 sEndingImageOam_NewRecordGerman[OAM_DATA_SIZE(6)];
+#endif // REGION_EU
 
 // ...
 
