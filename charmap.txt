@@ -1568,7 +1568,7 @@ full_celsius          = 07CC
 '種'                  = 15DC
 '類'                  = 15DE
 
-WIDTH                 = 8000
+GAP                   = 8000
 COLOR                 = 8100
 INDENT                = 8300
 DELAY                 = E100
