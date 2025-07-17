@@ -32,7 +32,7 @@ u32 SoftResetSubroutine(void)
         case 0:
             SoftResetInit();
             #ifdef REGION_EU
-            if (LANGUAGE_SELECT_DATA.unk_10)
+            if (LANGUAGE_SELECT_DATA.loadLanguageSelect)
                 gGameModeSub1 = 3;
             else
                 gGameModeSub1++;
@@ -64,7 +64,7 @@ u32 SoftResetSubroutine(void)
             
             if (gWrittenToBldy_NonGameplay == 0)
             {
-                LANGUAGE_SELECT_DATA.unk_e = UCHAR_MAX;
+                LANGUAGE_SELECT_DATA.bldcnt = UCHAR_MAX;
                 gGameModeSub1 = 4;
             }
 
@@ -74,7 +74,7 @@ u32 SoftResetSubroutine(void)
         case 4:
             if (LanguageSelectSubroutine())
             {
-                LANGUAGE_SELECT_DATA.unk_0 = 0;
+                LANGUAGE_SELECT_DATA.timer = 0;
                 LANGUAGE_SELECT_DATA.languageAnimation.interval = DELTA_TIME;
                 gGameModeSub1++;
             }
@@ -83,8 +83,8 @@ u32 SoftResetSubroutine(void)
             break;
 
         case 5:
-            APPLY_DELTA_TIME_INC(LANGUAGE_SELECT_DATA.unk_0);
-            if (LANGUAGE_SELECT_DATA.unk_0 > CONVERT_SECONDS(1.f))
+            APPLY_DELTA_TIME_INC(LANGUAGE_SELECT_DATA.timer);
+            if (LANGUAGE_SELECT_DATA.timer > CONVERT_SECONDS(1.f))
                 gGameModeSub1++;
 
             LanguageSelectUpdateHighlightAnimation(&LANGUAGE_SELECT_DATA.languageAnimation);
@@ -105,7 +105,7 @@ u32 SoftResetSubroutine(void)
         case 7:
         case 8:
             SoftResetInit();
-            if (LANGUAGE_SELECT_DATA.unk_10)
+            if (LANGUAGE_SELECT_DATA.loadLanguageSelect)
                 gGameModeSub1 = 3;
             else
                 gGameModeSub1 = 2;
@@ -280,16 +280,16 @@ void SoftResetInit(void)
 
     #ifdef REGION_EU
     if (gGameModeSub1 == 0)
-        WRITE_16(REG_BLDCNT, LANGUAGE_SELECT_DATA.unk_e = BLDCNT_SCREEN_FIRST_TARGET | BLDCNT_BRIGHTNESS_INCREASE_EFFECT);
+        WRITE_16(REG_BLDCNT, LANGUAGE_SELECT_DATA.bldcnt = BLDCNT_SCREEN_FIRST_TARGET | BLDCNT_BRIGHTNESS_INCREASE_EFFECT);
     else
-        WRITE_16(REG_BLDCNT, LANGUAGE_SELECT_DATA.unk_e = UCHAR_MAX);
+        WRITE_16(REG_BLDCNT, LANGUAGE_SELECT_DATA.bldcnt = UCHAR_MAX);
     #else // !REGION_EU
     WRITE_16(REG_BLDCNT, CUTSCENE_DATA.bldcnt = BLDCNT_SCREEN_FIRST_TARGET | BLDCNT_BRIGHTNESS_INCREASE_EFFECT);
     #endif
     
     WRITE_16(REG_BLDY, gWrittenToBldy_NonGameplay = BLDY_MAX_VALUE);
     #ifdef REGION_EU
-    WRITE_16(REG_DISPCNT, LANGUAGE_SELECT_DATA.unk_4 = 0);
+    WRITE_16(REG_DISPCNT, LANGUAGE_SELECT_DATA.dispcnt = 0);
     #else // !REGION_EU
     WRITE_16(REG_DISPCNT, CUTSCENE_DATA.dispcnt = 0);
     #endif // REGION_EU
@@ -324,14 +324,14 @@ void SoftResetInit(void)
     if (INVALID_EU_LANGUAGE(LANGUAGE_SELECT_DATA.selectedLanguage))
     {
         LANGUAGE_SELECT_DATA.selectedLanguage = LANGUAGE_ENGLISH;
-        LANGUAGE_SELECT_DATA.unk_10 = TRUE;
+        LANGUAGE_SELECT_DATA.loadLanguageSelect = TRUE;
     }
     else
     {
-        LANGUAGE_SELECT_DATA.unk_10 = gGameModeSub1 == 7 ? TRUE : FALSE;
+        LANGUAGE_SELECT_DATA.loadLanguageSelect = gGameModeSub1 == 7;
     }
 
-    if (LANGUAGE_SELECT_DATA.unk_10)
+    if (LANGUAGE_SELECT_DATA.loadLanguageSelect)
     {
         LANGUAGE_SELECT_DATA.languageAnimation = sInitialLanguageColorAnimation;
 
@@ -347,15 +347,15 @@ void SoftResetInit(void)
         WRITE_16(REG_BG2CNT, 0);
         WRITE_16(REG_BG1CNT, 0);
         WRITE_16(REG_BG3CNT, 0x1F03);
-        LANGUAGE_SELECT_DATA.unk_4 = 0x800;
+        LANGUAGE_SELECT_DATA.dispcnt = 0x800;
     }
     else
     {
         SET_BACKDROP_COLOR(COLOR_BLACK);
-        LANGUAGE_SELECT_DATA.unk_4 = 0;
+        LANGUAGE_SELECT_DATA.dispcnt = 0;
     }
 
-    WRITE_16(REG_DISPCNT, LANGUAGE_SELECT_DATA.unk_4);
+    WRITE_16(REG_DISPCNT, LANGUAGE_SELECT_DATA.dispcnt);
     #else // !REGION_EU
     WRITE_16(REG_DISPCNT, CUTSCENE_DATA.dispcnt = 0);
     #endif // REGION_EU
@@ -372,7 +372,7 @@ void SoftResetVBlank(void)
     WRITE_16(REG_BLDY, gWrittenToBldy_NonGameplay);
 
     #ifdef REGION_EU
-    WRITE_16(REG_BLDCNT, LANGUAGE_SELECT_DATA.unk_e);
+    WRITE_16(REG_BLDCNT, LANGUAGE_SELECT_DATA.bldcnt);
     #endif // REGION_EU
 }
 

@@ -12,14 +12,14 @@ struct LanguageColorAnimation {
 };
 
 struct LanguageSelectData {
-    u16 unk_0; // timer?
-    u16 unk_2;
-    u16 unk_4; // dispcnt?
-    u8 unk_6[8];
-    u16 unk_e; // bldcnt?
-    u8 unk_10; // bool?
-    u8 selectedLanguage; // 10
-    struct LanguageColorAnimation languageAnimation; // 14
+    u16 timer;
+    u16 unused_2;
+    u16 dispcnt;
+    u8 unused_6[8];
+    u16 bldcnt;
+    u8 loadLanguageSelect;
+    u8 selectedLanguage;
+    struct LanguageColorAnimation languageAnimation;
 };
 
 #endif /* LANGUAGE_SELECT_STRUCT_H */
