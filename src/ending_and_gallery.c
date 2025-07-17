@@ -835,8 +835,14 @@ static u8 CreditsDisplay(void)
         ENDING_DATA.unk_8++;
     }
 
+    #ifdef REGION_EU
+    ENDING_DATA.unk_E += 9;
+    gBg0YPosition += 9;
+    #else // !REGION_EU
     ENDING_DATA.unk_E += 7;
     gBg0YPosition += 7;
+    #endif // REGION_EU
+
     return FALSE;
 }
 
@@ -2090,7 +2096,11 @@ static void GalleryInit(void)
 
     BitFill(3, 0x4FF04FF, VRAM_BASE + 0xE800, 0x800, 32);
 
-    DMA_SET(3, sEndingImagesPalPointers[endingNbr], PALRAM_BASE, C_32_2_16(DMA_ENABLE, 16 * PAL_ROW));
+    #ifdef REGION_EU
+    DmaTransfer(3, sEndingImagesPalPointers[endingNbr], PALRAM_BASE, PAL_SIZE, 16);
+    #else // !REGION_EU
+    DMA_SET(3, sEndingImagesPalPointers[endingNbr], PALRAM_BASE, C_32_2_16(DMA_ENABLE, COLORS_IN_PAL));
+    #endif // REGION_EU
 
     WRITE_16(REG_BG0CNT, CREATE_BGCNT(0, 28, BGCNT_HIGH_PRIORITY, BGCNT_SIZE_256x512));
     WRITE_16(REG_BG1CNT, CREATE_BGCNT(2, 30, BGCNT_HIGH_MID_PRIORITY, BGCNT_SIZE_256x512));

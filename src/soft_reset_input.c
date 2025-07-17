@@ -43,6 +43,10 @@ void SoftResetCheck(void)
  */
 void SoftReset(void)
 {
+    #ifdef REGION_EU
+    s32 tmp;
+    #endif // REGION_EU
+
     HazeTransferAndDeactivate();
     RestartSound();
 
@@ -91,5 +95,11 @@ void SoftReset(void)
     gChangedInput = KEY_NONE;
 
     WRITE_16(REG_IF, USHORT_MAX);
+    #ifdef REGION_EU
+    // Written this way to produce matching ASM
+    tmp = TRUE;
+    WRITE_16(REG_IME, tmp);
+    #else // !REGION_EU
     WRITE_16(REG_IME, TRUE);
+    #endif // REGION_EU
 }

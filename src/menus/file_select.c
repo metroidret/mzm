@@ -3608,7 +3608,11 @@ static u8 OptionsTimeAttackRecordsSubroutine(void)
             FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_HUGE_PANEL].yPosition = BLOCK_SIZE * 3;
 
             FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL].boundBackground = 0;
+            #ifdef REGION_EU
+            FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL].priority = BGCNT_LOW_MID_PRIORITY;
+            #else // !REGION_EU
             FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL].priority = BGCNT_HIGH_MID_PRIORITY;
+            #endif // REGION_EU
             FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL].xPosition = BLOCK_SIZE * 4;
             FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL].yPosition = BLOCK_SIZE * 2;
 
@@ -5626,7 +5630,11 @@ static u8 FileSelectProcessFileSelection(void)
             FILE_SELECT_DATA.dispcnt |= DCNT_BG2;
             FILE_SELECT_DATA.dispcnt |= DCNT_WIN0;
 
+            #ifdef REGION_EU
+            WRITE_16(REG_WIN0H, C_16_2_8(40, 200));
+            #else // !REGION_EU
             WRITE_16(REG_WIN0H, C_16_2_8(70, 170));
+            #endif // REGION_EU
             WRITE_16(REG_WIN0V, C_16_2_8(0, 23));
             WRITE_16(REG_WINOUT, C_16_2_8(0, WIN0_ALL));
             WRITE_8(REG_WININ, C_16_2_8(0, WIN0_ALL_NO_COLOR_EFFECT));

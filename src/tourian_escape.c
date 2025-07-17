@@ -1259,8 +1259,13 @@ static u8 TourianEscapeSamusFlyingIn(void)
         case 2:
             LZ77UncompVRAM(sIntroSpaceBackgroundTileTable, VRAM_BASE + 0xF000);
 
-            DMA_SET(3, sIntroTextAndShipPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, sizeof(sIntroTextAndShipPal) / 2 + 16));
-            DMA_SET(3, sIntroTextAndShipPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, sizeof(sIntroTextAndShipPal) / 2 + 16));
+            #ifdef REGION_EU
+            DmaTransfer(3, sIntroTextAndShipPal, PALRAM_BASE, sizeof(sIntroTextAndShipPal) + PAL_ROW_SIZE, 16);
+            DmaTransfer(3, sIntroTextAndShipPal, PALRAM_OBJ, sizeof(sIntroTextAndShipPal) + PAL_ROW_SIZE, 16);
+            #else // !REGION_EU
+            DMA_SET(3, sIntroTextAndShipPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sIntroTextAndShipPal) + PAL_ROW));
+            DMA_SET(3, sIntroTextAndShipPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sIntroTextAndShipPal) + PAL_ROW));
+            #endif // REGION_EU
 
             WRITE_16(REG_BG0CNT, CREATE_BGCNT(0, 30, BGCNT_HIGH_PRIORITY, BGCNT_SIZE_256x256));
             TOURIAN_ESCAPE_DATA.dispcnt = DCNT_BG0 | DCNT_OBJ;

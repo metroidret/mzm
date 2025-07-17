@@ -159,7 +159,7 @@ struct SaveFileScreenOptions {
     u16 galleryImages;
     u8 soundTestAndOriginalMetroid;
 
-    u8 language;
+    u8 region;
     u8 unk_10;
     u8 unk_11;
     u8 unk_12;

@@ -15,6 +15,7 @@
 #include "constants/game_state.h"
 #include "constants/samus.h"
 #include "constants/demo.h"
+#include "constants/game_region.h"
 
 #include "structs/audio.h"
 #include "structs/bg_clip.h"
@@ -110,7 +111,7 @@ void SramWrite_FileScreenOptionsUnlocked(void)
     pOptions->counter++;
     pOptions->galleryImages = gFileScreenOptionsUnlocked.galleryImages;
     pOptions->soundTestAndOriginalMetroid = gFileScreenOptionsUnlocked.soundTestAndOrigMetroid;
-    pOptions->language = LANGUAGE_DEFAULT;
+    pOptions->region = GAME_REGION;
     pOptions->unk_10 = 0x34;
     pOptions->unk_11 = gFileScreenOptionsUnlocked.unk_5;
     pOptions->unk_12 = gFileScreenOptionsUnlocked.unk_6;
@@ -1456,7 +1457,13 @@ void SramWrite_Language(void)
     
     i = gLanguage;
     if ((u32)i >= LANGUAGE_END)
+    {
+        #ifdef REGION_EU
+        i = 0;
+        #else
         i = LANGUAGE_DEFAULT;
+        #endif // REGION_EU
+    }
 
     pSave->value = i;
 

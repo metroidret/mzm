@@ -704,8 +704,13 @@ static u8 ChozodiaEscapeShipHeatingUp(void)
         offset = sChozodiaEscapeHeatingUpPalOffsets[tmp];
         src1 = &sChozodiaEscapeShipHeatingUpPal[offset];
         src2 = &sChozodiaEscapeGroundHeatingUpPal[offset];
-        DMA_SET(3, src1, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, 16));
-        DMA_SET(3, src2, PALRAM_OBJ + 0x80, C_32_2_16(DMA_ENABLE, 16));
+        #ifdef REGION_EU
+        DmaTransfer(3, src1, PALRAM_OBJ, PAL_ROW_SIZE, 16);
+        DmaTransfer(3, src2, PALRAM_OBJ + 0x80, PAL_ROW_SIZE, 16);
+        #else // !REGION_EU
+        DMA_SET(3, src1, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, PAL_ROW));
+        DMA_SET(3, src2, PALRAM_OBJ + 0x80, C_32_2_16(DMA_ENABLE, PAL_ROW));
+        #endif // REGION_EU
     }
 
     if (CHOZODIA_ESCAPE_DATA.timer > 128)

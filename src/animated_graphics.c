@@ -310,7 +310,11 @@ void AnimatedGraphicsLoad(void)
     }
 
     // Some backup?
+    #ifdef REGION_EU
+    DmaTransfer(3, ANIMATED_GFX_VRAM_POS(12), ANIMATED_GFX_VRAM_END_POS(4 - 1), ANIMATED_GFX_SIZE * 4, 16);
+    #else // !REGION_EU
     DMA_SET(3, ANIMATED_GFX_VRAM_POS(12), ANIMATED_GFX_VRAM_END_POS(4 - 1), C_32_2_16(DMA_ENABLE, ANIMATED_GFX_SIZE * 4 / 2));
+    #endif // REGION_EU
 }
 
 /**

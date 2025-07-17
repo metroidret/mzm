@@ -319,7 +319,12 @@ u32 InGameCutsceneUpgradingSuit(InGameCutsceneScene cutsceneNumber, InGameCutsce
         case 3:
             // Hide BG0, and backup its tilemap
             gWrittenToDispcnt = gIoRegistersBackup.Dispcnt_NonGameplay & ~DCNT_BG0;
+            
+            #ifdef REGION_EU
+            DmaTransfer(3, VRAM_BASE + (1 * BGCNT_VRAM_TILE_SIZE), EWRAM_BASE + 0x1E000, BGCNT_VRAM_TILE_SIZE, 16);
+            #else // !REGION_EU
             DMA_SET(3, VRAM_BASE + (1 * BGCNT_VRAM_TILE_SIZE), EWRAM_BASE + 0x1E000, C_32_2_16(DMA_ENABLE, BGCNT_VRAM_TILE_SIZE / 2));
+            #endif // REGION_EU
 
             changeStage = TRUE;
             break;
@@ -504,7 +509,11 @@ u32 InGameCutsceneUpgradingSuit(InGameCutsceneScene cutsceneNumber, InGameCutsce
 
         case 16:
             // Put BG0 in the state it was before the cutscene
+            #ifdef REGION_EU
+            DmaTransfer(3, EWRAM_BASE + 0x1E000, VRAM_BASE + (1 * BGCNT_VRAM_TILE_SIZE), BGCNT_VRAM_TILE_SIZE, 16);
+            #else // !REGION_EU
             DMA_SET(3, EWRAM_BASE + 0x1E000, VRAM_BASE + (1 * BGCNT_VRAM_TILE_SIZE), C_32_2_16(DMA_ENABLE, BGCNT_VRAM_TILE_SIZE / 2));
+            #endif // REGION_EU
             WRITE_16(REG_BG0CNT, gIoRegistersBackup.BG0CNT);
 
             changeStage = TRUE;

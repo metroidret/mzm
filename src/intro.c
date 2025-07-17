@@ -45,12 +45,20 @@ static void IntroVBlank(void)
  */
 static void IntroFuzzVBlank(void)
 {
+    #ifdef REGION_EU
+    DmaTransfer(3, gOamData, OAM_BASE, OAM_SIZE, 32);
+    #else // !REGION_EU
     DMA_SET(3, gOamData, OAM_BASE, C_32_2_16(DMA_ENABLE | DMA_32BIT, OAM_SIZE / sizeof(u32)));
+    #endif // REGION_EU
 
     WRITE_16(REG_DISPCNT, INTRO_DATA.dispcnt);
     WRITE_16(REG_BLDCNT, INTRO_DATA.bldcnt);
 
+    #ifdef REGION_EU
+    DmaTransfer(3, INTRO_DATA.fuzzPalette, PALRAM_OBJ, sizeof(INTRO_DATA.fuzzPalette), 16);
+    #else // !REGION_EU
     DMA_SET(3, INTRO_DATA.fuzzPalette, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(INTRO_DATA.fuzzPalette)));
+    #endif // REGION_EU
 }
 
 /**
@@ -512,7 +520,11 @@ static u8 IntroSamusInHerShip(void)
             break;
 
         case DELTA_TIME * 2:
+            #ifdef REGION_EU
+            DmaTransfer(3, sIntroSamusInHerShipPal, PALRAM_BASE, sizeof(sIntroSamusInHerShipPal), 16);
+            #else // !REGION_EU
             DMA_SET(3, sIntroSamusInHerShipPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sIntroSamusInHerShipPal)));
+            #endif // REGION_EU
             break;
 
         case DELTA_TIME * 3:
@@ -827,7 +839,11 @@ static u8 IntroMotherBrain(void)
             break;
 
         case 3 * DELTA_TIME:
+            #ifdef REGION_EU
+            DmaTransfer(3, sIntroMotherBrainPal, PALRAM_BASE, sizeof(sIntroMotherBrainPal), 16);
+            #else // !REGION_EU
             DMA_SET(3, sIntroMotherBrainPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sIntroMotherBrainPal)));
+            #endif // REGION_EU
             INTRO_DATA.dispcnt = DCNT_BG0;
             SoundPlay(SOUND_INTRO_MOTHER_BRAIN_JAR);
             SoundPlay(MUSIC_INTRO_MOTHER_BRAIN);

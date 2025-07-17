@@ -58,7 +58,12 @@ static u8 BeforeCharlieSamusCloseUp(void)
             CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sBeforeCharliePageData[6].bg, NON_GAMEPLAY_START_BG_POS);
             CutsceneReset();
 
+            // TODO: Fix enum instead of using ifdef here
+            #ifdef REGION_EU
+            CutsceneStartBackgroundFading(11);
+            #else // !REGION_EU
             CutsceneStartBackgroundFading(10);
+            #endif // REGION_EU
             CUTSCENE_DATA.dispcnt = sBeforeCharliePageData[5].bg | sBeforeCharliePageData[8].bg |sBeforeCharliePageData[6].bg;
             
             CUTSCENE_DATA.timeInfo.timer = 0;

@@ -336,7 +336,11 @@ static u8 GettingFullyPoweredSuitInit(void)
 {
     s32 i;
 
+    #ifdef REGION_EU
+    CutsceneFadeScreenToWhite();
+    #else // !REGION_EU
     CutsceneFadeScreenToBlack();
+    #endif // REGION_EU
 
     // Load palette, in both background and object
     DmaTransfer(3, sGettingFullyPoweredSuitPal, PALRAM_BASE, 11 * PAL_ROW_SIZE, 16);

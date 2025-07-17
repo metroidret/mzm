@@ -100,7 +100,9 @@ void agbmain(void)
                         #endif // DEBUG
                     }
 
+                    #ifndef REGION_EU
                     gGameModeSub1 = 0;
+                    #endif // !REGION_EU
                     gPauseScreenFlag = 0;
                     gGameModeSub2 = 0;
                 }

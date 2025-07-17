@@ -53,7 +53,11 @@ u32 PauseScreenEasySleepSubroutine(void)
                 // Goto YES option
                 SoundPlay(SOUND_YES_NO_CURSOR_MOVING);
                 PAUSE_SCREEN_DATA.subroutineInfo.stage = EASY_SLEEP_MENU_STAGE_YES_OPTION;
+                #ifdef REGION_EU
+                PAUSE_SCREEN_DATA.miscOam[1].xPosition = BLOCK_SIZE * 4 - QUARTER_BLOCK_SIZE;
+                #else // !REGION_EU
                 PAUSE_SCREEN_DATA.miscOam[1].xPosition = BLOCK_SIZE * 3 + QUARTER_BLOCK_SIZE;
+                #endif // REGION_EU
             }
             else if (gChangedInput & (KEY_B | KEY_L | KEY_R))
             {
