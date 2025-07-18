@@ -22,17 +22,17 @@ const u16** sStoryTextPointers[7] = {
     [LANGUAGE_JAPANESE] = sJapaneseTextPointers_Story,
     [LANGUAGE_HIRAGANA] = sHiraganaTextPointers_Story,
     [LANGUAGE_ENGLISH] = sEnglishTextPointers_Story,
-    #ifdef REGION_US_BETA
+    #if defined(REGION_EU) ||  defined(REGION_US_BETA)
     [LANGUAGE_GERMAN] = sGermanTextPointers_Story,
     [LANGUAGE_FRENCH] = sFrenchTextPointers_Story,
     [LANGUAGE_ITALIAN] = sItalianTextPointers_Story,
     [LANGUAGE_SPANISH] = sSpanishTextPointers_Story
-    #else // !REGION_US_BETA
+    #else // !(REGION_EU || REGION_US_BETA)
     [LANGUAGE_GERMAN] = sEnglishTextPointers_Story,
     [LANGUAGE_FRENCH] = sEnglishTextPointers_Story,
     [LANGUAGE_ITALIAN] = sEnglishTextPointers_Story,
     [LANGUAGE_SPANISH] = sEnglishTextPointers_Story
-    #endif // REGION_US_BETA
+    #endif // REGION_EU || REGION_US_BETA
 };
 
 /**

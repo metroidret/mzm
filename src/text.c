@@ -13,23 +13,23 @@
 #include "structs/game_state.h"
 #include "structs/menus/pause_screen.h"
 
-extern u16** sStoryTextPointers[7];
+extern u16** sStoryTextPointers[LANGUAGE_END];
 
 static const u16** sDescriptionTextPointers[LANGUAGE_END] = {
     [LANGUAGE_JAPANESE] = sJapaneseTextPointers_Description,
     [LANGUAGE_HIRAGANA] = sHiraganaTextPointers_Description,
     [LANGUAGE_ENGLISH] = sEnglishTextPointers_Description,
-    #ifdef REGION_US_BETA
+    #if defined(REGION_EU) || defined(REGION_US_BETA)
     [LANGUAGE_GERMAN] = sGermanTextPointers_Description,
     [LANGUAGE_FRENCH] = sFrenchTextPointers_Description,
     [LANGUAGE_ITALIAN] = sItalianTextPointers_Description,
     [LANGUAGE_SPANISH] = sSpanishTextPointers_Description
-    #else // !REGION_US_BETA
+    #else // !(REGION_EU || REGION_US_BETA)
     [LANGUAGE_GERMAN] = sEnglishTextPointers_Description,
     [LANGUAGE_FRENCH] = sEnglishTextPointers_Description,
     [LANGUAGE_ITALIAN] = sEnglishTextPointers_Description,
     [LANGUAGE_SPANISH] = sEnglishTextPointers_Description
-    #endif // REGION_US_BETA
+    #endif // REGION_EU || REGION_US_BETA
 };
 
 static u32 sArray_7602f0[9] = {

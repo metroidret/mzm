@@ -283,6 +283,48 @@ static const u16* sHiraganaTextPointers_Location[LT_COUNT] = {
     [LT_UNUSED_18] = sHiraganaText_Location_Unused18
 };
 
+#ifdef REGION_EU
+// EU gap sizes are different
+const u16 sEnglishText_Message_Dummy[] = INCTEXT("{GAP(36)}DUMMY MESSAGE (OBJ Cell B1)\n{GAP(110)}");
+const u16 sEnglishText_Message_EnergyTankAcquired[] = INCTEXT("{GAP(60)}{COLOR(5)}Energy Tank acquired.\n{GAP(49)}{COLOR(0)}Energy capacity increased.");
+const u16 sEnglishText_Message_MissileTankAcquired[] = INCTEXT("{GAP(60)}{COLOR(5)}Missile Tank acquired.\n{GAP(50)}{COLOR(0)}Missile capacity increased.");
+const u16 sEnglishText_Message_FirstMissileTank[] = INCTEXT("{GAP(83)}{COLOR(5)}Missile Tank\n{GAP(110)}");
+const u16 sEnglishText_Message_SuperMissileTankAcquired[] = INCTEXT("{GAP(46)}{COLOR(5)}Super Missile Tank acquired.\n{GAP(35)}{COLOR(0)}Super Missile capacity increased.");
+const u16 sEnglishText_Message_FirstSuperMissileTank[] = INCTEXT("{GAP(68)}{COLOR(5)}Super Missile Tank\n{GAP(110)}");
+const u16 sEnglishText_Message_PowerBombTankAcquired[] = INCTEXT("{GAP(71)}{COLOR(5)}Power Bomb Tank\n{GAP(38)}{COLOR(0)}Power Bomb capacity increased.");
+const u16 sEnglishText_Message_FirstPowerBombTank[] = INCTEXT("{GAP(71)}{COLOR(5)}Power Bomb Tank\n{GAP(110)}");
+const u16 sEnglishText_Message_LongBeam[] = INCTEXT("{GAP(86)}{COLOR(5)}Long Beam\n{GAP(110)}");
+const u16 sEnglishText_Message_ChargeBeam[] = INCTEXT("{GAP(82)}{COLOR(5)}Charge Beam\n{GAP(110)}");
+const u16 sEnglishText_Message_IceBeam[] = INCTEXT("{GAP(90)}{COLOR(5)}Ice Beam\n{GAP(110)}");
+const u16 sEnglishText_Message_WaveBeam[] = INCTEXT("{GAP(86)}{COLOR(5)}Wave Beam\n{GAP(110)}");
+const u16 sEnglishText_Message_UnknownItemPlasma[] = INCTEXT("{GAP(80)}{COLOR(5)}Unknown Item\n{GAP(110)}");
+const u16 sEnglishText_Message_Bomb[] = INCTEXT("{GAP(99)}{COLOR(5)}Bomb\n{GAP(110)}");
+const u16 sEnglishText_Message_VariaSuit[] = INCTEXT("{GAP(87)}{COLOR(5)}Varia Suit\n{GAP(110)}");
+const u16 sEnglishText_Message_UnknownItemGravity[] = INCTEXT("{GAP(80)}{COLOR(5)}Unknown Item\n{GAP(110)}");
+const u16 sEnglishText_Message_MorphBall[] = INCTEXT("{GAP(86)}{COLOR(5)}Morph Ball\n{GAP(110)}");
+const u16 sEnglishText_Message_SpeedBooster[] = INCTEXT("{GAP(77)}{COLOR(5)}Speed Booster\n{GAP(110)}");
+const u16 sEnglishText_Message_HighJump[] = INCTEXT("{GAP(92)}{COLOR(5)}Hi-Jump\n{GAP(110)}");
+const u16 sEnglishText_Message_ScrewAttack[] = INCTEXT("{GAP(79)}{COLOR(5)}Screw Attack\n{GAP(110)}");
+const u16 sEnglishText_Message_UnknownItemSpaceJump[] = INCTEXT("{GAP(80)}{COLOR(5)}Unknown Item\n{GAP(110)}");
+const u16 sEnglishText_Message_PowerGrip[] = INCTEXT("{GAP(86)}{COLOR(5)}Power Grip\n{GAP(110)}");
+const u16 sEnglishText_Message_SavePrompt[] = INCTEXT("{GAP(95)}Save？\n{GAP(96)}{INDENT(64)}Yes{INDENT(160)}No");
+const u16 sEnglishText_Message_SaveComplete[] = INCTEXT("{GAP(77)}Save Complete\n{GAP(110)}");
+const u16 sEnglishText_Message_WeaponResupplyComplete[] = INCTEXT("{GAP(74)}Weapons system\n{GAP(68)}resupply complete.");
+const u16 sEnglishText_Message_EnergyTankRechargeComplete[] = INCTEXT("{GAP(82)}Energy Tank\n{GAP(66)}recharge complete.");
+const u16 sEnglishText_Message_WeaponsAndEnergyRestored[] = INCTEXT("{GAP(65)}Weapons and energy\n{GAP(76)}fully restored.");
+const u16 sEnglishText_Message_BrinstarMap[] = INCTEXT("{GAP(46)}{COLOR(9)}Brinstar{COLOR(0)} {COLOR(5)}map data{COLOR(0)} acquired.\n{GAP(110)}");
+const u16 sEnglishText_Message_KraidMap[] = INCTEXT("{GAP(54)}{COLOR(8)}Kraid{COLOR(0)} {COLOR(5)}map data{COLOR(0)} acquired.\n{GAP(110)}");
+const u16 sEnglishText_Message_NorfairMap[] = INCTEXT("{GAP(48)}{COLOR(6)}Norfair{COLOR(0)} {COLOR(5)}map data{COLOR(0)} acquired.\n{GAP(110)}");
+const u16 sEnglishText_Message_RidleyMap[] = INCTEXT("{GAP(52)}{COLOR(7)}Ridley{COLOR(0)} {COLOR(5)}map data{COLOR(0)} acquired.\n{GAP(110)}");
+const u16 sEnglishText_Message_MotherShipMap[] = INCTEXT("{GAP(38)}{COLOR(10)}Mother Ship{COLOR(0)} {COLOR(5)}map data{COLOR(0)} acquired.\n{GAP(110)}");
+const u16 sEnglishText_Message_FullyPoweredSuit[] = INCTEXT("{GAP(36)}You got your {COLOR(5)}fully powered suit{COLOR(0)}.\n{GAP(110)}");
+const u16 sEnglishText_Message_ZebesEscape[] = INCTEXT("{GAP(26)}Self-destruct mechanism activated!\n{GAP(60)}Evacuate immediately!");
+const u16 sEnglishText_Message_ChozodiaEscape[] = INCTEXT("{GAP(26)}Self-destruct mechanism activated!\n{GAP(60)}Evacuate immediately!");
+const u16 sEnglishText_Message_EnemyLocationAbnormal[] = INCTEXT("{GAP(54)}Enemy location abnormal.\n{GAP(41)}Check message frame position.");
+const u16 sEnglishText_Message_ActivateEasySleep[] = INCTEXT("{GAP(60)}Activate Easy Sleep？\n{GAP(65)}To exit Easy Sleep,");
+const u16 sEnglishText_Message_PressSelectLAndR[] = INCTEXT("{GAP(44)}press {Select_button}, {L_button}, and {R_button}\n{GAP(76)}simultaneously.");
+const u16 sEnglishText_Message_EasySleepPrompt[] = INCTEXT("{GAP(102)}Yes\n{GAP(104)}No");
+#else // !REGION_EU
 const u16 sEnglishText_Message_Dummy[] = INCTEXT("{GAP(24)}DUMMY MESSAGE (OBJ Cell B1)\n{GAP(110)}");
 const u16 sEnglishText_Message_EnergyTankAcquired[] = INCTEXT("{GAP(51)}{COLOR(5)}Energy Tank acquired.\n{GAP(38)}{COLOR(0)}Energy capacity increased.");
 const u16 sEnglishText_Message_MissileTankAcquired[] = INCTEXT("{GAP(52)}{COLOR(5)}Missile Tank acquired.\n{GAP(40)}{COLOR(0)}Missile capacity increased.");
@@ -322,6 +364,7 @@ const u16 sEnglishText_Message_EnemyLocationAbnormal[] = INCTEXT("{GAP(44)}Enemy
 const u16 sEnglishText_Message_ActivateEasySleep[] = INCTEXT("{GAP(52)}Activate Easy Sleep？\n{GAP(57)}To exit Easy Sleep,");
 const u16 sEnglishText_Message_PressSelectLAndR[] = INCTEXT("{GAP(37)}press {Select_button}, {L_button}, and {R_button}\n{GAP(72)}simultaneously.");
 const u16 sEnglishText_Message_EasySleepPrompt[] = INCTEXT("{GAP(101)}Yes\n{GAP(104)}No");
+#endif // REGION_EU
 
 static const u16* sEnglishTextPointers_Message[MESSAGE_COUNT] = {
     [MESSAGE_DUMMY] = sEnglishText_Message_Dummy,
@@ -365,6 +408,36 @@ static const u16* sEnglishTextPointers_Message[MESSAGE_COUNT] = {
     [MESSAGE_EASY_SLEEP_PROMPT] = sEnglishText_Message_EasySleepPrompt
 };
 
+
+#ifdef REGION_EU
+// EU gap sizes are different
+const u16 sEnglishText_Location_Brinstar[] = INCTEXT("{GAP(86)}BRINSTAR");
+const u16 sEnglishText_Location_Kraid[] = INCTEXT("{GAP(96)}KRAID");
+const u16 sEnglishText_Location_Norfair[] = INCTEXT("{GAP(90)}NORFAIR");
+const u16 sEnglishText_Location_Ridley[] = INCTEXT("{GAP(93)}RIDLEY");
+const u16 sEnglishText_Location_Tourian[] = INCTEXT("{GAP(90)}TOURIAN");
+const u16 sEnglishText_Location_Crateria[] = INCTEXT("{GAP(87)}CRATERIA");
+const u16 sEnglishText_Location_Chozodia[] = INCTEXT("{GAP(87)}CHOZODIA");
+const u16 sEnglishText_Location_Mothership[] = INCTEXT("{GAP(42)}SPACE PIRATE MOTHER SHIP");
+const u16 sEnglishText_Location_PlanetZebes[] = INCTEXT("{GAP(74)}PLANET ZEBES");
+const u16 sEnglishText_Location_SaveRoom[] = INCTEXT("{GAP(83)}SAVE ROOM");
+const u16 sEnglishText_Location_ResearchRoom[] = INCTEXT("{GAP(72)}RESEARCH ROOM");
+const u16 sEnglishText_Location_MapRoom[] = INCTEXT("{GAP(86)}MAP ROOM");
+const u16 sEnglishText_Location_ChozoRuins[] = INCTEXT("{GAP(78)}CHOZO RUINS");
+const u16 sEnglishText_Location_Starship[] = INCTEXT("{GAP(87)}STARSHIP");
+const u16 sEnglishText_Location_Unused7[] = INCTEXT("{GAP(75)}UNUSED OBJ 7");
+const u16 sEnglishText_Location_Unused8[] = INCTEXT("{GAP(75)}UNUSED OBJ 8");
+const u16 sEnglishText_Location_Unused9[] = INCTEXT("{GAP(75)}UNUSED OBJ 9");
+const u16 sEnglishText_Location_Unused10[] = INCTEXT("{GAP(72)}UNUSED OBJ 10");
+const u16 sEnglishText_Location_Unused11[] = INCTEXT("{GAP(74)}UNUSED OBJ 11");
+const u16 sEnglishText_Location_Unused12[] = INCTEXT("{GAP(72)}UNUSED OBJ 12");
+const u16 sEnglishText_Location_Unused13[] = INCTEXT("{GAP(72)}UNUSED OBJ 13");
+const u16 sEnglishText_Location_Unused14[] = INCTEXT("{GAP(72)}UNUSED OBJ 14");
+const u16 sEnglishText_Location_Unused15[] = INCTEXT("{GAP(72)}UNUSED OBJ 15");
+const u16 sEnglishText_Location_Unused16[] = INCTEXT("{GAP(72)}UNUSED OBJ 16");
+const u16 sEnglishText_Location_Unused17[] = INCTEXT("{GAP(72)}UNUSED OBJ 17");
+const u16 sEnglishText_Location_Unused18[] = INCTEXT("{GAP(72)}UNUSED OBJ 18");
+#else // !REGION_EU
 const u16 sEnglishText_Location_Brinstar[] = INCTEXT("{GAP(83)}BRINSTAR");
 const u16 sEnglishText_Location_Kraid[] = INCTEXT("{GAP(93)}KRAID");
 const u16 sEnglishText_Location_Norfair[] = INCTEXT("{GAP(86)}NORFAIR");
@@ -391,6 +464,7 @@ const u16 sEnglishText_Location_Unused15[] = INCTEXT("{GAP(66)}UNUSED OBJ 15");
 const u16 sEnglishText_Location_Unused16[] = INCTEXT("{GAP(66)}UNUSED OBJ 16");
 const u16 sEnglishText_Location_Unused17[] = INCTEXT("{GAP(66)}UNUSED OBJ 17");
 const u16 sEnglishText_Location_Unused18[] = INCTEXT("{GAP(66)}UNUSED OBJ 18");
+#endif // REGION_EU
 
 static const u16* sEnglishTextPointers_Location[LT_COUNT] = {
     [LT_BRINSTAR] = sEnglishText_Location_Brinstar,
@@ -421,34 +495,611 @@ static const u16* sEnglishTextPointers_Location[LT_COUNT] = {
     [LT_UNUSED_18] = sEnglishText_Location_Unused18
 };
 
+#ifdef REGION_EU
+
+const u16 sGermanText_Message_Dummy[] = INCTEXT("{GAP(36)}DUMMY MESSAGE (OBJ Cell B1)\n{GAP(110)}");
+const u16 sGermanText_Message_EnergyTankAcquired[] = INCTEXT("{GAP(56)}{COLOR(5)}Energie-Tank erhalten.\n{GAP(46)}{COLOR(0)}Energiekapazität erweitert.");
+const u16 sGermanText_Message_MissileTankAcquired[] = INCTEXT("{GAP(49)}{COLOR(5)}Missile Container erhalten.\n{GAP(44)}{COLOR(0)}Missile-Kapazität erweitert.");
+const u16 sGermanText_Message_FirstMissileTank[] = INCTEXT("{GAP(72)}{COLOR(5)}Missile Container\n{GAP(110)}");
+const u16 sGermanText_Message_SuperMissileTankAcquired[] = INCTEXT("{GAP(34)}{COLOR(5)}Super Missile Container erhalten.\n{GAP(30)}{COLOR(0)}Super Missile-Kapazität erweitert.");
+const u16 sGermanText_Message_FirstSuperMissileTank[] = INCTEXT("{GAP(57)}{COLOR(5)}Super Missile Container\n{GAP(110)}");
+const u16 sGermanText_Message_PowerBombTankAcquired[] = INCTEXT("{GAP(30)}{COLOR(5)}Power Bomben-Container erhalten.\n{GAP(28)}{COLOR(0)}Power Bomben-Kapazität erweitert.");
+const u16 sGermanText_Message_FirstPowerBombTank[] = INCTEXT("{GAP(54)}{COLOR(5)}Power Bomben-Container\n{GAP(110)}");
+const u16 sGermanText_Message_LongBeam[] = INCTEXT("{GAP(78)}{COLOR(5)}Distance Beam\n{GAP(110)}");
+const u16 sGermanText_Message_ChargeBeam[] = INCTEXT("{GAP(82)}{COLOR(5)}Charge Beam\n{GAP(110)}");
+const u16 sGermanText_Message_IceBeam[] = INCTEXT("{GAP(90)}{COLOR(5)}Ice Beam\n{GAP(110)}");
+const u16 sGermanText_Message_WaveBeam[] = INCTEXT("{GAP(86)}{COLOR(5)}Wave Beam\n{GAP(110)}");
+const u16 sGermanText_Message_UnknownItemPlasma[] = INCTEXT("{GAP(64)}{COLOR(5)}Unbekanntes Objekt\n{GAP(110)}");
+const u16 sGermanText_Message_Bomb[] = INCTEXT("{GAP(96)}{COLOR(5)}Bombe\n{GAP(110)}");
+const u16 sGermanText_Message_VariaSuit[] = INCTEXT("{GAP(87)}{COLOR(5)}Varia Suit\n{GAP(110)}");
+const u16 sGermanText_Message_UnknownItemGravity[] = INCTEXT("{GAP(64)}{COLOR(5)}Unbekanntes Objekt\n{GAP(110)}");
+const u16 sGermanText_Message_MorphBall[] = INCTEXT("{GAP(86)}{COLOR(5)}Morph Ball\n{GAP(110)}");
+const u16 sGermanText_Message_SpeedBooster[] = INCTEXT("{GAP(77)}{COLOR(5)}Speed Booster\n{GAP(110)}");
+const u16 sGermanText_Message_HighJump[] = INCTEXT("{GAP(92)}{COLOR(5)}Hi-Jump\n{GAP(110)}");
+const u16 sGermanText_Message_ScrewAttack[] = INCTEXT("{GAP(79)}{COLOR(5)}Screw Attack\n{GAP(110)}");
+const u16 sGermanText_Message_UnknownItemSpaceJump[] = INCTEXT("{GAP(64)}{COLOR(5)}Unbekanntes Objekt\n{GAP(110)}");
+const u16 sGermanText_Message_PowerGrip[] = INCTEXT("{GAP(86)}{COLOR(5)}Power Grip\n{GAP(110)}");
+const u16 sGermanText_Message_SavePrompt[] = INCTEXT("{GAP(84)}Speichern？\n{GAP(93)}{INDENT(64)}Ja {INDENT(160)}Nein");
+const u16 sGermanText_Message_SaveComplete[] = INCTEXT("{GAP(53)}Speichern abgeschlossen.\n{GAP(110)}");
+const u16 sGermanText_Message_WeaponResupplyComplete[] = INCTEXT("{GAP(52)}Waffenvorrat vollständig\n{GAP(68)}wiederhergestellt.");
+const u16 sGermanText_Message_EnergyTankRechargeComplete[] = INCTEXT("{GAP(52)}Energievorrat vollständig\n{GAP(68)}wiederhergestellt.");
+const u16 sGermanText_Message_WeaponsAndEnergyRestored[] = INCTEXT("{GAP(47)}Waffen- und Energievorrat\n{GAP(42)}vollständig wiederhergestellt.");
+const u16 sGermanText_Message_BrinstarMap[] = INCTEXT("{GAP(36)}{COLOR(9)}Brinstar{COLOR(0)}{COLOR(5)}-Kartendaten{COLOR(0)} erhalten.\n{GAP(110)}");
+const u16 sGermanText_Message_KraidMap[] = INCTEXT("{GAP(44)}{COLOR(8)}Kraid{COLOR(0)}{COLOR(5)}-Kartendaten{COLOR(0)} erhalten.\n{GAP(110)}");
+const u16 sGermanText_Message_NorfairMap[] = INCTEXT("{GAP(38)}{COLOR(6)}Norfair{COLOR(0)}{COLOR(5)}-Kartendaten{COLOR(0)} erhalten.\n{GAP(110)}");
+const u16 sGermanText_Message_RidleyMap[] = INCTEXT("{GAP(42)}{COLOR(7)}Ridley{COLOR(0)}{COLOR(5)}-Kartendaten{COLOR(0)} erhalten.\n{GAP(110)}");
+const u16 sGermanText_Message_MotherShipMap[] = INCTEXT("{GAP(26)}{COLOR(10)}Mutterschiff{COLOR(0)}{COLOR(5)}-Kartendaten{COLOR(0)} erhalten.\n{GAP(110)}");
+const u16 sGermanText_Message_FullyPoweredSuit[] = INCTEXT("{GAP(26)}{COLOR(5)}Voll ausgestatteten Anzug{COLOR(0)} erhalten.\n{GAP(110)}");
+const u16 sGermanText_Message_ZebesEscape[] = INCTEXT("{GAP(16)}Selbstzerstörungsmechanismus aktiviert!\n{GAP(25)}Umgehende Evakuierung erforderlich!");
+const u16 sGermanText_Message_ChozodiaEscape[] = INCTEXT("{GAP(16)}Selbstzerstörungsmechanismus aktiviert!\n{GAP(25)}Umgehende Evakuierung erforderlich!");
+const u16 sGermanText_Message_EnemyLocationAbnormal[] = INCTEXT("{GAP(51)}Gegnererfassung anormal.\n{GAP(39)}Nachrichtenfenster überpüfen.");
+const u16 sGermanText_Message_ActivateEasySleep[] = INCTEXT("{GAP(28)}Standby-Bereitschaft einschalten？\n{GAP(36)}Zum Ausschalten dieser Funktion");
+const u16 sGermanText_Message_PressSelectLAndR[] = INCTEXT("{GAP(21)}bitte gleichzeitig {Select_button}, {L_button} und {R_button}\n{GAP(90)}drücken.");
+const u16 sGermanText_Message_EasySleepPrompt[] = INCTEXT("{GAP(104)}Ja\n{GAP(100)}Nein");
+
+static const u16* sGermanTextPointers_Message[] = {
+    [MESSAGE_DUMMY] = sGermanText_Message_Dummy,
+    [MESSAGE_ENERGY_TANK_ACQUIRED] = sGermanText_Message_EnergyTankAcquired,
+    [MESSAGE_MISSILE_TANK_ACQUIRED] = sGermanText_Message_MissileTankAcquired,
+    [MESSAGE_FIRST_MISSILE_TANK] = sGermanText_Message_FirstMissileTank,
+    [MESSAGE_SUPER_MISSILE_TANK_ACQUIRED] = sGermanText_Message_SuperMissileTankAcquired,
+    [MESSAGE_FIRST_SUPER_MISSILE_TANK] = sGermanText_Message_FirstSuperMissileTank,
+    [MESSAGE_POWER_BOMB_TANK_ACQUIRED] = sGermanText_Message_PowerBombTankAcquired,
+    [MESSAGE_FIRST_POWER_BOMB_TANK] = sGermanText_Message_FirstPowerBombTank,
+    [MESSAGE_LONG_BEAM] = sGermanText_Message_LongBeam,
+    [MESSAGE_CHARGE_BEAM] = sGermanText_Message_ChargeBeam,
+    [MESSAGE_ICE_BEAM] = sGermanText_Message_IceBeam,
+    [MESSAGE_WAVE_BEAM] = sGermanText_Message_WaveBeam,
+    [MESSAGE_UKNOWN_ITEM_PLASMA] = sGermanText_Message_UnknownItemPlasma,
+    [MESSAGE_BOMB] = sGermanText_Message_Bomb,
+    [MESSAGE_VARIA_SUIT] = sGermanText_Message_VariaSuit,
+    [MESSAGE_UNKNOWN_ITEM_GRAVITY] = sGermanText_Message_UnknownItemGravity,
+    [MESSAGE_MORPH_BALL] = sGermanText_Message_MorphBall,
+    [MESSAGE_SPEED_BOOSTER] = sGermanText_Message_SpeedBooster,
+    [MESSAGE_HIGH_JUMP] = sGermanText_Message_HighJump,
+    [MESSAGE_SCREW_ATTACK] = sGermanText_Message_ScrewAttack,
+    [MESSAGE_UNKNOWN_ITEM_SPACE_JUMP] = sGermanText_Message_UnknownItemSpaceJump,
+    [MESSAGE_POWER_GRIP] = sGermanText_Message_PowerGrip,
+    [MESSAGE_SAVE_PROMPT] = sGermanText_Message_SavePrompt,
+    [MESSAGE_SAVE_COMPLETE] = sGermanText_Message_SaveComplete,
+    [MESSAGE_WEAPON_RESUPPLY_COMPLETE] = sGermanText_Message_WeaponResupplyComplete,
+    [MESSAGE_ENERGY_TANK_RECHARGE_COMPLETE] = sGermanText_Message_EnergyTankRechargeComplete,
+    [MESSAGE_WEAPONS_AND_ENERGY_RESTORED] = sGermanText_Message_WeaponsAndEnergyRestored,
+    [MESSAGE_BRINSTAR_MAP_ACQUIRED] = sGermanText_Message_BrinstarMap,
+    [MESSAGE_KRAID_MAP_ACQUIRED] = sGermanText_Message_KraidMap,
+    [MESSAGE_NORFAIR_MAP_ACQUIRED] = sGermanText_Message_NorfairMap,
+    [MESSAGE_RIDLEY_MAP_ACQUIRED] = sGermanText_Message_RidleyMap,
+    [MESSAGE_MOTHER_SHIP_MAP_ACQUIRED] = sGermanText_Message_MotherShipMap,
+    [MESSAGE_FULLY_POWERED_SUIT] = sGermanText_Message_FullyPoweredSuit,
+    [MESSAGE_ZEBES_ESCAPE] = sGermanText_Message_ZebesEscape,
+    [MESSAGE_CHOZODIA_ESCAPE] = sGermanText_Message_ChozodiaEscape,
+    [MESSAGE_ENEMY_LOCATION_ABNORMAL] = sGermanText_Message_EnemyLocationAbnormal,
+    [MESSAGE_ACTIVATE_EASY_SLEEP] = sGermanText_Message_ActivateEasySleep,
+    [MESSAGE_PRESS_SELECT_L_AND_R] = sGermanText_Message_PressSelectLAndR,
+    [MESSAGE_EASY_SLEEP_PROMPT] = sGermanText_Message_EasySleepPrompt,
+};
+
+const u16 sGermanText_Location_Brinstar[] = INCTEXT("{GAP(86)}BRINSTAR");
+const u16 sGermanText_Location_Kraid[] = INCTEXT("{GAP(96)}KRAID");
+const u16 sGermanText_Location_Norfair[] = INCTEXT("{GAP(90)}NORFAIR");
+const u16 sGermanText_Location_Ridley[] = INCTEXT("{GAP(93)}RIDLEY");
+const u16 sGermanText_Location_Tourian[] = INCTEXT("{GAP(90)}TOURIAN");
+const u16 sGermanText_Location_Crateria[] = INCTEXT("{GAP(87)}CRATERIA");
+const u16 sGermanText_Location_Chozodia[] = INCTEXT("{GAP(87)}CHOZODIA");
+const u16 sGermanText_Location_Mothership[] = INCTEXT("{GAP(16)}MUTTERSCHIFF DER WELTRAUMPIRATEN");
+const u16 sGermanText_Location_PlanetZebes[] = INCTEXT("{GAP(74)}PLANET ZEBES");
+const u16 sGermanText_Location_SaveRoom[] = INCTEXT("{GAP(66)}SPEICHERSTATION");
+const u16 sGermanText_Location_ResearchRoom[] = INCTEXT("{GAP(67)}FORSCHUNGSRAUM");
+const u16 sGermanText_Location_MapRoom[] = INCTEXT("{GAP(68)}KARTENTERMINAL");
+const u16 sGermanText_Location_ChozoRuins[] = INCTEXT("{GAP(64)}RUINEN DER CHOZO");
+const u16 sGermanText_Location_Starship[] = INCTEXT("{GAP(67)}STERNENKREUZER");
+const u16 sGermanText_Location_Unused7[] = INCTEXT("{GAP(68)}KONTROLLSCHIFF");
+const u16 sGermanText_Location_Unused8[] = INCTEXT("{GAP(75)}UNUSED OBJ 8");
+const u16 sGermanText_Location_Unused9[] = INCTEXT("{GAP(75)}UNUSED OBJ 9");
+const u16 sGermanText_Location_Unused10[] = INCTEXT("{GAP(72)}UNUSED OBJ 10");
+const u16 sGermanText_Location_Unused11[] = INCTEXT("{GAP(74)}UNUSED OBJ 11");
+const u16 sGermanText_Location_Unused12[] = INCTEXT("{GAP(72)}UNUSED OBJ 12");
+const u16 sGermanText_Location_Unused13[] = INCTEXT("{GAP(72)}UNUSED OBJ 13");
+const u16 sGermanText_Location_Unused14[] = INCTEXT("{GAP(72)}UNUSED OBJ 14");
+const u16 sGermanText_Location_Unused15[] = INCTEXT("{GAP(72)}UNUSED OBJ 15");
+const u16 sGermanText_Location_Unused16[] = INCTEXT("{GAP(72)}UNUSED OBJ 16");
+const u16 sGermanText_Location_Unused17[] = INCTEXT("{GAP(72)}UNUSED OBJ 17");
+const u16 sGermanText_Location_Unused18[] = INCTEXT("{GAP(72)}UNUSED OBJ 18");
+
+static const u16* sGermanTextPointers_Location[] = {
+    [LT_BRINSTAR] = sGermanText_Location_Brinstar,
+    [LT_KRAID] = sGermanText_Location_Kraid,
+    [LT_NORFAIR] = sGermanText_Location_Norfair,
+    [LT_RIDLEY] = sGermanText_Location_Ridley,
+    [LT_TOURIAN] = sGermanText_Location_Tourian,
+    [LT_CRATERIA] = sGermanText_Location_Crateria,
+    [LT_CHOZODIA] = sGermanText_Location_Chozodia,
+    [LT_MOTHERSHIP] = sGermanText_Location_Mothership,
+    [LT_PLANET_ZEBES] = sGermanText_Location_PlanetZebes,
+    [LT_SAVE_ROOM] = sGermanText_Location_SaveRoom,
+    [LT_RESEARCH_ROOM] = sGermanText_Location_ResearchRoom,
+    [LT_MAP_ROOM] = sGermanText_Location_MapRoom,
+    [LT_CHOZO_RUINS] = sGermanText_Location_ChozoRuins,
+    [LT_STARSHIP] = sGermanText_Location_Starship,
+    [LT_UNUSED_7] = sGermanText_Location_Unused7,
+    [LT_UNUSED_8] = sGermanText_Location_Unused8,
+    [LT_UNUSED_9] = sGermanText_Location_Unused9,
+    [LT_UNUSED_10] = sGermanText_Location_Unused10,
+    [LT_UNUSED_11] = sGermanText_Location_Unused11,
+    [LT_UNUSED_12] = sGermanText_Location_Unused12,
+    [LT_UNUSED_13] = sGermanText_Location_Unused13,
+    [LT_UNUSED_14] = sGermanText_Location_Unused14,
+    [LT_UNUSED_15] = sGermanText_Location_Unused15,
+    [LT_UNUSED_16] = sGermanText_Location_Unused16,
+    [LT_UNUSED_17] = sGermanText_Location_Unused17,
+    [LT_UNUSED_18] = sGermanText_Location_Unused18,
+};
+
+const u16 sFrenchText_Message_Dummy[] = INCTEXT("{GAP(36)}DUMMY MESSAGE (OBJ Cell B1)\n{GAP(110)}");
+const u16 sFrenchText_Message_EnergyTankAcquired[] = INCTEXT("{GAP(47)}{COLOR(5)}Réserve d'Energie obtenue.\n{GAP(56)}{COLOR(0)}Jauge d'énergie accrue.");
+const u16 sFrenchText_Message_MissileTankAcquired[] = INCTEXT("{GAP(44)}{COLOR(5)}Réserve de Missiles obtenue.\n{GAP(44)}{COLOR(0)}Transport de Missiles accru.");
+const u16 sFrenchText_Message_FirstMissileTank[] = INCTEXT("{GAP(66)}{COLOR(5)}Réserve de Missiles\n{GAP(110)}");
+const u16 sFrenchText_Message_SuperMissileTankAcquired[] = INCTEXT("{GAP(29)}{COLOR(5)}Réserve de Super Missiles obtenue.\n{GAP(30)}{COLOR(0)}Transport de Super Missiles accru.");
+const u16 sFrenchText_Message_FirstSuperMissileTank[] = INCTEXT("{GAP(50)}{COLOR(5)}Réserve de Super Missiles\n{GAP(110)}");
+const u16 sFrenchText_Message_PowerBombTankAcquired[] = INCTEXT("{GAP(14)}{COLOR(5)}Réserve de Bombes de Puissance obtenue.\n{GAP(15)}{COLOR(0)}Transport de Bombes de Puissance accru.");
+const u16 sFrenchText_Message_FirstPowerBombTank[] = INCTEXT("{GAP(36)}{COLOR(5)}Réserve de Bombes de Puissance\n{GAP(110)}");
+const u16 sFrenchText_Message_LongBeam[] = INCTEXT("{GAP(84)}{COLOR(5)}Rayon Long\n{GAP(110)}");
+const u16 sFrenchText_Message_ChargeBeam[] = INCTEXT("{GAP(72)}{COLOR(5)}Rayon de Charge\n{GAP(110)}");
+const u16 sFrenchText_Message_IceBeam[] = INCTEXT("{GAP(76)}{COLOR(5)}Rayon de Glace\n{GAP(110)}");
+const u16 sFrenchText_Message_WaveBeam[] = INCTEXT("{GAP(77)}{COLOR(5)}Rayon à Vague\n{GAP(110)}");
+const u16 sFrenchText_Message_UnknownItemPlasma[] = INCTEXT("{GAP(79)}{COLOR(5)}Objet inconnu\n{GAP(110)}");
+const u16 sFrenchText_Message_Bomb[] = INCTEXT("{GAP(96)}{COLOR(5)}Bombe\n{GAP(110)}");
+const u16 sFrenchText_Message_VariaSuit[] = INCTEXT("{GAP(78)}{COLOR(5)}Costume Varia\n{GAP(110)}");
+const u16 sFrenchText_Message_UnknownItemGravity[] = INCTEXT("{GAP(79)}{COLOR(5)}Objet inconnu\n{GAP(110)}");
+const u16 sFrenchText_Message_MorphBall[] = INCTEXT("{GAP(76)}{COLOR(5)}Boule Morphing\n{GAP(110)}");
+const u16 sFrenchText_Message_SpeedBooster[] = INCTEXT("{GAP(80)}{COLOR(5)}Accélérateur\n{GAP(110)}");
+const u16 sFrenchText_Message_HighJump[] = INCTEXT("{GAP(86)}{COLOR(5)}Méga Saut\n{GAP(110)}");
+const u16 sFrenchText_Message_ScrewAttack[] = INCTEXT("{GAP(70)}{COLOR(5)}Attaque en Vrille\n{GAP(110)}");
+const u16 sFrenchText_Message_UnknownItemSpaceJump[] = INCTEXT("{GAP(79)}{COLOR(5)}Objet inconnu\n{GAP(110)}");
+const u16 sFrenchText_Message_PowerGrip[] = INCTEXT("{GAP(80)}{COLOR(5)}Poigne de fer\n{GAP(110)}");
+const u16 sFrenchText_Message_SavePrompt[] = INCTEXT("{GAP(50)}Sauvegarder les données？\n{GAP(95)}{INDENT(64)}Oui{INDENT(160)}Non");
+const u16 sFrenchText_Message_SaveComplete[] = INCTEXT("{GAP(63)}Sauvegarde terminée\n{GAP(110)}");
+const u16 sFrenchText_Message_WeaponResupplyComplete[] = INCTEXT("{GAP(64)}Système d'armement\n{GAP(60)}entièrement rechargé.");
+const u16 sFrenchText_Message_EnergyTankRechargeComplete[] = INCTEXT("{GAP(62)}Energie complètement\n{GAP(86)}rechargée.");
+const u16 sFrenchText_Message_WeaponsAndEnergyRestored[] = INCTEXT("{GAP(72)}Armes et énergie\n{GAP(51)}complètement rechargées.");
+const u16 sFrenchText_Message_BrinstarMap[] = INCTEXT("{GAP(48)}{COLOR(5)}Carte{COLOR(0)} de {COLOR(9)}Brinstar{COLOR(0)} obtenue.\n{GAP(110)}");
+const u16 sFrenchText_Message_KraidMap[] = INCTEXT("{GAP(55)}{COLOR(5)}Carte{COLOR(0)} de {COLOR(8)}Kraid{COLOR(0)} obtenue.\n{GAP(110)}");
+const u16 sFrenchText_Message_NorfairMap[] = INCTEXT("{GAP(50)}{COLOR(5)}Carte{COLOR(0)} de {COLOR(6)}Norfair{COLOR(0)} obtenue.\n{GAP(110)}");
+const u16 sFrenchText_Message_RidleyMap[] = INCTEXT("{GAP(54)}{COLOR(5)}Carte{COLOR(0)} de {COLOR(7)}Ridley{COLOR(0)} obtenue.\n{GAP(110)}");
+const u16 sFrenchText_Message_MotherShipMap[] = INCTEXT("{GAP(33)}{COLOR(5)}Carte{COLOR(0)} du {COLOR(10)}Vaisseau-mère{COLOR(0)} obtenue.\n{GAP(110)}");
+const u16 sFrenchText_Message_FullyPoweredSuit[] = INCTEXT("{GAP(44)}{COLOR(5)}Costume de Puissance{COLOR(0)} acquis.\n{GAP(110)}");
+const u16 sFrenchText_Message_ZebesEscape[] = INCTEXT("{GAP(26)}Système d'auto-destruction activé!\n{GAP(55)}Evacuez immédiatement!");
+const u16 sFrenchText_Message_ChozodiaEscape[] = INCTEXT("{GAP(26)}Système d'auto-destruction activé!\n{GAP(55)}Evacuez immédiatement!");
+const u16 sFrenchText_Message_EnemyLocationAbnormal[] = INCTEXT("{GAP(38)}Position de l'ennemi incorrecte.\n{GAP(40)}Vérifiez la position de l'image.");
+const u16 sFrenchText_Message_ActivateEasySleep[] = INCTEXT("{GAP(41)}Activer le mode veille rapide？\n{GAP(32)}Pour quitter le mode veille rapide,");
+const u16 sFrenchText_Message_PressSelectLAndR[] = INCTEXT("{GAP(59)}appuyez simultanément\n{GAP(52)}sur {Select_button}, {L_button} et {R_button}.");
+const u16 sFrenchText_Message_EasySleepPrompt[] = INCTEXT("{GAP(104)}Oui\n{GAP(102)}Non");
+
+static const u16* sFrenchTextPointers_Message[] = {
+    [MESSAGE_DUMMY] = sFrenchText_Message_Dummy,
+    [MESSAGE_ENERGY_TANK_ACQUIRED] = sFrenchText_Message_EnergyTankAcquired,
+    [MESSAGE_MISSILE_TANK_ACQUIRED] = sFrenchText_Message_MissileTankAcquired,
+    [MESSAGE_FIRST_MISSILE_TANK] = sFrenchText_Message_FirstMissileTank,
+    [MESSAGE_SUPER_MISSILE_TANK_ACQUIRED] = sFrenchText_Message_SuperMissileTankAcquired,
+    [MESSAGE_FIRST_SUPER_MISSILE_TANK] = sFrenchText_Message_FirstSuperMissileTank,
+    [MESSAGE_POWER_BOMB_TANK_ACQUIRED] = sFrenchText_Message_PowerBombTankAcquired,
+    [MESSAGE_FIRST_POWER_BOMB_TANK] = sFrenchText_Message_FirstPowerBombTank,
+    [MESSAGE_LONG_BEAM] = sFrenchText_Message_LongBeam,
+    [MESSAGE_CHARGE_BEAM] = sFrenchText_Message_ChargeBeam,
+    [MESSAGE_ICE_BEAM] = sFrenchText_Message_IceBeam,
+    [MESSAGE_WAVE_BEAM] = sFrenchText_Message_WaveBeam,
+    [MESSAGE_UKNOWN_ITEM_PLASMA] = sFrenchText_Message_UnknownItemPlasma,
+    [MESSAGE_BOMB] = sFrenchText_Message_Bomb,
+    [MESSAGE_VARIA_SUIT] = sFrenchText_Message_VariaSuit,
+    [MESSAGE_UNKNOWN_ITEM_GRAVITY] = sFrenchText_Message_UnknownItemGravity,
+    [MESSAGE_MORPH_BALL] = sFrenchText_Message_MorphBall,
+    [MESSAGE_SPEED_BOOSTER] = sFrenchText_Message_SpeedBooster,
+    [MESSAGE_HIGH_JUMP] = sFrenchText_Message_HighJump,
+    [MESSAGE_SCREW_ATTACK] = sFrenchText_Message_ScrewAttack,
+    [MESSAGE_UNKNOWN_ITEM_SPACE_JUMP] = sFrenchText_Message_UnknownItemSpaceJump,
+    [MESSAGE_POWER_GRIP] = sFrenchText_Message_PowerGrip,
+    [MESSAGE_SAVE_PROMPT] = sFrenchText_Message_SavePrompt,
+    [MESSAGE_SAVE_COMPLETE] = sFrenchText_Message_SaveComplete,
+    [MESSAGE_WEAPON_RESUPPLY_COMPLETE] = sFrenchText_Message_WeaponResupplyComplete,
+    [MESSAGE_ENERGY_TANK_RECHARGE_COMPLETE] = sFrenchText_Message_EnergyTankRechargeComplete,
+    [MESSAGE_WEAPONS_AND_ENERGY_RESTORED] = sFrenchText_Message_WeaponsAndEnergyRestored,
+    [MESSAGE_BRINSTAR_MAP_ACQUIRED] = sFrenchText_Message_BrinstarMap,
+    [MESSAGE_KRAID_MAP_ACQUIRED] = sFrenchText_Message_KraidMap,
+    [MESSAGE_NORFAIR_MAP_ACQUIRED] = sFrenchText_Message_NorfairMap,
+    [MESSAGE_RIDLEY_MAP_ACQUIRED] = sFrenchText_Message_RidleyMap,
+    [MESSAGE_MOTHER_SHIP_MAP_ACQUIRED] = sFrenchText_Message_MotherShipMap,
+    [MESSAGE_FULLY_POWERED_SUIT] = sFrenchText_Message_FullyPoweredSuit,
+    [MESSAGE_ZEBES_ESCAPE] = sFrenchText_Message_ZebesEscape,
+    [MESSAGE_CHOZODIA_ESCAPE] = sFrenchText_Message_ChozodiaEscape,
+    [MESSAGE_ENEMY_LOCATION_ABNORMAL] = sFrenchText_Message_EnemyLocationAbnormal,
+    [MESSAGE_ACTIVATE_EASY_SLEEP] = sFrenchText_Message_ActivateEasySleep,
+    [MESSAGE_PRESS_SELECT_L_AND_R] = sFrenchText_Message_PressSelectLAndR,
+    [MESSAGE_EASY_SLEEP_PROMPT] = sFrenchText_Message_EasySleepPrompt,
+};
+
+const u16 sFrenchText_Location_Brinstar[] = INCTEXT("{GAP(86)}BRINSTAR");
+const u16 sFrenchText_Location_Kraid[] = INCTEXT("{GAP(96)}KRAID");
+const u16 sFrenchText_Location_Norfair[] = INCTEXT("{GAP(90)}NORFAIR");
+const u16 sFrenchText_Location_Ridley[] = INCTEXT("{GAP(93)}RIDLEY");
+const u16 sFrenchText_Location_Tourian[] = INCTEXT("{GAP(90)}TOURIAN");
+const u16 sFrenchText_Location_Crateria[] = INCTEXT("{GAP(87)}CRATERIA");
+const u16 sFrenchText_Location_Chozodia[] = INCTEXT("{GAP(87)}CHOZODIA");
+const u16 sFrenchText_Location_Mothership[] = INCTEXT("{GAP(4)}VAISSEAU-MERE DES PIRATES DE L'ESPACE");
+const u16 sFrenchText_Location_PlanetZebes[] = INCTEXT("{GAP(72)}PLANETE ZEBES");
+const u16 sFrenchText_Location_SaveRoom[] = INCTEXT("{GAP(55)}UNITE DE SAUVEGARDE");
+const u16 sFrenchText_Location_ResearchRoom[] = INCTEXT("{GAP(58)}UNITE DE RECHERCHE");
+const u16 sFrenchText_Location_MapRoom[] = INCTEXT("{GAP(58)}TERMINAL DE CARTES");
+const u16 sFrenchText_Location_ChozoRuins[] = INCTEXT("{GAP(76)}RUINES CHOZO");
+const u16 sFrenchText_Location_Starship[] = INCTEXT("{GAP(64)}VAISSEAU SPATIAL");
+const u16 sFrenchText_Location_Unused7[] = INCTEXT("{GAP(52)}VAISSEAU DE CONTROLE");
+const u16 sFrenchText_Location_Unused8[] = INCTEXT("{GAP(75)}UNUSED OBJ 8");
+const u16 sFrenchText_Location_Unused9[] = INCTEXT("{GAP(75)}UNUSED OBJ 9");
+const u16 sFrenchText_Location_Unused10[] = INCTEXT("{GAP(72)}UNUSED OBJ 10");
+const u16 sFrenchText_Location_Unused11[] = INCTEXT("{GAP(74)}UNUSED OBJ 11");
+const u16 sFrenchText_Location_Unused12[] = INCTEXT("{GAP(72)}UNUSED OBJ 12");
+const u16 sFrenchText_Location_Unused13[] = INCTEXT("{GAP(72)}UNUSED OBJ 13");
+const u16 sFrenchText_Location_Unused14[] = INCTEXT("{GAP(72)}UNUSED OBJ 14");
+const u16 sFrenchText_Location_Unused15[] = INCTEXT("{GAP(72)}UNUSED OBJ 15");
+const u16 sFrenchText_Location_Unused16[] = INCTEXT("{GAP(72)}UNUSED OBJ 16");
+const u16 sFrenchText_Location_Unused17[] = INCTEXT("{GAP(72)}UNUSED OBJ 17");
+const u16 sFrenchText_Location_Unused18[] = INCTEXT("{GAP(72)}UNUSED OBJ 18");
+
+static const u16* sFrenchTextPointers_Location[] = {
+    [LT_BRINSTAR] = sFrenchText_Location_Brinstar,
+    [LT_KRAID] = sFrenchText_Location_Kraid,
+    [LT_NORFAIR] = sFrenchText_Location_Norfair,
+    [LT_RIDLEY] = sFrenchText_Location_Ridley,
+    [LT_TOURIAN] = sFrenchText_Location_Tourian,
+    [LT_CRATERIA] = sFrenchText_Location_Crateria,
+    [LT_CHOZODIA] = sFrenchText_Location_Chozodia,
+    [LT_MOTHERSHIP] = sFrenchText_Location_Mothership,
+    [LT_PLANET_ZEBES] = sFrenchText_Location_PlanetZebes,
+    [LT_SAVE_ROOM] = sFrenchText_Location_SaveRoom,
+    [LT_RESEARCH_ROOM] = sFrenchText_Location_ResearchRoom,
+    [LT_MAP_ROOM] = sFrenchText_Location_MapRoom,
+    [LT_CHOZO_RUINS] = sFrenchText_Location_ChozoRuins,
+    [LT_STARSHIP] = sFrenchText_Location_Starship,
+    [LT_UNUSED_7] = sFrenchText_Location_Unused7,
+    [LT_UNUSED_8] = sFrenchText_Location_Unused8,
+    [LT_UNUSED_9] = sFrenchText_Location_Unused9,
+    [LT_UNUSED_10] = sFrenchText_Location_Unused10,
+    [LT_UNUSED_11] = sFrenchText_Location_Unused11,
+    [LT_UNUSED_12] = sFrenchText_Location_Unused12,
+    [LT_UNUSED_13] = sFrenchText_Location_Unused13,
+    [LT_UNUSED_14] = sFrenchText_Location_Unused14,
+    [LT_UNUSED_15] = sFrenchText_Location_Unused15,
+    [LT_UNUSED_16] = sFrenchText_Location_Unused16,
+    [LT_UNUSED_17] = sFrenchText_Location_Unused17,
+    [LT_UNUSED_18] = sFrenchText_Location_Unused18,
+};
+
+const u16 sItalianText_Message_Dummy[] = INCTEXT("{GAP(36)}DUMMY MESSAGE (OBJ Cell B1)\n{GAP(110)}");
+const u16 sItalianText_Message_EnergyTankAcquired[] = INCTEXT("{GAP(46)}{COLOR(5)}Acquisito serbatoio Energia.\n{GAP(38)}{COLOR(0)}Puoi immagazzinare più Energia.");
+const u16 sItalianText_Message_MissileTankAcquired[] = INCTEXT("{GAP(50)}{COLOR(5)}Acquisito serbatoio Missili.\n{GAP(46)}{COLOR(0)}Puoi trasportare più Missili.");
+const u16 sItalianText_Message_FirstMissileTank[] = INCTEXT("{GAP(74)}{COLOR(5)}Serbatoio Missili\n{GAP(110)}");
+const u16 sItalianText_Message_SuperMissileTankAcquired[] = INCTEXT("{GAP(35)}{COLOR(5)}Acquisito serbatoio Super Missili.\n{GAP(31)}{COLOR(0)}Puoi trasportare più Super Missili.");
+const u16 sItalianText_Message_FirstSuperMissileTank[] = INCTEXT("{GAP(58)}{COLOR(5)}Serbatoio Super Missili\n{GAP(110)}");
+const u16 sItalianText_Message_PowerBombTankAcquired[] = INCTEXT("{GAP(41)}{COLOR(5)}Acquisito serbatoio Gigabombe.\n{GAP(37)}{COLOR(0)}Puoi trasportare più Gigabombe.");
+const u16 sItalianText_Message_FirstPowerBombTank[] = INCTEXT("{GAP(64)}{COLOR(5)}Serbatoio Gigabombe\n{GAP(110)}");
+const u16 sItalianText_Message_LongBeam[] = INCTEXT("{GAP(81)}{COLOR(5)}Raggio Lungo\n{GAP(110)}");
+const u16 sItalianText_Message_ChargeBeam[] = INCTEXT("{GAP(76)}{COLOR(5)}Raggio Ricarica\n{GAP(110)}");
+const u16 sItalianText_Message_IceBeam[] = INCTEXT("{GAP(84)}{COLOR(5)}Raggio Gelo\n{GAP(110)}");
+const u16 sItalianText_Message_WaveBeam[] = INCTEXT("{GAP(84)}{COLOR(5)}Raggio Onda\n{GAP(110)}");
+const u16 sItalianText_Message_UnknownItemPlasma[] = INCTEXT("{GAP(58)}{COLOR(5)}Strumento sconosciuto\n{GAP(110)}");
+const u16 sItalianText_Message_Bomb[] = INCTEXT("{GAP(96)}{COLOR(5)}Bomba\n{GAP(110)}");
+const u16 sItalianText_Message_VariaSuit[] = INCTEXT("{GAP(86)}{COLOR(5)}Termotuta\n{GAP(110)}");
+const u16 sItalianText_Message_UnknownItemGravity[] = INCTEXT("{GAP(58)}{COLOR(5)}Strumento sconosciuto\n{GAP(110)}");
+const u16 sItalianText_Message_MorphBall[] = INCTEXT("{GAP(84)}{COLOR(5)}Morfosfera\n{GAP(110)}");
+const u16 sItalianText_Message_SpeedBooster[] = INCTEXT("{GAP(85)}{COLOR(5)}Supercinesi\n{GAP(110)}");
+const u16 sItalianText_Message_HighJump[] = INCTEXT("{GAP(89)}{COLOR(5)}Ipersalto\n{GAP(110)}");
+const u16 sItalianText_Message_ScrewAttack[] = INCTEXT("{GAP(76)}{COLOR(5)}Attacco a vite\n{GAP(110)}");
+const u16 sItalianText_Message_UnknownItemSpaceJump[] = INCTEXT("{GAP(58)}{COLOR(5)}Strumento sconosciuto\n{GAP(110)}");
+const u16 sItalianText_Message_PowerGrip[] = INCTEXT("{GAP(86)}{COLOR(5)}Megapresa\n{GAP(110)}");
+const u16 sItalianText_Message_SavePrompt[] = INCTEXT("{GAP(78)}{GAP(8)}Vuoi salvare？\n{GAP(99)}{INDENT(64)}Sì{INDENT(160)}No");
+const u16 sItalianText_Message_SaveComplete[] = INCTEXT("{GAP(58)}Salvataggio completato\n{GAP(110)}");
+const u16 sItalianText_Message_WeaponResupplyComplete[] = INCTEXT("{GAP(63)}Ricarica sistema armi\n{GAP(84)}completata.");
+const u16 sItalianText_Message_EnergyTankRechargeComplete[] = INCTEXT("{GAP(51)}Ricarica serbatoio Energia\n{GAP(84)}completata.");
+const u16 sItalianText_Message_WeaponsAndEnergyRestored[] = INCTEXT("{GAP(40)}Armi ed Energia completamente\n{GAP(83)}recuperate.");
+const u16 sItalianText_Message_BrinstarMap[] = INCTEXT("{GAP(52)}Acquisita {COLOR(5)}mappa{COLOR(0)} {COLOR(9)}Brinstar{COLOR(0)}.\n{GAP(110)}");
+const u16 sItalianText_Message_KraidMap[] = INCTEXT("{GAP(60)}Acquisita {COLOR(5)}mappa{COLOR(0)} {COLOR(8)}Kraid{COLOR(0)}.\n{GAP(110)}");
+const u16 sItalianText_Message_NorfairMap[] = INCTEXT("{GAP(54)}Acquisita {COLOR(5)}mappa{COLOR(0)} {COLOR(6)}Norfair{COLOR(0)}.\n{GAP(110)}");
+const u16 sItalianText_Message_RidleyMap[] = INCTEXT("{GAP(58)}Acquisita {COLOR(5)}mappa{COLOR(0)} {COLOR(7)}Ridley{COLOR(0)}.\n{GAP(110)}");
+const u16 sItalianText_Message_MotherShipMap[] = INCTEXT("{GAP(44)}Acquisita {COLOR(5)}mappa{COLOR(0)} {COLOR(10)}Nave Madre{COLOR(0)}.\n{GAP(110)}");
+const u16 sItalianText_Message_FullyPoweredSuit[] = INCTEXT("{GAP(38)}Equipaggiamento {COLOR(5)}Tuta{COLOR(0)} completo.\n{GAP(110)}");
+const u16 sItalianText_Message_ZebesEscape[] = INCTEXT("{GAP(28)}Sistema di autodistruzione attivato:\n{GAP(58)}evacuazione immediata!");
+const u16 sItalianText_Message_ChozodiaEscape[] = INCTEXT("{GAP(28)}Sistema di autodistruzione attivato:\n{GAP(58)}evacuazione immediata!");
+const u16 sItalianText_Message_EnemyLocationAbnormal[] = INCTEXT("{GAP(52)}Posizione nemico anomala.\n{GAP(47)}Controlla origine messaggio.");
+const u16 sItalianText_Message_ActivateEasySleep[] = INCTEXT("{GAP(50)}Entrare in Riposo Rapido？\n{GAP(38)}Per uscire dalla Modalità Riposo");
+const u16 sItalianText_Message_PressSelectLAndR[] = INCTEXT("{GAP(52)}premi {Select_button}, {L_button} e {R_button}\n{GAP(62)}contemporaneamente.");
+const u16 sItalianText_Message_EasySleepPrompt[] = INCTEXT("{GAP(105)}Sì\n{GAP(104)}No");
+
+static const u16* sItalianTextPointers_Message[] = {
+    [MESSAGE_DUMMY] = sItalianText_Message_Dummy,
+    [MESSAGE_ENERGY_TANK_ACQUIRED] = sItalianText_Message_EnergyTankAcquired,
+    [MESSAGE_MISSILE_TANK_ACQUIRED] = sItalianText_Message_MissileTankAcquired,
+    [MESSAGE_FIRST_MISSILE_TANK] = sItalianText_Message_FirstMissileTank,
+    [MESSAGE_SUPER_MISSILE_TANK_ACQUIRED] = sItalianText_Message_SuperMissileTankAcquired,
+    [MESSAGE_FIRST_SUPER_MISSILE_TANK] = sItalianText_Message_FirstSuperMissileTank,
+    [MESSAGE_POWER_BOMB_TANK_ACQUIRED] = sItalianText_Message_PowerBombTankAcquired,
+    [MESSAGE_FIRST_POWER_BOMB_TANK] = sItalianText_Message_FirstPowerBombTank,
+    [MESSAGE_LONG_BEAM] = sItalianText_Message_LongBeam,
+    [MESSAGE_CHARGE_BEAM] = sItalianText_Message_ChargeBeam,
+    [MESSAGE_ICE_BEAM] = sItalianText_Message_IceBeam,
+    [MESSAGE_WAVE_BEAM] = sItalianText_Message_WaveBeam,
+    [MESSAGE_UKNOWN_ITEM_PLASMA] = sItalianText_Message_UnknownItemPlasma,
+    [MESSAGE_BOMB] = sItalianText_Message_Bomb,
+    [MESSAGE_VARIA_SUIT] = sItalianText_Message_VariaSuit,
+    [MESSAGE_UNKNOWN_ITEM_GRAVITY] = sItalianText_Message_UnknownItemGravity,
+    [MESSAGE_MORPH_BALL] = sItalianText_Message_MorphBall,
+    [MESSAGE_SPEED_BOOSTER] = sItalianText_Message_SpeedBooster,
+    [MESSAGE_HIGH_JUMP] = sItalianText_Message_HighJump,
+    [MESSAGE_SCREW_ATTACK] = sItalianText_Message_ScrewAttack,
+    [MESSAGE_UNKNOWN_ITEM_SPACE_JUMP] = sItalianText_Message_UnknownItemSpaceJump,
+    [MESSAGE_POWER_GRIP] = sItalianText_Message_PowerGrip,
+    [MESSAGE_SAVE_PROMPT] = sItalianText_Message_SavePrompt,
+    [MESSAGE_SAVE_COMPLETE] = sItalianText_Message_SaveComplete,
+    [MESSAGE_WEAPON_RESUPPLY_COMPLETE] = sItalianText_Message_WeaponResupplyComplete,
+    [MESSAGE_ENERGY_TANK_RECHARGE_COMPLETE] = sItalianText_Message_EnergyTankRechargeComplete,
+    [MESSAGE_WEAPONS_AND_ENERGY_RESTORED] = sItalianText_Message_WeaponsAndEnergyRestored,
+    [MESSAGE_BRINSTAR_MAP_ACQUIRED] = sItalianText_Message_BrinstarMap,
+    [MESSAGE_KRAID_MAP_ACQUIRED] = sItalianText_Message_KraidMap,
+    [MESSAGE_NORFAIR_MAP_ACQUIRED] = sItalianText_Message_NorfairMap,
+    [MESSAGE_RIDLEY_MAP_ACQUIRED] = sItalianText_Message_RidleyMap,
+    [MESSAGE_MOTHER_SHIP_MAP_ACQUIRED] = sItalianText_Message_MotherShipMap,
+    [MESSAGE_FULLY_POWERED_SUIT] = sItalianText_Message_FullyPoweredSuit,
+    [MESSAGE_ZEBES_ESCAPE] = sItalianText_Message_ZebesEscape,
+    [MESSAGE_CHOZODIA_ESCAPE] = sItalianText_Message_ChozodiaEscape,
+    [MESSAGE_ENEMY_LOCATION_ABNORMAL] = sItalianText_Message_EnemyLocationAbnormal,
+    [MESSAGE_ACTIVATE_EASY_SLEEP] = sItalianText_Message_ActivateEasySleep,
+    [MESSAGE_PRESS_SELECT_L_AND_R] = sItalianText_Message_PressSelectLAndR,
+    [MESSAGE_EASY_SLEEP_PROMPT] = sItalianText_Message_EasySleepPrompt,
+};
+
+const u16 sItalianText_Location_Brinstar[] = INCTEXT("{GAP(86)}BRINSTAR");
+const u16 sItalianText_Location_Kraid[] = INCTEXT("{GAP(96)}KRAID");
+const u16 sItalianText_Location_Norfair[] = INCTEXT("{GAP(90)}NORFAIR");
+const u16 sItalianText_Location_Ridley[] = INCTEXT("{GAP(93)}RIDLEY");
+const u16 sItalianText_Location_Tourian[] = INCTEXT("{GAP(90)}TOURIAN");
+const u16 sItalianText_Location_Crateria[] = INCTEXT("{GAP(87)}CRATERIA");
+const u16 sItalianText_Location_Chozodia[] = INCTEXT("{GAP(87)}CHOZODIA");
+const u16 sItalianText_Location_Mothership[] = INCTEXT("{GAP(28)}NAVE MADRE DEI PIRATI SPAZIALI");
+const u16 sItalianText_Location_PlanetZebes[] = INCTEXT("{GAP(72)}PIANETA ZEBES");
+const u16 sItalianText_Location_SaveRoom[] = INCTEXT("{GAP(52)}STAZIONE SALVATAGGIO");
+const u16 sItalianText_Location_ResearchRoom[] = INCTEXT("{GAP(49)}LABORATORIO DI RICERCA");
+const u16 sItalianText_Location_MapRoom[] = INCTEXT("{GAP(80)}SALA MAPPE");
+const u16 sItalianText_Location_ChozoRuins[] = INCTEXT("{GAP(75)}ROVINE CHOZO");
+const u16 sItalianText_Location_Starship[] = INCTEXT("{GAP(63)}NAVETTA SPAZIALE");
+const u16 sItalianText_Location_Unused7[] = INCTEXT("{GAP(60)}NAVE DI CONTROLLO");
+const u16 sItalianText_Location_Unused8[] = INCTEXT("{GAP(75)}UNUSED OBJ 8");
+const u16 sItalianText_Location_Unused9[] = INCTEXT("{GAP(75)}UNUSED OBJ 9");
+const u16 sItalianText_Location_Unused10[] = INCTEXT("{GAP(72)}UNUSED OBJ 10");
+const u16 sItalianText_Location_Unused11[] = INCTEXT("{GAP(74)}UNUSED OBJ 11");
+const u16 sItalianText_Location_Unused12[] = INCTEXT("{GAP(72)}UNUSED OBJ 12");
+const u16 sItalianText_Location_Unused13[] = INCTEXT("{GAP(72)}UNUSED OBJ 13");
+const u16 sItalianText_Location_Unused14[] = INCTEXT("{GAP(72)}UNUSED OBJ 14");
+const u16 sItalianText_Location_Unused15[] = INCTEXT("{GAP(72)}UNUSED OBJ 15");
+const u16 sItalianText_Location_Unused16[] = INCTEXT("{GAP(72)}UNUSED OBJ 16");
+const u16 sItalianText_Location_Unused17[] = INCTEXT("{GAP(72)}UNUSED OBJ 17");
+const u16 sItalianText_Location_Unused18[] = INCTEXT("{GAP(72)}UNUSED OBJ 18");
+
+static const u16* sItalianTextPointers_Location[] = {
+    [LT_BRINSTAR] = sItalianText_Location_Brinstar,
+    [LT_KRAID] = sItalianText_Location_Kraid,
+    [LT_NORFAIR] = sItalianText_Location_Norfair,
+    [LT_RIDLEY] = sItalianText_Location_Ridley,
+    [LT_TOURIAN] = sItalianText_Location_Tourian,
+    [LT_CRATERIA] = sItalianText_Location_Crateria,
+    [LT_CHOZODIA] = sItalianText_Location_Chozodia,
+    [LT_MOTHERSHIP] = sItalianText_Location_Mothership,
+    [LT_PLANET_ZEBES] = sItalianText_Location_PlanetZebes,
+    [LT_SAVE_ROOM] = sItalianText_Location_SaveRoom,
+    [LT_RESEARCH_ROOM] = sItalianText_Location_ResearchRoom,
+    [LT_MAP_ROOM] = sItalianText_Location_MapRoom,
+    [LT_CHOZO_RUINS] = sItalianText_Location_ChozoRuins,
+    [LT_STARSHIP] = sItalianText_Location_Starship,
+    [LT_UNUSED_7] = sItalianText_Location_Unused7,
+    [LT_UNUSED_8] = sItalianText_Location_Unused8,
+    [LT_UNUSED_9] = sItalianText_Location_Unused9,
+    [LT_UNUSED_10] = sItalianText_Location_Unused10,
+    [LT_UNUSED_11] = sItalianText_Location_Unused11,
+    [LT_UNUSED_12] = sItalianText_Location_Unused12,
+    [LT_UNUSED_13] = sItalianText_Location_Unused13,
+    [LT_UNUSED_14] = sItalianText_Location_Unused14,
+    [LT_UNUSED_15] = sItalianText_Location_Unused15,
+    [LT_UNUSED_16] = sItalianText_Location_Unused16,
+    [LT_UNUSED_17] = sItalianText_Location_Unused17,
+    [LT_UNUSED_18] = sItalianText_Location_Unused18,
+};
+
+const u16 sSpanishText_Message_Dummy[] = INCTEXT("{GAP(36)}DUMMY MESSAGE (OBJ Cell B1)\n{GAP(110)}");
+const u16 sSpanishText_Message_EnergyTankAcquired[] = INCTEXT("{GAP(40)}{COLOR(5)}Tanque de energía almacenado.\n{GAP(40)}{COLOR(0)}Capacidad de energía ampliada.");
+const u16 sSpanishText_Message_MissileTankAcquired[] = INCTEXT("{GAP(43)}{COLOR(5)}Tanque de misiles almacenado.\n{GAP(44)}{COLOR(0)}Capacidad de misiles ampliada.");
+const u16 sSpanishText_Message_FirstMissileTank[] = INCTEXT("{GAP(72)}{COLOR(5)}Tanque de misiles\n{GAP(110)}");
+const u16 sSpanishText_Message_SuperMissileTankAcquired[] = INCTEXT("{GAP(30)}{COLOR(5)}Tanque de supermisiles almacenado.\n{GAP(31)}{COLOR(0)}Capacidad de supermisiles ampliada.");
+const u16 sSpanishText_Message_FirstSuperMissileTank[] = INCTEXT("{GAP(59)}{COLOR(5)}Tanque de supermisiles\n{GAP(110)}");
+const u16 sSpanishText_Message_PowerBombTankAcquired[] = INCTEXT("{GAP(20)}{COLOR(5)}Tanque de bomba de energía almacenado\n{GAP(18)}{COLOR(0)}Capacidad de bomba de energía ampliada.");
+const u16 sSpanishText_Message_FirstPowerBombTank[] = INCTEXT("{GAP(46)}{COLOR(5)}Tanque de bomba de energía\n{GAP(110)}");
+const u16 sSpanishText_Message_LongBeam[] = INCTEXT("{GAP(84)}{COLOR(5)}Rayo Largo\n{GAP(110)}");
+const u16 sSpanishText_Message_ChargeBeam[] = INCTEXT("{GAP(80)}{COLOR(5)}Rayo Recarga\n{GAP(110)}");
+const u16 sSpanishText_Message_IceBeam[] = INCTEXT("{GAP(80)}{COLOR(5)}Rayo de Hielo\n{GAP(110)}");
+const u16 sSpanishText_Message_WaveBeam[] = INCTEXT("{GAP(78)}{COLOR(5)}Rayo de Ondas\n{GAP(110)}");
+const u16 sSpanishText_Message_UnknownItemPlasma[] = INCTEXT("{GAP(66)}{COLOR(5)}Objeto desconocido\n{GAP(110)}");
+const u16 sSpanishText_Message_Bomb[] = INCTEXT("{GAP(96)}{COLOR(5)}Bomba\n{GAP(110)}");
+const u16 sSpanishText_Message_VariaSuit[] = INCTEXT("{GAP(76)}{COLOR(5)}Traje climático\n{GAP(110)}");
+const u16 sSpanishText_Message_UnknownItemGravity[] = INCTEXT("{GAP(66)}{COLOR(5)}Objeto desconocido\n{GAP(110)}");
+const u16 sSpanishText_Message_MorphBall[] = INCTEXT("{GAP(84)}{COLOR(5)}Morfosfera\n{GAP(110)}");
+const u16 sSpanishText_Message_SpeedBooster[] = INCTEXT("{GAP(84)}{COLOR(5)}Aceleración\n{GAP(110)}");
+const u16 sSpanishText_Message_HighJump[] = INCTEXT("{GAP(86)}{COLOR(5)}Supersalto\n{GAP(110)}");
+const u16 sSpanishText_Message_ScrewAttack[] = INCTEXT("{GAP(72)}{COLOR(5)}Salto en barrena\n{GAP(110)}");
+const u16 sSpanishText_Message_UnknownItemSpaceJump[] = INCTEXT("{GAP(66)}{COLOR(5)}Objeto desconocido\n{GAP(110)}");
+const u16 sSpanishText_Message_PowerGrip[] = INCTEXT("{GAP(94)}{COLOR(5)}Agarre\n{GAP(110)}");
+const u16 sSpanishText_Message_SavePrompt[] = INCTEXT("{GAP(84)}{GAP(8)}¿Guardar？\n{GAP(99)}{INDENT(64)}Sí{INDENT(160)}No");
+const u16 sSpanishText_Message_SaveComplete[] = INCTEXT("{GAP(68)}Datos almacenados\n{GAP(110)}");
+const u16 sSpanishText_Message_WeaponResupplyComplete[] = INCTEXT("{GAP(64)}Restablecimiento del\n{GAP(58)}armamento completado.");
+const u16 sSpanishText_Message_EnergyTankRechargeComplete[] = INCTEXT("{GAP(57)}Recarga de los tanques\n{GAP(58)}de energía completada.");
+const u16 sSpanishText_Message_WeaponsAndEnergyRestored[] = INCTEXT("{GAP(68)}Munición y energía\n{GAP(52)}totalmente restablecidas.");
+const u16 sSpanishText_Message_BrinstarMap[] = INCTEXT("{GAP(48)}{COLOR(5)}Mapa{COLOR(0)} de {COLOR(9)}Brinstar{COLOR(0)} adquirido.\n{GAP(110)}");
+const u16 sSpanishText_Message_KraidMap[] = INCTEXT("{GAP(55)}{COLOR(5)}Mapa{COLOR(0)} de {COLOR(8)}Kraid{COLOR(0)} adquirido.\n{GAP(110)}");
+const u16 sSpanishText_Message_NorfairMap[] = INCTEXT("{GAP(50)}{COLOR(5)}Mapa{COLOR(0)} de {COLOR(6)}Norfair{COLOR(0)} adquirido.\n{GAP(110)}");
+const u16 sSpanishText_Message_RidleyMap[] = INCTEXT("{GAP(54)}{COLOR(5)}Mapa{COLOR(0)} de {COLOR(7)}Ridley{COLOR(0)} adquirido.\n{GAP(110)}");
+const u16 sSpanishText_Message_MotherShipMap[] = INCTEXT("{GAP(30)}{COLOR(5)}Mapa{COLOR(0)} de la {COLOR(10)}nave nodriza{COLOR(0)}  adquirido.\n{GAP(110)}");
+const u16 sSpanishText_Message_FullyPoweredSuit[] = INCTEXT("{GAP(26)}Tienes el {COLOR(5)}traje totalmente equipado{COLOR(0)}.\n{GAP(110)}");
+const u16 sSpanishText_Message_ZebesEscape[] = INCTEXT("{GAP(16)}¡Mecanismo de autodestrucción activado!\n{GAP(58)}¡Evacuación inmediata!");
+const u16 sSpanishText_Message_ChozodiaEscape[] = INCTEXT("{GAP(16)}¡Mecanismo de autodestrucción activado!\n{GAP(58)}¡Evacuación inmediata!");
+const u16 sSpanishText_Message_EnemyLocationAbnormal[] = INCTEXT("{GAP(44)}Posición anormal del enemigo.\n{GAP(44)}Revisa el origen del mensaje.");
+const u16 sSpanishText_Message_ActivateEasySleep[] = INCTEXT("{GAP(51)}¿Usar el salvapantallas？\n{GAP(64)}Para anularlo, pulsa");
+const u16 sSpanishText_Message_PressSelectLAndR[] = INCTEXT("{GAP(66)}{Select_button}, {L_button} y {R_button}\n{GAP(74)}al mismo tiempo.");
+const u16 sSpanishText_Message_EasySleepPrompt[] = INCTEXT("{GAP(105)}Sí\n{GAP(104)}No");
+
+static const u16* sSpanishTextPointers_Message[] = {
+    [MESSAGE_DUMMY] = sSpanishText_Message_Dummy,
+    [MESSAGE_ENERGY_TANK_ACQUIRED] = sSpanishText_Message_EnergyTankAcquired,
+    [MESSAGE_MISSILE_TANK_ACQUIRED] = sSpanishText_Message_MissileTankAcquired,
+    [MESSAGE_FIRST_MISSILE_TANK] = sSpanishText_Message_FirstMissileTank,
+    [MESSAGE_SUPER_MISSILE_TANK_ACQUIRED] = sSpanishText_Message_SuperMissileTankAcquired,
+    [MESSAGE_FIRST_SUPER_MISSILE_TANK] = sSpanishText_Message_FirstSuperMissileTank,
+    [MESSAGE_POWER_BOMB_TANK_ACQUIRED] = sSpanishText_Message_PowerBombTankAcquired,
+    [MESSAGE_FIRST_POWER_BOMB_TANK] = sSpanishText_Message_FirstPowerBombTank,
+    [MESSAGE_LONG_BEAM] = sSpanishText_Message_LongBeam,
+    [MESSAGE_CHARGE_BEAM] = sSpanishText_Message_ChargeBeam,
+    [MESSAGE_ICE_BEAM] = sSpanishText_Message_IceBeam,
+    [MESSAGE_WAVE_BEAM] = sSpanishText_Message_WaveBeam,
+    [MESSAGE_UKNOWN_ITEM_PLASMA] = sSpanishText_Message_UnknownItemPlasma,
+    [MESSAGE_BOMB] = sSpanishText_Message_Bomb,
+    [MESSAGE_VARIA_SUIT] = sSpanishText_Message_VariaSuit,
+    [MESSAGE_UNKNOWN_ITEM_GRAVITY] = sSpanishText_Message_UnknownItemGravity,
+    [MESSAGE_MORPH_BALL] = sSpanishText_Message_MorphBall,
+    [MESSAGE_SPEED_BOOSTER] = sSpanishText_Message_SpeedBooster,
+    [MESSAGE_HIGH_JUMP] = sSpanishText_Message_HighJump,
+    [MESSAGE_SCREW_ATTACK] = sSpanishText_Message_ScrewAttack,
+    [MESSAGE_UNKNOWN_ITEM_SPACE_JUMP] = sSpanishText_Message_UnknownItemSpaceJump,
+    [MESSAGE_POWER_GRIP] = sSpanishText_Message_PowerGrip,
+    [MESSAGE_SAVE_PROMPT] = sSpanishText_Message_SavePrompt,
+    [MESSAGE_SAVE_COMPLETE] = sSpanishText_Message_SaveComplete,
+    [MESSAGE_WEAPON_RESUPPLY_COMPLETE] = sSpanishText_Message_WeaponResupplyComplete,
+    [MESSAGE_ENERGY_TANK_RECHARGE_COMPLETE] = sSpanishText_Message_EnergyTankRechargeComplete,
+    [MESSAGE_WEAPONS_AND_ENERGY_RESTORED] = sSpanishText_Message_WeaponsAndEnergyRestored,
+    [MESSAGE_BRINSTAR_MAP_ACQUIRED] = sSpanishText_Message_BrinstarMap,
+    [MESSAGE_KRAID_MAP_ACQUIRED] = sSpanishText_Message_KraidMap,
+    [MESSAGE_NORFAIR_MAP_ACQUIRED] = sSpanishText_Message_NorfairMap,
+    [MESSAGE_RIDLEY_MAP_ACQUIRED] = sSpanishText_Message_RidleyMap,
+    [MESSAGE_MOTHER_SHIP_MAP_ACQUIRED] = sSpanishText_Message_MotherShipMap,
+    [MESSAGE_FULLY_POWERED_SUIT] = sSpanishText_Message_FullyPoweredSuit,
+    [MESSAGE_ZEBES_ESCAPE] = sSpanishText_Message_ZebesEscape,
+    [MESSAGE_CHOZODIA_ESCAPE] = sSpanishText_Message_ChozodiaEscape,
+    [MESSAGE_ENEMY_LOCATION_ABNORMAL] = sSpanishText_Message_EnemyLocationAbnormal,
+    [MESSAGE_ACTIVATE_EASY_SLEEP] = sSpanishText_Message_ActivateEasySleep,
+    [MESSAGE_PRESS_SELECT_L_AND_R] = sSpanishText_Message_PressSelectLAndR,
+    [MESSAGE_EASY_SLEEP_PROMPT] = sSpanishText_Message_EasySleepPrompt,
+};
+
+const u16 sSpanishText_Location_Brinstar[] = INCTEXT("{GAP(86)}BRINSTAR");
+const u16 sSpanishText_Location_Kraid[] = INCTEXT("{GAP(96)}KRAID");
+const u16 sSpanishText_Location_Norfair[] = INCTEXT("{GAP(90)}NORFAIR");
+const u16 sSpanishText_Location_Ridley[] = INCTEXT("{GAP(93)}RIDLEY");
+const u16 sSpanishText_Location_Tourian[] = INCTEXT("{GAP(90)}TOURIAN");
+const u16 sSpanishText_Location_Crateria[] = INCTEXT("{GAP(87)}CRATERIA");
+const u16 sSpanishText_Location_Chozodia[] = INCTEXT("{GAP(87)}CHOZODIA");
+const u16 sSpanishText_Location_Mothership[] = INCTEXT("{GAP(56)}NAVE NODRIZA PIRATA");
+const u16 sSpanishText_Location_PlanetZebes[] = INCTEXT("{GAP(72)}PLANETA ZEBES");
+const u16 sSpanishText_Location_SaveRoom[] = INCTEXT("{GAP(52)}ESTACIÓN DE GUARDADO");
+const u16 sSpanishText_Location_ResearchRoom[] = INCTEXT("{GAP(50)}SALA DE INVESTIGACIÓN");
+const u16 sSpanishText_Location_MapRoom[] = INCTEXT("{GAP(72)}SALA DE MAPAS");
+const u16 sSpanishText_Location_ChozoRuins[] = INCTEXT("{GAP(76)}RUINAS CHOZO");
+const u16 sSpanishText_Location_Starship[] = INCTEXT("{GAP(87)}STARSHIP");
+const u16 sSpanishText_Location_Unused7[] = INCTEXT("{GAP(76)}CONTROL SHIP");
+const u16 sSpanishText_Location_Unused8[] = INCTEXT("{GAP(75)}UNUSED OBJ 8");
+const u16 sSpanishText_Location_Unused9[] = INCTEXT("{GAP(75)}UNUSED OBJ 9");
+const u16 sSpanishText_Location_Unused10[] = INCTEXT("{GAP(72)}UNUSED OBJ 10");
+const u16 sSpanishText_Location_Unused11[] = INCTEXT("{GAP(74)}UNUSED OBJ 11");
+const u16 sSpanishText_Location_Unused12[] = INCTEXT("{GAP(72)}UNUSED OBJ 12");
+const u16 sSpanishText_Location_Unused13[] = INCTEXT("{GAP(72)}UNUSED OBJ 13");
+const u16 sSpanishText_Location_Unused14[] = INCTEXT("{GAP(72)}UNUSED OBJ 14");
+const u16 sSpanishText_Location_Unused15[] = INCTEXT("{GAP(72)}UNUSED OBJ 15");
+const u16 sSpanishText_Location_Unused16[] = INCTEXT("{GAP(72)}UNUSED OBJ 16");
+const u16 sSpanishText_Location_Unused17[] = INCTEXT("{GAP(72)}UNUSED OBJ 17");
+const u16 sSpanishText_Location_Unused18[] = INCTEXT("{GAP(72)}UNUSED OBJ 18");
+
+static const u16* sSpanishTextPointers_Location[] = {
+    [LT_BRINSTAR] = sSpanishText_Location_Brinstar,
+    [LT_KRAID] = sSpanishText_Location_Kraid,
+    [LT_NORFAIR] = sSpanishText_Location_Norfair,
+    [LT_RIDLEY] = sSpanishText_Location_Ridley,
+    [LT_TOURIAN] = sSpanishText_Location_Tourian,
+    [LT_CRATERIA] = sSpanishText_Location_Crateria,
+    [LT_CHOZODIA] = sSpanishText_Location_Chozodia,
+    [LT_MOTHERSHIP] = sSpanishText_Location_Mothership,
+    [LT_PLANET_ZEBES] = sSpanishText_Location_PlanetZebes,
+    [LT_SAVE_ROOM] = sSpanishText_Location_SaveRoom,
+    [LT_RESEARCH_ROOM] = sSpanishText_Location_ResearchRoom,
+    [LT_MAP_ROOM] = sSpanishText_Location_MapRoom,
+    [LT_CHOZO_RUINS] = sSpanishText_Location_ChozoRuins,
+    [LT_STARSHIP] = sSpanishText_Location_Starship,
+    [LT_UNUSED_7] = sSpanishText_Location_Unused7,
+    [LT_UNUSED_8] = sSpanishText_Location_Unused8,
+    [LT_UNUSED_9] = sSpanishText_Location_Unused9,
+    [LT_UNUSED_10] = sSpanishText_Location_Unused10,
+    [LT_UNUSED_11] = sSpanishText_Location_Unused11,
+    [LT_UNUSED_12] = sSpanishText_Location_Unused12,
+    [LT_UNUSED_13] = sSpanishText_Location_Unused13,
+    [LT_UNUSED_14] = sSpanishText_Location_Unused14,
+    [LT_UNUSED_15] = sSpanishText_Location_Unused15,
+    [LT_UNUSED_16] = sSpanishText_Location_Unused16,
+    [LT_UNUSED_17] = sSpanishText_Location_Unused17,
+    [LT_UNUSED_18] = sSpanishText_Location_Unused18,
+};
+
+#endif // REGION_EU
+
 const u16** sLocationTextPointers[LANGUAGE_END] = {
     [LANGUAGE_JAPANESE] = sJapaneseTextPointers_Location,
     [LANGUAGE_HIRAGANA] = sHiraganaTextPointers_Location,
     [LANGUAGE_ENGLISH] = sEnglishTextPointers_Location,
+    #ifdef REGION_EU
+    [LANGUAGE_GERMAN] = sGermanTextPointers_Location,
+    [LANGUAGE_FRENCH] = sFrenchTextPointers_Location,
+    [LANGUAGE_ITALIAN] = sItalianTextPointers_Location,
+    [LANGUAGE_SPANISH] = sSpanishTextPointers_Location
+    #else // !REGION_EU
     [LANGUAGE_GERMAN] = sEnglishTextPointers_Location,
     [LANGUAGE_FRENCH] = sEnglishTextPointers_Location,
     [LANGUAGE_ITALIAN] = sEnglishTextPointers_Location,
     [LANGUAGE_SPANISH] = sEnglishTextPointers_Location
+    #endif // REGION_EU
 };
 
 const u16** sMessageTextPointers[LANGUAGE_END] = {
     [LANGUAGE_JAPANESE] = sJapaneseTextPointers_Message,
     [LANGUAGE_HIRAGANA] = sHiraganaTextPointers_Message,
     [LANGUAGE_ENGLISH] = sEnglishTextPointers_Message,
+    #ifdef REGION_EU
+    [LANGUAGE_GERMAN] = sGermanTextPointers_Message,
+    [LANGUAGE_FRENCH] = sFrenchTextPointers_Message,
+    [LANGUAGE_ITALIAN] = sItalianTextPointers_Message,
+    [LANGUAGE_SPANISH] = sSpanishTextPointers_Message
+    #else // !REGION_EU
     [LANGUAGE_GERMAN] = sEnglishTextPointers_Message,
     [LANGUAGE_FRENCH] = sEnglishTextPointers_Message,
     [LANGUAGE_ITALIAN] = sEnglishTextPointers_Message,
     [LANGUAGE_SPANISH] = sEnglishTextPointers_Message
+    #endif // REGION_EU
 };
 
 const u16** sFileScreenTextPointers[LANGUAGE_END] = {
     [LANGUAGE_JAPANESE] = sJapaneseTextPointers_FileScreen,
     [LANGUAGE_HIRAGANA] = sHiraganaTextPointers_FileScreen,
     [LANGUAGE_ENGLISH] = sEnglishTextPointers_FileScreen,
+    #ifdef REGION_EU
+    [LANGUAGE_GERMAN] = sGermanTextPointers_FileScreen,
+    [LANGUAGE_FRENCH] = sFrenchTextPointers_FileScreen,
+    [LANGUAGE_ITALIAN] = sItalianTextPointers_FileScreen,
+    [LANGUAGE_SPANISH] = sSpanishTextPointers_FileScreen
+    #else // !REGION_EU
     [LANGUAGE_GERMAN] = sEnglishTextPointers_FileScreen,
     [LANGUAGE_FRENCH] = sEnglishTextPointers_FileScreen,
     [LANGUAGE_ITALIAN] = sEnglishTextPointers_FileScreen,
     [LANGUAGE_SPANISH] = sEnglishTextPointers_FileScreen
+    #endif // REGION_EU
 };
 
 const u16 sAlign_0 = 0; // File alignment
@@ -527,7 +1178,7 @@ const u16 sJapaneseText_FileScreen_EraseAllReformat[] = INCTEXT("すべての「
 const u16 sJapaneseText_FileScreen_EraseAll[] = INCTEXT("すべての「サムスデータ」を\nしょうきょしてもよろしいですか？");
 const u16 sJapaneseText_FileScreen_ContinueNew[] = INCTEXT("つづきから\nはじめから");
 const u16 sJapaneseText_FileScreen_ContinueNewTimeAttack[] = INCTEXT("つづきから\nはじめから\nタイムアタックモードではじめから");
-const u16 sJapaneseText_FileScreen_MessageOption[] = INCTEXT("メッセージは？\n　オトナむき (漠字あり)\n　コドモむき (ひらがな)");
+const u16 sJapaneseText_FileScreen_MessageOption[] = INCTEXT("メッセージは？\n　オトナむき (漢字あり)\n　コドモむき (ひらがな)");
 const u16 sJapaneseText_FileScreen_Difficulty[] = INCTEXT("ゲームレベル\n　EASY　　　[やさしい]\n　NORMAL{GAP(2)}[ふつう]");
 const u16 sJapaneseText_FileScreen_DifficultyHard[] = INCTEXT("ゲームレベル\n　EASY　　　[やさしい]\n　NORMAL{GAP(2)}[ふつう]\n　HARD　　{GAP(5)}[むずかしい]");
 const u16 sJapaneseText_FileScreen_EraseFileConfirm[] = INCTEXT("これまでのセーブデータは　きえて\nしまいます。よろしいですか？\n(   はきえません)\n　　　　はい     いいえ");
@@ -665,7 +1316,7 @@ const u16 sHiraganaText_FileScreen_EraseAllReformat[] = INCTEXT("すべての「
 const u16 sHiraganaText_FileScreen_EraseAll[] = INCTEXT("すべての「サムスデータ」を\nしょうきょしてもよろしいですか？");
 const u16 sHiraganaText_FileScreen_ContinueNew[] = INCTEXT("つづきから\nはじめから");
 const u16 sHiraganaText_FileScreen_ContinueNewTimeAttack[] = INCTEXT("つづきから\nはじめから\nタイムアタックモードではじめから");
-const u16 sHiraganaText_FileScreen_MessageOption[] = INCTEXT("メッセージは？\n　オトナむき (漠字あり)\n　コドモむき (ひらがな)");
+const u16 sHiraganaText_FileScreen_MessageOption[] = INCTEXT("メッセージは？\n　オトナむき (漢字あり)\n　コドモむき (ひらがな)");
 const u16 sHiraganaText_FileScreen_Difficulty[] = INCTEXT("ゲームレベル\n　EASY　　　[やさしい]\n　NORMAL{GAP(2)}[ふつう]");
 const u16 sHiraganaText_FileScreen_DifficultyHard[] = INCTEXT("ゲームレベル\n　EASY　　　[やさしい]\n　NORMAL{GAP(2)}[ふつう]\n　HARD　　{GAP(5)}[むずかしい]");
 const u16 sHiraganaText_FileScreen_EraseFileConfirm[] = INCTEXT("これまでのセーブデータは　きえて\nしまいます。よろしいですか？\n(   はきえません)\n　　　　はい     いいえ");
@@ -771,12 +1422,22 @@ const u16* sEnglishTextPointers_Description[DESCRIPTION_TEXT_COUNT] = {
 
 const u16 sAlign_2 = 0;
 
+#ifdef REGION_EU
+// EU gap sizes are different
+const u16 sEnglishText_Story_PlanetZebes[] = INCTEXT("{GAP(8)}Planet Zebes... I called this place home\n{GAP(8)}once, in peaceful times, long before evil\n{GAP(8)}haunted the caverns below. Now, I shall\n{GAP(8)}finally tell the tale of my first battle\n{GAP(8)}here... My so-called Zero Mission.\n{GAP(138)}-Samus Aran-");
+const u16 sEnglishText_Story_TheTiming[] = INCTEXT("The timing of my escape couldn't have\nbeen worse. I was attacked by Space\nPirates and left nearly defenseless,\nstripped of my Power Suit. All I had for\nprotection was my rather useless\nemergency pistol. Infiltrating the Space\nPirate Mother Ship so armed may have\nbeen foolish, but I had no choice...");
+const u16 sEnglishText_Story_CouldISurvive[] = INCTEXT("Could I survive long enough to escape？");
+const u16 sEnglishText_Story_Emergency[] = INCTEXT("{GAP(73)}Emergency Order");
+const u16 sEnglishText_Story_Exterminate[] = INCTEXT("{GAP(34)}Exterminate all Metroid organisms\n{GAP(69)}on Planet Zebes...");
+const u16 sEnglishText_Story_Defeat[] = INCTEXT("{GAP(27)}And defeat the mechanical life-form,\n{GAP(80)}Mother Brain.");
+#else // !REGION_EU
 const u16 sEnglishText_Story_PlanetZebes[] = INCTEXT("Planet Zebes... I called this place home\nonce, in peaceful times, long before evil\nhaunted the caverns below. Now, I shall\nfinally tell the tale of my first battle\nhere... My so-called Zero Mission.\n                       -Samus Aran-");
 const u16 sEnglishText_Story_TheTiming[] = INCTEXT("The timing of my escape couldn't have\nbeen worse. I was attacked by Space\nPirates and left nearly defenseless,\nstripped of my Power Suit. All I had for\nprotection was my rather useless\nemergency pistol. Infiltrating the Space\nPirate Mother Ship so armed may have\nbeen foolish, but I had no choice...");
 const u16 sEnglishText_Story_CouldISurvive[] = INCTEXT("Could I survive long enough to escape？");
 const u16 sEnglishText_Story_Emergency[] = INCTEXT("Emergency Order");
 const u16 sEnglishText_Story_Exterminate[] = INCTEXT("Exterminate all Metroid organisms\non Planet Zebes...");
 const u16 sEnglishText_Story_Defeat[] = INCTEXT("And defeat the mechanical life-form,\nMother Brain.");
+#endif // REGION_EU
 
 const u16* sEnglishTextPointers_Story[STORY_TEXT_COUNT] = {
     [STORY_TEXT_PLANET_ZEBES] = sEnglishText_Story_PlanetZebes,
@@ -790,9 +1451,17 @@ const u16* sEnglishTextPointers_Story[STORY_TEXT_COUNT] = {
 const u16 sEnglishText_FileScreen_StartGame[] = INCTEXT("Start Game\nStart Game (Link)");
 const u16 sEnglishText_FileScreen_CopySourceChoose[] = INCTEXT("Choose a data file\nto copy.");
 const u16 sEnglishText_FileScreen_CopyDestinationChoose[] = INCTEXT("Choose a file to copy\nthe data to.");
+#ifdef REGION_EU
+const u16 sEnglishText_FileScreen_CopyConfirm[] = INCTEXT("OK to copy over\nthis data？\n{GAP(30)}Yes{GAP(24)}No");
+#else // !REGION_EU
 const u16 sEnglishText_FileScreen_CopyConfirm[] = INCTEXT("OK to copy over\nthis data？\n　　　　　Yes　　 　No");
+#endif // REGION_EU
 const u16 sEnglishText_FileScreen_EraseChoose[] = INCTEXT("Choose a data file to\nerase.");
+#ifdef REGION_EU
+const u16 sEnglishText_FileScreen_EraseConfirm[] = INCTEXT("OK to erase this\ndata file？\n{GAP(30)}Yes{GAP(24)}No");
+#else // !REGION_EU
 const u16 sEnglishText_FileScreen_EraseConfirm[] = INCTEXT("OK to erase this\ndata file？\n　　　　　Yes　　 　No");
+#endif // REGION_EU
 const u16 sEnglishText_FileScreen_FileACorruptRevert[] = INCTEXT("File A is corrupted.\nReverting to past data.");
 const u16 sEnglishText_FileScreen_FileBCorruptRevert[] = INCTEXT("File B is corrupted.\nReverting to past data.");
 const u16 sEnglishText_FileScreen_FileCCorruptRevert[] = INCTEXT("File C is corrupted.\nReverting to past data.");
@@ -806,7 +1475,11 @@ const u16 sEnglishText_FileScreen_ContinueNewTimeAttack[] = INCTEXT("Continue\nN
 const u16 sEnglishText_FileScreen_MessageOption[] = INCTEXT("Message Options\n  Kanji\n  Hiragana");
 const u16 sEnglishText_FileScreen_Difficulty[] = INCTEXT("Difficulty Setting\n  EASY\n  NORMAL");
 const u16 sEnglishText_FileScreen_DifficultyHard[] = INCTEXT("Difficulty Level\n  EASY\n  NORMAL\n  HARD");
+#ifdef REGION_EU
+const u16 sEnglishText_FileScreen_EraseFileConfirm[] = INCTEXT("OK to erase all saved\ndata？\n(　　　 will not be erased.)\n{GAP(24)}Yes{GAP(30)}No");
+#else // !REGION_EU
 const u16 sEnglishText_FileScreen_EraseFileConfirm[] = INCTEXT("OK to erase all saved\ndata？\n(   will not be erased.)\n　　　　Yes     No");
+#endif // REGION_EU
 const u16 sEnglishText_FileScreen_LinkingPleaseWait[] = INCTEXT("Linking...\nPlease wait a moment.");
 const u16 sEnglishText_FileScreen_UnableToDetectFusion[] = INCTEXT("Unable to detect a\nMetroid Fusion\nGame Pak.");
 const u16 sEnglishText_FileScreen_LinkingError[] = INCTEXT("Linking error.");
@@ -814,13 +1487,16 @@ const u16 sEnglishText_FileScreen_TurnOffConfirmLink[] = INCTEXT("Turn the syste
 const u16 sEnglishText_FileScreen_DoNotTurnPowerOff[] = INCTEXT("Do not turn the\nPOWER OFF.");
 const u16 sEnglishText_FileScreen_DataUploadComplete[] = INCTEXT("Data upload\ncomplete.");
 const u16 sEnglishText_FileScreen_LinkComplete[] = INCTEXT("Link complete. You may turn POWER OFF.");
-#ifdef REGION_US_BETA
+#if defined(REGION_EU)
+const u16 sEnglishText_FileScreen_BestTime[] = INCTEXT("{GAP(26)}Best Time");
+const u16 sEnglishText_FileScreen_BestTime100[] = INCTEXT("{GAP(11)}Best Time{hundred_percent}");
+#elif defined(REGION_US_BETA)
 const u16 sEnglishText_FileScreen_BestTime[] = INCTEXT("Best Time");
 const u16 sEnglishText_FileScreen_BestTime100[] = INCTEXT("Best Time (100%)");
-#else // !REGION_US_BETA
+#else // !(REGION_EU || REGION_US_BETA)
 const u16 sEnglishText_FileScreen_BestTime[] = INCTEXT("{GAP(23)}Best Time");
 const u16 sEnglishText_FileScreen_BestTime100[] = INCTEXT("{GAP(1)}Best Time (100%)");
-#endif // REGION_US_BETA
+#endif
 const u16 sEnglishText_FileScreen_IdPassword[] = INCTEXT("ID\nPassword");
 const u16 sEnglishText_FileScreen_CantCopyTimeAttack[] = INCTEXT("You can't copy\nTime Attack data.");
 const u16 sEnglishText_FileScreen_LinkingErrorTryAgain[] = INCTEXT("Linking error. Try again.");
@@ -870,7 +1546,571 @@ const u16* sEnglishTextPointers_FileScreen[FILE_SCREEN_TEXT_END] = {
     [FILE_SCREEN_TEXT_NES_METROID_UNLOCK] = sEnglishText_FileScreen_NesMetroidUnlock,
 };
 
-#ifdef REGION_US_BETA
+#if defined(REGION_EU)
+
+const u16 sAlign_3 = 0;
+
+const u16 sGermanText_Description_LongBeam[] = INCTEXT("Feuere mit diesem Beam weiter reichende Schüsse\nab. Drücke {L_button} + {B_button}, um diagonal zu feuern.");
+const u16 sGermanText_Description_ChargeBeam[] = INCTEXT("Halte {B_button} zum Aufladen. Zum Feuern loslassen.\nCharge Attack: Salto bei voller Aufladung.");
+const u16 sGermanText_Description_IceBeam[] = INCTEXT("Dieser Beam fixiert Gegner durch Einfrieren.\nAuf eingefrorenen Gegnern kannst du stehen.");
+const u16 sGermanText_Description_WaveBeam[] = INCTEXT("Dieser Beam aus Energiewellen kann feste\nObjekte durchdringen.");
+const u16 sGermanText_Description_PlasmaBeam[] = INCTEXT("Dieser kraftvolle Beam kann mehrere Gegner\ndurchdringen.");
+const u16 sGermanText_Description_Missiles[] = INCTEXT("Drücke {R_button} + {B_button} zum Abfeuern.\nÖffnet {COLOR(6)}rote Schleusen{COLOR(0)}.");
+const u16 sGermanText_Description_SuperMissiles[] = INCTEXT("Mit {Select_button} anlegen. Feuere mit {R_button} + {B_button}.\nÖffnet {COLOR(8)}grüne Schleusen{COLOR(0)}.");
+const u16 sGermanText_Description_Bombs[] = INCTEXT("Zum Legen {B_button} im Ball-Modus drücken.");
+const u16 sGermanText_Description_PowerBombs[] = INCTEXT("Mit {R_button} + {B_button} im Ball-Modus legen.\nÖffnet {COLOR(5)}gelbe Schleusen{COLOR(0)}.");
+const u16 sGermanText_Description_VariaSuit[] = INCTEXT("Reduziert durch Gegner verursachten Schaden.\nSchützt wirksam vor Säure und Hitze.");
+const u16 sGermanText_Description_GravitySuit[] = INCTEXT("Verbesserte Abschirmung gegenüber Angriffen.\nGleicht Masseträgheit in Wasser und Lava aus.");
+const u16 sGermanText_Description_MorphBall[] = INCTEXT("Zweimal {Down_button} für Ball-Modus drücken, um Zugang\nzu engen Schächten zu erhalten.");
+const u16 sGermanText_Description_PowerGrip[] = INCTEXT("Erlaubt das Festhalten und Hängen an\n{COLOR(5)}Vorsprüngen und Kanten{COLOR(0)}.");
+const u16 sGermanText_Description_Speedbooster[] = INCTEXT("Laufe, bis ein Tempo-Schub einsetzt, der\nbestimmte Blöcke sowie Gegner zerstören kann.");
+const u16 sGermanText_Description_HighJump[] = INCTEXT("Vergrößert maximale Sprunghöhe.\nErmöglicht Sprung mit Morph Ball.");
+const u16 sGermanText_Description_ScrewAttack[] = INCTEXT("Verletze Gegner, indem du einen Salto-Sprung\nausführst.");
+const u16 sGermanText_Description_SpaceJump[] = INCTEXT("Ermöglicht, in der Luft weitere Saltos zu\nschlagen. Dazu beim Salto erneut {A_button} drücken.");
+const u16 sGermanText_Description_UnknownItem[] = INCTEXT("{COLOR(6)}Analyse ergebnislos.{COLOR(0)}\nObjekt mit aktuellem Anzug inkompatibel.");
+const u16 sGermanText_Description_Pistol[] = INCTEXT("Eine Handlaserwaffe mit {COLOR(5)}Aufladeautomatik{COLOR(0)}.\n{COLOR(6)}Betäube{COLOR(0)} Feinde mit {COLOR(5)}aufgeladenen Schüssen{COLOR(0)}.");
+
+const u16* sGermanTextPointers_Description[] = {
+    [DESCRIPTION_TEXT_LONG_BEAM] = sGermanText_Description_LongBeam,
+    [DESCRIPTION_TEXT_CHARGE_BEAM] = sGermanText_Description_ChargeBeam,
+    [DESCRIPTION_TEXT_ICE_BEAM] = sGermanText_Description_IceBeam,
+    [DESCRIPTION_TEXT_WAVE_BEAM] = sGermanText_Description_WaveBeam,
+    [DESCRIPTION_TEXT_PLASMA_BEAM] = sGermanText_Description_PlasmaBeam,
+    [DESCRIPTION_TEXT_MISSILES] = sGermanText_Description_Missiles,
+    [DESCRIPTION_TEXT_SUPER_MISSILES] = sGermanText_Description_SuperMissiles,
+    [DESCRIPTION_TEXT_BOMBS] = sGermanText_Description_Bombs,
+    [DESCRIPTION_TEXT_POWER_BOMBS] = sGermanText_Description_PowerBombs,
+    [DESCRIPTION_TEXT_VARIA_SUIT] = sGermanText_Description_VariaSuit,
+    [DESCRIPTION_TEXT_GRAVITY_SUIT] = sGermanText_Description_GravitySuit,
+    [DESCRIPTION_TEXT_MORPH_BALL] = sGermanText_Description_MorphBall,
+    [DESCRIPTION_TEXT_POWER_GRIP] = sGermanText_Description_PowerGrip,
+    [DESCRIPTION_TEXT_SPEEDBOOSTER] = sGermanText_Description_Speedbooster,
+    [DESCRIPTION_TEXT_HIGH_JUMP] = sGermanText_Description_HighJump,
+    [DESCRIPTION_TEXT_SCREW_ATTACK] = sGermanText_Description_ScrewAttack,
+    [DESCRIPTION_TEXT_SPACE_JUMP] = sGermanText_Description_SpaceJump,
+    [DESCRIPTION_TEXT_UNKNOWN_ITEM] = sGermanText_Description_UnknownItem,
+    [DESCRIPTION_TEXT_PISTOL] = sGermanText_Description_Pistol,
+};
+
+const u16 sAlign_4 = 0;
+
+const u16 sGermanText_Story_PlanetZebes[] = INCTEXT("Der Planet Zebes... Einst, in friedvolleren\nZeiten, war er meine Heimat -- lange bevor\ndas Böse die Tunnelsysteme heimsuchte.\nNun endlich werde ich die Geschichte meiner\nersten Schlacht erzählen, die hier stattfand...\nMeine Zero Mission.\n{GAP(138)}-Samus Aran-");
+const u16 sGermanText_Story_TheTiming[] = INCTEXT("Meine Flucht ließ mich wehrlos zurück,\nich verlor meinen Power Suit. Zu meinem\nSchutz blieb mir lediglich meine eher nutzlose\nNotfall-Pistole. Es mag wahnsinnig erscheinen,\nmit dieser Bewaffnung in das Mutterschiff der\nWeltraumpiraten einzudringen.\nDoch ich hatte keine Wahl...");
+const u16 sGermanText_Story_CouldISurvive[] = INCTEXT("Würde ich lange genug überleben,\num entkommen zu können？");
+const u16 sGermanText_Story_Emergency[] = INCTEXT("{GAP(72)}NOTFALL-ORDER");
+const u16 sGermanText_Story_Exterminate[] = INCTEXT("{GAP(28)}Löschen Sie alle Metroid-Organismen\n{GAP(42)}auf dem Planeten Zebes aus...");
+const u16 sGermanText_Story_Defeat[] = INCTEXT("{GAP(46)}Vernichten Sie außerdem den\n{GAP(17)}biomechanischen Organismus Mother Brain.");
+
+const u16* sGermanTextPointers_Story[] = {
+    [STORY_TEXT_PLANET_ZEBES] = sGermanText_Story_PlanetZebes,
+    [STORY_TEXT_THE_TIMING] = sGermanText_Story_TheTiming,
+    [STORY_TEXT_COULD_I_SURVIVE] = sGermanText_Story_CouldISurvive,
+    [STORY_TEXT_EMERGENCY] = sGermanText_Story_Emergency,
+    [STORY_TEXT_EXTERMINATE] = sGermanText_Story_Exterminate,
+    [STORY_TEXT_DEFEAT] = sGermanText_Story_Defeat,
+};
+
+const u16 sAlign_5 = 0;
+
+const u16 sGermanText_FileScreen_StartGame[] = INCTEXT("Spiel starten\nSpiel starten (Link)");
+const u16 sGermanText_FileScreen_CopySourceChoose[] = INCTEXT("Bitte eine Datei zum\nKopieren auswählen.");
+const u16 sGermanText_FileScreen_CopyDestinationChoose[] = INCTEXT("Diese Datei wohin\nkopieren？");
+const u16 sGermanText_FileScreen_CopyConfirm[] = INCTEXT("Bestehende Datei\nwirklich überschreiben？\n{GAP(30)}Ja{GAP(30)}Nein");
+const u16 sGermanText_FileScreen_EraseChoose[] = INCTEXT("Bitte eine Datei zum\nLöschen auswählen.");
+const u16 sGermanText_FileScreen_EraseConfirm[] = INCTEXT("Diese Datei wirklich\nlöschen？\n{GAP(30)}Ja{GAP(30)}Nein");
+const u16 sGermanText_FileScreen_FileACorruptRevert[] = INCTEXT("Datei A ist fehlerhaft.\nVorherige Daten werden\nverwendet.");
+const u16 sGermanText_FileScreen_FileBCorruptRevert[] = INCTEXT("Datei B ist fehlerhaft.\nVorherige Daten werden\nverwendet.");
+const u16 sGermanText_FileScreen_FileCCorruptRevert[] = INCTEXT("Datei C ist fehlerhaft.\nVorherige Daten werden\nverwendet.");
+const u16 sGermanText_FileScreen_FileACorruptErase[] = INCTEXT("Datei A ist beschädigt.\nSie wird gelöscht...");
+const u16 sGermanText_FileScreen_FileBCorruptErase[] = INCTEXT("Datei B ist beschädigt.\nSie wird gelöscht...");
+const u16 sGermanText_FileScreen_FileCCorruptErase[] = INCTEXT("Datei C ist beschädigt.\nSie wird gelöscht...");
+const u16 sGermanText_FileScreen_EraseAllReformat[] = INCTEXT("Wirklich alle Spielstände löschen\nund Dateien neu formatieren？");
+const u16 sGermanText_FileScreen_EraseAll[] = INCTEXT("Wirklich alle Speicherdaten\nlöschen？");
+const u16 sGermanText_FileScreen_ContinueNew[] = INCTEXT("Fortsetzen\nNeu beginnen");
+const u16 sGermanText_FileScreen_ContinueNewTimeAttack[] = INCTEXT("Fortsetzen\nNeu beginnen\nTime Attack beginnen");
+const u16 sGermanText_FileScreen_MessageOption[] = INCTEXT("Message Options\n  Kanji\n  Hiragana");
+const u16 sGermanText_FileScreen_Difficulty[] = INCTEXT("Schwierigkeitseinstellung\n  LEICHT\n  NORMAL");
+const u16 sGermanText_FileScreen_DifficultyHard[] = INCTEXT("Schwierigkeitseinstellung\n  LEICHT\n  NORMAL\n  SCHWER");
+const u16 sGermanText_FileScreen_EraseFileConfirm[] = INCTEXT("Wirklich alle gespeicherten\nDaten löschen？\n(    　　　bleibt bestehen.)\n{GAP(24)}Ja{GAP(36)}Nein");
+const u16 sGermanText_FileScreen_LinkingPleaseWait[] = INCTEXT("Verbinde...\nBitte warten.");
+const u16 sGermanText_FileScreen_UnableToDetectFusion[] = INCTEXT("Kein Metroid Fusion-\nModul gefunden.");
+const u16 sGermanText_FileScreen_LinkingError[] = INCTEXT("Verbindungsfehler.");
+const u16 sGermanText_FileScreen_TurnOffConfirmLink[] = INCTEXT("System ausschalten und\nsicherstellen, dass das\nGame Link-Kabel\nkorrekt verbunden ist.");
+const u16 sGermanText_FileScreen_DoNotTurnPowerOff[] = INCTEXT("Bitte nicht\nausschalten!");
+const u16 sGermanText_FileScreen_DataUploadComplete[] = INCTEXT("Datenübertragung\nabgeschlossen.");
+const u16 sGermanText_FileScreen_LinkComplete[] = INCTEXT("Link beendet. Gerät kann\nnun ausgeschaltet werden.");
+const u16 sGermanText_FileScreen_BestTime[] = INCTEXT("{GAP(28)}Bestzeit");
+const u16 sGermanText_FileScreen_BestTime100[] = INCTEXT("{GAP(12)}Bestzeit {hundred_percent}");
+const u16 sGermanText_FileScreen_IdPassword[] = INCTEXT("ID\nPasswort");
+const u16 sGermanText_FileScreen_CantCopyTimeAttack[] = INCTEXT("Time Attack-Daten\nnicht kopierbar.");
+const u16 sGermanText_FileScreen_LinkingErrorTryAgain[] = INCTEXT("Verbindungsfehler. Erneut versuchen.");
+const u16 sGermanText_FileScreen_LinkingErrorCheckConnection[] = INCTEXT("Ein Verbindungsfehler\nist aufgetreten. Bitte\nVerbindung überprüfen\nund erneut versuchen.");
+const u16 sGermanText_FileScreen_GalleryUnlock[] = INCTEXT("{COLOR(5)}Galerie{COLOR(0)} ist nun unter\n{COLOR(6)}OPTIONEN{COLOR(0)} anwählbar.");
+const u16 sGermanText_FileScreen_TimeAttackRecordUnlock[] = INCTEXT("{COLOR(5)}Time Attack-Rekorde{COLOR(0)}\nsind nun unter\n{COLOR(6)}OPTIONEN{COLOR(0)} anwählbar.");
+const u16 sGermanText_FileScreen_SoundTestUnlock[] = INCTEXT("{COLOR(5)}Sound Test{COLOR(0)}\nist nun unter\n{COLOR(6)}OPTIONEN{COLOR(0)} anwählbar.");
+const u16 sGermanText_FileScreen_NesMetroidUnlock[] = INCTEXT("{COLOR(5)}Original Metroid{COLOR(0)}\nist nun unter\n{COLOR(6)}OPTIONEN{COLOR(0)} anwählbar.");
+
+const u16* sGermanTextPointers_FileScreen[] = {
+    [FILE_SCREEN_TEXT_START_GAME] = sGermanText_FileScreen_StartGame,
+    [FILE_SCREEN_TEXT_COPY_SOURCE_CHOOSE] = sGermanText_FileScreen_CopySourceChoose,
+    [FILE_SCREEN_TEXT_COPY_DESTINATION_CHOOSE] = sGermanText_FileScreen_CopyDestinationChoose,
+    [FILE_SCREEN_TEXT_COPY_CONFIRM] = sGermanText_FileScreen_CopyConfirm,
+    [FILE_SCREEN_TEXT_ERASE_CHOOSE] = sGermanText_FileScreen_EraseChoose,
+    [FILE_SCREEN_TEXT_ERASE_CONFIRM] = sGermanText_FileScreen_EraseConfirm,
+    [FILE_SCREEN_TEXT_FILE_A_CORRUPT_REVERT] = sGermanText_FileScreen_FileACorruptRevert,
+    [FILE_SCREEN_TEXT_FILE_B_CORRUPT_REVERT] = sGermanText_FileScreen_FileBCorruptRevert,
+    [FILE_SCREEN_TEXT_FILE_C_CORRUPT_REVERT] = sGermanText_FileScreen_FileCCorruptRevert,
+    [FILE_SCREEN_TEXT_FILE_A_CORRUPT_ERASE] = sGermanText_FileScreen_FileACorruptErase,
+    [FILE_SCREEN_TEXT_FILE_B_CORRUPT_ERASE] = sGermanText_FileScreen_FileBCorruptErase,
+    [FILE_SCREEN_TEXT_FILE_C_CORRUPT_ERASE] = sGermanText_FileScreen_FileCCorruptErase,
+    [FILE_SCREEN_TEXT_ERASE_ALL_REFORMAT] = sGermanText_FileScreen_EraseAllReformat,
+    [FILE_SCREEN_TEXT_ERASE_ALL] = sGermanText_FileScreen_EraseAll,
+    [FILE_SCREEN_TEXT_CONTINUE_NEW] = sGermanText_FileScreen_ContinueNew,
+    [FILE_SCREEN_TEXT_CONTINUE_NEW_TIME_ATTACK] = sGermanText_FileScreen_ContinueNewTimeAttack,
+    [FILE_SCREEN_TEXT_MESSAGE_OPTION] = sGermanText_FileScreen_MessageOption,
+    [FILE_SCREEN_TEXT_DIFFICULTY] = sGermanText_FileScreen_Difficulty,
+    [FILE_SCREEN_TEXT_DIFFICULTY_HARD] = sGermanText_FileScreen_DifficultyHard,
+    [FILE_SCREEN_TEXT_ERASE_FILE_CONFIRM] = sGermanText_FileScreen_EraseFileConfirm,
+    [FILE_SCREEN_TEXT_LINKING_PLEASE_WAIT] = sGermanText_FileScreen_LinkingPleaseWait,
+    [FILE_SCREEN_TEXT_UNABLE_TO_DETECT_FUSION] = sGermanText_FileScreen_UnableToDetectFusion,
+    [FILE_SCREEN_TEXT_LINKING_ERROR] = sGermanText_FileScreen_LinkingError,
+    [FILE_SCREEN_TEXT_TURN_OFF_CONFIRM_LINK] = sGermanText_FileScreen_TurnOffConfirmLink,
+    [FILE_SCREEN_TEXT_DO_NOT_TURN_POWER_OFF] = sGermanText_FileScreen_DoNotTurnPowerOff,
+    [FILE_SCREEN_TEXT_DATA_UPLOAD_COMPLETE] = sGermanText_FileScreen_DataUploadComplete,
+    [FILE_SCREEN_TEXT_LINK_COMPLETE] = sGermanText_FileScreen_LinkComplete,
+    [FILE_SCREEN_TEXT_BEST_TIME] = sGermanText_FileScreen_BestTime,
+    [FILE_SCREEN_TEXT_BEST_TIME_100] = sGermanText_FileScreen_BestTime100,
+    [FILE_SCREEN_TEXT_ID_PASSWORD] = sGermanText_FileScreen_IdPassword,
+    [FILE_SCREEN_TEXT_CANT_COPY_TIME_ATTACK] = sGermanText_FileScreen_CantCopyTimeAttack,
+    [FILE_SCREEN_TEXT_LINKING_ERROR_TRY_AGAIN] = sGermanText_FileScreen_LinkingErrorTryAgain,
+    [FILE_SCREEN_TEXT_LINKING_ERROR_CHECK_CONNECTION] = sGermanText_FileScreen_LinkingErrorCheckConnection,
+    [FILE_SCREEN_TEXT_GALLERY_UNLOCK] = sGermanText_FileScreen_GalleryUnlock,
+    [FILE_SCREEN_TEXT_TIME_ATTACK_RECORD_UNLOCK] = sGermanText_FileScreen_TimeAttackRecordUnlock,
+    [FILE_SCREEN_TEXT_SOUND_TEST_UNLOCK] = sGermanText_FileScreen_SoundTestUnlock,
+    [FILE_SCREEN_TEXT_NES_METROID_UNLOCK] = sGermanText_FileScreen_NesMetroidUnlock,
+};
+
+const u16 sFrenchText_Description_LongBeam[] = INCTEXT("Permet d'atteindre une cible éloignée.\nAppuie sur {L_button} + {B_button} pour tirer en biais.");
+const u16 sFrenchText_Description_ChargeBeam[] = INCTEXT("Charge en maintenant {B_button}. \nRelâche pour tirer.");
+const u16 sFrenchText_Description_IceBeam[] = INCTEXT("Ce rayon permet de geler certains ennemis.\nOn peut marcher sur un ennemi gelé.");
+const u16 sFrenchText_Description_WaveBeam[] = INCTEXT("Ce rayon, composé de vagues d'énergie,\npeut passer à travers un objet solide.");
+const u16 sFrenchText_Description_PlasmaBeam[] = INCTEXT("Ce rayon puissant peut traverser\nplusieurs ennemis.");
+const u16 sFrenchText_Description_Missiles[] = INCTEXT("Appuie sur {R_button} + {B_button} pour tirer.\nOuvre les {COLOR(6)}portes rouges{COLOR(0)}.");
+const u16 sFrenchText_Description_SuperMissiles[] = INCTEXT("Arme avec {Select_button}. Tire avec {R_button} + {B_button}.\nOuvre les {COLOR(8)}portes vertes{COLOR(0)}.");
+const u16 sFrenchText_Description_Bombs[] = INCTEXT("En Boule Morphing,\npose une bombe avec {B_button}.");
+const u16 sFrenchText_Description_PowerBombs[] = INCTEXT("En boule, appuie sur {R_button} + {B_button}.\nOuvre les {COLOR(5)}portes jaunes{COLOR(0)}.");
+const u16 sFrenchText_Description_VariaSuit[] = INCTEXT("Diminue les dégâts infligés par l'ennemi.\nProtège contre l'acide et la chaleur.");
+const u16 sFrenchText_Description_GravitySuit[] = INCTEXT("Diminue les dégâts infligés par l'ennemi.\nPermet d'aller dans l'eau et la lave.");
+const u16 sFrenchText_Description_MorphBall[] = INCTEXT("Appuie deux fois sur {Down_button} pour\nfranchir les passages étroits.");
+const u16 sFrenchText_Description_PowerGrip[] = INCTEXT("Permet d'agripper les {COLOR(5)}rebords{COLOR(0)}\n{COLOR(5)}et corniches{COLOR(0)}.");
+const u16 sFrenchText_Description_Speedbooster[] = INCTEXT("Cours pour activer l'accélérateur et\ncasser certains blocs.");
+const u16 sFrenchText_Description_HighJump[] = INCTEXT("Augmente la hauteur de saut maximum.\nPermet de sauter en Boule Morphing.");
+const u16 sFrenchText_Description_ScrewAttack[] = INCTEXT("Attaque l'ennemi en effectuant un salto.");
+const u16 sFrenchText_Description_SpaceJump[] = INCTEXT("Effectue des saltos en continu. Utilise\n{A_button} en l'air pour continuer à sauter.");
+const u16 sFrenchText_Description_UnknownItem[] = INCTEXT("{COLOR(6)}Analyse non concluante.{COLOR(0)}\nObjet incompatible.");
+const u16 sFrenchText_Description_Pistol[] = INCTEXT("Pistolet à {COLOR(5)}chargement automatique{COLOR(5)}.\n{COLOR(6)}Etourdis{COLOR(0)} l'ennemi avec un {COLOR(5)}tir chargé{COLOR(0)}.");
+
+const u16* sFrenchTextPointers_Description[] = {
+    [DESCRIPTION_TEXT_LONG_BEAM] = sFrenchText_Description_LongBeam,
+    [DESCRIPTION_TEXT_CHARGE_BEAM] = sFrenchText_Description_ChargeBeam,
+    [DESCRIPTION_TEXT_ICE_BEAM] = sFrenchText_Description_IceBeam,
+    [DESCRIPTION_TEXT_WAVE_BEAM] = sFrenchText_Description_WaveBeam,
+    [DESCRIPTION_TEXT_PLASMA_BEAM] = sFrenchText_Description_PlasmaBeam,
+    [DESCRIPTION_TEXT_MISSILES] = sFrenchText_Description_Missiles,
+    [DESCRIPTION_TEXT_SUPER_MISSILES] = sFrenchText_Description_SuperMissiles,
+    [DESCRIPTION_TEXT_BOMBS] = sFrenchText_Description_Bombs,
+    [DESCRIPTION_TEXT_POWER_BOMBS] = sFrenchText_Description_PowerBombs,
+    [DESCRIPTION_TEXT_VARIA_SUIT] = sFrenchText_Description_VariaSuit,
+    [DESCRIPTION_TEXT_GRAVITY_SUIT] = sFrenchText_Description_GravitySuit,
+    [DESCRIPTION_TEXT_MORPH_BALL] = sFrenchText_Description_MorphBall,
+    [DESCRIPTION_TEXT_POWER_GRIP] = sFrenchText_Description_PowerGrip,
+    [DESCRIPTION_TEXT_SPEEDBOOSTER] = sFrenchText_Description_Speedbooster,
+    [DESCRIPTION_TEXT_HIGH_JUMP] = sFrenchText_Description_HighJump,
+    [DESCRIPTION_TEXT_SCREW_ATTACK] = sFrenchText_Description_ScrewAttack,
+    [DESCRIPTION_TEXT_SPACE_JUMP] = sFrenchText_Description_SpaceJump,
+    [DESCRIPTION_TEXT_UNKNOWN_ITEM] = sFrenchText_Description_UnknownItem,
+    [DESCRIPTION_TEXT_PISTOL] = sFrenchText_Description_Pistol,
+};
+
+const u16 sAlign_6 = 0;
+
+const u16 sFrenchText_Story_PlanetZebes[] = INCTEXT("{GAP(8)}La Planète Zèbes... C'est ici que je\n{GAP(8)}vivais autrefois. Avant la guerre, bien\n{GAP(8)}avant que le mal ne hante les cavernes \n{GAP(8)}du dessous. C'est ici que j'ai livré ma\n{GAP(8)}première bataille. Ma Mission Zéro.\n{GAP(138)}-Samus Aran-");
+const u16 sFrenchText_Story_TheTiming[] = INCTEXT("Après ma fuite, j'étais sans défense...\nprivée de mon Costume de Puissance et\navec pour seule protection, un pistolet\nde secours. Infiltrer le Vaisseau-mère \ndes pirates ainsi armée était de la folie,\nmais je n'avais pas vraiment le choix...");
+const u16 sFrenchText_Story_CouldISurvive[] = INCTEXT("Vivrai-je assez longtemps pour m'enfuir？");
+const u16 sFrenchText_Story_Emergency[] = INCTEXT("{GAP(76)}Message urgent");
+const u16 sFrenchText_Story_Exterminate[] = INCTEXT("{GAP(38)}Exterminer tous les organismes \n{GAP(33)}Métroïdes sur la Planète Zèbes...");
+const u16 sFrenchText_Story_Defeat[] = INCTEXT("{GAP(24)}Et détruire la forme de vie mécanique,\n{GAP(64)}qu'est Mother Brain.");
+
+const u16* sFrenchTextPointers_Story[] = {
+    [STORY_TEXT_PLANET_ZEBES] = sFrenchText_Story_PlanetZebes,
+    [STORY_TEXT_THE_TIMING] = sFrenchText_Story_TheTiming,
+    [STORY_TEXT_COULD_I_SURVIVE] = sFrenchText_Story_CouldISurvive,
+    [STORY_TEXT_EMERGENCY] = sFrenchText_Story_Emergency,
+    [STORY_TEXT_EXTERMINATE] = sFrenchText_Story_Exterminate,
+    [STORY_TEXT_DEFEAT] = sFrenchText_Story_Defeat,
+};
+
+const u16 sAlign_7 = 0;
+
+const u16 sFrenchText_FileScreen_StartGame[] = INCTEXT("Début Jeu\nDébut Jeu (Connexion)");
+const u16 sFrenchText_FileScreen_CopySourceChoose[] = INCTEXT("Choisissez le fichier \nà copier.");
+const u16 sFrenchText_FileScreen_CopyDestinationChoose[] = INCTEXT("Choisissez un fichier\noù copier les données.");
+const u16 sFrenchText_FileScreen_CopyConfirm[] = INCTEXT("Ecraser le fichier\nexistant？\n{GAP(30)}Oui{GAP(27)}Non");
+const u16 sFrenchText_FileScreen_EraseChoose[] = INCTEXT("Choisissez le fichier à\neffacer.");
+const u16 sFrenchText_FileScreen_EraseConfirm[] = INCTEXT("Effacer ce fichier\nde sauvegarde？\n{GAP(30)}Oui{GAP(27)}Non");
+const u16 sFrenchText_FileScreen_FileACorruptRevert[] = INCTEXT("Fichier A corrompu.\nUtilisation du fichier\nprécédent.");
+const u16 sFrenchText_FileScreen_FileBCorruptRevert[] = INCTEXT("Fichier B corrompu.\nUtilisation du fichier\nprécédent.");
+const u16 sFrenchText_FileScreen_FileCCorruptRevert[] = INCTEXT("Fichier C corrompu.\nUtilisation du fichier\nprécédent.");
+const u16 sFrenchText_FileScreen_FileACorruptErase[] = INCTEXT("Fichier A corrompu.\nEffacement du\nfichier A en cours...");
+const u16 sFrenchText_FileScreen_FileBCorruptErase[] = INCTEXT("Fichier B corrompu.\nEffacement du\nfichier B en cours...");
+const u16 sFrenchText_FileScreen_FileCCorruptErase[] = INCTEXT("Fichier C corrompu.\nEffacement du\nfichier C en cours...");
+const u16 sFrenchText_FileScreen_EraseAllReformat[] = INCTEXT("Ok pour effacer toutes les données\net formater les fichiers de sauvegarde？");
+const u16 sFrenchText_FileScreen_EraseAll[] = INCTEXT("Effacer toutes les données \nde Samus？");
+const u16 sFrenchText_FileScreen_ContinueNew[] = INCTEXT("Continuer\nNouveau");
+const u16 sFrenchText_FileScreen_ContinueNewTimeAttack[] = INCTEXT("Continuer\nNouveau\nNouveau contre-la-montre");
+const u16 sFrenchText_FileScreen_MessageOption[] = INCTEXT("Options message \n  Kanji\n  Hiragana");
+const u16 sFrenchText_FileScreen_Difficulty[] = INCTEXT("Niveau de difficulté\n  FACILE\n  NORMAL");
+const u16 sFrenchText_FileScreen_DifficultyHard[] = INCTEXT("Niveau de difficulté\n FACILE\n NORMAL\n DIFFICILE");
+const u16 sFrenchText_FileScreen_EraseFileConfirm[] = INCTEXT("Effacer toutes les\ndonnées sauvegardées？\n(　　　ne sera pas effacé.)\n{GAP(24)}Oui{GAP(33)}Non");
+const u16 sFrenchText_FileScreen_LinkingPleaseWait[] = INCTEXT("Connexion en cours...\nVeuillez patienter.");
+const u16 sFrenchText_FileScreen_UnableToDetectFusion[] = INCTEXT("Aucune cartouche du\njeu Metroid Fusion\nn'a été détectée.");
+const u16 sFrenchText_FileScreen_LinkingError[] = INCTEXT("Erreur de connexion.");
+const u16 sFrenchText_FileScreen_TurnOffConfirmLink[] = INCTEXT("Eteindre la console et\nvérifier que le câble \nGame Link est \ncorrectement connecté.");
+const u16 sFrenchText_FileScreen_DoNotTurnPowerOff[] = INCTEXT("Ne PAS éteindre\nla console.");
+const u16 sFrenchText_FileScreen_DataUploadComplete[] = INCTEXT("Chargement des \ndonnées terminé.");
+const u16 sFrenchText_FileScreen_LinkComplete[] = INCTEXT("Connexion réussie. \nVous pouvez éteindre la console.");
+const u16 sFrenchText_FileScreen_BestTime[] = INCTEXT("{GAP(15)}Meilleur temps");
+const u16 sFrenchText_FileScreen_BestTime100[] = INCTEXT("{GAP(1)}Meilleur temps{hundred_percent}");
+const u16 sFrenchText_FileScreen_IdPassword[] = INCTEXT("Code\nMot de passe");
+const u16 sFrenchText_FileScreen_CantCopyTimeAttack[] = INCTEXT("Impossible de copier\nles données du mode\ncontre-la-montre.");
+const u16 sFrenchText_FileScreen_LinkingErrorTryAgain[] = INCTEXT("Erreur de connexion. Réessayez.");
+const u16 sFrenchText_FileScreen_LinkingErrorCheckConnection[] = INCTEXT("La connexion a \néchoué. Vérifiez les \nbranchements\net réessayez.");
+const u16 sFrenchText_FileScreen_GalleryUnlock[] = INCTEXT("{COLOR(5)}Galerie{COLOR(0)} \najoutée à l'écran des\n{COLOR(6)}OPTIONS{COLOR(0)}.");
+const u16 sFrenchText_FileScreen_TimeAttackRecordUnlock[] = INCTEXT("{COLOR(5)}Records du contre-\nla-montre{COLOR(0)} ajoutés à \nl'écran des {COLOR(6)}OPTIONS{COLOR(0)}.");
+const u16 sFrenchText_FileScreen_SoundTestUnlock[] = INCTEXT("{COLOR(5)}Test son{COLOR(0)} \najouté à l'écran des\n{COLOR(6)}OPTIONS{COLOR(0)}.");
+const u16 sFrenchText_FileScreen_NesMetroidUnlock[] = INCTEXT("{COLOR(5)}Jeu original de Metroid{COLOR(0)}\najouté à l'écran des\n{COLOR(6)}OPTIONS{COLOR(0)}.");
+
+const u16* sFrenchTextPointers_FileScreen[] = {
+    [FILE_SCREEN_TEXT_START_GAME] = sFrenchText_FileScreen_StartGame,
+    [FILE_SCREEN_TEXT_COPY_SOURCE_CHOOSE] = sFrenchText_FileScreen_CopySourceChoose,
+    [FILE_SCREEN_TEXT_COPY_DESTINATION_CHOOSE] = sFrenchText_FileScreen_CopyDestinationChoose,
+    [FILE_SCREEN_TEXT_COPY_CONFIRM] = sFrenchText_FileScreen_CopyConfirm,
+    [FILE_SCREEN_TEXT_ERASE_CHOOSE] = sFrenchText_FileScreen_EraseChoose,
+    [FILE_SCREEN_TEXT_ERASE_CONFIRM] = sFrenchText_FileScreen_EraseConfirm,
+    [FILE_SCREEN_TEXT_FILE_A_CORRUPT_REVERT] = sFrenchText_FileScreen_FileACorruptRevert,
+    [FILE_SCREEN_TEXT_FILE_B_CORRUPT_REVERT] = sFrenchText_FileScreen_FileBCorruptRevert,
+    [FILE_SCREEN_TEXT_FILE_C_CORRUPT_REVERT] = sFrenchText_FileScreen_FileCCorruptRevert,
+    [FILE_SCREEN_TEXT_FILE_A_CORRUPT_ERASE] = sFrenchText_FileScreen_FileACorruptErase,
+    [FILE_SCREEN_TEXT_FILE_B_CORRUPT_ERASE] = sFrenchText_FileScreen_FileBCorruptErase,
+    [FILE_SCREEN_TEXT_FILE_C_CORRUPT_ERASE] = sFrenchText_FileScreen_FileCCorruptErase,
+    [FILE_SCREEN_TEXT_ERASE_ALL_REFORMAT] = sFrenchText_FileScreen_EraseAllReformat,
+    [FILE_SCREEN_TEXT_ERASE_ALL] = sFrenchText_FileScreen_EraseAll,
+    [FILE_SCREEN_TEXT_CONTINUE_NEW] = sFrenchText_FileScreen_ContinueNew,
+    [FILE_SCREEN_TEXT_CONTINUE_NEW_TIME_ATTACK] = sFrenchText_FileScreen_ContinueNewTimeAttack,
+    [FILE_SCREEN_TEXT_MESSAGE_OPTION] = sFrenchText_FileScreen_MessageOption,
+    [FILE_SCREEN_TEXT_DIFFICULTY] = sFrenchText_FileScreen_Difficulty,
+    [FILE_SCREEN_TEXT_DIFFICULTY_HARD] = sFrenchText_FileScreen_DifficultyHard,
+    [FILE_SCREEN_TEXT_ERASE_FILE_CONFIRM] = sFrenchText_FileScreen_EraseFileConfirm,
+    [FILE_SCREEN_TEXT_LINKING_PLEASE_WAIT] = sFrenchText_FileScreen_LinkingPleaseWait,
+    [FILE_SCREEN_TEXT_UNABLE_TO_DETECT_FUSION] = sFrenchText_FileScreen_UnableToDetectFusion,
+    [FILE_SCREEN_TEXT_LINKING_ERROR] = sFrenchText_FileScreen_LinkingError,
+    [FILE_SCREEN_TEXT_TURN_OFF_CONFIRM_LINK] = sFrenchText_FileScreen_TurnOffConfirmLink,
+    [FILE_SCREEN_TEXT_DO_NOT_TURN_POWER_OFF] = sFrenchText_FileScreen_DoNotTurnPowerOff,
+    [FILE_SCREEN_TEXT_DATA_UPLOAD_COMPLETE] = sFrenchText_FileScreen_DataUploadComplete,
+    [FILE_SCREEN_TEXT_LINK_COMPLETE] = sFrenchText_FileScreen_LinkComplete,
+    [FILE_SCREEN_TEXT_BEST_TIME] = sFrenchText_FileScreen_BestTime,
+    [FILE_SCREEN_TEXT_BEST_TIME_100] = sFrenchText_FileScreen_BestTime100,
+    [FILE_SCREEN_TEXT_ID_PASSWORD] = sFrenchText_FileScreen_IdPassword,
+    [FILE_SCREEN_TEXT_CANT_COPY_TIME_ATTACK] = sFrenchText_FileScreen_CantCopyTimeAttack,
+    [FILE_SCREEN_TEXT_LINKING_ERROR_TRY_AGAIN] = sFrenchText_FileScreen_LinkingErrorTryAgain,
+    [FILE_SCREEN_TEXT_LINKING_ERROR_CHECK_CONNECTION] = sFrenchText_FileScreen_LinkingErrorCheckConnection,
+    [FILE_SCREEN_TEXT_GALLERY_UNLOCK] = sFrenchText_FileScreen_GalleryUnlock,
+    [FILE_SCREEN_TEXT_TIME_ATTACK_RECORD_UNLOCK] = sFrenchText_FileScreen_TimeAttackRecordUnlock,
+    [FILE_SCREEN_TEXT_SOUND_TEST_UNLOCK] = sFrenchText_FileScreen_SoundTestUnlock,
+    [FILE_SCREEN_TEXT_NES_METROID_UNLOCK] = sFrenchText_FileScreen_NesMetroidUnlock,
+};
+
+const u16 sAlign_8 = 0;
+
+const u16 sItalianText_Description_LongBeam[] = INCTEXT("Per colpire i nemici lontani. Spara\nin diagonale premendo {L_button} + {B_button}.");
+const u16 sItalianText_Description_ChargeBeam[] = INCTEXT("Tieni premuto {B_button} per caricare, poi rilascia.\nAttacco ricarica: salta a carica completa.");
+const u16 sItalianText_Description_IceBeam[] = INCTEXT("Questo raggio può congelare alcuni\nnemici sui quali potrai poi salire.");
+const u16 sItalianText_Description_WaveBeam[] = INCTEXT("Questo raggio può attraversare\nalcuni materiali.");
+const u16 sItalianText_Description_PlasmaBeam[] = INCTEXT("Questo potente raggio può colpire\npiù nemici contemporaneamente.");
+const u16 sItalianText_Description_Missiles[] = INCTEXT("Per sparare premi {R_button} + {B_button}.\nApre i {COLOR(6)}portelli rossi{COLOR(0)}.");
+const u16 sItalianText_Description_SuperMissiles[] = INCTEXT("Carica: {Select_button}. Spara: {R_button} + {B_button}.\nApre i {COLOR(8)}portelli verdi{COLOR(0)}.");
+const u16 sItalianText_Description_Bombs[] = INCTEXT("In Morfosfera: piazzala premendo {B_button}.");
+const u16 sItalianText_Description_PowerBombs[] = INCTEXT("In Morfosfera: piazzala premendo {R_button} + {B_button}.\nApre i {COLOR(5)}portelli gialli{COLOR(0)}.");
+const u16 sItalianText_Description_VariaSuit[] = INCTEXT("Riduce i danni inflitti dai nemici.\nNeutralizza acido e calore.");
+const u16 sItalianText_Description_GravitySuit[] = INCTEXT("Riduce i danni subiti. Consente il\nmovimento in acqua e neutralizza la lava.");
+const u16 sItalianText_Description_MorphBall[] = INCTEXT("Premi {Down_button} due volte per assumere la\nforma di una sfera. Intrufolati ovunque!");
+const u16 sItalianText_Description_PowerGrip[] = INCTEXT("Afferra {COLOR(5)}piattaforme e appigli{COLOR(0)}.");
+const u16 sItalianText_Description_Speedbooster[] = INCTEXT("Accelera finché non distruggi alcuni\nmateriali e travolgi i nemici.");
+const u16 sItalianText_Description_HighJump[] = INCTEXT("Aumenta l'altezza massima del salto.\nIn Morfosfera abilita il salto.");
+const u16 sItalianText_Description_ScrewAttack[] = INCTEXT("Colpisci i nemici con questa acrobazia.");
+const u16 sItalianText_Description_SpaceJump[] = INCTEXT("Effettua una serie di piroette aeree.\nUsa {A_button} per saltare a mezz'aria.");
+const u16 sItalianText_Description_UnknownItem[] = INCTEXT("{COLOR(6)}Analisi non riuscita.{COLOR(0)}\nIncompatibile con la tuta in uso.");
+const u16 sItalianText_Description_Pistol[] = INCTEXT("Pistola ad {COLOR(5)}autoricarica{COLOR(5)}.\nI {COLOR(5)}colpi di carica{COLOR(0)} {COLOR(6)}stordiscono{COLOR(0)} i nemici.");
+
+const u16* sItalianTextPointers_Description[] = {
+    [DESCRIPTION_TEXT_LONG_BEAM] = sItalianText_Description_LongBeam,
+    [DESCRIPTION_TEXT_CHARGE_BEAM] = sItalianText_Description_ChargeBeam,
+    [DESCRIPTION_TEXT_ICE_BEAM] = sItalianText_Description_IceBeam,
+    [DESCRIPTION_TEXT_WAVE_BEAM] = sItalianText_Description_WaveBeam,
+    [DESCRIPTION_TEXT_PLASMA_BEAM] = sItalianText_Description_PlasmaBeam,
+    [DESCRIPTION_TEXT_MISSILES] = sItalianText_Description_Missiles,
+    [DESCRIPTION_TEXT_SUPER_MISSILES] = sItalianText_Description_SuperMissiles,
+    [DESCRIPTION_TEXT_BOMBS] = sItalianText_Description_Bombs,
+    [DESCRIPTION_TEXT_POWER_BOMBS] = sItalianText_Description_PowerBombs,
+    [DESCRIPTION_TEXT_VARIA_SUIT] = sItalianText_Description_VariaSuit,
+    [DESCRIPTION_TEXT_GRAVITY_SUIT] = sItalianText_Description_GravitySuit,
+    [DESCRIPTION_TEXT_MORPH_BALL] = sItalianText_Description_MorphBall,
+    [DESCRIPTION_TEXT_POWER_GRIP] = sItalianText_Description_PowerGrip,
+    [DESCRIPTION_TEXT_SPEEDBOOSTER] = sItalianText_Description_Speedbooster,
+    [DESCRIPTION_TEXT_HIGH_JUMP] = sItalianText_Description_HighJump,
+    [DESCRIPTION_TEXT_SCREW_ATTACK] = sItalianText_Description_ScrewAttack,
+    [DESCRIPTION_TEXT_SPACE_JUMP] = sItalianText_Description_SpaceJump,
+    [DESCRIPTION_TEXT_UNKNOWN_ITEM] = sItalianText_Description_UnknownItem,
+    [DESCRIPTION_TEXT_PISTOL] = sItalianText_Description_Pistol,
+};
+
+const u16 sAlign_9 = 0;
+
+const u16 sItalianText_Story_PlanetZebes[] = INCTEXT("{GAP(8)}Il pianeta Zebes era un tempo la mia\n{GAP(8)}patria, ma in seguito forze oscure si\n{GAP(8)}sono impossessate di queste buie\n{GAP(8)}caverne. Qui ho vissuto la mia prima\n{GAP(8)}avventura... la missione Zero.\n{GAP(138)}-Samus Aran-");
+const u16 sItalianText_Story_TheTiming[] = INCTEXT("La mia fuga precipitosa mi ha lasciata\nindifesa, senza la tuta. Non mi rimane\nche la Pistola Laser.\nIrrompere nella Nave Madre dei Pirati\nSpaziali in queste condizioni è un'impresa\ndisperata, ma non ho altra scelta...");
+const u16 sItalianText_Story_CouldISurvive[] = INCTEXT("Riuscirò a fuggire in tempo？");
+const u16 sItalianText_Story_Emergency[] = INCTEXT("{GAP(52)}Ordine di massima priorità.");
+const u16 sItalianText_Story_Exterminate[] = INCTEXT("{GAP(31)}Stermina tutti gli organismi Metroid\n{GAP(46)}presenti sul pianeta Zebes...");
+const u16 sItalianText_Story_Defeat[] = INCTEXT("{GAP(22)}E distruggi anche l'entità biomeccanica,\n{GAP(71)}il Cervello Madre.");
+
+const u16* sItalianTextPointers_Story[] = {
+    [STORY_TEXT_PLANET_ZEBES] = sItalianText_Story_PlanetZebes,
+    [STORY_TEXT_THE_TIMING] = sItalianText_Story_TheTiming,
+    [STORY_TEXT_COULD_I_SURVIVE] = sItalianText_Story_CouldISurvive,
+    [STORY_TEXT_EMERGENCY] = sItalianText_Story_Emergency,
+    [STORY_TEXT_EXTERMINATE] = sItalianText_Story_Exterminate,
+    [STORY_TEXT_DEFEAT] = sItalianText_Story_Defeat,
+};
+
+const u16 sItalianText_FileScreen_StartGame[] = INCTEXT("Inizia gioco\nInizia gioco (in link)");
+const u16 sItalianText_FileScreen_CopySourceChoose[] = INCTEXT("Scegli i dati di gioco\nda copiare.");
+const u16 sItalianText_FileScreen_CopyDestinationChoose[] = INCTEXT("Scegli il file su cui\ncopiare i dati di gioco.");
+const u16 sItalianText_FileScreen_CopyConfirm[] = INCTEXT("Vuoi copiare questi\ndati di gioco？\n{GAP(30)}Sì{GAP(32)}No");
+const u16 sItalianText_FileScreen_EraseChoose[] = INCTEXT("Scegli i dati di gioco\nda cancellare.");
+const u16 sItalianText_FileScreen_EraseConfirm[] = INCTEXT("Vuoi cancellare questi\ndati di gioco？\n{GAP(30)}Sì{GAP(32)}No");
+const u16 sItalianText_FileScreen_FileACorruptRevert[] = INCTEXT("File A: danneggiato.\nIn uso dati precedenti.");
+const u16 sItalianText_FileScreen_FileBCorruptRevert[] = INCTEXT("File B: danneggiato.\nIn uso dati precedenti.");
+const u16 sItalianText_FileScreen_FileCCorruptRevert[] = INCTEXT("File C: danneggiato.\nIn uso dati precedenti.");
+const u16 sItalianText_FileScreen_FileACorruptErase[] = INCTEXT("File A: danneggiato.\nCancellazione in corso.");
+const u16 sItalianText_FileScreen_FileBCorruptErase[] = INCTEXT("File B: danneggiato.\nCancellazione in corso.");
+const u16 sItalianText_FileScreen_FileCCorruptErase[] = INCTEXT("File C: danneggiato.\nCancellazione in corso.");
+const u16 sItalianText_FileScreen_EraseAllReformat[] = INCTEXT("Vuoi cancellare tutti i dati di\nSamus e formattare i file？");
+const u16 sItalianText_FileScreen_EraseAll[] = INCTEXT("Vuoi cancellare tutti i dati\ndi Samus？");
+const u16 sItalianText_FileScreen_ContinueNew[] = INCTEXT("Continua\nNuovo");
+const u16 sItalianText_FileScreen_ContinueNewTimeAttack[] = INCTEXT("Continua\nNuovo\nNuova prova a tempo");
+const u16 sItalianText_FileScreen_MessageOption[] = INCTEXT("Lingua\n  Italiano");
+const u16 sItalianText_FileScreen_Difficulty[] = INCTEXT("Livello di difficoltà\n  FACILE\n  NORMALE");
+const u16 sItalianText_FileScreen_DifficultyHard[] = INCTEXT("Livello di difficoltà\n  FACILE\n  NORMALE\n  DIFFICILE");
+const u16 sItalianText_FileScreen_EraseFileConfirm[] = INCTEXT("Vuoi cancellare tutti i\ndati di gioco salvati？\n　　　　non sarà cancellato.\n{GAP(24)}Sì{GAP(38)}No");
+const u16 sItalianText_FileScreen_LinkingPleaseWait[] = INCTEXT("Collegamento in corso...\nAttendere.");
+const u16 sItalianText_FileScreen_UnableToDetectFusion[] = INCTEXT("Cassetta di gioco di\nMetroid Fusion non\nrilevata.");
+const u16 sItalianText_FileScreen_LinkingError[] = INCTEXT("Errore collegamento.");
+const u16 sItalianText_FileScreen_TurnOffConfirmLink[] = INCTEXT("Spegni la console e\nverifica che il cavo\nGame Link sia inserito\ncorrettamente.");
+const u16 sItalianText_FileScreen_DoNotTurnPowerOff[] = INCTEXT("Non spegnere la\nconsole.");
+const u16 sItalianText_FileScreen_DataUploadComplete[] = INCTEXT("Trasferimento dati\ncompletato.");
+const u16 sItalianText_FileScreen_LinkComplete[] = INCTEXT("Collegamento completato. Puoi spegnere.");
+const u16 sItalianText_FileScreen_BestTime[] = INCTEXT("{GAP(16)}Tempo migliore");
+const u16 sItalianText_FileScreen_BestTime100[] = INCTEXT("{GAP(1)}Tempo migliore{hundred_percent}");
+const u16 sItalianText_FileScreen_IdPassword[] = INCTEXT("ID\nPassword");
+const u16 sItalianText_FileScreen_CantCopyTimeAttack[] = INCTEXT("Impossibile copiare dati\ndella prova a tempo.");
+const u16 sItalianText_FileScreen_LinkingErrorTryAgain[] = INCTEXT("Errore collegamento. Riprova.");
+const u16 sItalianText_FileScreen_LinkingErrorCheckConnection[] = INCTEXT("Si è verificato un errore\nnel collegamento.\nControlla le connessioni\ne riprova.");
+const u16 sItalianText_FileScreen_GalleryUnlock[] = INCTEXT("{COLOR(5)}Galleria{COLOR(0)} è ora\ndisponibile nello schermo\n{COLOR(6)}OPZIONI{COLOR(0)}.");
+const u16 sItalianText_FileScreen_TimeAttackRecordUnlock[] = INCTEXT("{COLOR(5)}Record prova a tempo{COLOR(0)}\nè ora disponibile nello\nschermo {COLOR(6)}OPZIONI{COLOR(0)}.");
+const u16 sItalianText_FileScreen_SoundTestUnlock[] = INCTEXT("{COLOR(5)}Test suono{COLOR(0)} è ora\ndisponibile nello schermo\n{COLOR(6)}OPZIONI{COLOR(0)}.");
+const u16 sItalianText_FileScreen_NesMetroidUnlock[] = INCTEXT("{COLOR(5)}Metroid originale{COLOR(0)} è ora\ndisponibile nello schermo\n{COLOR(6)}OPZIONI{COLOR(0)}.");
+
+const u16* sItalianTextPointers_FileScreen[] = {
+    [FILE_SCREEN_TEXT_START_GAME] = sItalianText_FileScreen_StartGame,
+    [FILE_SCREEN_TEXT_COPY_SOURCE_CHOOSE] = sItalianText_FileScreen_CopySourceChoose,
+    [FILE_SCREEN_TEXT_COPY_DESTINATION_CHOOSE] = sItalianText_FileScreen_CopyDestinationChoose,
+    [FILE_SCREEN_TEXT_COPY_CONFIRM] = sItalianText_FileScreen_CopyConfirm,
+    [FILE_SCREEN_TEXT_ERASE_CHOOSE] = sItalianText_FileScreen_EraseChoose,
+    [FILE_SCREEN_TEXT_ERASE_CONFIRM] = sItalianText_FileScreen_EraseConfirm,
+    [FILE_SCREEN_TEXT_FILE_A_CORRUPT_REVERT] = sItalianText_FileScreen_FileACorruptRevert,
+    [FILE_SCREEN_TEXT_FILE_B_CORRUPT_REVERT] = sItalianText_FileScreen_FileBCorruptRevert,
+    [FILE_SCREEN_TEXT_FILE_C_CORRUPT_REVERT] = sItalianText_FileScreen_FileCCorruptRevert,
+    [FILE_SCREEN_TEXT_FILE_A_CORRUPT_ERASE] = sItalianText_FileScreen_FileACorruptErase,
+    [FILE_SCREEN_TEXT_FILE_B_CORRUPT_ERASE] = sItalianText_FileScreen_FileBCorruptErase,
+    [FILE_SCREEN_TEXT_FILE_C_CORRUPT_ERASE] = sItalianText_FileScreen_FileCCorruptErase,
+    [FILE_SCREEN_TEXT_ERASE_ALL_REFORMAT] = sItalianText_FileScreen_EraseAllReformat,
+    [FILE_SCREEN_TEXT_ERASE_ALL] = sItalianText_FileScreen_EraseAll,
+    [FILE_SCREEN_TEXT_CONTINUE_NEW] = sItalianText_FileScreen_ContinueNew,
+    [FILE_SCREEN_TEXT_CONTINUE_NEW_TIME_ATTACK] = sItalianText_FileScreen_ContinueNewTimeAttack,
+    [FILE_SCREEN_TEXT_MESSAGE_OPTION] = sItalianText_FileScreen_MessageOption,
+    [FILE_SCREEN_TEXT_DIFFICULTY] = sItalianText_FileScreen_Difficulty,
+    [FILE_SCREEN_TEXT_DIFFICULTY_HARD] = sItalianText_FileScreen_DifficultyHard,
+    [FILE_SCREEN_TEXT_ERASE_FILE_CONFIRM] = sItalianText_FileScreen_EraseFileConfirm,
+    [FILE_SCREEN_TEXT_LINKING_PLEASE_WAIT] = sItalianText_FileScreen_LinkingPleaseWait,
+    [FILE_SCREEN_TEXT_UNABLE_TO_DETECT_FUSION] = sItalianText_FileScreen_UnableToDetectFusion,
+    [FILE_SCREEN_TEXT_LINKING_ERROR] = sItalianText_FileScreen_LinkingError,
+    [FILE_SCREEN_TEXT_TURN_OFF_CONFIRM_LINK] = sItalianText_FileScreen_TurnOffConfirmLink,
+    [FILE_SCREEN_TEXT_DO_NOT_TURN_POWER_OFF] = sItalianText_FileScreen_DoNotTurnPowerOff,
+    [FILE_SCREEN_TEXT_DATA_UPLOAD_COMPLETE] = sItalianText_FileScreen_DataUploadComplete,
+    [FILE_SCREEN_TEXT_LINK_COMPLETE] = sItalianText_FileScreen_LinkComplete,
+    [FILE_SCREEN_TEXT_BEST_TIME] = sItalianText_FileScreen_BestTime,
+    [FILE_SCREEN_TEXT_BEST_TIME_100] = sItalianText_FileScreen_BestTime100,
+    [FILE_SCREEN_TEXT_ID_PASSWORD] = sItalianText_FileScreen_IdPassword,
+    [FILE_SCREEN_TEXT_CANT_COPY_TIME_ATTACK] = sItalianText_FileScreen_CantCopyTimeAttack,
+    [FILE_SCREEN_TEXT_LINKING_ERROR_TRY_AGAIN] = sItalianText_FileScreen_LinkingErrorTryAgain,
+    [FILE_SCREEN_TEXT_LINKING_ERROR_CHECK_CONNECTION] = sItalianText_FileScreen_LinkingErrorCheckConnection,
+    [FILE_SCREEN_TEXT_GALLERY_UNLOCK] = sItalianText_FileScreen_GalleryUnlock,
+    [FILE_SCREEN_TEXT_TIME_ATTACK_RECORD_UNLOCK] = sItalianText_FileScreen_TimeAttackRecordUnlock,
+    [FILE_SCREEN_TEXT_SOUND_TEST_UNLOCK] = sItalianText_FileScreen_SoundTestUnlock,
+    [FILE_SCREEN_TEXT_NES_METROID_UNLOCK] = sItalianText_FileScreen_NesMetroidUnlock,
+};
+
+const u16 sAlign_10 = 0;
+
+const u16 sSpanishText_Description_LongBeam[] = INCTEXT("Dispara desde lejos con este rayo.\nPulsa {L_button} + {B_button} para disparos diagonales.");
+const u16 sSpanishText_Description_ChargeBeam[] = INCTEXT("Mantén {B_button} para cargar. Luego suelta.\nAtaque carga: salta una vez cargado.");
+const u16 sSpanishText_Description_IceBeam[] = INCTEXT("Este rayo congela a algunos enemigos.\nUn enemigo congelado es inofensivo.");
+const u16 sSpanishText_Description_WaveBeam[] = INCTEXT("Este rayo, hecho de ondas de energía,\npuede atravesar objetos sólidos.");
+const u16 sSpanishText_Description_PlasmaBeam[] = INCTEXT("Este poderoso rayo puede destrozar\na varios enemigos a la vez.");
+const u16 sSpanishText_Description_Missiles[] = INCTEXT("Pulsa {R_button} + {B_button} para disparar.\nAbre las {COLOR(6)}escotillas rojas{COLOR(0)}.");
+const u16 sSpanishText_Description_SuperMissiles[] = INCTEXT("Cargar: {Select_button}. Disparar: {R_button} + {B_button}.\nAbre las {COLOR(8)}escotillas verdes{COLOR(0)}.");
+const u16 sSpanishText_Description_Bombs[] = INCTEXT("Pulsa {B_button} en forma de morfosfera\npara activarla.");
+const u16 sSpanishText_Description_PowerBombs[] = INCTEXT("Activa con {R_button} + {B_button} en morfosfera.\nAbre las {COLOR(5)}escotillas amarillas{COLOR(0)}.");
+const u16 sSpanishText_Description_VariaSuit[] = INCTEXT("Reduce el daño infligido por enemigos.\nEvita heridas de ácido y calor.");
+const u16 sSpanishText_Description_GravitySuit[] = INCTEXT("Reduce el daño sufrido. Permite moverse\nlibremente por el agua y la lava.");
+const u16 sSpanishText_Description_MorphBall[] = INCTEXT("Pulsa dos veces {Down_button} para pasar a\nmorfosfera y acceder a sitios estrechos.");
+const u16 sSpanishText_Description_PowerGrip[] = INCTEXT("Cuélgate de {COLOR(5)}cornisas y esquinas{COLOR(0)}.");
+const u16 sSpanishText_Description_Speedbooster[] = INCTEXT("Alcanza gran velocidad para\nromper ciertos bloques.");
+const u16 sSpanishText_Description_HighJump[] = INCTEXT("Aumenta la distancia de salto y añade\ncapacidad de salto a la morfosfera.");
+const u16 sSpanishText_Description_ScrewAttack[] = INCTEXT("Ataca a tus enemigos con volteretas.");
+const u16 sSpanishText_Description_SpaceJump[] = INCTEXT("Volteretas continuas en el aire. Usa {A_button}\nen plena voltereta para volver a saltar.");
+const u16 sSpanishText_Description_UnknownItem[] = INCTEXT("{COLOR(6)}Análisis no concluyente.{COLOR(0)}\nObjeto incompatible.");
+const u16 sSpanishText_Description_Pistol[] = INCTEXT("Una pistola {COLOR(5)}autocargable{COLOR(5)}.\n{COLOR(6)}Atonta a {COLOR(0)} enemigos con {COLOR(5)}tiros cargados{COLOR(0)}.");
+
+const u16* sSpanishTextPointers_Description[] = {
+    [DESCRIPTION_TEXT_LONG_BEAM] = sSpanishText_Description_LongBeam,
+    [DESCRIPTION_TEXT_CHARGE_BEAM] = sSpanishText_Description_ChargeBeam,
+    [DESCRIPTION_TEXT_ICE_BEAM] = sSpanishText_Description_IceBeam,
+    [DESCRIPTION_TEXT_WAVE_BEAM] = sSpanishText_Description_WaveBeam,
+    [DESCRIPTION_TEXT_PLASMA_BEAM] = sSpanishText_Description_PlasmaBeam,
+    [DESCRIPTION_TEXT_MISSILES] = sSpanishText_Description_Missiles,
+    [DESCRIPTION_TEXT_SUPER_MISSILES] = sSpanishText_Description_SuperMissiles,
+    [DESCRIPTION_TEXT_BOMBS] = sSpanishText_Description_Bombs,
+    [DESCRIPTION_TEXT_POWER_BOMBS] = sSpanishText_Description_PowerBombs,
+    [DESCRIPTION_TEXT_VARIA_SUIT] = sSpanishText_Description_VariaSuit,
+    [DESCRIPTION_TEXT_GRAVITY_SUIT] = sSpanishText_Description_GravitySuit,
+    [DESCRIPTION_TEXT_MORPH_BALL] = sSpanishText_Description_MorphBall,
+    [DESCRIPTION_TEXT_POWER_GRIP] = sSpanishText_Description_PowerGrip,
+    [DESCRIPTION_TEXT_SPEEDBOOSTER] = sSpanishText_Description_Speedbooster,
+    [DESCRIPTION_TEXT_HIGH_JUMP] = sSpanishText_Description_HighJump,
+    [DESCRIPTION_TEXT_SCREW_ATTACK] = sSpanishText_Description_ScrewAttack,
+    [DESCRIPTION_TEXT_SPACE_JUMP] = sSpanishText_Description_SpaceJump,
+    [DESCRIPTION_TEXT_UNKNOWN_ITEM] = sSpanishText_Description_UnknownItem,
+    [DESCRIPTION_TEXT_PISTOL] = sSpanishText_Description_Pistol,
+};
+
+const u16 sSpanishText_Story_PlanetZebes[] = INCTEXT("{GAP(8)}El Planeta Zebes... Hace mucho, en\n{GAP(8)}tiempos de paz, antes de que el mal\n{GAP(8)}arrasara las cavernas, era mi hogar.\n{GAP(8)}Ahora debo narrar la historia de mi\n{GAP(8)}primera batalla... La Misión Zero.\n{GAP(138)}-Samus Aran-");
+const u16 sSpanishText_Story_TheTiming[] = INCTEXT("Mi huida me dejó indefensa, sin mi traje.\nComo única protección tenía mi pistola\nde emergencia, que no es precisamente\nuna gran arma. Puede que infiltrarme en\nla nave nodriza pirata así armada fuera\nestúpido, pero no tenía otra opción...");
+const u16 sSpanishText_Story_CouldISurvive[] = INCTEXT("¿Podría sobrevivir lo suficiente\npara escapar？");
+const u16 sSpanishText_Story_Emergency[] = INCTEXT("{GAP(66)}Orden de emergencia");
+const u16 sSpanishText_Story_Exterminate[] = INCTEXT("{GAP(33)}Exterminar a todos los organismos\n{GAP(46)}Metroid del Planeta Zebes...");
+const u16 sSpanishText_Story_Defeat[] = INCTEXT("{GAP(22)}Y derrotar a la forma de vida mecánica\n{GAP(80)}Mother Brain.");
+
+const u16* sSpanishTextPointers_Story[] = {
+    [STORY_TEXT_PLANET_ZEBES] = sSpanishText_Story_PlanetZebes,
+    [STORY_TEXT_THE_TIMING] = sSpanishText_Story_TheTiming,
+    [STORY_TEXT_COULD_I_SURVIVE] = sSpanishText_Story_CouldISurvive,
+    [STORY_TEXT_EMERGENCY] = sSpanishText_Story_Emergency,
+    [STORY_TEXT_EXTERMINATE] = sSpanishText_Story_Exterminate,
+    [STORY_TEXT_DEFEAT] = sSpanishText_Story_Defeat,
+};
+
+const u16 sSpanishText_FileScreen_StartGame[] = INCTEXT("Jugar\nJugar (Link)");
+const u16 sSpanishText_FileScreen_CopySourceChoose[] = INCTEXT("Elige el archivo\nque quieres copiar.");
+const u16 sSpanishText_FileScreen_CopyDestinationChoose[] = INCTEXT("Elige un archivo al\nque copiar los datos.");
+const u16 sSpanishText_FileScreen_CopyConfirm[] = INCTEXT("¿Quieres sobrescribir\neste archivo？\n{GAP(30)}Sí{GAP(32)}No");
+const u16 sSpanishText_FileScreen_EraseChoose[] = INCTEXT("Elige el archivo\nque quieres borrar.");
+const u16 sSpanishText_FileScreen_EraseConfirm[] = INCTEXT("¿Quieres borrar\neste archivo？\n{GAP(30)}Sí{GAP(32)}No");
+const u16 sSpanishText_FileScreen_FileACorruptRevert[] = INCTEXT("Archivo A dañado.\nUsando datos\nanteriores.");
+const u16 sSpanishText_FileScreen_FileBCorruptRevert[] = INCTEXT("Archivo B dañado.\nUsando datos\nanteriores.");
+const u16 sSpanishText_FileScreen_FileCCorruptRevert[] = INCTEXT("Archivo C dañado.\nUsando datos\nanteriores.");
+const u16 sSpanishText_FileScreen_FileACorruptErase[] = INCTEXT("Archivo A dañado.\nBorrando archivo A...");
+const u16 sSpanishText_FileScreen_FileBCorruptErase[] = INCTEXT("Archivo B dañado.\nBorrando archivo B...");
+const u16 sSpanishText_FileScreen_FileCCorruptErase[] = INCTEXT("Archivo C dañado.\nBorrando archivo C...");
+const u16 sSpanishText_FileScreen_EraseAllReformat[] = INCTEXT("¿Quieres borrar todos los datos\ny reformatear los archivos？");
+const u16 sSpanishText_FileScreen_EraseAll[] = INCTEXT("¿Quieres borrar todos los\ndatos guardados？");
+const u16 sSpanishText_FileScreen_ContinueNew[] = INCTEXT("Continuar\nNuevo");
+const u16 sSpanishText_FileScreen_ContinueNewTimeAttack[] = INCTEXT("Continuar\nNuevo\nNuevo reto de tiempo");
+const u16 sSpanishText_FileScreen_MessageOption[] = INCTEXT("Opciones de mensaje\n  Kanji\n  Hiragana");
+const u16 sSpanishText_FileScreen_Difficulty[] = INCTEXT("Dificultad\n  FÁCIL\n  NORMAL");
+const u16 sSpanishText_FileScreen_DifficultyHard[] = INCTEXT("Nivel de dificultad\n  FÁCIL\n  NORMAL\n  DIFÍCIL");
+const u16 sSpanishText_FileScreen_EraseFileConfirm[] = INCTEXT("¿Quieres borrar todos\nlos datos guardados？\n(　　　no se borrará).\n{GAP(24)}Sí{GAP(38)}No");
+const u16 sSpanishText_FileScreen_LinkingPleaseWait[] = INCTEXT("Conectando...\nEspera un momento.");
+const u16 sSpanishText_FileScreen_UnableToDetectFusion[] = INCTEXT("No se ha detectado\nningún cartucho de\nMetroid Fusion.");
+const u16 sSpanishText_FileScreen_LinkingError[] = INCTEXT("Error de conexión.");
+const u16 sSpanishText_FileScreen_TurnOffConfirmLink[] = INCTEXT("Apaga la consola y\ncomprueba que el cable\nGame Link está bien\nconectado.");
+const u16 sSpanishText_FileScreen_DoNotTurnPowerOff[] = INCTEXT("No apagues\nla consola (OFF).");
+const u16 sSpanishText_FileScreen_DataUploadComplete[] = INCTEXT("Descarga de\ndatos finalizada.");
+const u16 sSpanishText_FileScreen_LinkComplete[] = INCTEXT("Conexión finalizada.\nPuedes apagar la consola (OFF).");
+const u16 sSpanishText_FileScreen_BestTime[] = INCTEXT("{GAP(18)}Mejor tiempo");
+const u16 sSpanishText_FileScreen_BestTime100[] = INCTEXT("{GAP(4)}Mejor tiempo{hundred_percent}");
+const u16 sSpanishText_FileScreen_IdPassword[] = INCTEXT("ID\nContraseña");
+const u16 sSpanishText_FileScreen_CantCopyTimeAttack[] = INCTEXT("No puedes copiar datos\nde retos de tiempo.");
+const u16 sSpanishText_FileScreen_LinkingErrorTryAgain[] = INCTEXT("Error de conexión. Vuelve a intentarlo.");
+const u16 sSpanishText_FileScreen_LinkingErrorCheckConnection[] = INCTEXT("Se ha producido un\nerror de conexión.\nComprueba los cables\ny vuelve a intentarlo.");
+const u16 sSpanishText_FileScreen_GalleryUnlock[] = INCTEXT("Se ha añadido {COLOR(5)}Galería{COLOR(0)}\na la pantalla\n{COLOR(6)}OPCIONES{COLOR(0)}.");
+const u16 sSpanishText_FileScreen_TimeAttackRecordUnlock[] = INCTEXT("Se ha añadido {COLOR(5)}Récords\nde reto de tiempo{COLOR(0)} a la\npantalla {COLOR(6)}OPCIONES{COLOR(0)}.");
+const u16 sSpanishText_FileScreen_SoundTestUnlock[] = INCTEXT("Se ha añadido {COLOR(5)}Prueba\nde sonido{COLOR(0)} a la\npantalla {COLOR(6)}OPCIONES{COLOR(0)}.");
+const u16 sSpanishText_FileScreen_NesMetroidUnlock[] = INCTEXT("Se ha añadido {COLOR(5)}Metroid\noriginal{COLOR(0)} a la\npantalla {COLOR(6)}OPCIONES{COLOR(0)}.");
+
+const u16* sSpanishTextPointers_FileScreen[] = {
+    [FILE_SCREEN_TEXT_START_GAME] = sSpanishText_FileScreen_StartGame,
+    [FILE_SCREEN_TEXT_COPY_SOURCE_CHOOSE] = sSpanishText_FileScreen_CopySourceChoose,
+    [FILE_SCREEN_TEXT_COPY_DESTINATION_CHOOSE] = sSpanishText_FileScreen_CopyDestinationChoose,
+    [FILE_SCREEN_TEXT_COPY_CONFIRM] = sSpanishText_FileScreen_CopyConfirm,
+    [FILE_SCREEN_TEXT_ERASE_CHOOSE] = sSpanishText_FileScreen_EraseChoose,
+    [FILE_SCREEN_TEXT_ERASE_CONFIRM] = sSpanishText_FileScreen_EraseConfirm,
+    [FILE_SCREEN_TEXT_FILE_A_CORRUPT_REVERT] = sSpanishText_FileScreen_FileACorruptRevert,
+    [FILE_SCREEN_TEXT_FILE_B_CORRUPT_REVERT] = sSpanishText_FileScreen_FileBCorruptRevert,
+    [FILE_SCREEN_TEXT_FILE_C_CORRUPT_REVERT] = sSpanishText_FileScreen_FileCCorruptRevert,
+    [FILE_SCREEN_TEXT_FILE_A_CORRUPT_ERASE] = sSpanishText_FileScreen_FileACorruptErase,
+    [FILE_SCREEN_TEXT_FILE_B_CORRUPT_ERASE] = sSpanishText_FileScreen_FileBCorruptErase,
+    [FILE_SCREEN_TEXT_FILE_C_CORRUPT_ERASE] = sSpanishText_FileScreen_FileCCorruptErase,
+    [FILE_SCREEN_TEXT_ERASE_ALL_REFORMAT] = sSpanishText_FileScreen_EraseAllReformat,
+    [FILE_SCREEN_TEXT_ERASE_ALL] = sSpanishText_FileScreen_EraseAll,
+    [FILE_SCREEN_TEXT_CONTINUE_NEW] = sSpanishText_FileScreen_ContinueNew,
+    [FILE_SCREEN_TEXT_CONTINUE_NEW_TIME_ATTACK] = sSpanishText_FileScreen_ContinueNewTimeAttack,
+    [FILE_SCREEN_TEXT_MESSAGE_OPTION] = sSpanishText_FileScreen_MessageOption,
+    [FILE_SCREEN_TEXT_DIFFICULTY] = sSpanishText_FileScreen_Difficulty,
+    [FILE_SCREEN_TEXT_DIFFICULTY_HARD] = sSpanishText_FileScreen_DifficultyHard,
+    [FILE_SCREEN_TEXT_ERASE_FILE_CONFIRM] = sSpanishText_FileScreen_EraseFileConfirm,
+    [FILE_SCREEN_TEXT_LINKING_PLEASE_WAIT] = sSpanishText_FileScreen_LinkingPleaseWait,
+    [FILE_SCREEN_TEXT_UNABLE_TO_DETECT_FUSION] = sSpanishText_FileScreen_UnableToDetectFusion,
+    [FILE_SCREEN_TEXT_LINKING_ERROR] = sSpanishText_FileScreen_LinkingError,
+    [FILE_SCREEN_TEXT_TURN_OFF_CONFIRM_LINK] = sSpanishText_FileScreen_TurnOffConfirmLink,
+    [FILE_SCREEN_TEXT_DO_NOT_TURN_POWER_OFF] = sSpanishText_FileScreen_DoNotTurnPowerOff,
+    [FILE_SCREEN_TEXT_DATA_UPLOAD_COMPLETE] = sSpanishText_FileScreen_DataUploadComplete,
+    [FILE_SCREEN_TEXT_LINK_COMPLETE] = sSpanishText_FileScreen_LinkComplete,
+    [FILE_SCREEN_TEXT_BEST_TIME] = sSpanishText_FileScreen_BestTime,
+    [FILE_SCREEN_TEXT_BEST_TIME_100] = sSpanishText_FileScreen_BestTime100,
+    [FILE_SCREEN_TEXT_ID_PASSWORD] = sSpanishText_FileScreen_IdPassword,
+    [FILE_SCREEN_TEXT_CANT_COPY_TIME_ATTACK] = sSpanishText_FileScreen_CantCopyTimeAttack,
+    [FILE_SCREEN_TEXT_LINKING_ERROR_TRY_AGAIN] = sSpanishText_FileScreen_LinkingErrorTryAgain,
+    [FILE_SCREEN_TEXT_LINKING_ERROR_CHECK_CONNECTION] = sSpanishText_FileScreen_LinkingErrorCheckConnection,
+    [FILE_SCREEN_TEXT_GALLERY_UNLOCK] = sSpanishText_FileScreen_GalleryUnlock,
+    [FILE_SCREEN_TEXT_TIME_ATTACK_RECORD_UNLOCK] = sSpanishText_FileScreen_TimeAttackRecordUnlock,
+    [FILE_SCREEN_TEXT_SOUND_TEST_UNLOCK] = sSpanishText_FileScreen_SoundTestUnlock,
+    [FILE_SCREEN_TEXT_NES_METROID_UNLOCK] = sSpanishText_FileScreen_NesMetroidUnlock,
+};
+
+#elif defined(REGION_US_BETA)
+
+// NOTE: US beta uses incomplete placeholder text for German, French, Italian, and Spanish
 
 const u16 sGermanText_Description_LongBeam[] = INCTEXT("射程距離の長いビーム");
 const u16 sGermanText_Description_ChargeBeam[] = INCTEXT("〈{B_button}を押しつづけ　パワーをため、はなすと発射〉\nチャージアタック……パワーをためた状態で回転ジャンプ");
@@ -1098,4 +2338,4 @@ const u16* sSpanishTextPointers_Story[3] = {
     [2] = sSpanishText_Story_Exterminate,
 };
 
-#endif // REGION_BETA
+#endif
