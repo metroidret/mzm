@@ -67,51 +67,51 @@ static const u32* sMapScreenUnknownItemsNamesGfxPointers[LANGUAGE_END] = {
     [LANGUAGE_JAPANESE] = sMapScreenUnknownItemsNamesJapaneseGfx,
     [LANGUAGE_HIRAGANA] = sMapScreenUnknownItemsNamesHiraganaGfx,
     [LANGUAGE_ENGLISH] = sMapScreenUnknownItemsNamesEnglishGfx,
-    #ifdef REGION_US_BETA
+    #if defined(REGION_EU) || defined(REGION_US_BETA)
     [LANGUAGE_GERMAN] = sMapScreenUnknownItemsNamesGermanGfx,
     [LANGUAGE_FRENCH] = sMapScreenUnknownItemsNamesFrenchGfx,
     [LANGUAGE_ITALIAN] = sMapScreenUnknownItemsNamesItalianGfx,
     [LANGUAGE_SPANISH] = sMapScreenUnknownItemsNamesSpanishGfx
-    #else // !REGION_US_BETA
+    #else // !(REGION_EU || REGION_US_BETA)
     [LANGUAGE_GERMAN] = sMapScreenUnknownItemsNamesEnglishGfx,
     [LANGUAGE_FRENCH] = sMapScreenUnknownItemsNamesEnglishGfx,
     [LANGUAGE_ITALIAN] = sMapScreenUnknownItemsNamesEnglishGfx,
     [LANGUAGE_SPANISH] = sMapScreenUnknownItemsNamesEnglishGfx
-    #endif // REGION_US_BETA
+    #endif // REGION_EU || REGION_US_BETA
 };
 
 static const u32* sMapScreenEquipmentNamesGfxPointers[LANGUAGE_END] = {
     [LANGUAGE_JAPANESE] = sEquipmentNamesJapaneseGfx,
     [LANGUAGE_HIRAGANA] = sEquipmentNamesHiraganaGfx,
     [LANGUAGE_ENGLISH] = sEquipmentNamesEnglishGfx,
-    #ifdef REGION_US_BETA
+    #if defined(REGION_EU) || defined(REGION_US_BETA)
     [LANGUAGE_GERMAN] = sEquipmentNamesGermanGfx,
     [LANGUAGE_FRENCH] = sEquipmentNamesFrenchGfx,
     [LANGUAGE_ITALIAN] = sEquipmentNamesItalianGfx,
     [LANGUAGE_SPANISH] = sEquipmentNamesSpanishGfx
-    #else // !REGION_US_BETA
+    #else // !(REGION_EU || REGION_US_BETA)
     [LANGUAGE_GERMAN] = sEquipmentNamesEnglishGfx,
     [LANGUAGE_FRENCH] = sEquipmentNamesEnglishGfx,
     [LANGUAGE_ITALIAN] = sEquipmentNamesEnglishGfx,
     [LANGUAGE_SPANISH] = sEquipmentNamesEnglishGfx
-    #endif // REGION_US_BETA
+    #endif // REGION_EU || REGION_US_BETA
 };
 
 static const u32* sMapScreenMenuNamesGfxPointers[LANGUAGE_END] = {
     [LANGUAGE_JAPANESE] = sMenuNamesJapaneseGfx,
     [LANGUAGE_HIRAGANA] = sMenuNamesHiraganaGfx,
     [LANGUAGE_ENGLISH] = sMenuNamesEnglishGfx,
-    #ifdef REGION_US_BETA
+    #if defined(REGION_EU) || defined(REGION_US_BETA)
     [LANGUAGE_GERMAN] = sMenuNamesGermanGfx,
     [LANGUAGE_FRENCH] = sMenuNamesFrenchGfx,
     [LANGUAGE_ITALIAN] = sMenuNamesItalianGfx,
     [LANGUAGE_SPANISH] = sMenuNamesSpanishGfx
-    #else // !REGION_US_BETA
+    #else // !(REGION_EU || REGION_US_BETA)
     [LANGUAGE_GERMAN] = sMenuNamesEnglishGfx,
     [LANGUAGE_FRENCH] = sMenuNamesEnglishGfx,
     [LANGUAGE_ITALIAN] = sMenuNamesEnglishGfx,
     [LANGUAGE_SPANISH] = sMenuNamesEnglishGfx
-    #endif // REGION_US_BETA
+    #endif // REGION_EU || REGION_US_BETA
 };
 
 static u16 sPauseScreenCompletionInfoOamData[6][5] = {
@@ -3832,7 +3832,7 @@ void CheckForMaintainedInput(void)
         #ifdef REGION_EU
         if (gMaintainedInputData.set < sMaintainedInputDelaysLastSet[speed])
         #else // !REGION_EU
-        if (gMaintainedInputData.set < ARRAY_SIZE(sMaintainedInputDelays_Fast) - 2)
+        if (gMaintainedInputData.set < ARRAY_SIZE(sMaintainedInputDelays_Fast) - 1)
         #endif // REGION_EU
         {
             gMaintainedInputData.set++;

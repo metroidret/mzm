@@ -10946,8 +10946,13 @@ const struct RoomEntryRom sKraidRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 12,
 		.mapY = 10,
+		#ifdef REGION_EU
+		.effect = EFFECT_NONE,
+		.effectY = UCHAR_MAX,
+		#else // !REGION_EU
 		.effect = EFFECT_WEAK_LAVA,
 		.effectY = 11,
+		#endif // REGION_EU
 		.musicTrack = MUSIC_KRAID
 	},
 	[18] = {

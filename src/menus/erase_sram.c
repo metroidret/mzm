@@ -38,7 +38,7 @@ static const u32* sEraseSramTextGfxPointers[LANGUAGE_END][2] = {
         sEraseSramMenuQuestionEnglishGfx,
         sEraseSramMenuConfirmEnglishGfx
     },
-    #ifdef REGION_US_BETA
+    #if defined(REGION_EU) || defined(REGION_US_BETA)
     [LANGUAGE_GERMAN] = {
         sEraseSramMenuQuestionGermanGfx,
         sEraseSramMenuConfirmGermanGfx
@@ -55,7 +55,7 @@ static const u32* sEraseSramTextGfxPointers[LANGUAGE_END][2] = {
         sEraseSramMenuQuestionSpanishGfx,
         sEraseSramMenuConfirmSpanishGfx
     }
-    #else // !REGION_US_BETA
+    #else // !(REGION_EU || REGION_US_BETA)
     [LANGUAGE_GERMAN] = {
         sEraseSramMenuQuestionEnglishGfx,
         sEraseSramMenuConfirmEnglishGfx
@@ -72,7 +72,7 @@ static const u32* sEraseSramTextGfxPointers[LANGUAGE_END][2] = {
         sEraseSramMenuQuestionEnglishGfx,
         sEraseSramMenuConfirmEnglishGfx
     }
-    #endif // REGION_US_BETA
+    #endif // REGION_EU || REGION_US_BETA
 };
 
 /**

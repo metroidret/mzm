@@ -169,14 +169,19 @@ const u8 sTitleScreenRomInfoPosition[4] = {
     BLOCK_SIZE * 2 + 8, BLOCK_SIZE + QUARTER_BLOCK_SIZE, 'P', 'x'
 };
 
-#ifdef REGION_US_BETA
+#if defined(REGION_EU)
+const u8 sTitleScreenRomInfoTime[12] = "01/14 14:30";
+#elif defined(REGION_US_BETA)
 const u8 sTitleScreenRomInfoTime[12] = "12/02 22:00";
-#else // !REGION_US_BETA
+#else // !(REGION_EU || REGION_US_BETA)
 const u8 sTitleScreenRomInfoTime[12] = "12/04 22:00";
-#endif // REGION_US_BETA
+#endif
+
+#ifndef REGION_EU
 const u8 sTitleScreenRomInfoRegionUSA[4] = "USA";
 const u8 sTitleScreenRomInfoRegionEUR[4] = "EUR";
 const u8 sTitleScreenRomInfoRegionJPN[4] = "JPN";
+#endif // !REGION_EU
 
 const struct TitleScreenPageData sTitleScreenPageData[2] = {
     [0] = {

@@ -49,7 +49,7 @@ extern const u32 sFileSelectDifficultyTextSpanishGfx[70];
 extern const u32 sFileSelectObjIconsGfx[1722];
 extern const u32 sFileSelectChozoBackgroundTileTable[368];
 extern const u32 sFileSelectMenuTileTable[];
-extern const u32 sFileSelectOptionsTileTable[188];
+extern const u32 sFileSelectOptionsTileTable[];
 extern const u32 sFileSelect3BigPanelsTileTable[233];
 extern const u32 sFileSelect1Small2BigPanelsTileTable[233];
 extern const u32 sFileSelect2Big1SmallPanelsTileTable[230];

@@ -264,17 +264,17 @@ static const u32* sGameOverTextPromptGfxPointers[LANGUAGE_END] = {
     [LANGUAGE_JAPANESE] = sGameOverTextPromptEnglishGfx,
     [LANGUAGE_HIRAGANA] = sGameOverTextPromptHiraganaGfx,
     [LANGUAGE_ENGLISH] = sGameOverTextPromptEnglishGfx,
-    #ifdef REGION_US_BETA
+    #if defined(REGION_EU) || defined(REGION_US_BETA)
     [LANGUAGE_GERMAN] = sGameOverTextPromptGermanGfx,
     [LANGUAGE_FRENCH] = sGameOverTextPromptFrenchGfx,
     [LANGUAGE_ITALIAN] = sGameOverTextPromptItalianGfx,
     [LANGUAGE_SPANISH] = sGameOverTextPromptSpanishGfx
-    #else // !REGION_US_BETA
+    #else // !(REGION_EU || REGION_US_BETA)
     [LANGUAGE_GERMAN] = sGameOverTextPromptEnglishGfx,
     [LANGUAGE_FRENCH] = sGameOverTextPromptEnglishGfx,
     [LANGUAGE_ITALIAN] = sGameOverTextPromptEnglishGfx,
     [LANGUAGE_SPANISH] = sGameOverTextPromptEnglishGfx
-    #endif // REGION_US_BETA
+    #endif // REGION_EU || REGION_US_BETA
 };
 
 /**

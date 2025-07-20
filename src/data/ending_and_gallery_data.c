@@ -254,7 +254,220 @@ const u16 sEndingImageOam_NewRecordEnglish[OAM_DATA_SIZE(6)] = {
 
 #ifdef REGION_EU
 
-const u16 sEndingImageOam_NewRecordFrench[OAM_DATA_SIZE(4)] = {
+static const u16 sFullLinesFrenchOam_0[OAM_DATA_SIZE(6)] = {
+    6,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ac, 0x80,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1cc, 0x84,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ec, 0x88,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0xc, 0x8c,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x2c, 0x90,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x4c, 0x94
+};
+
+static const u16 sClearTimeFrenchOam_0[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1ac, 0x106
+};
+
+static const u16 sClearTimeFrenchOam_1[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1b5, 0x146
+};
+
+static const u16 sClearTimeFrenchOam_2[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1be, 0x11e
+};
+
+static const u16 sClearTimeFrenchOam_3[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1c8, 0x108
+};
+
+static const u16 sClearTimeFrenchOam_4[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1d1, 0x108
+};
+
+static const u16 sClearTimeFrenchOam_5[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1e3, 0x106
+};
+
+static const u16 sClearTimeFrenchOam_6[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1ec, 0x108
+};
+
+static const u16 sClearTimeFrenchOam_7[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1fd, 0x114
+};
+
+static const u16 sClearTimeFrenchOam_8[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x6, 0x100
+};
+
+static const u16 sClearTimeFrenchOam_9[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x19, 0x116
+};
+
+static const u16 sClearTimeFrenchOam_10[OAM_DATA_SIZE(1)] = {
+    1,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x22, 0x110
+};
+
+static const u16 sClearTimeFrenchOam_11[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x28, 0x140
+};
+
+static const u16 sClearTimeFrenchOam_12[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x31, 0x140
+};
+
+static const u16 sClearTimeFrenchOam_13[OAM_DATA_SIZE(1)] = {
+    1,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x39, 0x110
+};
+
+static const u16 sClearTimeFrenchOam_14[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x3f, 0x11a
+};
+
+static const u16 sClearTimeFrenchOam_15[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x49, 0x118
+};
+
+static const u16 sFullLinesFrenchOam_3[OAM_DATA_SIZE(7)] = {
+    7,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x198, 0xc0,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1b8, 0xc4,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1d8, 0xc8,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1f8, 0xcc,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x18, 0xd0,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x38, 0xd4,
+    0xf0, OBJ_SIZE_16x16 | 0x58, 0xd8
+};
+
+static const u16 sCollectingFrenchOam_0[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x198, 0x142
+};
+
+static const u16 sCollectingFrenchOam_1[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1a0, 0x100
+};
+
+static const u16 sCollectingFrenchOam_2[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1ab, 0x146
+};
+
+static const u16 sCollectingFrenchOam_3[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1b5, 0x148
+};
+
+static const u16 sCollectingFrenchOam_4[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1c7, 0x14c
+};
+
+static const u16 sCollectingFrenchOam_5[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1d3, 0x11a
+};
+
+static const u16 sCollectingFrenchOam_6[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1dd, 0x102
+};
+
+static const u16 sCollectingFrenchOam_7[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1e5, 0x112
+};
+
+static const u16 sCollectingFrenchOam_8[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1f0, 0x108
+};
+
+static const u16 sCollectingFrenchOam_9[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1f9, 0x142
+};
+
+static const u16 sCollectingFrenchOam_10[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x2, 0x140
+};
+
+static const u16 sCollectingFrenchOam_11[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x14, 0x104
+};
+
+static const u16 sCollectingFrenchOam_12[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1e, 0x11a
+};
+
+static const u16 sCollectingFrenchOam_13[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x27, 0x114
+};
+
+static const u16 sCollectingFrenchOam_14[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x2f, 0x114
+};
+
+static const u16 sCollectingFrenchOam_15[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x38, 0x108
+};
+
+static const u16 sCollectingFrenchOam_16[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x42, 0x104
+};
+
+static const u16 sCollectingFrenchOam_17[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x4b, 0x142
+};
+
+static const u16 sCollectingFrenchOam_18[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x54, 0x108
+};
+
+static const u16 sCollectingFrenchOam_19[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x5d, 0x140
+};
+
+static const u16 sFullLinesFrenchOam_2[OAM_DATA_SIZE(8)] = {
+    8,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ae, 0x1180,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0xe, 0x118c,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x2e, 0x1190,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x4e, 0x1194,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ce, 0x1184,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ee, 0x1188,
+    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1ce, 0x11c4,
+    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1ee, 0x11c8
+};
+
+static const u16 sEndingImageOam_NewRecordFrench[OAM_DATA_SIZE(4)] = {
     4,
     OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1de, 0x5016,
     OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1fe, 0x501a,
@@ -262,7 +475,277 @@ const u16 sEndingImageOam_NewRecordFrench[OAM_DATA_SIZE(4)] = {
     OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1fe, 0x505a
 };
 
-const u16 sEndingImageOam_NewRecordItalian[OAM_DATA_SIZE(6)] = {
+static const u16 sFullLinesItalianOam_0[OAM_DATA_SIZE(7)] = {
+    7,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1a7, 0x80,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1c7, 0x84,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1e7, 0x88,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x7, 0x8c,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x27, 0x90,
+    0xf0, OBJ_SIZE_16x16 | 0x47, 0x94,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x57, 0x96
+};
+
+static const u16 sClearTimeItalianOam_0[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1a7, 0x142
+};
+
+static const u16 sClearTimeItalianOam_1[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1b0, 0x108
+};
+
+static const u16 sClearTimeItalianOam_2[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1b9, 0x116
+};
+
+static const u16 sClearTimeItalianOam_3[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1c3, 0x11c
+};
+
+static const u16 sClearTimeItalianOam_4[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1cc, 0x11a
+};
+
+static const u16 sClearTimeItalianOam_5[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1de, 0x104
+};
+
+static const u16 sClearTimeItalianOam_6[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1e7, 0x11a
+};
+
+static const u16 sClearTimeItalianOam_7[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1f0, 0x116
+};
+
+static const u16 sClearTimeItalianOam_8[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1fb, 0x11c
+};
+
+static const u16 sClearTimeItalianOam_9[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x4, 0x114
+};
+
+static const u16 sClearTimeItalianOam_10[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0xd, 0x108
+};
+
+static const u16 sClearTimeItalianOam_11[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x16, 0x142
+};
+
+static const u16 sClearTimeItalianOam_12[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1e, 0x100
+};
+
+static const u16 sClearTimeItalianOam_13[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x28, 0x116
+};
+
+static const u16 sClearTimeItalianOam_14[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x32, 0x108
+};
+
+static const u16 sClearTimeItalianOam_15[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x3b, 0x118
+};
+
+static const u16 sClearTimeItalianOam_16[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x45, 0x142
+};
+
+static const u16 sClearTimeItalianOam_17[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x4e, 0x11a
+};
+
+static const u16 sFullLinesItalianOam_2[OAM_DATA_SIZE(4)] = {
+    4,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1cd, 0xc0,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ed, 0xc4,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0xd, 0xc8,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x2d, 0xcc
+};
+
+static const u16 sYourRateItalianOam_0[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1cd, 0x11c
+};
+
+static const u16 sYourRateItalianOam_1[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1d6, 0x108
+};
+
+static const u16 sYourRateItalianOam_2[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1df, 0x11e
+};
+
+static const u16 sYourRateItalianOam_3[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1e8, 0x104
+};
+
+static const u16 sYourRateItalianOam_4[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1f1, 0x108
+};
+
+static const u16 sYourRateItalianOam_5[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1fa, 0x118
+};
+
+static const u16 sYourRateItalianOam_6[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x4, 0x142
+};
+
+static const u16 sYourRateItalianOam_7[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0xd, 0x146
+};
+
+static const u16 sYourRateItalianOam_8[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x16, 0x100
+};
+
+static const u16 sYourRateItalianOam_9[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x20, 0x114
+};
+
+static const u16 sYourRateItalianOam_10[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x29, 0x108
+};
+
+static const u16 sFullLinesItalianOam_3[OAM_DATA_SIZE(7)] = {
+    7,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1b2, 0xcd,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1d2, 0xd1,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1f2, 0xd5,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x12, 0xd9,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x32, 0xdd,
+    0xf0, OBJ_SIZE_16x16 | 0x3a, 0x98,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x4a, 0x9a
+};
+
+static const u16 sCollectingItalianOam_0[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1b2, 0x140
+};
+
+static const u16 sCollectingItalianOam_1[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1bb, 0x142
+};
+
+static const u16 sCollectingItalianOam_2[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1c4, 0x11e
+};
+
+static const u16 sCollectingItalianOam_3[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1cd, 0x146
+};
+
+static const u16 sCollectingItalianOam_4[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1d6, 0x116
+};
+
+static const u16 sCollectingItalianOam_5[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1e0, 0x108
+};
+
+static const u16 sCollectingItalianOam_6[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1e9, 0x118
+};
+
+static const u16 sCollectingItalianOam_7[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1f3, 0x142
+};
+
+static const u16 sCollectingItalianOam_8[OAM_DATA_SIZE(1)] = {
+    1,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x1fa, 0x110
+};
+
+static const u16 sCollectingItalianOam_9[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x8, 0x11e
+};
+
+static const u16 sCollectingItalianOam_10[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x11, 0x100
+};
+
+static const u16 sCollectingItalianOam_11[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1c, 0x104
+};
+
+static const u16 sCollectingItalianOam_12[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x26, 0x104
+};
+
+static const u16 sCollectingItalianOam_13[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x30, 0x11a
+};
+
+static const u16 sCollectingItalianOam_14[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x38, 0x114
+};
+
+static const u16 sCollectingItalianOam_15[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x3f, 0x142
+};
+
+static const u16 sCollectingItalianOam_16[OAM_DATA_SIZE(1)] = {
+    1,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x46, 0x110
+};
+
+static const u16 sFullLinesItalianOam_5[OAM_DATA_SIZE(6)] = {
+    6,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1b4, 0x11c0,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1d4, 0x11c4,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1f4, 0x11c8,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x14, 0x11cc,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x34, 0x11d0,
+    OBJ_SHAPE_HORIZONTAL | 0x0, 0x1cc, 0x1203
+};
+
+static const u16 sEndingImageOam_NewRecordItalian[OAM_DATA_SIZE(6)] = {
     6,
     OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1e5, 0x5016,
     0xf0, OBJ_SIZE_16x16 | 0x5, 0x501a,
@@ -272,7 +755,208 @@ const u16 sEndingImageOam_NewRecordItalian[OAM_DATA_SIZE(6)] = {
     0x0, 0x15, 0x505c
 };
 
-const u16 sEndingImageOam_NewRecordSpanish[OAM_DATA_SIZE(6)] = {
+static const u16 sFullLinesSpanishOam_0[OAM_DATA_SIZE(5)] = {
+    5,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ba, 0x80,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1da, 0x84,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1fa, 0x88,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1a, 0x8c,
+    0xf0, OBJ_SIZE_16x16 | 0x3a, 0x90
+};
+
+static const u16 sClearTimeSpanishOam_0[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1ba, 0x142
+};
+
+static const u16 sClearTimeSpanishOam_1[OAM_DATA_SIZE(1)] = {
+    1,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x1c1, 0x110
+};
+
+static const u16 sClearTimeSpanishOam_2[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1c7, 0x108
+};
+
+static const u16 sClearTimeSpanishOam_3[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1d0, 0x116
+};
+
+static const u16 sClearTimeSpanishOam_4[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1da, 0x11c
+};
+
+static const u16 sClearTimeSpanishOam_5[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1e3, 0x11a
+};
+
+static const u16 sClearTimeSpanishOam_6[OAM_DATA_SIZE(1)] = {
+    1,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x1f7, 0x110
+};
+
+static const u16 sClearTimeSpanishOam_7[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1fd, 0x118
+};
+
+static const u16 sClearTimeSpanishOam_8[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x8, 0x144
+};
+
+static const u16 sClearTimeSpanishOam_9[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x13, 0x108
+};
+
+static const u16 sClearTimeSpanishOam_10[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1c, 0x11e
+};
+
+static const u16 sClearTimeSpanishOam_11[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x25, 0x142
+};
+
+static const u16 sClearTimeSpanishOam_12[OAM_DATA_SIZE(1)] = {
+    1,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x2c, 0x110
+};
+
+static const u16 sClearTimeSpanishOam_13[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x32, 0x106
+};
+
+static const u16 sClearTimeSpanishOam_14[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x3b, 0x11a
+};
+
+static const u16 sFullLinesSpanishOam_3[OAM_DATA_SIZE(7)] = {
+    7,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x19f, 0xc0,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1bf, 0xc4,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1df, 0xc8,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ff, 0xcc,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1f, 0xd0,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x3f, 0xd4,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x5f, 0xd8
+};
+
+static const u16 sCollectingSpanishOam_0[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x19f, 0x11c
+};
+
+static const u16 sCollectingSpanishOam_1[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1a8, 0x11a
+};
+
+static const u16 sCollectingSpanishOam_2[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1b1, 0x11e
+};
+
+static const u16 sCollectingSpanishOam_3[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1ba, 0x104
+};
+
+static const u16 sCollectingSpanishOam_4[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1c3, 0x108
+};
+
+static const u16 sCollectingSpanishOam_5[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1cc, 0x118
+};
+
+static const u16 sCollectingSpanishOam_6[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1d6, 0x142
+};
+
+static const u16 sCollectingSpanishOam_7[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1de, 0x100
+};
+
+static const u16 sCollectingSpanishOam_8[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1e7, 0x112
+};
+
+static const u16 sCollectingSpanishOam_9[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1f1, 0x108
+};
+
+static const u16 sCollectingSpanishOam_10[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x3, 0x106
+};
+
+static const u16 sCollectingSpanishOam_11[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0xd, 0x108
+};
+
+static const u16 sCollectingSpanishOam_12[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1f, 0x11a
+};
+
+static const u16 sCollectingSpanishOam_13[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x29, 0x102
+};
+
+static const u16 sCollectingSpanishOam_14[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x31, 0x112
+};
+
+static const u16 sCollectingSpanishOam_15[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x3b, 0x108
+};
+
+static const u16 sCollectingSpanishOam_16[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x44, 0x142
+};
+
+static const u16 sCollectingSpanishOam_17[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x4d, 0x11a
+};
+
+static const u16 sCollectingSpanishOam_18[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x56, 0x140
+};
+
+static const u16 sFullLinesSpanishOam_2[OAM_DATA_SIZE(7)] = {
+    7,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ae, 0x1180,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ce, 0x1184,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ee, 0x1188,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0xe, 0x118c,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x2e, 0x1190,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x4e, 0x1194,
+    0x0, 0x1ee, 0x11c8
+};
+
+static const u16 sEndingImageOam_NewRecordSpanish[OAM_DATA_SIZE(6)] = {
     6,
     OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1e6, 0x5016,
     0xf0, OBJ_SIZE_16x16 | 0x6, 0x501a,
@@ -282,7 +966,170 @@ const u16 sEndingImageOam_NewRecordSpanish[OAM_DATA_SIZE(6)] = {
     0x0, 0x16, 0x505c
 };
 
-const u16 sEndingImageOam_NewRecordGerman[OAM_DATA_SIZE(6)] = {
+static const u16 sFullLinesGermanOam_0[OAM_DATA_SIZE(5)] = {
+    5,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1c6, 0x80,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1e6, 0x84,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x6, 0x88,
+    0xf0, OBJ_SIZE_16x16 | 0x26, 0x8c,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x36, 0x8e
+};
+
+static const u16 sClearTimeGermanOam_0[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1c6, 0x102
+};
+
+static const u16 sClearTimeGermanOam_1[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1cf, 0x108
+};
+
+static const u16 sClearTimeGermanOam_2[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1d8, 0x118
+};
+
+static const u16 sClearTimeGermanOam_3[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1e2, 0x150
+};
+
+static const u16 sClearTimeGermanOam_4[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1eb, 0x142
+};
+
+static const u16 sClearTimeGermanOam_5[OAM_DATA_SIZE(1)] = {
+    1,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x1f2, 0x110
+};
+
+static const u16 sClearTimeGermanOam_6[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1f8, 0x10c
+};
+
+static const u16 sClearTimeGermanOam_7[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1, 0x142
+};
+
+static const u16 sClearTimeGermanOam_8[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0xa, 0x108
+};
+
+static const u16 sClearTimeGermanOam_9[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1a, 0x14e
+};
+
+static const u16 sClearTimeGermanOam_10[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x24, 0x108
+};
+
+static const u16 sClearTimeGermanOam_11[OAM_DATA_SIZE(1)] = {
+    1,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x2b, 0x110
+};
+
+static const u16 sClearTimeGermanOam_12[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x30, 0x142
+};
+
+static const u16 sFullLinesGermanOam_3[OAM_DATA_SIZE(5)] = {
+    5,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1be, 0xc0,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1de, 0xc4,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1fe, 0xc8,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1e, 0xcc,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x3e, 0xd0
+};
+
+static const u16 sCollectingGermanOam_0[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1be, 0x10c
+};
+
+static const u16 sCollectingGermanOam_1[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1c7, 0x108
+};
+
+static const u16 sCollectingGermanOam_2[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1d0, 0x10a
+};
+
+static const u16 sCollectingGermanOam_3[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1d8, 0x146
+};
+
+static const u16 sCollectingGermanOam_4[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1e2, 0x118
+};
+
+static const u16 sCollectingGermanOam_5[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1ec, 0x106
+};
+
+static const u16 sCollectingGermanOam_6[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1f5, 0x108
+};
+
+static const u16 sCollectingGermanOam_7[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1fe, 0x118
+};
+
+static const u16 sCollectingGermanOam_8[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x8, 0x108
+};
+
+static const u16 sCollectingGermanOam_9[OAM_DATA_SIZE(1)] = {
+    1,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x17, 0x110
+};
+
+static const u16 sCollectingGermanOam_10[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x1c, 0x142
+};
+
+static const u16 sCollectingGermanOam_11[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x25, 0x108
+};
+
+static const u16 sCollectingGermanOam_12[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x2e, 0x116
+};
+
+static const u16 sCollectingGermanOam_13[OAM_DATA_SIZE(1)] = {
+    1,
+    0xf0, OBJ_SIZE_16x16 | 0x38, 0x140
+};
+
+static const u16 sFullLinesGermanOam_2[OAM_DATA_SIZE(6)] = {
+    6,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1af, 0x1180,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1cf, 0x1184,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ef, 0x1188,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0xf, 0x118c,
+    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x2f, 0x1190,
+    OBJ_SHAPE_VERTICAL | 0xf0, 0x4f, 0x1194
+};
+
+static const u16 sEndingImageOam_NewRecordGerman[OAM_DATA_SIZE(6)] = {
     6,
     OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1e6, 0x5016,
     0xf0, OBJ_SIZE_16x16 | 0x6, 0x501a,
@@ -292,7 +1139,7 @@ const u16 sEndingImageOam_NewRecordGerman[OAM_DATA_SIZE(6)] = {
     0x0, 0x16, 0x505c
 };
 
-#endif // REGION_EU
+#else // !REGION_EU
 
 static const u16 sEndingImage_UnusedOam_549f12[OAM_DATA_SIZE(5)] = {
     5,
@@ -1195,6 +2042,8 @@ static const u16 sEndingImage_UnusedOam_54a5f8[OAM_DATA_SIZE(5)] = {
     OBJ_SHAPE_HORIZONTAL | 0xf1, OBJ_SIZE_32x16 | 0x30, 0x190
 };
 
+#endif // REGION_EU
+
 static const u16 sEndingImageOam_LineClearTime_Hiragana[OAM_DATA_SIZE(3)] = {
     0x3,
     OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1dc, 0x80,
@@ -1312,970 +2161,6 @@ static const u16 sYourRateHiraganaOam_10[OAM_DATA_SIZE(1)] = {
     0x1,
     0xf0, OBJ_SIZE_16x16 | 0x3a, 0x154
 };
-
-#ifdef REGION_EU
-
-static const u16 sFullLinesGermanOam_0[OAM_DATA_SIZE(5)] = {
-    5,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1c6, 0x80,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1e6, 0x84,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x6, 0x88,
-    0xf0, OBJ_SIZE_16x16 | 0x26, 0x8c,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x36, 0x8e
-};
-
-static const u16 sFullLinesGermanOam_1[OAM_DATA_SIZE(8)] = {
-    8,
-    0xf0, OBJ_SIZE_16x16 | 0x1d4, 0x0,
-    0xf0, OBJ_SIZE_16x16 | 0x1df, 0x2,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x1ed, 0x4,
-    0xf0, OBJ_SIZE_16x16 | 0x1f5, 0x5,
-    0xf0, OBJ_SIZE_16x16 | 0x0, 0x7,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0xf, 0x9,
-    0xf0, OBJ_SIZE_16x16 | 0x16, 0xa,
-    0xf0, OBJ_SIZE_16x16 | 0x21, 0xc
-};
-
-static const u16 sFullLinesGermanOam_2[OAM_DATA_SIZE(6)] = {
-    6,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1af, 0x1180,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1cf, 0x1184,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ef, 0x1188,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0xf, 0x118c,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x2f, 0x1190,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x4f, 0x1194
-};
-
-static const u16 sFullLinesGermanOam_3[OAM_DATA_SIZE(5)] = {
-    5,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1be, 0xc0,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1de, 0xc4,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1fe, 0xc8,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1e, 0xcc,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x3e, 0xd0
-};
-
-static const u16 sFullLinesGermanOam_4[OAM_DATA_SIZE(4)] = {
-    4,
-    0xf0, OBJ_SIZE_16x16 | 0x1fb, 0x12,
-    0xf0, OBJ_SIZE_16x16 | 0x1f0, 0x10,
-    0xf0, OBJ_SIZE_16x16 | 0x1e6, 0xe,
-    0xf0, OBJ_SIZE_16x16 | 0xa, 0x14
-};
-
-static const u16 sFullLinesGermanOam_5[OAM_DATA_SIZE(6)] = {
-    6,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1af, 0x1180,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1cf, 0x1184,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ef, 0x1188,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0xf, 0x118c,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x2f, 0x1190,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x4f, 0x1194
-};
-
-static const u16 sClearTimeGermanOam_0[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1c6, 0x102
-};
-
-static const u16 sClearTimeGermanOam_1[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1cf, 0x108
-};
-
-static const u16 sClearTimeGermanOam_2[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1d8, 0x118
-};
-
-static const u16 sClearTimeGermanOam_3[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1e2, 0x150
-};
-
-static const u16 sClearTimeGermanOam_4[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1eb, 0x142
-};
-
-static const u16 sClearTimeGermanOam_5[OAM_DATA_SIZE(1)] = {
-    1,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x1f2, 0x110
-};
-
-static const u16 sClearTimeGermanOam_6[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1f8, 0x10c
-};
-
-static const u16 sClearTimeGermanOam_7[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1, 0x142
-};
-
-static const u16 sClearTimeGermanOam_8[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0xa, 0x108
-};
-
-static const u16 sClearTimeGermanOam_9[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1a, 0x14e
-};
-
-static const u16 sClearTimeGermanOam_10[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x24, 0x108
-};
-
-static const u16 sClearTimeGermanOam_11[OAM_DATA_SIZE(1)] = {
-    1,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x2b, 0x110
-};
-
-static const u16 sClearTimeGermanOam_12[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x30, 0x142
-};
-
-static const u16 sCollectingGermanOam_0[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1be, 0x10c
-};
-
-static const u16 sCollectingGermanOam_1[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1c7, 0x108
-};
-
-static const u16 sCollectingGermanOam_2[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1d0, 0x10a
-};
-
-static const u16 sCollectingGermanOam_3[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1d8, 0x146
-};
-
-static const u16 sCollectingGermanOam_4[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1e2, 0x118
-};
-
-static const u16 sCollectingGermanOam_5[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1ec, 0x106
-};
-
-static const u16 sCollectingGermanOam_6[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1f5, 0x108
-};
-
-static const u16 sCollectingGermanOam_7[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1fe, 0x118
-};
-
-static const u16 sCollectingGermanOam_8[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x8, 0x108
-};
-
-static const u16 sCollectingGermanOam_9[OAM_DATA_SIZE(1)] = {
-    1,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x17, 0x110
-};
-
-static const u16 sCollectingGermanOam_10[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1c, 0x142
-};
-
-static const u16 sCollectingGermanOam_11[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x25, 0x108
-};
-
-static const u16 sCollectingGermanOam_12[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x2e, 0x116
-};
-
-static const u16 sCollectingGermanOam_13[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x38, 0x140
-};
-
-static const u16 sFullLinesFrenchOam_0[OAM_DATA_SIZE(6)] = {
-    6,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ac, 0x80,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1cc, 0x84,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ec, 0x88,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0xc, 0x8c,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x2c, 0x90,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x4c, 0x94
-};
-
-static const u16 sFullLinesFrenchOam_1[OAM_DATA_SIZE(8)] = {
-    8,
-    0xf0, OBJ_SIZE_16x16 | 0x1d4, 0x0,
-    0xf0, OBJ_SIZE_16x16 | 0x1df, 0x2,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x1ed, 0x4,
-    0xf0, OBJ_SIZE_16x16 | 0x1f5, 0x5,
-    0xf0, OBJ_SIZE_16x16 | 0x0, 0x7,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0xf, 0x9,
-    0xf0, OBJ_SIZE_16x16 | 0x16, 0xa,
-    0xf0, OBJ_SIZE_16x16 | 0x21, 0xc
-};
-
-static const u16 sFullLinesFrenchOam_2[OAM_DATA_SIZE(8)] = {
-    8,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ae, 0x1180,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0xe, 0x118c,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x2e, 0x1190,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x4e, 0x1194,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ce, 0x1184,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ee, 0x1188,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1ce, 0x11c4,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1ee, 0x11c8
-};
-
-static const u16 sFullLinesFrenchOam_3[OAM_DATA_SIZE(7)] = {
-    7,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x198, 0xc0,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1b8, 0xc4,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1d8, 0xc8,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1f8, 0xcc,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x18, 0xd0,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x38, 0xd4,
-    0xf0, OBJ_SIZE_16x16 | 0x58, 0xd8
-};
-
-static const u16 sFullLinesFrenchOam_4[OAM_DATA_SIZE(4)] = {
-    4,
-    0xf0, OBJ_SIZE_16x16 | 0x1fb, 0x12,
-    0xf0, OBJ_SIZE_16x16 | 0x1f0, 0x10,
-    0xf0, OBJ_SIZE_16x16 | 0x1e6, 0xe,
-    0xf0, OBJ_SIZE_16x16 | 0xa, 0x14
-};
-
-static const u16 sFullLinesFrenchOam_5[OAM_DATA_SIZE(8)] = {
-    8,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ae, 0x1180,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0xe, 0x118c,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x2e, 0x1190,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x4e, 0x1194,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ce, 0x1184,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ee, 0x1188,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1ce, 0x11c4,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1ee, 0x11c8
-};
-
-static const u16 sClearTimeFrenchOam_0[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1ac, 0x106
-};
-
-static const u16 sClearTimeFrenchOam_1[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1b5, 0x146
-};
-
-static const u16 sClearTimeFrenchOam_2[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1be, 0x11e
-};
-
-static const u16 sClearTimeFrenchOam_3[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1c8, 0x108
-};
-
-static const u16 sClearTimeFrenchOam_4[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1d1, 0x108
-};
-
-static const u16 sClearTimeFrenchOam_5[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1e3, 0x106
-};
-
-static const u16 sClearTimeFrenchOam_6[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1ec, 0x108
-};
-
-static const u16 sClearTimeFrenchOam_7[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1fd, 0x114
-};
-
-static const u16 sClearTimeFrenchOam_8[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x6, 0x100
-};
-
-static const u16 sClearTimeFrenchOam_9[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x19, 0x116
-};
-
-static const u16 sClearTimeFrenchOam_10[OAM_DATA_SIZE(1)] = {
-    1,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x22, 0x110
-};
-
-static const u16 sClearTimeFrenchOam_11[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x28, 0x140
-};
-
-static const u16 sClearTimeFrenchOam_12[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x31, 0x140
-};
-
-static const u16 sClearTimeFrenchOam_13[OAM_DATA_SIZE(1)] = {
-    1,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x39, 0x110
-};
-
-static const u16 sClearTimeFrenchOam_14[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x3f, 0x11a
-};
-
-static const u16 sClearTimeFrenchOam_15[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x49, 0x118
-};
-
-static const u16 sCollectingFrenchOam_0[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x198, 0x142
-};
-
-static const u16 sCollectingFrenchOam_1[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1a0, 0x100
-};
-
-static const u16 sCollectingFrenchOam_2[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1ab, 0x146
-};
-
-static const u16 sCollectingFrenchOam_3[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1b5, 0x148
-};
-
-static const u16 sCollectingFrenchOam_4[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1c7, 0x14c
-};
-
-static const u16 sCollectingFrenchOam_5[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1d3, 0x11a
-};
-
-static const u16 sCollectingFrenchOam_6[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1dd, 0x102
-};
-
-static const u16 sCollectingFrenchOam_7[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1e5, 0x112
-};
-
-static const u16 sCollectingFrenchOam_8[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1f0, 0x108
-};
-
-static const u16 sCollectingFrenchOam_9[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1f9, 0x142
-};
-
-static const u16 sCollectingFrenchOam_10[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x2, 0x140
-};
-
-static const u16 sCollectingFrenchOam_11[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x14, 0x104
-};
-
-static const u16 sCollectingFrenchOam_12[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1e, 0x11a
-};
-
-static const u16 sCollectingFrenchOam_13[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x27, 0x114
-};
-
-static const u16 sCollectingFrenchOam_14[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x2f, 0x114
-};
-
-static const u16 sCollectingFrenchOam_15[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x38, 0x108
-};
-
-static const u16 sCollectingFrenchOam_16[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x42, 0x104
-};
-
-static const u16 sCollectingFrenchOam_17[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x4b, 0x142
-};
-
-static const u16 sCollectingFrenchOam_18[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x54, 0x108
-};
-
-static const u16 sCollectingFrenchOam_19[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x5d, 0x140
-};
-
-static const u16 sFullLinesItalianOam_0[OAM_DATA_SIZE(7)] = {
-    7,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1a7, 0x80,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1c7, 0x84,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1e7, 0x88,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x7, 0x8c,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x27, 0x90,
-    0xf0, OBJ_SIZE_16x16 | 0x47, 0x94,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x57, 0x96
-};
-
-static const u16 sFullLinesItalianOam_1[OAM_DATA_SIZE(8)] = {
-    8,
-    0xf0, OBJ_SIZE_16x16 | 0x1d4, 0x0,
-    0xf0, OBJ_SIZE_16x16 | 0x1df, 0x2,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x1ed, 0x4,
-    0xf0, OBJ_SIZE_16x16 | 0x1f5, 0x5,
-    0xf0, OBJ_SIZE_16x16 | 0x0, 0x7,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0xf, 0x9,
-    0xf0, OBJ_SIZE_16x16 | 0x16, 0xa,
-    0xf0, OBJ_SIZE_16x16 | 0x21, 0xc
-};
-
-static const u16 sFullLinesItalianOam_2[OAM_DATA_SIZE(4)] = {
-    4,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1cd, 0xc0,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ed, 0xc4,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0xd, 0xc8,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x2d, 0xcc
-};
-
-static const u16 sFullLinesItalianOam_3[OAM_DATA_SIZE(7)] = {
-    7,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1b2, 0xcd,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1d2, 0xd1,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1f2, 0xd5,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x12, 0xd9,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x32, 0xdd,
-    0xf0, OBJ_SIZE_16x16 | 0x3a, 0x98,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x4a, 0x9a
-};
-
-static const u16 sFullLinesItalianOam_4[OAM_DATA_SIZE(4)] = {
-    4,
-    0xf0, OBJ_SIZE_16x16 | 0x1fb, 0x12,
-    0xf0, OBJ_SIZE_16x16 | 0x1f0, 0x10,
-    0xf0, OBJ_SIZE_16x16 | 0x1e6, 0xe,
-    0xf0, OBJ_SIZE_16x16 | 0xa, 0x14
-};
-
-static const u16 sFullLinesItalianOam_5[OAM_DATA_SIZE(6)] = {
-    6,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1b4, 0x11c0,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1d4, 0x11c4,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1f4, 0x11c8,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x14, 0x11cc,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x34, 0x11d0,
-    OBJ_SHAPE_HORIZONTAL | 0x0, 0x1cc, 0x1203
-};
-
-static const u16 sClearTimeItalianOam_0[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1a7, 0x142
-};
-
-static const u16 sClearTimeItalianOam_1[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1b0, 0x108
-};
-
-static const u16 sClearTimeItalianOam_2[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1b9, 0x116
-};
-
-static const u16 sClearTimeItalianOam_3[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1c3, 0x11c
-};
-
-static const u16 sClearTimeItalianOam_4[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1cc, 0x11a
-};
-
-static const u16 sClearTimeItalianOam_5[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1de, 0x104
-};
-
-static const u16 sClearTimeItalianOam_6[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1e7, 0x11a
-};
-
-static const u16 sClearTimeItalianOam_7[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1f0, 0x116
-};
-
-static const u16 sClearTimeItalianOam_8[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1fb, 0x11c
-};
-
-static const u16 sClearTimeItalianOam_9[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x4, 0x114
-};
-
-static const u16 sClearTimeItalianOam_10[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0xd, 0x108
-};
-
-static const u16 sClearTimeItalianOam_11[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x16, 0x142
-};
-
-static const u16 sClearTimeItalianOam_12[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1e, 0x100
-};
-
-static const u16 sClearTimeItalianOam_13[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x28, 0x116
-};
-
-static const u16 sClearTimeItalianOam_14[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x32, 0x108
-};
-
-static const u16 sClearTimeItalianOam_15[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x3b, 0x118
-};
-
-static const u16 sClearTimeItalianOam_16[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x45, 0x142
-};
-
-static const u16 sClearTimeItalianOam_17[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x4e, 0x11a
-};
-
-static const u16 sYourRateItalianOam_0[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1cd, 0x11c
-};
-
-static const u16 sYourRateItalianOam_1[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1d6, 0x108
-};
-
-static const u16 sYourRateItalianOam_2[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1df, 0x11e
-};
-
-static const u16 sYourRateItalianOam_3[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1e8, 0x104
-};
-
-static const u16 sYourRateItalianOam_4[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1f1, 0x108
-};
-
-static const u16 sYourRateItalianOam_5[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1fa, 0x118
-};
-
-static const u16 sYourRateItalianOam_6[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x4, 0x142
-};
-
-static const u16 sYourRateItalianOam_7[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0xd, 0x146
-};
-
-static const u16 sYourRateItalianOam_8[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x16, 0x100
-};
-
-static const u16 sYourRateItalianOam_9[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x20, 0x114
-};
-
-static const u16 sYourRateItalianOam_10[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x29, 0x108
-};
-
-static const u16 sCollectingItalianOam_0[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1b2, 0x140
-};
-
-static const u16 sCollectingItalianOam_1[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1bb, 0x142
-};
-
-static const u16 sCollectingItalianOam_2[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1c4, 0x11e
-};
-
-static const u16 sCollectingItalianOam_3[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1cd, 0x146
-};
-
-static const u16 sCollectingItalianOam_4[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1d6, 0x116
-};
-
-static const u16 sCollectingItalianOam_5[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1e0, 0x108
-};
-
-static const u16 sCollectingItalianOam_6[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1e9, 0x118
-};
-
-static const u16 sCollectingItalianOam_7[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1f3, 0x142
-};
-
-static const u16 sCollectingItalianOam_8[OAM_DATA_SIZE(1)] = {
-    1,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x1fa, 0x110
-};
-
-static const u16 sCollectingItalianOam_9[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x8, 0x11e
-};
-
-static const u16 sCollectingItalianOam_10[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x11, 0x100
-};
-
-static const u16 sCollectingItalianOam_11[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1c, 0x104
-};
-
-static const u16 sCollectingItalianOam_12[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x26, 0x104
-};
-
-static const u16 sCollectingItalianOam_13[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x30, 0x11a
-};
-
-static const u16 sCollectingItalianOam_14[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x38, 0x114
-};
-
-static const u16 sCollectingItalianOam_15[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x3f, 0x142
-};
-
-static const u16 sCollectingItalianOam_16[OAM_DATA_SIZE(1)] = {
-    1,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x46, 0x110
-};
-
-static const u16 sFullLinesSpanishOam_0[OAM_DATA_SIZE(5)] = {
-    5,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ba, 0x80,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1da, 0x84,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1fa, 0x88,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1a, 0x8c,
-    0xf0, OBJ_SIZE_16x16 | 0x3a, 0x90
-};
-
-static const u16 sFullLinesSpanishOam_1[OAM_DATA_SIZE(8)] = {
-    8,
-    0xf0, OBJ_SIZE_16x16 | 0x1d4, 0x0,
-    0xf0, OBJ_SIZE_16x16 | 0x1df, 0x2,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x1ed, 0x4,
-    0xf0, OBJ_SIZE_16x16 | 0x1f5, 0x5,
-    0xf0, OBJ_SIZE_16x16 | 0x0, 0x7,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0xf, 0x9,
-    0xf0, OBJ_SIZE_16x16 | 0x16, 0xa,
-    0xf0, OBJ_SIZE_16x16 | 0x21, 0xc
-};
-
-static const u16 sFullLinesSpanishOam_2[OAM_DATA_SIZE(7)] = {
-    7,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ae, 0x1180,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ce, 0x1184,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ee, 0x1188,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0xe, 0x118c,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x2e, 0x1190,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x4e, 0x1194,
-    0x0, 0x1ee, 0x11c8
-};
-
-static const u16 sFullLinesSpanishOam_3[OAM_DATA_SIZE(7)] = {
-    7,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x19f, 0xc0,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1bf, 0xc4,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1df, 0xc8,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ff, 0xcc,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1f, 0xd0,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x3f, 0xd4,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x5f, 0xd8
-};
-
-static const u16 sFullLinesSpanishOam_4[OAM_DATA_SIZE(4)] = {
-    4,
-    0xf0, OBJ_SIZE_16x16 | 0x1fb, 0x12,
-    0xf0, OBJ_SIZE_16x16 | 0x1f0, 0x10,
-    0xf0, OBJ_SIZE_16x16 | 0x1e6, 0xe,
-    0xf0, OBJ_SIZE_16x16 | 0xa, 0x14
-};
-
-static const u16 sFullLinesSpanishOam_5[OAM_DATA_SIZE(7)] = {
-    7,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ae, 0x1180,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ce, 0x1184,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1ee, 0x1188,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0xe, 0x118c,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x2e, 0x1190,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x4e, 0x1194,
-    0x0, 0x1ee, 0x11c8
-};
-
-static const u16 sClearTimeSpanishOam_0[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1ba, 0x142
-};
-
-static const u16 sClearTimeSpanishOam_1[OAM_DATA_SIZE(1)] = {
-    1,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x1c1, 0x110
-};
-
-static const u16 sClearTimeSpanishOam_2[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1c7, 0x108
-};
-
-static const u16 sClearTimeSpanishOam_3[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1d0, 0x116
-};
-
-static const u16 sClearTimeSpanishOam_4[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1da, 0x11c
-};
-
-static const u16 sClearTimeSpanishOam_5[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1e3, 0x11a
-};
-
-static const u16 sClearTimeSpanishOam_6[OAM_DATA_SIZE(1)] = {
-    1,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x1f7, 0x110
-};
-
-static const u16 sClearTimeSpanishOam_7[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1fd, 0x118
-};
-
-static const u16 sClearTimeSpanishOam_8[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x8, 0x144
-};
-
-static const u16 sClearTimeSpanishOam_9[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x13, 0x108
-};
-
-static const u16 sClearTimeSpanishOam_10[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1c, 0x11e
-};
-
-static const u16 sClearTimeSpanishOam_11[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x25, 0x142
-};
-
-static const u16 sClearTimeSpanishOam_12[OAM_DATA_SIZE(1)] = {
-    1,
-    OBJ_SHAPE_VERTICAL | 0xf0, 0x2c, 0x110
-};
-
-static const u16 sClearTimeSpanishOam_13[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x32, 0x106
-};
-
-static const u16 sClearTimeSpanishOam_14[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x3b, 0x11a
-};
-
-static const u16 sCollectingSpanishOam_0[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x19f, 0x11c
-};
-
-static const u16 sCollectingSpanishOam_1[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1a8, 0x11a
-};
-
-static const u16 sCollectingSpanishOam_2[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1b1, 0x11e
-};
-
-static const u16 sCollectingSpanishOam_3[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1ba, 0x104
-};
-
-static const u16 sCollectingSpanishOam_4[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1c3, 0x108
-};
-
-static const u16 sCollectingSpanishOam_5[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1cc, 0x118
-};
-
-static const u16 sCollectingSpanishOam_6[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1d6, 0x142
-};
-
-static const u16 sCollectingSpanishOam_7[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1de, 0x100
-};
-
-static const u16 sCollectingSpanishOam_8[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1e7, 0x112
-};
-
-static const u16 sCollectingSpanishOam_9[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1f1, 0x108
-};
-
-static const u16 sCollectingSpanishOam_10[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x3, 0x106
-};
-
-static const u16 sCollectingSpanishOam_11[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0xd, 0x108
-};
-
-static const u16 sCollectingSpanishOam_12[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x1f, 0x11a
-};
-
-static const u16 sCollectingSpanishOam_13[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x29, 0x102
-};
-
-static const u16 sCollectingSpanishOam_14[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x31, 0x112
-};
-
-static const u16 sCollectingSpanishOam_15[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x3b, 0x108
-};
-
-static const u16 sCollectingSpanishOam_16[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x44, 0x142
-};
-
-static const u16 sCollectingSpanishOam_17[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x4d, 0x11a
-};
-
-static const u16 sCollectingSpanishOam_18[OAM_DATA_SIZE(1)] = {
-    1,
-    0xf0, OBJ_SIZE_16x16 | 0x56, 0x140
-};
-
-#endif // REGION_EU
 
 const u16 sCreditsCharactersPal[3 * 16] = INCBIN_U16("data/ending/CreditsCharacters.pal");
 const u16 sCreditsChozoWallPal[15 * 16] = INCBIN_U16("data/ending/CreditsChozoWall.pal");
@@ -2653,199 +2538,6 @@ const struct EndingImageOam sEndingImageOam_Collecting_English[17] = {
     },
 };
 
-const struct EndingImageOam sEndingImageOam_FullLines_Hiragana[ENDING_IMAGE_LINE_END] = {
-    [ENDING_IMAGE_LINE_CLEAR_TIME] = {
-        .type = ENDING_OAM_TYPE_LINE,
-        .spawnDelay = 0,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = HALF_BLOCK_SIZE + 8,
-        .pFrame = sEndingImageOam_LineClearTime_Hiragana
-    },
-    [ENDING_IMAGE_LINE_TIMER] = {
-        .type = ENDING_OAM_TYPE_LINE,
-        .spawnDelay = 0,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE - 4,
-        .pFrame = sEndingImageOam_LineTimer_English
-    },
-    [ENDING_IMAGE_LINE_YOUR_RATE] = {
-        .type = ENDING_OAM_TYPE_LINE,
-        .spawnDelay = 0,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE - 4,
-        .pFrame = sEndingImageOam_LineYourRate_English
-    },
-    [ENDING_IMAGE_LINE_COLLECTING] = {
-        .type = ENDING_OAM_TYPE_LINE,
-        .spawnDelay = 0,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
-        .pFrame = sEndingImageOam_LineCollecting_Hiragana
-    },
-    [ENDING_IMAGE_LINE_PERCENTAGE] = {
-        .type = ENDING_OAM_TYPE_LINE,
-        .spawnDelay = 0,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 4,
-        .yPosition = BLOCK_SIZE * 2,
-        .pFrame = sEndingImageOam_LinePercentage_English
-    },
-    [ENDING_IMAGE_LINE_NEXT_MISSION] = {
-        .type = ENDING_OAM_TYPE_LINE,
-        .spawnDelay = 0,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE * 2 + HALF_BLOCK_SIZE - 2,
-        .pFrame = sEndingImageOam_LineNextMission_English
-    },
-};
-
-const struct EndingImageOam sEndingImageOam_ClearTime_Hiragana[6] = {
-    [0] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 4 * 0,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = HALF_BLOCK_SIZE + 8,
-        .pFrame = sClearTimeHiraganaOam_0
-    },
-    [1] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 4 * 2,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = HALF_BLOCK_SIZE + 8,
-        .pFrame = sClearTimeHiraganaOam_1
-    },
-    [2] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 4 * 4,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = HALF_BLOCK_SIZE + 8,
-        .pFrame = sClearTimeHiraganaOam_2
-    },
-    [3] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 4 * 6,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = HALF_BLOCK_SIZE + 8,
-        .pFrame = sClearTimeHiraganaOam_3
-    },
-    [4] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 4 * 8,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = HALF_BLOCK_SIZE + 8,
-        .pFrame = sClearTimeHiraganaOam_4
-    },
-    [5] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 4 * 10,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = HALF_BLOCK_SIZE + 8,
-        .pFrame = sClearTimeHiraganaOam_5
-    }
-};
-
-const struct EndingImageOam sEndingImageOam_Collecting_Hiragana[11] = {
-    [0] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 5 * 0,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
-        .pFrame = sYourRateHiraganaOam_0
-    },
-    [1] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 5 * 1,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
-        .pFrame = sYourRateHiraganaOam_1
-    },
-    [2] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 5 * 2,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
-        .pFrame = sYourRateHiraganaOam_2
-    },
-    [3] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 5 * 3,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
-        .pFrame = sYourRateHiraganaOam_3
-    },
-    [4] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 5 * 4,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
-        .pFrame = sYourRateHiraganaOam_4
-    },
-    [5] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 5 * 5,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
-        .pFrame = sYourRateHiraganaOam_5
-    },
-    [6] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 5 * 6,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
-        .pFrame = sYourRateHiraganaOam_6
-    },
-    [7] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 5 * 7,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
-        .pFrame = sYourRateHiraganaOam_7
-    },
-    [8] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 5 * 8,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
-        .pFrame = sYourRateHiraganaOam_8
-    },
-    [9] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 5 * 9,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
-        .pFrame = sYourRateHiraganaOam_9
-    },
-    [10] = {
-        .type = ENDING_OAM_TYPE_CHAR,
-        .spawnDelay = 1 + 5 * 10,
-        .unk_2 = 0,
-        .xPosition = BLOCK_SIZE * 2 - 8,
-        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
-        .pFrame = sYourRateHiraganaOam_10
-    }
-};
-
 #ifdef REGION_EU
 
 const struct EndingImageOam sEndingImageOam_FullLines_German[ENDING_IMAGE_LINE_END] = {
@@ -2863,7 +2555,7 @@ const struct EndingImageOam sEndingImageOam_FullLines_German[ENDING_IMAGE_LINE_E
         .unk_2 = 0,
         .xPosition = 120,
         .yPosition = 60,
-        .pFrame = sFullLinesGermanOam_1
+        .pFrame = sEndingImageOam_LineTimer_English
     },
     [2] = {
         .type = ENDING_OAM_TYPE_LINE,
@@ -2887,7 +2579,7 @@ const struct EndingImageOam sEndingImageOam_FullLines_German[ENDING_IMAGE_LINE_E
         .unk_2 = 0,
         .xPosition = 124,
         .yPosition = 128,
-        .pFrame = sFullLinesGermanOam_4
+        .pFrame = sEndingImageOam_LinePercentage_English
     },
     [5] = {
         .type = ENDING_OAM_TYPE_LINE,
@@ -2895,7 +2587,7 @@ const struct EndingImageOam sEndingImageOam_FullLines_German[ENDING_IMAGE_LINE_E
         .unk_2 = 0,
         .xPosition = 120,
         .yPosition = 158,
-        .pFrame = sFullLinesGermanOam_5
+        .pFrame = sFullLinesGermanOam_2
     },
 };
 
@@ -3136,7 +2828,7 @@ const struct EndingImageOam sEndingImageOam_FullLines_French[ENDING_IMAGE_LINE_E
         .unk_2 = 0,
         .xPosition = 120,
         .yPosition = 60,
-        .pFrame = sFullLinesFrenchOam_1
+        .pFrame = sEndingImageOam_LineTimer_English
     },
     [2] = {
         .type = ENDING_OAM_TYPE_LINE,
@@ -3160,7 +2852,7 @@ const struct EndingImageOam sEndingImageOam_FullLines_French[ENDING_IMAGE_LINE_E
         .unk_2 = 0,
         .xPosition = 124,
         .yPosition = 128,
-        .pFrame = sFullLinesFrenchOam_4
+        .pFrame = sEndingImageOam_LinePercentage_English
     },
     [5] = {
         .type = ENDING_OAM_TYPE_LINE,
@@ -3168,7 +2860,7 @@ const struct EndingImageOam sEndingImageOam_FullLines_French[ENDING_IMAGE_LINE_E
         .unk_2 = 0,
         .xPosition = 120,
         .yPosition = 155,
-        .pFrame = sFullLinesFrenchOam_5
+        .pFrame = sFullLinesFrenchOam_2
     },
 };
 
@@ -3481,7 +3173,7 @@ const struct EndingImageOam sEndingImageOam_FullLines_Italian[ENDING_IMAGE_LINE_
         .unk_2 = 0,
         .xPosition = 120,
         .yPosition = 60,
-        .pFrame = sFullLinesItalianOam_1
+        .pFrame = sEndingImageOam_LineTimer_English
     },
     [2] = {
         .type = ENDING_OAM_TYPE_LINE,
@@ -3505,7 +3197,7 @@ const struct EndingImageOam sEndingImageOam_FullLines_Italian[ENDING_IMAGE_LINE_
         .unk_2 = 0,
         .xPosition = 124,
         .yPosition = 128,
-        .pFrame = sFullLinesItalianOam_4
+        .pFrame = sEndingImageOam_LinePercentage_English
     },
     [5] = {
         .type = ENDING_OAM_TYPE_LINE,
@@ -3909,7 +3601,7 @@ const struct EndingImageOam sEndingImageOam_FullLines_Spanish[ENDING_IMAGE_LINE_
         .unk_2 = 0,
         .xPosition = 120,
         .yPosition = 60,
-        .pFrame = sFullLinesSpanishOam_1
+        .pFrame = sEndingImageOam_LineTimer_English
     },
     [2] = {
         .type = ENDING_OAM_TYPE_LINE,
@@ -3933,7 +3625,7 @@ const struct EndingImageOam sEndingImageOam_FullLines_Spanish[ENDING_IMAGE_LINE_
         .unk_2 = 0,
         .xPosition = 124,
         .yPosition = 128,
-        .pFrame = sFullLinesSpanishOam_4
+        .pFrame = sEndingImageOam_LinePercentage_English
     },
     [5] = {
         .type = ENDING_OAM_TYPE_LINE,
@@ -3941,7 +3633,7 @@ const struct EndingImageOam sEndingImageOam_FullLines_Spanish[ENDING_IMAGE_LINE_
         .unk_2 = 0,
         .xPosition = 120,
         .yPosition = 155,
-        .pFrame = sFullLinesSpanishOam_5
+        .pFrame = sFullLinesSpanishOam_2
     },
 };
 
@@ -4225,6 +3917,199 @@ const struct EndingImageOam sEndingImageOam_Collecting_Spanish[19] = {
 
 #endif // REGION_EU
 
+const struct EndingImageOam sEndingImageOam_FullLines_Hiragana[ENDING_IMAGE_LINE_END] = {
+    [ENDING_IMAGE_LINE_CLEAR_TIME] = {
+        .type = ENDING_OAM_TYPE_LINE,
+        .spawnDelay = 0,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = HALF_BLOCK_SIZE + 8,
+        .pFrame = sEndingImageOam_LineClearTime_Hiragana
+    },
+    [ENDING_IMAGE_LINE_TIMER] = {
+        .type = ENDING_OAM_TYPE_LINE,
+        .spawnDelay = 0,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE - 4,
+        .pFrame = sEndingImageOam_LineTimer_English
+    },
+    [ENDING_IMAGE_LINE_YOUR_RATE] = {
+        .type = ENDING_OAM_TYPE_LINE,
+        .spawnDelay = 0,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE - 4,
+        .pFrame = sEndingImageOam_LineYourRate_English
+    },
+    [ENDING_IMAGE_LINE_COLLECTING] = {
+        .type = ENDING_OAM_TYPE_LINE,
+        .spawnDelay = 0,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
+        .pFrame = sEndingImageOam_LineCollecting_Hiragana
+    },
+    [ENDING_IMAGE_LINE_PERCENTAGE] = {
+        .type = ENDING_OAM_TYPE_LINE,
+        .spawnDelay = 0,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 4,
+        .yPosition = BLOCK_SIZE * 2,
+        .pFrame = sEndingImageOam_LinePercentage_English
+    },
+    [ENDING_IMAGE_LINE_NEXT_MISSION] = {
+        .type = ENDING_OAM_TYPE_LINE,
+        .spawnDelay = 0,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE * 2 + HALF_BLOCK_SIZE - 2,
+        .pFrame = sEndingImageOam_LineNextMission_English
+    },
+};
+
+const struct EndingImageOam sEndingImageOam_ClearTime_Hiragana[6] = {
+    [0] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 4 * 0,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = HALF_BLOCK_SIZE + 8,
+        .pFrame = sClearTimeHiraganaOam_0
+    },
+    [1] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 4 * 2,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = HALF_BLOCK_SIZE + 8,
+        .pFrame = sClearTimeHiraganaOam_1
+    },
+    [2] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 4 * 4,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = HALF_BLOCK_SIZE + 8,
+        .pFrame = sClearTimeHiraganaOam_2
+    },
+    [3] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 4 * 6,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = HALF_BLOCK_SIZE + 8,
+        .pFrame = sClearTimeHiraganaOam_3
+    },
+    [4] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 4 * 8,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = HALF_BLOCK_SIZE + 8,
+        .pFrame = sClearTimeHiraganaOam_4
+    },
+    [5] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 4 * 10,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = HALF_BLOCK_SIZE + 8,
+        .pFrame = sClearTimeHiraganaOam_5
+    }
+};
+
+const struct EndingImageOam sEndingImageOam_Collecting_Hiragana[11] = {
+    [0] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 5 * 0,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
+        .pFrame = sYourRateHiraganaOam_0
+    },
+    [1] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 5 * 1,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
+        .pFrame = sYourRateHiraganaOam_1
+    },
+    [2] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 5 * 2,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
+        .pFrame = sYourRateHiraganaOam_2
+    },
+    [3] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 5 * 3,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
+        .pFrame = sYourRateHiraganaOam_3
+    },
+    [4] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 5 * 4,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
+        .pFrame = sYourRateHiraganaOam_4
+    },
+    [5] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 5 * 5,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
+        .pFrame = sYourRateHiraganaOam_5
+    },
+    [6] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 5 * 6,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
+        .pFrame = sYourRateHiraganaOam_6
+    },
+    [7] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 5 * 7,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
+        .pFrame = sYourRateHiraganaOam_7
+    },
+    [8] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 5 * 8,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
+        .pFrame = sYourRateHiraganaOam_8
+    },
+    [9] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 5 * 9,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
+        .pFrame = sYourRateHiraganaOam_9
+    },
+    [10] = {
+        .type = ENDING_OAM_TYPE_CHAR,
+        .spawnDelay = 1 + 5 * 10,
+        .unk_2 = 0,
+        .xPosition = BLOCK_SIZE * 2 - 8,
+        .yPosition = BLOCK_SIZE + HALF_BLOCK_SIZE + 12,
+        .pFrame = sYourRateHiraganaOam_10
+    }
+};
+
 extern const u32 sEndingImage_TopGfx_0[6186];
 extern const u32 sEndingImage_TopTileTable_0[577];
 extern const u32 sEndingImage_BottomGfx_0[3525];
@@ -4321,7 +4206,1244 @@ const u16* const sEndingImagesPalPointers[ENDING_IMAGE_COUNT] = {
     [ENDING_IMAGE_SEVEN] = sEndingImage_Palette_7
 };
 
-#ifdef REGION_JP
+#if defined(REGION_EU)
+
+const struct CreditsEntry sCredits[308] = {
+    [0] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [1] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [2] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [3] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [4] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [5] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [6] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [7] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [8] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [9] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "STAFF CREDITS"
+    },
+    [10] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [11] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [12] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [13] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [14] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [15] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [16] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [17] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [18] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [19] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "PRODUCER"
+    },
+    [20] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [21] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [22] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Izushi Takehiro"
+    },
+    [23] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [24] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [25] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [26] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [27] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "DIRECTOR"
+    },
+    [28] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [29] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [30] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Sakamoto Yoshio"
+    },
+    [31] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [32] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "               "
+    },
+    [33] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [34] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [35] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "SAMUS DESIGN"
+    },
+    [36] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [37] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [38] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Kiyotake Hiroji"
+    },
+    [39] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [40] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "               "
+    },
+    [41] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [42] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [43] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "COURSE DESIGN"
+    },
+    [44] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [45] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [46] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Ueda Masani"
+    },
+    [47] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [48] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Hosokawa Takehiko"
+    },
+    [49] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [50] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Nakada Ryuichi"
+    },
+    [51] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [52] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "               "
+    },
+    [53] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "               "
+    },
+    [54] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [55] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "GRAPHIC DESIGN"
+    },
+    [56] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [57] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [58] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Morisawa Takayasu"
+    },
+    [59] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [60] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Matsushita Tadashi"
+    },
+    [61] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [62] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Miyamoto Fumiko"
+    },
+    [63] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [64] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Sakiyama Chiharu"
+    },
+    [65] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [66] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Furuta Norikatsu"
+    },
+    [67] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [68] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Momose Hiroshi"
+    },
+    [69] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [70] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [71] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [72] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [73] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "PROGRAMMING"
+    },
+    [74] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [75] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [76] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Yamano Katsuya"
+    },
+    [77] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [78] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Katsuki Yoshinori"
+    },
+    [79] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [80] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Ozaki Nobuhiro"
+    },
+    [81] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [82] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Kawase Tomohiro"
+    },
+    [83] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [84] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Shimizu Hideaki"
+    },
+    [85] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [86] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [87] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [88] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [89] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "MUSIC COMPOSITION"
+    },
+    [90] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [91] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [92] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Yamamoto Kenji"
+    },
+    [93] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [94] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Hamano Minako"
+    },
+    [95] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [96] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [97] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [98] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [99] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "SOUND EFFECT & PROGRAMMING"
+    },
+    [100] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [101] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [102] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Fujii Takaya"
+    },
+    [103] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [104] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [105] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [106] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [107] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "PACKAGE & MANUAL DESIGN"
+    },
+    [108] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [109] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [110] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Inoue Yasuo"
+    },
+    [111] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [112] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Nakamichi Sachiko"
+    },
+    [113] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [114] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Takahashi Yasuko"
+    },
+    [115] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [116] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [117] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [118] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [119] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "COORDINATION"
+    },
+    [120] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [121] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [122] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Harada Takahiro"
+    },
+    [123] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [124] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [125] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [126] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [127] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "DEBUG"
+    },
+    [128] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [129] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [130] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "SUPER MARIO CLUB"
+    },
+    [131] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [132] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [133] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "               "
+    },
+    [134] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [135] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [136] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "SPECIAL THANKS"
+    },
+    [137] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [138] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [139] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Fukui Kota"
+    },
+    [140] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [141] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Nishimura Kentaro"
+    },
+    [142] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [143] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Nakano Takao"
+    },
+    [144] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [145] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Osawa Kazuyoshi"
+    },
+    [146] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [147] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Furuta Takeshi"
+    },
+    [148] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [149] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Saeki Naoko"
+    },
+    [150] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [151] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Tanaka Hirokazu"
+    },
+    [152] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [153] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "               "
+    },
+    [154] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [155] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [156] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [157] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [158] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [159] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [160] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "NORTH AMERICAN LOCALIZATION"
+    },
+    [161] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [162] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [163] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Nate Bihldorff"
+    },
+    [164] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [165] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Bill Trinen"
+    },
+    [166] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [167] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [168] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [169] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [170] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "LOCALIZATION MANAGEMENT"
+    },
+    [171] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [172] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [173] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Jeff Miller"
+    },
+    [174] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [175] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Leslie Swan"
+    },
+    [176] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [177] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [178] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [179] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [180] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [181] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [182] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [183] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [184] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "EUROPEAN LOCALIZATION"
+    },
+    [185] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [186] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [187] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "PRODUCT LOCALIZATION TEAM"
+    },
+    [188] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [189] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [190] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [191] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [192] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "COORDINATION"
+    },
+    [193] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [194] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [195] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Marcus Krause"
+    },
+    [196] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [197] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [198] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [199] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [200] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "TRANSLATION"
+    },
+    [201] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [202] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [203] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "GERMAN"
+    },
+    [204] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [205] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [206] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Jan Peitzmeier"
+    },
+    [207] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [208] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [209] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [210] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "FRENCH"
+    },
+    [211] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [212] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [213] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Thomas Miriel"
+    },
+    [214] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [215] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [216] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [217] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "SPANISH"
+    },
+    [218] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [219] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [220] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Miguel L#pez Genicio"
+    },
+    [221] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [222] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [223] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [224] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "ITALIAN"
+    },
+    [225] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [226] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [227] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Massimo Maietti"
+    },
+    [228] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [229] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [230] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [231] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [232] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "VALIDATION AND TESTING TEAM"
+    },
+    [233] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [234] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [235] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "SUPERVISOR"
+    },
+    [236] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [237] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [238] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Erkan Kasap"
+    },
+    [239] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [240] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Rudi Schnitzer"
+    },
+    [241] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [242] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [243] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Chris Strau$"
+    },
+    [244] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [245] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Blaz Majic"
+    },
+    [246] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [247] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Steffen Lotz"
+    },
+    [248] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [249] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Wolfgang Weber"
+    },
+    [250] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [251] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [252] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Daniel Barsan"
+    },
+    [253] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [254] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Raphael von Brasch"
+    },
+    [255] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [256] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Kamel Chelirem"
+    },
+    [257] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [258] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [259] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Santo Gennaro"
+    },
+    [260] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [261] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "%                   "
+    },
+    [262] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Angel Moreno Colmena"
+    },
+    [263] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [264] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Daniel Herron Museur"
+    },
+    [265] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [266] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Arrate Ugarte Sandon+s"
+    },
+    [267] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [268] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "               "
+    },
+    [269] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [270] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [271] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [272] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [273] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [274] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [275] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [276] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "EXECUTIVE PRODUCER"
+    },
+    [277] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [278] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [279] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "Iwata Satoru"
+    },
+    [280] = {
+        .type = CREDIT_LINE_TYPE_BLUE,
+        .text = "               "
+    },
+    [281] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = "               "
+    },
+    [282] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [283] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [284] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [285] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [286] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [287] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [288] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [289] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [290] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [291] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [292] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [293] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = ""
+    },
+    [294] = {
+        .type = CREDIT_LINE_TYPE_WHITE_BIG,
+        .text = "               "
+    },
+    [295] = {
+        .type = CREDIT_LINE_TYPE_ALL_RIGHTS,
+        .text = ""
+    },
+    [296] = {
+        .type = CREDIT_LINE_TYPE_THE_COPYRIGHT,
+        .text = ""
+    },
+    [297] = {
+        .type = CREDIT_LINE_TYPE_SCENARIO,
+        .text = ""
+    },
+    [298] = {
+        .type = CREDIT_LINE_TYPE_RESERVED,
+        .text = ""
+    },
+    [299] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [300] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [301] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [302] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [303] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [304] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [305] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [306] = {
+        .type = CREDIT_LINE_TYPE_BLANK,
+        .text = ""
+    },
+    [307] = {
+        .type = CREDIT_LINE_TYPE_END,
+        .text = ""
+    },
+};
+
+#elif defined(REGION_JP)
 
 const struct CreditsEntry sCredits[245] = {
     [0] = {
@@ -5306,7 +6428,7 @@ const struct CreditsEntry sCredits[245] = {
     },
 };
 
-#else // !REGION_JP
+#else // !(REGION_EU || REGION_JP)
 
 const struct CreditsEntry sCredits[240] = {
     [0] = {
@@ -6271,7 +7393,7 @@ const struct CreditsEntry sCredits[240] = {
     }
 };
 
-#endif // REGION_JP
+#endif
 
 const u16* const sEndingWhitePalPointers[4] = {
     [0] = sEndingPosingPal_White1,
@@ -6288,16 +7410,15 @@ const u8 sEndingImageNewRecordPalettes[12] = {
     5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 5
 };
 
-// TODO: Fix
 #ifdef REGION_EU
 const u16 * const sEndingImageOamPointers_NewRecord[LANGUAGE_END] = {
     [LANGUAGE_JAPANESE] = sEndingImageOam_NewRecordEnglish,
     [LANGUAGE_HIRAGANA] = sEndingImageOam_NewRecordEnglish,
     [LANGUAGE_ENGLISH] = sEndingImageOam_NewRecordEnglish,
-    [LANGUAGE_GERMAN] = sEndingImageOam_NewRecordEnglish,
-    [LANGUAGE_FRENCH] = sEndingImageOam_NewRecordEnglish,
-    [LANGUAGE_ITALIAN] = sEndingImageOam_NewRecordEnglish,
-    [LANGUAGE_SPANISH] = sEndingImageOam_NewRecordEnglish
+    [LANGUAGE_GERMAN] = sEndingImageOam_NewRecordGerman,
+    [LANGUAGE_FRENCH] = sEndingImageOam_NewRecordFrench,
+    [LANGUAGE_ITALIAN] = sEndingImageOam_NewRecordItalian,
+    [LANGUAGE_SPANISH] = sEndingImageOam_NewRecordSpanish
 };
 #endif // REGION_EU
 

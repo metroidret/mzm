@@ -41,9 +41,6 @@ extern const struct EndingImageOam sEndingImageOam_FullLines_English[ENDING_IMAG
 extern const struct EndingImageOam sEndingImageOam_ClearTime_English[9];
 extern const struct EndingImageOam sEndingImageOam_YourRate_English[11];
 extern const struct EndingImageOam sEndingImageOam_Collecting_English[17];
-extern const struct EndingImageOam sEndingImageOam_FullLines_Hiragana[ENDING_IMAGE_LINE_END];
-extern const struct EndingImageOam sEndingImageOam_ClearTime_Hiragana[6];
-extern const struct EndingImageOam sEndingImageOam_Collecting_Hiragana[11];
 #ifdef REGION_EU
 extern const struct EndingImageOam sEndingImageOam_FullLines_German[ENDING_IMAGE_LINE_END];
 extern const struct EndingImageOam sEndingImageOam_ClearTime_German[13];
@@ -59,6 +56,9 @@ extern const struct EndingImageOam sEndingImageOam_FullLines_Spanish[ENDING_IMAG
 extern const struct EndingImageOam sEndingImageOam_ClearTime_Spanish[15];
 extern const struct EndingImageOam sEndingImageOam_Collecting_Spanish[19];
 #endif // REGION_EU
+extern const struct EndingImageOam sEndingImageOam_FullLines_Hiragana[ENDING_IMAGE_LINE_END];
+extern const struct EndingImageOam sEndingImageOam_ClearTime_Hiragana[6];
+extern const struct EndingImageOam sEndingImageOam_Collecting_Hiragana[11];
 
 extern const u32* const sEndingImagesTopGfxPointers[ENDING_IMAGE_COUNT];
 extern const u32* const sEndingImagesBottomGfxPointers[ENDING_IMAGE_COUNT];
@@ -66,11 +66,13 @@ extern const u32* const sEndingImagesTopTileTablePointers[ENDING_IMAGE_COUNT];
 extern const u32* const sEndingImagesHalfTileTablePointers[ENDING_IMAGE_COUNT];
 extern const u16* const sEndingImagesPalPointers[ENDING_IMAGE_COUNT];
 
-#ifdef REGION_JP
+#if defined(REGION_EU)
+extern const struct CreditsEntry sCredits[308];
+#elif defined(REGION_JP)
 extern const struct CreditsEntry sCredits[245];
-#else // !REGION_JP
+#else // !(REGION_EU || REGION_JP)
 extern const struct CreditsEntry sCredits[240];
-#endif // REGION_JP
+#endif
 
 extern const u16* const sEndingWhitePalPointers[4];
 

@@ -1296,9 +1296,6 @@ u8 CutsceneStartBackgroundFading(u8 type)
             break;
 
         case COLOR_FADING_WHITE:
-        #ifdef REGION_EU
-        case 9:
-        #endif // REGION_EU
             BitFill(3, 0, PALRAM_BASE, PALRAM_SIZE, 16);
             DmaTransfer(3, PALRAM_BASE, PAL_WITH_FADE, PALRAM_SIZE, 16);
 

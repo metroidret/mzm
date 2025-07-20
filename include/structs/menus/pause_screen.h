@@ -52,6 +52,10 @@ struct WorldMapData {
     u16 yPosition;
 };
 
+struct MapScreenAreaIds {
+    u8 ids[MAX_AMOUNT_OF_AREAS];
+};
+
 struct MinimapAreaName {
     Area area1;
     u8 mapX1;

@@ -120,15 +120,13 @@ extern const struct OamArray sPauseScreenBossIconsOam[BOSS_ICON_OAM_ID_END];
 extern const struct OamArray sPauseScreenTargetsOam[TARGET_OAM_END];
 extern const struct OamArray sPauseScreenWorldMapOam[WORLD_MAP_OAM_ID_END];
 
-#ifdef REGION_EU
 extern const u8 sMaintainedInputDelays_Fast[7];
+#ifdef REGION_EU
 extern const u8 sMaintainedInputDelays_Slow[4];
 extern const u8 sMaintainedInputDelaysLastSet[MAINTAINED_INPUT_SPEED_COUNT];
-#else // !REGION_EU
-extern const u8 sMaintainedInputDelays_Fast[8];
 #endif // REGION_EU
 
-extern const u8 sMapScreenAreaIds[MAX_AMOUNT_OF_AREAS];
+extern const struct MapScreenAreaIds sMapScreenAreaIds;
 extern const u8 sMapScreenAreasViewOrder[MAX_AMOUNT_OF_AREAS];
 
 extern const struct MinimapAreaName sMinimapAreaNames[10];

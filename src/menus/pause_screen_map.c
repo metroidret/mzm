@@ -933,7 +933,7 @@ void PauseScreenGetAllMinimapData(u8 start)
     for (; i < size; i++)
     {
         // Get area
-        area = sMapScreenAreaIds[i];
+        area = sMapScreenAreaIds.ids[i];
 
         // Get minimap data and add the downloaded tiles
         PauseScreenGetMinimapData(area, PAUSE_SCREEN_DATA.mapsDataPointer[i]);

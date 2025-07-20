@@ -101,6 +101,25 @@ static const u16 sMiscOam_BombHeader_Frame0[OAM_DATA_SIZE(5)] = {
     OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x16 | 0x20, OBJ_SPRITE_OAM | 0x336e
 };
 
+#ifdef REGION_EU
+static const u16 sMiscOam_SuitHeader_Frame0[OAM_DATA_SIZE(5)] = {
+    0x5,
+    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x8, OBJ_SPRITE_OAM | 0x3016,
+    OBJ_SHAPE_HORIZONTAL | 0x0, 0x28, OBJ_SPRITE_OAM | 0x301a,
+    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x16 | 0x0, OBJ_SPRITE_OAM | 0x336c,
+    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x16 | 0x30, OBJ_SPRITE_OAM | 0x3370,
+    0x0, OBJ_SIZE_16x16 | 0x20, OBJ_SPRITE_OAM | 0x336f
+};
+
+static const u16 sMiscOam_MiscHeader_Frame0[OAM_DATA_SIZE(5)] = {
+    0x5,
+    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x8, OBJ_SPRITE_OAM | 0x301c,
+    OBJ_SHAPE_HORIZONTAL | 0x0, 0x28, OBJ_SPRITE_OAM | 0x3020,
+    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x16 | 0x0, OBJ_SPRITE_OAM | 0x336c,
+    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x16 | 0x30, OBJ_SPRITE_OAM | 0x3370,
+    0x0, OBJ_SIZE_16x16 | 0x20, OBJ_SPRITE_OAM | 0x336f
+};
+#else // !REGION_EU
 static const u16 sMiscOam_SuitHeader_Frame0[OAM_DATA_SIZE(4)] = {
     0x4,
     OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x8, OBJ_SPRITE_OAM | 0x3016,
@@ -116,6 +135,7 @@ static const u16 sMiscOam_MiscHeader_Frame0[OAM_DATA_SIZE(4)] = {
     OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x16 | 0x30, OBJ_SPRITE_OAM | 0x3370,
     0x0, OBJ_SIZE_16x16 | 0x20, OBJ_SPRITE_OAM | 0x336f
 };
+#endif // REGION_EU
 
 static const u16 sBorderArrowOam_Unused_Frame0[OAM_DATA_SIZE(1)] = {
     0x1,
@@ -3823,11 +3843,7 @@ const struct OamArray sPauseScreenWorldMapOam[WORLD_MAP_OAM_ID_END] = {
 };
 
 
-#ifdef REGION_EU
 const u8 sMaintainedInputDelays_Fast[7] = {
-#else // !REGION_EU
-const u8 sMaintainedInputDelays_Fast[8] = {
-#endif // REGION_EU
     20, 4, 4, 4, 4, 4, 2
 };
 
@@ -3842,16 +3858,30 @@ const u8 sMaintainedInputDelaysLastSet[MAINTAINED_INPUT_SPEED_COUNT] = {
 };
 #endif // REGION_EU
 
-const u8 sMapScreenAreaIds[MAX_AMOUNT_OF_AREAS] = {
-    AREA_BRINSTAR,
-    AREA_KRAID,
-    AREA_NORFAIR,
-    AREA_RIDLEY,
-    AREA_TOURIAN,
-    AREA_CRATERIA,
-    AREA_CHOZODIA,
-    0x8
+// NOTE: Wrapped in a struct so that it is 4 byte aligned
+const struct MapScreenAreaIds sMapScreenAreaIds = {
+    .ids = {
+        AREA_BRINSTAR,
+        AREA_KRAID,
+        AREA_NORFAIR,
+        AREA_RIDLEY,
+        AREA_TOURIAN,
+        AREA_CRATERIA,
+        AREA_CHOZODIA,
+        0x8
+    }
 };
+
+// const u8 sMapScreenAreaIds[MAX_AMOUNT_OF_AREAS] = {
+//     AREA_BRINSTAR,
+//     AREA_KRAID,
+//     AREA_NORFAIR,
+//     AREA_RIDLEY,
+//     AREA_TOURIAN,
+//     AREA_CRATERIA,
+//     AREA_CHOZODIA,
+//     0x8
+// };
 
 const u8 sMapScreenAreasViewOrder[MAX_AMOUNT_OF_AREAS] = {
     AREA_CRATERIA,
@@ -4000,6 +4030,82 @@ u8* const sPauseScreen_IgtAndTanksVramAddresses[IGT_AND_TANKS_VRAM_ADDRESS_END] 
 
 // TODO use char defines
 const u8 sCharacterWidths[1184] = {
+    #ifdef REGION_EU
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    4, 6, 7, 7, 7, 8, 8, 4, 5, 5, 7, 7, 4, 7, 4, 7,
+    7, 5, 7, 7, 7, 7, 7, 7, 7, 7, 4, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 6, 6, 6, 6, 6, 6, 6, 6, 4, 6, 6, 6, 7, 7, 6,
+    6, 6, 6, 6, 6, 6, 7, 7, 8, 6, 6, 5, 7, 5, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 5, 5, 5, 5, 5, 5, 5, 5, 2, 5, 5, 3, 6, 5, 5,
+    5, 5, 5, 5, 5, 5, 6, 6, 6, 5, 6, 5, 3, 5, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 6, 8, 8, 8, 8, 8, 16, 8, 11, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    14, 8, 14, 8, 14, 8, 14, 8, 14, 8, 14, 8, 16, 8, 16, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 16, 8, 13, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 6, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    6, 6, 6, 6, 6, 6, 8, 6, 6, 6, 6, 6, 4, 4, 4, 4,
+    6, 6, 6, 6, 6, 6, 6, 8, 8, 6, 6, 6, 6, 6, 6, 6,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    5, 5, 5, 5, 5, 5, 8, 5, 5, 5, 5, 5, 4, 4, 4, 4,
+    8, 6, 5, 5, 5, 5, 5, 6, 8, 6, 6, 6, 6, 6, 5, 5,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    6, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 6, 5, 7, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 7, 7, 7, 7, 7, 7, 7, 7, 6, 7, 7, 7, 7, 7, 7,
+    7, 7, 7, 7, 6, 7, 7, 7, 7, 6, 7, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+    8, 6, 6, 6, 6, 6, 5, 6, 6, 2, 5, 5, 3, 6, 6, 6,
+    6, 6, 5, 6, 5, 6, 6, 6, 6, 6, 6, 8, 8, 8, 8, 8
+    #else // !REGION_EU
     8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
     8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
     8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
@@ -4074,6 +4180,7 @@ const u8 sCharacterWidths[1184] = {
     8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
     8, 6, 6, 6, 6, 6, 5, 6, 6, 2, 5, 5, 3, 6, 6, 6,
     6, 6, 5, 6, 5, 6, 6, 6, 6, 6, 6, 8, 8, 8, 8, 8
+    #endif // REGION_EU
 };
 
 const struct Message sMessage_Empty = {

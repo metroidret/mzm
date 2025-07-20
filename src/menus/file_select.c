@@ -2538,7 +2538,11 @@ static void OptionsSetupTiletable(void)
     u16* dst;
 
     // Decomp tile table
+    #ifdef REGION_EU
+    CallLZ77UncompWram(sFileSelectMenuTileTable, (void*)sEwramPointer + 0x5100);
+    #else // !REGION_EU
     CallLZ77UncompWram(sFileSelectOptionsTileTable, (void*)sEwramPointer + 0x5100);
+    #endif // REGION_EU
 
     // Clear all the options
     for (i = 0; i < ARRAY_SIZE(FILE_SELECT_DATA.optionsUnlocked); i++)
@@ -4728,7 +4732,11 @@ static void FileSelectInit(void)
 
     CallLZ77UncompVram(sFileSelectChozoBackgroundTileTable, VRAM_BASE + 0xF800);
 
+    #ifdef REGION_EU
+    CallLZ77UncompWram(sFileSelectOptionsTileTable, (void*)sEwramPointer + 0x800);
+    #else // !REGION_EU
     CallLZ77UncompWram(sFileSelectMenuTileTable, (void*)sEwramPointer + 0x800);
+    #endif // REGION_EU
     CallLZ77UncompWram(sFileSelect3BigPanelsTileTable, (void*)sEwramPointer + 0x2800);
     CallLZ77UncompWram(sFileSelect1Small2BigPanelsTileTable, (void*)sEwramPointer + 0x1800);
     CallLZ77UncompWram(sFileSelect2Big1SmallPanelsTileTable, (void*)sEwramPointer + 0x2000);

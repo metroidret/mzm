@@ -4,6 +4,7 @@
 #include "macros.h"
 #include "structs/minimap.h"
 
+#ifndef REGION_EU
 static const u8 sBuffer_754ab4[256] = {
     UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX,
     UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX,
@@ -38,6 +39,7 @@ static const u8 sBuffer_754ab4[256] = {
     UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX,
     UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX,
 };
+#endif // !REGION_EU
 
 FORCE_RODATA
 union EwramData* sEwramPointer = (union EwramData*)EWRAM_BASE;
