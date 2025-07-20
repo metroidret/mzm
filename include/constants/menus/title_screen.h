@@ -39,4 +39,9 @@ enum TitleScreenCopyrightSymbol {
     TITLE_SCREEN_COPYRIGHT_SYMBOL_TRADEMARK // ™️
 };
 
+enum TitleScreenMenuOption {
+    TITLE_SCREEN_MENU_OPTION_START_GAME,
+    TITLE_SCREEN_MENU_OPTION_LANGUAGE
+};
+
 #endif

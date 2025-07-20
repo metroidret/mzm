@@ -3872,17 +3872,6 @@ const struct MapScreenAreaIds sMapScreenAreaIds = {
     }
 };
 
-// const u8 sMapScreenAreaIds[MAX_AMOUNT_OF_AREAS] = {
-//     AREA_BRINSTAR,
-//     AREA_KRAID,
-//     AREA_NORFAIR,
-//     AREA_RIDLEY,
-//     AREA_TOURIAN,
-//     AREA_CRATERIA,
-//     AREA_CHOZODIA,
-//     0x8
-// };
-
 const u8 sMapScreenAreasViewOrder[MAX_AMOUNT_OF_AREAS] = {
     AREA_CRATERIA,
     AREA_BRINSTAR,

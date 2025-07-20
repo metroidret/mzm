@@ -985,7 +985,7 @@ u32 TitleScreenCheckPlayEffects(void)
     else if (gChangedInput & (KEY_A | KEY_START))
     {
         #ifdef REGION_EU
-        tmp1 = TITLE_SCREEN_DATA.oamTimings[2].unk_1 ? 3 : 1;
+        tmp1 = TITLE_SCREEN_DATA.oamTimings[2].menuOption != TITLE_SCREEN_MENU_OPTION_START_GAME ? 3 : 1;
         tmp2 = tmp1;
         return tmp2;
         #else // !REGION
@@ -998,21 +998,21 @@ u32 TitleScreenCheckPlayEffects(void)
     {
         tmp2 = FALSE;
 
-        if (gChangedInput & KEY_UP && TITLE_SCREEN_DATA.oamTimings[2].unk_1 != 0)
+        if (gChangedInput & KEY_UP && TITLE_SCREEN_DATA.oamTimings[2].menuOption != TITLE_SCREEN_MENU_OPTION_START_GAME)
         {
-            TITLE_SCREEN_DATA.oamTimings[2].unk_1 = 0;
+            TITLE_SCREEN_DATA.oamTimings[2].menuOption = TITLE_SCREEN_MENU_OPTION_START_GAME;
             tmp2 = TRUE;
         }
-        else if (gChangedInput & KEY_DOWN && TITLE_SCREEN_DATA.oamTimings[2].unk_1 == 0)
+        else if (gChangedInput & KEY_DOWN && TITLE_SCREEN_DATA.oamTimings[2].menuOption == TITLE_SCREEN_MENU_OPTION_START_GAME)
         {
-            TITLE_SCREEN_DATA.oamTimings[2].unk_1 = 1;
+            TITLE_SCREEN_DATA.oamTimings[2].menuOption = TITLE_SCREEN_MENU_OPTION_LANGUAGE;
             tmp2 = TRUE;
         }
 
         if (tmp2)
         {
             SoundPlay(0x1FA);
-            TitleScreenSetMenuPalette(TITLE_SCREEN_DATA.oamTimings[2].unk_1);
+            TitleScreenSetMenuPalette(TITLE_SCREEN_DATA.oamTimings[2].menuOption);
             TITLE_SCREEN_DATA.demoTimer = 0;
         }
     }
@@ -1290,7 +1290,7 @@ void TitleScreenInit(void)
 
     #ifdef REGION_EU
     DmaTransfer(3, &sTitleScreenUnselectedMenuPal, PALRAM_BASE + 0x1E0, sizeof(sTitleScreenUnselectedMenuPal), 16);
-    TITLE_SCREEN_DATA.oamTimings[2].unk_1 = 0;
+    TITLE_SCREEN_DATA.oamTimings[2].menuOption = TITLE_SCREEN_MENU_OPTION_START_GAME;
     #endif // REGION_EU
 
     TitleScreenLoadPageData(&sTitleScreenPageData[0]);
@@ -1327,7 +1327,7 @@ void TitleScreenInit(void)
     #ifdef REGION_EU
     CallLZ77UncompVram(sTitleScreenMenuGfxPointers[(gLanguage - LANGUAGE_ENGLISH) * 2], VRAM_BASE + 0xE800);
     CallLZ77UncompVram(sTitleScreenMenuGfxPointers[(gLanguage - LANGUAGE_ENGLISH) * 2 + 1], VRAM_BASE + 0xEC00);
-    TitleScreenSetMenuPalette(TITLE_SCREEN_DATA.oamTimings[2].unk_1);
+    TitleScreenSetMenuPalette(TITLE_SCREEN_DATA.oamTimings[2].menuOption);
     #endif // REGION_EU
 
     // Undefined
@@ -1427,9 +1427,9 @@ void TitleScreenVBlank_Empty(void)
 /**
  * @brief Sets the palette for "Start Game" and "Language" on the title screen
  * 
- * @param param0 Which option is selected
+ * @param option Which option is selected
  */
-static void TitleScreenSetMenuPalette(u8 param0)
+static void TitleScreenSetMenuPalette(u8 option)
 {
     s32 temp;
     u16* dst1;
@@ -1440,7 +1440,7 @@ static void TitleScreenSetMenuPalette(u8 param0)
     dst1 = VRAM_BASE + 0x352 + sTitleScreenPageData[0].tiletablePage * 0x800;
     dst2 = dst1 + 0x20;
 
-    if (param0 == 0)
+    if (option == TITLE_SCREEN_MENU_OPTION_START_GAME)
     {
         for (i = 0; i < 12; i++, dst1++, dst2++)
         {
@@ -1461,7 +1461,7 @@ static void TitleScreenSetMenuPalette(u8 param0)
     dst1 = VRAM_BASE + 0x3D6 + sTitleScreenPageData[0].tiletablePage * 0x800;
     dst2 = dst1 + 0x20;
 
-    if (param0 != 0)
+    if (option != TITLE_SCREEN_MENU_OPTION_START_GAME)
     {
         for (i = 0; i < 8; i++, dst1++, dst2++)
         {
