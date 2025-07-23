@@ -14,10 +14,11 @@ The ROMs are named like this : `mzm_{region}.gba` (or `mzm_{region}_debug.gba`)
 
 Region indicates which region the ROM targets :
 - us : USA, North America `sha1: 5de8536afe1f0078ee6fe1089f890e8c7aa0a6e8`
-- eu : Europe **(Not yet supported)**
+- eu : Europe `sha1: 0fd107445a42e6f3a3e5ce8c865f412583179903`
 - jp : Japan `sha1: 096f07685a3dc9286e71aa0b761f233b5efa2fcd`
 - cn : China **(Not yet supported)**
 - us_beta : USA beta version `sha1: 58986c4d6f2e5ccdc04936cc8b7c9d378570710c`
+- eu_beta : Europe beta version `sha1: 3c0b7ccd303c30ac5c4ffc9fb0aa7137a533ad69`
 
 Debug simply indicates whether the ROM contains the debug features, it is optional.
 
