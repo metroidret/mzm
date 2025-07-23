@@ -1,25 +1,28 @@
 [
   {
-    "path": "menus/BootDebug/Background.gfx.lz",
-    "count": 771,
+    "path": "menus/BootDebug/BootDebug_417e38.pal",
+    "count": 128,
     "addr": {
-      "us_beta": 4294200
+      "us_beta": 4292152,
+      "eu_beta": 4296320
     },
-    "size": 4
+    "size": 2
   },
   {
     "path": "menus/BootDebug/Background.pal",
     "count": 128,
     "addr": {
-      "us_beta": 4292408
+      "us_beta": 4292408,
+      "eu_beta": 4296576
     },
     "size": 2
   },
   {
-    "path": "menus/BootDebug/BootDebug_417e38.pal",
-    "count": 128,
+    "path": "menus/BootDebug/Objects.pal",
+    "count": 48,
     "addr": {
-      "us_beta": 4292152
+      "us_beta": 4292664,
+      "eu_beta": 4296832
     },
     "size": 2
   },
@@ -27,23 +30,26 @@
     "path": "menus/BootDebug/Objects.gfx.lz",
     "count": 222,
     "addr": {
-      "us_beta": 4292760
+      "us_beta": 4292760,
+      "eu_beta": 4296928
     },
     "size": 4
   },
   {
-    "path": "menus/BootDebug/Objects.pal",
-    "count": 48,
+    "path": "menus/BootDebug/Background.gfx.lz",
+    "count": 771,
     "addr": {
-      "us_beta": 4292664
+      "us_beta": 4294200,
+      "eu_beta": 4298368
     },
-    "size": 2
+    "size": 4
   },
   {
     "path": "menus/PauseScreen/PauseDebugEventListBg.pal",
     "count": 32,
     "addr": {
-      "us_beta": 4273604
+      "us_beta": 4273604,
+      "eu_beta": 4277772
     },
     "size": 2
   },
@@ -51,7 +57,8 @@
     "path": "menus/PauseScreen/PauseDebugEventListText.gfx.lz",
     "count": 336,
     "addr": {
-      "us_beta": 4273668
+      "us_beta": 4273668,
+      "eu_beta": 4277836
     },
     "size": 4
   }

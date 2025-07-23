@@ -661,11 +661,18 @@ void BootDebugSetupMenu(void)
     
     LZ77UncompVRAM(sBootDebugObjGfx, VRAM_OBJ);
     LZ77UncompVRAM(sBootDebugBgGfx, VRAM_BASE);
-    DMA_SET(3, sMinimapTilesGfx, BGCNT_TO_VRAM_CHAR_BASE(1), C_32_2_16(DMA_ENABLE, 0x1800));
 
-    DMA_SET(3, sMinimapTilesPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, 0x50));
-    DMA_SET(3, sBootDebugBgPal, PALRAM_BASE + 0x100, C_32_2_16(DMA_ENABLE, 0x80));
-    DMA_SET(3, sBootDebugObjPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, 0x30));
+    #ifdef REGION_EU
+    DmaTransfer(3, sMinimapTilesGfx, BGCNT_TO_VRAM_CHAR_BASE(1), 0x3000, 16);
+    DmaTransfer(3, sMinimapTilesPal, PALRAM_BASE, 5 * PAL_ROW_SIZE, 16);
+    DmaTransfer(3, sBootDebugBgPal, PALRAM_BASE + 8 * PAL_ROW_SIZE, 8 * PAL_ROW_SIZE, 16);
+    DmaTransfer(3, sBootDebugObjPal, PALRAM_OBJ, 3 * PAL_ROW_SIZE, 16);
+    #else // !REGION_EU
+    DMA_SET(3, sMinimapTilesGfx, BGCNT_TO_VRAM_CHAR_BASE(1), C_32_2_16(DMA_ENABLE, 0x3000 / sizeof(u16)));
+    DMA_SET(3, sMinimapTilesPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, 5 * PAL_ROW));
+    DMA_SET(3, sBootDebugBgPal, PALRAM_BASE + 8 * PAL_ROW_SIZE, C_32_2_16(DMA_ENABLE, 8 * PAL_ROW));
+    DMA_SET(3, sBootDebugObjPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, 3 * PAL_ROW));
+    #endif // REGION_EU
 
     BitFill(3, 0xD040, BGCNT_TO_VRAM_TILE_BASE(30), BGCNT_VRAM_TILE_SIZE * 2, 16);
     BitFill(3, 0x8040, BGCNT_TO_VRAM_TILE_BASE(28), BGCNT_VRAM_TILE_SIZE * 2, 16);

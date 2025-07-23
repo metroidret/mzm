@@ -1561,20 +1561,29 @@ void TitleScreenDrawString(const u8* pString, u16* dst, u8 palette)
 }
 
 #ifdef DEBUG
+
+#ifdef REGION_EU
+#define STRING_PAL_ROW 14
+#else // !REGION_EU
+#define STRING_PAL_ROW 15
+#endif // REGION_EU
+
 void TitleScreenDrawDebugText(void)
 {
     s32 i;
     u8 string[5];
     
     DmaTransfer(3, sCharactersGfx, VRAM_BASE + 0xF800, 0x800, 16);
-    DmaTransfer(3, sGameOverMenuPal+0x20, PALRAM_BASE + 0x1E0, 0x20, 16);
-    TitleScreenDrawString(sRomInfoStringPointers[0], VRAM_BASE + sTitleScreenPageData[0].tiletablePage * 0x800, 0xF);
+    #ifndef REGION_EU
+    DmaTransfer(3, sGameOverMenuPal + 1 * PAL_ROW_SIZE, PALRAM_BASE + 15 * PAL_ROW_SIZE, 1 * PAL_ROW_SIZE, 16);
+    #endif // !REGION_EU
+    TitleScreenDrawString(sRomInfoStringPointers[0], VRAM_BASE + sTitleScreenPageData[0].tiletablePage * 0x800, STRING_PAL_ROW);
 
     for (i = 0; i < 4; i++)
         string[i] = game_code[i];
     string[4] = '\0';
 
-    TitleScreenDrawString(string, VRAM_BASE + 0x40 + sTitleScreenPageData[0].tiletablePage * 0x800, 0xF);
+    TitleScreenDrawString(string, VRAM_BASE + 0x40 + sTitleScreenPageData[0].tiletablePage * 0x800, STRING_PAL_ROW);
 
     i = game_version >> 4;
     if (i >= 0 && i < 10)
@@ -1598,6 +1607,9 @@ void TitleScreenDrawDebugText(void)
     string[3] = 'D';
     string[4] = '\0';
 
-    TitleScreenDrawString(string, VRAM_BASE + 0x80 + sTitleScreenPageData[0].tiletablePage * 0x800, 0xF);
+    TitleScreenDrawString(string, VRAM_BASE + 0x80 + sTitleScreenPageData[0].tiletablePage * 0x800, STRING_PAL_ROW);
 }
+
+#undef STRING_PAL_ROW
+
 #endif // DEBUG

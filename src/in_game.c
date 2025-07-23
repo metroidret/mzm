@@ -523,6 +523,16 @@ void InitAndLoadGenerics(void)
     do {
     } while ((u16)(READ_16(REG_VCOUNT) - 21) < 140); // READ_16(REG_VCOUNT) <= SCREEN_SIZE_Y
 
+
+    #ifdef REGION_EU_BETA
+    do {
+        gIsLoadingFile = FALSE;
+        gPauseScreenFlag = PAUSE_SCREEN_NONE;
+        gCurrentCutscene = 0;
+        gTourianEscapeCutsceneStage = 0;
+    } while(0);
+    #endif // REGION_EU_BETA
+
     gIsLoadingFile = FALSE;
     gPauseScreenFlag = PAUSE_SCREEN_NONE;
     gCurrentCutscene = 0;

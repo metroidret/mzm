@@ -327,7 +327,17 @@ void agbmain(void)
                             gMainGameMode = GM_INGAME;
                             break;
                         case 2:
-                            gMainGameMode = GM_INTRO;
+                            #ifdef REGION_EU
+                            if (INVALID_EU_LANGUAGE(gLanguage))
+                            {
+                                gMainGameMode = GM_SOFT_RESET;
+                                gGameModeSub1 = sLanguageSelectGameModeSub1Values[2];
+                            }
+                            else
+                            #endif // REGION_EU
+                            {
+                                gMainGameMode = GM_INTRO;
+                            }
                             break;
                         case 3:
                             gMainGameMode = GM_MAP_SCREEN;

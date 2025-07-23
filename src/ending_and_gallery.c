@@ -1921,6 +1921,16 @@ u32 CreditsSubroutine(void)
             break;
 
         case 2:
+            #if defined(DEBUG) && !defined(REGION_US_BETA)
+            // This is a debug feature that lets you skip the credits by pressing L.
+            // It's part of the EU beta ROM but not the US beta ROM
+            if (gChangedInput & KEY_L)
+            {
+                ENDING_DATA.bldcnt = UCHAR_MAX;
+                gGameModeSub1++;
+                break;
+            }
+            #endif // DEBUG && !REGION_US_BETA
             subroutineResult = sCreditsFunctionPointers[ENDING_DATA.stage]();
             if (subroutineResult)
             {

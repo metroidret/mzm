@@ -20,6 +20,7 @@ Even though the final release of the game doesn't include any debug features, so
   - [Title Screen](#title-screen)
   - [File Select](#file-select)
   - [No-clip Mode](#no-clip-mode)
+  - [Skip Credits](#skip-credits)
 
 
 ## Boot Debug Menu
@@ -157,3 +158,7 @@ If you have the Metroid Fusion gallery unlocked, holding `L` while selecting the
 ### No-clip Mode
 
 While in-game, holding `L` + `B` and pressing `Start` will enable no-clip mode. In this mode, you can freely move around a room without interacting with collision. Holding `L` or `R` will let you move twice as fast. Pressing `Select` will switch the camera to be unaffected by scrolls and room boundaries. Pressing `Start` will turn off no-clip mode.
+
+### Skip Credits
+
+Pressing `L` while the credits are playing will skip the credits and go straight to the ending screen.

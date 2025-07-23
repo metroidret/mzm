@@ -83,23 +83,29 @@ void SoftReset(void)
     gStereoFlag = 0;
 
     #ifdef REGION_EU
-    if (INVALID_EU_LANGUAGE(gLanguage))
+    #ifdef DEBUG
+    if (gMainGameMode == GM_INTRO)
+    #endif // DEBUG
     {
-        gMainGameMode = GM_SOFT_RESET;
-        gGameModeSub1 = sLanguageSelectGameModeSub1Values[1];
+        if (INVALID_EU_LANGUAGE(gLanguage))
+        {
+            gMainGameMode = GM_SOFT_RESET;
+            gGameModeSub1 = sLanguageSelectGameModeSub1Values[1];
+        }
     }
-    #endif
+    #endif // REGION_EU
 
     gButtonInput = KEY_NONE;
     gPreviousButtonInput = KEY_NONE;
     gChangedInput = KEY_NONE;
 
     WRITE_16(REG_IF, USHORT_MAX);
-    #ifdef REGION_EU
+    // TODO: Find a better way to get a match here
+    #if defined(REGION_EU) && !defined(REGION_EU_BETA)
     // Written this way to produce matching ASM
     tmp = TRUE;
     WRITE_16(REG_IME, tmp);
-    #else // !REGION_EU
+    #else // !REGION_EU || REGION_EU_BETA
     WRITE_16(REG_IME, TRUE);
-    #endif // REGION_EU
+    #endif // REGION_EU && !REGION_EU_BETA
 }

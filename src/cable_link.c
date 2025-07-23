@@ -287,9 +287,9 @@ u8 FusionGalleryConnectProcess(void)
 
         case CONNECT_STAGE_RESTORE_AUDIO:
             InitializeAudio();
-            #ifndef DEBUG
+            #ifndef REGION_US_BETA
             FileSelectApplyStereo();
-            #endif // !DEBUG
+            #endif // !REGION_US_BETA
             PlayMusic(gIoTransferInfo.musicTrack, gIoTransferInfo.musicPriority);
             gIoTransferInfo.connectStage = CONNECT_STAGE_FINISH;
             break;

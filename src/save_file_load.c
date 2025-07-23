@@ -67,13 +67,13 @@ void Sram_InitSaveFile(void)
     gDifficulty = DIFF_NORMAL;
 
     gTimeAttackFlag = FALSE;
-    #ifdef REGION_US_BETA
+    #ifdef DEBUG
     gIsLoadingFile = FALSE;
-    #else // !REGION_US_BETA
+    #else // !DEBUG
     do {
     gIsLoadingFile = FALSE;
     } while(0);
-    #endif // REGION_US_BETA
+    #endif // DEBUG
 }
 
 /**

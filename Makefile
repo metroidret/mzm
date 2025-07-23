@@ -16,8 +16,8 @@ ifeq ($(REGION),us_beta)
 	TARGET = mzm_us_beta
 	GAME_TITLE = ZEROMISSIONE
 	GAME_CODE = BMXE
-	CPPFLAGS += -DREGION_US_BETA -DDEBUG
-	ASFLAGS += --defsym REGION_US_BETA=1 --defsym DEBUG=1
+	CPPFLAGS += -DREGION_US -DREGION_US_BETA -DDEBUG
+	ASFLAGS += --defsym REGION_US=1 --defsym REGION_US_BETA=1 --defsym DEBUG=1
 	PAD_TO = 0x09000000
 endif
 
@@ -27,6 +27,15 @@ ifeq ($(REGION),eu)
 	GAME_CODE = BMXP
 	CPPFLAGS += -DREGION_EU
 	ASFLAGS += --defsym REGION_EU=1
+endif
+
+ifeq ($(REGION),eu_beta)
+	TARGET = mzm_eu_beta
+	GAME_TITLE = ZEROMISSIONP
+	GAME_CODE = BMXP
+	CPPFLAGS += -DREGION_EU -DREGION_EU_BETA -DDEBUG
+	ASFLAGS += --defsym REGION_EU=1 --defsym REGION_EU_BETA=1 --defsym DEBUG=1
+	PAD_TO = 0x09000000
 endif
 
 ifeq ($(REGION),jp)
@@ -229,6 +238,8 @@ eu:
 	$(MAKE) REGION=eu
 eu_debug:
 	$(MAKE) REGION=eu DEBUG=1
+eu_beta:
+	$(MAKE) REGION=eu_beta
 
 jp:
 	$(MAKE) REGION=jp

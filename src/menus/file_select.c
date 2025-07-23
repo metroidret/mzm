@@ -3978,10 +3978,10 @@ static void unk_7b854(void)
     DmaTransfer(3, dstHigh + 0x400, dstHigh + 0x1400, 0x100, 16);
 }
 
-#ifdef REGION_US_BETA
-static u8 sFileSelectBlankPassword[20] = "--------------------";
-static u8 sFileSelectBlank100Password[20] = "====================";
-#endif // REGION_US_BETA
+#ifdef DEBUG
+static u8 sFileSelectBlankPassword_Debug[20] = "--------------------";
+static u8 sFileSelectBlank100Password_Debug[20] = "====================";
+#endif // DEBUG
 
 /**
  * @brief 7b92c | bc | Loads a part of the time attack password to VRAM
@@ -4001,19 +4001,19 @@ static void OptionsTimeAttackLoadPassword(u8 part)
     {
         i = 0x78C0;
         password = gTimeAttackRecord.password100;
-        #ifdef REGION_US_BETA
+        #ifdef DEBUG
         if (password[0] == UCHAR_MAX)
-            password = sFileSelectBlank100Password;
-        #endif // REGION_US_BETA
+            password = sFileSelectBlank100Password_Debug;
+        #endif // DEBUG
     }
     else
     {
         i = 0x68C0;
         password = gTimeAttackRecord.password;
-        #ifdef REGION_US_BETA
+        #ifdef DEBUG
         if (password[0] == UCHAR_MAX)
-            password = sFileSelectBlankPassword;
-        #endif // REGION_US_BETA
+            password = sFileSelectBlankPassword_Debug;
+        #endif // DEBUG
     }
 
     if (part & 1)
@@ -4723,9 +4723,9 @@ static void FileSelectInit(void)
     if (gLanguage >= LANGUAGE_ENGLISH)
     #endif // DEBUG
     {
-        #ifndef REGION_EU
+        #if defined(DEBUG) || !defined(REGION_EU)
         BitFill(3, 0, VRAM_BASE + 0x400, 0x800, 16);
-        #endif // !REGION_EU
+        #endif // DEBUG || !REGION_EU
         CallLZ77UncompVram(sFileSelectOptionsTextGfxPointers[gLanguage - LANGUAGE_ENGLISH], VRAM_BASE + 0xC00);
     }
     #endif // DEBUG || !REGION_JP
