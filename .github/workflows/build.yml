@@ -62,6 +62,11 @@ jobs:
                 make
               working-directory: tools/preproc
 
+            - name: Build aif2pcm
+              run: |
+                make
+              working-directory: tools/aif2pcm
+
             - name: Get roms
               uses: actions/checkout@master
               with:
