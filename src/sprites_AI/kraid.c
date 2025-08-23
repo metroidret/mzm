@@ -3040,7 +3040,7 @@ void KraidNail(void)
 
             gCurrentSprite.drawOrder = 3;
             gCurrentSprite.bgPriority = BGCNT_HIGH_MID_PRIORITY;
-            gCurrentSprite.status |= SPRITE_STATUS_UNKNOWN_80;
+            gCurrentSprite.status |= SPRITE_STATUS_ROTATION_SCALING_SINGLE;
             gCurrentSprite.scaling = Q_8_8(1.f);
             gCurrentSprite.work1 = 0;
 

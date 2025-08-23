@@ -432,7 +432,7 @@ void ProjectileProcessWaveBeam(struct ProjectileData* pProj)
         pProj->drawDistanceOffset = BLOCK_SIZE * 2 + HALF_BLOCK_SIZE;
 
         pProj->status &= ~PROJ_STATUS_NOT_DRAWN;
-        pProj->status |= PROJ_STATUS_HIGH_PRIORITY;
+        pProj->status |= PROJ_STATUS_ABOVE_BG1;
 
         pProj->animationDurationCounter = 0;
         pProj->currentAnimationFrame = 0;
@@ -543,7 +543,7 @@ void ProjectileProcessPlasmaBeam(struct ProjectileData* pProj)
         if (hasWave)
         {
             pProj->drawDistanceOffset = BLOCK_SIZE * 2 + HALF_BLOCK_SIZE;
-            pProj->status |= PROJ_STATUS_HIGH_PRIORITY;
+            pProj->status |= PROJ_STATUS_ABOVE_BG1;
         }
         else
         {
@@ -928,7 +928,7 @@ void ProjectileProcessChargedWaveBeam(struct ProjectileData* pProj)
 
         pProj->drawDistanceOffset = BLOCK_SIZE * 3;
         pProj->status &= ~PROJ_STATUS_NOT_DRAWN;
-        pProj->status |= PROJ_STATUS_HIGH_PRIORITY;
+        pProj->status |= PROJ_STATUS_ABOVE_BG1;
 
         pProj->animationDurationCounter = 0;
         pProj->currentAnimationFrame = 0;
@@ -1059,7 +1059,7 @@ void ProjectileProcessChargedPlasmaBeam(struct ProjectileData* pProj)
         if (hasWave)
         {
             pProj->drawDistanceOffset = BLOCK_SIZE * 3 + HALF_BLOCK_SIZE;
-            pProj->status |= PROJ_STATUS_HIGH_PRIORITY;
+            pProj->status |= PROJ_STATUS_ABOVE_BG1;
         }
         else
         {
@@ -1496,7 +1496,7 @@ void ProjectileProcessBomb(struct ProjectileData* pProj)
 
             // X Flip is cleared to make it always face the same way, cancelling the automatic X Flip if samus is facing right
             pProj->status &= ~(PROJ_STATUS_NOT_DRAWN | PROJ_STATUS_X_FLIP);
-            pProj->status |= PROJ_STATUS_HIGH_PRIORITY;
+            pProj->status |= PROJ_STATUS_ABOVE_BG1;
 
             // Timer before the bomb starts spinning faster
             pProj->timer = CONVERT_SECONDS(.25f) + 1 * DELTA_TIME;
@@ -1660,7 +1660,7 @@ void ProjectileProcessPowerBomb(struct ProjectileData* pProj)
             pProj->hitboxRight = QUARTER_BLOCK_SIZE;
 
             pProj->status &= ~(PROJ_STATUS_NOT_DRAWN | PROJ_STATUS_X_FLIP);
-            pProj->status |= PROJ_STATUS_HIGH_PRIORITY;
+            pProj->status |= PROJ_STATUS_ABOVE_BG1;
 
             pProj->timer = CONVERT_SECONDS(.9f);
             pProj->movementStage++;

@@ -568,15 +568,15 @@ void KraidStatue(void)
     if (gSubGameMode1 == SUB_GAME_MODE_PLAYING)
     {
         if (SpriteUtilCheckSamusNearSpriteLeftRight(BLOCK_SIZE * 10, BLOCK_SIZE * 13) != NSLR_OUT_OF_RANGE)
-            gCurrentSprite.status |= SPRITE_STATUS_UNKNOWN_10;
+            gCurrentSprite.status |= SPRITE_STATUS_HIGH_PRIORITY;
         else
-            gCurrentSprite.status &= ~SPRITE_STATUS_UNKNOWN_10;
+            gCurrentSprite.status &= ~SPRITE_STATUS_HIGH_PRIORITY;
     }
 
     for (pProj = gProjectileData; pProj < gProjectileData + MAX_AMOUNT_OF_PROJECTILES; pProj++)
     {
         if (pProj->status & PROJ_STATUS_EXISTS)
-            pProj->status |= PROJ_STATUS_UNKNOWN_80;
+            pProj->status |= PROJ_STATUS_LOW_OAM_PRIORITY;
     }
 
     if (EventFunction(EVENT_ACTION_CHECKING, EVENT_KRAID_STATUE_OPENED) && EventFunction(EVENT_ACTION_CHECKING, EVENT_RIDLEY_STATUE_OPENED))
@@ -633,8 +633,8 @@ void RidleyStatue(void)
     if (gSubGameMode1 == SUB_GAME_MODE_PLAYING)
     {
         if (SpriteUtilCheckSamusNearSpriteLeftRight(BLOCK_SIZE * 10, BLOCK_SIZE * 13) != NSLR_OUT_OF_RANGE)
-            gCurrentSprite.status |= SPRITE_STATUS_UNKNOWN_10;
+            gCurrentSprite.status |= SPRITE_STATUS_HIGH_PRIORITY;
         else
-            gCurrentSprite.status &= ~SPRITE_STATUS_UNKNOWN_10;
+            gCurrentSprite.status &= ~SPRITE_STATUS_HIGH_PRIORITY;
     }
 }

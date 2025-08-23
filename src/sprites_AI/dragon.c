@@ -335,7 +335,7 @@ static void DragonFireballInit(void)
         gCurrentSprite.rotation = 0;
     }
 
-    gCurrentSprite.status |= SPRITE_STATUS_UNKNOWN_80;
+    gCurrentSprite.status |= SPRITE_STATUS_ROTATION_SCALING_SINGLE;
     gCurrentSprite.scaling = Q_8_8(1.f);
     gCurrentSprite.work3 = 0;
 
@@ -409,7 +409,7 @@ static void DragonFireballExplodingInit(void)
     gCurrentSprite.currentAnimationFrame = 0;
 
     gCurrentSprite.pose = DRAGON_FIREBALL_POSE_EXPLODING;
-    gCurrentSprite.status &= ~SPRITE_STATUS_UNKNOWN_80;
+    gCurrentSprite.status &= ~SPRITE_STATUS_ROTATION_SCALING_SINGLE;
     gCurrentSprite.status |= SPRITE_STATUS_IGNORE_PROJECTILES;
 }
 

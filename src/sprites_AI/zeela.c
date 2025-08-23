@@ -985,7 +985,7 @@ static void ZeelaDeath(void)
 static void ZeelaEyesInit(void)
 {
     gCurrentSprite.status &= ~SPRITE_STATUS_NOT_DRAWN;
-    gCurrentSprite.status |= SPRITE_STATUS_UNKNOWN_80;
+    gCurrentSprite.status |= SPRITE_STATUS_ROTATION_SCALING_SINGLE;
 
     gCurrentSprite.scaling = Q_8_8(1.f);
     gCurrentSprite.properties |= SP_KILL_OFF_SCREEN;

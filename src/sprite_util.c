@@ -35,7 +35,7 @@ void SpriteUtilInitLocationText(void)
     if (gfxSlot < SPRITE_GFX_SLOT_MAX)
     {
         gSpriteData[0].status = SPRITE_STATUS_EXISTS | SPRITE_STATUS_ONSCREEN | SPRITE_STATUS_NOT_DRAWN |
-            SPRITE_STATUS_UNKNOWN_10 | SPRITE_STATUS_IGNORE_PROJECTILES;
+            SPRITE_STATUS_HIGH_PRIORITY | SPRITE_STATUS_IGNORE_PROJECTILES;
 
         gSpriteData[0].properties = SP_ABSOLUTE_POSITION;
         gSpriteData[0].spritesetGfxSlot = gfxSlot;

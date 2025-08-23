@@ -2299,7 +2299,7 @@ enum DeoremSegment {
  */
 /*static*/ void DeoremEyeInit(void)
 {
-    gCurrentSprite.status |= SPRITE_STATUS_ROTATION_SCALING;
+    gCurrentSprite.status |= SPRITE_STATUS_ROTATION_SCALING_WHOLE;
     gCurrentSprite.scaling = Q_8_8(1.f);
     gCurrentSprite.status &= ~SPRITE_STATUS_NOT_DRAWN;
     gCurrentSprite.drawOrder = 11;
@@ -2617,7 +2617,7 @@ enum DeoremSegment {
  */
 /*static*/ void DeoremThornInit(void)
 {
-    gCurrentSprite.status |= SPRITE_STATUS_UNKNOWN_80;
+    gCurrentSprite.status |= SPRITE_STATUS_ROTATION_SCALING_SINGLE;
     
     gCurrentSprite.scaling = Q_8_8(1.f);
     gCurrentSprite.rotation = 0;

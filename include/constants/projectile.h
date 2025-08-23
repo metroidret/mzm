@@ -9,11 +9,11 @@ MAKE_ENUM(u8, ProjectileStatus) ENUM_FLAG {
     PROJ_STATUS_EXISTS                 = 1 << 0,
     PROJ_STATUS_ON_SCREEN              = 1 << 1,
     PROJ_STATUS_NOT_DRAWN              = 1 << 2,
-    PROJ_STATUS_HIGH_PRIORITY          = 1 << 3,
+    PROJ_STATUS_ABOVE_BG1              = 1 << 3,
     PROJ_STATUS_CAN_AFFECT_ENVIRONMENT = 1 << 4,
     PROJ_STATUS_Y_FLIP                 = 1 << 5,
     PROJ_STATUS_X_FLIP                 = 1 << 6,
-    PROJ_STATUS_UNKNOWN_80             = 1 << 7,
+    PROJ_STATUS_LOW_OAM_PRIORITY       = 1 << 7,
 };
 
 MAKE_ENUM(u8, ProjectileCategory) {

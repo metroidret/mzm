@@ -2999,7 +2999,7 @@ void MechaRidleyMissile(void)
     switch (gCurrentSprite.pose)
     {
         case SPRITE_POSE_UNINITIALIZED:
-            gCurrentSprite.status |= SPRITE_STATUS_UNKNOWN_80;
+            gCurrentSprite.status |= SPRITE_STATUS_ROTATION_SCALING_SINGLE;
 
             gCurrentSprite.drawDistanceTop = 0x10;
             gCurrentSprite.drawDistanceBottom = 0x10;
@@ -3104,7 +3104,7 @@ void MechaRidleyFireball(void)
     {
         case SPRITE_POSE_UNINITIALIZED:
             gCurrentSprite.status |= SPRITE_STATUS_IGNORE_PROJECTILES;
-            gCurrentSprite.status |= SPRITE_STATUS_UNKNOWN_80;
+            gCurrentSprite.status |= SPRITE_STATUS_ROTATION_SCALING_SINGLE;
             gCurrentSprite.status &= ~SPRITE_STATUS_NOT_DRAWN;
 
             gCurrentSprite.drawDistanceTop = 0x14;

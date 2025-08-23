@@ -1179,7 +1179,7 @@ static void RuinsTestGhostInit(void)
     {
         // Symbol shot
 
-        gCurrentSprite.status |= SPRITE_STATUS_UNKNOWN_10;
+        gCurrentSprite.status |= SPRITE_STATUS_HIGH_PRIORITY;
 
         gCurrentSprite.drawDistanceTop = SUB_PIXEL_TO_PIXEL(BLOCK_SIZE + HALF_BLOCK_SIZE);
         gCurrentSprite.drawDistanceBottom = SUB_PIXEL_TO_PIXEL(BLOCK_SIZE + HALF_BLOCK_SIZE);
@@ -1422,7 +1422,7 @@ static void RuinsTestGhostMoveSymbolToPlace(void)
         gCurrentSprite.currentAnimationFrame = 0;
         gCurrentSprite.animationDurationCounter = 0;
 
-        gCurrentSprite.status &= ~SPRITE_STATUS_UNKNOWN_10;
+        gCurrentSprite.status &= ~SPRITE_STATUS_HIGH_PRIORITY;
         gCurrentSprite.drawOrder = 14;
         SoundPlay(SOUND_RUINS_TEST_SYMBOL_PLACED);
     }
@@ -1914,7 +1914,7 @@ void RuinsTestReflectionCover(void)
     switch (gCurrentSprite.pose)
     {
         case SPRITE_POSE_UNINITIALIZED:
-            gCurrentSprite.status |= SPRITE_STATUS_UNKNOWN_10;
+            gCurrentSprite.status |= SPRITE_STATUS_HIGH_PRIORITY;
             gCurrentSprite.status &= ~SPRITE_STATUS_NOT_DRAWN;
 
             gCurrentSprite.drawDistanceTop = SUB_PIXEL_TO_PIXEL(BLOCK_SIZE + HALF_BLOCK_SIZE);

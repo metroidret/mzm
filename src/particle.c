@@ -177,7 +177,7 @@ void ParticleDraw(struct ParticleEffect* pParticle)
             xPosition = SUB_PIXEL_TO_PIXEL(pParticle->xPosition) - SUB_PIXEL_TO_PIXEL(gBg1XPosition);
         }
 
-        if (pParticle->status & PARTICLE_STATUS_LOW_PRIORITY)
+        if (pParticle->status & PARTICLE_STATUS_LOW_BG_PRIORITY)
         {
             if (gSamusOnTopOfBackgrounds)
                 bgPriority = 1;
@@ -246,7 +246,7 @@ void ParticleProcessAll(void)
     {
         for (pParticle = gParticleEffects; pParticle < gParticleEffects + MAX_AMOUNT_OF_PARTICLES; pParticle++)
         {
-            if ((pParticle->status & (PARTICLE_STATUS_EXISTS | PARTICLE_STATUS_EXPLOSION)) == (PARTICLE_STATUS_EXISTS | PARTICLE_STATUS_EXPLOSION))
+            if ((pParticle->status & (PARTICLE_STATUS_EXISTS | PARTICLE_STATUS_HIGH_OAM_PRIORITY)) == (PARTICLE_STATUS_EXISTS | PARTICLE_STATUS_HIGH_OAM_PRIORITY))
             {
                 sProcessParticleFunctionPointers[pParticle->effect](pParticle); // Call subroutine
 
@@ -262,7 +262,7 @@ void ParticleProcessAll(void)
 
         for (pParticle = gParticleEffects; pParticle < gParticleEffects + MAX_AMOUNT_OF_PARTICLES; pParticle++)
         {
-            if ((pParticle->status & (PARTICLE_STATUS_EXISTS | PARTICLE_STATUS_EXPLOSION)) == PARTICLE_STATUS_EXISTS)
+            if ((pParticle->status & (PARTICLE_STATUS_EXISTS | PARTICLE_STATUS_HIGH_OAM_PRIORITY)) == PARTICLE_STATUS_EXISTS)
             {
                 sProcessParticleFunctionPointers[pParticle->effect](pParticle); // Call subroutine
 
@@ -426,7 +426,7 @@ void ParticleSpriteSplashWaterSmall(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -451,7 +451,7 @@ void ParticleSpriteSplashWaterBig(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -476,7 +476,7 @@ void ParticleSpriteSplashWaterHuge(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -500,7 +500,7 @@ void ParticleSpriteSplashLavaSmall(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -525,7 +525,7 @@ void ParticleSpriteSplashLavaBig(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -550,7 +550,7 @@ void ParticleSpriteSplashLavaHuge(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -575,7 +575,7 @@ void ParticleSpriteSplashAcidSmall(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -600,7 +600,7 @@ void ParticleSpriteSplashAcidBig(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -625,7 +625,7 @@ void ParticleSpriteSplashAcidHuge(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -647,7 +647,7 @@ void ParticleShootingBeamLeft(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -669,7 +669,7 @@ void ParticleShootingBeamRight(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_X_FLIP | PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_X_FLIP | PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -691,7 +691,7 @@ void ParticleShootingBeamDiagUpLeft(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -713,7 +713,7 @@ void ParticleShootingBeamDiagUpRight(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_X_FLIP | PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_X_FLIP | PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -735,7 +735,7 @@ void ParticleShootingBeamDiagDownLeft(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -757,7 +757,7 @@ void ParticleShootingBeamDiagDownRight(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= (PARTICLE_STATUS_X_FLIP | PARTICLE_STATUS_LOW_PRIORITY);
+        pParticle->status |= (PARTICLE_STATUS_X_FLIP | PARTICLE_STATUS_LOW_BG_PRIORITY);
     }
 }
 
@@ -779,7 +779,7 @@ void ParticleShootingBeamUpLeft(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -801,7 +801,7 @@ void ParticleShootingBeamUpRight(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= (PARTICLE_STATUS_X_FLIP | PARTICLE_STATUS_LOW_PRIORITY);
+        pParticle->status |= (PARTICLE_STATUS_X_FLIP | PARTICLE_STATUS_LOW_BG_PRIORITY);
     }
 }
 
@@ -823,7 +823,7 @@ void ParticleShootingBeamDownLeft(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -845,7 +845,7 @@ void ParticleShootingBeamDownRight(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= (PARTICLE_STATUS_X_FLIP | PARTICLE_STATUS_LOW_PRIORITY);
+        pParticle->status |= (PARTICLE_STATUS_X_FLIP | PARTICLE_STATUS_LOW_BG_PRIORITY);
     }
 }
 
@@ -867,7 +867,7 @@ void ParticleBomb(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_EXPLOSION;
+        pParticle->status |= PARTICLE_STATUS_HIGH_OAM_PRIORITY;
         SoundPlay(SOUND_BOMB_EXPLOSION);
     }
 }
@@ -890,7 +890,7 @@ void ParticleMissileTrail(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -912,7 +912,7 @@ void ParticleSuperMissileTrail(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -939,7 +939,7 @@ void ParticleBeamTrailingRight(struct ParticleEffect* pParticle)
     else
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -966,7 +966,7 @@ void ParticleBeamTrailingLeft(struct ParticleEffect* pParticle)
     else
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -1102,7 +1102,7 @@ void ParticleSpriteExplosionHuge(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_EXPLOSION;
+        pParticle->status |= PARTICLE_STATUS_HIGH_OAM_PRIORITY;
     }
 }
 
@@ -1124,7 +1124,7 @@ void ParticleSpriteExplosionSmall(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_EXPLOSION;
+        pParticle->status |= PARTICLE_STATUS_HIGH_OAM_PRIORITY;
     }
 }
 
@@ -1146,7 +1146,7 @@ void ParticleSpriteExplosionMedium(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_EXPLOSION;
+        pParticle->status |= PARTICLE_STATUS_HIGH_OAM_PRIORITY;
     }
 }
 
@@ -1168,7 +1168,7 @@ void ParticleSpriteExplosionBig(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_EXPLOSION;
+        pParticle->status |= PARTICLE_STATUS_HIGH_OAM_PRIORITY;
     }
 }
 
@@ -1190,7 +1190,7 @@ void ParticleSpriteExplosionSingleThenBig(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_EXPLOSION;
+        pParticle->status |= PARTICLE_STATUS_HIGH_OAM_PRIORITY;
     }
 }
 
@@ -1212,7 +1212,7 @@ void ParticleScrewAttackDestroyed(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_EXPLOSION;
+        pParticle->status |= PARTICLE_STATUS_HIGH_OAM_PRIORITY;
     }
 }
 
@@ -1234,7 +1234,7 @@ void ParticleShinesparkDestroyed(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_EXPLOSION;
+        pParticle->status |= PARTICLE_STATUS_HIGH_OAM_PRIORITY;
     }
 }
 
@@ -1256,7 +1256,7 @@ void ParticlePseudoScrewDestroyed(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_EXPLOSION;
+        pParticle->status |= PARTICLE_STATUS_HIGH_OAM_PRIORITY;
     }
 }
 
@@ -1278,7 +1278,7 @@ void ParticleSpeedboosterDestroyed(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_EXPLOSION;
+        pParticle->status |= PARTICLE_STATUS_HIGH_OAM_PRIORITY;
     }
 }
 
@@ -1300,7 +1300,7 @@ void ParticleMainBossDeath(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_EXPLOSION;
+        pParticle->status |= PARTICLE_STATUS_HIGH_OAM_PRIORITY;
     }
 }
 
@@ -1323,7 +1323,7 @@ void ParticleFreezingSpriteWithIce(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_EXPLOSION;
+        pParticle->status |= PARTICLE_STATUS_HIGH_OAM_PRIORITY;
     }
 }
 
@@ -1346,7 +1346,7 @@ void ParticleFreezingSpriteWithChargedIce(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_EXPLOSION;
+        pParticle->status |= PARTICLE_STATUS_HIGH_OAM_PRIORITY;
     }
 }
 
@@ -1650,7 +1650,7 @@ void ParticleSecondSmallDust(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -1672,7 +1672,7 @@ void ParticleSecondMediumDust(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -1694,7 +1694,7 @@ void ParticleSecondTwoMediumDust(struct ParticleEffect* pParticle)
     if (pParticle->stage == 0)
     {
         pParticle->stage++;
-        pParticle->status |= PARTICLE_STATUS_LOW_PRIORITY;
+        pParticle->status |= PARTICLE_STATUS_LOW_BG_PRIORITY;
     }
 }
 
@@ -1905,7 +1905,7 @@ void ParticleEscape(struct ParticleEffect* pParticle)
     {
         case 0:
             pParticle->stage = 1;
-            pParticle->status |= PARTICLE_STATUS_EXPLOSION | PARTICLE_STATUS_LIVE_OFF_SCREEN | PARTICLE_STATUS_ABSOLUTE_POSITION;
+            pParticle->status |= PARTICLE_STATUS_HIGH_OAM_PRIORITY | PARTICLE_STATUS_LIVE_OFF_SCREEN | PARTICLE_STATUS_ABSOLUTE_POSITION;
 
             EscapeSetTimer();
             gCurrentEscapeStatus = ESCAPE_STATUS_HAPPENNING;
@@ -1957,7 +1957,7 @@ void ParticleSamusReflection(struct ParticleEffect* pParticle)
     {
         pParticle->stage = 1;
         // Init status
-        pParticle->status |= PARTICLE_STATUS_LIVE_OFF_SCREEN | PARTICLE_STATUS_LOW_PRIORITY | PARTICLE_STATUS_X_FLIP;
+        pParticle->status |= PARTICLE_STATUS_LIVE_OFF_SCREEN | PARTICLE_STATUS_LOW_BG_PRIORITY | PARTICLE_STATUS_X_FLIP;
     }
 
     // Copy the main samus body oam

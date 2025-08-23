@@ -77,11 +77,11 @@ Note :
 | SPRITE_STATUS_EXISTS | 1 << 0 | Whether the sprite exists or not.
 | SPRITE_STATUS_ONSCREEN | 1 << 1 | Whether the sprite is currently visible on screen.
 | SPRITE_STATUS_NOT_DRAWN | 1 << 2 | Whether the sprite should be drawn.
-| SPRITE_STATUS_ROTATION_SCALING | 1 << 3 | Enables affine transformation when drawing the sprite.
-| SPRITE_STATUS_UNKNOWN_10 | 1 << 4 | Unknown purpose, related to draw order.
+| SPRITE_STATUS_ROTATION_SCALING_WHOLE | 1 << 3 | Enables affine transformation when drawing the sprite, when enabled, SPRITE_STATUS_MOSAIC instead selects the matrix slot.
+| SPRITE_STATUS_HIGH_PRIORITY | 1 << 4 | Whether the sprite has a high OAM priority (e.g. above other sprites without this flag, projectiles and particles).
 | SPRITE_STATUS_MOSAIC | 1 << 5 | Whether mosaic is enabled, left over from fusion, doesn't seem to work properly.
 | SPRITE_STATUS_X_FLIP | 1 << 6 | Whether the sprite is X-flipped when drawn.
-| SPRITE_STATUS_UNKNOWN_80 | 1 << 7 | Unknown purpose, related to obj affine.
+| SPRITE_STATUS_ROTATION_SCALING_SINGLE | 1 << 7 | Enables affine transformation when drawing the sprite, only works when it has a single OAM object.
 | SPRITE_STATUS_Y_FLIP | 1 << 8 | Whether the sprite is Y-flipped when drawn.
 | SPRITE_STATUS_FACING_RIGHT | 1 << 9 | Whether the sprite is facing right, purely informative and only used in the engine in the movement functions.
 | SPRITE_STATUS_FACING_DOWN | 1 << 10 | Whether the sprite is facing down, purely informative and only used in the engine in the movement functions.

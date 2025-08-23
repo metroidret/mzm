@@ -52,7 +52,7 @@ static void GadoraInit(void)
         if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_KRAID_GADORA_KILLED))
         {
             #ifndef REGION_US_BETA
-            gCurrentSprite.status |= SPRITE_STATUS_UNKNOWN_10;
+            gCurrentSprite.status |= SPRITE_STATUS_HIGH_PRIORITY;
             #endif // !REGION_US_BETA
         }
         else

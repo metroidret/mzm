@@ -276,7 +276,7 @@ static void ImagoCocoonInit(void)
         gCurrentSprite.hitboxRight = 0;
 
         gCurrentSprite.drawOrder = 4;
-        gCurrentSprite.status |= SPRITE_STATUS_ROTATION_SCALING;
+        gCurrentSprite.status |= SPRITE_STATUS_ROTATION_SCALING_WHOLE;
         gCurrentSprite.scaling = Q_8_8(1.f);
         gCurrentSprite.rotation = 0;
         gCurrentSprite.roomSlot = IMAGO_COCOON_PART_IMAGO_COCOON;
@@ -310,7 +310,7 @@ static void ImagoCocoonInit(void)
         gCurrentSprite.drawOrder = 6;
         gCurrentSprite.samusCollision = SSC_HURTS_SAMUS;
         gCurrentSprite.health = GET_PSPRITE_HEALTH(gCurrentSprite.spriteId);
-        gCurrentSprite.status |= SPRITE_STATUS_ROTATION_SCALING;
+        gCurrentSprite.status |= SPRITE_STATUS_ROTATION_SCALING_WHOLE;
 
         gCurrentSprite.scaling = Q_8_8(1.f);
         gCurrentSprite.rotation = 0;

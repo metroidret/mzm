@@ -162,18 +162,18 @@ u32 InGameMainLoop(void)
         ProjectileUpdate();
         HudDraw();
     
-        SpriteDrawAll_2();
+        SpriteDrawAll_HighPriority();
         ParticleProcessAll();
-        ProjectileDrawAllStatusFalse();
+        ProjectileDrawAll_HighPriority();
     
         if (!gDisableDrawingSprites)
-            SpriteDrawAll();
+            SpriteDrawAll_MediumPriority();
     
         if (!gDisableDrawingSamusAndScrolling)
             SamusDraw();
     
-        SpriteDrawAll_Upper();
-        ProjectileDrawAllStatusTrue();
+        SpriteDrawAll_LowPriority();
+        ProjectileDrawAll_LowPriority();
         
         ResetFreeOam();
         RoomUpdate();

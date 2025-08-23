@@ -285,7 +285,7 @@ static void SkreeExplosionInit(void)
     gCurrentSprite.bgPriority = BGCNT_GET_PRIORITY(gIoRegistersBackup.BG1CNT);
     
     gCurrentSprite.yPosition += HALF_BLOCK_SIZE + EIGHTH_BLOCK_SIZE;
-    gCurrentSprite.status |= SPRITE_STATUS_DOUBLE_SIZE | SPRITE_STATUS_ROTATION_SCALING;
+    gCurrentSprite.status |= SPRITE_STATUS_DOUBLE_SIZE | SPRITE_STATUS_ROTATION_SCALING_WHOLE;
     gCurrentSprite.scaling = Q_8_8(1.f);
     gCurrentSprite.rotation = 0;
 

@@ -594,7 +594,7 @@ static void MetroidInit(void)
     
     gCurrentSprite.status |= SPRITE_STATUS_MOSAIC;
     gCurrentSprite.status |= SPRITE_STATUS_IGNORE_PROJECTILES;
-    gCurrentSprite.status |= SPRITE_STATUS_UNKNOWN_80;
+    gCurrentSprite.status |= SPRITE_STATUS_ROTATION_SCALING_SINGLE;
 
     gCurrentSprite.scaling = Q_8_8(.25f);
     gCurrentSprite.rotation = 0;
@@ -703,7 +703,7 @@ static void MetroidSpawning(void)
     {
         // Set spawned behavior
         gCurrentSprite.paletteRow = 0;
-        gCurrentSprite.status &= ~SPRITE_STATUS_UNKNOWN_80;
+        gCurrentSprite.status &= ~SPRITE_STATUS_ROTATION_SCALING_SINGLE;
         gCurrentSprite.pose = METROID_POSE_MOVING_INIT;
 
         gCurrentSprite.pOam = sMetroidOam_Moving;
@@ -1103,7 +1103,7 @@ void MetroidShell(void)
         gCurrentSprite.currentAnimationFrame = 0;
     }
 
-    if (gCurrentSprite.status & SPRITE_STATUS_NOT_DRAWN && !(gSpriteData[bodySlot].status & SPRITE_STATUS_UNKNOWN_80))
+    if (gCurrentSprite.status & SPRITE_STATUS_NOT_DRAWN && !(gSpriteData[bodySlot].status & SPRITE_STATUS_ROTATION_SCALING_SINGLE))
         gCurrentSprite.status &= ~SPRITE_STATUS_NOT_DRAWN;
 
     gCurrentSprite.yPosition = gSpriteData[bodySlot].yPosition;

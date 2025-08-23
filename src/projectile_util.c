@@ -535,10 +535,10 @@ void ProjectileUpdateAnimation(struct ProjectileData* pProj)
 }
 
 /**
- * @brief 4f33c | 44 | Draws every projectile if the status flag 80 isn't set
+ * @brief 4f33c | 44 | Draws every projectile with high OAM priority
  * 
  */
-void ProjectileDrawAllStatusFalse(void)
+void ProjectileDrawAll_HighPriority(void)
 {
     struct ProjectileData* pProj;
 
@@ -547,7 +547,7 @@ void ProjectileDrawAllStatusFalse(void)
 
     for (pProj = gProjectileData; pProj < gProjectileData + MAX_AMOUNT_OF_PROJECTILES; pProj++)
     {
-        if ((pProj->status & (PROJ_STATUS_EXISTS | PROJ_STATUS_ON_SCREEN | PROJ_STATUS_NOT_DRAWN | PROJ_STATUS_UNKNOWN_80)) ==
+        if ((pProj->status & (PROJ_STATUS_EXISTS | PROJ_STATUS_ON_SCREEN | PROJ_STATUS_NOT_DRAWN | PROJ_STATUS_LOW_OAM_PRIORITY)) ==
             (PROJ_STATUS_EXISTS | PROJ_STATUS_ON_SCREEN))
         {
             ProjectileDraw(pProj);
@@ -556,10 +556,10 @@ void ProjectileDrawAllStatusFalse(void)
 }
 
 /**
- * @brief 4f380 | 44 | Draws every projectile if the status flag 80 is set
+ * @brief 4f380 | 44 | Draws every projectile with low OAM priority
  * 
  */
-void ProjectileDrawAllStatusTrue(void)
+void ProjectileDrawAll_LowPriority(void)
 {
     struct ProjectileData* pProj;
 
@@ -568,8 +568,8 @@ void ProjectileDrawAllStatusTrue(void)
 
     for (pProj = gProjectileData; pProj < gProjectileData + MAX_AMOUNT_OF_PROJECTILES; pProj++)
     {
-        if ((pProj->status & (PROJ_STATUS_EXISTS | PROJ_STATUS_ON_SCREEN | PROJ_STATUS_NOT_DRAWN | PROJ_STATUS_UNKNOWN_80)) ==
-            (PROJ_STATUS_EXISTS | PROJ_STATUS_ON_SCREEN | PROJ_STATUS_UNKNOWN_80))
+        if ((pProj->status & (PROJ_STATUS_EXISTS | PROJ_STATUS_ON_SCREEN | PROJ_STATUS_NOT_DRAWN | PROJ_STATUS_LOW_OAM_PRIORITY)) ==
+            (PROJ_STATUS_EXISTS | PROJ_STATUS_ON_SCREEN | PROJ_STATUS_LOW_OAM_PRIORITY))
         {
             ProjectileDraw(pProj);
         }
@@ -616,7 +616,7 @@ void ProjectileDraw(struct ProjectileData* pProj)
         yFlip = pProj->status & PROJ_STATUS_Y_FLIP;
 
         bgPriority = BGCNT_GET_PRIORITY(gIoRegistersBackup.BG1CNT);
-        if (pProj->status & PROJ_STATUS_HIGH_PRIORITY)
+        if (pProj->status & PROJ_STATUS_ABOVE_BG1)
             bgPriority = 0;
         else
             bgPriority++;
@@ -1986,7 +1986,7 @@ void ProjectileStartTumblingMissile(struct SpriteData* pSprite, struct Projectil
     pProj->timer = 0;
 
     pProj->status &= ~PROJ_STATUS_CAN_AFFECT_ENVIRONMENT;
-    pProj->status |= PROJ_STATUS_HIGH_PRIORITY;
+    pProj->status |= PROJ_STATUS_ABOVE_BG1;
 
     pProj->animationDurationCounter = 0;
     pProj->currentAnimationFrame = 0;
@@ -2020,7 +2020,7 @@ void ProjectileStartTumblingMissileCurrentSprite(struct ProjectileData* pProj, u
     pProj->timer = 0;
 
     pProj->status &= ~PROJ_STATUS_CAN_AFFECT_ENVIRONMENT;
-    pProj->status |= PROJ_STATUS_HIGH_PRIORITY;
+    pProj->status |= PROJ_STATUS_ABOVE_BG1;
 
     pProj->animationDurationCounter = 0;
     pProj->currentAnimationFrame = 0;
