@@ -8214,7 +8214,7 @@ void SamusDraw(void)
         }
     }
 
-    if (gSamusPhysics.unk_22 & ARM_CANNON_OAM_ORDER_BEHIND)
+    if (gSamusPhysics.unk_22 & ARM_CANNON_OAM_ORDER_IN_FRONT)
     {
         // Draw arm cannon oam
         src = gSamusPhysics.pArmCannonOam;
@@ -8264,7 +8264,7 @@ void SamusDraw(void)
         dst++;
     }
 
-    if (gSamusPhysics.unk_22 & ARM_CANNON_OAM_ORDER_IN_FRONT)
+    if (gSamusPhysics.unk_22 & ARM_CANNON_OAM_ORDER_BEHIND)
     {
         src = gSamusPhysics.pArmCannonOam;
         part1 = *src++;

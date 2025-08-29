@@ -100,10 +100,10 @@ def Func():
     result = hex(part_count)
 
     if part_count_raw & 0x1000:
-        result += " | ARM_CANNON_OAM_ORDER_IN_FRONT"
+        result += " | ARM_CANNON_OAM_ORDER_BEHIND"
 
     if part_count_raw & 0x2000:
-        result += " | ARM_CANNON_OAM_ORDER_BEHIND"
+        result += " | ARM_CANNON_OAM_ORDER_IN_FRONT"
     
     result += ",\n"
 
