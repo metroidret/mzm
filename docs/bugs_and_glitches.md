@@ -22,6 +22,7 @@ These are known bugs and glitches in the game: code that clearly does not work a
   - [Floating point math is used when fixed point could have been used](#floating-point-math-is-used-when-fixed-point-could-have-been-used)
   - [`ClipdataConvertToCollision` is copied to RAM but still runs in ROM](#clipdataconverttocollision-is-copied-to-ram-but-still-runs-in-rom)
   - [Upgrading suit cutscene code is still called after the cutscene ends](#upgrading-suit-cutscene-code-is-still-called-after-the-cutscene-ends)
+  - [Game always boots in mono even if stereo is enabled in settings](#game-always-boots-in-mono-even-if-stereo-is-enabled-in-settings)
 - [Uninitialized Variables](#uninitialized-variables)
 - [TODO](#todo)
   - [Bugs](#bugs-1)
@@ -346,6 +347,15 @@ The last cutscene stage for upgrading your suit (obtaining Varia or the fully po
       break;
 ```
 
+### Game always boots in mono even if stereo is enabled in settings
+
+**Fix:** Edit `InitializeGame` in [init_game.c](../src/init_game.c) and `SoftReset` in [soft_reset_input.c](../src/soft_reset_input.c) to apply stereo after calling `InitializeAudio`.
+
+```diff
+  InitializeAudio();
++ SramRead_SoundMode();
++ FileSelectApplyStereo();
+```
 
 ## Uninitialized Variables
 
