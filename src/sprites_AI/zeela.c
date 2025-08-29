@@ -512,7 +512,7 @@ static void ZeelaMove(void)
         }
         else
         {
-            unk_f594();
+            SpriteUtilAlignYPositionOnSlopeAtOrigin();
 
             if (gPreviousVerticalCollisionCheck == COLLISION_AIR || gPreviousVerticalCollisionCheck & 0xF0)
             {

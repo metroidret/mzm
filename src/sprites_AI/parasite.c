@@ -732,7 +732,7 @@ static void ParasiteIdle(struct SpriteData* pSprite)
         return;
     }
 
-    unk_f594();
+    SpriteUtilAlignYPositionOnSlopeAtOrigin();
 
     if (gPreviousVerticalCollisionCheck == COLLISION_AIR)
     {

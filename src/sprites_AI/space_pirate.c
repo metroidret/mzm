@@ -2188,7 +2188,7 @@ void unk_2a794(void)
  */
 void unk_2a7c0(void)
 {
-    unk_f594();
+    SpriteUtilAlignYPositionOnSlopeAtOrigin();
 
     if (gPreviousVerticalCollisionCheck == COLLISION_AIR)
         gCurrentSprite.pose = SPACE_PIRATE_POSE_FALLING_INIT;
@@ -2251,7 +2251,7 @@ void SpacePirateWalking(void)
                 gCurrentSprite.work2 = 0;
             }
 
-            unk_f978(gCurrentSprite.work2 / 4);
+            SpriteUtilMoveHorizontallyForwardOnSlopeDirection(gCurrentSprite.work2 / 4);
 
             if (gCurrentSprite.work2 < HALF_BLOCK_SIZE)
                 gCurrentSprite.work2 += PIXEL_SIZE / 2;
@@ -2400,7 +2400,7 @@ void unk_2aa5c(void)
  */
 void unk_2aa88(void)
 {
-    unk_f594();
+    SpriteUtilAlignYPositionOnSlopeAtOrigin();
 
     if (gPreviousVerticalCollisionCheck == COLLISION_AIR)
     {
@@ -2473,7 +2473,7 @@ void unk_2ab34(void)
  */
 void unk_2ab58(void)
 {
-    unk_f594();
+    SpriteUtilAlignYPositionOnSlopeAtOrigin();
 
     if (gPreviousVerticalCollisionCheck == COLLISION_AIR)
     {
@@ -2694,7 +2694,7 @@ void SpacePirateWalkingAlerted(void)
 
                 if (gCurrentSprite.status & SPRITE_STATUS_FACING_DOWN)
                 {
-                    unk_f978(gCurrentSprite.work2 / 4);
+                    SpriteUtilMoveHorizontallyForwardOnSlopeDirection(gCurrentSprite.work2 / 4);
                     if (gCurrentSprite.work2 < THREE_QUARTER_BLOCK_SIZE + PIXEL_SIZE)
                         gCurrentSprite.work2 += PIXEL_SIZE / 2;
                 }
@@ -3025,7 +3025,7 @@ void SpacePirateChargingLaserInit(void)
  */
 void SpacePirateChargingLaser(void)
 {
-    unk_f594();
+    SpriteUtilAlignYPositionOnSlopeAtOrigin();
 
     if (gPreviousVerticalCollisionCheck == COLLISION_AIR)
     {
@@ -3074,7 +3074,7 @@ void SpacePirateShootingLaser(void)
         SpacePirateFireLaserGround();
     }
 
-    unk_f594();
+    SpriteUtilAlignYPositionOnSlopeAtOrigin();
     if (gPreviousVerticalCollisionCheck == COLLISION_AIR)
     {
         gCurrentSprite.pose = SPACE_PIRATE_POSE_FALLING_INIT;

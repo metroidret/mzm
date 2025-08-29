@@ -362,7 +362,7 @@ static void BlackSpacePirateChargingLaser(void)
 {
     APPLY_DELTA_TIME_INC(gCurrentSprite.animationDurationCounter);
 
-    unk_f594();
+    SpriteUtilAlignYPositionOnSlopeAtOrigin();
 
     if (gPreviousVerticalCollisionCheck == COLLISION_AIR)
         gCurrentSprite.pose = SPACE_PIRATE_POSE_FALLING_INIT;
@@ -409,7 +409,7 @@ static void BlackSpacePirateShooting(void)
         SpacePirateFireLaserGround();
     }
 
-    unk_f594();
+    SpriteUtilAlignYPositionOnSlopeAtOrigin();
 
     if (gPreviousVerticalCollisionCheck == COLLISION_AIR)
     {
@@ -836,7 +836,7 @@ static void BlackSpacePirateWalkingAlerted(void)
 
             if (gCurrentSprite.status & SPRITE_STATUS_FACING_DOWN)
             {
-                unk_f978(gCurrentSprite.work2 / 4);
+                SpriteUtilMoveHorizontallyForwardOnSlopeDirection(gCurrentSprite.work2 / 4);
 
                 if (gCurrentSprite.work2 < THREE_QUARTER_BLOCK_SIZE + PIXEL_SIZE)
                     gCurrentSprite.work2 += 2;

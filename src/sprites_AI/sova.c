@@ -468,7 +468,7 @@ static void SovaMove(void)
         }
         else
         {
-            unk_f594();
+            SpriteUtilAlignYPositionOnSlopeAtOrigin();
 
             if (gPreviousVerticalCollisionCheck == COLLISION_AIR || gPreviousVerticalCollisionCheck & COLLISION_FLAGS_UNKNOWN_F0)
             {

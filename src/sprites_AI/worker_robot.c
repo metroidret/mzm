@@ -348,7 +348,7 @@ static void WorkerRobotWalking(void)
     u16 movement;
     u32 collision;
 
-    unk_f594();
+    SpriteUtilAlignYPositionOnSlopeAtOrigin();
 
     if (gPreviousVerticalCollisionCheck == COLLISION_AIR)
     {
