@@ -749,10 +749,10 @@ void UpdateTrack(struct TrackData* pTrack)
                     {
                         var_0 = *pVariables->pRawData;
                         if ((s8)var_0 >= 0)
-                            var_0 = pVariables->unk_3;
+                            var_0 = pVariables->repeatedCommand;
                         else if (var_0 > 0xBC)
                         {
-                            pVariables->unk_3 = var_0;
+                            pVariables->repeatedCommand = var_0;
                             pVariables->pRawData++;
                         }
 

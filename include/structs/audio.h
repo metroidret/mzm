@@ -106,7 +106,7 @@ struct TrackVariables {
     u8 unk_0;
     u8 unk_1;
     u8 delay;
-    u8 unk_3;
+    u8 repeatedCommand;
     u8 volume;
     u8 unk_5;
     u8 unk_6;

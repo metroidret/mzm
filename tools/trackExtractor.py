@@ -344,23 +344,23 @@ CODE_CMD = [
     ("PRIO",   ParamType.BYTE, False),  # 0xBA
     ("TEMPO",  ParamType.BYTE, False),  # 0xBB
     ("KEYSH",  ParamType.BYTE, False),  # 0xBC
-    ("VOICE",  ParamType.BYTE, False),  # 0xBD
+    ("VOICE",  ParamType.BYTE, True),   # 0xBD
     ("VOL",    ParamType.BYTE, True),   # 0xBE
     ("PAN",    ParamType.C_V,  True),   # 0xBF
     ("BEND",   ParamType.C_V,  True),   # 0xC0
     ("BENDR",  ParamType.BYTE, True),   # 0xC1
-    ("LFOS",   ParamType.BYTE, False),  # 0xC2
-    ("LFODL",  ParamType.BYTE, False),  # 0xC3
+    ("LFOS",   ParamType.BYTE, True),   # 0xC2
+    ("LFODL",  ParamType.BYTE, True),   # 0xC3
     ("MOD",    ParamType.BYTE, True),   # 0xC4
-    ("MODT",   ParamType.MODT, False),  # 0xC5
-    ("0xC6",   ParamType.NONE, False),  # 0xC6
-    ("0xC7",   ParamType.NONE, False),  # 0xC7
-    ("TUNE",   ParamType.C_V,  False),  # 0xC8
-    ("0xC9",   ParamType.NONE, False),  # 0xC9
-    ("0xCA",   ParamType.NONE, False),  # 0xCA
-    ("0xCB",   ParamType.NONE, False),  # 0xCB
-    ("0xCC",   ParamType.NONE, False),  # 0xCC
-    ("XCMD",   ParamType.XCMD, False),  # 0xCD
+    ("MODT",   ParamType.MODT, True),   # 0xC5
+    ("0xC6",   ParamType.NONE, True),   # 0xC6
+    ("0xC7",   ParamType.NONE, True),   # 0xC7
+    ("TUNE",   ParamType.C_V,  True),   # 0xC8
+    ("0xC9",   ParamType.NONE, True),   # 0xC9
+    ("0xCA",   ParamType.NONE, True),   # 0xCA
+    ("0xCB",   ParamType.NONE, True),   # 0xCB
+    ("0xCC",   ParamType.NONE, True),   # 0xCC
+    ("XCMD",   ParamType.XCMD, True),   # 0xCD
     ("EOT",    ParamType.TIE,  True),   # 0xCE
     ("TIE",    ParamType.TIE,  True)    # 0xCF
 ]
