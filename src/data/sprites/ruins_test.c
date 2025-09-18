@@ -33,7 +33,7 @@ static const u16 sRuinsTestGhostOam_SymbolPlaced_Frame0[OAM_DATA_SIZE(1)] = {
     0xf0, OBJ_SIZE_32x32 | 0x1f0, OBJ_SPRITE_OAM | 0x220e
 };
 
-static const u16 sRuinsTestGhostOutlineOam_Spawning_Frame0[37] = {
+static const u16 sRuinsTestGhostOutlineOam_Spawning_Frame0[OAM_DATA_SIZE(12)] = {
     0xc,
     OBJ_SHAPE_VERTICAL | 0xac, OBJ_SIZE_32x64 | 0x1e0, OBJ_SPRITE_OAM | 0x123c,
     OBJ_SHAPE_VERTICAL | 0xbc, OBJ_SIZE_16x32 | 0x1d0, OBJ_SPRITE_OAM | 0x127a,
@@ -49,7 +49,7 @@ static const u16 sRuinsTestGhostOutlineOam_Spawning_Frame0[37] = {
     OBJ_SHAPE_HORIZONTAL | 0x8, OBJ_X_FLIP | 0xd, OBJ_SPRITE_OAM | 0x125a
 };
 
-static const u16 sRuinsTestGhostOutlineOam_Spawning_Frame1[37] = {
+static const u16 sRuinsTestGhostOutlineOam_Spawning_Frame1[OAM_DATA_SIZE(12)] = {
     0xc,
     OBJ_SHAPE_VERTICAL | 0xac, OBJ_SIZE_32x64 | 0x1e0, OBJ_SPRITE_OAM | 0x223c,
     OBJ_SHAPE_VERTICAL | 0xbc, OBJ_SIZE_16x32 | 0x1d0, OBJ_SPRITE_OAM | 0x227a,
@@ -65,7 +65,7 @@ static const u16 sRuinsTestGhostOutlineOam_Spawning_Frame1[37] = {
     OBJ_SHAPE_HORIZONTAL | 0x8, OBJ_X_FLIP | 0xd, OBJ_SPRITE_OAM | 0x225a
 };
 
-static const u16 sRuinsTestGhostOutlineOam_Spawning_Frame2[37] = {
+static const u16 sRuinsTestGhostOutlineOam_Spawning_Frame2[OAM_DATA_SIZE(12)] = {
     0xc,
     OBJ_SHAPE_VERTICAL | 0xac, OBJ_SIZE_32x64 | 0x1e0, OBJ_SPRITE_OAM | 0x323c,
     OBJ_SHAPE_VERTICAL | 0xbc, OBJ_SIZE_16x32 | 0x1d0, OBJ_SPRITE_OAM | 0x327a,
@@ -81,7 +81,7 @@ static const u16 sRuinsTestGhostOutlineOam_Spawning_Frame2[37] = {
     OBJ_SHAPE_HORIZONTAL | 0x8, OBJ_X_FLIP | 0xd, OBJ_SPRITE_OAM | 0x325a
 };
 
-static const u16 sRuinsTestGhostOutlineOam_Spawning_Frame3[37] = {
+static const u16 sRuinsTestGhostOutlineOam_Spawning_Frame3[OAM_DATA_SIZE(12)] = {
     0xc,
     OBJ_SHAPE_VERTICAL | 0xac, OBJ_SIZE_32x64 | 0x1e0, OBJ_SPRITE_OAM | 0x423c,
     OBJ_SHAPE_VERTICAL | 0xbc, OBJ_SIZE_16x32 | 0x1d0, OBJ_SPRITE_OAM | 0x427a,
@@ -97,7 +97,7 @@ static const u16 sRuinsTestGhostOutlineOam_Spawning_Frame3[37] = {
     OBJ_SHAPE_HORIZONTAL | 0x8, OBJ_X_FLIP | 0xd, OBJ_SPRITE_OAM | 0x425a
 };
 
-static const u16 sRuinsTestGhostOutlineOam_Spawning_Frame4[37] = {
+static const u16 sRuinsTestGhostOutlineOam_Spawning_Frame4[OAM_DATA_SIZE(12)] = {
     0xc,
     OBJ_SHAPE_VERTICAL | 0xac, OBJ_SIZE_32x64 | 0x1e0, OBJ_SPRITE_OAM | 0x523c,
     OBJ_SHAPE_VERTICAL | 0xbc, OBJ_SIZE_16x32 | 0x1d0, OBJ_SPRITE_OAM | 0x527a,

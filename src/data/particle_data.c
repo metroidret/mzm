@@ -565,27 +565,27 @@ const u16 sParticleHittingSomethingWithPlasmaBeamOam_Frame5[OAM_DATA_SIZE(4)] = 
     0x0, OBJ_X_FLIP | OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x0, 0x2147
 };
 
-const u16 sParticleHittingSomethingInvincible_Frame0[4] = {
+const u16 sParticleHittingSomethingInvincible_Frame0[OAM_DATA_SIZE(1)] = {
     0x1,
     0xfc, 0x1fc, 0x2115
 };
 
-const u16 sParticleHittingSomethingInvincible_Frame1[4] = {
+const u16 sParticleHittingSomethingInvincible_Frame1[OAM_DATA_SIZE(1)] = {
     0x1,
     0xfc, 0x1fc, 0x2135
 };
 
-const u16 sParticleHittingSomethingInvincible_Frame2[4] = {
+const u16 sParticleHittingSomethingInvincible_Frame2[OAM_DATA_SIZE(1)] = {
     0x1,
     0xf8, OBJ_SIZE_16x16 | 0x1f8, 0x2116
 };
 
-const u16 sParticleHittingSomethingInvincible_Frame3[4] = {
+const u16 sParticleHittingSomethingInvincible_Frame3[OAM_DATA_SIZE(1)] = {
     0x1,
     0xf8, OBJ_SIZE_16x16 | 0x1f8, 0x2118
 };
 
-const u16 sParticleHittingSomethingInvincible_Frame4[4] = {
+const u16 sParticleHittingSomethingInvincible_Frame4[OAM_DATA_SIZE(1)] = {
     0x1,
     0xf8, OBJ_SIZE_16x16 | 0x1f8, 0x211a
 };
