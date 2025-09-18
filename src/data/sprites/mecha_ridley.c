@@ -10461,1948 +10461,1948 @@ const u16 sMechaRidleyFadingPal[7 * 16] = INCBIN_U16("data/sprites/MechaRidleyFa
 
 
 static const u16 sMechaRidleyPartOam_Tail_Frame0[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_64x32 | 0x1d2, OBJ_SPRITE_OAM | 0x390,
-    0xf0, OBJ_SIZE_32x32 | 0xe, OBJ_SPRITE_OAM | 0x391
+    2,
+    OAM_ENTRY(-46, -16, OAM_DIMS_64x32, OAM_NO_FLIP, 912, 8, 0),
+    OAM_ENTRY(14, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 913, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_Ring_Frame0[OAM_DATA_SIZE(3)] = {
-    0x3,
-    0xf4, OBJ_SIZE_32x32 | 0x1e8, OBJ_SPRITE_OAM | 0x2a4,
-    OBJ_SHAPE_VERTICAL | 0xf4, OBJ_SIZE_16x32 | 0x8, OBJ_SPRITE_OAM | 0x324,
-    OBJ_SHAPE_HORIZONTAL | 0xec, 0x8, OBJ_SPRITE_OAM | 0x342
+    3,
+    OAM_ENTRY(-24, -12, OAM_DIMS_32x32, OAM_NO_FLIP, 676, 8, 0),
+    OAM_ENTRY(8, -12, OAM_DIMS_16x32, OAM_NO_FLIP, 804, 8, 0),
+    OAM_ENTRY(8, -20, OAM_DIMS_16x8, OAM_NO_FLIP, 834, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_Cover_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf4, OBJ_SIZE_32x32 | 0x1f0, OBJ_SPRITE_OAM | 0x244
+    1,
+    OAM_ENTRY(-16, -12, OAM_DIMS_32x32, OAM_NO_FLIP, 580, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_Torso_Frame0[OAM_DATA_SIZE(4)] = {
-    0x4,
-    OBJ_SHAPE_HORIZONTAL | 0xdc, OBJ_SIZE_32x8 | 0x1e8, OBJ_SPRITE_OAM | 0x2ac,
-    0xe4, OBJ_SIZE_32x32 | 0x1e8, OBJ_SPRITE_OAM | 0x2cc,
-    OBJ_SHAPE_VERTICAL | 0xe4, OBJ_SIZE_16x32 | 0x8, OBJ_SPRITE_OAM | 0x2d0,
-    OBJ_SHAPE_HORIZONTAL | 0x4, OBJ_SIZE_32x16 | 0x1f8, OBJ_SPRITE_OAM | 0x34e
+    4,
+    OAM_ENTRY(-24, -36, OAM_DIMS_32x8, OAM_NO_FLIP, 684, 8, 0),
+    OAM_ENTRY(-24, -28, OAM_DIMS_32x32, OAM_NO_FLIP, 716, 8, 0),
+    OAM_ENTRY(8, -28, OAM_DIMS_16x32, OAM_NO_FLIP, 720, 8, 0),
+    OAM_ENTRY(-8, 4, OAM_DIMS_32x16, OAM_NO_FLIP, 846, 8, 0),
 };
 
 static const u16 sMechaRidleyOam_Idle_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfc, 0x1fb, OBJ_SPRITE_OAM | 0x5374
+    1,
+    OAM_ENTRY(-5, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 884, 13, 0),
 };
 
 static const u16 sMechaRidleyOam_Idle_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfc, 0x1fb, OBJ_SPRITE_OAM | 0x52b0
+    1,
+    OAM_ENTRY(-5, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 688, 13, 0),
 };
 
 static const u16 sMechaRidleyOam_Idle_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfc, 0x1fb, OBJ_SPRITE_OAM | 0x52b1
+    1,
+    OAM_ENTRY(-5, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 689, 13, 0),
 };
 
 static const u16 sMechaRidleyPartOam_HeadIdle_Frame0[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_VERTICAL | 0x4, OBJ_SIZE_8x32 | 0x1e1, OBJ_SPRITE_OAM | 0x29f,
-    OBJ_SHAPE_VERTICAL | 0xfc, OBJ_SIZE_16x32 | 0x1e7, OBJ_SPRITE_OAM | 0x288,
-    OBJ_SHAPE_VERTICAL | 0xe4, OBJ_SIZE_16x32 | 0x1f7, OBJ_SPRITE_OAM | 0x34c,
-    0x4, OBJ_SIZE_16x16 | 0x1f7, OBJ_SPRITE_OAM | 0x3cc,
-    0xdc, OBJ_SIZE_32x32 | 0x7, OBJ_SPRITE_OAM | 0x308,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_SIZE_32x16 | 0x7, OBJ_SPRITE_OAM | 0x388
+    6,
+    OAM_ENTRY(-31, 4, OAM_DIMS_8x32, OAM_NO_FLIP, 671, 8, 0),
+    OAM_ENTRY(-25, -4, OAM_DIMS_16x32, OAM_NO_FLIP, 648, 8, 0),
+    OAM_ENTRY(-9, -28, OAM_DIMS_16x32, OAM_NO_FLIP, 844, 8, 0),
+    OAM_ENTRY(-9, 4, OAM_DIMS_16x16, OAM_NO_FLIP, 972, 8, 0),
+    OAM_ENTRY(7, -36, OAM_DIMS_32x32, OAM_NO_FLIP, 776, 8, 0),
+    OAM_ENTRY(7, -4, OAM_DIMS_32x16, OAM_NO_FLIP, 904, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_HeadOpeningMouth_Frame0[OAM_DATA_SIZE(8)] = {
-    0x8,
-    0xdc, OBJ_SIZE_16x16 | 0x1d8, OBJ_SPRITE_OAM | 0x208,
-    OBJ_SHAPE_VERTICAL | 0xda, OBJ_SIZE_16x32 | 0x1e3, OBJ_SPRITE_OAM | 0x212,
-    OBJ_SHAPE_VERTICAL | 0xe2, OBJ_SIZE_16x32 | 0x1f3, OBJ_SPRITE_OAM | 0x20c,
-    0xe5, OBJ_SIZE_32x32 | 0x3, OBJ_SPRITE_OAM | 0x20e,
-    OBJ_SHAPE_HORIZONTAL | 0x5, OBJ_SIZE_32x8 | 0x3, OBJ_SPRITE_OAM | 0x28e,
-    OBJ_SHAPE_VERTICAL | 0xe6, OBJ_SIZE_16x32 | 0x23, OBJ_SPRITE_OAM | 0x272,
-    OBJ_SHAPE_VERTICAL | 0xf3, OBJ_SIZE_16x32 | 0x1f2, OBJ_SPRITE_OAM | 0x20a,
-    0x3, OBJ_SIZE_16x16 | 0x1e2, OBJ_SPRITE_OAM | 0x248
+    8,
+    OAM_ENTRY(-40, -36, OAM_DIMS_16x16, OAM_NO_FLIP, 520, 8, 0),
+    OAM_ENTRY(-29, -38, OAM_DIMS_16x32, OAM_NO_FLIP, 530, 8, 0),
+    OAM_ENTRY(-13, -30, OAM_DIMS_16x32, OAM_NO_FLIP, 524, 8, 0),
+    OAM_ENTRY(3, -27, OAM_DIMS_32x32, OAM_NO_FLIP, 526, 8, 0),
+    OAM_ENTRY(3, 5, OAM_DIMS_32x8, OAM_NO_FLIP, 654, 8, 0),
+    OAM_ENTRY(35, -26, OAM_DIMS_16x32, OAM_NO_FLIP, 626, 8, 0),
+    OAM_ENTRY(-14, -13, OAM_DIMS_16x32, OAM_NO_FLIP, 522, 8, 0),
+    OAM_ENTRY(-30, 3, OAM_DIMS_16x16, OAM_NO_FLIP, 584, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_HeadOpeningMouth_Frame1[OAM_DATA_SIZE(8)] = {
-    0x8,
-    0xde, OBJ_SIZE_16x16 | 0x1d8, OBJ_SPRITE_OAM | 0x208,
-    OBJ_SHAPE_VERTICAL | 0xdb, OBJ_SIZE_16x32 | 0x1e3, OBJ_SPRITE_OAM | 0x212,
-    OBJ_SHAPE_VERTICAL | 0xe3, OBJ_SIZE_16x32 | 0x1f3, OBJ_SPRITE_OAM | 0x20c,
-    0xe6, OBJ_SIZE_32x32 | 0x3, OBJ_SPRITE_OAM | 0x20e,
-    OBJ_SHAPE_HORIZONTAL | 0x6, OBJ_SIZE_32x8 | 0x3, OBJ_SPRITE_OAM | 0x28e,
-    OBJ_SHAPE_VERTICAL | 0xe7, OBJ_SIZE_16x32 | 0x23, OBJ_SPRITE_OAM | 0x272,
-    OBJ_SHAPE_VERTICAL | 0xf5, OBJ_SIZE_16x32 | 0x1f2, OBJ_SPRITE_OAM | 0x20a,
-    0x5, OBJ_SIZE_16x16 | 0x1e2, OBJ_SPRITE_OAM | 0x248
+    8,
+    OAM_ENTRY(-40, -34, OAM_DIMS_16x16, OAM_NO_FLIP, 520, 8, 0),
+    OAM_ENTRY(-29, -37, OAM_DIMS_16x32, OAM_NO_FLIP, 530, 8, 0),
+    OAM_ENTRY(-13, -29, OAM_DIMS_16x32, OAM_NO_FLIP, 524, 8, 0),
+    OAM_ENTRY(3, -26, OAM_DIMS_32x32, OAM_NO_FLIP, 526, 8, 0),
+    OAM_ENTRY(3, 6, OAM_DIMS_32x8, OAM_NO_FLIP, 654, 8, 0),
+    OAM_ENTRY(35, -25, OAM_DIMS_16x32, OAM_NO_FLIP, 626, 8, 0),
+    OAM_ENTRY(-14, -11, OAM_DIMS_16x32, OAM_NO_FLIP, 522, 8, 0),
+    OAM_ENTRY(-30, 5, OAM_DIMS_16x16, OAM_NO_FLIP, 584, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_HeadSpittingFireballs_Frame0[OAM_DATA_SIZE(8)] = {
-    0x8,
-    0xdf, OBJ_SIZE_16x16 | 0x1d8, OBJ_SPRITE_OAM | 0x208,
-    OBJ_SHAPE_VERTICAL | 0xdc, OBJ_SIZE_16x32 | 0x1e3, OBJ_SPRITE_OAM | 0x212,
-    OBJ_SHAPE_VERTICAL | 0xe4, OBJ_SIZE_16x32 | 0x1f3, OBJ_SPRITE_OAM | 0x20c,
-    0xe6, OBJ_SIZE_32x32 | 0x3, OBJ_SPRITE_OAM | 0x20e,
-    OBJ_SHAPE_HORIZONTAL | 0x6, OBJ_SIZE_32x8 | 0x3, OBJ_SPRITE_OAM | 0x28e,
-    OBJ_SHAPE_VERTICAL | 0xe7, OBJ_SIZE_16x32 | 0x23, OBJ_SPRITE_OAM | 0x272,
-    OBJ_SHAPE_VERTICAL | 0xf7, OBJ_SIZE_16x32 | 0x1f2, OBJ_SPRITE_OAM | 0x20a,
-    0x7, OBJ_SIZE_16x16 | 0x1e2, OBJ_SPRITE_OAM | 0x248
+    8,
+    OAM_ENTRY(-40, -33, OAM_DIMS_16x16, OAM_NO_FLIP, 520, 8, 0),
+    OAM_ENTRY(-29, -36, OAM_DIMS_16x32, OAM_NO_FLIP, 530, 8, 0),
+    OAM_ENTRY(-13, -28, OAM_DIMS_16x32, OAM_NO_FLIP, 524, 8, 0),
+    OAM_ENTRY(3, -26, OAM_DIMS_32x32, OAM_NO_FLIP, 526, 8, 0),
+    OAM_ENTRY(3, 6, OAM_DIMS_32x8, OAM_NO_FLIP, 654, 8, 0),
+    OAM_ENTRY(35, -25, OAM_DIMS_16x32, OAM_NO_FLIP, 626, 8, 0),
+    OAM_ENTRY(-14, -9, OAM_DIMS_16x32, OAM_NO_FLIP, 522, 8, 0),
+    OAM_ENTRY(-30, 7, OAM_DIMS_16x16, OAM_NO_FLIP, 584, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_HeadSpittingFireballs_Frame1[OAM_DATA_SIZE(8)] = {
-    0x8,
-    0xdf, OBJ_SIZE_16x16 | 0x1d9, OBJ_SPRITE_OAM | 0x208,
-    OBJ_SHAPE_VERTICAL | 0xdc, OBJ_SIZE_16x32 | 0x1e4, OBJ_SPRITE_OAM | 0x212,
-    OBJ_SHAPE_VERTICAL | 0xe4, OBJ_SIZE_16x32 | 0x1f4, OBJ_SPRITE_OAM | 0x20c,
-    0xe6, OBJ_SIZE_32x32 | 0x4, OBJ_SPRITE_OAM | 0x20e,
-    OBJ_SHAPE_HORIZONTAL | 0x6, OBJ_SIZE_32x8 | 0x4, OBJ_SPRITE_OAM | 0x28e,
-    OBJ_SHAPE_VERTICAL | 0xe7, OBJ_SIZE_16x32 | 0x24, OBJ_SPRITE_OAM | 0x272,
-    OBJ_SHAPE_VERTICAL | 0xf8, OBJ_SIZE_16x32 | 0x1f3, OBJ_SPRITE_OAM | 0x20a,
-    0x8, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x248
+    8,
+    OAM_ENTRY(-39, -33, OAM_DIMS_16x16, OAM_NO_FLIP, 520, 8, 0),
+    OAM_ENTRY(-28, -36, OAM_DIMS_16x32, OAM_NO_FLIP, 530, 8, 0),
+    OAM_ENTRY(-12, -28, OAM_DIMS_16x32, OAM_NO_FLIP, 524, 8, 0),
+    OAM_ENTRY(4, -26, OAM_DIMS_32x32, OAM_NO_FLIP, 526, 8, 0),
+    OAM_ENTRY(4, 6, OAM_DIMS_32x8, OAM_NO_FLIP, 654, 8, 0),
+    OAM_ENTRY(36, -25, OAM_DIMS_16x32, OAM_NO_FLIP, 626, 8, 0),
+    OAM_ENTRY(-13, -8, OAM_DIMS_16x32, OAM_NO_FLIP, 522, 8, 0),
+    OAM_ENTRY(-29, 8, OAM_DIMS_16x16, OAM_NO_FLIP, 584, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_HeadSpittingFireballs_Frame2[OAM_DATA_SIZE(8)] = {
-    0x8,
-    0xdf, OBJ_SIZE_16x16 | 0x1da, OBJ_SPRITE_OAM | 0x208,
-    OBJ_SHAPE_VERTICAL | 0xdc, OBJ_SIZE_16x32 | 0x1e5, OBJ_SPRITE_OAM | 0x212,
-    OBJ_SHAPE_VERTICAL | 0xe4, OBJ_SIZE_16x32 | 0x1f5, OBJ_SPRITE_OAM | 0x20c,
-    0xe6, OBJ_SIZE_32x32 | 0x5, OBJ_SPRITE_OAM | 0x20e,
-    OBJ_SHAPE_HORIZONTAL | 0x6, OBJ_SIZE_32x8 | 0x5, OBJ_SPRITE_OAM | 0x28e,
-    OBJ_SHAPE_VERTICAL | 0xe7, OBJ_SIZE_16x32 | 0x25, OBJ_SPRITE_OAM | 0x272,
-    OBJ_SHAPE_VERTICAL | 0xf8, OBJ_SIZE_16x32 | 0x1f4, OBJ_SPRITE_OAM | 0x20a,
-    0x8, OBJ_SIZE_16x16 | 0x1e4, OBJ_SPRITE_OAM | 0x248
+    8,
+    OAM_ENTRY(-38, -33, OAM_DIMS_16x16, OAM_NO_FLIP, 520, 8, 0),
+    OAM_ENTRY(-27, -36, OAM_DIMS_16x32, OAM_NO_FLIP, 530, 8, 0),
+    OAM_ENTRY(-11, -28, OAM_DIMS_16x32, OAM_NO_FLIP, 524, 8, 0),
+    OAM_ENTRY(5, -26, OAM_DIMS_32x32, OAM_NO_FLIP, 526, 8, 0),
+    OAM_ENTRY(5, 6, OAM_DIMS_32x8, OAM_NO_FLIP, 654, 8, 0),
+    OAM_ENTRY(37, -25, OAM_DIMS_16x32, OAM_NO_FLIP, 626, 8, 0),
+    OAM_ENTRY(-12, -8, OAM_DIMS_16x32, OAM_NO_FLIP, 522, 8, 0),
+    OAM_ENTRY(-28, 8, OAM_DIMS_16x16, OAM_NO_FLIP, 584, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeIdle_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x12d4
+    1,
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 724, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeIdle_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x12d5
+    1,
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 725, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeIdle_Frame3[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x12d6
+    1,
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 726, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeIdle_Frame4[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x12d7
+    1,
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 727, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeGlowing_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    1,
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeGlowing_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    1,
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserForward_Frame0[OAM_DATA_SIZE(2)] = {
-    0x2,
-    0xfa, 0x1f8, OBJ_SPRITE_OAM | 0x53a0,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    2,
+    OAM_ENTRY(-8, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 928, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserForward_Frame1[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0xfa, 0x1f0, OBJ_SPRITE_OAM | 0x53a4,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    2,
+    OAM_ENTRY(-16, -6, OAM_DIMS_16x8, OAM_NO_FLIP, 932, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserForward_Frame2[OAM_DATA_SIZE(3)] = {
-    0x3,
-    OBJ_SHAPE_HORIZONTAL | 0xfa, 0x1e8, OBJ_SPRITE_OAM | 0x53a0,
-    0xfa, 0x1f8, OBJ_SPRITE_OAM | 0x53a2,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    3,
+    OAM_ENTRY(-24, -6, OAM_DIMS_16x8, OAM_NO_FLIP, 928, 13, 0),
+    OAM_ENTRY(-8, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 930, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserForward_Frame3[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0xfa, OBJ_SIZE_32x8 | 0x1e0, OBJ_SPRITE_OAM | 0x53a4,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    2,
+    OAM_ENTRY(-32, -6, OAM_DIMS_32x8, OAM_NO_FLIP, 932, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserForward_Frame4[OAM_DATA_SIZE(3)] = {
-    0x3,
-    OBJ_SHAPE_HORIZONTAL | 0xfa, OBJ_SIZE_32x8 | 0x1d8, OBJ_SPRITE_OAM | 0x53a0,
-    0xfa, 0x1f8, OBJ_SPRITE_OAM | 0x53a3,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    3,
+    OAM_ENTRY(-40, -6, OAM_DIMS_32x8, OAM_NO_FLIP, 928, 13, 0),
+    OAM_ENTRY(-8, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 931, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserForward_Frame5[OAM_DATA_SIZE(3)] = {
-    0x3,
-    OBJ_SHAPE_HORIZONTAL | 0xfa, OBJ_SIZE_32x8 | 0x1d0, OBJ_SPRITE_OAM | 0x53a4,
-    OBJ_SHAPE_HORIZONTAL | 0xfa, 0x1f0, OBJ_SPRITE_OAM | 0x53a6,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    3,
+    OAM_ENTRY(-48, -6, OAM_DIMS_32x8, OAM_NO_FLIP, 932, 13, 0),
+    OAM_ENTRY(-16, -6, OAM_DIMS_16x8, OAM_NO_FLIP, 934, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserForward_Frame6[OAM_DATA_SIZE(3)] = {
-    0x3,
-    OBJ_SHAPE_HORIZONTAL | 0xfa, OBJ_SIZE_32x8 | 0x1ca, OBJ_SPRITE_OAM | 0x53a0,
-    OBJ_SHAPE_HORIZONTAL | 0xfa, OBJ_SIZE_32x8 | 0x1e0, OBJ_SPRITE_OAM | 0x53a0,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    3,
+    OAM_ENTRY(-54, -6, OAM_DIMS_32x8, OAM_NO_FLIP, 928, 13, 0),
+    OAM_ENTRY(-32, -6, OAM_DIMS_32x8, OAM_NO_FLIP, 928, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserSlightlyDown_Frame0[OAM_DATA_SIZE(2)] = {
-    0x2,
-    0xfb, 0x1f8, OBJ_SPRITE_OAM | 0x53e0,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    2,
+    OAM_ENTRY(-8, -5, OAM_DIMS_8x8, OAM_NO_FLIP, 992, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserSlightlyDown_Frame1[OAM_DATA_SIZE(2)] = {
-    0x2,
-    0xf7, OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x53c4,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    2,
+    OAM_ENTRY(-16, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 964, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserSlightlyDown_Frame2[OAM_DATA_SIZE(3)] = {
-    0x3,
-    0xfb, OBJ_SIZE_16x16 | 0x1e8, OBJ_SPRITE_OAM | 0x53c0,
-    OBJ_SHAPE_VERTICAL | 0xfb, 0x1f8, OBJ_SPRITE_OAM | 0x53c2,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    3,
+    OAM_ENTRY(-24, -5, OAM_DIMS_16x16, OAM_NO_FLIP, 960, 13, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_8x16, OAM_NO_FLIP, 962, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserSlightlyDown_Frame3[OAM_DATA_SIZE(3)] = {
-    0x3,
-    OBJ_SHAPE_HORIZONTAL | 0xff, OBJ_SIZE_32x16 | 0x1e0, OBJ_SPRITE_OAM | 0x53c4,
-    0xf9, OBJ_X_FLIP | OBJ_Y_FLIP | 0x1f8, OBJ_SPRITE_OAM | 0x53c7,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    3,
+    OAM_ENTRY(-32, -1, OAM_DIMS_32x16, OAM_NO_FLIP, 964, 13, 0),
+    OAM_ENTRY(-8, -7, OAM_DIMS_8x8, OAM_XY_FLIP, 967, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserSlightlyDown_Frame4[OAM_DATA_SIZE(3)] = {
-    0x3,
-    OBJ_SHAPE_HORIZONTAL | 0x3, OBJ_SIZE_32x16 | 0x1d8, OBJ_SPRITE_OAM | 0x53c0,
-    0xf5, OBJ_X_FLIP | OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x53c2,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    3,
+    OAM_ENTRY(-40, 3, OAM_DIMS_32x16, OAM_NO_FLIP, 960, 13, 0),
+    OAM_ENTRY(-16, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 962, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserSlightlyDown_Frame5[OAM_DATA_SIZE(4)] = {
-    0x4,
-    OBJ_SHAPE_HORIZONTAL | 0x6, OBJ_SIZE_32x16 | 0x1d2, OBJ_SPRITE_OAM | 0x53c4,
-    0xf9, OBJ_X_FLIP | OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x53c5,
-    OBJ_SHAPE_VERTICAL | 0xf9, OBJ_X_FLIP | OBJ_Y_FLIP | 0x1e8, OBJ_SPRITE_OAM | 0x53c7,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    4,
+    OAM_ENTRY(-46, 6, OAM_DIMS_32x16, OAM_NO_FLIP, 964, 13, 0),
+    OAM_ENTRY(-16, -7, OAM_DIMS_16x16, OAM_XY_FLIP, 965, 13, 0),
+    OAM_ENTRY(-24, -7, OAM_DIMS_8x16, OAM_XY_FLIP, 967, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserSlightlyDown_Frame6[OAM_DATA_SIZE(3)] = {
-    0x3,
-    OBJ_SHAPE_HORIZONTAL | 0x9, OBJ_SIZE_32x16 | 0x1cc, OBJ_SPRITE_OAM | 0x53c0,
-    OBJ_SHAPE_HORIZONTAL | 0xfd, OBJ_X_FLIP | OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1e0, OBJ_SPRITE_OAM | 0x53c0,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    3,
+    OAM_ENTRY(-52, 9, OAM_DIMS_32x16, OAM_NO_FLIP, 960, 13, 0),
+    OAM_ENTRY(-32, -3, OAM_DIMS_32x16, OAM_XY_FLIP, 960, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserDown_Frame0[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_VERTICAL | 0xf6, 0x1f8, OBJ_SPRITE_OAM | 0x53c8,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    2,
+    OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 968, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserDown_Frame1[OAM_DATA_SIZE(3)] = {
-    0x3,
-    0xfe, OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x5204,
-    OBJ_SHAPE_VERTICAL | 0xf6, 0x1f8, OBJ_SPRITE_OAM | 0x5206,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    3,
+    OAM_ENTRY(-16, -2, OAM_DIMS_16x16, OAM_NO_FLIP, 516, 13, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 518, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserDown_Frame2[OAM_DATA_SIZE(3)] = {
-    0x3,
-    0x4, OBJ_SIZE_16x16 | 0x1ea, OBJ_SPRITE_OAM | 0x53c8,
-    OBJ_SHAPE_VERTICAL | 0xf6, 0x1f8, OBJ_SPRITE_OAM | 0x53ca,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    3,
+    OAM_ENTRY(-22, 4, OAM_DIMS_16x16, OAM_NO_FLIP, 968, 13, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 970, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserDown_Frame3[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xa, OBJ_SIZE_16x16 | 0x1e4, OBJ_SPRITE_OAM | 0x5204,
-    0x3, OBJ_SIZE_16x16 | 0x1eb, OBJ_SPRITE_OAM | 0x5206,
-    OBJ_SHAPE_VERTICAL | 0xf6, 0x1f8, OBJ_SPRITE_OAM | 0x5206,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    4,
+    OAM_ENTRY(-28, 10, OAM_DIMS_16x16, OAM_NO_FLIP, 516, 13, 0),
+    OAM_ENTRY(-21, 3, OAM_DIMS_16x16, OAM_NO_FLIP, 518, 13, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 518, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserDown_Frame4[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xf, OBJ_SIZE_16x16 | 0x1df, OBJ_SPRITE_OAM | 0x53c8,
-    0x4, OBJ_SIZE_16x16 | 0x1ea, OBJ_SPRITE_OAM | 0x53ca,
-    OBJ_SHAPE_VERTICAL | 0xf6, 0x1f8, OBJ_SPRITE_OAM | 0x53ca,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    4,
+    OAM_ENTRY(-33, 15, OAM_DIMS_16x16, OAM_NO_FLIP, 968, 13, 0),
+    OAM_ENTRY(-22, 4, OAM_DIMS_16x16, OAM_NO_FLIP, 970, 13, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 970, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserDown_Frame5[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x15, OBJ_SIZE_16x16 | 0x1d9, OBJ_SPRITE_OAM | 0x5204,
-    0x0, OBJ_SIZE_16x16 | 0x1ee, OBJ_SPRITE_OAM | 0x5206,
-    OBJ_SHAPE_VERTICAL | 0xf6, 0x1f8, OBJ_SPRITE_OAM | 0x5206,
-    0xb, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x5206,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    5,
+    OAM_ENTRY(-39, 21, OAM_DIMS_16x16, OAM_NO_FLIP, 516, 13, 0),
+    OAM_ENTRY(-18, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 518, 13, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 518, 13, 0),
+    OAM_ENTRY(-29, 11, OAM_DIMS_16x16, OAM_NO_FLIP, 518, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserDown_Frame6[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x1a, OBJ_SIZE_16x16 | 0x1d4, OBJ_SPRITE_OAM | 0x53c8,
-    0xf, OBJ_SIZE_16x16 | 0x1df, OBJ_SPRITE_OAM | 0x53ca,
-    0x4, OBJ_SIZE_16x16 | 0x1ea, OBJ_SPRITE_OAM | 0x53ca,
-    OBJ_SHAPE_VERTICAL | 0xf6, 0x1f8, OBJ_SPRITE_OAM | 0x53ca,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    5,
+    OAM_ENTRY(-44, 26, OAM_DIMS_16x16, OAM_NO_FLIP, 968, 13, 0),
+    OAM_ENTRY(-33, 15, OAM_DIMS_16x16, OAM_NO_FLIP, 970, 13, 0),
+    OAM_ENTRY(-22, 4, OAM_DIMS_16x16, OAM_NO_FLIP, 970, 13, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 970, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserSlightlyUp_Frame0[OAM_DATA_SIZE(2)] = {
-    0x2,
-    0xf9, OBJ_Y_FLIP | 0x1f8, OBJ_SPRITE_OAM | 0x53e0,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    2,
+    OAM_ENTRY(-8, -7, OAM_DIMS_8x8, OAM_Y_FLIP, 992, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserSlightlyUp_Frame1[OAM_DATA_SIZE(2)] = {
-    0x2,
-    0xf5, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x53c4,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    2,
+    OAM_ENTRY(-16, -11, OAM_DIMS_16x16, OAM_Y_FLIP, 964, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserSlightlyUp_Frame2[OAM_DATA_SIZE(3)] = {
-    0x3,
-    0xf1, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1e8, OBJ_SPRITE_OAM | 0x53c0,
-    OBJ_SHAPE_VERTICAL | 0xf1, OBJ_Y_FLIP | 0x1f8, OBJ_SPRITE_OAM | 0x53c2,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    3,
+    OAM_ENTRY(-24, -15, OAM_DIMS_16x16, OAM_Y_FLIP, 960, 13, 0),
+    OAM_ENTRY(-8, -15, OAM_DIMS_8x16, OAM_Y_FLIP, 962, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserSlightlyUp_Frame3[OAM_DATA_SIZE(3)] = {
-    0x3,
-    OBJ_SHAPE_HORIZONTAL | 0xed, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1e0, OBJ_SPRITE_OAM | 0x53c4,
-    0xfb, OBJ_X_FLIP | 0x1f8, OBJ_SPRITE_OAM | 0x53c7,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    3,
+    OAM_ENTRY(-32, -19, OAM_DIMS_32x16, OAM_Y_FLIP, 964, 13, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_8x8, OAM_X_FLIP, 967, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserSlightlyUp_Frame4[OAM_DATA_SIZE(3)] = {
-    0x3,
-    OBJ_SHAPE_HORIZONTAL | 0xe9, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1d8, OBJ_SPRITE_OAM | 0x53c0,
-    0xf7, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x53c2,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    3,
+    OAM_ENTRY(-40, -23, OAM_DIMS_32x16, OAM_Y_FLIP, 960, 13, 0),
+    OAM_ENTRY(-16, -9, OAM_DIMS_16x16, OAM_X_FLIP, 962, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserSlightlyUp_Frame5[OAM_DATA_SIZE(4)] = {
-    0x4,
-    OBJ_SHAPE_HORIZONTAL | 0xe6, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1d2, OBJ_SPRITE_OAM | 0x53c4,
-    0xf3, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x53c5,
-    OBJ_SHAPE_VERTICAL | 0xf3, OBJ_X_FLIP | 0x1e8, OBJ_SPRITE_OAM | 0x53c7,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    4,
+    OAM_ENTRY(-46, -26, OAM_DIMS_32x16, OAM_Y_FLIP, 964, 13, 0),
+    OAM_ENTRY(-16, -13, OAM_DIMS_16x16, OAM_X_FLIP, 965, 13, 0),
+    OAM_ENTRY(-24, -13, OAM_DIMS_8x16, OAM_X_FLIP, 967, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserSlightlyUp_Frame6[OAM_DATA_SIZE(3)] = {
-    0x3,
-    OBJ_SHAPE_HORIZONTAL | 0xe3, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1cc, OBJ_SPRITE_OAM | 0x53c0,
-    OBJ_SHAPE_HORIZONTAL | 0xef, OBJ_X_FLIP | OBJ_SIZE_32x16 | 0x1e0, OBJ_SPRITE_OAM | 0x53c0,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    3,
+    OAM_ENTRY(-52, -29, OAM_DIMS_32x16, OAM_Y_FLIP, 960, 13, 0),
+    OAM_ENTRY(-32, -17, OAM_DIMS_32x16, OAM_X_FLIP, 960, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserUp_Frame0[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_VERTICAL | 0xf6, OBJ_Y_FLIP | 0x1f8, OBJ_SPRITE_OAM | 0x53c8,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    2,
+    OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_Y_FLIP, 968, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserUp_Frame1[OAM_DATA_SIZE(3)] = {
-    0x3,
-    0xee, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x5204,
-    OBJ_SHAPE_VERTICAL | 0xf6, OBJ_Y_FLIP | 0x1f8, OBJ_SPRITE_OAM | 0x5206,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    3,
+    OAM_ENTRY(-16, -18, OAM_DIMS_16x16, OAM_Y_FLIP, 516, 13, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_Y_FLIP, 518, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserUp_Frame2[OAM_DATA_SIZE(3)] = {
-    0x3,
-    0xe8, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1ea, OBJ_SPRITE_OAM | 0x53c8,
-    OBJ_SHAPE_VERTICAL | 0xf6, OBJ_Y_FLIP | 0x1f8, OBJ_SPRITE_OAM | 0x53ca,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    3,
+    OAM_ENTRY(-22, -24, OAM_DIMS_16x16, OAM_Y_FLIP, 968, 13, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_Y_FLIP, 970, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserUp_Frame3[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xe2, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1e4, OBJ_SPRITE_OAM | 0x5204,
-    0xe9, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1eb, OBJ_SPRITE_OAM | 0x5206,
-    OBJ_SHAPE_VERTICAL | 0xf6, OBJ_Y_FLIP | 0x1f8, OBJ_SPRITE_OAM | 0x5206,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    4,
+    OAM_ENTRY(-28, -30, OAM_DIMS_16x16, OAM_Y_FLIP, 516, 13, 0),
+    OAM_ENTRY(-21, -23, OAM_DIMS_16x16, OAM_Y_FLIP, 518, 13, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_Y_FLIP, 518, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserUp_Frame4[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xdd, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1df, OBJ_SPRITE_OAM | 0x53c8,
-    0xe8, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1ea, OBJ_SPRITE_OAM | 0x53ca,
-    OBJ_SHAPE_VERTICAL | 0xf6, OBJ_Y_FLIP | 0x1f8, OBJ_SPRITE_OAM | 0x53ca,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    4,
+    OAM_ENTRY(-33, -35, OAM_DIMS_16x16, OAM_Y_FLIP, 968, 13, 0),
+    OAM_ENTRY(-22, -24, OAM_DIMS_16x16, OAM_Y_FLIP, 970, 13, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_Y_FLIP, 970, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserUp_Frame5[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xd7, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1d9, OBJ_SPRITE_OAM | 0x5204,
-    0xec, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1ee, OBJ_SPRITE_OAM | 0x5206,
-    OBJ_SHAPE_VERTICAL | 0xf6, OBJ_Y_FLIP | 0x1f8, OBJ_SPRITE_OAM | 0x5206,
-    0xe1, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x5206,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128d
+    5,
+    OAM_ENTRY(-39, -41, OAM_DIMS_16x16, OAM_Y_FLIP, 516, 13, 0),
+    OAM_ENTRY(-18, -20, OAM_DIMS_16x16, OAM_Y_FLIP, 518, 13, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_Y_FLIP, 518, 13, 0),
+    OAM_ENTRY(-29, -31, OAM_DIMS_16x16, OAM_Y_FLIP, 518, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 653, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeShootingLaserUp_Frame6[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xd2, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1d4, OBJ_SPRITE_OAM | 0x53c8,
-    0xdd, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1df, OBJ_SPRITE_OAM | 0x53ca,
-    0xe8, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1ea, OBJ_SPRITE_OAM | 0x53ca,
-    OBJ_SHAPE_VERTICAL | 0xf6, OBJ_Y_FLIP | 0x1f8, OBJ_SPRITE_OAM | 0x53ca,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x128c
+    5,
+    OAM_ENTRY(-44, -46, OAM_DIMS_16x16, OAM_Y_FLIP, 968, 13, 0),
+    OAM_ENTRY(-33, -35, OAM_DIMS_16x16, OAM_Y_FLIP, 970, 13, 0),
+    OAM_ENTRY(-22, -24, OAM_DIMS_16x16, OAM_Y_FLIP, 970, 13, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_Y_FLIP, 970, 13, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 652, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeInactive_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x1390
+    1,
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 912, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeInactive_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x1323
+    1,
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 803, 9, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingForwardLow_Frame0[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1b9, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1d9, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1e, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1e6, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x298,
-    OBJ_SHAPE_VERTICAL | 0x11, 0x5, OBJ_SPRITE_OAM | 0x321
+    6,
+    OAM_ENTRY(-71, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-39, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(0, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-26, 30, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -15, OAM_DIMS_32x32, OAM_NO_FLIP, 664, 8, 0),
+    OAM_ENTRY(5, 17, OAM_DIMS_8x16, OAM_NO_FLIP, 801, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingForwardLow_Frame1[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1c8, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1e8, OBJ_SPRITE_OAM | 0x2f6,
-    0x1a, OBJ_SIZE_16x16 | 0xf, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1e, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1f3, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_SIZE_32x32 | 0x1f9, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x11, 0x11, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-56, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-24, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(15, 26, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-13, 30, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-7, -15, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(17, 17, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingForwardLow_Frame2[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c9, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e9, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0x10, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1f4, OBJ_SPRITE_OAM | 0x2e0,
-    0xf0, OBJ_SIZE_32x32 | 0x1fa, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x10, 0x12, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-55, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-23, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(16, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-12, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-6, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(18, 16, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingForwardLow_Frame3[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c9, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e9, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0x10, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1f4, OBJ_SPRITE_OAM | 0x2e0,
-    0xef, OBJ_SIZE_32x32 | 0x1fa, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xf, 0x12, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-55, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-23, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(16, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-12, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-6, -17, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(18, 15, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingForwardLow_Frame4[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c9, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e9, OBJ_SPRITE_OAM | 0x2f6,
-    0x18, OBJ_SIZE_16x16 | 0xf, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1c, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1f3, OBJ_SPRITE_OAM | 0x2e0,
-    0xee, OBJ_SIZE_32x32 | 0x1f9, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, 0x11, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-55, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-23, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(15, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-13, 28, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-7, -18, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(17, 14, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingForwardLow_Frame5[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x11, OBJ_SIZE_32x32 | 0x1d5, OBJ_SPRITE_OAM | 0x218,
-    0x18, OBJ_SIZE_16x16 | 0xf, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x13, OBJ_SIZE_32x16 | 0x1f3, OBJ_SPRITE_OAM | 0x2e0,
-    0xee, OBJ_SIZE_32x32 | 0x1f9, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, 0x11, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-43, 17, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(15, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-13, 19, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-7, -18, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(17, 14, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingForwardLow_Frame6[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x10, OBJ_SIZE_32x32 | 0x1c8, OBJ_SPRITE_OAM | 0x218,
-    0x17, OBJ_SIZE_16x16 | 0x2, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x12, OBJ_SIZE_32x16 | 0x1e6, OBJ_SPRITE_OAM | 0x2e0,
-    0xed, OBJ_SIZE_32x32 | 0x1ff, OBJ_SPRITE_OAM | 0x298,
-    OBJ_SHAPE_VERTICAL | 0xd, 0x7, OBJ_SPRITE_OAM | 0x321
+    5,
+    OAM_ENTRY(-56, 16, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(2, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-26, 18, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-1, -19, OAM_DIMS_32x32, OAM_NO_FLIP, 664, 8, 0),
+    OAM_ENTRY(7, 13, OAM_DIMS_8x16, OAM_NO_FLIP, 801, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingForwardLow_Frame7[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xd, OBJ_SIZE_32x32 | 0x1bb, OBJ_SPRITE_OAM | 0x218,
-    0x14, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xf, OBJ_SIZE_32x16 | 0x1d9, OBJ_SPRITE_OAM | 0x2e0,
-    0xed, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fe, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xd, OBJ_X_FLIP | 0x1fe, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-69, 13, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-11, 20, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-39, 15, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-2, -19, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-2, 13, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingForwardLow_Frame8[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_SIZE_32x16 | 0x1ae, OBJ_SPRITE_OAM | 0x25c,
-    0x1d, OBJ_SIZE_16x16 | 0x1ce, OBJ_SPRITE_OAM | 0x361,
-    0x16, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1b, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1db, OBJ_SPRITE_OAM | 0x2e0,
-    0xef, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xf, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-82, 29, OAM_DIMS_32x16, OAM_NO_FLIP, 604, 8, 0),
+    OAM_ENTRY(-50, 29, OAM_DIMS_16x16, OAM_NO_FLIP, 865, 8, 0),
+    OAM_ENTRY(-11, 22, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-37, 27, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -17, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 15, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingForwardLow_Frame9[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x20, OBJ_SIZE_32x16 | 0x1ae, OBJ_SPRITE_OAM | 0x2f2,
-    0x20, OBJ_SIZE_16x16 | 0x1ce, OBJ_SPRITE_OAM | 0x2f6,
-    0x17, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1c, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1db, OBJ_SPRITE_OAM | 0x2e0,
-    0xf0, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x10, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-82, 32, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-50, 32, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-11, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-37, 28, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -16, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 16, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingForwardLow_Frame10[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1ae, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1ce, OBJ_SPRITE_OAM | 0x2f6,
-    0x18, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1db, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x11, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-82, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-50, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-11, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-37, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -15, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 17, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingForwardLow_Frame0[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x11, OBJ_SIZE_32x32 | 0x1cf, OBJ_SPRITE_OAM | 0x218,
-    0x18, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x13, OBJ_SIZE_32x16 | 0x1ed, OBJ_SPRITE_OAM | 0x2e0,
-    0xee, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, 0xb, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-49, 17, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(9, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, 19, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -18, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 14, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingForwardLow_Frame1[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x10, OBJ_SIZE_32x32 | 0x1c2, OBJ_SPRITE_OAM | 0x218,
-    0x17, OBJ_SIZE_16x16 | 0x1fc, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x12, OBJ_SIZE_32x16 | 0x1e0, OBJ_SPRITE_OAM | 0x2e0,
-    0xed, OBJ_SIZE_32x32 | 0x1f9, OBJ_SPRITE_OAM | 0x298,
-    OBJ_SHAPE_VERTICAL | 0xd, 0x1, OBJ_SPRITE_OAM | 0x321
+    5,
+    OAM_ENTRY(-62, 16, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-4, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-32, 18, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-7, -19, OAM_DIMS_32x32, OAM_NO_FLIP, 664, 8, 0),
+    OAM_ENTRY(1, 13, OAM_DIMS_8x16, OAM_NO_FLIP, 801, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingForwardLow_Frame2[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xd, OBJ_SIZE_32x32 | 0x1b5, OBJ_SPRITE_OAM | 0x218,
-    0x14, OBJ_SIZE_16x16 | 0x1ef, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xf, OBJ_SIZE_32x16 | 0x1d3, OBJ_SPRITE_OAM | 0x2e0,
-    0xed, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1f8, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xd, OBJ_X_FLIP | 0x1f8, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-75, 13, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-17, 20, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-45, 15, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-8, -19, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-8, 13, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingForwardLow_Frame3[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_SIZE_32x16 | 0x1a8, OBJ_SPRITE_OAM | 0x25c,
-    0x1d, OBJ_SIZE_16x16 | 0x1c8, OBJ_SPRITE_OAM | 0x361,
-    0x16, OBJ_SIZE_16x16 | 0x1ef, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1b, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1d5, OBJ_SPRITE_OAM | 0x2e0,
-    0xef, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1f7, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xf, OBJ_X_FLIP | 0x1f7, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-88, 29, OAM_DIMS_32x16, OAM_NO_FLIP, 604, 8, 0),
+    OAM_ENTRY(-56, 29, OAM_DIMS_16x16, OAM_NO_FLIP, 865, 8, 0),
+    OAM_ENTRY(-17, 22, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-43, 27, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-9, -17, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-9, 15, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingForwardLow_Frame4[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x20, OBJ_SIZE_32x16 | 0x1a8, OBJ_SPRITE_OAM | 0x2f2,
-    0x20, OBJ_SIZE_16x16 | 0x1c8, OBJ_SPRITE_OAM | 0x2f6,
-    0x17, OBJ_SIZE_16x16 | 0x1ef, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1c, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1d5, OBJ_SPRITE_OAM | 0x2e0,
-    0xf0, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1f7, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x10, OBJ_X_FLIP | 0x1f7, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-88, 32, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-56, 32, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-17, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-43, 28, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-9, -16, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-9, 16, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingForwardLow_Frame5[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1a8, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1c8, OBJ_SPRITE_OAM | 0x2f6,
-    0x18, OBJ_SIZE_16x16 | 0x1ef, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1d5, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1f7, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x11, OBJ_X_FLIP | 0x1f7, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-88, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-56, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-17, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-43, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-9, -15, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-9, 17, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingForwardLow_Frame6[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1b3, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1d3, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0x1fa, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1e, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1e0, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_SIZE_32x32 | 0x1f7, OBJ_SPRITE_OAM | 0x298,
-    OBJ_SHAPE_VERTICAL | 0x11, 0x1ff, OBJ_SPRITE_OAM | 0x321
+    6,
+    OAM_ENTRY(-77, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-45, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-6, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-32, 30, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-9, -15, OAM_DIMS_32x32, OAM_NO_FLIP, 664, 8, 0),
+    OAM_ENTRY(-1, 17, OAM_DIMS_8x16, OAM_NO_FLIP, 801, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingForwardLow_Frame7[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1c2, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1e2, OBJ_SPRITE_OAM | 0x2f6,
-    0x1a, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1e, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ed, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x11, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-62, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-30, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(9, 26, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, 30, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -15, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 17, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingForwardLow_Frame8[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c3, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0xa, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ee, OBJ_SPRITE_OAM | 0x2e0,
-    0xf0, OBJ_SIZE_32x32 | 0x1f4, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x10, 0xc, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-29, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(10, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-12, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(12, 16, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingForwardLow_Frame9[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c3, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0xa, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ee, OBJ_SPRITE_OAM | 0x2e0,
-    0xef, OBJ_SIZE_32x32 | 0x1f4, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xf, 0xc, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-29, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(10, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-12, -17, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(12, 15, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingForwardLow_Frame10[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c3, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x2f6,
-    0x18, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1c, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ee, OBJ_SPRITE_OAM | 0x2e0,
-    0xee, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-29, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(9, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 28, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -18, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 14, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmHoldingUp_Frame0[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1af, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1cf, OBJ_SPRITE_OAM | 0x2f6,
-    0x18, OBJ_SIZE_16x16 | 0x1f6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1dc, OBJ_SPRITE_OAM | 0x2e0,
-    0xf0, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x10, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-81, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-49, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-10, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-36, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -16, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 16, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmHoldingUp_Frame1[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x20, OBJ_SIZE_32x16 | 0x1af, OBJ_SPRITE_OAM | 0x2f2,
-    0x20, OBJ_SIZE_16x16 | 0x1cf, OBJ_SPRITE_OAM | 0x2f6,
-    0x17, OBJ_SIZE_16x16 | 0x1f6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1c, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1dc, OBJ_SPRITE_OAM | 0x2e0,
-    0xef, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xf, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-81, 32, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-49, 32, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-10, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-36, 28, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -17, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 15, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmHoldingUp_Frame2[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xc, OBJ_SIZE_32x32 | 0x1bb, OBJ_SPRITE_OAM | 0x218,
-    0x13, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xe, OBJ_SIZE_32x16 | 0x1d9, OBJ_SPRITE_OAM | 0x2e0,
-    0xed, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xd, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-69, 12, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-11, 19, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-39, 14, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -19, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 13, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmHoldingUp_Frame3[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0x2, OBJ_SIZE_32x32 | 0x1c3, OBJ_SPRITE_OAM | 0x218,
-    0x14, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    0x5, OBJ_SIZE_16x16 | 0x1dd, OBJ_SPRITE_OAM | 0x21e,
-    0xd, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x21c,
-    0xee, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 2, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-11, 20, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-35, 5, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(-19, 13, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-3, -18, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 14, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmHoldingUp_Frame4[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0x3, OBJ_SIZE_32x32 | 0x1c3, OBJ_SPRITE_OAM | 0x218,
-    0x15, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    0x6, OBJ_SIZE_16x16 | 0x1dd, OBJ_SPRITE_OAM | 0x21e,
-    0xe, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x21c,
-    0xef, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xf, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 3, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-11, 21, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-35, 6, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(-19, 14, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-3, -17, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 15, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmHoldingUp_Frame0[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x11, OBJ_SIZE_32x32 | 0x1cf, OBJ_SPRITE_OAM | 0x218,
-    0x18, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x13, OBJ_SIZE_32x16 | 0x1ed, OBJ_SPRITE_OAM | 0x2e0,
-    0xee, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, 0xb, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-49, 17, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(9, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, 19, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -18, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 14, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmHoldingUp_Frame1[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0x6, OBJ_SIZE_32x32 | 0x1d6, OBJ_SPRITE_OAM | 0x218,
-    0x16, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    0x9, OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x21e,
-    0x11, OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x21c,
-    0xec, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xc, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-42, 6, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(9, 22, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-16, 9, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(0, 17, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-13, -20, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 12, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmHoldingUp_Frame2[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0x7, OBJ_SIZE_32x32 | 0x1d6, OBJ_SPRITE_OAM | 0x218,
-    0x17, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    0xa, OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x21e,
-    0x12, OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x21c,
-    0xed, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xd, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-42, 7, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(9, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-16, 10, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(0, 18, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-13, -19, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 13, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmHoldingUp_Frame3[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0x7, OBJ_SIZE_32x32 | 0x1d6, OBJ_SPRITE_OAM | 0x218,
-    0x17, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    0xa, OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x21e,
-    0x12, OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x21c,
-    0xed, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xd, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-42, 7, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(9, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-16, 10, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(0, 18, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-13, -19, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 13, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmHoldingUp_Frame4[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0x7, OBJ_SIZE_32x32 | 0x1d6, OBJ_SPRITE_OAM | 0x218,
-    0x17, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    0xa, OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x21e,
-    0x12, OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x21c,
-    0xed, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xd, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-42, 7, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(9, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-16, 10, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(0, 18, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-13, -19, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 13, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmLayingDown_Frame0[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0x2, OBJ_SIZE_32x32 | 0x1c3, OBJ_SPRITE_OAM | 0x218,
-    0x14, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    0x5, OBJ_SIZE_16x16 | 0x1dd, OBJ_SPRITE_OAM | 0x21e,
-    0xd, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x21c,
-    0xee, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 2, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-11, 20, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-35, 5, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(-19, 13, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-3, -18, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 14, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmLayingDown_Frame1[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xf, OBJ_SIZE_32x32 | 0x1bb, OBJ_SPRITE_OAM | 0x218,
-    0x16, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x11, OBJ_SIZE_32x16 | 0x1d9, OBJ_SPRITE_OAM | 0x2e0,
-    0xf0, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x10, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-69, 15, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-11, 22, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-39, 17, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -16, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 16, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmLayingDown_Frame2[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1af, OBJ_SPRITE_OAM | 0x25c,
-    0x22, OBJ_SIZE_16x16 | 0x1cf, OBJ_SPRITE_OAM | 0x361,
-    0x1b, OBJ_SIZE_16x16 | 0x1f6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x20, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1dc, OBJ_SPRITE_OAM | 0x2e0,
-    0xf3, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x13, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-81, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 604, 8, 0),
+    OAM_ENTRY(-49, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 865, 8, 0),
+    OAM_ENTRY(-10, 27, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-36, 32, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -13, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 19, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmLayingDown_Frame3[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x23, OBJ_SIZE_32x16 | 0x1af, OBJ_SPRITE_OAM | 0x2f2,
-    0x23, OBJ_SIZE_16x16 | 0x1cf, OBJ_SPRITE_OAM | 0x2f6,
-    0x1a, OBJ_SIZE_16x16 | 0x1f6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1f, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1dc, OBJ_SPRITE_OAM | 0x2e0,
-    0xf2, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x12, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-81, 35, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-49, 35, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-10, 26, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-36, 31, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -14, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 18, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmLayingDown_Frame0[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0x6, OBJ_SIZE_32x32 | 0x1d6, OBJ_SPRITE_OAM | 0x218,
-    0x16, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    0x9, OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x21e,
-    0x11, OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x21c,
-    0xec, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xc, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-42, 6, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(9, 22, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-16, 9, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(0, 17, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-13, -20, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 12, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmLayingDown_Frame1[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x11, OBJ_SIZE_32x32 | 0x1cf, OBJ_SPRITE_OAM | 0x218,
-    0x18, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x13, OBJ_SIZE_32x16 | 0x1ed, OBJ_SPRITE_OAM | 0x2e0,
-    0xee, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, 0xb, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-49, 17, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(9, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, 19, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -18, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 14, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmLayingDown_Frame2[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1c3, OBJ_SPRITE_OAM | 0x25c,
-    0x22, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x361,
-    0x1b, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1f, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ee, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x11, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 604, 8, 0),
+    OAM_ENTRY(-29, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 865, 8, 0),
+    OAM_ENTRY(9, 27, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 31, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -15, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 17, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmLayingDown_Frame3[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1c3, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ee, OBJ_SPRITE_OAM | 0x2e0,
-    0xef, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xf, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-29, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(9, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -17, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 15, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmTrembling_Frame0[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1af, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1cf, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0x1f6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1e, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1dc, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x11, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-81, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-49, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-10, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-36, 30, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -15, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 17, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmTrembling_Frame1[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1af, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1cf, OBJ_SPRITE_OAM | 0x2f6,
-    0x18, OBJ_SIZE_16x16 | 0x1f6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1dc, OBJ_SPRITE_OAM | 0x2e0,
-    0xf0, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x10, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-81, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-49, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-10, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-36, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -16, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 16, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmTrembling_Frame2[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1af, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1cf, OBJ_SPRITE_OAM | 0x2f6,
-    0x16, OBJ_SIZE_16x16 | 0x1f6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1c, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1dc, OBJ_SPRITE_OAM | 0x2e0,
-    0xee, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-81, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-49, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-10, 22, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-36, 28, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -18, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 14, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmTrembling_Frame3[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1af, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1cf, OBJ_SPRITE_OAM | 0x2f6,
-    0x17, OBJ_SIZE_16x16 | 0x1f6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1dc, OBJ_SPRITE_OAM | 0x2e0,
-    0xef, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xf, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-81, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-49, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-10, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-36, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -17, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 15, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmTrembling_Frame5[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1af, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1cf, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0x1f6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1e, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1dc, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x11, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-81, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-49, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-10, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-36, 30, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -15, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 17, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmTrembling_Frame0[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c3, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x2f6,
-    0x18, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1c, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ee, OBJ_SPRITE_OAM | 0x2e0,
-    0xee, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-29, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(9, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 28, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -18, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 14, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmTrembling_Frame1[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c3, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x2f6,
-    0x17, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1b, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ee, OBJ_SPRITE_OAM | 0x2e0,
-    0xed, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xd, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-29, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(9, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 27, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -19, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 13, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmTrembling_Frame2[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c3, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x2f6,
-    0x15, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1a, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ee, OBJ_SPRITE_OAM | 0x2e0,
-    0xeb, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xb, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-29, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(9, 21, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 26, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -21, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 11, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmTrembling_Frame3[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c3, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x2f6,
-    0x16, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1b, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ee, OBJ_SPRITE_OAM | 0x2e0,
-    0xec, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xc, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-29, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(9, 22, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 27, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -20, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 12, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmTrembling_Frame5[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c3, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x2f6,
-    0x18, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1c, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ee, OBJ_SPRITE_OAM | 0x2e0,
-    0xee, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-29, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(9, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 28, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -18, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 14, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmSwinging_Frame0[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xf0, OBJ_SIZE_32x32 | 0x1d5, OBJ_SPRITE_OAM | 0x218,
-    0x14, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_VERTICAL | 0xf8, OBJ_SIZE_16x32 | 0x1ee, OBJ_SPRITE_OAM | 0x326,
-    0xee, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-43, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-11, 20, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, -8, OAM_DIMS_16x32, OAM_NO_FLIP, 806, 8, 0),
+    OAM_ENTRY(-3, -18, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 14, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmSwinging_Frame1[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xdb, OBJ_SIZE_32x32 | 0x1d5, OBJ_SPRITE_OAM | 0x218,
-    0x2, OBJ_SIZE_16x16 | 0x1dc, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_VERTICAL | 0xe6, OBJ_X_FLIP | OBJ_SIZE_16x32 | 0x1e1, OBJ_SPRITE_OAM | 0x326,
-    0xee, OBJ_SIZE_32x32 | 0x1f7, OBJ_SPRITE_OAM | 0x200,
-    0xfe, OBJ_SIZE_16x16 | 0x1e7, OBJ_SPRITE_OAM | 0x332
+    5,
+    OAM_ENTRY(-43, -37, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-36, 2, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-31, -26, OAM_DIMS_16x32, OAM_X_FLIP, 806, 8, 0),
+    OAM_ENTRY(-9, -18, OAM_DIMS_32x32, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(-25, -2, OAM_DIMS_16x16, OAM_NO_FLIP, 818, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmSwinging_Frame2[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0xcc, OBJ_SIZE_32x16 | 0x1c1, OBJ_SPRITE_OAM | 0x2f2,
-    0xcc, OBJ_SIZE_16x16 | 0x1e1, OBJ_SPRITE_OAM | 0x2f6,
-    0xf2, OBJ_SIZE_16x16 | 0x1d9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_VERTICAL | 0xd7, OBJ_X_FLIP | OBJ_SIZE_16x32 | 0x1dd, OBJ_SPRITE_OAM | 0x326,
-    0xe5, OBJ_SIZE_32x32 | 0x1f5, OBJ_SPRITE_OAM | 0x260,
-    OBJ_SHAPE_HORIZONTAL | 0xf5, 0x1e5, OBJ_SPRITE_OAM | 0x372
+    6,
+    OAM_ENTRY(-63, -52, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-31, -52, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-39, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-35, -41, OAM_DIMS_16x32, OAM_X_FLIP, 806, 8, 0),
+    OAM_ENTRY(-11, -27, OAM_DIMS_32x32, OAM_NO_FLIP, 608, 8, 0),
+    OAM_ENTRY(-27, -11, OAM_DIMS_16x8, OAM_NO_FLIP, 882, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmSwinging_Frame3[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0xb5, OBJ_SIZE_32x16 | 0x1c6, OBJ_SPRITE_OAM | 0x25c,
-    0xb5, OBJ_SIZE_16x16 | 0x1e6, OBJ_SPRITE_OAM | 0x361,
-    0xdd, OBJ_SIZE_16x16 | 0x1dc, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_VERTICAL | 0xc2, OBJ_X_FLIP | OBJ_SIZE_16x32 | 0x1e2, OBJ_SPRITE_OAM | 0x326,
-    0xe4, OBJ_Y_FLIP | OBJ_SIZE_32x32 | 0x1f7, OBJ_SPRITE_OAM | 0x200,
-    0xe4, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1e7, OBJ_SPRITE_OAM | 0x332
+    6,
+    OAM_ENTRY(-58, -75, OAM_DIMS_32x16, OAM_NO_FLIP, 604, 8, 0),
+    OAM_ENTRY(-26, -75, OAM_DIMS_16x16, OAM_NO_FLIP, 865, 8, 0),
+    OAM_ENTRY(-36, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-30, -62, OAM_DIMS_16x32, OAM_X_FLIP, 806, 8, 0),
+    OAM_ENTRY(-9, -28, OAM_DIMS_32x32, OAM_Y_FLIP, 512, 8, 0),
+    OAM_ENTRY(-25, -28, OAM_DIMS_16x16, OAM_Y_FLIP, 818, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmSwinging_Frame4[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0xb6, OBJ_SIZE_32x16 | 0x1ae, OBJ_SPRITE_OAM | 0x25c,
-    0xb6, OBJ_SIZE_16x16 | 0x1ce, OBJ_SPRITE_OAM | 0x361,
-    0xde, OBJ_SIZE_16x16 | 0x1db, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_VERTICAL | 0xc3, OBJ_SIZE_16x32 | 0x1d5, OBJ_SPRITE_OAM | 0x326,
-    0xe5, OBJ_Y_FLIP | OBJ_SIZE_32x32 | 0x1f6, OBJ_SPRITE_OAM | 0x200,
-    0xe5, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1e6, OBJ_SPRITE_OAM | 0x332
+    6,
+    OAM_ENTRY(-82, -74, OAM_DIMS_32x16, OAM_NO_FLIP, 604, 8, 0),
+    OAM_ENTRY(-50, -74, OAM_DIMS_16x16, OAM_NO_FLIP, 865, 8, 0),
+    OAM_ENTRY(-37, -34, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-43, -61, OAM_DIMS_16x32, OAM_NO_FLIP, 806, 8, 0),
+    OAM_ENTRY(-10, -27, OAM_DIMS_32x32, OAM_Y_FLIP, 512, 8, 0),
+    OAM_ENTRY(-26, -27, OAM_DIMS_16x16, OAM_Y_FLIP, 818, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmSwinging_Frame5[OAM_DATA_SIZE(7)] = {
-    0x7,
-    OBJ_SHAPE_HORIZONTAL | 0xda, OBJ_SIZE_32x16 | 0x193, OBJ_SPRITE_OAM | 0x25c,
-    0xda, OBJ_SIZE_16x16 | 0x1b3, OBJ_SPRITE_OAM | 0x361,
-    0xf2, OBJ_SIZE_16x16 | 0x1d6, OBJ_SPRITE_OAM | 0x28a,
-    0xe2, OBJ_SIZE_16x16 | 0x1bc, OBJ_SPRITE_OAM | 0x21e,
-    0xea, OBJ_SIZE_16x16 | 0x1cc, OBJ_SPRITE_OAM | 0x21c,
-    0xe5, OBJ_SIZE_32x32 | 0x1f2, OBJ_SPRITE_OAM | 0x260,
-    OBJ_SHAPE_HORIZONTAL | 0xf5, 0x1e2, OBJ_SPRITE_OAM | 0x372
+    7,
+    OAM_ENTRY(-109, -38, OAM_DIMS_32x16, OAM_NO_FLIP, 604, 8, 0),
+    OAM_ENTRY(-77, -38, OAM_DIMS_16x16, OAM_NO_FLIP, 865, 8, 0),
+    OAM_ENTRY(-42, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-68, -30, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(-52, -22, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-14, -27, OAM_DIMS_32x32, OAM_NO_FLIP, 608, 8, 0),
+    OAM_ENTRY(-30, -11, OAM_DIMS_16x8, OAM_NO_FLIP, 882, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmSwinging_Frame6[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xff, OBJ_SIZE_32x32 | 0x19e, OBJ_SPRITE_OAM | 0x218,
-    0x5, OBJ_SIZE_16x16 | 0x1d8, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1, OBJ_SIZE_32x16 | 0x1bc, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x200,
-    0x1, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x332
+    5,
+    OAM_ENTRY(-98, -1, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-40, 5, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-68, 1, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -15, OAM_DIMS_32x32, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(-29, 1, OAM_DIMS_16x16, OAM_NO_FLIP, 818, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmSwinging_Frame7[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0x6, OBJ_SIZE_32x32 | 0x1c3, OBJ_SPRITE_OAM | 0x218,
-    0x18, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    0x9, OBJ_SIZE_16x16 | 0x1dd, OBJ_SPRITE_OAM | 0x21e,
-    0x11, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x21c,
-    0xf2, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x12, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 6, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-11, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-35, 9, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(-19, 17, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-3, -14, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 18, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckLow_Frame0[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xa, OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x28a,
-    0xf9, OBJ_SIZE_16x16 | 0x1e5, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0x9, 0x1dd, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0x3, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    5,
+    OAM_ENTRY(-32, 10, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-27, -7, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-35, 9, OAM_DIMS_16x8, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, 3, OAM_DIMS_16x16, OAM_NO_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateLow_Frame0[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xa, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_VERTICAL | 0xf8, OBJ_SIZE_8x32 | 0x1e4, OBJ_SPRITE_OAM | 0x320,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0x3, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    4,
+    OAM_ENTRY(-32, 10, OAM_DIMS_16x16, OAM_Y_FLIP, 650, 8, 0),
+    OAM_ENTRY(-28, -8, OAM_DIMS_8x32, OAM_NO_FLIP, 800, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, 3, OAM_DIMS_16x16, OAM_NO_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateLow_Frame1[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xa, OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x28a,
-    0xfe, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1d9, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xf6, OBJ_Y_FLIP | 0x1d1, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0x3, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    5,
+    OAM_ENTRY(-32, 10, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-39, -2, OAM_DIMS_16x16, OAM_Y_FLIP, 974, 8, 0),
+    OAM_ENTRY(-47, -10, OAM_DIMS_16x8, OAM_Y_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, 3, OAM_DIMS_16x16, OAM_NO_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateLow_Frame2[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xa, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x28a,
-    0x2, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1d5, OBJ_SPRITE_OAM | 0x38e,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0x3, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    4,
+    OAM_ENTRY(-32, 10, OAM_DIMS_16x16, OAM_Y_FLIP, 650, 8, 0),
+    OAM_ENTRY(-43, 2, OAM_DIMS_16x16, OAM_X_FLIP, 910, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, 3, OAM_DIMS_16x16, OAM_NO_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateLow_Frame3[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xa, OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xe, OBJ_SIZE_32x8 | 0x1cc, OBJ_SPRITE_OAM | 0x3f8,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0x3, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    4,
+    OAM_ENTRY(-32, 10, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-52, 14, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, 3, OAM_DIMS_16x16, OAM_NO_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateLow_Frame4[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xa, OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xe, OBJ_SIZE_32x8 | 0x1cb, OBJ_SPRITE_OAM | 0x3f8,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0x3, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    4,
+    OAM_ENTRY(-32, 10, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-53, 14, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, 3, OAM_DIMS_16x16, OAM_NO_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckMiddleToLow_Frame1[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xa, OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x28a,
-    0xf8, OBJ_SIZE_16x16 | 0x1e6, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0x8, 0x1de, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0x3, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    5,
+    OAM_ENTRY(-32, 10, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-26, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-34, 8, OAM_DIMS_16x8, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, 3, OAM_DIMS_16x16, OAM_NO_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckLowToMiddle_Frame0[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x0, OBJ_SIZE_16x16 | 0x1da, OBJ_SPRITE_OAM | 0x28a,
-    0xef, OBJ_SIZE_16x16 | 0x1df, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xff, 0x1d7, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xfe, OBJ_SIZE_32x16 | 0x1dc, OBJ_SPRITE_OAM | 0x294
+    5,
+    OAM_ENTRY(-38, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-33, -17, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-41, -1, OAM_DIMS_16x8, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_Y_FLIP, 650, 8, 0),
+    OAM_ENTRY(-36, -2, OAM_DIMS_32x16, OAM_NO_FLIP, 660, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckLowToMiddle_Frame1[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xf8, OBJ_SIZE_16x16 | 0x1da, OBJ_SPRITE_OAM | 0x28a,
-    0xe6, OBJ_SIZE_16x16 | 0x1df, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xf6, 0x1d7, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_SIZE_32x8 | 0x1e3, OBJ_SPRITE_OAM | 0x3f8
+    5,
+    OAM_ENTRY(-38, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-33, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-41, -10, OAM_DIMS_16x8, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-29, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckMiddle_Frame0[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xf8, OBJ_SIZE_16x16 | 0x1da, OBJ_SPRITE_OAM | 0x28a,
-    0xe7, OBJ_SIZE_16x16 | 0x1df, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xf7, 0x1d7, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_SIZE_32x8 | 0x1e3, OBJ_SPRITE_OAM | 0x3f8
+    5,
+    OAM_ENTRY(-38, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-33, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-41, -9, OAM_DIMS_16x8, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-29, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateMiddle_Frame0[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xf8, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1da, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_VERTICAL | 0xe6, OBJ_SIZE_8x32 | 0x1de, OBJ_SPRITE_OAM | 0x320,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_SIZE_32x8 | 0x1e3, OBJ_SPRITE_OAM | 0x3f8
+    4,
+    OAM_ENTRY(-38, -8, OAM_DIMS_16x16, OAM_Y_FLIP, 650, 8, 0),
+    OAM_ENTRY(-34, -26, OAM_DIMS_8x32, OAM_NO_FLIP, 800, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-29, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateMiddle_Frame1[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xf8, OBJ_SIZE_16x16 | 0x1da, OBJ_SPRITE_OAM | 0x28a,
-    0xec, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1d3, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xe4, OBJ_Y_FLIP | 0x1cb, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_SIZE_32x8 | 0x1e3, OBJ_SPRITE_OAM | 0x3f8
+    5,
+    OAM_ENTRY(-38, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-45, -20, OAM_DIMS_16x16, OAM_Y_FLIP, 974, 8, 0),
+    OAM_ENTRY(-53, -28, OAM_DIMS_16x8, OAM_Y_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-29, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateMiddle_Frame2[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xf8, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1da, OBJ_SPRITE_OAM | 0x28a,
-    0xf0, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1cf, OBJ_SPRITE_OAM | 0x38e,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_SIZE_32x8 | 0x1e3, OBJ_SPRITE_OAM | 0x3f8
+    4,
+    OAM_ENTRY(-38, -8, OAM_DIMS_16x16, OAM_Y_FLIP, 650, 8, 0),
+    OAM_ENTRY(-49, -16, OAM_DIMS_16x16, OAM_X_FLIP, 910, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-29, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateMiddle_Frame3[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xf8, OBJ_SIZE_16x16 | 0x1da, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_SIZE_32x8 | 0x1c6, OBJ_SPRITE_OAM | 0x3f8,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_SIZE_32x8 | 0x1e3, OBJ_SPRITE_OAM | 0x3f8
+    4,
+    OAM_ENTRY(-38, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-58, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-29, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateMiddle_Frame4[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xf8, OBJ_SIZE_16x16 | 0x1da, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_SIZE_32x8 | 0x1c5, OBJ_SPRITE_OAM | 0x3f8,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_SIZE_32x8 | 0x1e3, OBJ_SPRITE_OAM | 0x3f8
+    4,
+    OAM_ENTRY(-38, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-59, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-29, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateMiddle_Frame8[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xf8, OBJ_SIZE_16x16 | 0x1da, OBJ_SPRITE_OAM | 0x28a,
-    0xe6, OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xf6, 0x1d8, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_SIZE_32x8 | 0x1e3, OBJ_SPRITE_OAM | 0x3f8
+    5,
+    OAM_ENTRY(-38, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-32, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-40, -10, OAM_DIMS_16x8, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-29, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckMiddleToHigh_Frame0[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xee, OBJ_SIZE_16x16 | 0x1db, OBJ_SPRITE_OAM | 0x28a,
-    0xdd, OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xed, 0x1d8, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xf2, OBJ_X_FLIP | OBJ_SIZE_32x16 | 0x1e2, OBJ_SPRITE_OAM | 0x294
+    5,
+    OAM_ENTRY(-37, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-32, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-40, -19, OAM_DIMS_16x8, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_Y_FLIP, 650, 8, 0),
+    OAM_ENTRY(-30, -14, OAM_DIMS_32x16, OAM_X_FLIP, 660, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckMiddleToHigh_Frame1[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xe7, OBJ_SIZE_16x16 | 0x1e4, OBJ_SPRITE_OAM | 0x28a,
-    0xd5, OBJ_SIZE_16x16 | 0x1ea, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xe5, 0x1e2, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    5,
+    OAM_ENTRY(-28, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-22, -43, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-30, -27, OAM_DIMS_16x8, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, -15, OAM_DIMS_16x16, OAM_X_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckHigh_Frame0[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xe7, OBJ_SIZE_16x16 | 0x1e4, OBJ_SPRITE_OAM | 0x28a,
-    0xd6, OBJ_SIZE_16x16 | 0x1e9, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xe6, 0x1e1, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    5,
+    OAM_ENTRY(-28, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-23, -42, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-31, -26, OAM_DIMS_16x8, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, -15, OAM_DIMS_16x16, OAM_X_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateHigh_Frame0[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xe7, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1e4, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_VERTICAL | 0xd5, OBJ_SIZE_8x32 | 0x1e8, OBJ_SPRITE_OAM | 0x320,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    4,
+    OAM_ENTRY(-28, -25, OAM_DIMS_16x16, OAM_Y_FLIP, 650, 8, 0),
+    OAM_ENTRY(-24, -43, OAM_DIMS_8x32, OAM_NO_FLIP, 800, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, -15, OAM_DIMS_16x16, OAM_X_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateHigh_Frame1[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xe7, OBJ_SIZE_16x16 | 0x1e4, OBJ_SPRITE_OAM | 0x28a,
-    0xdb, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1dd, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xd3, OBJ_Y_FLIP | 0x1d5, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    5,
+    OAM_ENTRY(-28, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-35, -37, OAM_DIMS_16x16, OAM_Y_FLIP, 974, 8, 0),
+    OAM_ENTRY(-43, -45, OAM_DIMS_16x8, OAM_Y_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, -15, OAM_DIMS_16x16, OAM_X_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateHigh_Frame2[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xe7, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1e4, OBJ_SPRITE_OAM | 0x28a,
-    0xdf, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1d9, OBJ_SPRITE_OAM | 0x38e,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    4,
+    OAM_ENTRY(-28, -25, OAM_DIMS_16x16, OAM_Y_FLIP, 650, 8, 0),
+    OAM_ENTRY(-39, -33, OAM_DIMS_16x16, OAM_X_FLIP, 910, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, -15, OAM_DIMS_16x16, OAM_X_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateHigh_Frame3[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xe7, OBJ_SIZE_16x16 | 0x1e4, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xeb, OBJ_SIZE_32x8 | 0x1d0, OBJ_SPRITE_OAM | 0x3f8,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    4,
+    OAM_ENTRY(-28, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-48, -21, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, -15, OAM_DIMS_16x16, OAM_X_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateHigh_Frame4[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xe7, OBJ_SIZE_16x16 | 0x1e4, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xeb, OBJ_SIZE_32x8 | 0x1cf, OBJ_SPRITE_OAM | 0x3f8,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    4,
+    OAM_ENTRY(-28, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-49, -21, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, -15, OAM_DIMS_16x16, OAM_X_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckRotateHigh_Frame8[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xe7, OBJ_SIZE_16x16 | 0x1e4, OBJ_SPRITE_OAM | 0x28a,
-    0xd5, OBJ_SIZE_16x16 | 0x1ea, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xe5, 0x1e2, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    5,
+    OAM_ENTRY(-28, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-22, -43, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-30, -27, OAM_DIMS_16x8, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, -15, OAM_DIMS_16x16, OAM_X_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckLow_2_Frame0[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xb, OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x28a,
-    0xfa, OBJ_SIZE_16x16 | 0x1e5, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xa, 0x1dd, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0x4, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    5,
+    OAM_ENTRY(-32, 11, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-27, -6, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-35, 10, OAM_DIMS_16x8, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, 4, OAM_DIMS_16x16, OAM_NO_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckMiddle_2_Frame0[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xf9, OBJ_SIZE_16x16 | 0x1da, OBJ_SPRITE_OAM | 0x28a,
-    0xe8, OBJ_SIZE_16x16 | 0x1df, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, 0x1d7, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xfd, OBJ_SIZE_32x8 | 0x1e3, OBJ_SPRITE_OAM | 0x3f8
+    5,
+    OAM_ENTRY(-38, -7, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-33, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-41, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-29, -3, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckHigh_2_Frame0[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xe8, OBJ_SIZE_16x16 | 0x1e4, OBJ_SPRITE_OAM | 0x28a,
-    0xd7, OBJ_SIZE_16x16 | 0x1e9, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xe7, 0x1e1, OBJ_SPRITE_OAM | 0x3ce,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0xf2, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x38e
+    5,
+    OAM_ENTRY(-28, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-23, -41, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-31, -25, OAM_DIMS_16x8, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, -14, OAM_DIMS_16x16, OAM_X_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_MissileLauncherClosed_Frame0[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xe0, OBJ_SIZE_64x64 | 0x1e0, OBJ_SPRITE_OAM | 0x318,
-    0xe4, OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x2ca,
-    0xe9, OBJ_SIZE_16x16 | 0x1ea, OBJ_SPRITE_OAM | 0x3b8,
-    OBJ_SHAPE_VERTICAL | 0xe5, 0x1ea, OBJ_SPRITE_OAM | 0x3ba
+    4,
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 792, 8, 0),
+    OAM_ENTRY(-16, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 714, 8, 0),
+    OAM_ENTRY(-22, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 952, 8, 0),
+    OAM_ENTRY(-22, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 954, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_MissileLauncherOpening_Frame0[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xe0, OBJ_SIZE_64x64 | 0x1e0, OBJ_SPRITE_OAM | 0x318,
-    0xe5, OBJ_SIZE_16x16 | 0x1f1, OBJ_SPRITE_OAM | 0x2ca,
-    0xea, OBJ_SIZE_16x16 | 0x1eb, OBJ_SPRITE_OAM | 0x3b8,
-    OBJ_SHAPE_VERTICAL | 0xe6, 0x1eb, OBJ_SPRITE_OAM | 0x3ba,
-    0xe0, OBJ_SIZE_32x32 | 0x1e8, OBJ_SPRITE_OAM | 0x335
+    5,
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 792, 8, 0),
+    OAM_ENTRY(-15, -27, OAM_DIMS_16x16, OAM_NO_FLIP, 714, 8, 0),
+    OAM_ENTRY(-21, -22, OAM_DIMS_16x16, OAM_NO_FLIP, 952, 8, 0),
+    OAM_ENTRY(-21, -26, OAM_DIMS_8x16, OAM_NO_FLIP, 954, 8, 0),
+    OAM_ENTRY(-24, -32, OAM_DIMS_32x32, OAM_NO_FLIP, 821, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_MissileLauncherOpening_Frame1[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xe0, OBJ_SIZE_64x64 | 0x1e0, OBJ_SPRITE_OAM | 0x318,
-    0xe6, OBJ_SIZE_16x16 | 0x1f2, OBJ_SPRITE_OAM | 0x2ca,
-    0xeb, OBJ_SIZE_16x16 | 0x1ec, OBJ_SPRITE_OAM | 0x3b8,
-    OBJ_SHAPE_VERTICAL | 0xe7, 0x1ec, OBJ_SPRITE_OAM | 0x3ba,
-    0xe0, OBJ_SIZE_32x32 | 0x1e8, OBJ_SPRITE_OAM | 0x335
+    5,
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 792, 8, 0),
+    OAM_ENTRY(-14, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 714, 8, 0),
+    OAM_ENTRY(-20, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 952, 8, 0),
+    OAM_ENTRY(-20, -25, OAM_DIMS_8x16, OAM_NO_FLIP, 954, 8, 0),
+    OAM_ENTRY(-24, -32, OAM_DIMS_32x32, OAM_NO_FLIP, 821, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_MissileLauncherOpening_Frame2[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xe0, OBJ_SIZE_64x64 | 0x1e0, OBJ_SPRITE_OAM | 0x318,
-    0xe8, OBJ_SIZE_16x16 | 0x1f4, OBJ_SPRITE_OAM | 0x2ca,
-    0xed, OBJ_SIZE_16x16 | 0x1ee, OBJ_SPRITE_OAM | 0x3b8,
-    OBJ_SHAPE_VERTICAL | 0xe9, 0x1ee, OBJ_SPRITE_OAM | 0x3ba,
-    0xe0, OBJ_SIZE_32x32 | 0x1e8, OBJ_SPRITE_OAM | 0x335
+    5,
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 792, 8, 0),
+    OAM_ENTRY(-12, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 714, 8, 0),
+    OAM_ENTRY(-18, -19, OAM_DIMS_16x16, OAM_NO_FLIP, 952, 8, 0),
+    OAM_ENTRY(-18, -23, OAM_DIMS_8x16, OAM_NO_FLIP, 954, 8, 0),
+    OAM_ENTRY(-24, -32, OAM_DIMS_32x32, OAM_NO_FLIP, 821, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_MissileLauncherOpening_Frame3[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xe0, OBJ_SIZE_64x64 | 0x1e0, OBJ_SPRITE_OAM | 0x318,
-    0xe7, OBJ_SIZE_16x16 | 0x1f3, OBJ_SPRITE_OAM | 0x2ca,
-    0xec, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x3b8,
-    OBJ_SHAPE_VERTICAL | 0xe8, 0x1ed, OBJ_SPRITE_OAM | 0x3ba,
-    0xe0, OBJ_SIZE_32x32 | 0x1e8, OBJ_SPRITE_OAM | 0x335
+    5,
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 792, 8, 0),
+    OAM_ENTRY(-13, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 714, 8, 0),
+    OAM_ENTRY(-19, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 952, 8, 0),
+    OAM_ENTRY(-19, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 954, 8, 0),
+    OAM_ENTRY(-24, -32, OAM_DIMS_32x32, OAM_NO_FLIP, 821, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_MissileLauncherOpening_Frame4[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xe0, OBJ_SIZE_64x64 | 0x1e0, OBJ_SPRITE_OAM | 0x318,
-    0xe6, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x2ca,
-    0xee, OBJ_SIZE_16x16 | 0x1ec, OBJ_SPRITE_OAM | 0x3b8,
-    OBJ_SHAPE_VERTICAL | 0xe6, 0x1ec, OBJ_SPRITE_OAM | 0x3ba,
-    0xe0, OBJ_SIZE_32x32 | 0x1e8, OBJ_SPRITE_OAM | 0x335
+    5,
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 792, 8, 0),
+    OAM_ENTRY(-11, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 714, 8, 0),
+    OAM_ENTRY(-20, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 952, 8, 0),
+    OAM_ENTRY(-20, -26, OAM_DIMS_8x16, OAM_NO_FLIP, 954, 8, 0),
+    OAM_ENTRY(-24, -32, OAM_DIMS_32x32, OAM_NO_FLIP, 821, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_MissileLauncherOpening_Frame5[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xe0, OBJ_SIZE_64x64 | 0x1e0, OBJ_SPRITE_OAM | 0x318,
-    0xe5, OBJ_SIZE_16x16 | 0x1f7, OBJ_SPRITE_OAM | 0x2ca,
-    0xf0, OBJ_SIZE_16x16 | 0x1eb, OBJ_SPRITE_OAM | 0x3b8,
-    OBJ_SHAPE_VERTICAL | 0xe4, 0x1eb, OBJ_SPRITE_OAM | 0x3ba,
-    0xe0, OBJ_SIZE_32x32 | 0x1e8, OBJ_SPRITE_OAM | 0x335
+    5,
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 792, 8, 0),
+    OAM_ENTRY(-9, -27, OAM_DIMS_16x16, OAM_NO_FLIP, 714, 8, 0),
+    OAM_ENTRY(-21, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 952, 8, 0),
+    OAM_ENTRY(-21, -28, OAM_DIMS_8x16, OAM_NO_FLIP, 954, 8, 0),
+    OAM_ENTRY(-24, -32, OAM_DIMS_32x32, OAM_NO_FLIP, 821, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_MissileLauncherOpening_Frame6[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xe0, OBJ_SIZE_64x64 | 0x1e0, OBJ_SPRITE_OAM | 0x318,
-    0xe4, OBJ_SIZE_16x16 | 0x1fa, OBJ_SPRITE_OAM | 0x2ca,
-    0xf3, OBJ_SIZE_16x16 | 0x1eb, OBJ_SPRITE_OAM | 0x3b8,
-    0xe0, OBJ_SIZE_32x32 | 0x1e8, OBJ_SPRITE_OAM | 0x335
+    4,
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 792, 8, 0),
+    OAM_ENTRY(-6, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 714, 8, 0),
+    OAM_ENTRY(-21, -13, OAM_DIMS_16x16, OAM_NO_FLIP, 952, 8, 0),
+    OAM_ENTRY(-24, -32, OAM_DIMS_32x32, OAM_NO_FLIP, 821, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_MissileLauncherOpening_Frame7[OAM_DATA_SIZE(2)] = {
-    0x2,
-    0xe0, OBJ_SIZE_64x64 | 0x1e0, OBJ_SPRITE_OAM | 0x318,
-    0xe0, OBJ_SIZE_32x32 | 0x1e8, OBJ_SPRITE_OAM | 0x335
+    2,
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 792, 8, 0),
+    OAM_ENTRY(-24, -32, OAM_DIMS_32x32, OAM_NO_FLIP, 821, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_MissileLauncherOpened_Frame1[OAM_DATA_SIZE(2)] = {
-    0x2,
-    0xe1, OBJ_SIZE_64x64 | 0x1e1, OBJ_SPRITE_OAM | 0x318,
-    0xe1, OBJ_SIZE_32x32 | 0x1e9, OBJ_SPRITE_OAM | 0x335
+    2,
+    OAM_ENTRY(-31, -31, OAM_DIMS_64x64, OAM_NO_FLIP, 792, 8, 0),
+    OAM_ENTRY(-23, -31, OAM_DIMS_32x32, OAM_NO_FLIP, 821, 8, 0),
 };
 
 static const u16 sMechaRidleyMissileOam_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf0, OBJ_SIZE_32x32 | 0x1f0, OBJ_SPRITE_OAM | 0x5214
+    1,
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 532, 13, 0),
 };
 
 static const u16 sMechaRidleyFireballOam_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xec, OBJ_SIZE_32x32 | 0x1f4, OBJ_SPRITE_OAM | 0x1214
+    1,
+    OAM_ENTRY(-12, -20, OAM_DIMS_32x32, OAM_NO_FLIP, 532, 9, 0),
 };
 
 static const u16 sMechaRidleyFireballOam_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xed, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x1214
+    1,
+    OAM_ENTRY(-13, -19, OAM_DIMS_32x32, OAM_NO_FLIP, 532, 9, 0),
 };
 
 static const u16 sMechaRidleyFireballOam_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xee, OBJ_SIZE_32x32 | 0x1f2, OBJ_SPRITE_OAM | 0x1214
+    1,
+    OAM_ENTRY(-14, -18, OAM_DIMS_32x32, OAM_NO_FLIP, 532, 9, 0),
 };
 
 static const u16 sMechaRidleyFireballOam_Frame3[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xed, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x1214
+    1,
+    OAM_ENTRY(-13, -19, OAM_DIMS_32x32, OAM_NO_FLIP, 532, 9, 0),
 };
 
 static const u16 sMechaRidleyLaserOam_Forward_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfc, 0x1fc, OBJ_SPRITE_OAM | 0x5260
+    1,
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 608, 13, 0),
 };
 
 static const u16 sMechaRidleyLaserOam_Forward_Frame0[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_SIZE_32x8 | 0x1e1, OBJ_SPRITE_OAM | 0x53a4,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_X_FLIP | OBJ_SIZE_32x8 | 0x1ff, OBJ_SPRITE_OAM | 0x53a4
+    2,
+    OAM_ENTRY(-31, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 932, 13, 0),
+    OAM_ENTRY(-1, -4, OAM_DIMS_32x8, OAM_X_FLIP, 932, 13, 0),
 };
 
 static const u16 sMechaRidleyLaserOam_Forward_Frame1[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_SIZE_32x8 | 0x1e1, OBJ_SPRITE_OAM | 0x53a0,
-    OBJ_SHAPE_HORIZONTAL | 0xfc, OBJ_X_FLIP | OBJ_SIZE_32x8 | 0x1ff, OBJ_SPRITE_OAM | 0x53a0
+    2,
+    OAM_ENTRY(-31, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 928, 13, 0),
+    OAM_ENTRY(-1, -4, OAM_DIMS_32x8, OAM_X_FLIP, 928, 13, 0),
 };
 
 static const u16 sMechaRidleyLaserOam_SlightlyDown_Frame0[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0xff, OBJ_SIZE_32x16 | 0x1e3, OBJ_SPRITE_OAM | 0x53c4,
-    OBJ_SHAPE_HORIZONTAL | 0xf1, OBJ_X_FLIP | OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1fb, OBJ_SPRITE_OAM | 0x53c4
+    2,
+    OAM_ENTRY(-29, -1, OAM_DIMS_32x16, OAM_NO_FLIP, 964, 13, 0),
+    OAM_ENTRY(-5, -15, OAM_DIMS_32x16, OAM_XY_FLIP, 964, 13, 0),
 };
 
 static const u16 sMechaRidleyLaserOam_SlightlyDown_Frame1[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x16 | 0x1e1, OBJ_SPRITE_OAM | 0x53c0,
-    OBJ_SHAPE_HORIZONTAL | 0xf1, OBJ_X_FLIP | OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1fb, OBJ_SPRITE_OAM | 0x53c0
+    2,
+    OAM_ENTRY(-31, 0, OAM_DIMS_32x16, OAM_NO_FLIP, 960, 13, 0),
+    OAM_ENTRY(-5, -15, OAM_DIMS_32x16, OAM_XY_FLIP, 960, 13, 0),
 };
 
 static const u16 sMechaRidleyLaserOam_Down_Frame0[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0x8, OBJ_SIZE_16x16 | 0x1e8, OBJ_SPRITE_OAM | 0x5204,
-    0xfe, OBJ_SIZE_16x16 | 0x1f2, OBJ_SPRITE_OAM | 0x5206,
-    0xe8, OBJ_X_FLIP | OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x8, OBJ_SPRITE_OAM | 0x5204,
-    0xf2, OBJ_X_FLIP | OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1fe, OBJ_SPRITE_OAM | 0x5206
+    4,
+    OAM_ENTRY(-24, 8, OAM_DIMS_16x16, OAM_NO_FLIP, 516, 13, 0),
+    OAM_ENTRY(-14, -2, OAM_DIMS_16x16, OAM_NO_FLIP, 518, 13, 0),
+    OAM_ENTRY(8, -24, OAM_DIMS_16x16, OAM_XY_FLIP, 516, 13, 0),
+    OAM_ENTRY(-2, -14, OAM_DIMS_16x16, OAM_XY_FLIP, 518, 13, 0),
 };
 
 static const u16 sMechaRidleyLaserOam_Down_Frame1[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0x8, OBJ_SIZE_16x16 | 0x1e8, OBJ_SPRITE_OAM | 0x53c8,
-    0xfe, OBJ_SIZE_16x16 | 0x1f2, OBJ_SPRITE_OAM | 0x53ca,
-    0xe8, OBJ_X_FLIP | OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x8, OBJ_SPRITE_OAM | 0x53c8,
-    0xf2, OBJ_X_FLIP | OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1fe, OBJ_SPRITE_OAM | 0x53ca
+    4,
+    OAM_ENTRY(-24, 8, OAM_DIMS_16x16, OAM_NO_FLIP, 968, 13, 0),
+    OAM_ENTRY(-14, -2, OAM_DIMS_16x16, OAM_NO_FLIP, 970, 13, 0),
+    OAM_ENTRY(8, -24, OAM_DIMS_16x16, OAM_XY_FLIP, 968, 13, 0),
+    OAM_ENTRY(-2, -14, OAM_DIMS_16x16, OAM_XY_FLIP, 970, 13, 0),
 };
 
 static const u16 sMechaRidleyLaserOam_SlightlyUp_Frame0[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0xf1, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1e3, OBJ_SPRITE_OAM | 0x53c4,
-    OBJ_SHAPE_HORIZONTAL | 0xff, OBJ_X_FLIP | OBJ_SIZE_32x16 | 0x1fb, OBJ_SPRITE_OAM | 0x53c4
+    2,
+    OAM_ENTRY(-29, -15, OAM_DIMS_32x16, OAM_Y_FLIP, 964, 13, 0),
+    OAM_ENTRY(-5, -1, OAM_DIMS_32x16, OAM_X_FLIP, 964, 13, 0),
 };
 
 static const u16 sMechaRidleyLaserOam_SlightlyUp_Frame1[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1e1, OBJ_SPRITE_OAM | 0x53c0,
-    OBJ_SHAPE_HORIZONTAL | 0xff, OBJ_X_FLIP | OBJ_SIZE_32x16 | 0x1fb, OBJ_SPRITE_OAM | 0x53c0
+    2,
+    OAM_ENTRY(-31, -16, OAM_DIMS_32x16, OAM_Y_FLIP, 960, 13, 0),
+    OAM_ENTRY(-5, -1, OAM_DIMS_32x16, OAM_X_FLIP, 960, 13, 0),
 };
 
 static const u16 sMechaRidleyLaserOam_Up_Frame0[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xe8, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1e8, OBJ_SPRITE_OAM | 0x5204,
-    0xf2, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1f2, OBJ_SPRITE_OAM | 0x5206,
-    0x8, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x8, OBJ_SPRITE_OAM | 0x5204,
-    0xfe, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1fe, OBJ_SPRITE_OAM | 0x5206
+    4,
+    OAM_ENTRY(-24, -24, OAM_DIMS_16x16, OAM_Y_FLIP, 516, 13, 0),
+    OAM_ENTRY(-14, -14, OAM_DIMS_16x16, OAM_Y_FLIP, 518, 13, 0),
+    OAM_ENTRY(8, 8, OAM_DIMS_16x16, OAM_X_FLIP, 516, 13, 0),
+    OAM_ENTRY(-2, -2, OAM_DIMS_16x16, OAM_X_FLIP, 518, 13, 0),
 };
 
 static const u16 sMechaRidleyLaserOam_Up_Frame1[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xe8, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1e8, OBJ_SPRITE_OAM | 0x53c8,
-    0xf2, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1f2, OBJ_SPRITE_OAM | 0x53ca,
-    0x8, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x8, OBJ_SPRITE_OAM | 0x53c8,
-    0xfe, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1fe, OBJ_SPRITE_OAM | 0x53ca
+    4,
+    OAM_ENTRY(-24, -24, OAM_DIMS_16x16, OAM_Y_FLIP, 968, 13, 0),
+    OAM_ENTRY(-14, -14, OAM_DIMS_16x16, OAM_Y_FLIP, 970, 13, 0),
+    OAM_ENTRY(8, 8, OAM_DIMS_16x16, OAM_X_FLIP, 968, 13, 0),
+    OAM_ENTRY(-2, -2, OAM_DIMS_16x16, OAM_X_FLIP, 970, 13, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmDying_Frame0[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0x5, OBJ_SIZE_32x32 | 0x1c3, OBJ_SPRITE_OAM | 0x218,
-    0x17, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    0x8, OBJ_SIZE_16x16 | 0x1dd, OBJ_SPRITE_OAM | 0x21e,
-    0x10, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x21c,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x11, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 5, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-11, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-35, 8, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(-19, 16, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-3, -15, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 17, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmDying_Frame1[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0x9, OBJ_SIZE_32x32 | 0x1c3, OBJ_SPRITE_OAM | 0x218,
-    0x1b, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    0xc, OBJ_SIZE_16x16 | 0x1dd, OBJ_SPRITE_OAM | 0x21e,
-    0x14, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x21c,
-    0xf5, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x15, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 9, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-11, 27, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-35, 12, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(-19, 20, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-3, -11, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 21, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmDying_Frame2[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0x7, OBJ_SIZE_32x32 | 0x1c3, OBJ_SPRITE_OAM | 0x218,
-    0x19, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    0xa, OBJ_SIZE_16x16 | 0x1dd, OBJ_SPRITE_OAM | 0x21e,
-    0x12, OBJ_SIZE_16x16 | 0x1ed, OBJ_SPRITE_OAM | 0x21c,
-    0xf3, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x13, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 7, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-11, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-35, 10, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(-19, 18, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-3, -13, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 19, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmDying_Frame3[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x14, OBJ_SIZE_32x32 | 0x1ba, OBJ_SPRITE_OAM | 0x218,
-    0x1b, OBJ_SIZE_16x16 | 0x1f4, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x16, OBJ_SIZE_32x16 | 0x1d8, OBJ_SPRITE_OAM | 0x2e0,
-    0xf5, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fc, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x15, OBJ_X_FLIP | 0x1fc, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-70, 20, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-12, 27, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-40, 22, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-4, -11, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-4, 21, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmDying_Frame4[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x27, OBJ_SIZE_32x16 | 0x1ae, OBJ_SPRITE_OAM | 0x25c,
-    0x27, OBJ_SIZE_16x16 | 0x1ce, OBJ_SPRITE_OAM | 0x361,
-    0x20, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x25, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1db, OBJ_SPRITE_OAM | 0x2e0,
-    0xf8, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fc, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x18, OBJ_X_FLIP | 0x1fc, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-82, 39, OAM_DIMS_32x16, OAM_NO_FLIP, 604, 8, 0),
+    OAM_ENTRY(-50, 39, OAM_DIMS_16x16, OAM_NO_FLIP, 865, 8, 0),
+    OAM_ENTRY(-11, 32, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-37, 37, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-4, -8, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-4, 24, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmDying_Frame5[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x2a, OBJ_SIZE_32x16 | 0x1ad, OBJ_SPRITE_OAM | 0x2f2,
-    0x2a, OBJ_SIZE_16x16 | 0x1cd, OBJ_SPRITE_OAM | 0x2f6,
-    0x21, OBJ_SIZE_16x16 | 0x1f4, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x26, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1da, OBJ_SPRITE_OAM | 0x2e0,
-    0xf9, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fb, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x19, OBJ_X_FLIP | 0x1fb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-83, 42, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-51, 42, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-12, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-38, 38, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-5, -7, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-5, 25, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmDying_Frame6[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x28, OBJ_SIZE_32x16 | 0x1ad, OBJ_SPRITE_OAM | 0x2f2,
-    0x28, OBJ_SIZE_16x16 | 0x1cd, OBJ_SPRITE_OAM | 0x2f6,
-    0x1f, OBJ_SIZE_16x16 | 0x1f4, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x24, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1da, OBJ_SPRITE_OAM | 0x2e0,
-    0xf7, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fb, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x17, OBJ_X_FLIP | 0x1fb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-83, 40, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-51, 40, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-12, 31, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-38, 36, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-5, -9, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-5, 23, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmDying_Frame7[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x29, OBJ_SIZE_32x16 | 0x1ac, OBJ_SPRITE_OAM | 0x2f2,
-    0x29, OBJ_SIZE_16x16 | 0x1cc, OBJ_SPRITE_OAM | 0x2f6,
-    0x20, OBJ_SIZE_16x16 | 0x1f3, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x25, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1d9, OBJ_SPRITE_OAM | 0x2e0,
-    0xf8, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fa, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x18, OBJ_X_FLIP | 0x1fa, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-84, 41, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-52, 41, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-13, 32, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-39, 37, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-6, -8, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-6, 24, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmDying_Frame8[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x29, OBJ_SIZE_32x16 | 0x1ac, OBJ_SPRITE_OAM | 0x2f2,
-    0x29, OBJ_SIZE_16x16 | 0x1cc, OBJ_SPRITE_OAM | 0x2f6,
-    0x20, OBJ_SIZE_16x16 | 0x1f3, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x25, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1d9, OBJ_SPRITE_OAM | 0x2e0,
-    0xf9, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fa, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x19, OBJ_X_FLIP | 0x1fa, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-84, 41, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-52, 41, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-13, 32, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-39, 37, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-6, -7, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-6, 25, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmDying_Frame9[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x29, OBJ_SIZE_32x16 | 0x1ac, OBJ_SPRITE_OAM | 0x2f2,
-    0x29, OBJ_SIZE_16x16 | 0x1cc, OBJ_SPRITE_OAM | 0x2f6,
-    0x20, OBJ_SIZE_16x16 | 0x1f3, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x25, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1d9, OBJ_SPRITE_OAM | 0x2e0,
-    0xf8, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fa, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x18, OBJ_X_FLIP | 0x1fa, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-84, 41, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-52, 41, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-13, 32, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-39, 37, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-6, -8, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-6, 24, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmDying_Frame0[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0x9, OBJ_SIZE_32x32 | 0x1d6, OBJ_SPRITE_OAM | 0x218,
-    0x19, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    0xc, OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x21e,
-    0x14, OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x21c,
-    0xef, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xf, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-42, 9, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(9, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-16, 12, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(0, 20, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-13, -17, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 15, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmDying_Frame1[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0xd, OBJ_SIZE_32x32 | 0x1d6, OBJ_SPRITE_OAM | 0x218,
-    0x1d, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    0x10, OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x21e,
-    0x18, OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x21c,
-    0xf3, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x13, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-42, 13, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(9, 29, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-16, 16, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(0, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-13, -13, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 19, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmDying_Frame2[OAM_DATA_SIZE(6)] = {
-    0x6,
-    0xb, OBJ_SIZE_32x32 | 0x1d6, OBJ_SPRITE_OAM | 0x218,
-    0x1b, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    0xe, OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x21e,
-    0x16, OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x21c,
-    0xf1, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x11, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-42, 11, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(9, 27, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-16, 14, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
+    OAM_ENTRY(0, 22, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
+    OAM_ENTRY(-13, -15, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 17, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmDying_Frame3[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x16, OBJ_SIZE_32x32 | 0x1ce, OBJ_SPRITE_OAM | 0x218,
-    0x1d, OBJ_SIZE_16x16 | 0x8, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x18, OBJ_SIZE_32x16 | 0x1ec, OBJ_SPRITE_OAM | 0x2e0,
-    0xf3, OBJ_SIZE_32x32 | 0x1f2, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x13, 0xa, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-50, 22, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(8, 29, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-20, 24, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-14, -13, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(10, 19, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmDying_Frame4[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x28, OBJ_SIZE_32x16 | 0x1c1, OBJ_SPRITE_OAM | 0x25c,
-    0x28, OBJ_SIZE_16x16 | 0x1e1, OBJ_SPRITE_OAM | 0x361,
-    0x21, OBJ_SIZE_16x16 | 0x7, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x25, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ec, OBJ_SPRITE_OAM | 0x2e0,
-    0xf7, OBJ_SIZE_32x32 | 0x1f1, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x17, 0x9, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-63, 40, OAM_DIMS_32x16, OAM_NO_FLIP, 604, 8, 0),
+    OAM_ENTRY(-31, 40, OAM_DIMS_16x16, OAM_NO_FLIP, 865, 8, 0),
+    OAM_ENTRY(7, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-20, 37, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-15, -9, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(9, 23, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmDying_Frame5[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x2c, OBJ_SIZE_32x16 | 0x1c0, OBJ_SPRITE_OAM | 0x2f2,
-    0x2c, OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x2f6,
-    0x23, OBJ_SIZE_16x16 | 0x6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x27, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1eb, OBJ_SPRITE_OAM | 0x2e0,
-    0xf9, OBJ_SIZE_32x32 | 0x1f0, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x19, 0x8, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-64, 44, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-32, 44, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(6, 35, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-21, 39, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-16, -7, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(8, 25, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmDying_Frame6[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x2a, OBJ_SIZE_32x16 | 0x1c0, OBJ_SPRITE_OAM | 0x2f2,
-    0x2a, OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x2f6,
-    0x21, OBJ_SIZE_16x16 | 0x6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x25, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1eb, OBJ_SPRITE_OAM | 0x2e0,
-    0xf7, OBJ_SIZE_32x32 | 0x1f0, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x17, 0x8, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-64, 42, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-32, 42, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(6, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-21, 37, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-16, -9, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(8, 23, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmDying_Frame7[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x2b, OBJ_SIZE_32x16 | 0x1c0, OBJ_SPRITE_OAM | 0x2f2,
-    0x2b, OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x2f6,
-    0x22, OBJ_SIZE_16x16 | 0x6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x26, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1eb, OBJ_SPRITE_OAM | 0x2e0,
-    0xf8, OBJ_SIZE_32x32 | 0x1f0, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x18, 0x8, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-64, 43, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-32, 43, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(6, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-21, 38, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(8, 24, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmDying_Frame8[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x2b, OBJ_SIZE_32x16 | 0x1c0, OBJ_SPRITE_OAM | 0x2f2,
-    0x2b, OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x2f6,
-    0x22, OBJ_SIZE_16x16 | 0x6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x26, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1eb, OBJ_SPRITE_OAM | 0x2e0,
-    0xf9, OBJ_SIZE_32x32 | 0x1f0, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x19, 0x8, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-64, 43, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-32, 43, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(6, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-21, 38, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-16, -7, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(8, 25, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmDying_Frame9[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x2b, OBJ_SIZE_32x16 | 0x1c0, OBJ_SPRITE_OAM | 0x2f2,
-    0x2b, OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x2f6,
-    0x22, OBJ_SIZE_16x16 | 0x6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x26, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1eb, OBJ_SPRITE_OAM | 0x2e0,
-    0xf8, OBJ_SIZE_32x32 | 0x1f0, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x18, 0x8, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-64, 43, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-32, 43, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(6, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-21, 38, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(8, 24, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckDying_Frame0[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xc, OBJ_SIZE_16x16 | 0x1e0, OBJ_SPRITE_OAM | 0x28a,
-    0xfb, OBJ_SIZE_16x16 | 0x1e4, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0xb, 0x1e0, OBJ_SPRITE_OAM | 0x3ee,
-    0xf9, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0x4, OBJ_SIZE_16x16 | 0x1ee, OBJ_SPRITE_OAM | 0x38e
+    5,
+    OAM_ENTRY(-32, 12, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-28, -5, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-32, 11, OAM_DIMS_16x8, OAM_NO_FLIP, 1006, 8, 0),
+    OAM_ENTRY(-8, -7, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 4, OAM_DIMS_16x16, OAM_NO_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckDying_Frame1[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xf, OBJ_SIZE_16x16 | 0x1e2, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_VERTICAL | 0xfa, OBJ_SIZE_8x32 | 0x1e7, OBJ_SPRITE_OAM | 0x320,
-    0xfc, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0x7, OBJ_SIZE_16x16 | 0x1ef, OBJ_SPRITE_OAM | 0x38e
+    4,
+    OAM_ENTRY(-30, 15, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-25, -6, OAM_DIMS_8x32, OAM_NO_FLIP, 800, 8, 0),
+    OAM_ENTRY(-8, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-17, 7, OAM_DIMS_16x16, OAM_NO_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckDying_Frame2[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xe, OBJ_SIZE_16x16 | 0x1e2, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_VERTICAL | 0xf9, OBJ_SIZE_8x32 | 0x1e7, OBJ_SPRITE_OAM | 0x320,
-    0xfb, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x28a,
-    0x6, OBJ_SIZE_16x16 | 0x1ef, OBJ_SPRITE_OAM | 0x38e
+    4,
+    OAM_ENTRY(-30, 14, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-25, -7, OAM_DIMS_8x32, OAM_NO_FLIP, 800, 8, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-17, 6, OAM_DIMS_16x16, OAM_NO_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckDying_Frame3[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xf, OBJ_SIZE_16x16 | 0x1e1, OBJ_SPRITE_OAM | 0x28a,
-    0x3, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1db, OBJ_SPRITE_OAM | 0x3ce,
-    0xfc, OBJ_SIZE_16x16 | 0x1f7, OBJ_SPRITE_OAM | 0x28a,
-    0x7, OBJ_SIZE_16x16 | 0x1ee, OBJ_SPRITE_OAM | 0x38e
+    4,
+    OAM_ENTRY(-31, 15, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-37, 3, OAM_DIMS_16x16, OAM_Y_FLIP, 974, 8, 0),
+    OAM_ENTRY(-9, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 7, OAM_DIMS_16x16, OAM_NO_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckDying_Frame4[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0x12, OBJ_SIZE_16x16 | 0x1e1, OBJ_SPRITE_OAM | 0x28a,
-    0x9, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1d7, OBJ_SPRITE_OAM | 0x38e,
-    0xff, OBJ_SIZE_16x16 | 0x1f7, OBJ_SPRITE_OAM | 0x28a,
-    0xa, OBJ_SIZE_16x16 | 0x1ee, OBJ_SPRITE_OAM | 0x38e
+    4,
+    OAM_ENTRY(-31, 18, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-41, 9, OAM_DIMS_16x16, OAM_X_FLIP, 910, 8, 0),
+    OAM_ENTRY(-9, -1, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 10, OAM_DIMS_16x16, OAM_NO_FLIP, 910, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckDying_Frame5[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x1a, OBJ_SIZE_16x16 | 0x1e7, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x13, OBJ_X_FLIP | OBJ_SIZE_32x16 | 0x1d4, OBJ_SPRITE_OAM | 0x294,
-    0x3, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    0x9, OBJ_SIZE_16x16 | 0x1f1, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0x19, 0x1ed, OBJ_SPRITE_OAM | 0x3ee
+    5,
+    OAM_ENTRY(-25, 26, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-44, 19, OAM_DIMS_32x16, OAM_X_FLIP, 660, 8, 0),
+    OAM_ENTRY(-11, 3, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-15, 9, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-19, 25, OAM_DIMS_16x8, OAM_NO_FLIP, 1006, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckDying_Frame6[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x19, OBJ_SIZE_16x16 | 0x1e6, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x11, OBJ_X_FLIP | OBJ_SIZE_32x16 | 0x1d3, OBJ_SPRITE_OAM | 0x294,
-    0x1, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    0x8, OBJ_SIZE_16x16 | 0x1f1, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0x18, 0x1ed, OBJ_SPRITE_OAM | 0x3ee
+    5,
+    OAM_ENTRY(-26, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-45, 17, OAM_DIMS_32x16, OAM_X_FLIP, 660, 8, 0),
+    OAM_ENTRY(-11, 1, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-15, 8, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-19, 24, OAM_DIMS_16x8, OAM_NO_FLIP, 1006, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckDying_Frame7[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x19, OBJ_SIZE_16x16 | 0x1e7, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1e, OBJ_SIZE_32x8 | 0x1d3, OBJ_SPRITE_OAM | 0x3f8,
-    0x2, OBJ_SIZE_16x16 | 0x1f4, OBJ_SPRITE_OAM | 0x28a,
-    0x9, OBJ_SIZE_16x16 | 0x1f1, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0x19, 0x1ed, OBJ_SPRITE_OAM | 0x3ee
+    5,
+    OAM_ENTRY(-25, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-45, 30, OAM_DIMS_32x8, OAM_NO_FLIP, 1016, 8, 0),
+    OAM_ENTRY(-12, 2, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-15, 9, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-19, 25, OAM_DIMS_16x8, OAM_NO_FLIP, 1006, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckDying_Frame8[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x1e, OBJ_SIZE_16x16 | 0x1ea, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x23, OBJ_SIZE_32x16 | 0x1cf, OBJ_SPRITE_OAM | 0x294,
-    0x5, OBJ_SIZE_16x16 | 0x1f4, OBJ_SPRITE_OAM | 0x28a,
-    0xd, OBJ_SIZE_16x16 | 0x1f1, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, 0x1ed, OBJ_SPRITE_OAM | 0x3ee
+    5,
+    OAM_ENTRY(-22, 30, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-49, 35, OAM_DIMS_32x16, OAM_NO_FLIP, 660, 8, 0),
+    OAM_ENTRY(-12, 5, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-15, 13, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-19, 29, OAM_DIMS_16x8, OAM_NO_FLIP, 1006, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_NeckDying_Frame9[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x1c, OBJ_SIZE_16x16 | 0x1e9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1d0, OBJ_SPRITE_OAM | 0x294,
-    0x3, OBJ_SIZE_16x16 | 0x1f4, OBJ_SPRITE_OAM | 0x28a,
-    0xc, OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x3ce,
-    OBJ_SHAPE_HORIZONTAL | 0x1c, 0x1ec, OBJ_SPRITE_OAM | 0x3ee
+    5,
+    OAM_ENTRY(-23, 28, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-48, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 660, 8, 0),
+    OAM_ENTRY(-12, 3, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-16, 12, OAM_DIMS_16x16, OAM_NO_FLIP, 974, 8, 0),
+    OAM_ENTRY(-20, 28, OAM_DIMS_16x8, OAM_NO_FLIP, 1006, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingBackwards_Frame9[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1b9, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1d9, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1e, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1e6, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x298,
-    OBJ_SHAPE_VERTICAL | 0x11, 0x5, OBJ_SPRITE_OAM | 0x321
+    6,
+    OAM_ENTRY(-71, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-39, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(0, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-26, 30, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -15, OAM_DIMS_32x32, OAM_NO_FLIP, 664, 8, 0),
+    OAM_ENTRY(5, 17, OAM_DIMS_8x16, OAM_NO_FLIP, 801, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingBackwards_Frame8[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1c8, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1e8, OBJ_SPRITE_OAM | 0x2f6,
-    0x1a, OBJ_SIZE_16x16 | 0xf, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1e, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1f3, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_SIZE_32x32 | 0x1f9, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x11, 0x11, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-56, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-24, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(15, 26, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-13, 30, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-7, -15, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(17, 17, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingBackwards_Frame7[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c9, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e9, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0x10, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1f4, OBJ_SPRITE_OAM | 0x2e0,
-    0xf0, OBJ_SIZE_32x32 | 0x1fa, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x10, 0x12, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-55, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-23, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(16, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-12, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-6, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(18, 16, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingBackwards_Frame6[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c9, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e9, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0x10, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1f4, OBJ_SPRITE_OAM | 0x2e0,
-    0xef, OBJ_SIZE_32x32 | 0x1fa, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xf, 0x12, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-55, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-23, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(16, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-12, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-6, -17, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(18, 15, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingBackwards_Frame5[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c9, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e9, OBJ_SPRITE_OAM | 0x2f6,
-    0x18, OBJ_SIZE_16x16 | 0xf, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1c, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1f3, OBJ_SPRITE_OAM | 0x2e0,
-    0xee, OBJ_SIZE_32x32 | 0x1f9, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, 0x11, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-55, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-23, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(15, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-13, 28, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-7, -18, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(17, 14, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingBackwards_Frame4[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x11, OBJ_SIZE_32x32 | 0x1d5, OBJ_SPRITE_OAM | 0x218,
-    0x18, OBJ_SIZE_16x16 | 0xf, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x13, OBJ_SIZE_32x16 | 0x1f3, OBJ_SPRITE_OAM | 0x2e0,
-    0xee, OBJ_SIZE_32x32 | 0x1f9, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, 0x11, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-43, 17, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(15, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-13, 19, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-7, -18, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(17, 14, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingBackwards_Frame3[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x10, OBJ_SIZE_32x32 | 0x1c8, OBJ_SPRITE_OAM | 0x218,
-    0x17, OBJ_SIZE_16x16 | 0x2, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x12, OBJ_SIZE_32x16 | 0x1e6, OBJ_SPRITE_OAM | 0x2e0,
-    0xed, OBJ_SIZE_32x32 | 0x1ff, OBJ_SPRITE_OAM | 0x298,
-    OBJ_SHAPE_VERTICAL | 0xd, 0x7, OBJ_SPRITE_OAM | 0x321
+    5,
+    OAM_ENTRY(-56, 16, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(2, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-26, 18, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-1, -19, OAM_DIMS_32x32, OAM_NO_FLIP, 664, 8, 0),
+    OAM_ENTRY(7, 13, OAM_DIMS_8x16, OAM_NO_FLIP, 801, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingBackwards_Frame2[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xd, OBJ_SIZE_32x32 | 0x1bb, OBJ_SPRITE_OAM | 0x218,
-    0x14, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xf, OBJ_SIZE_32x16 | 0x1d9, OBJ_SPRITE_OAM | 0x2e0,
-    0xed, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fe, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xd, OBJ_X_FLIP | 0x1fe, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-69, 13, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-11, 20, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-39, 15, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-2, -19, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-2, 13, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingBackwards_Frame1[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_SIZE_32x16 | 0x1ae, OBJ_SPRITE_OAM | 0x25c,
-    0x1d, OBJ_SIZE_16x16 | 0x1ce, OBJ_SPRITE_OAM | 0x361,
-    0x16, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1b, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1db, OBJ_SPRITE_OAM | 0x2e0,
-    0xef, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xf, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-82, 29, OAM_DIMS_32x16, OAM_NO_FLIP, 604, 8, 0),
+    OAM_ENTRY(-50, 29, OAM_DIMS_16x16, OAM_NO_FLIP, 865, 8, 0),
+    OAM_ENTRY(-11, 22, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-37, 27, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -17, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 15, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingBackwards_Frame0[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x20, OBJ_SIZE_32x16 | 0x1ae, OBJ_SPRITE_OAM | 0x2f2,
-    0x20, OBJ_SIZE_16x16 | 0x1ce, OBJ_SPRITE_OAM | 0x2f6,
-    0x17, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1c, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1db, OBJ_SPRITE_OAM | 0x2e0,
-    0xf0, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x10, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-82, 32, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-50, 32, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-11, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-37, 28, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -16, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 16, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmCrawlingBackwards_Frame10[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1ae, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1ce, OBJ_SPRITE_OAM | 0x2f6,
-    0x18, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1db, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x11, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-82, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-50, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-11, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-37, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -15, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 17, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingBackwards_Frame9[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x11, OBJ_SIZE_32x32 | 0x1cf, OBJ_SPRITE_OAM | 0x218,
-    0x18, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x13, OBJ_SIZE_32x16 | 0x1ed, OBJ_SPRITE_OAM | 0x2e0,
-    0xee, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, 0xb, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-49, 17, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(9, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, 19, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -18, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 14, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingBackwards_Frame8[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x10, OBJ_SIZE_32x32 | 0x1c2, OBJ_SPRITE_OAM | 0x218,
-    0x17, OBJ_SIZE_16x16 | 0x1fc, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x12, OBJ_SIZE_32x16 | 0x1e0, OBJ_SPRITE_OAM | 0x2e0,
-    0xed, OBJ_SIZE_32x32 | 0x1f9, OBJ_SPRITE_OAM | 0x298,
-    OBJ_SHAPE_VERTICAL | 0xd, 0x1, OBJ_SPRITE_OAM | 0x321
+    5,
+    OAM_ENTRY(-62, 16, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-4, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-32, 18, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-7, -19, OAM_DIMS_32x32, OAM_NO_FLIP, 664, 8, 0),
+    OAM_ENTRY(1, 13, OAM_DIMS_8x16, OAM_NO_FLIP, 801, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingBackwards_Frame7[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0xd, OBJ_SIZE_32x32 | 0x1b5, OBJ_SPRITE_OAM | 0x218,
-    0x14, OBJ_SIZE_16x16 | 0x1ef, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0xf, OBJ_SIZE_32x16 | 0x1d3, OBJ_SPRITE_OAM | 0x2e0,
-    0xed, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1f8, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xd, OBJ_X_FLIP | 0x1f8, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-75, 13, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-17, 20, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-45, 15, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-8, -19, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-8, 13, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingBackwards_Frame6[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_SIZE_32x16 | 0x1a8, OBJ_SPRITE_OAM | 0x25c,
-    0x1d, OBJ_SIZE_16x16 | 0x1c8, OBJ_SPRITE_OAM | 0x361,
-    0x16, OBJ_SIZE_16x16 | 0x1ef, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1b, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1d5, OBJ_SPRITE_OAM | 0x2e0,
-    0xef, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1f7, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xf, OBJ_X_FLIP | 0x1f7, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-88, 29, OAM_DIMS_32x16, OAM_NO_FLIP, 604, 8, 0),
+    OAM_ENTRY(-56, 29, OAM_DIMS_16x16, OAM_NO_FLIP, 865, 8, 0),
+    OAM_ENTRY(-17, 22, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-43, 27, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-9, -17, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-9, 15, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingBackwards_Frame5[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x20, OBJ_SIZE_32x16 | 0x1a8, OBJ_SPRITE_OAM | 0x2f2,
-    0x20, OBJ_SIZE_16x16 | 0x1c8, OBJ_SPRITE_OAM | 0x2f6,
-    0x17, OBJ_SIZE_16x16 | 0x1ef, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1c, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1d5, OBJ_SPRITE_OAM | 0x2e0,
-    0xf0, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1f7, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x10, OBJ_X_FLIP | 0x1f7, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-88, 32, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-56, 32, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-17, 23, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-43, 28, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-9, -16, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-9, 16, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingBackwards_Frame4[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1a8, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1c8, OBJ_SPRITE_OAM | 0x2f6,
-    0x18, OBJ_SIZE_16x16 | 0x1ef, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1d5, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1f7, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x11, OBJ_X_FLIP | 0x1f7, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-88, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-56, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-17, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-43, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-9, -15, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-9, 17, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingBackwards_Frame3[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1b3, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1d3, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0x1fa, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1e, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1e0, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_SIZE_32x32 | 0x1f7, OBJ_SPRITE_OAM | 0x298,
-    OBJ_SHAPE_VERTICAL | 0x11, 0x1ff, OBJ_SPRITE_OAM | 0x321
+    6,
+    OAM_ENTRY(-77, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-45, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-6, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-32, 30, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-9, -15, OAM_DIMS_32x32, OAM_NO_FLIP, 664, 8, 0),
+    OAM_ENTRY(-1, 17, OAM_DIMS_8x16, OAM_NO_FLIP, 801, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingBackwards_Frame2[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1c2, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1e2, OBJ_SPRITE_OAM | 0x2f6,
-    0x1a, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1e, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ed, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x11, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-62, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-30, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(9, 26, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-19, 30, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -15, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 17, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingBackwards_Frame1[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c3, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0xa, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ee, OBJ_SPRITE_OAM | 0x2e0,
-    0xf0, OBJ_SIZE_32x32 | 0x1f4, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x10, 0xc, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-29, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(10, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-12, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(12, 16, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingBackwards_Frame0[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c3, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0xa, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1d, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ee, OBJ_SPRITE_OAM | 0x2e0,
-    0xef, OBJ_SIZE_32x32 | 0x1f4, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xf, 0xc, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-29, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(10, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 29, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-12, -17, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(12, 15, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_RightArmCrawlingBackwards_Frame10[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x21, OBJ_SIZE_32x16 | 0x1c3, OBJ_SPRITE_OAM | 0x2f2,
-    0x21, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x2f6,
-    0x18, OBJ_SIZE_16x16 | 0x9, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1c, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1ee, OBJ_SPRITE_OAM | 0x2e0,
-    0xee, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0xe, 0xb, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-61, 33, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-29, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(9, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-18, 28, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-13, -18, OAM_DIMS_32x32, OAM_NO_FLIP, 667, 8, 0),
+    OAM_ENTRY(11, 14, OAM_DIMS_8x16, OAM_NO_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmSwingingAtGround_Frame6[OAM_DATA_SIZE(7)] = {
-    0x7,
-    OBJ_SHAPE_HORIZONTAL | 0x5, OBJ_SIZE_32x16 | 0x18e, OBJ_SPRITE_OAM | 0x25c,
-    0x5, OBJ_SIZE_16x16 | 0x1ae, OBJ_SPRITE_OAM | 0x361,
-    0x5, OBJ_SIZE_16x16 | 0x1d8, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x9, 0x1bd, OBJ_SPRITE_OAM | 0x372,
-    OBJ_SHAPE_HORIZONTAL | 0x9, 0x1cd, OBJ_SPRITE_OAM | 0x372,
-    0xf1, OBJ_SIZE_32x32 | 0x1f3, OBJ_SPRITE_OAM | 0x200,
-    0x1, OBJ_SIZE_16x16 | 0x1e3, OBJ_SPRITE_OAM | 0x332
+    7,
+    OAM_ENTRY(-114, 5, OAM_DIMS_32x16, OAM_NO_FLIP, 604, 8, 0),
+    OAM_ENTRY(-82, 5, OAM_DIMS_16x16, OAM_NO_FLIP, 865, 8, 0),
+    OAM_ENTRY(-40, 5, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-67, 9, OAM_DIMS_16x8, OAM_NO_FLIP, 882, 8, 0),
+    OAM_ENTRY(-51, 9, OAM_DIMS_16x8, OAM_NO_FLIP, 882, 8, 0),
+    OAM_ENTRY(-13, -15, OAM_DIMS_32x32, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(-29, 1, OAM_DIMS_16x16, OAM_NO_FLIP, 818, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmSwingingAtGround_Frame7[OAM_DATA_SIZE(7)] = {
-    0x7,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x19c, OBJ_SPRITE_OAM | 0x25c,
-    0x22, OBJ_SIZE_16x16 | 0x1bc, OBJ_SPRITE_OAM | 0x361,
-    0xc, OBJ_SIZE_16x16 | 0x1df, OBJ_SPRITE_OAM | 0x28a,
-    0x1b, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1c6, OBJ_SPRITE_OAM | 0x21e,
-    0x13, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1d6, OBJ_SPRITE_OAM | 0x21c,
-    0xf5, OBJ_SIZE_32x32 | 0x1f8, OBJ_SPRITE_OAM | 0x200,
-    0x5, OBJ_SIZE_16x16 | 0x1e8, OBJ_SPRITE_OAM | 0x332
+    7,
+    OAM_ENTRY(-100, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 604, 8, 0),
+    OAM_ENTRY(-68, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 865, 8, 0),
+    OAM_ENTRY(-33, 12, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-58, 27, OAM_DIMS_16x16, OAM_Y_FLIP, 542, 8, 0),
+    OAM_ENTRY(-42, 19, OAM_DIMS_16x16, OAM_Y_FLIP, 540, 8, 0),
+    OAM_ENTRY(-8, -11, OAM_DIMS_32x32, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(-24, 5, OAM_DIMS_16x16, OAM_NO_FLIP, 818, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmSwingingAtGround_Frame8[OAM_DATA_SIZE(7)] = {
-    0x7,
-    OBJ_SHAPE_HORIZONTAL | 0x23, OBJ_SIZE_32x16 | 0x19c, OBJ_SPRITE_OAM | 0x2f2,
-    0x23, OBJ_SIZE_16x16 | 0x1bc, OBJ_SPRITE_OAM | 0x2f6,
-    0xa, OBJ_SIZE_16x16 | 0x1df, OBJ_SPRITE_OAM | 0x28a,
-    0x19, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1c6, OBJ_SPRITE_OAM | 0x21e,
-    0x11, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1d6, OBJ_SPRITE_OAM | 0x21c,
-    0xf4, OBJ_SIZE_32x32 | 0x1f8, OBJ_SPRITE_OAM | 0x200,
-    0x4, OBJ_SIZE_16x16 | 0x1e8, OBJ_SPRITE_OAM | 0x332
+    7,
+    OAM_ENTRY(-100, 35, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-68, 35, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-33, 10, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-58, 25, OAM_DIMS_16x16, OAM_Y_FLIP, 542, 8, 0),
+    OAM_ENTRY(-42, 17, OAM_DIMS_16x16, OAM_Y_FLIP, 540, 8, 0),
+    OAM_ENTRY(-8, -12, OAM_DIMS_32x32, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(-24, 4, OAM_DIMS_16x16, OAM_NO_FLIP, 818, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmSwingingAtGround_Frame9[OAM_DATA_SIZE(5)] = {
-    0x5,
-    0x10, OBJ_SIZE_32x32 | 0x1bd, OBJ_SPRITE_OAM | 0x218,
-    0x18, OBJ_SIZE_16x16 | 0x1f5, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x14, OBJ_SIZE_32x16 | 0x1da, OBJ_SPRITE_OAM | 0x2e0,
-    0xf2, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fd, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x12, OBJ_X_FLIP | 0x1fd, OBJ_SPRITE_OAM | 0x334
+    5,
+    OAM_ENTRY(-67, 16, OAM_DIMS_32x32, OAM_NO_FLIP, 536, 8, 0),
+    OAM_ENTRY(-11, 24, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-38, 20, OAM_DIMS_32x16, OAM_NO_FLIP, 736, 8, 0),
+    OAM_ENTRY(-3, -14, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-3, 18, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_LeftArmSwingingAtCloseGround_Frame9[OAM_DATA_SIZE(6)] = {
-    0x6,
-    OBJ_SHAPE_HORIZONTAL | 0x22, OBJ_SIZE_32x16 | 0x1a9, OBJ_SPRITE_OAM | 0x2f2,
-    0x22, OBJ_SIZE_16x16 | 0x1c9, OBJ_SPRITE_OAM | 0x2f6,
-    0x19, OBJ_SIZE_16x16 | 0x1f3, OBJ_SPRITE_OAM | 0x28a,
-    OBJ_SHAPE_HORIZONTAL | 0x1f, OBJ_Y_FLIP | OBJ_SIZE_32x16 | 0x1d7, OBJ_SPRITE_OAM | 0x2e0,
-    0xf1, OBJ_X_FLIP | OBJ_SIZE_32x32 | 0x1fc, OBJ_SPRITE_OAM | 0x29b,
-    OBJ_SHAPE_VERTICAL | 0x11, OBJ_X_FLIP | 0x1fc, OBJ_SPRITE_OAM | 0x334
+    6,
+    OAM_ENTRY(-87, 34, OAM_DIMS_32x16, OAM_NO_FLIP, 754, 8, 0),
+    OAM_ENTRY(-55, 34, OAM_DIMS_16x16, OAM_NO_FLIP, 758, 8, 0),
+    OAM_ENTRY(-13, 25, OAM_DIMS_16x16, OAM_NO_FLIP, 650, 8, 0),
+    OAM_ENTRY(-41, 31, OAM_DIMS_32x16, OAM_Y_FLIP, 736, 8, 0),
+    OAM_ENTRY(-4, -15, OAM_DIMS_32x32, OAM_X_FLIP, 667, 8, 0),
+    OAM_ENTRY(-4, 17, OAM_DIMS_8x16, OAM_X_FLIP, 820, 8, 0),
 };
 
 static const u16 sMechaRidleyPartOam_EyeDying_Frame0[OAM_DATA_SIZE(2)] = {
-    0x2,
-    0xf9, 0x1fe, OBJ_SPRITE_OAM | 0x1363,
-    0xfa, 0x1fd, OBJ_SPRITE_OAM | 0x1383
+    2,
+    OAM_ENTRY(-2, -7, OAM_DIMS_8x8, OAM_NO_FLIP, 867, 9, 0),
+    OAM_ENTRY(-3, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 899, 9, 0),
 };
 
 const struct FrameData sMechaRidleyPartOam_Tail[2] = {

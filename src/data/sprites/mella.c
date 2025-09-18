@@ -32,79 +32,79 @@ const u32 sMellaGfx[162] = INCBIN_U32("data/sprites/Mella.gfx.lz");
 const u16 sMellaPal[16] = INCBIN_U16("data/sprites/Mella.pal");
 
 static const u16 sMellaOam_Idle_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x16 | 0x1f0, OBJ_SPRITE_OAM | 0x200
+    1,
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 512, 8, 0),
 };
 
 static const u16 sMellaOam_Idle_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x16 | 0x1f0, OBJ_SPRITE_OAM | 0x204
+    1,
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 516, 8, 0),
 };
 
 static const u16 sMellaOam_Idle_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x16 | 0x1f0, OBJ_SPRITE_OAM | 0x208
+    1,
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 520, 8, 0),
 };
 
 static const u16 sMellaOam_Idle_Frame3[OAM_DATA_SIZE(1)] = {
-    0x1,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x16 | 0x1f0, OBJ_SPRITE_OAM | 0x20c
+    1,
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 524, 8, 0),
 };
 
 static const u16 sMellaOam_Idle_Frame4[OAM_DATA_SIZE(1)] = {
-    0x1,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x16 | 0x1f0, OBJ_SPRITE_OAM | 0x210
+    1,
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 528, 8, 0),
 };
 
 static const u16 sMellaOam_Idle_Frame5[OAM_DATA_SIZE(1)] = {
-    0x1,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x16 | 0x1f0, OBJ_SPRITE_OAM | 0x214
+    1,
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 532, 8, 0),
 };
 
 static const u16 sMellaOam_Idle_Frame6[OAM_DATA_SIZE(1)] = {
-    0x1,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x16 | 0x1f0, OBJ_SPRITE_OAM | 0x218
+    1,
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 536, 8, 0),
 };
 
 static const u16 sMellaOam_Idle_Frame7[OAM_DATA_SIZE(1)] = {
-    0x1,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x16 | 0x1f0, OBJ_SPRITE_OAM | 0x21c
+    1,
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 540, 8, 0),
 };
 
 static const u16 sMellaOam_Moving_Frame1[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x224,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x200
+    2,
+    OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 548, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 512, 8, 0),
 };
 
 static const u16 sMellaOam_Moving_Frame2[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x228,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x204
+    2,
+    OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 552, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 516, 8, 0),
 };
 
 static const u16 sMellaOam_Moving_Frame3[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x22c,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x204
+    2,
+    OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 556, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 516, 8, 0),
 };
 
 static const u16 sMellaOam_Moving_Frame4[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x230,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x208
+    2,
+    OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 560, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 520, 8, 0),
 };
 
 static const u16 sMellaOam_Moving_Frame5[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x234,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x208
+    2,
+    OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 564, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 520, 8, 0),
 };
 
 static const u16 sMellaOam_Moving_Frame6[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x238,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x20c
+    2,
+    OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 568, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 524, 8, 0),
 };
 
 const struct FrameData sMellaOam_Idle[9] = {

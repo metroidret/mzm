@@ -7,33 +7,33 @@ const u32 sZebboYellowGfx[124] = INCBIN_U32("data/sprites/ZebboYellow.gfx.lz");
 const u16 sZebboYellowPal[16] = INCBIN_U16("data/sprites/ZebboYellow.pal");
 
 static const u16 sZebboOam_Idle_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x200
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 512, 8, 0),
 };
 
 static const u16 sZebboOam_Idle_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x202
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 514, 8, 0),
 };
 
 static const u16 sZebboOam_Idle_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x204
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 516, 8, 0),
 };
 
 static const u16 sZebboOam_Moving_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x206
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 518, 8, 0),
 };
 
 static const u16 sZebboOam_Moving_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x208
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 520, 8, 0),
 };
 
 static const u16 sZebboOam_Moving_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x20a
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 522, 8, 0),
 };
 
 const struct FrameData sZebboOam_Idle[5] = {

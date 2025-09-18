@@ -82,22 +82,22 @@ const struct OamArray sRidleySpawnOam[RIDLEY_SPAWN_OAM_ID_END] = {
 };
 
 const u16 sRidleySpawnOAM_Samus_Frame0[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xd0, OBJ_SIZE_64x64 | 0x1c0, 0x0,
-    0xd0, OBJ_SIZE_64x64 | 0x0, 0x8,
-    0x10, OBJ_SIZE_64x64 | 0x1c0, 0x1010,
-    0x10, OBJ_SIZE_64x64 | 0x0, 0x1018
+    4,
+    OAM_ENTRY(-64, -48, OAM_DIMS_64x64, OAM_NO_FLIP, 0, 0, 0),
+    OAM_ENTRY(0, -48, OAM_DIMS_64x64, OAM_NO_FLIP, 8, 0, 0),
+    OAM_ENTRY(-64, 16, OAM_DIMS_64x64, OAM_NO_FLIP, 16, 1, 0),
+    OAM_ENTRY(0, 16, OAM_DIMS_64x64, OAM_NO_FLIP, 24, 1, 0),
 };
 
 const u16 sRidleySpawnOAM_RidleyFlyingReflection_Frame0[OAM_DATA_SIZE(7)] = {
-    0x7,
-    0xc0, OBJ_SIZE_64x64 | 0x1a0, 0x2100,
-    0xc0, OBJ_SIZE_64x64 | 0x1e0, 0x2108,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_64x32 | 0x1a0, 0x2200,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_64x32 | 0x1e0, 0x2208,
-    0xc0, OBJ_SIZE_64x64 | 0x20, 0x2110,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_64x32 | 0x20, 0x2210,
-    0xd0, OBJ_SIZE_16x16 | 0x60, 0x1158
+    7,
+    OAM_ENTRY(-96, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 256, 2, 0),
+    OAM_ENTRY(-32, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 264, 2, 0),
+    OAM_ENTRY(-96, 0, OAM_DIMS_64x32, OAM_NO_FLIP, 512, 2, 0),
+    OAM_ENTRY(-32, 0, OAM_DIMS_64x32, OAM_NO_FLIP, 520, 2, 0),
+    OAM_ENTRY(32, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 272, 2, 0),
+    OAM_ENTRY(32, 0, OAM_DIMS_64x32, OAM_NO_FLIP, 528, 2, 0),
+    OAM_ENTRY(96, -48, OAM_DIMS_16x16, OAM_NO_FLIP, 344, 1, 0),
 };
 
 const struct FrameData sRidleySpawnOAM_Samus[2] = {
@@ -109,19 +109,19 @@ const struct FrameData sRidleySpawnOAM_Samus[2] = {
 };
 
 const u16 sRidleySpawnOAM_RidleyFlying_Frame0[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xc0, OBJ_SIZE_64x64 | 0x1c0, 0x0,
-    0xc0, OBJ_SIZE_64x64 | 0x0, 0x8,
-    0x0, OBJ_SIZE_64x64 | 0x1c0, 0x100,
-    0x0, OBJ_SIZE_64x64 | 0x0, 0x108
+    4,
+    OAM_ENTRY(-64, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 0, 0, 0),
+    OAM_ENTRY(0, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 8, 0, 0),
+    OAM_ENTRY(-64, 0, OAM_DIMS_64x64, OAM_NO_FLIP, 256, 0, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_64x64, OAM_NO_FLIP, 264, 0, 0),
 };
 
 const u16 sRidleySpawnOAM_RidleyScreaming_Frame0[OAM_DATA_SIZE(4)] = {
-    0x4,
-    0xc0, OBJ_SIZE_64x64 | 0x1c0, 0x10,
-    0xc0, OBJ_SIZE_64x64 | 0x0, 0x18,
-    0x0, OBJ_SIZE_64x64 | 0x1c0, 0x110,
-    0x0, OBJ_SIZE_64x64 | 0x0, 0x118
+    4,
+    OAM_ENTRY(-64, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 16, 0, 0),
+    OAM_ENTRY(0, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 24, 0, 0),
+    OAM_ENTRY(-64, 0, OAM_DIMS_64x64, OAM_NO_FLIP, 272, 0, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_64x64, OAM_NO_FLIP, 280, 0, 0),
 };
 
 const struct FrameData sRidleySpawnOAM_RidleyFlyingAndScreaming_Unused[3] = {

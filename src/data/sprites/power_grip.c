@@ -5,51 +5,51 @@ const u32 sPowerGripGfx[279] = INCBIN_U32("data/sprites/PowerGrip.gfx.lz");
 const u16 sPowerGripPal[32] = INCBIN_U16("data/sprites/PowerGrip.pal");
 
 static const u16 sPowerGripOAM_Idle_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x200
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 512, 8, 0),
 };
 
 static const u16 sPowerGripOAM_Idle_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x202
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 514, 8, 0),
 };
 
 static const u16 sPowerGripOAM_Idle_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x204
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 516, 8, 0),
 };
 
 static const u16 sPowerGripGlowOAM_Idle_Frame0[OAM_DATA_SIZE(3)] = {
-    0x3,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1f0, OBJ_SPRITE_OAM | 0x1206,
-    0x0, OBJ_X_FLIP | OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x1208,
-    0x0, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x1208
+    3,
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x16, OAM_NO_FLIP, 518, 9, 0),
+    OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 520, 9, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 520, 9, 0),
 };
 
 static const u16 sPowerGripGlowOAM_Idle_Frame2[OAM_DATA_SIZE(3)] = {
-    0x3,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1f0, OBJ_SPRITE_OAM | 0x120a,
-    0x0, OBJ_X_FLIP | OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x120c,
-    0x0, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x120c
+    3,
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x16, OAM_NO_FLIP, 522, 9, 0),
+    OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 524, 9, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 524, 9, 0),
 };
 
 static const u16 sPowerGripGlowOAM_Idle_Frame4[OAM_DATA_SIZE(3)] = {
-    0x3,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1f0, OBJ_SPRITE_OAM | 0x120e,
-    0x0, OBJ_X_FLIP | OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x1210,
-    0x0, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x1210
+    3,
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x16, OAM_NO_FLIP, 526, 9, 0),
+    OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 528, 9, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 528, 9, 0),
 };
 
 static const u16 sPowerGripGlowOAM_Idle_Frame6[OAM_DATA_SIZE(3)] = {
-    0x3,
-    OBJ_SHAPE_HORIZONTAL | 0xf0, OBJ_SIZE_32x16 | 0x1f0, OBJ_SPRITE_OAM | 0x1212,
-    0x0, OBJ_X_FLIP | OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x1f0, OBJ_SPRITE_OAM | 0x1214,
-    0x0, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x1214
+    3,
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x16, OAM_NO_FLIP, 530, 9, 0),
+    OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 532, 9, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 532, 9, 0),
 };
 
 static const u16 sPowerGripGlowOAM_Idle_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfc, 0x1fc, OBJ_SPRITE_OAM | 0x1216
+    1,
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 534, 9, 0),
 };
 
 const struct FrameData sPowerGripOAM_Idle[5] = {

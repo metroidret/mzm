@@ -7,52 +7,52 @@ const u32 sRinkaGreenGfx[242] = INCBIN_U32("data/sprites/RinkaGreen.gfx.lz");
 const u16 sRinkaGreenPal[16] = INCBIN_U16("data/sprites/RinkaGreen.pal");
 
 static const u16 sRinkaOrangeOam_Moving_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x200
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 512, 8, 0),
 };
 
 static const u16 sRinkaOrangeOam_Moving_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x202
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 514, 8, 0),
 };
 
 static const u16 sRinkaOrangeOam_Moving_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x204
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 516, 8, 0),
 };
 
 static const u16 sRinkaOrangeOam_Spawning_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x20b
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 523, 8, 0),
 };
 
 static const u16 sRinkaOrangeOam_Spawning_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x20d
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 525, 8, 0),
 };
 
 static const u16 sRinkaOrangeOam_Spawning_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x20f
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 527, 8, 0),
 };
 
 static const u16 sRinkaOrangeOam_Spawning_Frame3[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x211
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 529, 8, 0),
 };
 
 static const u16 sRinkaOrangeOam_Spawning_Frame4[OAM_DATA_SIZE(3)] = {
-    0x3,
-    0xf7, OBJ_SIZE_16x16 | 0x1f7, OBJ_SPRITE_OAM | 0x206,
-    OBJ_SHAPE_VERTICAL | 0xf7, 0x7, OBJ_SPRITE_OAM | 0x215,
-    OBJ_SHAPE_HORIZONTAL | 0x7, 0x1f7, OBJ_SPRITE_OAM | 0x233
+    3,
+    OAM_ENTRY(-9, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 518, 8, 0),
+    OAM_ENTRY(7, -9, OAM_DIMS_8x16, OAM_NO_FLIP, 533, 8, 0),
+    OAM_ENTRY(-9, 7, OAM_DIMS_16x8, OAM_NO_FLIP, 563, 8, 0),
 };
 
 static const u16 sRinkaOrangeOam_Spawning_Frame5[OAM_DATA_SIZE(3)] = {
-    0x3,
-    0xf7, OBJ_SIZE_16x16 | 0x1f7, OBJ_SPRITE_OAM | 0x208,
-    OBJ_SHAPE_VERTICAL | 0xf7, 0x7, OBJ_SPRITE_OAM | 0x20a,
-    OBJ_SHAPE_HORIZONTAL | 0x7, 0x1f7, OBJ_SPRITE_OAM | 0x213
+    3,
+    OAM_ENTRY(-9, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 520, 8, 0),
+    OAM_ENTRY(7, -9, OAM_DIMS_8x16, OAM_NO_FLIP, 522, 8, 0),
+    OAM_ENTRY(-9, 7, OAM_DIMS_16x8, OAM_NO_FLIP, 531, 8, 0),
 };
 
 const struct FrameData sRinkaOrangeOam_Spawning[16] = {
@@ -141,52 +141,52 @@ const struct FrameData sRinkaOrangeOam_Moving[5] = {
 
 
 static const u16 sRinkaGreenOam_Moving_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x200
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 512, 8, 0),
 };
 
 static const u16 sRinkaGreenOam_Moving_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x202
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 514, 8, 0),
 };
 
 static const u16 sRinkaGreenOam_Moving_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x204
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 516, 8, 0),
 };
 
 static const u16 sRinkaGreenOam_Spawning_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x20b
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 523, 8, 0),
 };
 
 static const u16 sRinkaGreenOam_Spawning_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x20d
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 525, 8, 0),
 };
 
 static const u16 sRinkaGreenOam_Spawning_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x20f
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 527, 8, 0),
 };
 
 static const u16 sRinkaGreenOam_Spawning_Frame3[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x211
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 529, 8, 0),
 };
 
 static const u16 sRinkaGreenOam_Spawning_Frame4[OAM_DATA_SIZE(3)] = {
-    0x3,
-    0xf7, OBJ_SIZE_16x16 | 0x1f7, OBJ_SPRITE_OAM | 0x206,
-    OBJ_SHAPE_VERTICAL | 0xf7, 0x7, OBJ_SPRITE_OAM | 0x215,
-    OBJ_SHAPE_HORIZONTAL | 0x7, 0x1f7, OBJ_SPRITE_OAM | 0x233
+    3,
+    OAM_ENTRY(-9, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 518, 8, 0),
+    OAM_ENTRY(7, -9, OAM_DIMS_8x16, OAM_NO_FLIP, 533, 8, 0),
+    OAM_ENTRY(-9, 7, OAM_DIMS_16x8, OAM_NO_FLIP, 563, 8, 0),
 };
 
 static const u16 sRinkaGreenOam_Spawning_Frame5[OAM_DATA_SIZE(3)] = {
-    0x3,
-    0xf7, OBJ_SIZE_16x16 | 0x1f7, OBJ_SPRITE_OAM | 0x208,
-    OBJ_SHAPE_VERTICAL | 0xf7, 0x7, OBJ_SPRITE_OAM | 0x20a,
-    OBJ_SHAPE_HORIZONTAL | 0x7, 0x1f7, OBJ_SPRITE_OAM | 0x213
+    3,
+    OAM_ENTRY(-9, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 520, 8, 0),
+    OAM_ENTRY(7, -9, OAM_DIMS_8x16, OAM_NO_FLIP, 522, 8, 0),
+    OAM_ENTRY(-9, 7, OAM_DIMS_16x8, OAM_NO_FLIP, 531, 8, 0),
 };
 
 const struct FrameData sRinkaGreenOam_Spawning[16] = {

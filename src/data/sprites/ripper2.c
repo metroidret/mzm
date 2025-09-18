@@ -5,33 +5,33 @@ const u32 sRipper2Gfx[212] = INCBIN_U32("data/sprites/Ripper2.gfx.lz");
 const u16 sRipper2Pal[16] = INCBIN_U16("data/sprites/Ripper2.pal");
 
 static const u16 sRipper2Oam_Moving_Frame0[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0xf3, OBJ_SIZE_32x16 | 0x1ec, OBJ_SPRITE_OAM | 0x200,
-    0xf5, OBJ_SIZE_16x16 | 0xc, OBJ_SPRITE_OAM | 0x212
+    2,
+    OAM_ENTRY(-20, -13, OAM_DIMS_32x16, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(12, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 530, 8, 0),
 };
 
 static const u16 sRipper2Oam_Moving_Frame1[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0xf3, OBJ_SIZE_32x16 | 0x1ec, OBJ_SPRITE_OAM | 0x200,
-    OBJ_SHAPE_HORIZONTAL | 0xf5, OBJ_SIZE_32x16 | 0xc, OBJ_SPRITE_OAM | 0x20e
+    2,
+    OAM_ENTRY(-20, -13, OAM_DIMS_32x16, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(12, -11, OAM_DIMS_32x16, OAM_NO_FLIP, 526, 8, 0),
 };
 
 static const u16 sRipper2Oam_Moving_Frame2[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0xf3, OBJ_SIZE_32x16 | 0x1ec, OBJ_SPRITE_OAM | 0x200,
-    OBJ_SHAPE_HORIZONTAL | 0xf4, OBJ_SIZE_32x16 | 0xc, OBJ_SPRITE_OAM | 0x20a
+    2,
+    OAM_ENTRY(-20, -13, OAM_DIMS_32x16, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(12, -12, OAM_DIMS_32x16, OAM_NO_FLIP, 522, 8, 0),
 };
 
 static const u16 sRipper2Oam_TurningAround_Frame0[OAM_DATA_SIZE(2)] = {
-    0x2,
-    OBJ_SHAPE_HORIZONTAL | 0xf3, OBJ_SIZE_32x16 | 0x1ec, OBJ_SPRITE_OAM | 0x204,
-    0xf4, OBJ_SIZE_16x16 | 0x8, OBJ_SPRITE_OAM | 0x212
+    2,
+    OAM_ENTRY(-20, -13, OAM_DIMS_32x16, OAM_NO_FLIP, 516, 8, 0),
+    OAM_ENTRY(8, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 530, 8, 0),
 };
 
 static const u16 sRipper2Oam_TurningAround_Frame1[OAM_DATA_SIZE(2)] = {
-    0x2,
-    0xf3, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x208,
-    0xf5, OBJ_Y_FLIP | OBJ_SIZE_16x16 | 0x0, OBJ_SPRITE_OAM | 0x212
+    2,
+    OAM_ENTRY(-8, -13, OAM_DIMS_16x16, OAM_NO_FLIP, 520, 8, 0),
+    OAM_ENTRY(0, -11, OAM_DIMS_16x16, OAM_Y_FLIP, 530, 8, 0),
 };
 
 const struct FrameData sRipper2Oam_Moving[5] = {

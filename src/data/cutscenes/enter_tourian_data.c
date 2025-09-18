@@ -61,12 +61,12 @@ const struct OamArray sEnterTourianOam[7] = {
 };
 
 const u16 sEnterTourianOAM_SpacePirate_Frame0[OAM_DATA_SIZE(5)] = {
-    0x5,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x16 | 0x1d8, 0x4000,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x16 | 0x1f8, 0x4004,
-    0xf8, OBJ_SIZE_16x16 | 0x18, 0x4008,
-    OBJ_SHAPE_HORIZONTAL | 0x8, OBJ_SIZE_32x8 | 0x1d8, 0x4040,
-    OBJ_SHAPE_HORIZONTAL | 0x8, OBJ_SIZE_32x8 | 0x1f8, 0x4044
+    5,
+    OAM_ENTRY(-40, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0, 4, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 4, 4, 0),
+    OAM_ENTRY(24, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 8, 4, 0),
+    OAM_ENTRY(-40, 8, OAM_DIMS_32x8, OAM_NO_FLIP, 64, 4, 0),
+    OAM_ENTRY(-8, 8, OAM_DIMS_32x8, OAM_NO_FLIP, 68, 4, 0),
 };
 
 const struct FrameData sEnterTourianOAM_Empty[1] = {

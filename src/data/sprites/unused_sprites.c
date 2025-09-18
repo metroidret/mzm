@@ -2,13 +2,13 @@
 #include "macros.h"
 
 static const u16 sUnusedSpritesOam_Idle_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfc, 0x1fc, 0x3151
+    1,
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 337, 3, 0),
 };
 
 static const u16 sUnusedSpritesOam_Idle_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xfc, 0x1fc, 0x3150
+    1,
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 336, 3, 0),
 };
 
 const struct FrameData sUnusedSpritesOam_Idle[3] = {

@@ -7,33 +7,33 @@ const u32 sGeegaWhiteGfx[153] = INCBIN_U32("data/sprites/GeegaWhite.gfx.lz");
 const u16 sGeegaWhitePal[16] = INCBIN_U16("data/sprites/GeegaWhite.pal");
 
 static const u16 sGeegaOam_Idle_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x200
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 512, 8, 0),
 };
 
 static const u16 sGeegaOam_Idle_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf9, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x202
+    1,
+    OAM_ENTRY(-8, -7, OAM_DIMS_16x16, OAM_NO_FLIP, 514, 8, 0),
 };
 
 static const u16 sGeegaOam_Idle_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x204
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 516, 8, 0),
 };
 
 static const u16 sGeegaOam_Moving_Frame4[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x206
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 518, 8, 0),
 };
 
 static const u16 sGeegaOam_Moving_Frame5[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf7, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x208
+    1,
+    OAM_ENTRY(-8, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 520, 8, 0),
 };
 
 static const u16 sGeegaOam_Moving_Frame6[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf7, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x20a
+    1,
+    OAM_ENTRY(-8, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 522, 8, 0),
 };
 
 const struct FrameData sGeegaOam_Idle[5] = {

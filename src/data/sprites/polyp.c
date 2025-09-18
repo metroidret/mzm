@@ -11,128 +11,128 @@ const u32 sPolypGfx[241] = INCBIN_U32("data/sprites/Polyp.gfx.lz");
 const u16 sPolypPal[16] = INCBIN_U16("data/sprites/Polyp.pal");
 
 static const u16 sPolypOam_Idle_Frame0[OAM_DATA_SIZE(4)] = {
-    0x4,
-    OBJ_SHAPE_HORIZONTAL | 0xf7, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x200,
-    OBJ_SHAPE_HORIZONTAL | 0xf7, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x204,
-    OBJ_SHAPE_HORIZONTAL | 0xf3, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x224,
-    OBJ_SHAPE_HORIZONTAL | 0xff, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x220
+    4,
+    OAM_ENTRY(-16, -9, OAM_DIMS_32x8, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(-16, -9, OAM_DIMS_32x8, OAM_NO_FLIP, 516, 8, 0),
+    OAM_ENTRY(-16, -13, OAM_DIMS_32x8, OAM_NO_FLIP, 548, 8, 0),
+    OAM_ENTRY(-16, -1, OAM_DIMS_32x8, OAM_NO_FLIP, 544, 8, 0),
 };
 
 static const u16 sPolypOam_Idle_Frame1[OAM_DATA_SIZE(4)] = {
-    0x4,
-    OBJ_SHAPE_HORIZONTAL | 0xf7, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x200,
-    OBJ_SHAPE_HORIZONTAL | 0xf7, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x204,
-    OBJ_SHAPE_HORIZONTAL | 0xf4, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x224,
-    OBJ_SHAPE_HORIZONTAL | 0xff, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x220
+    4,
+    OAM_ENTRY(-16, -9, OAM_DIMS_32x8, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(-16, -9, OAM_DIMS_32x8, OAM_NO_FLIP, 516, 8, 0),
+    OAM_ENTRY(-16, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 548, 8, 0),
+    OAM_ENTRY(-16, -1, OAM_DIMS_32x8, OAM_NO_FLIP, 544, 8, 0),
 };
 
 static const u16 sPolypOam_Idle_Frame2[OAM_DATA_SIZE(4)] = {
-    0x4,
-    OBJ_SHAPE_HORIZONTAL | 0xf7, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x200,
-    OBJ_SHAPE_HORIZONTAL | 0xff, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x220,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x204,
-    OBJ_SHAPE_HORIZONTAL | 0xf5, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x224
+    4,
+    OAM_ENTRY(-16, -9, OAM_DIMS_32x8, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(-16, -1, OAM_DIMS_32x8, OAM_NO_FLIP, 544, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 516, 8, 0),
+    OAM_ENTRY(-16, -11, OAM_DIMS_32x8, OAM_NO_FLIP, 548, 8, 0),
 };
 
 static const u16 sPolypOam_Warning_Frame3[OAM_DATA_SIZE(4)] = {
-    0x4,
-    OBJ_SHAPE_HORIZONTAL | 0xf9, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x200,
-    OBJ_SHAPE_HORIZONTAL | 0x1, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x220,
-    OBJ_SHAPE_HORIZONTAL | 0xf9, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x204,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x224
+    4,
+    OAM_ENTRY(-16, -7, OAM_DIMS_32x8, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(-16, 1, OAM_DIMS_32x8, OAM_NO_FLIP, 544, 8, 0),
+    OAM_ENTRY(-16, -7, OAM_DIMS_32x8, OAM_NO_FLIP, 516, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 548, 8, 0),
 }; 
 
 static const u16 sPolypOam_Warning_Frame2[OAM_DATA_SIZE(4)] = {
-    0x4,
-    OBJ_SHAPE_HORIZONTAL | 0xf9, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x200,
-    OBJ_SHAPE_HORIZONTAL | 0x1, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x220,
-    OBJ_SHAPE_HORIZONTAL | 0xf9, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x204,
-    OBJ_SHAPE_HORIZONTAL | 0xf7, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x224
+    4,
+    OAM_ENTRY(-16, -7, OAM_DIMS_32x8, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(-16, 1, OAM_DIMS_32x8, OAM_NO_FLIP, 544, 8, 0),
+    OAM_ENTRY(-16, -7, OAM_DIMS_32x8, OAM_NO_FLIP, 516, 8, 0),
+    OAM_ENTRY(-16, -9, OAM_DIMS_32x8, OAM_NO_FLIP, 548, 8, 0),
 };
 
 static const u16 sPolypOam_Warning_Frame1[OAM_DATA_SIZE(4)] = {
-    0x4,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x200,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x220,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x204,
-    OBJ_SHAPE_HORIZONTAL | 0xf5, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x224
+    4,
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 544, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 516, 8, 0),
+    OAM_ENTRY(-16, -11, OAM_DIMS_32x8, OAM_NO_FLIP, 548, 8, 0),
 };
 
 static const u16 sPolypOam_Warning_Frame0[OAM_DATA_SIZE(4)] = {
-    0x4,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x200,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x220,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x204,
-    OBJ_SHAPE_HORIZONTAL | 0xf4, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x224
+    4,
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 544, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 516, 8, 0),
+    OAM_ENTRY(-16, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 548, 8, 0),
 };
 
 static const u16 sPolypOam_AfterSpitting_Frame2[OAM_DATA_SIZE(5)] = {
-    0x5,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x200,
-    OBJ_SHAPE_HORIZONTAL | 0x0, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x220,
-    OBJ_SHAPE_HORIZONTAL | 0xf8, OBJ_SIZE_32x16 | 0x1f0, OBJ_SPRITE_OAM | 0x208,
-    OBJ_SHAPE_HORIZONTAL | 0xf7, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x204,
-    OBJ_SHAPE_HORIZONTAL | 0xf2, OBJ_SIZE_32x8 | 0x1f0, OBJ_SPRITE_OAM | 0x224
+    5,
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 512, 8, 0),
+    OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 544, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 520, 8, 0),
+    OAM_ENTRY(-16, -9, OAM_DIMS_32x8, OAM_NO_FLIP, 516, 8, 0),
+    OAM_ENTRY(-16, -14, OAM_DIMS_32x8, OAM_NO_FLIP, 548, 8, 0),
 };
 
 static const u16 sPolypProjectileOam_Right_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x210
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 528, 8, 0),
 };
 
 static const u16 sPolypProjectileOam_Right_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x212
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 530, 8, 0),
 };
 
 static const u16 sPolypProjectileOam_Right_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x214
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 532, 8, 0),
 };
 
 static const u16 sPolypProjectileOam_Right_Frame3[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x216
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 534, 8, 0),
 };
 
 static const u16 sPolypProjectileOam_Left_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x210
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_X_FLIP, 528, 8, 0),
 };
 
 static const u16 sPolypProjectileOam_Left_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x212
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_X_FLIP, 530, 8, 0),
 };
 
 static const u16 sPolypProjectileOam_Left_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x214
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_X_FLIP, 532, 8, 0),
 };
 
 static const u16 sPolypProjectileOam_Left_Frame3[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_X_FLIP | OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x216
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_X_FLIP, 534, 8, 0),
 };
 
 static const u16 sPolypProjectileOam_Exploding_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x218
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 536, 8, 0),
 };
 
 static const u16 sPolypProjectileOam_Exploding_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x21a
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 538, 8, 0),
 };
 
 static const u16 sPolypProjectileOam_Exploding_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x21c
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 540, 8, 0),
 };
 
 static const u16 sPolypProjectileOam_Exploding_Frame3[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, OBJ_SPRITE_OAM | 0x21e
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 542, 8, 0),
 };
 
 const struct FrameData sPolypOam_Idle[5] = {

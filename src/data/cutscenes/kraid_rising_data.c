@@ -71,73 +71,73 @@ const struct OamArray sKraidRisingCutsceneOam[KRAID_RISING_OAM_ID_END] = {
 };
 
 const u16 sKraidRisingOam_Samus_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xd0, OBJ_SIZE_64x64 | 0x1e0, 0x0
+    1,
+    OAM_ENTRY(-32, -48, OAM_DIMS_64x64, OAM_NO_FLIP, 0, 0, 0),
 };
 
 const u16 sKraidRisingOam_Samus_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xcf, OBJ_SIZE_64x64 | 0x1e0, 0x0
+    1,
+    OAM_ENTRY(-32, -49, OAM_DIMS_64x64, OAM_NO_FLIP, 0, 0, 0),
 };
 
 const u16 sKraidRisingOam_Debris_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, 0x1f8, 0x1008
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 8, 1, 0),
 };
 
 const u16 sKraidRisingOam_Debris_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, 0x1f8, 0x1009
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 9, 1, 0),
 };
 
 const u16 sKraidRisingOam_Debris_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, 0x1f8, 0x100a
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 10, 1, 0),
 };
 
 const u16 sKraidRisingOam_Debris_Frame3[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, 0x1f8, 0x100b
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 11, 1, 0),
 };
 
 const u16 sKraidRisingOam_SmallPuff_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, 0x1028
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 40, 1, 0),
 };
 
 const u16 sKraidRisingOam_SmallPuff_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, 0x102a
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 42, 1, 0),
 };
 
 const u16 sKraidRisingOam_SmallPuff_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, 0x102c
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 44, 1, 0),
 };
 
 const u16 sKraidRisingOam_SmallPuff_Frame3[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf8, OBJ_SIZE_16x16 | 0x1f8, 0x102e
+    1,
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 46, 1, 0),
 };
 
 const u16 sKraidRisingOam_BigPuff_Frame0[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf0, OBJ_SIZE_32x32 | 0x1f0, 0x1068
+    1,
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 104, 1, 0),
 };
 
 const u16 sKraidRisingOam_BigPuff_Frame1[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf0, OBJ_SIZE_32x32 | 0x1f0, 0x106c
+    1,
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 108, 1, 0),
 };
 
 const u16 sKraidRisingOam_BigPuff_Frame2[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf0, OBJ_SIZE_32x32 | 0x1f0, 0x1070
+    1,
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 112, 1, 0),
 };
 
 const u16 sKraidRisingOam_BigPuff_Frame3[OAM_DATA_SIZE(1)] = {
-    0x1,
-    0xf0, OBJ_SIZE_32x32 | 0x1f0, 0x1074
+    1,
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 116, 1, 0),
 };
 
 const struct FrameData sKraidRisingOam_Samus[3] = {
