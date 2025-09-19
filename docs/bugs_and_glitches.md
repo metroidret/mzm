@@ -385,10 +385,12 @@ The last cutscene stage for upgrading your suit (obtaining Varia or the fully po
 ### Bugs
 
 - PowerBombExplosion doesn't check if out of bounds, which can lead to memory corruption
-  - Fix: don't check collision with any blocks outside of the room
+  - Fix: Don't check collision with any blocks outside of the room
 - Bomb hover on frozen enemies ([video](https://youtu.be/UIK8YnT1sG4))
 - Warping when Samus stands on multiple respawning enemies and kills one ([video](https://youtu.be/WfxkYSPTjWw))
 - Frame perfect pause buffering on ziplines ignores collision
 - Clipping into slopes ([video](https://www.youtube.com/watch?v=XiZRJesXHWw))
+- It is possible to get an invalid time attack password without cheating, because the time attack anti-cheat check doesn't check wheather maximum ingame time was reached
+  - Fix: Edit the if statement in line 283 in `TimeAttackCheckSaveFileValidity` in [time_attack.c](../src/time_attack.c) to check if max ingame time was reached if the times are equal
 
 ### Oversights and Design Flaws
