@@ -1,8 +1,9 @@
 #include "audio_wrappers.h"
-#include "data/audio.h"
-
 #include "gba.h"
 #include "macros.h"
+#include "data/audio.h"
+
+#include "structs/audio.h"
 
 /**
  * @brief 2564 | 294 | Initializes the audio
@@ -44,7 +45,7 @@ void InitializeAudio(void)
 
     dma_fill16(3, 0, &gMusicInfo, 28);
 
-    gMusicInfo.unk_9 = (u8)gUnk_Audio0x64;
+    gMusicInfo.maxScanlines_maybe = (u8)gUnk_Audio0x64;
 
     for (i = 0; i < ARRAY_SIZE(gPsgSounds); i++)
     {
@@ -107,7 +108,7 @@ void DoSoundAction(u32 action)
         gMusicInfo.maxSoundChannels = (action & SOUND_ACTION_MAX_CHANNELS_FLAG) >> SOUND_ACTION_MAX_CHANNELS_SHIFT;
         for (i = ARRAY_SIZE(gMusicInfo.soundChannels); i >= 0 ; i--)
         {
-            gMusicInfo.soundChannels[i].unk_0 = 0;
+            gMusicInfo.soundChannels[i].envelopeStage_maybe = 0;
         }
     }
 
@@ -158,7 +159,7 @@ void SetupSoundTransfer(void)
 {
     u32 buffer;
     u16 samplesPerFrame;
-    u16 unk_1;
+    u32 unk_1;
     u32 unk_2;
 
     WRITE_32(REG_DMA1_CNT, C_32_2_16((DMA_ENABLE | DMA_32BIT | DMA_DEST_FIXED), sizeof(u32)));
@@ -174,17 +175,15 @@ void SetupSoundTransfer(void)
     samplesPerFrame = sPcmSamplesPerVBlankTable[gMusicInfo.freqIndex];
     gMusicInfo.unk_14 = samplesPerFrame;
 
-    unk_1 = samplesPerFrame / 16;
-    gMusicInfo.unk_C = unk_1; // samplesPerFrame / 16
-    unk_2 = 96 / gMusicInfo.unk_C;
-    gMusicInfo.unk_D = unk_2;  // PCM_DMA_BUF_SIZE / samplesPerFrame, number of frames to process sample?
-    gMusicInfo.unk_E = unk_2 * unk_1;  // 96
-    gMusicInfo.unk_10 = gMusicInfo.unk_E - 1; // 95
+    gMusicInfo.unk_C = unk_1 = samplesPerFrame / 16;
+    gMusicInfo.unk_D = unk_2 = 96 / gMusicInfo.unk_C;  // PCM_DMA_BUF_SIZE / samplesPerFrame, number of frames to process sample?
+    gMusicInfo.maxDmaCount_maybe = unk_2 * unk_1;  // 96
+    gMusicInfo.dmaCounter_maybe = gMusicInfo.maxDmaCount_maybe - 1; // 95
     gMusicInfo.unk_11 = unk_1 * 2; // (samplesPerFrame / 16) * 2
 
     // First half of raw sound data goes into FIFO A, second half into FIF0 B
     WRITE_32(REG_DMA1_SRC, (u32)&gMusicInfo.soundRawData[0]);
-    WRITE_32(REG_DMA2_SRC, (u32)&gMusicInfo.soundRawData[sizeof(gMusicInfo.soundRawData) / 2]);
+    WRITE_32(REG_DMA2_SRC, (u32)&gMusicInfo.soundRawData[PCM_DMA_BUF_SIZE]);
 
     WRITE_32(REG_DMA1_DST, (u32)REG_FIFO_A);
     WRITE_32(REG_DMA2_DST, (u32)REG_FIFO_B);
@@ -196,8 +195,8 @@ void SetupSoundTransfer(void)
     WRITE_16(REG_TM0CNT_L, -((u32)FRAME_DRAW_CYCLES / samplesPerFrame)); // cycle time to play each sample
 
     // Wait for VBLANK
-    while (READ_8(REG_VCOUNT) == (SCREEN_SIZE_Y - 1)) {}
-    while (READ_8(REG_VCOUNT) != (SCREEN_SIZE_Y - 1)) {}
+    while (READ_8(REG_VCOUNT) == (SCREEN_SIZE_Y - 1));
+    while (READ_8(REG_VCOUNT) != (SCREEN_SIZE_Y - 1));
 
     WRITE_16(REG_TM0CNT_H, 0x80); // start timer 0
 }
@@ -311,18 +310,15 @@ void unk_2b64(Sound sound)
         if (sSoundDataEntries[sound].pHeader != pTrack->pHeader)
             QueueSound(sound, 0);
     }
-    else
+    else if (pTrack->flags & 1)
     {
-        if (pTrack->flags & 1)
-        {
-            if (sSoundDataEntries[sound].pHeader == pTrack->pHeader)
-                unk_2c10(pTrack);
-            else
-                QueueSound(sound, 0);
-        }
-        else if (pTrack->flags == 0)
+        if (sSoundDataEntries[sound].pHeader == pTrack->pHeader)
+            unk_2c10(pTrack);
+        else
             QueueSound(sound, 0);
     }
+    else if (pTrack->flags == 0)
+        QueueSound(sound, 0);
 }
 
 /**
@@ -350,27 +346,22 @@ void unk_2c10(struct TrackData* pTrack)
     s32 i;
     struct TrackVariables* pVariables;
 
-    if (!pTrack->occupied)
+    if (pTrack->occupied)
+        return;
+
+    pTrack->occupied = TRUE;
+
+    if (pTrack->flags & 1)
     {
-        pTrack->occupied = TRUE;
+        pTrack->flags = 2;
 
-        if (pTrack->flags & 1)
+        for (i = 0, pVariables = pTrack->pVariables; i < pTrack->amountOfTracks; i++, pVariables++)
         {
-            pTrack->flags = 2;
-
-            i = 0;
-            pVariables = pTrack->pVariables;
-
-            while (i < pTrack->amountOfTracks)
-            {
-                pVariables->unk_5 = 0x40;
-                i++;
-                pVariables++;
-            }
+            pVariables->volumeX_maybe = 0x40;
         }
-
-        pTrack->occupied = FALSE;
     }
+
+    pTrack->occupied = FALSE;
 }
 
 /**
@@ -407,27 +398,31 @@ void ApplyMusicSoundFading(struct TrackData* pTrack, u16 timer)
     s32 volume;
 
     if (timer == 0)
-        StopMusicOrSound(pTrack);
-    else if (!pTrack->occupied)
     {
-        pTrack->occupied = TRUE;
-
-        if (pTrack->flags & 2)
-        {
-            if (pTrack->flags & 0xF8)
-                ResetTrack(pTrack);
-            else
-            {
-                pTrack->flags |= 8;
-
-                volume = USHORT_MAX;
-                pTrack->maybe_volume = volume;
-                pTrack->fadingTimer = volume / timer;
-            }
-        }
-        
-        pTrack->occupied = FALSE;
+        StopMusicOrSound(pTrack);
+        return;
     }
+
+    if (pTrack->occupied)
+        return;
+
+    pTrack->occupied = TRUE;
+
+    if (pTrack->flags & 2)
+    {
+        if (pTrack->flags & 0xF8)
+            ResetTrack(pTrack);
+        else
+        {
+            pTrack->flags |= 8;
+
+            volume = USHORT_MAX;
+            pTrack->maybe_volume = volume;
+            pTrack->fadingTimer = volume / timer;
+        }
+    }
+    
+    pTrack->occupied = FALSE;
 }
 
 /**
@@ -440,24 +435,24 @@ void ApplyRawMusicSoundFading(struct TrackData* pTrack, u16 timer)
 {
     s32 volume;
 
-    if (!pTrack->occupied)
+    if (pTrack->occupied)
+        return;
+
+    pTrack->occupied = TRUE;
+
+    if (pTrack->flags & 2)
     {
-        pTrack->occupied = TRUE;
-
-        if (pTrack->flags & 2)
+        if (!(pTrack->flags & 0xF8))
         {
-            if (!(pTrack->flags & 0xF8))
-            {
-                pTrack->flags |= 0x10;
+            pTrack->flags |= 0x10;
 
-                volume = USHORT_MAX;
-                pTrack->maybe_volume = volume;
-                pTrack->fadingTimer = volume / timer;
-            }
+            volume = USHORT_MAX;
+            pTrack->maybe_volume = volume;
+            pTrack->fadingTimer = volume / timer;
         }
-        
-        pTrack->occupied = FALSE;
     }
+    
+    pTrack->occupied = FALSE;
 }
 
 /**
@@ -478,7 +473,7 @@ void unk_2d2c(struct TrackData* pTrack)
         if (pTrack->flags & 0x80)
         {
             pTrack->unk_24 += pTrack->unk_26;
-            if ((u16)(pTrack->unk_24 >> 0xc) != 0)
+            if ((u16)(pTrack->unk_24 >> 12) != 0)
             {
                 pTrack->maxSoundChannels--;
                 pTrack->unk_24 &= 0xFFF;
@@ -487,17 +482,13 @@ void unk_2d2c(struct TrackData* pTrack)
             pTrack->unk_23 = 0;
         }
 
-        i = pTrack->amountOfTracks;
-        while (i > 0)
+        for (i = pTrack->amountOfTracks; i > 0; i--, pVariables++)
         {
             if (pVariables->unk_0 != 0)
             {
-                pVariables->unk_5 = pTrack->maybe_volume / 1024;
-                pVariables->unk_0 |= 4;
+                pVariables->volumeX_maybe = pTrack->maybe_volume / 1024;
+                pVariables->unk_0 |= MPT_FLG_VOLCHG;
             }
-
-            i--;
-            pVariables++;
         }
     }
     else
@@ -541,15 +532,19 @@ void InitFadingMusic(struct TrackData* pTrack, const u8* pHeader, u16 timer)
 {
     InitTrack(pTrack, pHeader);
 
-    if (timer != 0 && !pTrack->occupied)
-    {
-        pTrack->occupied = TRUE;
-        pTrack->flags = 0x20 | 2;
-        pTrack->maybe_volume = 0;
-        pTrack->fadingTimer = USHORT_MAX / timer;
+    if (timer == 0)
+        return;
 
-        pTrack->occupied = FALSE;
-    }
+    if (pTrack->occupied)
+        return;
+
+    pTrack->occupied = TRUE;
+
+    pTrack->flags = 0x20 | 2;
+    pTrack->maybe_volume = 0;
+    pTrack->fadingTimer = USHORT_MAX / timer;
+
+    pTrack->occupied = FALSE;
 }
 
 /**
@@ -560,18 +555,19 @@ void InitFadingMusic(struct TrackData* pTrack, const u8* pHeader, u16 timer)
  */
 void unk_2e34(struct TrackData* pTrack, u16 timer)
 {    
-    if (!pTrack->occupied)
-    {
-        pTrack->occupied = TRUE;
-        if (pTrack->flags & 1)
-        {
-            pTrack->flags = 0x20 | 2;
-            pTrack->maybe_volume = 0;
-            pTrack->fadingTimer = USHORT_MAX / timer;
-        }
+    if (pTrack->occupied)
+        return;
 
-        pTrack->occupied = FALSE;
+    pTrack->occupied = TRUE;
+
+    if (pTrack->flags & 1)
+    {
+        pTrack->flags = 0x20 | 2;
+        pTrack->maybe_volume = 0;
+        pTrack->fadingTimer = USHORT_MAX / timer;
     }
+
+    pTrack->occupied = FALSE;
 }
 
 /**
@@ -592,7 +588,7 @@ void unk_2e6c(struct TrackData* pTrack)
         if (pTrack->flags & 0x40)
         {
             pTrack->unk_24 += pTrack->unk_26;
-            if ((u16)(pTrack->unk_24 >> 0xc) != 0)
+            if ((u16)(pTrack->unk_24 >> 12) != 0)
             {
                 pTrack->maxSoundChannels++;
                 pTrack->unk_24 &= 0xFFF;
@@ -601,26 +597,19 @@ void unk_2e6c(struct TrackData* pTrack)
             pTrack->unk_23 = 0;
         }
 
-        i = pTrack->amountOfTracks;
-        while (i > 0)
+        for (i = pTrack->amountOfTracks; i > 0; i--, pVariables++)
         {
-            pVariables->unk_5 = pTrack->maybe_volume / 1024;
-            pVariables->unk_0 |= 4;
-
-            i--;
-            pVariables++;
+            pVariables->volumeX_maybe = pTrack->maybe_volume / 1024;
+            pVariables->unk_0 |= MPT_FLG_VOLCHG;
         }
     }
     else
     {
-        i = pTrack->amountOfTracks;
-        while (i > 0)
-        {
-            pVariables->unk_5 = 0x40;
-            pVariables->unk_0 |= 4;
 
-            i--;
-            pVariables++;
+        for (i = pTrack->amountOfTracks; i > 0; i--, pVariables++)
+        {
+            pVariables->volumeX_maybe = 0x40;
+            pVariables->unk_0 |= MPT_FLG_VOLCHG;
         }
 
         pTrack->flags = 0x2;
@@ -669,7 +658,7 @@ void unk_2f00(u16 musicTrack1, u16 musicTrack2, u16 timer)
                     if (pTrack1->flags & 2)
                     {
                         // Priority
-                        if (pTrack1->unk_3 > pHeader[2])
+                        if (pTrack1->trackHeaderPriority > pHeader[2])
                         {
                             //pTrack1->occupied = FALSE;
                             //pTrack2->occupied = FALSE;
@@ -715,198 +704,178 @@ void unk_2f00(u16 musicTrack1, u16 musicTrack2, u16 timer)
 }
 
 /**
- * @brief 3028 | 30 | To document
+ * @brief 3028 | 30 | Sets the tempo for the track
  * 
  * @param pTrack Track data pointer
- * @param param_2 Unknown
+ * @param tempo Tempo
  */
-void unk_3028(struct TrackData* pTrack, u16 param_2)
+void TrackSetTempo(struct TrackData* pTrack, u16 tempo)
 {
     u16 unk;
 
-    if (!pTrack->occupied)
-    {
-        pTrack->occupied = TRUE;
+    if (pTrack->occupied)
+        return;
 
-        unk = param_2 / 256 * pTrack->unk_A;
-        pTrack->unk_C = unk * 256 / 150;
+    pTrack->occupied = TRUE;
 
-        pTrack->occupied = FALSE;
-    }
+    unk = tempo / 256 * pTrack->tempoRawBpm_maybe;
+    pTrack->tempoInterval_maybe = unk * 256 / 150;
+
+    pTrack->occupied = FALSE;
 }
 
 /**
- * @brief 3058 | 5c | To document
+ * @brief 3058 | 5c | Sets the volume for the specified tracks
  * 
  * @param pTrack Track data pointer
- * @param variablesMask Track data variables mask
- * @param param_3 Unknown
+ * @param tracksMask Bit mask corresponding to what tracks to affect
+ * @param volume Volume
  */
-void unk_3058(struct TrackData* pTrack, u16 variablesMask, u16 param_3)
+void TrackSetVolume(struct TrackData* pTrack, u16 tracksMask, u16 volume)
 {
     struct TrackVariables* pVariables;
     s32 i;
 
-    if (!pTrack->occupied)
+    if (pTrack->occupied)
+        return;
+
+    pTrack->occupied = TRUE;
+
+    if (!(pTrack->flags & (0x80|0x40|0x20|0x10|0x8)))
     {
-        pTrack->occupied = TRUE;
+        pVariables = pTrack->pVariables;
+        volume = (volume & (0xFF * 4)) / 4;
 
-        if (!(pTrack->flags & (0x80|0x40|0x20|0x10|0x8)))
+        for (i = pTrack->amountOfTracks - 1; i >= 0; i--, pVariables++)
         {
-            pVariables = pTrack->pVariables;
-            param_3 = (param_3 & 0x3FC) / 4;
-            i = pTrack->amountOfTracks - 1;
-
-            while (i >= 0)
+            if ((tracksMask >> i) & 1)
             {
-                if ((variablesMask >> i) & 1)
-                {
-                    pVariables->unk_5 = param_3;
-                    pVariables->unk_0 |= 4;
-                }
-
-                i--;
-                pVariables++;
+                pVariables->volumeX_maybe = volume;
+                pVariables->unk_0 |= MPT_FLG_VOLCHG;
             }
         }
-
-        pTrack->occupied = FALSE;
     }
+
+    pTrack->occupied = FALSE;
 }
 
 /**
- * @brief 30b4 | 5c | To document
+ * @brief 30b4 | 5c | Sets the pitch and key shift for the specified tracks
  * 
  * @param pTrack Track data pointer
- * @param variablesMask Track data variables mask
- * @param param_3 Unknown
+ * @param tracksMask Bit mask corresponding to what tracks to affect
+ * @param pitch Pitch
  */
-void unk_30b4(struct TrackData* pTrack, u16 variablesMask, u16 param_3)
+void TrackSetPitch(struct TrackData* pTrack, u16 tracksMask, s16 pitch)
 {
     struct TrackVariables* pVariables;
     s32 i;
 
-    if (!pTrack->occupied)
+    if (pTrack->occupied)
+        return;
+
+    pTrack->occupied = TRUE;
+
+    pVariables = pTrack->pVariables;
+
+    for (i = pTrack->amountOfTracks; i > 0; i--, pVariables++)
     {
-        pTrack->occupied = TRUE;
-
-        pVariables = pTrack->pVariables;
-        i = pTrack->amountOfTracks;
-
-        while (i > 0)
+        if ((tracksMask >> i) & 1)
         {
-            if ((variablesMask >> i) & 1)
-            {
-                pVariables->unk_1D = (s16)param_3 >> 8;
-                pVariables->unk_1F = param_3;
-                pVariables->unk_0 |= 8;
-            }
-
-            i--;
-            pVariables++;
+            pVariables->keyShiftX_maybe = pitch >> 8;
+            pVariables->pitchX_maybe = pitch;
+            pVariables->unk_0 |= MPT_FLG_PITCHG;
         }
-
-        pTrack->occupied = FALSE;
     }
+
+    pTrack->occupied = FALSE;
 }
 
 /**
- * @brief 3110 | 4c | To document
+ * @brief 3110 | 4c | Sets the pan for the specified tracks
  * 
  * @param pTrack Track data pointer
- * @param variablesMask Track data variables mask
- * @param param_3 Unknown
+ * @param tracksMask Bit mask corresponding to what tracks to affect
+ * @param pan Pan
  */
-void unk_3110(struct TrackData* pTrack, u16 variablesMask, u8 param_3)
+void TrackSetPan(struct TrackData* pTrack, u16 tracksMask, s8 pan)
 {
     struct TrackVariables* pVariables;
     s32 i;
 
-    if (!pTrack->occupied)
+    if (pTrack->occupied)
+        return;
+
+    pTrack->occupied = TRUE;
+
+    pVariables = pTrack->pVariables;
+
+    for (i = pTrack->amountOfTracks; i > 0; i--, pVariables++)
     {
-        pTrack->occupied = TRUE;
-
-        pVariables = pTrack->pVariables;
-        i = pTrack->amountOfTracks;
-
-        while (i > 0)
+        if ((tracksMask >> i) & 1)
         {
-            if ((variablesMask >> i) & 1)
-            {
-                pVariables->unk_7 = (s8)param_3 >> 1;
-                pVariables->unk_0 |= 4;
-            }
-
-            i--;
-            pVariables++;
+            pVariables->panX_maybe = pan >> 1;
+            pVariables->unk_0 |= MPT_FLG_VOLCHG;
         }
-
-        pTrack->occupied = FALSE;
     }
+
+    pTrack->occupied = FALSE;
 }
 
 /**
- * @brief 315c | 44 | To document
+ * @brief 315c | 44 | Sets the modulation depth for the specified tracks
  * 
  * @param pTrack Track data pointer
- * @param variablesMask Track data variables mask
- * @param param_3 Unknown
+ * @param tracksMask Bit mask corresponding to what tracks to affect
+ * @param modulationDepth Modulation depth
  */
-void unk_315c(struct TrackData* pTrack, u16 variablesMask, u8 param_3)
+void TrackSetModulationDepth(struct TrackData* pTrack, u16 tracksMask, u8 modulationDepth)
 {
     struct TrackVariables* pVariables;
     s32 i;
 
-    if (!pTrack->occupied)
+    if (pTrack->occupied)
+        return;
+
+    pTrack->occupied = TRUE;
+
+    pVariables = pTrack->pVariables;
+    modulationDepth &= 0x7F;
+
+    for (i = pTrack->amountOfTracks; i > 0; i--, pVariables++)
     {
-        pTrack->occupied = TRUE;
-
-        pVariables = pTrack->pVariables;
-        param_3 &= 0x7F;
-        i = pTrack->amountOfTracks;
-
-        while (i > 0)
-        {
-            if ((variablesMask >> i) & 1)
-                pVariables->modulationDepth = param_3;
-
-            i--;
-            pVariables++;
-        }
-
-        pTrack->occupied = FALSE;
+        if ((tracksMask >> i) & 1)
+            pVariables->modulationDepth = modulationDepth;
     }
+
+    pTrack->occupied = FALSE;
 }
 
 /**
- * @brief 31a0 | 44 | To document
+ * @brief 31a0 | 44 | Sets the LFO speed for the specified tracks
  * 
  * @param pTrack Track data pointer
- * @param variablesMask Track data variables mask
- * @param param_3 Unknown
+ * @param tracksMask Bit mask corresponding to what tracks to affect
+ * @param lfoSpeed LFO Speed
  */
-void unk_31a0(struct TrackData* pTrack, u16 variablesMask, u8 param_3)
+void TrackSetLfoSpeed(struct TrackData* pTrack, u16 tracksMask, u8 lfoSpeed)
 {
     struct TrackVariables* pVariables;
     s32 i;
 
-    if (!pTrack->occupied)
+    if (pTrack->occupied)
+        return;
+
+    pTrack->occupied = TRUE;
+
+    pVariables = pTrack->pVariables;
+    lfoSpeed &= 0x7F;
+
+    for (i = pTrack->amountOfTracks; i > 0; i--, pVariables++)
     {
-        pTrack->occupied = TRUE;
-
-        pVariables = pTrack->pVariables;
-        param_3 &= 0x7F;
-        i = pTrack->amountOfTracks;
-
-        while (i > 0)
-        {
-            if ((variablesMask >> i) & 1)
-                pVariables->lfoSpeed = param_3;
-
-            i--;
-            pVariables++;
-        }
-
-        pTrack->occupied = FALSE;
+        if ((tracksMask >> i) & 1)
+            pVariables->lfoSpeed = lfoSpeed;
     }
+
+    pTrack->occupied = FALSE;
 }
