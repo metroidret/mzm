@@ -87,7 +87,7 @@ track_63_0:
 	.byte VOL, 37
 	.byte LFOS, 90
 	.byte W06
-	.byte 88 @ VOL
+	.byte 88 @ LFOS
 	.byte VOL, 35
 	.byte W03
 	.byte LFOS, 86
@@ -96,14 +96,14 @@ track_63_0:
 	.byte W03
 	.byte LFOS, 84
 	.byte W06
-	.byte 82 @ VOL
+	.byte 82 @ LFOS
 	.byte VOL, 32
 	.byte W06
 	.byte 31 @ VOL
 	.byte W03
 	.byte LFOS, 78
 	.byte W06
-	.byte 76 @ VOL
+	.byte 76 @ LFOS
 	.byte VOL, 30
 	.byte W06
 	.byte LFOS, 74
@@ -111,7 +111,7 @@ track_63_0:
 	.byte W03
 	.byte LFOS, 72
 	.byte W06
-	.byte 70 @ VOL
+	.byte 70 @ LFOS
 	.byte VOL, 27
 	.byte W06
 	.byte LFOS, 68
@@ -127,22 +127,22 @@ track_63_0:
 	.byte W03
 	.byte LFOS, 60
 	.byte W03
-	.byte 58 @ VOL
+	.byte 58 @ LFOS
 	.byte VOL, 22
 	.byte W06
 	.byte LFOS, 56
 	.byte W03
-	.byte 50 @ VOL
+	.byte 50 @ LFOS
 	.byte VOL, 21
 	.byte W03
 	.byte LFOS, 48
 	.byte W03
-	.byte 46 @ VOL
+	.byte 46 @ LFOS
 	.byte VOL, 20
 	.byte W03
 	.byte LFOS, 44
 	.byte W06
-	.byte 41 @ VOL
+	.byte 41 @ LFOS
 	.byte VOL, 18
 	.byte W03
 	.byte LFOS, 39
@@ -151,14 +151,14 @@ track_63_0:
 	.byte W03
 	.byte LFOS, 35
 	.byte W03
-	.byte 33 @ VOL
+	.byte 33 @ LFOS
 	.byte W03
-	.byte 31 @ VOL
+	.byte 31 @ LFOS
 	.byte VOL, 16
 	.byte W03
 	.byte LFOS, 29
 	.byte W03
-	.byte 27 @ VOL
+	.byte 27 @ LFOS
 	.byte VOL, 15
 	.byte W03
 	.byte LFOS, 25
@@ -229,7 +229,7 @@ track_63_lbl_222b31:
 	.byte VOL, 37
 	.byte LFOS, 90
 	.byte W06
-	.byte 88 @ VOL
+	.byte 88 @ LFOS
 	.byte VOL, 35
 	.byte W03
 	.byte PEND
@@ -240,14 +240,14 @@ track_63_lbl_222b82:
 	.byte W03
 	.byte LFOS, 84
 	.byte W06
-	.byte 82 @ VOL
+	.byte 82 @ LFOS
 	.byte VOL, 32
 	.byte W06
 	.byte 31 @ VOL
 	.byte W03
 	.byte LFOS, 78
 	.byte W06
-	.byte 76 @ VOL
+	.byte 76 @ LFOS
 	.byte VOL, 30
 	.byte W06
 	.byte LFOS, 74
@@ -255,7 +255,7 @@ track_63_lbl_222b82:
 	.byte W03
 	.byte LFOS, 72
 	.byte W06
-	.byte 70 @ VOL
+	.byte 70 @ LFOS
 	.byte VOL, 27
 	.byte W06
 	.byte LFOS, 68
@@ -271,22 +271,22 @@ track_63_lbl_222b82:
 	.byte W03
 	.byte LFOS, 60
 	.byte W03
-	.byte 58 @ VOL
+	.byte 58 @ LFOS
 	.byte VOL, 22
 	.byte W06
 	.byte LFOS, 56
 	.byte W03
-	.byte 50 @ VOL
+	.byte 50 @ LFOS
 	.byte VOL, 21
 	.byte W03
 	.byte LFOS, 48
 	.byte W03
-	.byte 46 @ VOL
+	.byte 46 @ LFOS
 	.byte VOL, 20
 	.byte W03
 	.byte LFOS, 44
 	.byte W06
-	.byte 41 @ VOL
+	.byte 41 @ LFOS
 	.byte VOL, 18
 	.byte W03
 	.byte LFOS, 39
@@ -295,14 +295,14 @@ track_63_lbl_222b82:
 	.byte W03
 	.byte LFOS, 35
 	.byte W03
-	.byte 33 @ VOL
+	.byte 33 @ LFOS
 	.byte W03
-	.byte 31 @ VOL
+	.byte 31 @ LFOS
 	.byte VOL, 16
 	.byte W03
 	.byte LFOS, 29
 	.byte W03
-	.byte 27 @ VOL
+	.byte 27 @ LFOS
 	.byte VOL, 15
 	.byte W03
 	.byte PEND

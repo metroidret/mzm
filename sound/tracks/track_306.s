@@ -21,9 +21,9 @@ track_306_0:
 	.byte W04
 	.byte LFOS, 80
 	.byte W05
-	.byte En6 @ N21, v060
+	.byte 100 @ LFOS
 	.byte W05
-	.byte Cn8 @ N21, v060
+	.byte 120 @ LFOS
 	.byte W36
 	.byte W01
 	.byte FINE

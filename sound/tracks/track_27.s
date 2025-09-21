@@ -3214,13 +3214,13 @@ track_27_7:
 	.byte W48
 	.byte VOICE, 92
 	.byte W48
-	.byte Gs5 @ N48, v127
+	.byte 92 @ VOICE
 	.byte W96
-	.byte Gs5 @ N48, v127
+	.byte 92 @ VOICE
 	.byte W48
-	.byte Gs5 @ N48, v127
+	.byte 92 @ VOICE
 	.byte W48
-	.byte Gs5 @ N48, v127
+	.byte 92 @ VOICE
 	.byte W96
 track_27_lbl_231c47:
 	.byte VOICE, 25
@@ -3229,13 +3229,13 @@ track_27_lbl_231c47:
 	.byte VOICE, 92
 	.byte W48
 	.byte PEND
-	.byte Gs5 @ N48, v127
+	.byte 92 @ VOICE
 	.byte W96
-	.byte Gs5 @ N48, v127
+	.byte 92 @ VOICE
 	.byte W48
-	.byte Gs5 @ N48, v127
+	.byte 92 @ VOICE
 	.byte W48
-	.byte Gs5 @ N48, v127
+	.byte 92 @ VOICE
 	.byte W96
 	.byte PATT
 		.word track_27_lbl_231c47

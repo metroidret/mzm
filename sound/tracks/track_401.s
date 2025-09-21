@@ -15,9 +15,9 @@ track_401_0:
 	.byte W48
 	.byte LFOS, 60
 	.byte W48
-	.byte En1 @ TIE, v100
+	.byte 40 @ LFOS
 	.byte W36
-	.byte GsM1 @ TIE, v100
+	.byte 20 @ LFOS
 	.byte W36
 	.byte W02
 	.byte VOL, 66
@@ -50,7 +50,7 @@ track_401_0:
 	.byte W01
 	.byte 0 @ VOL
 	.byte W01
-	.byte EOT @ GsM1, v100
+	.byte EOT @ Cn3, v100
 	.byte FINE
 
 track_401_1:

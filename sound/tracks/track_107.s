@@ -23,8 +23,8 @@ track_107_1:
 	.byte W04
 	.byte LFOS, 0
 	.byte W01
-	.byte Dn7 @ N02, v080
-	.byte N02 @ Dn7, v080
+	.byte 110 @ LFOS
+	.byte N02 @ As4, v080
 	.byte W03
 	.byte FINE
 
