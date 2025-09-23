@@ -32,11 +32,11 @@ void InitFadingMusic(struct TrackData* pTrack, const u8* pHeader, u16 timer);
 void unk_2e34(struct TrackData* pTrack, u16 timer);
 void unk_2e6c(struct TrackData* pTrack);
 void unk_2f00(u16 musicTrack1, u16 musicTrack2, u16 timer);
-void unk_3028(struct TrackData* pTrack, u16 param_2);
-void unk_3058(struct TrackData* pTrack, u16 variablesMask, u16 param_3);
-void unk_30b4(struct TrackData* pTrack, u16 variablesMask, u16 param_3);
-void unk_3110(struct TrackData* pTrack, u16 variablesMask, u8 param_3);
-void unk_315c(struct TrackData* pTrack, u16 variablesMask, u8 param_3);
-void unk_31a0(struct TrackData* pTrack, u16 variablesMask, u8 param_3);
+void TrackSetTempo(struct TrackData* pTrack, u16 tempo);
+void TrackSetVolume(struct TrackData* pTrack, u16 variablesMask, u16 volume);
+void TrackSetPitch(struct TrackData* pTrack, u16 tracksMask, s16 pitch);
+void TrackSetPan(struct TrackData* pTrack, u16 tracksMask, s8 pan);
+void TrackSetModulationDepth(struct TrackData* pTrack, u16 tracksMask, u8 modulationDepth);
+void TrackSetLfoSpeed(struct TrackData* pTrack, u16 tracksMask, u8 lfoSpeed);
 
 #endif /* AUDIO_WRAPPERS_H */
