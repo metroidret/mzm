@@ -281,7 +281,7 @@ If Samus is up against a wall on the right and an enemy is frozen up against Sam
 
 Ridley constantly updates sub sprite data at the end of its main function. However, it's possible for the sub sprite data to be uninitialized at this point if Ridley is killed during initialization (Samus doesn't have gravity suit, or Ridley has already been killed). As such, sub sprite data is updated using invalid data (either an old pointer or a null pointer).
 
-**Fix:** Edit `Ridley` in [ridley.c](../src/sprites_AI/samus.c) to check if Ridley is still alive.
+**Fix:** Edit `Ridley` in [ridley.c](../src/sprites_AI/ridley.c) to check if Ridley is still alive.
 
 ```diff
 + if (gCurrentSprite.status & SPRITE_STATUS_EXISTS)
