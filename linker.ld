@@ -783,7 +783,7 @@ SECTIONS {
         sTransferRom_After = .;
     } >rom
 
-    .data : ALIGN(2) {
+    .data (READONLY) : ALIGN(2) {
         src/samus.o(.data);
         src/sprite.o(.data);
 
