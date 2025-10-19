@@ -31,8 +31,8 @@ def extract_data(region: str, debug: bool, quiet: bool = False) -> None:
             count = entry["count"]
             if isinstance(count, dict):
                 count = count[region]
-            size: int = count * entry["size"]
-            rom.seek(entry["addr"][region])
+            size: int = int(count, 16) * entry["size"]
+            rom.seek(int(addr, 16))
             with open(path_obj, "wb") as f:
                 f.write(rom.read(size))
 
