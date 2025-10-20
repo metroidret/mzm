@@ -15,19 +15,22 @@
  */
 void DMA2IntrCode(void)
 {
-    gMusicInfo.unk_10++;
-    if (gMusicInfo.unk_10 == gMusicInfo.unk_E)
+    gMusicInfo.dmaCounter_maybe++;
+    if (gMusicInfo.dmaCounter_maybe == gMusicInfo.maxDmaCount_maybe)
     {
         // Flush DMA 1 and 2
-        WRITE_32(REG_DMA1_CNT, C_32_2_16(DMA_DEST_FIXED | DMA_32BIT | DMA_ENABLE, sizeof(u32)));
-        WRITE_32(REG_DMA2_CNT, C_32_2_16(DMA_DEST_FIXED | DMA_32BIT | DMA_ENABLE, sizeof(u32)));
-        WRITE_16(REG_DMA1_CNT + 2, DMA_SRC_FIXED | DMA_32BIT);
-        WRITE_16(REG_DMA2_CNT + 2, DMA_SRC_FIXED | DMA_32BIT);
+        WRITE_32(REG_DMA1_CNT, C_32_2_16(DMA_ENABLE | DMA_32BIT | DMA_DEST_FIXED, sizeof(u32)));
+        WRITE_32(REG_DMA2_CNT, C_32_2_16(DMA_ENABLE | DMA_32BIT | DMA_DEST_FIXED, sizeof(u32)));
 
-        WRITE_16(REG_DMA1_CNT + 2, DMA_REPEAT | DMA_32BIT | DMA_START_VBLANK | DMA_START_HBLANK | DMA_ENABLE);
-        WRITE_16(REG_DMA2_CNT + 2, DMA_REPEAT | DMA_32BIT | DMA_START_VBLANK | DMA_START_HBLANK | DMA_INTR_ENABLE | DMA_ENABLE);
+        // Turn off DMA 1 and 2
+        WRITE_16(REG_DMA1_CNT + 2, DMA_32BIT | DMA_SRC_FIXED);
+        WRITE_16(REG_DMA2_CNT + 2, DMA_32BIT | DMA_SRC_FIXED);
 
-        gMusicInfo.unk_10 = 0;
+        // Enable DMA 1 and 2 Sound FIFO mode
+        WRITE_16(REG_DMA1_CNT + 2, DMA_ENABLE | DMA_START_SPECIAL | DMA_32BIT | DMA_REPEAT);
+        WRITE_16(REG_DMA2_CNT + 2, DMA_ENABLE | DMA_INTR_ENABLE | DMA_START_SPECIAL | DMA_32BIT | DMA_REPEAT);
+
+        gMusicInfo.dmaCounter_maybe = 0;
     }
 }
 
@@ -53,10 +56,12 @@ void RestartSound(void)
     WRITE_16(REG_SOUND4CNT_H, SOUNDCNT_RESTART_SOUND);
 
     // Flush DMA 1 and 2
-    WRITE_32(REG_DMA1_CNT, C_32_2_16(DMA_DEST_FIXED | DMA_32BIT | DMA_ENABLE, sizeof(u32)));
-    WRITE_32(REG_DMA2_CNT, C_32_2_16(DMA_DEST_FIXED | DMA_32BIT | DMA_ENABLE, sizeof(u32)));
-    WRITE_16(REG_DMA1_CNT + 2, DMA_SRC_FIXED | DMA_32BIT);
-    WRITE_16(REG_DMA2_CNT + 2, DMA_SRC_FIXED | DMA_32BIT);
+    WRITE_32(REG_DMA1_CNT, C_32_2_16(DMA_ENABLE | DMA_32BIT | DMA_DEST_FIXED , sizeof(u32)));
+    WRITE_32(REG_DMA2_CNT, C_32_2_16(DMA_ENABLE | DMA_32BIT | DMA_DEST_FIXED , sizeof(u32)));
+
+    // Turn off DMA 1 and 2
+    WRITE_16(REG_DMA1_CNT + 2, DMA_32BIT | DMA_SRC_FIXED);
+    WRITE_16(REG_DMA2_CNT + 2, DMA_32BIT | DMA_SRC_FIXED);
 
     CPU_FILL_32(0, gMusicInfo.soundRawData, sizeof(gMusicInfo.soundRawData));
     WRITE_8(REG_SOUNDCNT_X, 0); // Disable and reset sound (PSG and FIFO) registers
@@ -76,10 +81,12 @@ void ClearSoundData(void)
     gMusicInfo.occupied = TRUE;
 
     // Flush DMA 1 and 2
-    WRITE_32(REG_DMA1_CNT, C_32_2_16(DMA_DEST_FIXED | DMA_32BIT | DMA_ENABLE, sizeof(u32)));
-    WRITE_32(REG_DMA2_CNT, C_32_2_16(DMA_DEST_FIXED | DMA_32BIT | DMA_ENABLE, sizeof(u32)));
-    WRITE_16(REG_DMA1_CNT + 2, DMA_SRC_FIXED | DMA_32BIT);
-    WRITE_16(REG_DMA2_CNT + 2, DMA_SRC_FIXED | DMA_32BIT);
+    WRITE_32(REG_DMA1_CNT, C_32_2_16(DMA_ENABLE | DMA_32BIT | DMA_DEST_FIXED, sizeof(u32)));
+    WRITE_32(REG_DMA2_CNT, C_32_2_16(DMA_ENABLE | DMA_32BIT | DMA_DEST_FIXED, sizeof(u32)));
+
+    // Turn off DMA 1 and 2
+    WRITE_16(REG_DMA1_CNT + 2, DMA_32BIT | DMA_SRC_FIXED);
+    WRITE_16(REG_DMA2_CNT + 2, DMA_32BIT | DMA_SRC_FIXED);
 
     CPU_FILL_32(0, gMusicInfo.soundRawData, sizeof(gMusicInfo.soundRawData));
 
@@ -111,9 +118,8 @@ void unk_34ac(u8 isInterrupting)
     // gNumMusicPlayers = 9
     for (track = startTrack; track < (u16)gNumMusicPlayers; track++)
     {
-        // If the 1st iteration when isInterrupting is false
-        // Or the 1st, 3rd, 6th, or 8th iteration when isInterrupting is true
-        // Or the 2nd, 5th, or 7th iteration when isInterrupting is false
+        // If track 2 when isInterrupting is false
+        // Or tracks 1, 3, 6, or 8
         if ((track == 2 && isInterrupting == FALSE) || (0x14A >> track) & 1)
         {
             pTrack = sMusicTrackDataRom[track].pTrack;
@@ -144,11 +150,11 @@ void unk_34ac(u8 isInterrupting)
                             gSoundChannelBackup[currChannel].channel = *pChannel;
                             currChannel++;
 
-                            pChannel->unk_0 = 0;
+                            pChannel->envelopeStage_maybe = 0;
                             pChannel->pVariables = NULL;
-                            pChannelNext = pChannel->pChannel2;
-                            pChannel->pChannel2 = NULL;
-                            pChannel->pChannel1 = NULL;
+                            pChannelNext = pChannel->pChannelNext_maybe;
+                            pChannel->pChannelNext_maybe = NULL;
+                            pChannel->pChannelPrev_maybe = NULL;
                         }
                     }
                 }
@@ -168,7 +174,7 @@ void unk_35d0(u8 param_1)
 {
     u8 i;
     u8 start;
-    u8 j;
+    u8 trackId;
     u8 currChannel;
     struct TrackData* pTrack;
     struct TrackVariables* pVariables;
@@ -185,33 +191,33 @@ void unk_35d0(u8 param_1)
         if ((i == 2 && param_1 == FALSE) || (0x14A >> i) & 1)
         {
             pTrack = sMusicTrackDataRom[i].pTrack;
-            if (pTrack->occupied)
-                continue;
-
-            pTrack->occupied = TRUE;
-
-            if (pTrack->unk_1E & TRUE)
+            if (!pTrack->occupied)
             {
-                pTrack->unk_1E &= ~TRUE;
+                pTrack->occupied = TRUE;
 
-                for (j = 0, pVariables = pTrack->pVariables; j < pTrack->amountOfTracks; j++, pVariables++)
+                if (pTrack->unk_1E & TRUE)
                 {
-                    if (!(pVariables->channel & 0xC0))
+                    pTrack->unk_1E &= ~TRUE;
+
+                    for (trackId = 0, pVariables = pTrack->pVariables; trackId < pTrack->amountOfTracks; trackId++, pVariables++)
                     {
-                        if (pVariables->pChannel == NULL)
-                            continue;
-                        
-                        for (pChannel = pVariables->pChannel; pChannel != NULL; pChannel = pChannel->pChannel2)
+                        if (!(pVariables->channel & 0xC0))
                         {
-                            unk_20a4(pChannel);
-                            *pChannel = gSoundChannelBackup[currChannel].channel;
-                            currChannel++;
+                            if (pVariables->pChannel != NULL)
+                            {
+                                for (pChannel = pVariables->pChannel; pChannel != NULL; pChannel = pChannel->pChannelNext_maybe)
+                                {
+                                    FreeSoundChannel(pChannel);
+                                    *pChannel = gSoundChannelBackup[currChannel].channel;
+                                    currChannel++;
+                                }
+                            }
                         }
                     }
                 }
-            }
 
-            pTrack->occupied = FALSE;
+                pTrack->occupied = FALSE;
+            }
         }
     }
 }
@@ -278,7 +284,6 @@ void CheckSetNewMusicTrack(Sound musicTrack)
  */
 void unk_378c(Sound musicTrack)
 {
-    u16 newTrack;
     struct TrackData* pTrack;
     s32 var_0;
 
@@ -298,11 +303,9 @@ void unk_378c(Sound musicTrack)
 
     if (gMusicInfo.priority & 0x30)
     {
-        newTrack = gMusicInfo.musicTrack - 0x5A;
-        if (newTrack < 10)
+        if (gMusicInfo.musicTrack >= MUSIC_CHOZODIA_SURFACE && gMusicInfo.musicTrack < SOUND_FOOTSTEPS_1)
         {
-            newTrack = musicTrack - 0x5A;
-            if (newTrack >= 10)
+            if (musicTrack < MUSIC_CHOZODIA_SURFACE || musicTrack >= SOUND_FOOTSTEPS_1)
             {
                 if (gMusicInfo.priority & 0x10)
                     musicTrack = MUSIC_STEALTH;
@@ -313,8 +316,7 @@ void unk_378c(Sound musicTrack)
         }
         else
         {
-            newTrack = musicTrack - 0x5A;
-            if (newTrack >= 10)
+            if (musicTrack < MUSIC_CHOZODIA_SURFACE || musicTrack >= SOUND_FOOTSTEPS_1)
             {
                 // The following line is needed to produce matching ASM:
                 gSoundQueue[8].exists += 0;
@@ -328,8 +330,7 @@ void unk_378c(Sound musicTrack)
     }
     else if (gMusicInfo.priority & 0x40)
     {
-        newTrack = musicTrack - 0x5A;
-        if (newTrack < 10)
+        if (musicTrack >= MUSIC_CHOZODIA_SURFACE && musicTrack < SOUND_FOOTSTEPS_1)
         {
             gMusicInfo.musicTrackOnTransition = musicTrack;
         }
@@ -399,8 +400,6 @@ void unk_38d8(void)
  */
 void UpdateMusicAfterAlarmDisable(void)
 {
-    Sound musicTrack;
-
     gMusicInfo.priority = 0x20;
     
     if (gMusicInfo.musicTrackOnTransition == MUSIC_NONE)
@@ -409,8 +408,7 @@ void UpdateMusicAfterAlarmDisable(void)
         return;
     }
 
-    musicTrack = gMusicInfo.musicTrackOnTransition - 0x5A;
-    if (musicTrack < 10)
+    if (gMusicInfo.musicTrackOnTransition >= MUSIC_CHOZODIA_SURFACE && gMusicInfo.musicTrackOnTransition < SOUND_FOOTSTEPS_1)
         ApplyMusicSoundFading(sMusicTrackDataRom[0].pTrack, 5);
     else
         FadeCurrentMusicAndQueueNextMusic(5, MUSIC_CHOZODIA_DETECTED, 0x20);
@@ -740,10 +738,10 @@ void ReplayQueuedMusic(u8 queueFlags)
         unk_35d0(TRUE);
 
     pTrack = sMusicTrackDataRom[0].pTrack;
-
     gMusicInfo.unk_20 = 0;
-    if ((u16)(gMusicInfo.musicTrack - 0x5A) < 0xA)
-        music = (u16)DetermineNewMusicTrack(gMusicInfo.musicTrack);
+
+    if (gMusicInfo.musicTrack >= MUSIC_CHOZODIA_SURFACE && gMusicInfo.musicTrack < SOUND_FOOTSTEPS_1)
+        music = DetermineNewMusicTrack(gMusicInfo.musicTrack);
     else
         music = gMusicInfo.musicTrack;
 
@@ -756,9 +754,9 @@ void ReplayQueuedMusic(u8 queueFlags)
 
     if (gMusicInfo.volumeDownFlag & (1 << 7))
     {
-        unk_3058(sMusicTrackDataRom[0].pTrack, USHORT_MAX, (u16)gUnk_Audio0x50);
-        unk_3058(sMusicTrackDataRom[1].pTrack, USHORT_MAX, (u16)gUnk_Audio0x50);
-        unk_3058(sMusicTrackDataRom[7].pTrack, USHORT_MAX, (u16)gUnk_Audio0x50);
+        TrackSetVolume(sMusicTrackDataRom[0].pTrack, USHORT_MAX, (u16)gUnk_Audio0x50);
+        TrackSetVolume(sMusicTrackDataRom[1].pTrack, USHORT_MAX, (u16)gUnk_Audio0x50);
+        TrackSetVolume(sMusicTrackDataRom[7].pTrack, USHORT_MAX, (u16)gUnk_Audio0x50);
     }
 
     gMusicInfo.occupied = FALSE;
@@ -814,8 +812,7 @@ void PlayCurrentMusicTrack(void)
 {
     struct TrackData* pTrack;
     const u8* pHeader;
-    Sound musicTrack;
-    u16 currTrack;
+    Sound currTrack;
 
     if (gMusicInfo.occupied)
         return;
@@ -826,8 +823,7 @@ void PlayCurrentMusicTrack(void)
     gMusicInfo.unk_20 = 0;
 
     currTrack = gMusicInfo.musicTrack;
-    musicTrack = currTrack - 0x5A;
-    if (musicTrack < 10)
+    if (currTrack >= MUSIC_CHOZODIA_SURFACE && currTrack < SOUND_FOOTSTEPS_1)
         pHeader = sSoundDataEntries[(u16)DetermineNewMusicTrack(currTrack)].pHeader;
     else
         pHeader = sSoundDataEntries[currTrack].pHeader;
@@ -848,8 +844,8 @@ void DecreaseMusicVolume(void)
 
     gMusicInfo.volumeDownFlag |= (1 << 7);
     
-    unk_3058(sMusicTrackDataRom[0].pTrack, USHORT_MAX, (u16)gUnk_Audio0x50);
-    unk_3058(sMusicTrackDataRom[1].pTrack, USHORT_MAX, (u16)gUnk_Audio0x50);
+    TrackSetVolume(sMusicTrackDataRom[0].pTrack, USHORT_MAX, (u16)gUnk_Audio0x50);
+    TrackSetVolume(sMusicTrackDataRom[1].pTrack, USHORT_MAX, (u16)gUnk_Audio0x50);
 }
 
 /**
@@ -858,8 +854,8 @@ void DecreaseMusicVolume(void)
  */
 void ResetMusicVolume(void)
 {
-    unk_3058(sMusicTrackDataRom[0].pTrack, USHORT_MAX, 0x100);
-    unk_3058(sMusicTrackDataRom[1].pTrack, USHORT_MAX, 0x100);
+    TrackSetVolume(sMusicTrackDataRom[0].pTrack, USHORT_MAX, 0x100);
+    TrackSetVolume(sMusicTrackDataRom[1].pTrack, USHORT_MAX, 0x100);
 
     gMusicInfo.volumeDownFlag &= ~(1 << 7);
     unk_35d0(FALSE);
@@ -952,54 +948,47 @@ void Music_Empty_2(void)
 void BackupTrackData2SoundChannels(void)
 {
     u8 trackID;
-    u8 i;
+    u8 currChannel;
     struct TrackData* pTrack;
     struct TrackVariables* pVariables;
     struct SoundChannel* pChannel;
-    struct SoundChannel* pChannel2;
+    struct SoundChannel* pChannelNext_maybe;
 
-    i = 0;
+    currChannel = 0;
     pTrack = sMusicTrackDataRom[2].pTrack;
 
     if (!pTrack->occupied)
     {
         pTrack->occupied = TRUE;
+
         if (!(pTrack->unk_1E & TRUE) && pTrack->flags & 2)
         {
             pTrack->unk_1E = TRUE;
 
-            trackID = 0;
-            pVariables  = pTrack->pVariables;
-
-            while (trackID < pTrack->amountOfTracks)
+            for (trackID = 0, pVariables = pTrack->pVariables; trackID < pTrack->amountOfTracks; trackID++, pVariables++)
             {
                 if (!(pVariables->channel & 0xC0))
                 {
                     if (pVariables->pSoundPSG)
                         ClearRegistersForPsg(pVariables->pSoundPSG, (pVariables->channel & 7) - 1);
 
-                    if (pVariables->pChannel)
+                    if (pVariables->pChannel != NULL)
                     {
-                        pChannel = pVariables->pChannel;
-                        while (pChannel)
+                        for (pChannel = pVariables->pChannel; pChannel != NULL; pChannel = pChannelNext_maybe)
                         {
-                            gSoundChannelTrack2Backup[i].pChannel = pChannel;
-                            gSoundChannelTrack2Backup[i].channel = *pChannel;
+                            gSoundChannelTrack2Backup[currChannel].pChannel = pChannel;
+                            gSoundChannelTrack2Backup[currChannel].channel = *pChannel;
 
-                            i++;
-                            pChannel->unk_0 = 0;
+                            currChannel++;
+                            pChannel->envelopeStage_maybe = 0;
                             pChannel->pVariables = NULL;
 
-                            pChannel2 = pChannel->pChannel2;
-                            pChannel->pChannel2 = NULL;
-                            pChannel->pChannel1 = NULL;
-                            pChannel = pChannel2;
+                            pChannelNext_maybe = pChannel->pChannelNext_maybe;
+                            pChannel->pChannelNext_maybe = NULL;
+                            pChannel->pChannelPrev_maybe = NULL;
                         }
                     }
                 }
-
-                trackID++;
-                pVariables++;
             }
         }
     }
@@ -1013,13 +1002,13 @@ void BackupTrackData2SoundChannels(void)
  */
 void RetrieveTrackData2SoundChannels(void)
 {
-    u8 i;
+    u8 currChannel;
     u8 trackID;
     struct TrackData* pTrack;
     struct TrackVariables* pVariables;
     struct SoundChannel* pChannel;
 
-    i = 0;
+    currChannel = 0;
     pTrack = sMusicTrackDataRom[2].pTrack;
 
     if (!pTrack->occupied)
@@ -1029,30 +1018,21 @@ void RetrieveTrackData2SoundChannels(void)
         if (pTrack->unk_1E & TRUE)
         {
             pTrack->unk_1E &= ~TRUE;
-            trackID = 0;
-            pVariables = pTrack->pVariables;
 
-            while (trackID < pTrack->amountOfTracks)
+            for (trackID = 0, pVariables = pTrack->pVariables; trackID < pTrack->amountOfTracks; trackID++, pVariables++)
             {
                 if (!(pVariables->channel & 0xC0))
                 {
-                    if (pVariables->pChannel)
+                    if (pVariables->pChannel != NULL)
                     {
-                        pChannel = pVariables->pChannel;
-                        while (pChannel)
+                        for (pChannel = pVariables->pChannel; pChannel != NULL; pChannel = pChannel->pChannelNext_maybe)
                         {
-                            unk_20a4(pChannel);
-
-                            *pChannel = gSoundChannelTrack2Backup[i].channel;
-                            i++;
-
-                            pChannel = pChannel->pChannel2;
+                            FreeSoundChannel(pChannel);
+                            *pChannel = gSoundChannelTrack2Backup[currChannel].channel;
+                            currChannel++;
                         }
                     }
                 }
-
-                trackID++;
-                pVariables++;
             }
         }
     }
@@ -1074,16 +1054,11 @@ void DelayMusicStart(struct TrackData* pTrack, u16 delay)
     if (!pTrack->occupied)
     {
         pTrack->occupied = TRUE;
-        
-        trackID = 0;
-        pVariables = pTrack->pVariables;
-        while (trackID < pTrack->amountOfTracks)
+
+        for (trackID = 0, pVariables = pTrack->pVariables; trackID < pTrack->amountOfTracks; trackID++, pVariables++)
         {
             if (pVariables->unk_0 != 0)
                 pVariables->delay += delay;
-
-            trackID++;
-            pVariables++;
         }
     }
 
