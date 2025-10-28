@@ -4,6 +4,7 @@
 #include "types.h"
 #include "macros.h"
 
+#include "structs/cutscene.h"
 #include "structs/menus/boot_debug.h"
 
 #include "constants/menus/boot_debug.h"

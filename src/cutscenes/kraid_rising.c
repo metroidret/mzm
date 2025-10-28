@@ -223,7 +223,7 @@ static u8 KraidRisingRising(void)
     for (i = 0; i < KRAID_RISING_DEBRIS_AMOUNT; i++)
         KraidRisingUpdateDebris(&CUTSCENE_DATA.oam[i], i);
 
-    #if DEBUG
+    #ifdef DEBUG
     CutsceneCheckSkipStage(1);
     #endif // DEBUG
 
