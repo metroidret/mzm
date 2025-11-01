@@ -1,64 +1,64 @@
 [
   {
     "path": "menus/boot_debug/boot_debug_417e38.pal",
-    "count": 128,
+    "count": "0x80",
     "addr": {
-      "us_beta": 4292152,
-      "eu_beta": 4296320
+      "us_beta": "0x417E38",
+      "eu_beta": "0x418E80"
     },
     "size": 2
   },
   {
     "path": "menus/boot_debug/background.pal",
-    "count": 128,
+    "count": "0x80",
     "addr": {
-      "us_beta": 4292408,
-      "eu_beta": 4296576
+      "us_beta": "0x417F38",
+      "eu_beta": "0x418F80"
     },
     "size": 2
   },
   {
     "path": "menus/boot_debug/objects.pal",
-    "count": 48,
+    "count": "0x30",
     "addr": {
-      "us_beta": 4292664,
-      "eu_beta": 4296832
+      "us_beta": "0x418038",
+      "eu_beta": "0x419080"
     },
     "size": 2
   },
   {
     "path": "menus/boot_debug/objects.gfx.lz",
-    "count": 222,
+    "count": "0xDE",
     "addr": {
-      "us_beta": 4292760,
-      "eu_beta": 4296928
+      "us_beta": "0x418098",
+      "eu_beta": "0x4190E0"
     },
     "size": 4
   },
   {
     "path": "menus/boot_debug/background.gfx.lz",
-    "count": 771,
+    "count": "0x303",
     "addr": {
-      "us_beta": 4294200,
-      "eu_beta": 4298368
+      "us_beta": "0x418638",
+      "eu_beta": "0x419680"
     },
     "size": 4
   },
   {
     "path": "menus/pause_screen/pause_debug_event_list_bg.pal",
-    "count": 32,
+    "count": "0x20",
     "addr": {
-      "us_beta": 4273604,
-      "eu_beta": 4277772
+      "us_beta": "0x4135C4",
+      "eu_beta": "0x41460C"
     },
     "size": 2
   },
   {
     "path": "menus/pause_screen/pause_debug_event_list_text.gfx.lz",
-    "count": 336,
+    "count": "0x150",
     "addr": {
-      "us_beta": 4273668,
-      "eu_beta": 4277836
+      "us_beta": "0x413604",
+      "eu_beta": "0x41464C"
     },
     "size": 4
   }
