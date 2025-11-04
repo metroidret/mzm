@@ -30,15 +30,15 @@ static u16 GetNoteDelay(struct TrackVariables* pVariables, u8 param_2, u8 param_
  */
 void UpdateMusic(void)
 {
-    u32 var_0;
-    s16 var_1;
+    u32 maxScanlines;
+    s16 envelope;
     s16 var_2;
     u8 var_3;
     u16 var_4;
-    u32 var_5;
+    u32 envelopeStage;
     u8 var_6;
     u8 var_7;
-    u8 var_8;
+    u8 dmaCounter;
     u8* buffer;
     u8* buffer2;
     u32 vcount;
@@ -49,45 +49,46 @@ void UpdateMusic(void)
     u32 tmp2;
     u32 tmp3;
 
-    var_0 = tmp3 = gMusicInfo.unk_9;
-    if (var_0 != 0)
+    maxScanlines = tmp3 = gMusicInfo.maxScanlines_maybe;
+    if (maxScanlines != 0)
     {
         vcount = READ_8(REG_VCOUNT);
         if (vcount < SCREEN_SIZE_Y)
             vcount += VERTICAL_LINE_COUNT;
 
+        // Written this way to produce matching asm
         tmp3 = vcount;
-        var_0 = vcount;
-        tmp3 = gMusicInfo.unk_9;
-        var_0 += tmp3;
+        maxScanlines = vcount;
+        tmp3 = gMusicInfo.maxScanlines_maybe;
+        maxScanlines = vcount + gMusicInfo.maxScanlines_maybe;
     }
 
-    var_8 = gMusicInfo.unk_10;
+    dmaCounter = gMusicInfo.dmaCounter_maybe;
     var_4 = gMusicInfo.unk_11 * 16;
-    var_7 = ((gMusicInfo.unk_C << 1) + var_8) - 1;
-    if (var_7 >= gMusicInfo.unk_E)
-        var_7 -= gMusicInfo.unk_E;
+    var_7 = MUL_SHIFT(gMusicInfo.unk_C, 2) + dmaCounter - 1;
+    if (var_7 >= gMusicInfo.maxDmaCount_maybe)
+        var_7 -= gMusicInfo.maxDmaCount_maybe;
 
     var_3 = 0;
-    if (var_8 <= var_7 && var_7 <= gMusicInfo.unk_11)
+    if (dmaCounter <= var_7 && var_7 <= gMusicInfo.unk_11)
     {
         var_4 = (var_7 - gMusicInfo.unk_C + 1) * 16;
         var_6 = gMusicInfo.unk_C;
-        if (var_7 + 1 == gMusicInfo.unk_E)
+        if (var_7 + 1 == gMusicInfo.maxDmaCount_maybe)
             gMusicInfo.unk_11 = 0;
         else
             gMusicInfo.unk_11 = var_7 + 1;
     }
-    else if (gMusicInfo.unk_11 <= var_8 && var_8 <= var_7)
+    else if (gMusicInfo.unk_11 <= dmaCounter && dmaCounter <= var_7)
     {
         var_4 = (var_7 - gMusicInfo.unk_C + 1) * 16;
         var_6 = gMusicInfo.unk_C;
-        if (var_7 + 1 == gMusicInfo.unk_E)
+        if (var_7 + 1 == gMusicInfo.maxDmaCount_maybe)
             gMusicInfo.unk_11 = 0;
         else
             gMusicInfo.unk_11 = var_7 + 1;
     }
-    else if (var_7 <= gMusicInfo.unk_11 && gMusicInfo.unk_11 <= var_8)
+    else if (var_7 <= gMusicInfo.unk_11 && gMusicInfo.unk_11 <= dmaCounter)
     {
         var_4 = 0;
         var_6 = var_7 + 1;
@@ -96,14 +97,14 @@ void UpdateMusic(void)
     else if (gMusicInfo.unk_11 < var_7)
     {
         var_6 = (var_7 - gMusicInfo.unk_11) + 1;
-        if (var_7 + 1 == gMusicInfo.unk_E)
+        if (var_7 + 1 == gMusicInfo.maxDmaCount_maybe)
             gMusicInfo.unk_11 = 0;
         else
             gMusicInfo.unk_11 = var_7 + 1;
     }
     else if (gMusicInfo.unk_11 > var_7)
     {
-        var_6 = gMusicInfo.unk_E - gMusicInfo.unk_11;
+        var_6 = gMusicInfo.maxDmaCount_maybe - gMusicInfo.unk_11;
         var_3 = var_7 + 1;
         gMusicInfo.unk_11 = var_3;
     }
@@ -120,7 +121,7 @@ void UpdateMusic(void)
 
     buffer2 = &gMusicInfo.soundRawData[var_4];
     tmp = gMusicInfo.musicRawData;
-    buffer = gSoundCodeBPointer((u32*)buffer2, (u32*)buffer2, gMusicInfo.musicRawData, var_6 * 8);
+    buffer = gSoundCodeBPointer((u32*)buffer2, (u32*)buffer2, tmp, var_6 * 8);
     if (var_3 != 0)
     {
         buffer2 = gMusicInfo.soundRawData;
@@ -130,143 +131,147 @@ void UpdateMusic(void)
     gMusicInfo.currentSoundChannel = 0;
     for (i = 0; i < gMusicInfo.maxSoundChannels; i++)
     {
-        if (var_0 != 0)
+        if (maxScanlines != 0)
         {
             vcount = READ_8(REG_VCOUNT);
             if (vcount < SCREEN_SIZE_Y)
                 vcount += VERTICAL_LINE_COUNT;
 
-            if (vcount >= var_0)
+            if (vcount >= maxScanlines)
                 break;
         }
 
         pChannel = &gMusicInfo.soundChannels[i];
-        if (pChannel->unk_0 == 0)
+        if (pChannel->envelopeStage_maybe == 0)
             continue;
 
         gMusicInfo.currentSoundChannel++;
         pVariables = pChannel->pVariables;
 
-        while (pChannel->unk_13 != 0)
+        while (pChannel->volumeUpdateFlag_maybe != 0)
         {
-            if (pChannel->unk_13 & 0x2)
+            if (pChannel->volumeUpdateFlag_maybe & VOLUME_UPDATE_FLAG_RESET)
             {
                 if (pChannel->unk_1 == 0x20)
                     pChannel->unk_18 = pChannel->pSample[3] << 14;
                 else
                     pChannel->unk_18 = 0;
 
-                pChannel->unk_10 = 0;
-                pChannel->unk_13 &= ~0x2;
-                pChannel->unk_13 |= 0x10;
+                pChannel->envelopeVol_maybe = 0;
+                pChannel->volumeUpdateFlag_maybe &= ~VOLUME_UPDATE_FLAG_RESET;
+                pChannel->volumeUpdateFlag_maybe |= VOLUME_UPDATE_FLAG_UPDATE;
             }
-            else if (pChannel->unk_13 & 0x4)
+            else if (pChannel->volumeUpdateFlag_maybe & VOLUME_UPDATE_FLAG_NOTHING)
             {
-                pChannel->unk_13 &= ~0x4;
+                pChannel->volumeUpdateFlag_maybe &= ~VOLUME_UPDATE_FLAG_NOTHING;
             }
-            else if (pChannel->unk_13 & 0x10)
+            else if (pChannel->volumeUpdateFlag_maybe & VOLUME_UPDATE_FLAG_UPDATE)
             {
                 if (pVariables->unk_0 & 0x80)
                 {
-                    pVariables->unk_6 = pChannel->unk_3;
-                    unk_4f10(pVariables);
+                    pVariables->pan_maybe = pChannel->unk_3;
+                    TrackUpdateVolume(pVariables);
                 }
 
-                pChannel->unk_4 = (pVariables->unk_8 * (pChannel->unk_F + 1)) >> 7;
-                pChannel->unk_5 = (pVariables->unk_9 * (pChannel->unk_F + 1)) >> 7;
+                // ChnVolSetAsm
+                pChannel->rightVol_maybe = (pVariables->volRightCalculated_maybe * (pChannel->velocity_maybe + 1)) >> 7;
+                pChannel->leftVol_maybe = (pVariables->volLeftCalculated_maybe * (pChannel->velocity_maybe + 1)) >> 7;
 
-                pChannel->unk_13 &= ~0x10;
+                pChannel->volumeUpdateFlag_maybe &= ~VOLUME_UPDATE_FLAG_UPDATE;
             }
         }
 
-        var_1 = pChannel->unk_10;
-        var_5 = pChannel->unk_0 & 0xF;
-        if (var_5 == 0xA)
+        envelope = pChannel->envelopeVol_maybe;
+        envelopeStage = pChannel->envelopeStage_maybe & 0xF;
+
+        switch (envelopeStage)
         {
-            pChannel->unk_0 = 0;
-            continue;
+            case 10:
+                pChannel->envelopeStage_maybe = 0;
+                continue;
         }
         
-        if (var_5 == 1)
+        switch (envelopeStage)
         {
-            if (pChannel->envelope.attack != UCHAR_MAX)
-            {
-                goto lbl_1;
-            }
-            else
-            {
-                goto lbl_3;
-            }
+            case 1:
+                if (pChannel->envelope.attack != UCHAR_MAX)
+                {
+                    goto lbl_1;
+                }
+                else
+                {
+                    goto lbl_3;
+                }
         }
 
-        switch (var_5)
+        switch (envelopeStage)
         {
             case 2:
                 goto lbl_2;
 
                 lbl_1:
-                var_1 = 0;
-                pChannel->unk_0 = 2;
+                envelope = 0;
+                pChannel->envelopeStage_maybe = 2;
 
                 lbl_2:
-                var_1 += pChannel->envelope.attack;
-                if (var_1 <= 0xFE)
+                envelope += pChannel->envelope.attack;
+                if (envelope < UCHAR_MAX)
                     break;
 
                 lbl_3:
                 tmp2 = pChannel->envelope.decay;
-                var_8 = pChannel->envelope.sustain;
+                dmaCounter = pChannel->envelope.sustain;
                 if (tmp2 != 0)
                 {
-                    var_1 = UCHAR_MAX;
-                    pChannel->unk_0 = 3;
+                    envelope = UCHAR_MAX;
+                    pChannel->envelopeStage_maybe = 3;
                 }
                 else
                 {
-                    var_1 = var_8;
-                    pChannel->unk_0 = 4;
+                    envelope = pChannel->envelope.sustain;
+                    pChannel->envelopeStage_maybe = 4;
                     break;
                 }
 
             case 3:
-                if ((var_1 = (var_1 * pChannel->envelope.decay) >> 8) > (var_8 = pChannel->envelope.sustain))
+                if ((envelope = (envelope * pChannel->envelope.decay) >> 8) > (dmaCounter = pChannel->envelope.sustain))
                     break;
 
-                if (var_8 != 0)
+                if (pChannel->envelope.sustain != 0)
                 {
-                    var_1 = var_8;
-                    pChannel->unk_0 = 4;
+                    envelope = pChannel->envelope.sustain;
+                    pChannel->envelopeStage_maybe = 4;
                     break;
                 }
 
             case 5:
-                pChannel->unk_0 = 6;
+                pChannel->envelopeStage_maybe = 6;
 
             case 6:
-                if ((var_1 = (var_1 * pChannel->envelope.release) >> 8) > 0)
+                if ((envelope = (envelope * pChannel->envelope.release) >> 8) > 0)
                     break;
 
-                pChannel->unk_0 = 0;
-                if (pChannel->unk_C != 0 && pChannel->unk_D != 0)
-                    pChannel->unk_0 = 8;
+                pChannel->envelopeStage_maybe = 0;
+                if (pChannel->echoVol_maybe != 0 && pChannel->echoLen_maybe != 0)
+                    pChannel->envelopeStage_maybe = 8;
                 else
-                    unk_20a4(pChannel);
+                    FreeSoundChannel(pChannel);
                 continue;
 
             case 8:
-                pChannel->unk_D--;
-                if (pChannel->unk_D == 0)
+                pChannel->echoLen_maybe--;
+                if (pChannel->echoLen_maybe == 0)
                 {
-                    pChannel->unk_0 = 0;
-                    unk_20a4(pChannel);
+                    pChannel->envelopeStage_maybe = 0;
+                    FreeSoundChannel(pChannel);
                 }
                 break;
         }
 
-        pChannel->unk_10 = var_1;
-        var_2 = (var_1 * (gMusicInfo.volume + 1)) >> 4;
-        pChannel->unk_11 = var_2 * pChannel->unk_4 >> 8;
-        pChannel->unk_12 = var_2 * pChannel->unk_5 >> 8;
+        pChannel->envelopeVol_maybe = envelope;
+        var_2 = DIV_SHIFT(envelope * (gMusicInfo.volume + 1), 16);
+        pChannel->envelopeVolR_maybe = DIV_SHIFT(var_2 * pChannel->rightVol_maybe, 256);
+        pChannel->envelopeVolL_maybe = DIV_SHIFT(var_2 * pChannel->leftVol_maybe, 256);
 
         tmp = gMusicInfo.musicRawData;
         gSoundCodeAPointer(pChannel, tmp, (var_6 + var_3) * 4);
@@ -291,7 +296,6 @@ void UpdatePsgSounds(void)
     s16 var_0;
     u8 control;
     u8 i;
-    u8* ptr;
     struct PSGSoundData* pSound;
     struct TrackVariables* pVariables;
     u32 tmp;
@@ -311,10 +315,10 @@ void UpdatePsgSounds(void)
             {
                 pVariables = pSound->pVariables;
 
-                pSound->unk_A = pVariables->unk_F;
+                pSound->velocity_maybe = pVariables->velocity_maybe;
                 pSound->unk_B = pVariables->volume;
-                pSound->unk_D = pVariables->unk_C;
-                pSound->unk_E = pVariables->unk_D;
+                pSound->echoVol_maybe = pVariables->echoVolume_maybe;
+                pSound->echoLen_maybe = pVariables->echoLength_maybe;
                 pSound->unk_1D = pVariables->unk_36;
                 pSound->unk_1E = pVariables->unk_37;
                 
@@ -333,9 +337,9 @@ void UpdatePsgSounds(void)
 
             if (pSound->unk_F & 0x4)
             {
-                pSound->unk_14 = pSound->maybe_noteDelay;
+                pSound->nrx3_nrx4 = pSound->maybe_noteDelay;
 
-                unk_5104(pSound);
+                UploadSoundDataToSoundChannelRam(pSound);
 
                 pSound->unk_F &= ~0x4;
                 continue;
@@ -343,46 +347,48 @@ void UpdatePsgSounds(void)
 
             if (pSound->unk_F & 0x10)
             {
-                if (pSound->pVariables->unk_6 != pSound->unk_C)
+                if (pSound->pVariables->pan_maybe != pSound->unk_C)
                 {
-                    pSound->pVariables->unk_6 = pSound->unk_C;
-                    unk_4f10(pSound->pVariables);
+                    pSound->pVariables->pan_maybe = pSound->unk_C;
+                    TrackUpdateVolume(pSound->pVariables);
                 }
 
-                pSound->unk_2 = (pSound->pVariables->unk_8 * (pSound->unk_A + 1)) >> 7;
-                pSound->unk_3 = (pSound->pVariables->unk_9 * (pSound->unk_A + 1)) >> 7;
+                // ChnVolSetAsm
+                pSound->rightVol_maybe = (pSound->pVariables->volRightCalculated_maybe * (pSound->velocity_maybe + 1)) >> 7;
+                pSound->leftVol_maybe = (pSound->pVariables->volLeftCalculated_maybe * (pSound->velocity_maybe + 1)) >> 7;
 
-                pSound->unk_1A = (pSound->unk_2 + pSound->unk_3) >> 4;
-                pSound->unk_1B = (pSound->unk_1A * pSound->envelope.sustain + 0xF) >> 4;
+                // CgbModVal
+                pSound->cgb_envelopeGoal_maybe = (pSound->rightVol_maybe + pSound->leftVol_maybe) >> 4;
+                pSound->cgb_sustainGoal_maybe = (pSound->cgb_envelopeGoal_maybe * pSound->envelope.sustain + 15) >> 4;
 
-                ptr = (u8*)(REG_SOUNDCNT_L + 1);
-                control = READ_8(ptr) & ~(0x11 << i);
+                // CgbSound apply envelope & volume to HW registers
+                control = READ_8(REG_SOUNDCNT_L + 1) & ~(0x11 << i);
 
-                if (pSound->unk_2 >= pSound->unk_3)
+                if (pSound->rightVol_maybe >= pSound->leftVol_maybe)
                 {
-                    if ((pSound->unk_2 >> 1) > pSound->unk_3)
+                    if ((pSound->rightVol_maybe >> 1) > pSound->leftVol_maybe)
                     {
-                        *ptr = control | (1 << i);
+                        WRITE_8(REG_SOUNDCNT_L + 1, control | (0x01 << i));
                     }
                     else
                     {
-                        *ptr = control | (17 << i);
+                        WRITE_8(REG_SOUNDCNT_L + 1, control | (0x11 << i));
                     }
                 }
                 else
                 {
-                    if ((pSound->unk_3 >> 1) > pSound->unk_2)
+                    if ((pSound->leftVol_maybe >> 1) > pSound->rightVol_maybe)
                     {
-                        *ptr = control | (16 << i);
+                        WRITE_8(REG_SOUNDCNT_L + 1, control | (0x10 << i));
                     }
                     else
                     {
-                        *ptr = control | (17 << i);
+                        WRITE_8(REG_SOUNDCNT_L + 1, control | (0x11 << i));
                     }
                 }
 
-                pSound->unk_12 = 0;
-                pSound->unk_14 |= 0x8000;
+                pSound->nrx2 = 0;
+                pSound->nrx3_nrx4 |= SOUNDCNT_RESTART_SOUND;
 
                 var_0 = TRUE;
 
@@ -392,9 +398,9 @@ void UpdatePsgSounds(void)
 
             if (pSound->unk_F & 0x20)
             {
-                pSound->unk_14 = pSound->maybe_noteDelay | 0x8000;
+                pSound->nrx3_nrx4 = pSound->maybe_noteDelay | SOUNDCNT_RESTART_SOUND;
 
-                unk_5104(pSound);
+                UploadSoundDataToSoundChannelRam(pSound);
 
                 pSound->unk_F &= ~0x20;
             }
@@ -402,72 +408,75 @@ void UpdatePsgSounds(void)
 
         control = pSound->unk_0 & 0xF;
 
-        if (control == 0xA)
+        switch (control)
         {
-            ClearRegistersForPsg(pSound, i);
-            continue;
+            case 10:
+                ClearRegistersForPsg(pSound, i);
+                continue;
         }
 
-        if (control == 0x1)
+        switch (control)
         {
-            if (i == 0)
-            {
-                pSound->unk_10 = pSound->unk_1E;
-            }
-            else if (i == 2)
-            {
-                pSound->unk_10 = 0x80;
-            }
-
-            if (i < 2)
-                pSound->unk_11 = (u8)(u32)pSound->pSample;
-            else
-                pSound->unk_11 = 0;
-
-            tmp = 0;
-            pSound->unk_14 = pSound->maybe_noteDelay | tmp | 0x8000;
-
-            if (pSound->unk_1D != 0)
-            {
-                goto lbl_pre_case_9;
-            }
-
-            if (pSound->envelope.attack != 0)
-            {
-                goto lbl_pre_case_2;
-            }
-            else
-            {
-                if (pSound->envelope.decay == 0)
+            case 1:
+                if (i == 0)
                 {
-                    goto lbl_1;
+                    pSound->nrx0 = pSound->unk_1E;
+                }
+                else if (i == 2)
+                {
+                    pSound->nrx0 = 0x80;
+                }
+
+                if (i < 2)
+                    pSound->nrx1 = (u8)(u32)pSound->pSample;
+                else
+                    pSound->nrx1 = 0;
+
+                pSound->nrx3_nrx4 = pSound->maybe_noteDelay;
+                pSound->nrx3_nrx4 |= SOUNDCNT_RESTART_SOUND;
+
+                if (pSound->unk_1D != 0)
+                {
+                    goto lbl_pre_case_9;
+                }
+
+                if (pSound->envelope.attack != 0)
+                {
+                    goto lbl_pre_case_2;
                 }
                 else
                 {
-                    goto lbl_2;
+                    if (pSound->envelope.decay == 0)
+                    {
+                        goto lbl_1;
+                    }
+                    else
+                    {
+                        goto lbl_2;
+                    }
                 }
-            }
+                break;
         }
 
-        if (pSound->unk_18 == 0)
+        if (pSound->cgb_envelopeCtr_maybe == 0)
         {
-            switch (pSound->unk_0 & 0xF)
+            switch (control)
             {
                 case 2:
                     goto lbl_case_2;
 
                     lbl_pre_case_2:
-                    pSound->unk_19 = 0;
+                    pSound->cgb_envelopeVol_maybe = 0;
                     if (i == 2)
-                        pSound->unk_12 = 0;
+                        pSound->nrx2 = 0;
                     else
-                        pSound->unk_12 = pSound->envelope.attack + 8;
+                        pSound->nrx2 = pSound->envelope.attack + 8;
 
                     pSound->unk_0 = 2;
-                    unk_5104(pSound);
+                    UploadSoundDataToSoundChannelRam(pSound);
 
                     lbl_case_2:
-                    if (++pSound->unk_19 >= pSound->unk_1A)
+                    if (++pSound->cgb_envelopeVol_maybe >= pSound->cgb_envelopeGoal_maybe)
                     {
                         lbl_3:
                         if (pSound->envelope.decay == 0)
@@ -483,11 +492,11 @@ void UpdatePsgSounds(void)
                     {
                         if (i == 2)
                         {
-                            pSound->unk_12 = 0;
+                            pSound->nrx2 = 0;
                             var_0 = TRUE;
                         }
     
-                        pSound->unk_18 = pSound->envelope.attack;
+                        pSound->cgb_envelopeCtr_maybe = pSound->envelope.attack;
                         break;
                     }
                     
@@ -496,54 +505,54 @@ void UpdatePsgSounds(void)
                     goto lbl_case_3;
                     
                     lbl_2:
-                    pSound->unk_19 = pSound->unk_1A;
+                    pSound->cgb_envelopeVol_maybe = pSound->cgb_envelopeGoal_maybe;
                     if (i == 2)
                     {
-                        pSound->unk_12 = 0;
+                        pSound->nrx2 = 0;
                     }
                     else
                     {
-                        pSound->unk_12 = pSound->envelope.decay;
-                        pSound->unk_14 = pSound->maybe_noteDelay | 0x8000;
+                        pSound->nrx2 = pSound->envelope.decay;
+                        pSound->nrx3_nrx4 = pSound->maybe_noteDelay | SOUNDCNT_RESTART_SOUND;
                     }
 
                     pSound->unk_0 = 3;
                     var_0 = TRUE;
 
                     lbl_case_3:
-                    if (--pSound->unk_19 > pSound->unk_1B)
+                    if (--pSound->cgb_envelopeVol_maybe > pSound->cgb_sustainGoal_maybe)
                     {
                         if (i == 2)
                         {
-                            pSound->unk_12 = 0;
+                            pSound->nrx2 = 0;
                             var_0 = TRUE;
                         }
 
-                        pSound->unk_18 = pSound->envelope.decay;
+                        pSound->cgb_envelopeCtr_maybe = pSound->envelope.decay;
                         break;
                     }
 
                     lbl_1:
-                    pSound->unk_19 = pSound->unk_1B;
+                    pSound->cgb_envelopeVol_maybe = pSound->cgb_sustainGoal_maybe;
 
                     if (i == 2)
                     {
-                        pSound->unk_12 = 0;
+                        pSound->nrx2 = 0;
                     }
                     else
                     {
-                        pSound->unk_12 = 0;
-                        pSound->unk_14 = pSound->maybe_noteDelay | 0x8000;
+                        pSound->nrx2 = 0;
+                        pSound->nrx3_nrx4 = pSound->maybe_noteDelay | SOUNDCNT_RESTART_SOUND;
                     }
                     
                     pSound->unk_0 = 4;
                     var_0 = TRUE;
 
                 case 4:
-                    pSound->unk_19 = pSound->unk_1B;
+                    pSound->cgb_envelopeVol_maybe = pSound->cgb_sustainGoal_maybe;
                     
                     if ((pSound->unk_0 & 0xF) == 4)
-                        pSound->unk_18 = 1;
+                        pSound->cgb_envelopeCtr_maybe = 1;
                     break;
 
                 case 5:
@@ -551,8 +560,8 @@ void UpdatePsgSounds(void)
                     {
                         if (i != 2)
                         {
-                            pSound->unk_12 = pSound->envelope.release;
-                            pSound->unk_14 = pSound->maybe_noteDelay | 0x8000;
+                            pSound->nrx2 = pSound->envelope.release;
+                            pSound->nrx3_nrx4 = pSound->maybe_noteDelay | SOUNDCNT_RESTART_SOUND;
                         }
 
                         pSound->unk_0 = 6;
@@ -564,35 +573,35 @@ void UpdatePsgSounds(void)
                     }
 
                 case 6:
-                    pSound->unk_19--;
-                    if (pSound->unk_19 > 0)
+                    pSound->cgb_envelopeVol_maybe--;
+                    if (pSound->cgb_envelopeVol_maybe > 0)
                     {
                         if (i == 2)
                         {
-                            pSound->unk_12 = 0;
+                            pSound->nrx2 = 0;
                             var_0 = TRUE;
                         }
 
-                        pSound->unk_18 = pSound->envelope.release;
+                        pSound->cgb_envelopeCtr_maybe = pSound->envelope.release;
                         break;
                     }
 
                     lbl_0:
                     pSound->unk_0 = 0;
 
-                    if (pSound->unk_D != 0 && pSound->unk_E != 0)
+                    if (pSound->echoVol_maybe != 0 && pSound->echoLen_maybe != 0)
                     {
-                        pSound->unk_19 = (pSound->unk_1A * pSound->unk_D + 0xFF) >> 8;
-                        pSound->unk_18 = pSound->unk_E;
+                        pSound->cgb_envelopeVol_maybe = (pSound->cgb_envelopeGoal_maybe * pSound->echoVol_maybe + 0xFF) >> 8;
+                        pSound->cgb_envelopeCtr_maybe = pSound->echoLen_maybe;
 
                         if (i == 2)
                         {
-                            pSound->unk_12 = sCgb3Vol[pSound->unk_19];
+                            pSound->nrx2 = sCgb3Vol[pSound->cgb_envelopeVol_maybe];
                         }
                         else
                         {
-                            pSound->unk_12 = 0;
-                            pSound->unk_14 = pSound->maybe_noteDelay | 0x8000;
+                            pSound->nrx2 = 0;
+                            pSound->nrx3_nrx4 = pSound->maybe_noteDelay | SOUNDCNT_RESTART_SOUND;
                         }
 
                         pSound->unk_0 = 8;
@@ -606,7 +615,7 @@ void UpdatePsgSounds(void)
                     break;
 
                 case 8:
-                    if (pSound->unk_18 == 0)
+                    if (pSound->cgb_envelopeCtr_maybe == 0)
                     {
                         ClearRegistersForPsg(pSound, i);
                         pSound->unk_0 = 0;
@@ -617,19 +626,19 @@ void UpdatePsgSounds(void)
                     goto lbl_case_9;
 
                     lbl_pre_case_9:
-                    pSound->unk_11 |= pSound->unk_1D;
-                    pSound->unk_12 = 0;
-                    pSound->unk_19 = pSound->unk_1B;
-                    pSound->unk_14 |= 0x4000;
+                    pSound->nrx1 |= pSound->unk_1D;
+                    pSound->nrx2 = 0;
+                    pSound->cgb_envelopeVol_maybe = pSound->cgb_sustainGoal_maybe;
+                    pSound->nrx3_nrx4 |= SOUNDCNT_LENGTH_STOPS_SOUND;
                     pSound->unk_0 = 9;
 
                     var_0 = TRUE;
 
                     lbl_case_9:
-                    pSound->unk_18 = UCHAR_MAX;
+                    pSound->cgb_envelopeCtr_maybe = UCHAR_MAX;
                     if (var_0)
                     {
-                        pSound->unk_14 |= 0x4000;
+                        pSound->nrx3_nrx4 |= SOUNDCNT_LENGTH_STOPS_SOUND;
                     }
                     break;
             }
@@ -638,17 +647,17 @@ void UpdatePsgSounds(void)
         if (var_0)
         {
             var_0 = FALSE;
-            control = (u8)pSound->unk_19;
+            control = (u8)pSound->cgb_envelopeVol_maybe;
 
             if (i == 2)
-                pSound->unk_12 = sCgb3Vol[control];
+                pSound->nrx2 = sCgb3Vol[control];
             else
-                pSound->unk_12 |= control << 4;
+                pSound->nrx2 |= control << 4;
 
-            unk_5104(pSound);
+            UploadSoundDataToSoundChannelRam(pSound);
         }
 
-        pSound->unk_18--;
+        pSound->cgb_envelopeCtr_maybe--;
     }
 }
 
@@ -661,8 +670,8 @@ void UpdateTrack(struct TrackData* pTrack)
 {
     u8 i;
     struct TrackVariables* pVariables;
-    u8 var_0;
-    u8 var_1;
+    u8 event;
+    u8 tempo;
     s16 var_2;
 
     if (pTrack->occupied)
@@ -682,8 +691,7 @@ void UpdateTrack(struct TrackData* pTrack)
 
         if (pTrack->flags & 0x2)
         {
-            var_1 = unk_4cfc(pTrack);
-            while (var_1 != 0)
+            for (tempo = TrackUpdateTempo(pTrack); tempo != 0; tempo--)
             {
                 for (i = 0, pVariables = pTrack->pVariables; i < pTrack->amountOfTracks; i++, pVariables++)
                 {
@@ -699,9 +707,9 @@ void UpdateTrack(struct TrackData* pTrack)
                     if (pVariables->delay != 0)
                     {
                         pVariables->delay--;
-                        if (pVariables->unk_15 != 0)
+                        if (pVariables->lfoDelayCounter_maybe != 0)
                         {
-                            pVariables->unk_15--;
+                            pVariables->lfoDelayCounter_maybe--;
                         }
                         else
                         {
@@ -709,34 +717,34 @@ void UpdateTrack(struct TrackData* pTrack)
                             {
                                 if (pVariables->pChannel != NULL)
                                 {
-                                    if (pVariables->pChannel->unk_0 != 0)
+                                    if (pVariables->pChannel->envelopeStage_maybe != 0)
                                     {
-                                        pVariables->unk_16 += pVariables->lfoSpeed;
-                                        if ((s8)(pVariables->unk_16 - 0x40) < 0)
-                                            var_2 = pVariables->unk_16;
+                                        pVariables->lfoSpeedC_maybe += pVariables->lfoSpeed;
+                                        if ((s8)(pVariables->lfoSpeedC_maybe - 0x40) < 0)
+                                            var_2 = pVariables->lfoSpeedC_maybe;
                                         else
-                                            var_2 = 0x80 - (u8)pVariables->unk_16;
+                                            var_2 = 0x80 - (u8)pVariables->lfoSpeedC_maybe;
 
-                                        if (var_2 != (s8)pVariables->unk_13)
+                                        if (var_2 != pVariables->modulationCalculated_maybe)
                                         {
-                                            pVariables->unk_13 = (var_2 * (pVariables->modulationDepth + 1)) >> 7;
+                                            pVariables->modulationCalculated_maybe = (var_2 * (pVariables->modulationDepth + 1)) >> 7;
                                             unk_1c3c(pVariables);
                                         }
                                     }
                                 }
-                                else
+                                else if (pVariables->pSoundPSG != NULL)
                                 {
-                                    if (pVariables->pSoundPSG != NULL && pVariables->pSoundPSG->unk_0 != 0)
+                                    if (pVariables->pSoundPSG->unk_0 != 0)
                                     {
-                                        pVariables->unk_16 += pVariables->lfoSpeed;
-                                        if ((s8)(pVariables->unk_16 - 0x40) < 0)
-                                            var_2 = pVariables->unk_16;
+                                        pVariables->lfoSpeedC_maybe += pVariables->lfoSpeed;
+                                        if ((s8)(pVariables->lfoSpeedC_maybe - 0x40) < 0)
+                                            var_2 = pVariables->lfoSpeedC_maybe;
                                         else
-                                            var_2 = 0x80 - (u8)pVariables->unk_16;
+                                            var_2 = 0x80 - (u8)pVariables->lfoSpeedC_maybe;
 
-                                        if (var_2 != (s8)pVariables->unk_13)
+                                        if (var_2 != pVariables->modulationCalculated_maybe)
                                         {
-                                            pVariables->unk_13 = (var_2 * (pVariables->modulationDepth + 1)) >> 7;
+                                            pVariables->modulationCalculated_maybe = (var_2 * (pVariables->modulationDepth + 1)) >> 7;
                                             unk_1ccc(pVariables, var_2);
                                         }
                                     }
@@ -747,53 +755,53 @@ void UpdateTrack(struct TrackData* pTrack)
 
                     while (pVariables->delay == 0)
                     {
-                        var_0 = *pVariables->pRawData;
-                        if ((s8)var_0 >= 0)
-                            var_0 = pVariables->unk_3;
-                        else if (var_0 > 0xBC)
+                        event = *pVariables->pRawData;
+                        if (event < 0x80)
+                            event = pVariables->currentEvent;
+                        else if (event >= VOICE)
                         {
-                            pVariables->unk_3 = var_0;
+                            pVariables->currentEvent = event;
                             pVariables->pRawData++;
                         }
 
-                        if (var_0 > 0xCE)
+                        if (event >= TIE)
                         {
                             pVariables->unk_0 |= 0x2;
-                            pVariables->unk_E = sClockTable[var_0 - 0xCF];
+                            pVariables->gateTime_maybe = sClockTable[event - TIE];
 
-                            var_0 = *pVariables->pRawData;
+                            event = *pVariables->pRawData;
 
-                            if (pVariables->unk_14 != 0)
-                                pVariables->unk_15 = pVariables->unk_14;
+                            if (pVariables->lfoDelay_maybe != 0)
+                                pVariables->lfoDelayCounter_maybe = pVariables->lfoDelay_maybe;
 
-                            if ((s8)var_0 >= 0)
+                            if (event < 0x80)
                             {
-                                pVariables->unk_1 = var_0;
+                                pVariables->key_maybe = event;
                                 pVariables->pRawData++;
 
-                                var_0 = *pVariables->pRawData;
-                                if ((s8)var_0 >= 0)
+                                event = *pVariables->pRawData;
+                                if (event < 0x80)
                                 {
-                                    pVariables->unk_F = var_0;
+                                    pVariables->velocity_maybe = event;
                                     pVariables->pRawData++;
                                 
-                                    var_0 = *pVariables->pRawData;
-                                    if ((s8)var_0 >= 0)
+                                    event = *pVariables->pRawData;
+                                    if (event < 0x80)
                                     {
-                                        pVariables->unk_E += var_0;
+                                        pVariables->gateTime_maybe += event;
                                         pVariables->pRawData++;
                                     }
                                 }
                             }
 
-                            if ((pVariables->unk_0 & 0xF0) > 0x3F)
+                            if ((pVariables->unk_0 & 0xF0) >= 0x40)
                                 unk_4e10(pVariables);
 
-                            pVariables->unk_13 = 0;
-                            unk_4eb4(pVariables);
-                            unk_4f10(pVariables);
+                            pVariables->modulationCalculated_maybe = 0;
+                            TrackUpdatePitch(pVariables);
+                            TrackUpdateVolume(pVariables);
 
-                            if (pTrack->flags & 0xC0)
+                            if (pTrack->flags & (0x80 | 0x40))
                             {
                                 if (pVariables->channel & 7)
                                     unk_1fe0(pTrack, pVariables);
@@ -808,66 +816,64 @@ void UpdateTrack(struct TrackData* pTrack)
                                     unk_1e2c(pTrack, pVariables);
                             }
                         }
-                        else if (var_0 > 0xB0)
+                        else if (event >= FINE)
                         {
-                            if (var_0 == TEMPO)
+                            if (event == TEMPO)
                             {
-                                unk_4d1c(pTrack, pVariables);
+                                AudioCommand_Tempo(pTrack, pVariables);
                             }
-                            else if (var_0 == VOICE)
+                            else if (event == VOICE)
                             {
                                 AudioCommand_Voice(pTrack, pVariables);
                             }
-                            else if (var_0 == FINE)
+                            else if (event == FINE)
                             {
                                 AudioCommand_Fine(pTrack, pVariables);
                                 break;
                             }
-                            else if (var_0 == 0xB6)
+                            else if (event == FINE_QUEUE)
                             {
-                                unk_21b0(pTrack, pVariables);
+                                AudioCommand_FineAndQueue(pTrack, pVariables);
                                 break;
                             }
                             else
                             {
-                                sMusicCommandFunctionPointers[var_0 - FINE](pVariables);
+                                sMusicCommandFunctionPointers[event - FINE](pVariables);
                             }
                         }
                         else
                         {
-                            pVariables->delay = sClockTable[var_0 - 0x80];
+                            pVariables->delay = sClockTable[event - 0x80];
                             pVariables->pRawData++;
                             break;
                         }
                     }
 
 
-                    if (pVariables->unk_0 & 4)
+                    if (pVariables->unk_0 & MPT_FLG_VOLCHG)
                     {
-                        unk_4f10(pVariables);
+                        TrackUpdateVolume(pVariables);
                         if (pVariables->pChannel != NULL)
                             unk_1d5c(pVariables);
 
                         if (pVariables->pSoundPSG != NULL)
                             unk_1ddc(pVariables);
 
-                        pVariables->unk_0 &= ~4;
+                        pVariables->unk_0 &= ~MPT_FLG_VOLCHG;
                     }
 
-                    if (pVariables->unk_0 & 8)
+                    if (pVariables->unk_0 & MPT_FLG_PITCHG)
                     {
-                        unk_4eb4(pVariables);
+                        TrackUpdatePitch(pVariables);
                         if (pVariables->pChannel != NULL)
                             unk_1d78(pVariables);
 
                         if (pVariables->pSoundPSG != NULL)
                             unk_1de8(pVariables);
 
-                        pVariables->unk_0 &= ~8;
+                        pVariables->unk_0 &= ~MPT_FLG_PITCHG;
                     }
                 }
-                
-                var_1--;
             }
         }
     }
@@ -911,13 +917,13 @@ static void unk_1bf0(struct TrackVariables* pVariables)
 {
     struct SoundChannel* pChannel;
 
-    for (pChannel = pVariables->pChannel; pChannel != NULL; pChannel = pChannel->pChannel2)
+    for (pChannel = pVariables->pChannel; pChannel != NULL; pChannel = pChannel->pChannelNext_maybe)
     {
-        if (pChannel->unk_E != 0)
+        if (pChannel->gateTime_maybe != 0)
         {
-            if (--pChannel->unk_E == 0)
+            if (--pChannel->gateTime_maybe == 0)
             {
-                pChannel->unk_0 = 5;
+                pChannel->envelopeStage_maybe = 5;
             }
         }
     }
@@ -934,12 +940,12 @@ static void unk_1c18(struct TrackVariables* pVariables)
 
     pSound = pVariables->pSoundPSG;
 
-    if (pVariables->unk_E != 0)
+    if (pVariables->gateTime_maybe != 0)
     {
-        if (--pVariables->unk_E == 0)
+        if (--pVariables->gateTime_maybe == 0)
         {
             pSound->unk_0 = 5;
-            pSound->unk_18 = 0;
+            pSound->cgb_envelopeCtr_maybe = 0;
         }
     }
 }
@@ -961,27 +967,23 @@ static void unk_1c3c(struct TrackVariables* pVariables)
     {
         case 1:
         case 2:
-            unk_4f10(pVariables);
-            for (; pChannel != NULL; pChannel = pChannel->pChannel2)
-                pChannel->unk_13 |= 0x10;
+            TrackUpdateVolume(pVariables);
+            for (; pChannel != NULL; pChannel = pChannel->pChannelNext_maybe)
+                pChannel->volumeUpdateFlag_maybe |= VOLUME_UPDATE_FLAG_UPDATE;
             break;
         
         case 0:
-            unk_4eb4(pVariables);
+            TrackUpdatePitch(pVariables);
 
             if (pChannel->unk_1 != 0 && pChannel->unk_1 != 0x20)
                 break;
 
-            for (; pChannel != NULL; pChannel = pChannel->pChannel2)
+            for (; pChannel != NULL; pChannel = pChannel->pChannelNext_maybe)
             {
-                midiKey = pVariables->unk_17 + pChannel->unk_7;
+                midiKey = pVariables->keyShiftCalculated_maybe + pChannel->unk_7;
+                CLAMP(midiKey, 0, 0x7F);
 
-                if (midiKey >= 0x80)
-                    midiKey = 0x7F;
-                else if (midiKey < 0)
-                    midiKey = 0;
-
-                frequency = MidiKey2Freq(pVariables->pSample1, midiKey, pVariables->unk_18);
+                frequency = MidiKey2Freq(pVariables->pSample1, midiKey, pVariables->pitchCalculated_maybe);
                 pChannel->unk_1C = frequency;
 
                 if (frequency == gMusicInfo.sampleRate)
@@ -1009,27 +1011,23 @@ static void unk_1ccc(struct TrackVariables* pVariables, s16 param_2)
 
     if (pVariables->modulationType == 1)
     {
-        unk_4f10(pVariables);
-        pSound->unk_12 = ((u8)pSound->unk_19 + (s32)pVariables->unk_13 / sUnk_808cc4d[param_2]) * 16;
+        TrackUpdateVolume(pVariables);
+        pSound->nrx2 = ((u8)pSound->cgb_envelopeVol_maybe + pVariables->modulationCalculated_maybe / sUnk_808cc4d[param_2]) * 16;
         pSound->unk_F |= 0x20;
     }
     else if (pVariables->modulationType == 0)
     {
-        unk_4eb4(pVariables);
+        TrackUpdatePitch(pVariables);
 
-        var_0 = pVariables->unk_17 + pVariables->pSoundPSG->unk_1C;
+        var_0 = pVariables->keyShiftCalculated_maybe + pVariables->pSoundPSG->unk_1C;
+        CLAMP(var_0, 0, 0x7F);
 
-        if (var_0 >= 0x80)
-            var_0 = 0x7F;
-        else if (var_0 < 0)
-            var_0 = 0;
-
-        pSound->maybe_noteDelay = GetNoteDelay(pVariables, var_0, pVariables->unk_18);
+        pSound->maybe_noteDelay = GetNoteDelay(pVariables, var_0, pVariables->pitchCalculated_maybe);
         pSound->unk_F |= 0x4;
     }
     else if (pVariables->modulationType == 2)
     {
-        unk_4f10(pVariables);
+        TrackUpdateVolume(pVariables);
         pSound->unk_F |= 0x10;
     }
 }
@@ -1043,8 +1041,8 @@ static void unk_1d5c(struct TrackVariables* pVariables)
 {
     struct SoundChannel* pChannel;
 
-    for (pChannel = pVariables->pChannel; pChannel != NULL; pChannel = pChannel->pChannel2)
-        pChannel->unk_13 |= 0x10;
+    for (pChannel = pVariables->pChannel; pChannel != NULL; pChannel = pChannel->pChannelNext_maybe)
+        pChannel->volumeUpdateFlag_maybe |= VOLUME_UPDATE_FLAG_UPDATE;
 }
 
 /**
@@ -1058,16 +1056,12 @@ static void unk_1d78(struct TrackVariables* pVariables)
     s32 frequency;
     s16 midiKey;
 
-    for (pChannel = pVariables->pChannel; pChannel != NULL; pChannel = pChannel->pChannel2)
+    for (pChannel = pVariables->pChannel; pChannel != NULL; pChannel = pChannel->pChannelNext_maybe)
     {
-        midiKey = pVariables->unk_17 + pChannel->unk_7;
+        midiKey = pVariables->keyShiftCalculated_maybe + pChannel->unk_7;
+        CLAMP(midiKey, 0, 0x7F);
 
-        if (midiKey >= 0x80)
-            midiKey = 0x7F;
-        else if (midiKey < 0)
-            midiKey = 0;
-
-        frequency = MidiKey2Freq(pChannel->pSample, midiKey, pVariables->unk_18);
+        frequency = MidiKey2Freq(pChannel->pSample, midiKey, pVariables->pitchCalculated_maybe);
         pChannel->unk_1C = frequency;
 
         if (frequency == gMusicInfo.sampleRate)
@@ -1076,7 +1070,7 @@ static void unk_1d78(struct TrackVariables* pVariables)
             frequency = CallGetNoteFrequency(frequency, gMusicInfo.pitch);
 
         pChannel->unk_1C = frequency;
-        pChannel->unk_13 |= 4;
+        pChannel->volumeUpdateFlag_maybe |= VOLUME_UPDATE_FLAG_NOTHING;
     }
 }
 
@@ -1099,14 +1093,10 @@ static void unk_1de8(struct TrackVariables* pVariables)
 {
     s16 var_0;
 
-    var_0 = pVariables->unk_17 + pVariables->pSoundPSG->unk_1C;
+    var_0 = pVariables->keyShiftCalculated_maybe + pVariables->pSoundPSG->unk_1C;
+    CLAMP(var_0, 0, 0x7F);
 
-    if (var_0 >= 0x80)
-        var_0 = 0x7F;
-    else if (var_0 < 0)
-        var_0 = 0;
-
-    pVariables->pSoundPSG->maybe_noteDelay = GetNoteDelay(pVariables, var_0, pVariables->unk_18);
+    pVariables->pSoundPSG->maybe_noteDelay = GetNoteDelay(pVariables, var_0, pVariables->pitchCalculated_maybe);
     pVariables->pSoundPSG->unk_F |= 0x4;
 }
 
@@ -1118,7 +1108,7 @@ static void unk_1de8(struct TrackVariables* pVariables)
  */
 static void unk_1e2c(struct TrackData* pTrack, struct TrackVariables* pVariables)
 {
-    u8 var_0;
+    u8 priority;
     u8 var_1;
     u32 var_2;
     s32 var_3;
@@ -1127,27 +1117,29 @@ static void unk_1e2c(struct TrackData* pTrack, struct TrackVariables* pVariables
     struct SoundChannel* pChannel;
     struct TrackVariables* pVariables2;
 
-    if (pTrack->unk_3 + pVariables->priority > UCHAR_MAX)
-        var_0 = UCHAR_MAX;
+    if (pTrack->trackHeaderPriority + pVariables->priority > UCHAR_MAX)
+        priority = UCHAR_MAX;
     else
-        var_0 = pTrack->unk_3 + pVariables->priority;
+        priority = pTrack->trackHeaderPriority + pVariables->priority;
 
-    var_2 = var_0;
+    var_2 = priority;
     pVariables2 = pVariables;
     var_1 = FALSE;
     pChannel = NULL;
 
     for (i = 0; i < gMusicInfo.maxSoundChannels; i++)
     {
-        if (gMusicInfo.soundChannels[i].unk_0 == 0)
+        if (gMusicInfo.soundChannels[i].envelopeStage_maybe == 0)
         {
             pChannel = &gMusicInfo.soundChannels[i];
             goto end;
-            //unk_4f8c(pChannel, pVariables, var_0);
+            //TrackSendVariablesToChannel(pChannel, pVariables, var_0);
             //return;
         }
         
-        if (gMusicInfo.soundChannels[i].unk_0 == 5 || gMusicInfo.soundChannels[i].unk_0 == 6 || gMusicInfo.soundChannels[i].unk_0 == 8)
+        if (gMusicInfo.soundChannels[i].envelopeStage_maybe == 5 ||
+            gMusicInfo.soundChannels[i].envelopeStage_maybe == 6 ||
+            gMusicInfo.soundChannels[i].envelopeStage_maybe == 8)
         {
             if (!var_1)
             {
@@ -1197,7 +1189,7 @@ static void unk_1e2c(struct TrackData* pTrack, struct TrackVariables* pVariables
     if (pChannel != NULL)
     {
         end:
-        unk_4f8c(pChannel, pVariables, var_0);
+        TrackSendVariablesToChannel(pChannel, pVariables, priority);
     }
 }
 
@@ -1229,21 +1221,21 @@ static void unk_1f3c(struct TrackData* pTrack, struct TrackVariables* pVariables
  */
 static void unk_1f90(struct TrackData* pTrack, struct TrackVariables* pVariables)
 {
-    u8 var_0;
+    u8 priority;
     struct PSGSoundData* pSound;
 
-    if (pTrack->unk_3 + pVariables->priority > UCHAR_MAX)
-        var_0 = UCHAR_MAX;
+    if (pTrack->trackHeaderPriority + pVariables->priority > UCHAR_MAX)
+        priority = UCHAR_MAX;
     else
-        var_0 = pTrack->unk_3 + pVariables->priority;
+        priority = pTrack->trackHeaderPriority + pVariables->priority;
 
     pSound = &gUnk_300376C[pVariables->channel & 7];
     if (pSound->unk_0 == 0 ||
-        (var_0 >= pSound->unk_16 &&
-        (var_0 != pSound->unk_16 ||
+        (priority >= pSound->unk_16 &&
+        (priority != pSound->unk_16 ||
         pVariables <= pSound->pVariables)))
     {
-        unk_2030(pSound, pVariables, var_0);
+        unk_2030(pSound, pVariables, priority);
     }
 }
 
@@ -1255,21 +1247,21 @@ static void unk_1f90(struct TrackData* pTrack, struct TrackVariables* pVariables
  */
 static void unk_1fe0(struct TrackData* pTrack, struct TrackVariables* pVariables)
 {
-    u8 var_0;
+    u8 priority;
     struct PSGSoundData* pSound;
 
-    if (pTrack->unk_3 + pVariables->priority > UCHAR_MAX)
-        var_0 = UCHAR_MAX;
+    if (pTrack->trackHeaderPriority + pVariables->priority > UCHAR_MAX)
+        priority = UCHAR_MAX;
     else
-        var_0 = pTrack->unk_3 + pVariables->priority;
+        priority = pTrack->trackHeaderPriority + pVariables->priority;
 
     pSound = &gUnk_300376C[pVariables->channel & 7];
     if (pSound->unk_0 == 0 ||
-        (var_0 >= pSound->unk_16 &&
-        (var_0 != pSound->unk_16 ||
+        (priority >= pSound->unk_16 &&
+        (priority != pSound->unk_16 ||
         pVariables <= pSound->pVariables)))
     {
-        unk_2030(pSound, pVariables, var_0);
+        unk_2030(pSound, pVariables, priority);
     }
 }
 
@@ -1283,26 +1275,21 @@ static void unk_1fe0(struct TrackData* pTrack, struct TrackVariables* pVariables
 static void unk_2030(struct PSGSoundData* pSound, struct TrackVariables* pVariables, u32 param_3)
 {
     s16 var_0;
-    s16 tmp;
 
     pSound->unk_16 = param_3;
     pSound->unk_1 = pVariables->channel;
-    pSound->unk_C = pVariables->unk_6;
-    pSound->unk_17 = pVariables->unk_1;
+    pSound->unk_C = pVariables->pan_maybe;
+    pSound->unk_17 = pVariables->key_maybe;
 
     if ((pVariables->unk_0 & 0xF0) == 0x80)
         pSound->unk_1C = pVariables->unk_35;
     else
-        pSound->unk_1C = pVariables->unk_1;
+        pSound->unk_1C = pVariables->key_maybe;
 
-    var_0 = pVariables->unk_17 + pSound->unk_1C;
+    var_0 = pVariables->keyShiftCalculated_maybe + pSound->unk_1C;
+    CLAMP(var_0, 0, 0x7F);
 
-    if (var_0 >= 0x80)
-        var_0 = 0x7F;
-    else if (var_0 < 0)
-        var_0 = 0;
-
-    pSound->maybe_noteDelay = GetNoteDelay(pVariables, var_0, pVariables->unk_18);
+    pSound->maybe_noteDelay = GetNoteDelay(pVariables, var_0, pVariables->pitchCalculated_maybe);
     pSound->pVariables->pSoundPSG = NULL;
     pSound->pVariables = pVariables;
     pSound->unk_F |= 2;
@@ -1311,22 +1298,21 @@ static void unk_2030(struct PSGSoundData* pSound, struct TrackVariables* pVariab
 }
 
 /**
- * @brief 20a4 | 30 | To document
+ * @brief 20a4 | 30 | Removes a channel from the channel list
  * 
  * @param pChannel Sound channel pointer
  */
-void unk_20a4(struct SoundChannel* pChannel)
+void FreeSoundChannel(struct SoundChannel* pChannel)
 {
-    // Linked list?
     if (pChannel->pVariables != NULL)
     {
-        if (pChannel->pChannel2 != NULL)
-            pChannel->pChannel2->pChannel1 = pChannel->pChannel1;
+        if (pChannel->pChannelNext_maybe != NULL)
+            pChannel->pChannelNext_maybe->pChannelPrev_maybe = pChannel->pChannelPrev_maybe;
 
-        if (pChannel->pChannel1 != NULL)
-            pChannel->pChannel1->pChannel2 = pChannel->pChannel2;
+        if (pChannel->pChannelPrev_maybe != NULL)
+            pChannel->pChannelPrev_maybe->pChannelNext_maybe = pChannel->pChannelNext_maybe;
         else
-            pChannel->pVariables->pChannel = pChannel->pChannel2;
+            pChannel->pVariables->pChannel = pChannel->pChannelNext_maybe;
 
         pChannel->pVariables = NULL;
     }
@@ -1350,8 +1336,8 @@ static u16 GetNoteDelay(struct TrackVariables* pVariables, u8 param_2, u8 param_
         delay = sUnk_808cad0[param_2];
         if (param_3 != 0)
         {
-            if (param_2 + 1 > 0x7F)
-                param_2 = 0x7F;
+            if (param_2 + 1 > ARRAY_SIZE(sUnk_808cad0) - 1)
+                param_2 = ARRAY_SIZE(sUnk_808cad0) - 1;
 
             temp = (sUnk_808cad0[param_2 + 1] - delay) * (param_3 + 1) >> 8;
             delay += temp;
@@ -1359,7 +1345,7 @@ static u16 GetNoteDelay(struct TrackVariables* pVariables, u8 param_2, u8 param_
     }
     else
     {
-        delay = sNoiseTable[param_2 - 0x15] | (u8)(u32)pVariables->pSample1;
+        delay = sNoiseTable[param_2 - 21] | (u8)(u32)pVariables->pSample1;
     }
     
     return delay;
@@ -1387,11 +1373,11 @@ void AudioCommand_Fine(struct TrackData* pTrack, struct TrackVariables* pVariabl
     {
         for (pChannel = pVariables->pChannel; pChannel != NULL; pChannel = pNext)
         {
-            pChannel->unk_0 = 10;
+            pChannel->envelopeStage_maybe = 10;
             pChannel->pVariables = NULL;
-            pNext = pChannel->pChannel2;
-            pChannel->pChannel2 = NULL;
-            pChannel->pChannel1 = NULL;
+            pNext = pChannel->pChannelNext_maybe;
+            pChannel->pChannelNext_maybe = NULL;
+            pChannel->pChannelPrev_maybe = NULL;
         }
     }
 
@@ -1409,12 +1395,12 @@ void AudioCommand_Fine(struct TrackData* pTrack, struct TrackVariables* pVariabl
 }
 
 /**
- * @brief 21b0 | 7c | To document
+ * @brief 21b0 | 7c | Custom audio command that performs the FINE command and sets the queue flag
  * 
  * @param pTrack Track data pointer
  * @param pVariables Track variables pointer
  */
-void unk_21b0(struct TrackData* pTrack, struct TrackVariables* pVariables)
+void AudioCommand_FineAndQueue(struct TrackData* pTrack, struct TrackVariables* pVariables)
 {
     struct SoundChannel* pChannel;
     struct SoundChannel* pNext;
@@ -1430,11 +1416,11 @@ void unk_21b0(struct TrackData* pTrack, struct TrackVariables* pVariables)
     {
         for (pChannel = pVariables->pChannel; pChannel != NULL; pChannel = pNext)
         {
-            pChannel->unk_0 = 10;
+            pChannel->envelopeStage_maybe = 10;
             pChannel->pVariables = NULL;
-            pNext = pChannel->pChannel2;
-            pChannel->pChannel2 = NULL;
-            pChannel->pChannel1 = NULL;
+            pNext = pChannel->pChannelNext_maybe;
+            pChannel->pChannelNext_maybe = NULL;
+            pChannel->pChannelPrev_maybe = NULL;
         }
     }
 
@@ -1527,7 +1513,7 @@ void AudioCommand_KeyShift(struct TrackVariables* pVariables)
 {
     pVariables->pRawData++;
     pVariables->keyShift = *pVariables->pRawData;
-    pVariables->unk_0 |= 0x8;
+    pVariables->unk_0 |= MPT_FLG_PITCHG;
     pVariables->pRawData++;
 }
 
@@ -1545,7 +1531,7 @@ void AudioCommand_Voice(struct TrackData* pTrack, struct TrackVariables* pVariab
     pVoice = &pTrack->pVoice[*pVariables->pRawData];
     pVariables->channel = pVoice->instrumentType;
 
-    if (pVariables->channel > 0x3F)
+    if (pVariables->channel >= 0x40)
     {
         if (pVariables->channel == 0x80)
         {
@@ -1602,7 +1588,7 @@ void AudioCommand_Voice(struct TrackData* pTrack, struct TrackVariables* pVariab
 void AudioCommand_Volume(struct TrackVariables* pVariables)
 {
     pVariables->volume = *pVariables->pRawData;
-    pVariables->unk_0 |= 0x4;
+    pVariables->unk_0 |= MPT_FLG_VOLCHG;
     pVariables->pRawData++;
 }
 
@@ -1613,8 +1599,8 @@ void AudioCommand_Volume(struct TrackVariables* pVariables)
  */
 void AudioCommand_PanPot(struct TrackVariables* pVariables)
 {
-    pVariables->unk_6 = *pVariables->pRawData;
-    pVariables->unk_0 |= 0x4;
+    pVariables->pan_maybe = *pVariables->pRawData;
+    pVariables->unk_0 |= MPT_FLG_VOLCHG;
     pVariables->pRawData++;
 }
 
@@ -1626,7 +1612,7 @@ void AudioCommand_PanPot(struct TrackVariables* pVariables)
 void AudioCommand_PitchBend(struct TrackVariables* pVariables)
 {
     pVariables->pitchBend = *pVariables->pRawData - C_V;
-    pVariables->unk_0 |= 0x8;
+    pVariables->unk_0 |= MPT_FLG_PITCHG;
     pVariables->pRawData++;
 }
 
@@ -1638,7 +1624,7 @@ void AudioCommand_PitchBend(struct TrackVariables* pVariables)
 void AudioCommand_BendRange(struct TrackVariables* pVariables)
 {
     pVariables->bendRange = *pVariables->pRawData;
-    pVariables->unk_0 |= 0x8;
+    pVariables->unk_0 |= MPT_FLG_PITCHG;
     pVariables->pRawData++;
 }
 
@@ -1663,8 +1649,8 @@ void AudioCommand_LfoDelay(struct TrackVariables* pVariables)
     u8 param;
 
     param = *pVariables->pRawData;
-    pVariables->unk_14 = param;
-    pVariables->unk_15 = param;
+    pVariables->lfoDelay_maybe = param;
+    pVariables->lfoDelayCounter_maybe = param;
     pVariables->pRawData++;
 }
 
@@ -1698,7 +1684,7 @@ void AudioCommand_ModulationType(struct TrackVariables* pVariables)
 void AudioCommand_Tune(struct TrackVariables* pVariables)
 {
     pVariables->tune = *pVariables->pRawData - C_V;
-    pVariables->unk_0 |= 0x8;
+    pVariables->unk_0 |= MPT_FLG_PITCHG;
     pVariables->pRawData++;
 }
 
@@ -1712,14 +1698,14 @@ void AudioCommand_ExtendCommand(struct TrackVariables* pVariables)
     if (*pVariables->pRawData == xIECV)
     {
         pVariables->pRawData++;
-        pVariables->unk_C = *pVariables->pRawData;
+        pVariables->echoVolume_maybe = *pVariables->pRawData;
         pVariables->pRawData++;
     }
 
     if (*pVariables->pRawData == xIECL)
     {
         pVariables->pRawData++;
-        pVariables->unk_D = *pVariables->pRawData;
+        pVariables->echoLength_maybe = *pVariables->pRawData;
         pVariables->pRawData++;
     }
 }
@@ -1733,36 +1719,36 @@ void AudioCommand_EndOfTie(struct TrackVariables* pVariables)
 {
     struct SoundChannel* pChannel;
     struct PSGSoundData* pSound;
-    u32 param;
+    u8 key;
 
-    if ((s8)*pVariables->pRawData >= 0)
+    if (*pVariables->pRawData < 0x80)
     {
-        param = *pVariables->pRawData;
-        pVariables->unk_1 = param;
+        key = *pVariables->pRawData;
+        pVariables->key_maybe = key;
         pVariables->pRawData++;
     }
     else
     {
-        param = pVariables->unk_1;
+        key = pVariables->key_maybe;
     }
     
-    if (pVariables->pChannel)
+    if (pVariables->pChannel != NULL)
     {
-        for (pChannel = pVariables->pChannel; pChannel != NULL; pChannel = pChannel->pChannel2)
+        for (pChannel = pVariables->pChannel; pChannel != NULL; pChannel = pChannel->pChannelNext_maybe)
         {
-            if ((u8)(pChannel->unk_0 - 1) < 4 && pChannel->unk_6 == param)
+            if (pChannel->envelopeStage_maybe >= 1 && pChannel->envelopeStage_maybe <= 4 && pChannel->unk_6 == key)
             {
-                pChannel->unk_0 = 5;
+                pChannel->envelopeStage_maybe = 5;
                 break;
             }
         }
     }
 
     pSound = pVariables->pSoundPSG;
-    if (pSound != NULL && pSound->unk_17 == param)
+    if (pSound != NULL && pSound->unk_17 == key)
     {
         pSound->unk_0 = 5;
-        pVariables->pSoundPSG->unk_18 = 0;
+        pVariables->pSoundPSG->cgb_envelopeCtr_maybe = 0;
     }
 }
 

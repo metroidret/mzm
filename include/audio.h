@@ -8,10 +8,10 @@ void UpdateMusic(void);
 void UpdatePsgSounds(void);
 void UpdateTrack(struct TrackData* pTrack);
 
-void unk_20a4(struct SoundChannel* pChannel);
+void FreeSoundChannel(struct SoundChannel* pChannel);
 
 void AudioCommand_Fine(struct TrackData* pTrack, struct TrackVariables* pVariables);
-void unk_21b0(struct TrackData* pTrack, struct TrackVariables* pVariables);
+void AudioCommand_FineAndQueue(struct TrackData* pTrack, struct TrackVariables* pVariables);
 void AudioCommand_PatternEnd(struct TrackVariables* pVariables);
 void AudioCommand_Repeat(struct TrackVariables* pVariables);
 void AudioCommand_Priority(struct TrackVariables* pVariables);
