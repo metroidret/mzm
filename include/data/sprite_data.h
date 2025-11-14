@@ -4,14 +4,14 @@
 #include "types.h"
 #include "constants/sprite.h"
 
-#define GET_PSPRITE_HEALTH(id) sPrimarySpriteStats[(id)][0]
-#define GET_SSPRITE_HEALTH(id) sSecondarySpriteStats[(id)][0]
+#define GET_PSPRITE_HEALTH(id) sPrimarySpriteStats[(id)][SPRITE_STATS_HEALTH]
+#define GET_SSPRITE_HEALTH(id) sSecondarySpriteStats[(id)][SPRITE_STATS_HEALTH]
 
-#define GET_PSPRITE_DAMAGE(id) sPrimarySpriteStats[(id)][1]
-#define GET_SSPRITE_DAMAGE(id) sSecondarySpriteStats[(id)][1]
+#define GET_PSPRITE_DAMAGE(id) sPrimarySpriteStats[(id)][SPRITE_STATS_DAMAGE]
+#define GET_SSPRITE_DAMAGE(id) sSecondarySpriteStats[(id)][SPRITE_STATS_DAMAGE]
 
-#define GET_PSPRITE_WEAKNESS(id) sPrimarySpriteStats[(id)][2]
-#define GET_SSPRITE_WEAKNESS(id) sSecondarySpriteStats[(id)][2]
+#define GET_PSPRITE_WEAKNESS(id) sPrimarySpriteStats[(id)][SPRITE_STATS_WEAKNESSES]
+#define GET_SSPRITE_WEAKNESS(id) sSecondarySpriteStats[(id)][SPRITE_STATS_WEAKNESSES]
 
 // 2b0c94
 

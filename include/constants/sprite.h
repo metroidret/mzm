@@ -377,6 +377,20 @@ MAKE_ENUM(u8, SamusStandingOnSpriteStatus) {
     SAMUS_STANDING_ON_SPRITE_END
 };
 
+enum SpriteStatsIndex {
+    SPRITE_STATS_HEALTH,
+    SPRITE_STATS_DAMAGE,
+    SPRITE_STATS_WEAKNESSES,
+    SPRITE_STATS_NO_DROP_PROB,
+    SPRITE_STATS_SMALL_ENERGY_PROB,
+    SPRITE_STATS_LARGE_ENERGY_PROB,
+    SPRITE_STATS_MISSILE_PROB,
+    SPRITE_STATS_SUPER_MISSILE_PROB,
+    SPRITE_STATS_POWER_BOMB_PROB,
+
+    SPRITE_STATS_COUNT
+};
+
 MAKE_ENUM(u16, SpriteWeakness) {
     WEAKNESS_NONE                      = 0 << 0,
     WEAKNESS_CHARGE_BEAM_PISTOL        = 1 << 0,
@@ -386,7 +400,26 @@ MAKE_ENUM(u16, SpriteWeakness) {
     WEAKNESS_POWER_BOMB                = 1 << 4,
     WEAKNESS_SPEEDBOOSTER_SCREW_ATTACK = 1 << 5,
     WEAKNESS_CAN_BE_FROZEN             = 1 << 6,
+    WEAKNESS_UNUSED_80                 = 1 << 7,
 };
+
+/**
+ * @brief Creates the freeze chance flag that is stored in the high byte of sprite weaknesses.
+ * The freeze chance is 1 / 2^n
+ * 
+ * @param n Number of bits
+ * @return Freeze chance flag
+ */
+#define FREEZE_CHANCE_FLAG(n) ((1 << n) - 1)
+
+#define FREEZE_CHANCE_ALWAYS FREEZE_CHANCE_FLAG(0)
+#define FREEZE_CHANCE_1_2    FREEZE_CHANCE_FLAG(1)
+#define FREEZE_CHANCE_1_4    FREEZE_CHANCE_FLAG(2)
+#define FREEZE_CHANCE_1_8    FREEZE_CHANCE_FLAG(3)
+#define FREEZE_CHANCE_1_16   FREEZE_CHANCE_FLAG(4)
+#define FREEZE_CHANCE_1_32   FREEZE_CHANCE_FLAG(5)
+#define FREEZE_CHANCE_1_64   FREEZE_CHANCE_FLAG(6)
+#define FREEZE_CHANCE_1_128  FREEZE_CHANCE_FLAG(7)
 
 #define SPRITE_POSE_UNINITIALIZED 0
 #define SPRITE_POSE_STOPPED 0x42
@@ -398,8 +431,14 @@ MAKE_ENUM(u16, SpriteWeakness) {
 
 #define PSPRITE_OFFSET_FOR_GRAPHICS(id) ((id) - PSPRITE_UNUSED16)
 
-// Represents a 100% drop change for a sprite
-#define SPRITE_DROP_MAX_PROB (1024)
+/**
+ * @brief Represents a 100% drop chance for a sprite
+ */
+#define SPRITE_DROP_MAX_PROB 1024
+/**
+ * @brief Converts a float between 0-1 to a sprite drop chance
+ */
+#define SPRITE_DROP_PROB(prob) ((u16)((prob) * SPRITE_DROP_MAX_PROB))
 
 #define SPRITE_ISFT_POWER_BOMB_STUNNED (1 << 7)
 

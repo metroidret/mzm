@@ -278,6 +278,7 @@ static void BaristuteIdle(void)
         return;
 
     #ifdef REGION_US_BETA
+    // This is the same code as below, but without the collision check
     if (gCurrentSprite.spriteId == PSPRITE_BARISTUTE_KRAID_UPPER)
     {
         // The upper kraid baristute can't jump, so always walk

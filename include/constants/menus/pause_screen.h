@@ -317,6 +317,7 @@ enum ChozoStatueHintSubroutineStage {
 enum MaintainedInputSpeed {
     MAINTAINED_INPUT_SPEED_FAST,
     MAINTAINED_INPUT_SPEED_SLOW,
+
     MAINTAINED_INPUT_SPEED_COUNT
 };
 

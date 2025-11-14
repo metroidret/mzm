@@ -4716,8 +4716,8 @@ static void FileSelectInit(void)
     CallLZ77UncompVram(sFileSelectObjIconsGfx, VRAM_OBJ);
 
     // If not on JP, the translations for "Copy", "Erase", and "Options" are blanked out,
-    // and the options menu text is replaced with the appropriate language. Debug allows
-    // any language, so it has an extra check.
+    // and the options menu text graphics are replaced with the appropriate language.
+    // Debug allows any language, so it has an extra check.
     #if defined(DEBUG) || !defined(REGION_JP)
     #if defined(DEBUG)
     if (gLanguage >= LANGUAGE_ENGLISH)

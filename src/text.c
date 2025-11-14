@@ -554,6 +554,9 @@ void TextDrawMessageCharacter(u16 charID, u32* dst, u16 indent, u8 color)
         #ifdef REGION_EU
         palette = indent;
         palette &= 7;
+        // If next char position is within same line, and next char position is
+        // on a tile boundary, and char width is not an exact tile multiple,
+        // increment char width
         if (indent + width < 224 && (indent + width) % 8 == 0 && width % 8 != 0)
             width++;
         #else // !REGION_EU
