@@ -5,9 +5,9 @@
 voicegroup014:	@ 0x0808E4AC
 	voice_directsound 60, 0, DirectSoundData_08119EB8, 255, 0, 255, 0	@0808E4AC
 	voice_directsound 60, 0, DirectSoundData_0811BE4C, 255, 0, 255, 0	@0808E4B8
-	voice_directsound_type32 60, 0, DirectSoundData_0811DB9C, 255, 0, 255, 0	@0808E4C4
+	voice_directsound_reverse 60, 0, DirectSoundData_0811DB9C, 255, 0, 255, 0	@0808E4C4
 	voice_directsound 60, 0, DirectSoundData_0811F5E8, 128, 0, 255, 0	@0808E4D0
-	voice_directsound_type32 60, 0, DirectSoundData_0811F5E8, 128, 0, 255, 0	@0808E4DC
+	voice_directsound_reverse 60, 0, DirectSoundData_0811F5E8, 128, 0, 255, 0	@0808E4DC
 	voice_directsound 60, 0, DirectSoundData_0812007C, 255, 0, 255, 0	@0808E4E8
 	voice_directsound 60, 0, DirectSoundData_081205D0, 255, 0, 255, 0	@0808E4F4
 	voice_directsound 60, 0, DirectSoundData_08121AE4, 255, 0, 255, 0	@0808E500
