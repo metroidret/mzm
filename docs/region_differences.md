@@ -128,8 +128,6 @@ Even though the EU version was released before the JP version, evidence from the
   - `sMaintainedInputDelays_Slow` and `sMaintainedInputDelaysLastSet` in [pause_screen_data.c](../src/data/menus/pause_screen_data.c)
 - The fully powered suit cutscene uses a different value for BG fading
   - `sCutsceneData` in [cutscenes_data.c](../src/data/cutscenes/cutscenes_data.c)
-- Kraid room 17 doesn't use a room effect for the lava
-  - `sKraidRoomEntries` in [rooms_data.c](../src/data/rooms_data.c)
 - An array of 256 0xFF bytes was removed (probably because it was unused)
   - `sBuffer_754ab4` in [shortcut_pointers.c](../src/data/shortcut_pointers.c)
 
@@ -159,6 +157,29 @@ Even though the EU version was released before the JP version, evidence from the
   - `sGameOverSamusHeadXPositions` in [game_over_data.c](../src/data/menus/game_over_data.c)
 - The credits include localization for European languages
   - `sCredits` in [ending_and_gallery_data.c](../src/data/ending_and_gallery_data.c)
+
+#### Rooms
+- In Brinstar room 7, a rock on BG2 was removed from above the red door (it was covered by BG1 except for 2 pixels)
+  - `sBrinstar_7_Bg2` in [Brinstar_7.c](../src/data/rooms/brinstar/Brinstar_7.c)
+- Also in Brinstar room 7, many BG1 tiling errors were fixed, mainly rocks that stick out or don't line up
+  - `sBrinstar_7_Bg1` in [Brinstar_7.c](../src/data/rooms/brinstar/Brinstar_7.c)
+  - `sTileset_17_Gfx` and `sTileset_17_Tilemap` in [tilesets_set1.c](../src/data/tilesets/tilesets_set1.c)
+- Kraid room 17 doesn't use a room effect for the lava
+  - `sKraidRoomEntries` in [rooms_data.c](../src/data/rooms_data.c)
+  - `sKraid_17_Clipdata` and `sKraid_17_Bg0` in [Kraid_17.c](../src/data/rooms/kraid/Kraid_17.c)
+- In Norfair room 20, a slope in the lava was moved one block to the right
+  - `sNorfair_20_Clipdata` and `sNorfair_20_Bg1` in [Norfair_20.c](../src/data/rooms/norfair/Norfair_20.c)
+- In Norfair rooms 43 and 51, a corner of the tunnel is more rounded
+  - `sNorfair_43_Clipdata` and `sNorfair_43_Bg1` in [Norfair_43.c](../src/data/rooms/norfair/Norfair_43.c)
+  - `sNorfair_51_Bg1` in [Norfair_51.c](../src/data/rooms/norfair/Norfair_51.c)
+- Also in Norfair room 43, an extra door transition block to the right of the tunnel was removed (possibly leftover from an earlier door placement)
+  - `sNorfair_43_Clipdata` in [Norfair_43.c](../src/data/rooms/norfair/Norfair_43.c)
+- In Chozodia room 51, the speedboost blocks were changed to not reform
+  - `sChozodia_51_Clipdata` in [Chozodia_51.c](../src/data/rooms/chozodia/Chozodia_51.c)
+- In Chozodia room 77, the missile blocks were changed to never reform (this is what allows 9% completion on hard mode)
+  - `sChozodia_77_Clipdata` in [Chozodia_77.c](../src/data/rooms/chozodia/Chozodia_77.c)
+- In tileset 74 (used in the Chozo Ruins area), there are blocks used above/below gates with a red rectangle on them. These were changed to work like tileset 44 (Mother Ship area), where the rectangle is transparent and a separate block placed on BG2 has a red rectangle that uses the animated palette
+  - `sTileset_74_Gfx` and `sTileset_74_Tilemap` in [tilesets_set7.c](../src/data/tilesets/tilesets_set7.c)
 
 
 ## JP Differences
