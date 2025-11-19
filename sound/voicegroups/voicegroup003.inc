@@ -15,7 +15,7 @@ voicegroup003:	@ 0x0808D8F4
 	voice_noise 60, 0, 0, 0, 1, 0, 13, 5	@0808D960
 	voice_directsound 60, 0, DirectSoundData_080CDF24, 255, 0, 255, 0	@0808D96C
 	voice_directsound 60, 0, DirectSoundData_080A331C, 255, 0, 255, 0	@0808D978
-	voice_directsound_type32 60, 0, DirectSoundData_080CE470, 255, 0, 255, 0	@0808D984
+	voice_directsound_reverse 60, 0, DirectSoundData_080CE470, 255, 0, 255, 0	@0808D984
 	voice_noise 60, 0, 0, 0, 0, 0, 13, 5	@0808D990
 	voice_noise 60, 0, 0, 0, 0, 0, 13, 5	@0808D99C
 	voice_noise 60, 0, 0, 0, 0, 0, 15, 5	@0808D9A8
@@ -30,9 +30,9 @@ voicegroup003:	@ 0x0808D8F4
 	voice_directsound 60, 0, DirectSoundData_080D2CA4, 255, 0, 255, 0	@0808DA14
 	voice_directsound 60, 0, DirectSoundData_0809F8A4, 128, 0, 255, 0	@0808DA20
 	voice_directsound 60, 0, DirectSoundData_080D31E8, 128, 0, 255, 0	@0808DA2C
-	voice_directsound_type32 60, 0, DirectSoundData_080CC834, 255, 0, 255, 0	@0808DA38
+	voice_directsound_reverse 60, 0, DirectSoundData_080CC834, 255, 0, 255, 0	@0808DA38
 	voice_directsound 60, 0, DirectSoundData_080D4114, 255, 0, 255, 0	@0808DA44
-	voice_directsound_type32 60, 0, DirectSoundData_080D4114, 255, 0, 255, 0	@0808DA50
+	voice_directsound_reverse 60, 0, DirectSoundData_080D4114, 255, 0, 255, 0	@0808DA50
 	voice_directsound 60, 0, DirectSoundData_080D60A8, 255, 0, 255, 0	@0808DA5C
 	voice_directsound 60, 0, DirectSoundData_080AB068, 255, 0, 255, 0	@0808DA68
 	voice_directsound 60, 0, DirectSoundData_080D68FC, 255, 0, 255, 0	@0808DA74
@@ -47,7 +47,7 @@ voicegroup003:	@ 0x0808D8F4
 	voice_directsound 60, 0, DirectSoundData_080D8238, 255, 0, 255, 0	@0808DAE0
 	voice_directsound 60, 0, DirectSoundData_080D854C, 255, 0, 255, 0	@0808DAEC
 	voice_directsound 60, 0, DirectSoundData_080D9600, 255, 0, 255, 0	@0808DAF8
-	voice_directsound_type32 60, 0, DirectSoundData_080D9ADC, 255, 0, 255, 0	@0808DB04
+	voice_directsound_reverse 60, 0, DirectSoundData_080D9ADC, 255, 0, 255, 0	@0808DB04
 	voice_directsound 60, 0, DirectSoundData_080DA120, 255, 0, 255, 0	@0808DB10
 	voice_directsound 60, 0, DirectSoundData_080DAADC, 255, 0, 255, 0	@0808DB1C
 	voice_directsound 60, 0, DirectSoundData_080DB550, 255, 0, 255, 0	@0808DB28
@@ -59,5 +59,5 @@ voicegroup003:	@ 0x0808D8F4
 	voice_directsound 60, 0, DirectSoundData_080D6D6C, 255, 0, 255, 0	@0808DB70
 	voice_directsound 60, 0, DirectSoundData_080DEE48, 255, 0, 255, 0	@0808DB7C
 	voice_directsound 60, 0, DirectSoundData_080DF8D8, 255, 0, 255, 0	@0808DB88
-	voice_directsound_type32 60, 0, DirectSoundData_080DF8D8, 255, 0, 255, 0	@0808DB94
+	voice_directsound_reverse 60, 0, DirectSoundData_080DF8D8, 255, 0, 255, 0	@0808DB94
 	voice_directsound 60, 0, DirectSoundData_080CF368, 255, 0, 255, 0	@0808DBA0
