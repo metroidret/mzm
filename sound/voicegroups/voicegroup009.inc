@@ -17,6 +17,6 @@ voicegroup009:	@ 0x0808E098
 	voice_noise 60, 0, 0, 1, 0, 0, 15, 4	@0808E11C
 	voice_directsound 60, 0, DirectSoundData_08104EDC, 255, 0, 255, 0	@0808E128
 	voice_directsound 60, 0, DirectSoundData_08100CBC, 255, 0, 255, 0	@0808E134
-	voice_directsound_type32 60, 0, DirectSoundData_080CE470, 255, 0, 255, 0	@0808E140
+	voice_directsound_reverse 60, 0, DirectSoundData_080CE470, 255, 0, 255, 0	@0808E140
 	voice_directsound 60, 0, DirectSoundData_080CF368, 255, 0, 255, 0	@0808E14C
 	voice_directsound 60, 0, DirectSoundData_080A1908, 255, 0, 255, 0	@0808E158
