@@ -238,7 +238,7 @@ u32 BlockDestroyNonReformBlock(struct ClipdataBlockData* pClipBlock)
 u32 BlockDestroyBombChainBlock(struct ClipdataBlockData* pClipBlock)
 {
     BlockStoreBrokenNonReformBlock(pClipBlock->xPosition, pClipBlock->yPosition, sBlockBehaviors[pClipBlock->blockBehavior].type);
-    gBgPointersAndDimensions.pClipDecomp[pClipBlock->yPosition * gBgPointersAndDimensions.clipdataWidth + pClipBlock->xPosition] = CLIPDATA_AIR;
+    SET_CLIP_BLOCK(CLIPDATA_AIR, pClipBlock->xPosition, pClipBlock->yPosition);
     return TRUE;
 }
 
@@ -251,7 +251,7 @@ u32 BlockDestroyBombChainBlock(struct ClipdataBlockData* pClipBlock)
 u32 BlockDestroySingleBreakableBlock(struct ClipdataBlockData* pClipBlock)
 {
     BlockStoreBrokenNonReformBlock(pClipBlock->xPosition, pClipBlock->yPosition, sBlockBehaviors[pClipBlock->blockBehavior].type);
-    gBgPointersAndDimensions.pClipDecomp[pClipBlock->yPosition * gBgPointersAndDimensions.clipdataWidth + pClipBlock->xPosition] = CLIPDATA_AIR;
+    SET_CLIP_BLOCK(CLIPDATA_AIR, pClipBlock->xPosition, pClipBlock->yPosition);
     return TRUE;
 }
 
@@ -269,24 +269,24 @@ u32 BlockDestroySquareBlock(struct ClipdataBlockData* pClipBlock)
 
     // Destroy top left
     BlockStoreBrokenNonReformBlock(pClipBlock->xPosition, pClipBlock->yPosition, blockType);
-    gBgPointersAndDimensions.pClipDecomp[pClipBlock->yPosition * gBgPointersAndDimensions.clipdataWidth + pClipBlock->xPosition] = 0;
+    SET_CLIP_BLOCK(CLIPDATA_AIR, pClipBlock->xPosition, pClipBlock->yPosition);
 
     // Destroy bottom right
     pClipBlock->xPosition++;
     pClipBlock->yPosition++;
     BlockStoreBrokenNonReformBlock(pClipBlock->xPosition, pClipBlock->yPosition, blockType);
-    gBgPointersAndDimensions.pClipDecomp[pClipBlock->yPosition * gBgPointersAndDimensions.clipdataWidth + pClipBlock->xPosition] = 0;
+    SET_CLIP_BLOCK(CLIPDATA_AIR, pClipBlock->xPosition, pClipBlock->yPosition);
     
     // Destroy top right
     pClipBlock->yPosition--;
     BlockStoreBrokenNonReformBlock(pClipBlock->xPosition, pClipBlock->yPosition, blockType);
-    gBgPointersAndDimensions.pClipDecomp[pClipBlock->yPosition * gBgPointersAndDimensions.clipdataWidth + pClipBlock->xPosition] = 0;
+    SET_CLIP_BLOCK(CLIPDATA_AIR, pClipBlock->xPosition, pClipBlock->yPosition);
     
     // Destroy bottom left
     pClipBlock->xPosition--;
     pClipBlock->yPosition++;
     BlockStoreBrokenNonReformBlock(pClipBlock->xPosition, pClipBlock->yPosition, blockType);
-    gBgPointersAndDimensions.pClipDecomp[pClipBlock->yPosition * gBgPointersAndDimensions.clipdataWidth + pClipBlock->xPosition] = 0;
+    SET_CLIP_BLOCK(CLIPDATA_AIR, pClipBlock->xPosition, pClipBlock->yPosition);
 
     // Play sound
     if (gCurrentClipdataAffectingAction != CAA_SPEEDBOOSTER)
@@ -718,7 +718,7 @@ u32 BlockUpdateMakeSolidBlocks(u8 makeSolid, u16 xPosition, u16 yPosition)
         result = FALSE;
         if (i != UCHAR_MAX)
         {
-            if (gBgPointersAndDimensions.pClipDecomp[gBgPointersAndDimensions.clipdataWidth * yPosition + xPosition] == CLIPDATA_AIR)
+            if (GET_CLIP_BLOCK_(xPosition, yPosition) == CLIPDATA_AIR)
             {
                 // Store if no block
                 pBlocks[i] = C_16_2_8(xPosition, yPosition);
@@ -940,8 +940,7 @@ void BlockUpdateBrokenBlockAnimation(struct BrokenBlock* pBlock)
         return;
 
     // Write value to BG1 map
-    gBgPointersAndDimensions.backgrounds[1].pDecomp[pBlock->yPosition * gBgPointersAndDimensions.backgrounds[1].width +
-        pBlock->xPosition] = value;
+    SET_BG_BLOCK(1, value, pBlock->xPosition, pBlock->yPosition);
 
     // Check is on screen, no need to update the tilemap if off screen, that can be delegated to the room tilemap update functions
     offset = SUB_PIXEL_TO_BLOCK(gBg1YPosition);
@@ -1267,7 +1266,7 @@ void BlockProcessBombChains(void)
             }
             else
             {
-                clipdata = gBgPointersAndDimensions.pClipDecomp[clipBlock.yPosition * gBgPointersAndDimensions.clipdataWidth + clipBlock.xPosition];
+                clipdata = GET_CLIP_BLOCK(clipBlock.xPosition, clipBlock.yPosition);
                 if (clipBlock.behavior == gTilemapAndClipPointers.pClipBehaviors[clipdata])
                 {
                     if (!BlockDestroyNonReformBlock(&clipBlock))
@@ -1291,7 +1290,7 @@ void BlockProcessBombChains(void)
             }
             else
             {
-                clipdata = gBgPointersAndDimensions.pClipDecomp[clipBlock.yPosition * gBgPointersAndDimensions.clipdataWidth + clipBlock.xPosition];
+                clipdata = GET_CLIP_BLOCK(clipBlock.xPosition, clipBlock.yPosition);
                 if (clipBlock.behavior == gTilemapAndClipPointers.pClipBehaviors[clipdata])
                 {
                     if (!BlockDestroyNonReformBlock(&clipBlock))
@@ -1318,7 +1317,7 @@ void BlockProcessBombChains(void)
             }
             else
             {
-                clipdata = gBgPointersAndDimensions.pClipDecomp[clipBlock.yPosition * gBgPointersAndDimensions.clipdataWidth + clipBlock.xPosition];
+                clipdata = GET_CLIP_BLOCK(clipBlock.xPosition, clipBlock.yPosition);
                 if (clipBlock.behavior == gTilemapAndClipPointers.pClipBehaviors[clipdata])
                 {
                     if (!BlockDestroyNonReformBlock(&clipBlock))
@@ -1342,7 +1341,7 @@ void BlockProcessBombChains(void)
             }
             else
             {
-                clipdata = gBgPointersAndDimensions.pClipDecomp[clipBlock.yPosition * gBgPointersAndDimensions.clipdataWidth + clipBlock.xPosition];
+                clipdata = GET_CLIP_BLOCK(clipBlock.xPosition, clipBlock.yPosition);
                 if (clipBlock.behavior == gTilemapAndClipPointers.pClipBehaviors[clipdata])
                 {
                     if (!BlockDestroyNonReformBlock(&clipBlock))
@@ -1396,7 +1395,7 @@ void BlockCheckStartNewSubBombChain(u8 type, u8 xPosition, u8 yPosition)
     gCurrentClipdataAffectingAction = CAA_BOMB_CHAIN;
 
     // Check the current position
-    clipdata = gBgPointersAndDimensions.pClipDecomp[yPosition * gBgPointersAndDimensions.clipdataWidth + xPosition];
+    clipdata = GET_CLIP_BLOCK(xPosition, yPosition);
     if (clipdata != CLIPDATA_AIR)
         BlockApplyCcaa(yPosition, xPosition, clipdata);
 

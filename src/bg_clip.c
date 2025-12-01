@@ -36,7 +36,7 @@ void BgClipSetBgBlockValue(u8 bg, u16 value, u16 yPosition, u16 xPosition)
     u16 offset;
 
     // Write value
-    gBgPointersAndDimensions.backgrounds[bg].pDecomp[yPosition * gBgPointersAndDimensions.backgrounds[bg].width + xPosition] = value;
+    SET_BG_BLOCK(bg, value, xPosition, yPosition);
 
     // Check is on screen, no need to update the tilemap if off screen, that can be delegated to the room tilemap update functions
     offset = SUB_PIXEL_TO_BLOCK(gBg1YPosition);
@@ -81,7 +81,7 @@ void BgClipSetBg1BlockValue(u16 value, u16 yPosition, u16 xPosition)
     u16 offset;
 
     // Write value
-    gBgPointersAndDimensions.backgrounds[1].pDecomp[yPosition * gBgPointersAndDimensions.backgrounds[1].width + xPosition] = value;
+    SET_BG_BLOCK(1, value, xPosition, yPosition);
 
     // Check is on screen, no need to update the tilemap if off screen, that can be delegated to the room tilemap update functions
     offset = SUB_PIXEL_TO_BLOCK(gBg1YPosition);
@@ -122,7 +122,7 @@ void BgClipSetBg1BlockValue(u16 value, u16 yPosition, u16 xPosition)
  */
 void BgClipSetRawBg1BlockValue(u32 value, u16 yPosition, u16 xPosition)
 {
-    gBgPointersAndDimensions.backgrounds[1].pDecomp[gBgPointersAndDimensions.backgrounds[1].width * yPosition + xPosition] = value;
+    SET_BG_BLOCK_(1, value, xPosition, yPosition);
 }
 
 /**
@@ -134,7 +134,7 @@ void BgClipSetRawBg1BlockValue(u32 value, u16 yPosition, u16 xPosition)
  */
 void BgClipSetClipdataBlockValue(u16 value, u16 yPosition, u16 xPosition)
 {
-    gBgPointersAndDimensions.pClipDecomp[gBgPointersAndDimensions.clipdataWidth * yPosition + xPosition] = value;
+    SET_CLIP_BLOCK_(value, xPosition, yPosition);
 }
 
 /**
@@ -193,7 +193,7 @@ void BgClipApplyClipdataChangingTransparency(void)
     yPosition = SUB_PIXEL_TO_BLOCK_(position);
 
     // Get clipdata
-    clipdata = gTilemapAndClipPointers.pClipBehaviors[gBgPointersAndDimensions.pClipDecomp[yPosition * gBgPointersAndDimensions.clipdataWidth + xPosition]];
+    clipdata = gTilemapAndClipPointers.pClipBehaviors[GET_CLIP_BLOCK(xPosition, yPosition)];
     if (clipdata == CLIP_BEHAVIOR_NONE)
         return;
 
@@ -294,8 +294,7 @@ void BgClipCheckWalkingOnCrumbleBlock(void)
     for (i = xPosition; i <= checkPos; i++)
     {
         // Get clipdata behavior
-        behavior = gTilemapAndClipPointers.pClipBehaviors[gBgPointersAndDimensions.
-            pClipDecomp[yPosition * gBgPointersAndDimensions.clipdataWidth + i]];
+        behavior = gTilemapAndClipPointers.pClipBehaviors[GET_CLIP_BLOCK(i, yPosition)];
 
         if (behavior == CLIP_BEHAVIOR_CRUMBLE_BLOCK)
         {
@@ -364,7 +363,7 @@ void BgClipCheckTouchingTransitionOnElevator(void)
     yPosition = behavior / BLOCK_SIZE;
 
     // Get clipdata behavior
-    position = gBgPointersAndDimensions.pClipDecomp[yPosition * gBgPointersAndDimensions.clipdataWidth + xPosition];
+    position = GET_CLIP_BLOCK(xPosition, yPosition);
     behavior = gTilemapAndClipPointers.pClipBehaviors[position];
 
     // Check is the correct transition type (up if going up, down if going down)
@@ -438,14 +437,14 @@ void BgClipCheckTouchingTransitionOrTank(void)
     // Get clipdata behaviors on the X axis
     for (i = 0; i < ARRAY_SIZE(xPositions) - 1; i++)
     {
-        j = gBgPointersAndDimensions.pClipDecomp[yPositions[0] * gBgPointersAndDimensions.clipdataWidth + xPositions[i]];
+        j = GET_CLIP_BLOCK(xPositions[i], yPositions[0]);
         behaviors[i] = gTilemapAndClipPointers.pClipBehaviors[j];
     }
 
     // Get clipdata behaviors on the y axis
     for (i = 0; i < ARRAY_SIZE(yPositions) - 1; i++)
     {
-        j = gBgPointersAndDimensions.pClipDecomp[yPositions[i + 1] * gBgPointersAndDimensions.clipdataWidth + xPositions[2]];
+        j = GET_CLIP_BLOCK(xPositions[2], yPositions[i + 1]);
         behaviors[i + 2] = gTilemapAndClipPointers.pClipBehaviors[j];
     }
 
@@ -656,8 +655,7 @@ void BgClipCheckGrabbingCrumbleBlock(u8 dontDestroy)
         yPosition = SUB_PIXEL_TO_BLOCK((u32)(gSamusData.yPosition + yOffset));
 
         // Get behavior
-        behavior = gTilemapAndClipPointers.pClipBehaviors[gBgPointersAndDimensions.
-            pClipDecomp[yPosition * gBgPointersAndDimensions.clipdataWidth + xPosition]];
+        behavior = gTilemapAndClipPointers.pClipBehaviors[GET_CLIP_BLOCK(xPosition, yPosition)];
 
         // Check is crumble
         if (behavior == CLIP_BEHAVIOR_CRUMBLE_BLOCK)

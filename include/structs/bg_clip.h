@@ -4,6 +4,41 @@
 #include "types.h"
 #include "structs/connection.h"
 
+// Macros
+
+/**
+ * Gets a background block value using `gBgPointersAndDimensions` (order is y * width + x)
+ */
+#define GET_BG_BLOCK(bg, x, y) gBgPointersAndDimensions.backgrounds[bg].pDecomp[(y) * gBgPointersAndDimensions.backgrounds[bg].width + (x)]
+/**
+ * Gets a background block value using `gBgPointersAndDimensions` (order is width * y + x)
+ */
+#define GET_BG_BLOCK_(bg, x, y) gBgPointersAndDimensions.backgrounds[bg].pDecomp[gBgPointersAndDimensions.backgrounds[bg].width * (y) + (x)]
+/**
+ * Gets a clipdata block value using `gBgPointersAndDimensions` (order is y * width + x)
+ */
+#define GET_CLIP_BLOCK(x, y) gBgPointersAndDimensions.pClipDecomp[(y) * gBgPointersAndDimensions.clipdataWidth + (x)]
+/**
+ * Gets a clipdata block value using `gBgPointersAndDimensions` (order is width * y + x)
+ */
+#define GET_CLIP_BLOCK_(x, y) gBgPointersAndDimensions.pClipDecomp[gBgPointersAndDimensions.clipdataWidth * (y) + (x)]
+/**
+ * Sets a background block value using `gBgPointersAndDimensions` (order is y * width + x)
+ */
+#define SET_BG_BLOCK(bg, value, x, y) GET_BG_BLOCK(bg, x, y) = value
+/**
+ * Sets a background block value using `gBgPointersAndDimensions` (order is width * y + x)
+ */
+#define SET_BG_BLOCK_(bg, value, x, y) GET_BG_BLOCK_(bg, x, y) = value
+/**
+ * Sets a clipdata block value using `gBgPointersAndDimensions` (order is y * width + x)
+ */
+#define SET_CLIP_BLOCK(value, x, y) GET_CLIP_BLOCK(x, y) = value
+/**
+ * Sets a clipdata block value using `gBgPointersAndDimensions` (order is width * y + x)
+ */
+#define SET_CLIP_BLOCK_(value, x, y) GET_CLIP_BLOCK_(x, y) = value
+
 // Structs
 
 struct BackgroundPointersAndDimensions {

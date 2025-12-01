@@ -933,8 +933,7 @@ void ConnectionLoadDoors(void)
         i = gHatchData[currHatchId].yPosition;
 
         // Get behavior
-        bldalpha = gTilemapAndClipPointers.pClipBehaviors[gBgPointersAndDimensions.pClipDecomp[i *
-            gBgPointersAndDimensions.clipdataWidth + currDoor]];
+        bldalpha = gTilemapAndClipPointers.pClipBehaviors[GET_CLIP_BLOCK(currDoor, i)];
 
         // Check for transparency
         bldalpha = BgClipGetNewBldalphaValue(bldalpha, bldalpha);

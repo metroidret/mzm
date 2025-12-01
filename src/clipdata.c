@@ -54,8 +54,8 @@ u32 ClipdataProcessForSamus(u16 yPosition, u16 xPosition)
         if (collision.tileY < gBgPointersAndDimensions.clipdataHeight)
         {
             // Get clip type at position
-            collision.clipdataType = gTilemapAndClipPointers.pClipCollisions[gBgPointersAndDimensions.pClipDecomp[
-                gBgPointersAndDimensions.clipdataWidth * collision.tileY + collision.tileX]];
+            collision.clipdataType = gTilemapAndClipPointers.pClipCollisions[
+                GET_CLIP_BLOCK_(collision.tileX, collision.tileY)];
 
             // Get sub pixel
             collision.subPixelY = yPosition % BLOCK_SIZE;
@@ -121,7 +121,7 @@ u32 ClipdataProcess(u16 yPosition, u16 xPosition)
     }
 
     // Get clip at position
-    clipdata = gBgPointersAndDimensions.pClipDecomp[collision.tileY * gBgPointersAndDimensions.clipdataWidth + collision.tileX];
+    clipdata = GET_CLIP_BLOCK(collision.tileX, collision.tileY);
     if (gCurrentClipdataAffectingAction != CAA_NONE)
     {
         // Apply Ccaa if not none
@@ -452,8 +452,7 @@ u32 ClipdataUpdateCurrentAffecting(u16 yPosition, u16 tileY, u16 tileX, u8 dontC
     u32 specialClip;
 
     // Get clipdata behavior of the current tile
-    behavior = gTilemapAndClipPointers.pClipBehaviors[gBgPointersAndDimensions.pClipDecomp[
-        tileY * gBgPointersAndDimensions.clipdataWidth + tileX]];
+    behavior = gTilemapAndClipPointers.pClipBehaviors[GET_CLIP_BLOCK(tileX, tileY)];
 
     // Check for movement clipdata
     if (behavior != CLIP_BEHAVIOR_NONE)
@@ -585,7 +584,7 @@ u32 ClipdataCheckGroundEffect(u16 yPosition, u16 xPosition)
     if (tileY >= gBgPointersAndDimensions.clipdataHeight || tileX >= gBgPointersAndDimensions.clipdataWidth)
         return GROUND_EFFECT_NONE;
 
-    clipdata = gBgPointersAndDimensions.pClipDecomp[tileY * gBgPointersAndDimensions.clipdataWidth + tileX];
+    clipdata = GET_CLIP_BLOCK(tileX, tileY);
     if (clipdata & CLIPDATA_TILEMAP_FLAG)
         clipdata = CLIP_BEHAVIOR_NONE;
     else
