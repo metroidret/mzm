@@ -19,6 +19,8 @@
 #define PEND 	0xb4
 // repeat
 #define REPT 	0xb5
+// fine and queue
+#define FINE_QUEUE 0xb6
 // memacc op adr dat ***lib
 #define MEMACC 	0xb9
 // priority
