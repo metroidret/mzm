@@ -10,7 +10,7 @@ sub_0600B000: @ 0x0600B000
 	cmp r4, #0
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
-	ldr pc, _0600B13C @ =0x03005398
+	ldr pc, _0600B13C @ =_03005398
 	bic r0, fp, #0x100000
 	tst r1, #0x10
 	orrne r0, r0, #0x100000
@@ -35,13 +35,13 @@ _0600B068:
 	cmp r4, #0
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
-	ldr pc, _0600B140 @ =0x03005398
+	ldr pc, _0600B140 @ =_03005398
 	add r2, sp, r0 @ WARNING: disassembler produces wrong instruction here
 	strb r1, [r2, #0x8bc]
 	cmp r4, #0
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
-	ldr pc, _0600B144 @ =0x03005398
+	ldr pc, _0600B144 @ =_03005398
 	tst fp, #0x200000
 	eor fp, fp, #0x200000
 	bne _0600B0B0
@@ -50,7 +50,7 @@ _0600B0A0:
 	cmp r4, #0
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
-	ldr pc, _0600B148 @ =0x03005398
+	ldr pc, _0600B148 @ =_03005398
 _0600B0B0:
 	strb r1, [sp, #0x9c4]
 	ldrb r0, [sp, #0xa38]
@@ -64,7 +64,7 @@ _0600B0B0:
 	cmp r4, #0
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
-	ldr pc, _0600B14C @ =0x03005398
+	ldr pc, _0600B14C @ =_03005398
 _0600B0E4:
 	.byte 0x90, 0x3B, 0x00, 0x06, 0x02, 0x6D, 0x6C, 0x20, 0x67, 0x6B, 0x4D, 0x27
 	.byte 0x47, 0x48, 0x4B, 0x20, 0x4D, 0x48, 0x4B, 0x4B, 0x68, 0x00, 0x00, 0x00, 0xD0, 0x3B, 0x00, 0x06
@@ -72,8 +72,8 @@ _0600B0E4:
 	.byte 0x01, 0x48, 0x49, 0x2D, 0x49, 0x4D, 0x4B, 0x48, 0x4B, 0x2B, 0x6D, 0x00, 0x50, 0x3C, 0x00, 0x06
 	.byte 0x02, 0x4D, 0x6B, 0x2C, 0x2E, 0x48, 0x6D, 0x27, 0x4C, 0x4B, 0x6C, 0x2E, 0x4D, 0x48, 0x29, 0x2A
 	.byte 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
-_0600B13C: .4byte 0x03005398
-_0600B140: .4byte 0x03005398
-_0600B144: .4byte 0x03005398
-_0600B148: .4byte 0x03005398
-_0600B14C: .4byte 0x03005398
+_0600B13C: .4byte _03005398
+_0600B140: .4byte _03005398
+_0600B144: .4byte _03005398
+_0600B148: .4byte _03005398
+_0600B14C: .4byte _03005398

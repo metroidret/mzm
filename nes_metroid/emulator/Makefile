@@ -221,7 +221,7 @@ $(LD_SCRIPT): linker.ld
 src/sram/%.s: CFLAGS = -Werror -O1 -mthumb-interwork -fhex-asm -f2003-patch
 src/sram/%.s: src/sram/%.c
 
-../tools/%: ../tools/%.c
+../../tools/%: ../../tools/%.c
 	$(MSG) HOSTCC $@
 	$Q$(HOSTCC) $< $(HOSTCFLAGS) $(HOSTCPPFLAGS) -o $@
 

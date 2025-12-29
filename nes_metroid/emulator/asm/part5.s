@@ -20,7 +20,7 @@ sub_0600E048: @ 0x0600E048
 	sub sp, #0xc
 	adds r2, r0, #0
 	str r1, [sp]
-	ldr r5, _0600E0E0 @ =0x03005840
+	ldr r5, _0600E0E0 @ =sub_03005840
 _0600E05A:
 	movs r0, #0x92
 	lsls r0, r0, #4
@@ -92,7 +92,7 @@ _0600E0AA:
 	adds r1, r1, r2
 	b _0600E0FE
 	.align 2, 0
-_0600E0E0: .4byte 0x03005840
+_0600E0E0: .4byte sub_03005840
 _0600E0E4: .4byte 0x00000924
 _0600E0E8: .4byte 0x0600B800
 _0600E0EC:
@@ -232,16 +232,16 @@ sub_0600E1C4: @ 0x0600E1C4
 	strh r1, [r5, #-6]
 	mov r1, #1
 	strh r1, [r5]
-	ldr r4, _0600E234 @ =0x03000489
+	ldr r4, _0600E234 @ =sub_03000488
 	add lr, pc, #0x0 @ =0x0600E224
 	bx r4
-	ldr r4, _0600E238 @ =0x03000369
+	ldr r4, _0600E238 @ =sub_03000368
 	ldr r0, [sp, #0x91c]
 	add lr, pc, #0x8 @ =_0600E23C
 	bx r4
 	.align 2, 0
-_0600E234: .4byte 0x03000489
-_0600E238: .4byte 0x03000369
+_0600E234: .4byte sub_03000488
+_0600E238: .4byte sub_03000368
 _0600E23C:
 	bl _0600EBF8
 _0600E240:
@@ -254,11 +254,11 @@ _0600E248:
 	add lr, pc, #0x14 @ =_0600E270
 	mov r0, sp
 	ldr r1, _0600E268 @ =0x0600A010
-	ldr ip, _0600E26C @ =0x0203E38D
+	ldr ip, _0600E26C @ =sub_0203E38C
 	bx ip
 	.align 2, 0
 _0600E268: .4byte 0x0600A010
-_0600E26C: .4byte 0x0203E38D
+_0600E26C: .4byte sub_0203E38C
 _0600E270:
 	strb r0, [sp, #0xa30]
 _0600E274:
@@ -268,7 +268,7 @@ _0600E274:
 	mov r2, #0
 	str r2, [sp, #0x9b8]
 	add lr, pc, #0x0 @ =_0600E290
-	ldr pc, _0600E2BC @ =0x030030E8
+	ldr pc, _0600E2BC @ =sub_030030E8
 _0600E290:
 	add r0, sp, #0x800
 	add r0, r0, #0x84
@@ -280,11 +280,13 @@ _0600E290:
 	ldr r0, [sp, #0x9cc]
 	add r0, r0, #1
 	str r0, [sp, #0x9cc]
-	ldr pc, _0600E2C0 @ =0x03002E0C
+	ldr pc, _0600E2C0 @ =sub_03002E0C
 	.align 2, 0
-_0600E2BC: .4byte 0x030030E8
-_0600E2C0: .4byte 0x03002E0C
-_0600E2C4:
+_0600E2BC: .4byte sub_030030E8
+_0600E2C0: .4byte sub_03002E0C
+
+	arm_func_start sub_0600E2C4
+sub_0600E2C4: @ 0x0600E2C4
 	ldrb r0, [sp, #0xa44]
 	cmp r0, #0
 	beq _0600E2E0
@@ -295,28 +297,28 @@ _0600E2C4:
 _0600E2E0:
 	ldr pc, [sp, #0x940]
 	add lr, pc, #0x8 @ =sub_0600E2F4
-	ldr ip, _0600E2F0 @ =0x0203E261
+	ldr ip, _0600E2F0 @ =sub_0203E260
 	bx ip
 	.align 2, 0
-_0600E2F0: .4byte 0x0203E261
+_0600E2F0: .4byte sub_0203E260
 
 	arm_func_start sub_0600E2F4
 sub_0600E2F4: @ 0x0600E2F4
 	mov r0, sp
 	add lr, pc, #0x8 @ =sub_0600E308
-	ldr ip, _0600E304 @ =0x0203E119
+	ldr ip, _0600E304 @ =sub_0203E118
 	bx ip
 	.align 2, 0
-_0600E304: .4byte 0x0203E119
+_0600E304: .4byte sub_0203E118
 
 	arm_func_start sub_0600E308
 sub_0600E308: @ 0x0600E308
 	mov r0, sp
 	add lr, pc, #0x8 @ =sub_0600E31C
-	ldr ip, _0600E318 @ =0x0203E001
+	ldr ip, _0600E318 @ =sub_0203E000
 	bx ip
 	.align 2, 0
-_0600E318: .4byte 0x0203E001
+_0600E318: .4byte sub_0203E000
 
 	arm_func_start sub_0600E31C
 sub_0600E31C: @ 0x0600E31C
@@ -348,16 +350,16 @@ _0600E34C:
 	cmp r0, #0x300
 	beq _0600E3B8
 	add lr, pc, #0x4 @ =sub_0600E38C
-	ldr pc, _0600E388 @ =0x03002FAC
+	ldr pc, _0600E388 @ =sub_03002FAC
 	.align 2, 0
-_0600E388: .4byte 0x03002FAC
+_0600E388: .4byte sub_03002FAC
 
 	arm_func_start sub_0600E38C
 sub_0600E38C: @ 0x0600E38C
 	add lr, pc, #0xC @ =sub_0600E3A0
 	mov r0, #0x4000
 	orr r0, r0, #0x15
-	ldr r1, _0600E574 @ =0x03000381
+	ldr r1, _0600E574 @ =sub_03000380
 	bx r1
 
 	arm_func_start sub_0600E3A0
@@ -388,7 +390,7 @@ _0600E3E8:
 	cmp r0, r1
 	svceq #0x20000
 	beq _0600E3E8
-	b _0600E2C4
+	b sub_0600E2C4
 
 	arm_func_start sub_0600E3FC
 sub_0600E3FC: @ 0x0600E3FC
@@ -420,7 +422,7 @@ sub_0600E440: @ 0x0600E440
 	strb r0, [sp, #0xa2d]
 	bne _0600E3D8
 	add lr, pc, #0x4 @ =_0600E468
-	ldr r2, _0600E578 @ =0x0300053D
+	ldr r2, _0600E578 @ =sub_0300053C
 	bx r2
 _0600E468:
 	bl sub_0600EB04
@@ -459,7 +461,7 @@ sub_0600E4D0: @ 0x0600E4D0
 	ldr r1, [sp, #0x854]
 	mov r2, sp
 	add lr, pc, #0x4 @ =_0600E4E8
-	ldr ip, _0600E57C @ =0x0203E415
+	ldr ip, _0600E57C @ =sub_0203E414
 	bx ip
 _0600E4E8:
 	cmp r0, #0
@@ -493,7 +495,7 @@ sub_0600E534: @ 0x0600E534
 _0600E548:
 	ldr sb, [r2], #4
 	add lr, pc, #0x0 @ =0x0600E554
-	ldr pc, _0600E580 @ =0x03002DF0
+	ldr pc, _0600E580 @ =sub_03002DF0
 	cmp r2, fp
 	blo _0600E548
 	cmp r8, r6
@@ -503,10 +505,10 @@ _0600E548:
 	ldrb r0, [r2, #0xd]
 	bx r7
 	.align 2, 0
-_0600E574: .4byte 0x03000381
-_0600E578: .4byte 0x0300053D
-_0600E57C: .4byte 0x0203E415
-_0600E580: .4byte 0x03002DF0
+_0600E574: .4byte sub_03000380
+_0600E578: .4byte sub_0300053C
+_0600E57C: .4byte sub_0203E414
+_0600E580: .4byte sub_03002DF0
 _0600E584: .4byte 0x0000C399
 _0600E588:
 	mov r0, #0x9c
@@ -606,7 +608,7 @@ _0600E6DC:
 	mov r0, #0x10
 	bl sub_06006E08
 	add lr, pc, #0x4 @ =sub_0600E700
-	ldr ip, _0600E7B0 @ =0x0203E391
+	ldr ip, _0600E7B0 @ =sub_0203E390
 	bx ip
 
 	arm_func_start sub_0600E700
@@ -630,7 +632,7 @@ sub_0600E700: @ 0x0600E700
 	add r1, r0, #0x10
 	mov r0, sp
 	add lr, pc, #0x68 @ =sub_0600E7B8
-	ldr ip, _0600E7B4 @ =0x0203E375
+	ldr ip, _0600E7B4 @ =sub_0203E374
 	bx ip
 
 	arm_func_start sub_0600E754
@@ -663,8 +665,8 @@ sub_0600E794: @ 0x0600E794
 	bx lr
 	.align 2, 0
 _0600E7AC: .4byte sub_0600E440
-_0600E7B0: .4byte 0x0203E391
-_0600E7B4: .4byte 0x0203E375
+_0600E7B0: .4byte sub_0203E390
+_0600E7B4: .4byte sub_0203E374
 
 	arm_func_start sub_0600E7B8
 sub_0600E7B8: @ 0x0600E7B8
@@ -708,11 +710,11 @@ _0600E810:
 	movs r2, r6
 	ldrne r2, _0600E858 @ =0x0E007FD8
 	add lr, pc, #0xC @ =sub_0600E860
-	ldr ip, _0600E85C @ =0x0203E3DD
+	ldr ip, _0600E85C @ =sub_0203E3DC
 	bx ip
 	.align 2, 0
 _0600E858: .4byte 0x0E007FD8
-_0600E85C: .4byte 0x0203E3DD
+_0600E85C: .4byte sub_0203E3DC
 
 	arm_func_start sub_0600E860
 sub_0600E860: @ 0x0600E860
@@ -785,13 +787,13 @@ sub_0600E93C: @ 0x0600E93C
 	strb r0, [sp, #0xa48]
 	add lr, pc, #0x4 @ =sub_0600E960
 	str lr, [sp, #0x940]
-	b _0600E2C4
+	b sub_0600E2C4
 
 	arm_func_start sub_0600E960
 sub_0600E960: @ 0x0600E960
 	ldrb r0, [sp, #0xa48]
 	cmp r0, #0
-	bne _0600E2C4
+	bne sub_0600E2C4
 	mov ip, #0x4000000
 	mov r0, #0x80
 	strh r0, [ip]
@@ -910,7 +912,7 @@ sub_0600EB04: @ 0x0600EB04
 sub_0600EB0C: @ 0x0600EB0C
 	mov r0, #1
 _0600EB10:
-	ldr ip, _0600EBE4 @ =0x03001D25
+	ldr ip, _0600EBE4 @ =sub_03001D24
 	bx ip
 
 	arm_func_start sub_0600EB18
@@ -972,13 +974,13 @@ _0600EB7C:
 	strb r1, [sp, #0xa32]
 	mov r1, #0xa
 	strb r1, [sp, #0xa2d]
-	ldr r2, _0600EBF0 @ =0x03000501
+	ldr r2, _0600EBF0 @ =sub_03000500
 	bx r2
 	.align 2, 0
-_0600EBE4: .4byte 0x03001D25
+_0600EBE4: .4byte sub_03001D24
 _0600EBE8: .4byte sub_0600E440
 _0600EBEC: .4byte _0600E3D8
-_0600EBF0: .4byte 0x03000501
+_0600EBF0: .4byte sub_03000500
 _0600EBF4: .4byte 0x0600A000
 _0600EBF8:
 	ldr r0, _0600EBF4 @ =0x0600A000
@@ -1014,7 +1016,7 @@ sub_0600EC4C: @ 0x0600EC4C
 	mov r0, sp
 	ldr r1, _0600EC88 @ =0x0600A010
 	add lr, pc, #0x4 @ =_0600EC70
-	ldr ip, _0600EC8C @ =0x0203E375
+	ldr ip, _0600EC8C @ =sub_0203E374
 	bx ip
 _0600EC70:
 	ldr r3, [sp, #0x924]
@@ -1026,7 +1028,7 @@ _0600EC80:
 	b _0600EBF8
 	.align 2, 0
 _0600EC88: .4byte 0x0600A010
-_0600EC8C: .4byte 0x0203E375
+_0600EC8C: .4byte sub_0203E374
 
 	arm_func_start sub_0600EC90
 sub_0600EC90: @ 0x0600EC90

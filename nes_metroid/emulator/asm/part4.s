@@ -3,9 +3,9 @@
 
     .syntax unified
 
-_0600C000: .4byte 0x0600C024
+_0600C000: .4byte sub_0600C024
 _0600C004: .4byte 0x00000005
-_0600C008: .4byte 0x06006000
+_0600C008: .4byte sub_06006000
 
 	arm_func_start sub_0600C00C
 sub_0600C00C: @ 0x0600C00C
@@ -13,11 +13,14 @@ sub_0600C00C: @ 0x0600C00C
 	bl sub_0600C020
 	mov r6, #0x7c00
 	orr r6, r6, #0x6000000
-	ldr pc, _0600C008 @ =0x06006000
+	ldr pc, _0600C008 @ =sub_06006000
 
 	arm_func_start sub_0600C020
 sub_0600C020: @ 0x0600C020
-	ldr pc, _0600C000 @ =0x0600C024
+	ldr pc, _0600C000 @ =sub_0600C024
+
+	arm_func_start sub_0600C024
+sub_0600C024: @ 0x0600C024
 	strb r0, [sp, #0xa54]
 	mov r0, #0x8f
 	strb r0, [sp, #0xa4f]

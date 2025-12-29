@@ -9,12 +9,29 @@
 #define REG_DMA2 (REG_BASE + 0x0c8)
 #define REG_DMA3 (REG_BASE + 0x0d4)
 
+#define REG_DMA0_SRC (REG_DMA0 + 0)
+#define REG_DMA0_DST (REG_DMA0 + 4)
+#define REG_DMA0_CNT (REG_DMA0 + 8)
+#define REG_DMA0_CNT_L (REG_DMA0 + 8)
+#define REG_DMA0_CNT_H (REG_DMA0 + 10)
+
 #define REG_DMA1_SRC (REG_DMA1 + 0)
 #define REG_DMA1_DST (REG_DMA1 + 4)
 #define REG_DMA1_CNT (REG_DMA1 + 8)
+#define REG_DMA1_CNT_L (REG_DMA1 + 8)
+#define REG_DMA1_CNT_H (REG_DMA1 + 10)
+
 #define REG_DMA2_SRC (REG_DMA2 + 0)
 #define REG_DMA2_DST (REG_DMA2 + 4)
 #define REG_DMA2_CNT (REG_DMA2 + 8)
+#define REG_DMA2_CNT_L (REG_DMA2 + 8)
+#define REG_DMA2_CNT_H (REG_DMA2 + 10)
+
+#define REG_DMA3_SRC (REG_DMA3 + 0)
+#define REG_DMA3_DST (REG_DMA3 + 4)
+#define REG_DMA3_CNT (REG_DMA3 + 8)
+#define REG_DMA3_CNT_L (REG_DMA3 + 8)
+#define REG_DMA3_CNT_H (REG_DMA3 + 10)
 
 #define DMA_SET(channel, src, dst, cnt)                                        \
     {                                                                          \

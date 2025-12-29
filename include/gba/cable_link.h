@@ -6,6 +6,12 @@
 #define REG_TM0CNT_L (REG_BASE + 0x100)
 #define REG_TM0CNT_H (REG_BASE + 0x102)
 
+#define REG_TM1CNT_L (REG_BASE + 0x104)
+#define REG_TM1CNT_H (REG_BASE + 0x106)
+
+#define REG_TM2CNT_L (REG_BASE + 0x108)
+#define REG_TM2CNT_H (REG_BASE + 0x10A)
+
 #define REG_TM3CNT_L (REG_BASE + 0x10C)
 #define REG_TM3CNT_H (REG_BASE + 0x10E)
 
