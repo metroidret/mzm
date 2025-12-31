@@ -14,10 +14,10 @@ extern u16 gUnk_03005A68[]; // length?
 extern u16 gUnk_03005FB0;
 extern u32 gUnk_03005FB4;
 extern u32 gUnk_03005FBC;
-extern u8 gUnk_03005FC0;
+extern u16 gUnk_03005FC0;
 extern u32 gUnk_03005FC8;
 extern u16 gUnk_03005FCC;
-extern u8 gUnk_03005FD8;
+extern u16 gUnk_03005FD8;
 
 void sub_03000000(u16 arg0);
 u16 sub_03000024(u8 arg0);
@@ -308,9 +308,9 @@ u8 sub_03000380(u16 arg0)
     if (arg0 == 0x4015)
     {
         subroutine_arg0[0] = (u8)gUnk_03005FCC;
-        subroutine_arg0[1] = gUnk_03005FD8;
+        subroutine_arg0[1] = (u8)gUnk_03005FD8;
         subroutine_arg0[2] = gUnk_03005FB0;
-        subroutine_arg0[3] = gUnk_03005FC0;
+        subroutine_arg0[3] = (u8)gUnk_03005FC0;
 
         for (var_r4 = 0; var_r4 < 4; var_r4++)
         {
