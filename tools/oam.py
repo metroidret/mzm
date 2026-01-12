@@ -1,119 +1,112 @@
-def ParsePart0(value):
-    result = ""
-
-    if value & 0x100:
-        result = "OBJ_ROTATION_SCALING"
-
-    if value & 0x200:
-        if result != "":
-            result += " | OBJ_DOUBLE_SIZE"
-        else:
-            result = "OBJ_DISABLE"
-
-    if value & 0x400:
-        if result != "":
-            result += " | "
-        result += "OBJ_MODE_SEMI_TRANSPARENT"
-    
-    if value & 0x1000:
-        if result != "":
-            result += " | "
-        result += "OBJ_MOSAIC"
-
-    if value & 0x2000:
-        if result != "":
-            result += " | "
-        result += "OBJ_COLOR_256_1"
-
-    if value & 0x4000:
-        if result != "":
-            result += " | "
-        result += "OBJ_SHAPE_HORIZONTAL"
-
-    if value & 0x8000:
-        if result != "":
-            result += " | "
-        result += "OBJ_SHAPE_VERTICAL"
-
-    if result != "":
-        result += " | "
-    
-    result += hex(value & 0xFF)
-
-    return result
-
-def ParsePart1(part0, value):
-    result = ""
-    sizes = ["OBJ_SIZE_16x16", "OBJ_SIZE_32x32", "OBJ_SIZE_64x64"]
-
-    if part0.__contains__("OBJ_ROTATION_SCALING"):
-        result = hex(value & 0x3E00)
-    else:
-        if value & 0x1000:
-            result = "OBJ_X_FLIP"
-        
-        if value & 0x2000:
-            if result != "":
-                result += " | "
-            result += "OBJ_Y_FLIP"
-
-    if part0.__contains__("OBJ_SHAPE_HORIZONTAL"):
-        sizes = ["OBJ_SIZE_32x8", "OBJ_SIZE_32x16", "OBJ_SIZE_64x32"]
-    elif part0.__contains__("OBJ_SHAPE_VERTICAL"):
-        sizes = ["OBJ_SIZE_8x32", "OBJ_SIZE_16x32", "OBJ_SIZE_32x64"]
-        
-    if value >> 14 & 3 != 0:
-        if result != "":
-            result += " | "
-        result += sizes[(value >> 14 & 3) - 1]
+import argparse
+from typing import BinaryIO
 
 
-    if result != "":
-        result += " | "
-    
-    result += hex(value & 0x1FF)
+DIMS = [
+    "OAM_DIMS_8x8",
+    "OAM_DIMS_16x16",
+    "OAM_DIMS_32x32",
+    "OAM_DIMS_64x64",
 
-    return result
+    "OAM_DIMS_16x8",
+    "OAM_DIMS_32x8",
+    "OAM_DIMS_32x16",
+    "OAM_DIMS_64x32",
 
-def ParsePart2(value):
-    result = ""
+    "OAM_DIMS_8x16",
+    "OAM_DIMS_8x32",
+    "OAM_DIMS_16x32",
+    "OAM_DIMS_32x64",
+]
 
-    if value & 0x8000:
-        result = "OBJ_SPRITE_OAM | "
-    
-    result += hex(value & ~0x8000)
+FLIPS = [
+    "OAM_NO_FLIP",
+    "OAM_X_FLIP",
+    "OAM_Y_FLIP",
+    "OAM_XY_FLIP"
+]
 
-    return result
+MODES = [
+    "OAM_OBJ_MODE_SEMI_TRANSPARENT",
+    "OAM_OBJ_MODE_WINDOW"
+]
 
-file = open("../mzm_us_baserom.gba", "rb")
 
-def Func():
-    inputValue = input("Address : ")
+def dump_oam_frame(rom: BinaryIO, addr: int, name: str = None) -> None:
+    INDENT = " " * 4
+    if name is None:
+        name = f"sOamFrame_{addr:x}"
+    rom.seek(addr)
+    # Get count
+    count_val = _read_16(rom)
+    count = count_val & 0xFFF
+    lines = [f"const u16 {name}[OAM_DATA_SIZE({count})] = {{"]
+    lines.append(INDENT + _count_str(count_val) + ",")
+    # Get each entry
+    for _ in range(count):
+        attrs = [_read_16(rom) for _ in range(3)]
+        es = _single_entry(attrs)
+        lines.append(INDENT + es + ",")
+    lines.append("};")
+    print("\n".join(lines))
 
-    addr = int(inputValue, 16)
 
-    file.seek(addr)
+def _read_16(rom: BinaryIO) -> int:
+    b = rom.read(2)
+    return b[0] | (b[1] << 8)
 
-    part_count_raw = int.from_bytes(file.read(2), "little")
-    part_count = part_count_raw & 0xFF
 
-    result = hex(part_count)
+def _count_str(count: int) -> str:
+    cs = str(count & 0xFFF)
+    if count & (1 << 12):
+        cs += " | ARM_CANNON_OAM_ORDER_IN_FRONT"
+    elif count & (1 << 13):
+        cs += " | ARM_CANNON_OAM_ORDER_BEHIND"
+    return cs
 
-    if part_count_raw & 0x1000:
-        result += " | ARM_CANNON_OAM_ORDER_BEHIND"
 
-    if part_count_raw & 0x2000:
-        result += " | ARM_CANNON_OAM_ORDER_IN_FRONT"
-    
-    result += ",\n"
+def _single_entry(attrs: list[int]) -> str:
+    # Get macro parameters
+    param_strs = _get_param_strs(attrs)
+    ps = ", ".join(param_strs)
+    mode = "" if len(param_strs) == 7 else "_MODE"
+    return f"OAM_ENTRY{mode}({ps})"
 
-    for x in range(0, part_count):
-        part0 = ParsePart0(int.from_bytes(file.read(2), "little"))
-        result += part0 + ", "
-        result += ParsePart1(part0, int.from_bytes(file.read(2), "little")) + ", "
-        result += ParsePart2(int.from_bytes(file.read(2), "little")) + ",\n"
 
-    print(result)
-    Func()
+def _get_param_strs(attrs: list[int]) -> list[str]:
+    assert len(attrs) == 3
+    attr0, attr1, attr2 = attrs
+    x = attr1 & 0x1FF
+    if x >= 0x100:
+        x -= 0x200
+    y = attr0 & 0xFF
+    if y >= 0x80:
+        y -= 0x100
+    obj_shape = attr0 >> 14
+    obj_size = attr1 >> 14
+    dims = DIMS[(obj_shape << 2) | obj_size]
+    flip = FLIPS[(attr1 >> 12) & 3]
+    pal = attr2 >> 12
+    prio = (attr2 >> 10) & 3
+    tile = attr2 & 0x3FF
+    mode = (attr0 >> 10) & 3
+    param_strs = [str(x), str(y), dims, flip, f"0x{tile:x}", str(pal), str(prio)]
+    if mode > 0:
+        param_strs.append(MODES[mode - 1])
+    return param_strs
 
-Func()
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("rom_path", type=str)
+    parser.add_argument("addrs", type=str,
+        help="One or more addresses, comma separated (use 0x for hex)")
+
+    args = parser.parse_args()
+
+    addr_strs = args.addrs.split(",")
+    addrs = [int(a, 0) for a in addr_strs]
+
+    with open(args.rom_path, "rb") as f:
+        for addr in addrs:
+            dump_oam_frame(f, addr)

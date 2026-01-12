@@ -2,11 +2,9 @@
 
 This is a work in progress decompilation of Metroid - Zero Mission.
 
-2718/2721 functions decompiled (99.89%, 3 left)
+2718/2721 functions decompiled (99.89%, [3 left](docs/non_matching_functions.md))
 
 0x76b014/0x76b014 bytes of data not in blobs (100%, 0 left)
-
-Progress can be seen here: https://docs.google.com/spreadsheets/d/1X8XarD5evY8ZI7r_GQqh1pYmdVMbBcINYfRBUlogmKY/edit#gid=0
 
 This repository can be used to build multiple ROMs. The ROMs are named like this: `mzm_{region}.gba` (or `mzm_{region}_debug.gba`)
 
@@ -41,7 +39,6 @@ The default built ROM is mzm_us.gba
 - Install `binutils-arm-none-eabi` by running this command: `sudo apt-get install binutils-arm-none-eabi`
 - Install `git` by running this command: `sudo apt-get install git`
 - Install `make` by running this command: `sudo apt-get install make`
-
 - Clone [agbcc](https://github.com/jiangzhengwenjz/agbcc) by running this command: `git clone https://github.com/jiangzhengwenjz/agbcc`
 - Enter the agbcc folder (run `cd agbcc`) and build it (run `./build.sh`)
 - Add agbcc to your path (`export PATH="<agbcc_path>:$PATH"`, where `<agbcc_path>` is the full path to the agbcc directory)
