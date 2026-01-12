@@ -1,5 +1,6 @@
     .include "asm/constants.inc"
     .include "asm/macros.inc"
+	.include "asm/emulator_constants.inc"
 
     .syntax unified
 
@@ -21,16 +22,16 @@ sub_0600C020: @ 0x0600C020
 
 	arm_func_start sub_0600C024
 sub_0600C024: @ 0x0600C024
-	strb r0, [sp, #0xa54]
+	strb r0, [sp, #SP_A54]
 	mov r0, #0x8f
-	strb r0, [sp, #0xa4f]
-	ldr r2, [sp, #0x870]
+	strb r0, [sp, #SP_A4F]
+	ldr r2, [sp, #SP_870]
 	cmp r2, #0x80000
 	bxne lr
 	mov r0, #1
-	strb r0, [sp, #0xa53]
+	strb r0, [sp, #SP_A53]
 	mov r0, #0x10
-	strb r0, [sp, #0xa50]
+	strb r0, [sp, #SP_A50]
 	bx lr
 
 	arm_func_start sub_0600C050

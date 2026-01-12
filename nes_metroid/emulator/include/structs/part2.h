@@ -1,0 +1,96 @@
+#ifndef PART2_STRUCT_H
+#define PART2_STRUCT_H
+
+#include "types.h"
+
+extern void* gUnk_03005A50;
+extern void* gUnk_03005A54;
+extern void* gUnk_03005A58;
+extern u8 gUnk_03005A5C;
+extern u8 gUnk_03005A5D;
+extern u8 gUnk_03005A5E;
+extern u16 gUnk_03005A60;
+extern void (*gUnk_03005A64)(void*, u32);
+extern u16 gUnk_03005A68[]; // length?
+extern u16 gUnk_03005A7A;
+extern u16 gUnk_03005A7C;
+extern u32* gUnk_03005A80;
+extern u32* gUnk_03005A84;
+extern u32* gUnk_03005A88;
+extern u32* gUnk_03005A8C;
+extern u32 gUnk_03005A90;
+extern u16 gUnk_03005A94;
+extern u16 gUnk_03005A96;
+extern u16 gUnk_03005A98;
+extern u16 gUnk_03005A9A;
+extern u16 gUnk_03005A9C;
+extern u16 gUnk_03005A9E;
+extern u16 gUnk_03005AA0;
+extern u16 gUnk_03005AA2;
+extern u16 gUnk_03005AA4;
+extern u16 gUnk_03005AA6;
+extern u16 gUnk_03005AA8;
+extern u16 gUnk_03005AAA;
+extern u8 gUnk_03005AAC;
+extern u8 gUnk_03005AAD;
+extern u32 gUnk_03005AB0;
+extern u16 gUnk_03005AB4;
+extern u16 gUnk_03005AB6;
+extern u16 gUnk_03005AB8;
+extern u16 gUnk_03005ABA;
+extern u16 gUnk_03005ABC;
+extern u16 gUnk_03005ABE;
+extern u16 gUnk_03005AC0;
+extern u16 gUnk_03005AC2;
+extern u16 gUnk_03005AC4;
+extern u16 gUnk_03005AC6;
+extern u16 gUnk_03005AC8;
+extern u16 gUnk_03005ACA;
+extern u8 gUnk_03005ACC;
+extern u8 gUnk_03005ACD;
+extern u32 gUnk_03005AD0;
+extern u16 gUnk_03005AD4;
+extern u16 gUnk_03005AD6;
+extern u16 gUnk_03005AD8;
+extern u16 gUnk_03005ADA;
+extern u16 gUnk_03005ADC;
+extern u16 gUnk_03005ADE;
+extern u16 gUnk_03005AE0;
+extern u16 gUnk_03005AE2;
+extern u16 gUnk_03005AE4;
+extern u32 gUnk_03005AE8;
+extern u32 gUnk_03005AEC;
+extern u32 gUnk_03005AF0;
+extern u16 gUnk_03005AF4;
+extern u16 gUnk_03005AF6;
+extern u16 gUnk_03005AF8;
+extern u16 gUnk_03005AFA;
+extern u16 gUnk_03005AFC;
+extern u16 gUnk_03005AFE;
+extern u16 gUnk_03005B00;
+extern u16 gUnk_03005B02;
+extern u16 gUnk_03005B04;
+extern u16 gUnk_03005B06;
+extern u8 gUnk_03005B08;
+extern u32 gUnk_03005B10[];
+extern u32 gUnk_03005B50[];
+extern u32 gUnk_03005BF0[];
+extern u32 gUnk_03005C90[];
+extern u32 gUnk_03005D30[];
+extern u32 gUnk_03005DD0[];
+extern u32 gUnk_03005E70[];
+extern u32 gUnk_03005F10[];
+extern u16 gUnk_03005FB0;
+extern u32 gUnk_03005FB4;
+extern u8 gUnk_03005FB8;
+extern u32 gUnk_03005FBC;
+extern u16 gUnk_03005FC0;
+extern u32 gUnk_03005FC4;
+extern u32 gUnk_03005FC8;
+extern u16 gUnk_03005FCC;
+extern u32 gUnk_03005FD0;
+extern u16 gUnk_03005FD4;
+extern u16 gUnk_03005FD8;
+extern u32 gUnk_03005FDC;
+
+#endif /* PART2_STRUCT_H */
