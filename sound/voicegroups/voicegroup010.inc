@@ -19,7 +19,7 @@ voicegroup010:	@ 0x0808E164
 	voice_directsound 60, 0, DirectSoundData_080A78F4, 255, 0, 255, 0	@0808E200
 	voice_noise 60, 0, 0, 0, 0, 0, 15, 4	@0808E20C
 	voice_directsound 60, 0, DirectSoundData_0810CD2C, 255, 0, 255, 0	@0808E218
-	voice_directsound_type32 60, 0, DirectSoundData_0810CD2C, 255, 0, 255, 0	@0808E224
+	voice_directsound_reverse 60, 0, DirectSoundData_0810CD2C, 255, 0, 255, 0	@0808E224
 	voice_noise 60, 0, 0, 1, 0, 0, 15, 4	@0808E230
 	voice_noise 60, 0, 0, 0, 0, 0, 10, 4	@0808E23C
 	voice_directsound 60, 0, DirectSoundData_08100CBC, 255, 0, 255, 0	@0808E248

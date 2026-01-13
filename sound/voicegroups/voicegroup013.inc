@@ -14,7 +14,7 @@ voicegroup013:	@ 0x0808E3A4
 	voice_directsound 60, 0, DirectSoundData_08115C9C, 255, 0, 255, 0	@0808E404
 	voice_directsound 60, 0, DirectSoundData_08115C9C, 64, 0, 231, 0	@0808E410
 	voice_directsound 60, 0, DirectSoundData_08116B8C, 255, 0, 255, 0	@0808E41C
-	voice_directsound_type32 60, 0, DirectSoundData_08116B8C, 255, 0, 255, 0	@0808E428
+	voice_directsound_reverse 60, 0, DirectSoundData_08116B8C, 255, 0, 255, 0	@0808E428
 	voice_directsound 60, 0, DirectSoundData_080CDF24, 255, 0, 255, 0	@0808E434
 	voice_directsound 60, 0, DirectSoundData_080E2644, 255, 0, 255, 0	@0808E440
 	voice_directsound 60, 0, DirectSoundData_08100CBC, 255, 0, 255, 0	@0808E44C

@@ -1,63 +1,11 @@
+#include "part2.h"
 #include "types.h"
 #include "gba.h"
 #include "macros.h"
 
+#include "structs/part2.h"
+
 extern u8 sUnk_030023DC[];
-
-extern u16 gUnk_03005A7A;
-extern u32 gUnk_03005A90;
-extern u16 gUnk_03005A94;
-extern u16 gUnk_03005A96;
-extern u16 gUnk_03005A98;
-extern u16 gUnk_03005A9A;
-extern u16 gUnk_03005A9C;
-extern u16 gUnk_03005A9E;
-extern u16 gUnk_03005AA0;
-extern u16 gUnk_03005AA2;
-extern u16 gUnk_03005AA4;
-extern u16 gUnk_03005AA6;
-extern u16 gUnk_03005AA8;
-extern u16 gUnk_03005AAA;
-extern u8 gUnk_03005AAC;
-extern u8 gUnk_03005AAD;
-extern u32 gUnk_03005AB0;
-extern u16 gUnk_03005AB4;
-extern u16 gUnk_03005AB6;
-extern u16 gUnk_03005AB8;
-extern u16 gUnk_03005ABA;
-extern u16 gUnk_03005ABC;
-extern u16 gUnk_03005ABE;
-extern u16 gUnk_03005AC0;
-extern u16 gUnk_03005AC2;
-extern u16 gUnk_03005AC4;
-extern u16 gUnk_03005AC6;
-extern u16 gUnk_03005AC8;
-extern u16 gUnk_03005ACA;
-extern u8 gUnk_03005ACC;
-extern u8 gUnk_03005ACD;
-extern u32 gUnk_03005FC4;
-extern u16 gUnk_03005FCC;
-extern u32 gUnk_03005FD0;
-extern u16 gUnk_03005FD8;
-
-extern void sub_03000778(void);
-extern void sub_03000790(void);
-extern void sub_03000848(u16 arg0);
-
-void sub_030009A0(u8 arg0);
-void sub_030009DC(void);
-void sub_03000D20(void);
-void sub_03000D2C(u32 arg0);
-void sub_03000D38(void);
-void sub_03000DEC(void);
-void sub_03000E10(void);
-void sub_03000E40(u16 arg0);
-void sub_03000E94(u8 arg0);
-void sub_03000EAC(u8 arg0);
-void sub_03000F10(u8 arg0);
-void sub_03000F28(u8 arg0);
-void sub_03000F40(u8 arg0);
-void sub_03000F7C(void);
 
 void sub_030009A0(u8 arg0)
 {

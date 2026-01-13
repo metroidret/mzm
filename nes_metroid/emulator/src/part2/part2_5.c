@@ -1,107 +1,14 @@
+#include "part2.h"
 #include "types.h"
 #include "gba.h"
 #include "macros.h"
+
+#include "structs/part2.h"
 
 extern u8 sUnk_030023DC[];
 extern u16 sUnk_03002846;
 extern u32 sUnk_03002988;
 extern u32 sUnk_0600E008[];
-
-extern u16 gUnk_03005A7A;
-extern u16 gUnk_03005A7C;
-extern u32* gUnk_03005A80;
-extern u32* gUnk_03005A84;
-extern u32* gUnk_03005A88;
-extern u32* gUnk_03005A8C;
-extern u32 gUnk_03005A90;
-extern u16 gUnk_03005A94;
-extern u16 gUnk_03005A96;
-extern u16 gUnk_03005A98;
-extern u16 gUnk_03005A9A;
-extern u16 gUnk_03005AA0;
-extern u16 gUnk_03005AA2;
-extern u16 gUnk_03005AA4;
-extern u16 gUnk_03005AA6;
-extern u16 gUnk_03005AA8;
-extern u16 gUnk_03005AAA;
-extern u8 gUnk_03005AAD;
-extern u16 gUnk_03005AB4;
-extern u16 gUnk_03005AB6;
-extern u16 gUnk_03005AB8;
-extern u16 gUnk_03005ABA;
-extern u16 gUnk_03005AC0;
-extern u16 gUnk_03005AC2;
-extern u16 gUnk_03005AC4;
-extern u16 gUnk_03005AC6;
-extern u16 gUnk_03005AC8;
-extern u16 gUnk_03005ACA;
-extern u8 gUnk_03005ACD;
-extern u32 gUnk_03005AD0;
-extern u16 gUnk_03005AD4;
-extern u16 gUnk_03005AD6;
-extern u16 gUnk_03005AD8;
-extern u16 gUnk_03005ADA;
-extern u16 gUnk_03005ADC;
-extern u16 gUnk_03005ADE;
-extern u32 gUnk_03005AE8;
-extern u32 gUnk_03005AEC;
-extern u32 gUnk_03005AF0;
-extern u16 gUnk_03005AF4;
-extern u16 gUnk_03005AF6;
-extern u16 gUnk_03005AF8;
-extern u16 gUnk_03005AFA;
-extern u16 gUnk_03005AFC;
-extern u16 gUnk_03005AFE;
-extern u16 gUnk_03005B00;
-extern u16 gUnk_03005B02;
-extern u16 gUnk_03005B04;
-extern u16 gUnk_03005B06;
-extern u8 gUnk_03005B08;
-extern u32 gUnk_03005B10[];
-extern u32 gUnk_03005B50[];
-extern u32 gUnk_03005BF0[];
-extern u32 gUnk_03005C90[];
-extern u32 gUnk_03005D30[];
-extern u32 gUnk_03005DD0[];
-extern u32 gUnk_03005E70[];
-extern u32 gUnk_03005F10[];
-extern u16 gUnk_03005FB0;
-extern u8 gUnk_03005FB8;
-extern u16 gUnk_03005FC0;
-extern u16 gUnk_03005FCC;
-extern u32 gUnk_03005FD0;
-extern u16 gUnk_03005FD4;
-extern u16 gUnk_03005FD8;
-extern u32 gUnk_03005FDC;
-
-extern void sub_03000000(u16 arg0);
-extern u16 sub_03000050(u16 arg0);
-extern void sub_03000790(void);
-extern void sub_03000824(void);
-extern void sub_03000848(u16 arg0);
-extern void sub_03000948(void);
-extern void sub_03000D38(void);
-extern void sub_03000DEC(void);
-extern void sub_03000E10(void);
-extern void sub_03000E40(u16 arg0);
-extern void sub_030013C8(void);
-extern void sub_030014E0(void);
-
-void sub_03001730(void);
-void sub_0300173C(void);
-void sub_03001788(u32 arg0);
-void sub_03001794(void);
-void sub_03001840(void);
-void sub_03001864(u8 arg0);
-void sub_0300187C(u8 arg0);
-void sub_030018E0(u8 arg0);
-void sub_03001944(u8 arg0);
-void sub_03001990(void);
-void sub_03001C10(u8 arg0);
-void sub_03001C58(u8 arg0);
-void sub_03001D24(u32 arg0);
-void sub_03001D30(u32 arg0, u32 arg1);
-void sub_0300203C(void);
 
 void sub_03001730(void)
 {
@@ -345,7 +252,7 @@ void sub_03001D24(u32 arg0)
     gUnk_03005FB8 = arg0;
 }
 
-void sub_03001D30(u32 arg0, u32 arg1)
+void sub_03001D30(void* arg0, u32 arg1)
 {
     u32 var_r5;
     void* var_0;
@@ -362,7 +269,7 @@ void sub_03001D30(u32 arg0, u32 arg1)
 
     if (gUnk_03005FB8 != 0)
     {
-        sub_03000634(0xF0000000);
+        sub_03000634(0xF0000000, arg1);
         sub_03000704(arg0, arg1);
         return;
     }

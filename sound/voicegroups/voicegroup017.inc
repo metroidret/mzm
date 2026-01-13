@@ -4,7 +4,7 @@
 	.global voicegroup017
 voicegroup017:	@ 0x0808E698
 	voice_directsound 60, 0, DirectSoundData_0812C0DC, 255, 0, 255, 0	@0808E698
-	voice_directsound_type32 60, 0, DirectSoundData_0812C0DC, 255, 0, 255, 0	@0808E6A4
+	voice_directsound_reverse 60, 0, DirectSoundData_0812C0DC, 255, 0, 255, 0	@0808E6A4
 	voice_directsound 60, 0, DirectSoundData_08102A70, 255, 0, 255, 0	@0808E6B0
 	voice_noise 60, 0, 0, 0, 0, 0, 15, 0	@0808E6BC
 	voice_directsound 60, 0, DirectSoundData_080A331C, 255, 0, 244, 0	@0808E6C8

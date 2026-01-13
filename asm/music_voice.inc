@@ -13,7 +13,7 @@
 	_voice_directsound \base_midi_key, \pan, \sample_data_pointer, \attack, \decay, \sustain, \release
 	.endm
 
-	.macro voice_directsound_type32 base_midi_key, pan, sample_data_pointer, attack, decay, sustain, release
+	.macro voice_directsound_reverse base_midi_key, pan, sample_data_pointer, attack, decay, sustain, release
 	.byte 32
 	_voice_directsound \base_midi_key, \pan, \sample_data_pointer, \attack, \decay, \sustain, \release
 	.endm

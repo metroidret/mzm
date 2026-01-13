@@ -8,7 +8,7 @@ voicegroup006:	@ 0x0808DF24
 	voice_noise 60, 0, 0, 0, 0, 0, 15, 0	@0808DF3C
 	voice_noise 60, 0, 0, 1, 0, 0, 15, 0	@0808DF48
 	voice_directsound 60, 0, DirectSoundData_080CE470, 255, 0, 255, 0	@0808DF54
-	voice_directsound_type32 60, 0, DirectSoundData_080CE470, 255, 0, 255, 0	@0808DF60
+	voice_directsound_reverse 60, 0, DirectSoundData_080CE470, 255, 0, 255, 0	@0808DF60
 	voice_directsound 60, 0, DirectSoundData_08104EDC, 255, 0, 255, 0	@0808DF6C
 	voice_noise 60, 0, 0, 1, 0, 0, 15, 3	@0808DF78
 	voice_directsound 60, 0, DirectSoundData_08100CBC, 255, 0, 255, 0	@0808DF84

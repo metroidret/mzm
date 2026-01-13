@@ -34,7 +34,7 @@ complement_check:
 reserved_2:
     .space 1
 
-@ Extra header stuff
+@ Referenced in part5 by sub_0600E4D0, sub_0600E7B8
     .space 1
     .byte 0x11, 0x19, 0x19, '0', 'R', 'O', 'I', 'D', '_', '3', '_', 'B'
     .word 0x087F3398

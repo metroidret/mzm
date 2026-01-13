@@ -1,5 +1,6 @@
 /src/**/*.s
 /data/*
+/sound/direct_sound_samples/*
 
 *.gba
 *.gba.lz
@@ -21,5 +22,3 @@ tools/*.txt
 .vscode
 
 err.log
-
-!/sound/direct_sound_samples/*.bin

@@ -168,6 +168,8 @@ clean:
 ifeq ($(DATA),1)
 	$(MSG) RM data/
 	$Q$(RM) -r data
+	$(MSG) RM sound/direct_sound_samples
+	$Q$(RM) -r sound/direct_sound_samples
 endif
 	$(MSG) RM linker.ld.pp
 	$Q$(RM) linker.ld.pp

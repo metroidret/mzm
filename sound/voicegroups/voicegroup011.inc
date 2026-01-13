@@ -4,7 +4,7 @@
 	.global voicegroup011
 voicegroup011:	@ 0x0808E26C
 	voice_directsound 60, 0, DirectSoundData_08110580, 255, 0, 255, 0	@0808E26C
-	voice_directsound_type32 60, 0, DirectSoundData_080DF8D8, 255, 0, 255, 0	@0808E278
+	voice_directsound_reverse 60, 0, DirectSoundData_080DF8D8, 255, 0, 255, 0	@0808E278
 	voice_directsound 60, 0, DirectSoundData_080CF368, 255, 0, 255, 0	@0808E284
 	voice_square_1 0, 2, 0, 0, 15, 0	@0808E290
 	voice_square_1 0, 2, 0, 0, 15, 0	@0808E29C
