@@ -307,7 +307,7 @@ static u8 RidleySpawnInit(void)
     return FALSE;
 }
 
-static struct CutsceneSubroutineData sRidleySpawnSubroutineData[5] = {
+static struct CutsceneStageData sRidleySpawnStageData[5] = {
     [0] = {
         .pFunction = RidleySpawnInit,
         .oamLength = 1,
@@ -331,15 +331,15 @@ static struct CutsceneSubroutineData sRidleySpawnSubroutineData[5] = {
 };
 
 /**
- * @brief 658a4 | 34 | Subroutine for the ridley spawn cutscene
+ * @brief 658a4 | 34 | Main loop for the ridley spawn cutscene
  * 
  * @return u8 bool, ended
  */
-u8 RidleySpawnSubroutine(void)
+u8 RidleySpawnMainLoop(void)
 {
     u8 ended;
 
-    ended = sRidleySpawnSubroutineData[CUTSCENE_DATA.timeInfo.stage].pFunction();
+    ended = sRidleySpawnStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
     CutsceneUpdateBackgroundsPosition(TRUE);
     RidleySpawnProcessOAM();
     
@@ -353,7 +353,7 @@ u8 RidleySpawnSubroutine(void)
 static void RidleySpawnProcessOAM(void)
 {
     gNextOamSlot = 0;
-    ProcessCutsceneOam(sRidleySpawnSubroutineData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sRidleySpawnOam);
+    ProcessCutsceneOam(sRidleySpawnStageData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sRidleySpawnOam);
     ResetFreeOam();
     CalculateOamPart4(gCurrentOamRotation, gCurrentOamScaling, 0);
 }

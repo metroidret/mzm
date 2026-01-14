@@ -27,8 +27,8 @@
 #define PAL_WITH_FADE ((void*)sEwramPointer + PALRAM_SIZE)
 
 static TourianEscapeFunc_T sTourianEscapeFunctionPointers[2] = {
-    CutsceneDefaultRoutine,
-    TourianEscapeCallSubroutines,
+    CutsceneDummyStage,
+    TourianEscapeUpdateStage,
 };
 
 static s8 sCutsceneScreenShakeOffsets_Set0[2] = {
@@ -50,21 +50,21 @@ static u8 sCutsceneScreenShakeOffsetSetSizes[4] = {
 };
 
 /**
- * @brief 60e28 | 4 | Default subroutine for cutscenes that don't have any
+ * @brief 60e28 | 4 | Dummy stage for cutscenes that don't have any
  * 
  * @return u8 1
  */
-u8 CutsceneDefaultRoutine(void)
+u8 CutsceneDummyStage(void)
 {
     return TRUE;
 }
 
 /**
- * @brief 60e2c | 94 | Subroutine for the tourian escape
+ * @brief 60e2c | 94 | Main loop for the tourian escape
  * 
  * @return u8 bool, ended
  */
-u8 TourianEscapeSubroutine(void)
+u8 TourianEscapeMainLoop(void)
 {
     u8 ended;
 
@@ -249,11 +249,11 @@ void CutsceneEnd(void)
 }
 
 /**
- * @brief 61044 | 1e4 | Subroutine for a cutscene
+ * @brief 61044 | 1e4 | Main loop for a cutscene
  * 
  * @return u8 bool, ended
  */
-u8 CutsceneSubroutine(void)
+u8 CutsceneMainLoop(void)
 {
     u8 result;
     u8 ended;
@@ -386,7 +386,7 @@ u8 CutsceneSubroutine(void)
 }
 
 /**
- * @brief 61228 | 4 | Subroutine that marks the end of a cutscene
+ * @brief 61228 | 4 | Main loop that marks the end of a cutscene
  * 
  * @return u8 1
  */

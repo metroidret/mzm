@@ -76,11 +76,11 @@ static const u32* sEraseSramTextGfxPointers[LANGUAGE_END][2] = {
 };
 
 /**
- * @brief 75c30 | 14c | Subroutine for the erase sram menu
+ * @brief 75c30 | 14c | Main loop for the erase sram menu
  * 
  * @return u32 bool, leaving
  */
-u32 EraseSramSubroutine(void)
+u32 EraseSramMainLoop(void)
 {
     u32 leaving;
 

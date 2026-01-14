@@ -36,7 +36,7 @@ void agbmain(void)
         switch (gMainGameMode)
         {
             case GM_SOFT_RESET:
-                if (SoftResetSubroutine())
+                if (SoftResetMainLoop())
                 {
                     gMainGameMode = GM_INTRO;
                     gSubGameMode1 = 0;
@@ -52,7 +52,7 @@ void agbmain(void)
                 }
                 else
                 #endif // DEBUG
-                if (IntroSubroutine())
+                if (IntroMainLoop())
                 {
                     gMainGameMode = GM_TITLE;
                     gSubGameMode1 = 0;
@@ -70,7 +70,7 @@ void agbmain(void)
                 }
                 else
                 #endif // DEBUG
-                if (TitleScreenSubroutine())
+                if (TitleScreenMainLoop())
                 {
                     #ifdef REGION_EU
                     gSubGameMode1 = 0;
@@ -109,7 +109,7 @@ void agbmain(void)
                 break;
 
             case GM_FILE_SELECT:
-                if (FileSelectMenuSubroutine())
+                if (FileSelectMenuMainLoop())
                 {
                     if (gSubGameMode2 == 1)
                         gMainGameMode = GM_INGAME;
@@ -159,7 +159,7 @@ void agbmain(void)
                 break;
 
             case GM_MAP_SCREEN:
-                if (PauseScreenSubroutine())
+                if (PauseScreenMainLoop())
                 {
                     gMainGameMode = gSubGameMode2;
                     gSubGameMode2 = 0;
@@ -191,7 +191,7 @@ void agbmain(void)
                 break;
 
             case GM_GAMEOVER:
-                if (GameOverSubroutine())
+                if (GameOverMainLoop())
                 {
                     gMainGameMode = gSubGameMode2;
                     gSubGameMode1 = 0;
@@ -200,7 +200,7 @@ void agbmain(void)
                 break;
 
             case GM_CHOZODIA_ESCAPE:
-                if (ChozodiaEscapeSubroutine())
+                if (ChozodiaEscapeMainLoop())
                 {
                     gSubGameMode1 = 0;
                     gMainGameMode = GM_CREDITS;
@@ -208,7 +208,7 @@ void agbmain(void)
                 break;
 
             case GM_CREDITS:
-                if (CreditsSubroutine())
+                if (CreditsMainLoop())
                 {
                     gSubGameMode1 = 0;
                     gMainGameMode = GM_INTRO;
@@ -220,7 +220,7 @@ void agbmain(void)
                 break;
 
             case GM_TOURIAN_ESCAPE:
-                if (TourianEscapeSubroutine())
+                if (TourianEscapeMainLoop())
                 {
                     gSubGameMode1 = 0;
                     gMainGameMode = gSubGameMode2;
@@ -232,7 +232,7 @@ void agbmain(void)
                 break;
 
             case GM_CUTSCENE:
-                if (CutsceneSubroutine())
+                if (CutsceneMainLoop())
                 {
                     gSubGameMode1 = 0;
 
@@ -275,7 +275,7 @@ void agbmain(void)
                 break;
 
             case GM_GALLERY:
-                if (GallerySubroutine())
+                if (GalleryMainLoop())
                 {
                     gSubGameMode1 = 0;
                     gMainGameMode = GM_FILE_SELECT;
@@ -283,7 +283,7 @@ void agbmain(void)
                 break;
 
             case GM_FUSION_GALLERY:
-                if (FusionGallerySubroutine())
+                if (FusionGalleryMainLoop())
                 {
                     gSubGameMode1 = 0;
                     gMainGameMode = GM_FILE_SELECT;
@@ -295,7 +295,7 @@ void agbmain(void)
                 break;
 
             case GM_ERASE_SRAM:
-                if (EraseSramSubroutine())
+                if (EraseSramMainLoop())
                 {
                     if (gSubGameMode2 == 1)
                     {
@@ -317,7 +317,7 @@ void agbmain(void)
 
             case GM_DEBUG_MENU:
                 #ifdef DEBUG
-                if (BootDebugSubroutine())
+                if (BootDebugMainLoop())
                 {
                     gSubGameMode1 = 0;
 

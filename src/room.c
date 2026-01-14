@@ -425,7 +425,7 @@ void RoomReset(void)
     gColorFading.fadeTimer = 0;
     gColorFading.status = 0;
     gColorFading.stage = 0;
-    gColorFading.subroutineTimer = 0;
+    gColorFading.workTimer = 0;
 
     if (gCurrentPowerBomb.animationState != PB_STATE_NONE)
         gScreenShakeX = sScreenShake_Empty;

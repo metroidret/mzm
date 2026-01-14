@@ -5,6 +5,6 @@
 
 typedef u8 (*TourianEscapeFunc_T)(void);
 
-u8 TourianEscapeCallSubroutines(void);
+u8 TourianEscapeUpdateStage(void);
 
 #endif /* TOURIAN_ESCAPE_H */

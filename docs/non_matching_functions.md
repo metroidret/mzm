@@ -7,7 +7,7 @@ Of the 2721 functions in the game, only 3 haven't been matched, as well as 1 boo
 - decomp.me: https://decomp.me/scratch/Qei01
 - Problem: Register swaps
 
-### FileSelectCopyFileSubroutine
+### FileSelectCopyFileMainLoop
 - File: [menus/file_select.c](../src/menus/file_select.c)
 - decomp.me: https://decomp.me/scratch/Rz4bp
 - Problem: Incorrect branches

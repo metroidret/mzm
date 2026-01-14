@@ -32,11 +32,11 @@ static void GameOverUpdateSamusHead(GameOverCursorAction action);
 static void GameOverProcessOAM(void);
 
 /**
- * @brief 778c4 | 214 | Subroutine for the game over
+ * @brief 778c4 | 214 | Main loop for the game over
  * 
  * @return u32 bool, ended
  */
-u32 GameOverSubroutine(void)
+u32 GameOverMainLoop(void)
 {
     u32 ended;
 

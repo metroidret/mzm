@@ -17,15 +17,15 @@
 #ifdef REGION_EU
 static void LanguageSelectChangeHighlight(u8 highlight, u8 language);
 static void LanguageSelectUpdateHighlightAnimation(struct LanguageColorAnimation* pAnim);
-static u32 LanguageSelectSubroutine(void);
+static u32 LanguageSelectMainLoop(void);
 #endif // REGION_EU
 
 /**
- * @brief 7ef9c | 54 | Subroutine for a soft reset
+ * @brief 7ef9c | 54 | Main loop for a soft reset
  * 
  * @return u32 bool, ended
  */
-u32 SoftResetSubroutine(void)
+u32 SoftResetMainLoop(void)
 {
     switch (gSubGameMode1)
     {
@@ -72,7 +72,7 @@ u32 SoftResetSubroutine(void)
             break;
 
         case 4:
-            if (LanguageSelectSubroutine())
+            if (LanguageSelectMainLoop())
             {
                 LANGUAGE_SELECT_DATA.timer = 0;
                 LANGUAGE_SELECT_DATA.languageAnimation.interval = DELTA_TIME;
@@ -188,7 +188,7 @@ static void LanguageSelectUpdateHighlightAnimation(struct LanguageColorAnimation
  * 
  * @return u32 bool, language selected
  */
-static u32 LanguageSelectSubroutine(void)
+static u32 LanguageSelectMainLoop(void)
 {
     s32 language;
 

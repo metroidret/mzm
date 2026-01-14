@@ -29,17 +29,17 @@ static const s8* sChozoStatueTargetPathPointers[6] = {
 };
 
 /**
- * @brief 71f70 | 1da | Easy sleep menu subroutine
+ * @brief 71f70 | 1da | Easy sleep menu main loop
  * 
  * @return u32 bool, ended
  */
-u32 PauseScreenEasySleepSubroutine(void)
+u32 PauseScreenEasySleepMainLoop(void)
 {
     u32 action;
     u16 ie;
 
     action = 0;
-    switch (PAUSE_SCREEN_DATA.subroutineInfo.stage)
+    switch (PAUSE_SCREEN_DATA.stateInfo.stage)
     {
         case EASY_SLEEP_MENU_STAGE_NO_OPTION:
             // On NO option
@@ -52,7 +52,7 @@ u32 PauseScreenEasySleepSubroutine(void)
             {
                 // Goto YES option
                 SoundPlay(SOUND_YES_NO_CURSOR_MOVING);
-                PAUSE_SCREEN_DATA.subroutineInfo.stage = EASY_SLEEP_MENU_STAGE_YES_OPTION;
+                PAUSE_SCREEN_DATA.stateInfo.stage = EASY_SLEEP_MENU_STAGE_YES_OPTION;
                 #ifdef REGION_EU
                 PAUSE_SCREEN_DATA.miscOam[1].xPosition = BLOCK_SIZE * 4 - QUARTER_BLOCK_SIZE;
                 #else // !REGION_EU
@@ -71,14 +71,14 @@ u32 PauseScreenEasySleepSubroutine(void)
             if (gChangedInput & KEY_A)
             {
                 SoundPlay(SOUND_YES_NO_CURSOR_SELECTING_YES);
-                PAUSE_SCREEN_DATA.subroutineInfo.stage = EASY_SLEEP_MENU_STAGE_SLEEP_DELAY;
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage = EASY_SLEEP_MENU_STAGE_SLEEP_DELAY;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             }
             else if (gChangedInput & KEY_RIGHT)
             {
                 // Goto NO option
                 SoundPlay(SOUND_YES_NO_CURSOR_MOVING);
-                PAUSE_SCREEN_DATA.subroutineInfo.stage = EASY_SLEEP_MENU_STAGE_NO_OPTION;
+                PAUSE_SCREEN_DATA.stateInfo.stage = EASY_SLEEP_MENU_STAGE_NO_OPTION;
                 PAUSE_SCREEN_DATA.miscOam[1].xPosition = BLOCK_SIZE * 8 + QUARTER_BLOCK_SIZE;
             }
             else if (gChangedInput & (KEY_B | KEY_L | KEY_R))
@@ -89,17 +89,17 @@ u32 PauseScreenEasySleepSubroutine(void)
             break;
 
         case EASY_SLEEP_MENU_STAGE_SLEEP_DELAY:
-            if (PAUSE_SCREEN_DATA.subroutineInfo.timer > CONVERT_SECONDS(.5f))
+            if (PAUSE_SCREEN_DATA.stateInfo.timer > CONVERT_SECONDS(.5f))
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.stage++;
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage++;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             }
             break;
 
         case EASY_SLEEP_MENU_STAGE_DISABLE_DISPLAY:
             // Hide screen
             PAUSE_SCREEN_DATA.dispcnt ^= DCNT_BLANK;
-            PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+            PAUSE_SCREEN_DATA.stateInfo.stage++;
             break;
 
         case EASY_SLEEP_MENU_STAGE_HANDLE_SLEEP_WAKE:
@@ -128,19 +128,19 @@ u32 PauseScreenEasySleepSubroutine(void)
             PAUSE_SCREEN_DATA.dispcnt ^= DCNT_BLANK;
             // Force no option
             PAUSE_SCREEN_DATA.miscOam[1].xPosition = BLOCK_SIZE * 8 + QUARTER_BLOCK_SIZE;
-            PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+            PAUSE_SCREEN_DATA.stateInfo.stage++;
             break;
 
         case EASY_SLEEP_MENU_STAGE_WAIT_FOR_NO_INPUT:
             if (gButtonInput == KEY_NONE)
-                PAUSE_SCREEN_DATA.subroutineInfo.stage = EASY_SLEEP_MENU_STAGE_NO_OPTION;
+                PAUSE_SCREEN_DATA.stateInfo.stage = EASY_SLEEP_MENU_STAGE_NO_OPTION;
             break;
     }
 
     if (action)
     {
-        PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
-        PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+        PAUSE_SCREEN_DATA.stateInfo.stage = 0;
+        PAUSE_SCREEN_DATA.stateInfo.timer = 0;
 
         if (action == 1)
             SoundPlay(SOUND_CLOSING_EASY_SLEEP_SCREEN);
@@ -525,11 +525,11 @@ void ChozoStatueHintScrolling(void)
 }
 
 /**
- * @brief 728b8 | 25c | Chozo statue hint subroutine
+ * @brief 728b8 | 25c | Chozo statue hint main loop
  * 
  * @return u32 bool, ended
  */
-u32 ChozoStatueHintSubroutine(void)
+u32 ChozoStatueHintMainLoop(void)
 {
     u32 ended;
 
@@ -537,49 +537,49 @@ u32 ChozoStatueHintSubroutine(void)
     ChozoStatueHintMovement();
     ChozoStatueHintScrolling();
 
-    switch (PAUSE_SCREEN_DATA.subroutineInfo.stage)
+    switch (PAUSE_SCREEN_DATA.stateInfo.stage)
     {
-        case CHOZO_HINT_SUBROUTINE_STAGE_DELAY_BEFORE_UPDATE:
-            if (PAUSE_SCREEN_DATA.subroutineInfo.timer > TWO_THIRD_SECOND)
+        case CHOZO_HINT_STAGE_DELAY_BEFORE_UPDATE:
+            if (PAUSE_SCREEN_DATA.stateInfo.timer > TWO_THIRD_SECOND)
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.stage++;
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage++;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             }
             break;
 
-        case CHOZO_HINT_SUBROUTINE_STAGE_BEGIN_UPDATE:
+        case CHOZO_HINT_STAGE_BEGIN_UPDATE:
             PAUSE_SCREEN_DATA.chozoHintTarget.movementStage = CHOZO_HINT_MOVEMENT_STAGE_CALCULATE_MOVEMENT;
-            PAUSE_SCREEN_DATA.subroutineInfo.stage++;
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.stage++;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             break;
 
-        case CHOZO_HINT_SUBROUTINE_STAGE_WAIT_UPDATE_FINISHED:
+        case CHOZO_HINT_STAGE_WAIT_UPDATE_FINISHED:
             if (!(PAUSE_SCREEN_DATA.chozoHintTarget.activeMovementScrollingFlag & (TARGET_SCROLLING_FLAG | TARGET_MOVEMENT_FLAG)))
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.stage++;
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage++;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             }
             break;
 
-        case CHOZO_HINT_SUBROUTINE_STAGE_CHECK_FINISHED:
+        case CHOZO_HINT_STAGE_CHECK_FINISHED:
             if (PAUSE_SCREEN_DATA.chozoHintTarget.unk_42 > -1)
-                PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+                PAUSE_SCREEN_DATA.stateInfo.stage++;
             else
-                PAUSE_SCREEN_DATA.subroutineInfo.stage = CHOZO_HINT_SUBROUTINE_STAGE_DELAY_BEFORE_FINISHED;
+                PAUSE_SCREEN_DATA.stateInfo.stage = CHOZO_HINT_STAGE_DELAY_BEFORE_FINISHED;
 
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             break;
 
-        case CHOZO_HINT_SUBROUTINE_STAGE_DELAY_BEFORE_FADE_OUT:
-            if (PAUSE_SCREEN_DATA.subroutineInfo.timer > CONVERT_SECONDS(1.f))
+        case CHOZO_HINT_STAGE_DELAY_BEFORE_FADE_OUT:
+            if (PAUSE_SCREEN_DATA.stateInfo.timer > CONVERT_SECONDS(1.f))
             {
                 PAUSE_SCREEN_DATA.bldcnt |= (BLDCNT_BG3_FIRST_TARGET_PIXEL | BLDCNT_OBJ_FIRST_TARGET_PIXEL);
-                PAUSE_SCREEN_DATA.subroutineInfo.stage++;
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage++;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             }
             break;
 
-        case CHOZO_HINT_SUBROUTINE_STAGE_UPDATE_FADE_OUT:
+        case CHOZO_HINT_STAGE_UPDATE_FADE_OUT:
             if (gWrittenToBldalpha_H + gWrittenToBldalpha_L != 0)
             {
                 if (gWrittenToBldalpha_H != 0)
@@ -590,12 +590,12 @@ u32 ChozoStatueHintSubroutine(void)
             }
             else
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.stage++;
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage++;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             }
             break;
 
-        case CHOZO_HINT_SUBROUTINE_STAGE_SETUP_NEXT_AREA:
+        case CHOZO_HINT_STAGE_SETUP_NEXT_AREA:
             PAUSE_SCREEN_DATA.chozoHintTarget.unk_41++;
             PAUSE_SCREEN_DATA.currentArea = PAUSE_SCREEN_DATA.chozoHintTarget.unk_42;
 
@@ -607,11 +607,11 @@ u32 ChozoStatueHintSubroutine(void)
             UpdateMenuOamDataID(&PAUSE_SCREEN_DATA.overlayOam[0], sChozoHintAreaNamesOamIds[PAUSE_SCREEN_DATA.currentArea]);
             PauseScreenUpdateBossIcons();
 
-            PAUSE_SCREEN_DATA.subroutineInfo.stage++;
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.stage++;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             break;
 
-        case CHOZO_HINT_SUBROUTINE_STAGE_UPDATE_FADE_IN:
+        case CHOZO_HINT_STAGE_UPDATE_FADE_IN:
             if (PAUSE_SCREEN_DATA.targetBldAlpha != C_16_2_8(gWrittenToBldalpha_H, gWrittenToBldalpha_L))
             {
                 if (HIGH_BYTE(PAUSE_SCREEN_DATA.targetBldAlpha) > gWrittenToBldalpha_H)
@@ -623,20 +623,20 @@ u32 ChozoStatueHintSubroutine(void)
             else
             {
                 PAUSE_SCREEN_DATA.bldcnt &= ~(BLDCNT_BG3_FIRST_TARGET_PIXEL | BLDCNT_OBJ_FIRST_TARGET_PIXEL);
-                PAUSE_SCREEN_DATA.subroutineInfo.stage = CHOZO_HINT_SUBROUTINE_STAGE_DELAY_BEFORE_UPDATE;
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage = CHOZO_HINT_STAGE_DELAY_BEFORE_UPDATE;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             }
             break;
 
-        case CHOZO_HINT_SUBROUTINE_STAGE_DELAY_BEFORE_FINISHED:
-            if (PAUSE_SCREEN_DATA.subroutineInfo.timer > TWO_THIRD_SECOND)
+        case CHOZO_HINT_STAGE_DELAY_BEFORE_FINISHED:
+            if (PAUSE_SCREEN_DATA.stateInfo.timer > TWO_THIRD_SECOND)
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.stage++;
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage++;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             }
             break;
 
-        case CHOZO_HINT_SUBROUTINE_STAGE_FINISHED:
+        case CHOZO_HINT_STAGE_FINISHED:
             if (gDemoState != DEMO_STATE_NONE)
                 ended = TRUE;
             else if (gChangedInput & (gButtonAssignments.pause | KEY_A))

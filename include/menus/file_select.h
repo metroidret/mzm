@@ -7,7 +7,7 @@
 void FileSelectApplyStereo(void);
 void FileSelectProcessOAM(void);
 
-u32 FileSelectMenuSubroutine(void);
+u32 FileSelectMenuMainLoop(void);
 
 void FileSelectPlayMenuSound(u8 request);
 

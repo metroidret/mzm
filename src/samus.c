@@ -2778,8 +2778,8 @@ void SamusUpdate(void)
     // Update physics
     SamusUpdatePhysics(pData);
 
-    // Execute pose subroutine
-    newPose = SamusExecutePoseSubroutine(pData);
+    // Execute pose main loop
+    newPose = SamusExecutePoseMainLoop(pData);
     if (newPose != SPOSE_NONE)
     {
         // Set new pose if it changed
@@ -3785,7 +3785,7 @@ void SamusCheckShinesparking(struct SamusData* pData)
 }
 
 /**
- * @brief 8478 | 4 | Samus inactivity subroutine
+ * @brief 8478 | 4 | Samus inactivity main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -3844,7 +3844,7 @@ SamusAnimState SamusUpdateAnimation(struct SamusData* pData, u8 slowed)
 }
 
 /**
- * @brief 84dc | d4 | Samus running subroutine
+ * @brief 84dc | d4 | Samus running main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -3915,7 +3915,7 @@ SamusPose SamusRunning(struct SamusData* pData)
 }
 
 /**
- * @brief 85b0 | 124 | Samus running gfx subroutine
+ * @brief 85b0 | 124 | Samus running gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4016,7 +4016,7 @@ SamusPose SamusRunningGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 86d4 | 148 | Samus standing subroutine
+ * @brief 86d4 | 148 | Samus standing main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4107,7 +4107,7 @@ SamusPose SamusStanding(struct SamusData* pData)
 }
 
 /**
- * @brief 881c | 20 | Samus standing gfx subroutine
+ * @brief 881c | 20 | Samus standing gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4124,7 +4124,7 @@ SamusPose SamusStandingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 883c | bc | Samus turning around subroutine
+ * @brief 883c | bc | Samus turning around main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4171,7 +4171,7 @@ SamusPose SamusTurningAround(struct SamusData* pData)
 }
 
 /**
- * @brief 88f8 | 48 | Samus turning around gfx subroutine
+ * @brief 88f8 | 48 | Samus turning around gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4195,7 +4195,7 @@ SamusPose SamusTurningAroundGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 8940 | 1c | Samus shooting gfx subroutine
+ * @brief 8940 | 1c | Samus shooting gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4209,7 +4209,7 @@ SamusPose SamusShootingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 895c | 1b8 | Samus crouching subroutine
+ * @brief 895c | 1b8 | Samus crouching main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4333,7 +4333,7 @@ SamusPose SamusCrouching(struct SamusData* pData)
 }
 
 /**
- * @brief 8b14 | 110 | Samus turning around and crouching subroutine
+ * @brief 8b14 | 110 | Samus turning around and crouching main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4412,7 +4412,7 @@ SamusPose SamusTurningAroundAndCrouching(struct SamusData* pData)
 }
 
 /**
- * @brief 8c24 | 2c | Samus turning around and crouching gfx subroutine
+ * @brief 8c24 | 2c | Samus turning around and crouching gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4432,7 +4432,7 @@ SamusPose SamusTurningAroundAndCrouchingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 8c50 | 1c | Samus shooting and crouching gfx subroutine
+ * @brief 8c50 | 1c | Samus shooting and crouching gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4446,7 +4446,7 @@ SamusPose SamusShootingAndCrouchingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 8c6c | 8c | Samus skidding subroutine
+ * @brief 8c6c | 8c | Samus skidding main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4495,7 +4495,7 @@ SamusPose SamusSkidding(struct SamusData* pData)
 }
 
 /**
- * @brief 8cf8 | 100 | Samus mid air subroutine
+ * @brief 8cf8 | 100 | Samus mid air main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4581,7 +4581,7 @@ SamusPose SamusMidAir(struct SamusData* pData)
 }
 
 /**
- * @brief 8df8 | 40 | Samus mid air gfx subroutine
+ * @brief 8df8 | 40 | Samus mid air gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4612,7 +4612,7 @@ SamusPose SamusMidAirGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 8e38 | 80 | Samus turning around mid air subroutine
+ * @brief 8e38 | 80 | Samus turning around mid air main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4650,7 +4650,7 @@ SamusPose SamusTurningAroundMidAir(struct SamusData* pData)
 }
 
 /**
- * @brief 8eb8 | 20 | Samus turning around mid air gfx subroutine
+ * @brief 8eb8 | 20 | Samus turning around mid air gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4667,7 +4667,7 @@ SamusPose SamusTurningAroundMidAirGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 8ed8 | 24 | Samus starting spin jump gfx subroutine
+ * @brief 8ed8 | 24 | Samus starting spin jump gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4684,7 +4684,7 @@ SamusPose SamusStartingSpinJumpGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 8efc | 144 | Samus spinning subroutine
+ * @brief 8efc | 144 | Samus spinning main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4779,7 +4779,7 @@ SamusPose SamusSpinning(struct SamusData* pData)
 }
 
 /**
- * @brief 9040 | 5c | Samus spinning gfx subroutine
+ * @brief 9040 | 5c | Samus spinning gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4807,7 +4807,7 @@ SamusPose SamusSpinningGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 909c | 44 | Samus starting wall jump subroutine
+ * @brief 909c | 44 | Samus starting wall jump main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4832,7 +4832,7 @@ SamusPose SamusStartingWallJump(struct SamusData* pData)
 }
 
 /**
- * @brief 90e0 | 24 | Samus starting wall jump gfx subroutine
+ * @brief 90e0 | 24 | Samus starting wall jump gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4849,7 +4849,7 @@ SamusPose SamusStartingWallJumpGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9104 | 48 | Samus space jumping gfx subroutine
+ * @brief 9104 | 48 | Samus space jumping gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4871,7 +4871,7 @@ SamusPose SamusSpaceJumpingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9150 | c0 | Samus screw attacking gfx subroutine
+ * @brief 9150 | c0 | Samus screw attacking gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4932,7 +4932,7 @@ SamusPose SamusScrewAttackingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9210 | 20 | Samus morphing subroutine
+ * @brief 9210 | 20 | Samus morphing main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4947,7 +4947,7 @@ SamusPose SamusMorphing(struct SamusData* pData)
 }
 
 /**
- * @brief 9230 | 1c | Samus morphing gfx subroutine
+ * @brief 9230 | 1c | Samus morphing gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -4961,7 +4961,7 @@ SamusPose SamusMorphingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 924c | 170 | Samus morphball subroutine
+ * @brief 924c | 170 | Samus morphball main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5076,7 +5076,7 @@ SamusPose SamusMorphball(struct SamusData* pData)
 }
 
 /**
- * @brief 93bc | cc | Samus rolling subroutine
+ * @brief 93bc | cc | Samus rolling main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5133,7 +5133,7 @@ SamusPose SamusRolling(struct SamusData* pData)
 }
 
 /**
- * @brief 9488 | 38 | Samus rolling gfx subroutine
+ * @brief 9488 | 38 | Samus rolling gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5158,7 +5158,7 @@ SamusPose SamusRollingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 94c0 | 48 | Samus unmorphing subroutine
+ * @brief 94c0 | 48 | Samus unmorphing main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5185,7 +5185,7 @@ SamusPose SamusUnmorphing(struct SamusData* pData)
 }
 
 /**
- * @brief 9508 | 24 | Samus morphball midair subroutine
+ * @brief 9508 | 24 | Samus morphball midair main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5202,7 +5202,7 @@ SamusPose SamusUnmorphingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 952c | d8 | Samus morphball midair subroutine
+ * @brief 952c | d8 | Samus morphball midair main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5257,7 +5257,7 @@ SamusPose SamusMorphballMidAir(struct SamusData* pData)
 }
 
 /**
- * @brief 9604 | 16c | Samus hanging on ledge subroutine
+ * @brief 9604 | 16c | Samus hanging on ledge main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5375,7 +5375,7 @@ SamusPose SamusHangingOnLedge(struct SamusData* pData)
 }
 
 /**
- * @brief 9770 | 28 | Samus hanging on ledge gfx subroutine
+ * @brief 9770 | 28 | Samus hanging on ledge gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5389,7 +5389,7 @@ SamusPose SamusHangingOnLedgeGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9798 | c8 | Samus turning to aim while hanging subroutine
+ * @brief 9798 | c8 | Samus turning to aim while hanging main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5458,7 +5458,7 @@ SamusPose SamusTurningToAimWhileHanging(struct SamusData* pData)
 }
 
 /**
- * @brief 9860 | 24 | Samus turning to aim while hanging gfx subroutine
+ * @brief 9860 | 24 | Samus turning to aim while hanging gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5472,7 +5472,7 @@ SamusPose SamusTurningToAimWhileHangingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9884 | 30 | Samus hiding arm cannon while hanging gfx subroutine
+ * @brief 9884 | 30 | Samus hiding arm cannon while hanging gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5489,7 +5489,7 @@ SamusPose SamusHidingArmCannonWhileHangingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 98b4 | 18c | Samus aiming while hanging subroutine
+ * @brief 98b4 | 18c | Samus aiming while hanging main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5614,7 +5614,7 @@ SamusPose SamusAimingWhileHanging(struct SamusData* pData)
 }
 
 /**
- * @brief 9a40 | 28 | Samus pulling self up subroutine
+ * @brief 9a40 | 28 | Samus pulling self up main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5638,7 +5638,7 @@ SamusPose SamusPullingSelfUp(struct SamusData* pData)
 }
 
 /**
- * @brief 9a68 | 2c | Samus pulling self up gfx subroutine
+ * @brief 9a68 | 2c | Samus pulling self up gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5655,7 +5655,7 @@ SamusPose SamusPullingSelfUpGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9a94 | 20 | Samus pulling self forward subroutine
+ * @brief 9a94 | 20 | Samus pulling self forward main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5672,7 +5672,7 @@ SamusPose SamusPullingSelfForward(struct SamusData* pData)
 }
 
 /**
- * @brief 9ab4 | 2c | Samus pulling self forward gfx subroutine
+ * @brief 9ab4 | 2c | Samus pulling self forward gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5691,7 +5691,7 @@ SamusPose SamusPullingSelfForwardGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9ae0 | 48 | Samus pulling self into morph ball tunnel gfx subroutine
+ * @brief 9ae0 | 48 | Samus pulling self into morph ball tunnel gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5715,7 +5715,7 @@ SamusPose SamusPullingSelfIntoMorphballTunnelGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9b28 | 8c | Samus using an elevator subroutine
+ * @brief 9b28 | 8c | Samus using an elevator main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5774,7 +5774,7 @@ SamusPose SamusUsingAnElevator(struct SamusData* pData)
 }
 
 /**
- * @brief 9bb4 | 50 | Using an elevator Gfx subroutine
+ * @brief 9bb4 | 50 | Using an elevator Gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5811,7 +5811,7 @@ SamusPose SamusUsingAnElevatorGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9c04 | 28 | Samus facing the foreground subroutine
+ * @brief 9c04 | 28 | Samus facing the foreground main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5834,7 +5834,7 @@ SamusPose SamusFacingTheForeground(struct SamusData* pData)
 }
 
 /**
- * @brief 9c2c | 3c | Samus turning from facing the foreground gfx subroutine
+ * @brief 9c2c | 3c | Samus turning from facing the foreground gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5865,7 +5865,7 @@ SamusPose SamusTurningFromFacingForegroundGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9c68 | 38 | Samus delay before shinesparking gfx subroutine
+ * @brief 9c68 | 38 | Samus delay before shinesparking gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5884,7 +5884,7 @@ SamusPose SamusDelayBeforeShinesparkingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9ca0 | b0 | Samus shinesparking subroutine
+ * @brief 9ca0 | b0 | Samus shinesparking main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -5970,7 +5970,7 @@ SamusPose SamusShinesparking(struct SamusData* pData)
 }
 
 /**
- * @brief 9d50 | 8c | Samus shinesparking Gfx subroutine
+ * @brief 9d50 | 8c | Samus shinesparking Gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6020,7 +6020,7 @@ SamusPose SamusShinesparkingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9ddc | 14 | Samus shinespark collision gfx subroutine
+ * @brief 9ddc | 14 | Samus shinespark collision gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6034,7 +6034,7 @@ SamusPose SamusShinesparkCollisionGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9df0 | 1c | Samus delay after shinesparking gfx subroutine
+ * @brief 9df0 | 1c | Samus delay after shinesparking gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6048,7 +6048,7 @@ SamusPose SamusDelayAfterShinesparkingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9e0c | 28 | Delay before ballsparking subroutine
+ * @brief 9e0c | 28 | Delay before ballsparking main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6062,7 +6062,7 @@ SamusPose SamusDelayBeforeBallsparking(struct SamusData* pData)
 }
 
 /**
- * @brief 9e34 | 88 | Delay before ballsparking Gfx subroutine
+ * @brief 9e34 | 88 | Delay before ballsparking Gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6106,7 +6106,7 @@ SamusPose SamusDelayBeforeBallsparkingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9ebc | 7c | Ballsparking Gfx subroutine
+ * @brief 9ebc | 7c | Ballsparking Gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6145,7 +6145,7 @@ SamusPose SamusBallsparkingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9fa4 | 1c | Samus ballspark collision gfx subroutine
+ * @brief 9fa4 | 1c | Samus ballspark collision gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6159,7 +6159,7 @@ SamusPose SamusBallsparkCollisionGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9f4c | 58 | Samus on zipline subroutine
+ * @brief 9f4c | 58 | Samus on zipline main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New Pose
@@ -6189,7 +6189,7 @@ SamusPose SamusOnZipline(struct SamusData* pData)
 }
 
 /**
- * @brief 9fa4 | 1c | Samus shooting on zipline gfx subroutine
+ * @brief 9fa4 | 1c | Samus shooting on zipline gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New Pose
@@ -6203,7 +6203,7 @@ SamusPose SamusShootingOnZiplineGfx(struct SamusData* pData)
 }
 
 /**
- * @brief 9fc0 | 30 | Samus morph ball on zipline subroutine
+ * @brief 9fc0 | 30 | Samus morph ball on zipline main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New Pose
@@ -6227,7 +6227,7 @@ SamusPose SamusMorphballOnZipline(struct SamusData* pData)
 }
 
 /**
- * @brief 9ff0 | 18 | Samus saving/loading game subroutine
+ * @brief 9ff0 | 18 | Samus saving/loading game main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New Pose
@@ -6244,7 +6244,7 @@ SamusPose SamusSavingLoadingGame(struct SamusData* pData)
 }
 
 /**
- * @brief a008 | 1c | Samus turning around to download map data gfx subroutine
+ * @brief a008 | 1c | Samus turning around to download map data gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New Pose
@@ -6258,7 +6258,7 @@ SamusPose SamusTurningAroundToDownloadMapDataGfx(struct SamusData* pData)
 }
 
 /**
- * @brief a024 | 68 | Samus getting hurt subroutine
+ * @brief a024 | 68 | Samus getting hurt main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New Pose
@@ -6289,7 +6289,7 @@ SamusPose SamusGettingHurt(struct SamusData* pData)
 }
 
 /**
- * @brief a08c | 20 Samus getting hurt gfx subroutine
+ * @brief a08c | 20 Samus getting hurt gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6303,7 +6303,7 @@ SamusPose SamusGettingHurtGfx(struct SamusData* pData)
 }
 
 /**
- * @brief a0ac | 30 | Samus getting knocked back subroutine
+ * @brief a0ac | 30 | Samus getting knocked back main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6331,7 +6331,7 @@ SamusPose SamusGettingKnockedBack(struct SamusData* pData)
 }
 
 /**
- * @brief a0dc | 10c | Samus dying subroutine
+ * @brief a0dc | 10c | Samus dying main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6415,7 +6415,7 @@ SamusPose SamusDying(struct SamusData* pData)
 }
 
 /**
- * @brief a1e8 | 34 | Samus crouching to crawl gfx subroutine
+ * @brief a1e8 | 34 | Samus crouching to crawl gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6437,7 +6437,7 @@ SamusPose SamusCrouchingToCrawlGfx(struct SamusData* pData)
 }
 
 /**
- * @brief a21c | 68 | Samus crawling stopped subroutine
+ * @brief a21c | 68 | Samus crawling stopped main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6470,7 +6470,7 @@ SamusPose SamusCrawlingStopped(struct SamusData* pData)
 }
 
 /**
- * @brief a284 | 1c | Samus starting to crawl gfx subroutine
+ * @brief a284 | 1c | Samus starting to crawl gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6484,7 +6484,7 @@ SamusPose SamusStartingToCrawlGfx(struct SamusData* pData)
 }
 
 /**
- * @brief a2a0 | 74 | Samus crawling subroutine
+ * @brief a2a0 | 74 | Samus crawling main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6515,7 +6515,7 @@ SamusPose SamusCrawling(struct SamusData* pData)
 }
 
 /**
- * @brief a314 | 44 | Samus crawling gfx subroutine
+ * @brief a314 | 44 | Samus crawling gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6544,7 +6544,7 @@ SamusPose SamusCrawlingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief a358 | 1c | Samus turning around while crawling subroutine
+ * @brief a358 | 1c | Samus turning around while crawling main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6558,7 +6558,7 @@ SamusPose SamusTurningAroundWhileCrawling(struct SamusData* pData)
 }
 
 /**
- * @brief a374 | 1c | Samus turning around while crawling gfx subroutine
+ * @brief a374 | 1c | Samus turning around while crawling gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6572,7 +6572,7 @@ SamusPose SamusTurningAroundWhileCrawlingGfx(struct SamusData* pData)
 }
 
 /**
- * @brief a390 | 1c | Samus grabbing a ledge (suitless) gfx subroutine
+ * @brief a390 | 1c | Samus grabbing a ledge (suitless) gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6586,7 +6586,7 @@ SamusPose SamusGrabbingALedgeSuitlessGfx(struct SamusData* pData)
 }
 
 /**
- * @brief a3ac | 28 | Samus facing the background subroutine
+ * @brief a3ac | 28 | Samus facing the background main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6609,7 +6609,7 @@ SamusPose SamusFacingTheBackground(struct SamusData* pData)
 }
 
 /**
- * @brief a3d4 | 54 | Samus turning from facing the background gfx subroutine
+ * @brief a3d4 | 54 | Samus turning from facing the background gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6639,7 +6639,7 @@ SamusPose SamusTurningFromFacingTheBackgroundGfx(struct SamusData* pData)
 }
 
 /**
- * @brief a428 | 1c | Samus turning to enter escape ship gfx subroutine
+ * @brief a428 | 1c | Samus turning to enter escape ship gfx main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
@@ -6653,12 +6653,12 @@ SamusPose SamusTurningToEnterEscapeShipGfx(struct SamusData* pData)
 }
 
 /**
- * @brief a444 | bc | Executes the current samus pose subroutine
+ * @brief a444 | bc | Executes the current samus pose main loop
  * 
  * @param pData Samus data pointer
  * @return SamusPose New pose
  */
-SamusPose SamusExecutePoseSubroutine(struct SamusData* pData)
+SamusPose SamusExecutePoseMainLoop(struct SamusData* pData)
 {
     u8 pose;
     u8 timer;
@@ -6714,7 +6714,7 @@ SamusPose SamusExecutePoseSubroutine(struct SamusData* pData)
     // Check spawn projectile
     SamusCheckNewProjectile(pData, pWeapon, pEquipment);
 
-    // Call pose subroutine
+    // Call pose main loop
     pose = sSamusPoseFunctionPointers[pData->pose](pData);
 
     if (pose == SPOSE_NONE)

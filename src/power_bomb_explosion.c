@@ -30,7 +30,7 @@ static void PowerBombExplosionEnd(void);
 extern u8 sHazeData[EFFECT_HAZE_END][4];
 
 /**
- * 5745c | 48 | Subroutine for the power bomb explosion
+ * 5745c | 48 | Main loop for the power bomb explosion
  */
 void PowerBombExplosionProcess(void)
 {

@@ -18,6 +18,6 @@ enum RidleyLandingOamId {
     RIDLEY_LANDING_OAM_ID_END
 };
 
-u8 RidleyLandingSubroutine(void);
+u8 RidleyLandingMainLoop(void);
 
 #endif /* RIDLEY_LANDING_CUTSCENE */

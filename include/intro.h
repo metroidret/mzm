@@ -3,6 +3,6 @@
 
 #include "types.h"
 
-u32 IntroSubroutine(void);
+u32 IntroMainLoop(void);
 
 #endif /* INTRO_H */

@@ -2483,7 +2483,7 @@ static u8 TourianEscapeSamusLookingAtMotherShip(void)
     return ended;
 }
 
-static TourianEscapeFunc_T sTourianEscapeSubroutinePointers[12] = {
+static TourianEscapeFunc_T sTourianEscapeStageFunctionPointers[12] = {
     [0]  = TourianEscapeZebesExploding,
     [1]  = TourianEscapeSamusInHerShip,
     [2]  = TourianEscapeSamusLookingAround,
@@ -2499,11 +2499,11 @@ static TourianEscapeFunc_T sTourianEscapeSubroutinePointers[12] = {
 };
 
 /**
- * @brief 84714 | e4 | Executes the current tourian escape subroutine
+ * @brief 84714 | e4 | Executes the current tourian escape stage main loop
  * 
  * @return u8 bool, ended
  */
-u8 TourianEscapeCallSubroutines(void)
+u8 TourianEscapeUpdateStage(void)
 {
     u8 ended;
     u8 result;
@@ -2531,7 +2531,7 @@ u8 TourianEscapeCallSubroutines(void)
             break;
 
         case 2:
-            result = sTourianEscapeSubroutinePointers[TOURIAN_ESCAPE_DATA.stage]();
+            result = sTourianEscapeStageFunctionPointers[TOURIAN_ESCAPE_DATA.stage]();
 
             if (result == TRUE)
             {

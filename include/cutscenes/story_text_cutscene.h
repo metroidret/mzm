@@ -3,6 +3,6 @@
 
 #include "types.h"
 
-u8 StoryTextCutsceneSubroutine(void);
+u8 StoryTextCutsceneMainLoop(void);
 
 #endif /* STORY_TEXT_CUTSCENE */

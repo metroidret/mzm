@@ -1038,11 +1038,11 @@ u32 TitleScreenCheckPlayEffects(void)
 }
 
 /**
- * @brief 771a0 | 178 | Subroutine for the title screen
+ * @brief 771a0 | 178 | Main loop for the title screen
  * 
  * @return u32 bool, leaving
  */
-u32 TitleScreenSubroutine(void)
+u32 TitleScreenMainLoop(void)
 {
     u32 leaving;
     u32 ret;

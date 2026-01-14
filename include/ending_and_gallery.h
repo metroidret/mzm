@@ -5,7 +5,7 @@
 
 typedef u8 (*CreditsFunc_T)(void);
 
-u32 CreditsSubroutine(void);
-u32 GallerySubroutine(void);
+u32 CreditsMainLoop(void);
+u32 GalleryMainLoop(void);
 
 #endif /* ENDING_AND_GALLERY_H */

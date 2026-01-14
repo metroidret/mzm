@@ -3,6 +3,6 @@
 
 #include "types.h"
 
-u8 MechaRidleySeesSamusSubroutine(void);
+u8 MechaRidleySeesSamusMainLoop(void);
 
 #endif

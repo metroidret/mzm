@@ -3,6 +3,6 @@
 
 #include "types.h"
 
-u32 FusionGallerySubroutine(void);
+u32 FusionGalleryMainLoop(void);
 
 #endif /* FUSION_GALLERY_H */

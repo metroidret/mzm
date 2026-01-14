@@ -134,7 +134,7 @@ static u8 MechaRidleySeesSamusInit(void)
     return FALSE;
 }
 
-static struct CutsceneSubroutineData sMechaSeesSamusSubroutineData[3] = {
+static struct CutsceneStageData sMechaSeesSamusStageData[3] = {
     [0] = {
         .pFunction = MechaRidleySeesSamusInit,
         .oamLength = 2
@@ -150,15 +150,15 @@ static struct CutsceneSubroutineData sMechaSeesSamusSubroutineData[3] = {
 };
 
 /**
- * @brief 65b6c | 34 | Mecha ridley sees Samus cutscene subroutine
+ * @brief 65b6c | 34 | Mecha ridley sees Samus cutscene main loop
  * 
  * @return u8 bool, ended
  */
-u8 MechaRidleySeesSamusSubroutine(void)
+u8 MechaRidleySeesSamusMainLoop(void)
 {
     u8 ended;
 
-    ended = sMechaSeesSamusSubroutineData[CUTSCENE_DATA.timeInfo.stage].pFunction();
+    ended = sMechaSeesSamusStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
     CutsceneUpdateBackgroundsPosition(TRUE);
     MechaRidleySeesSamusProcessOAM();
 
@@ -172,6 +172,6 @@ u8 MechaRidleySeesSamusSubroutine(void)
 static void MechaRidleySeesSamusProcessOAM(void)
 {
     gNextOamSlot = 0;
-    ProcessCutsceneOam(sMechaSeesSamusSubroutineData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sMechaSeesSamusCutsceneOam);
+    ProcessCutsceneOam(sMechaSeesSamusStageData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sMechaSeesSamusCutsceneOam);
     ResetFreeOam();
 }

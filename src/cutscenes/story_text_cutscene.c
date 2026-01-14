@@ -341,7 +341,7 @@ static u8 StoryTextCutsceneEnd(void)
     return FALSE;
 }
 
-static struct CutsceneSubroutineData sStoryTextCutsceneSubroutineData[7] = {
+static struct CutsceneStageData sStoryTextCutsceneStageData[7] = {
     [0] = {
         .pFunction = StoryTextCutsceneInit,
         .oamLength = 0
@@ -373,15 +373,15 @@ static struct CutsceneSubroutineData sStoryTextCutsceneSubroutineData[7] = {
 };
 
 /**
- * @brief 62fd8 | 30 | Subroutine for the story text cutscenes
+ * @brief 62fd8 | 30 | Main loop for the story text cutscenes
  * 
  * @return u8 bool, ended
  */
-u8 StoryTextCutsceneSubroutine(void)
+u8 StoryTextCutsceneMainLoop(void)
 {
     u8 ended;
 
-    ended = sStoryTextCutsceneSubroutineData[CUTSCENE_DATA.timeInfo.stage].pFunction();
+    ended = sStoryTextCutsceneStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
     CutsceneUpdateBackgroundsPosition(FALSE);
 
     return ended;

@@ -205,7 +205,7 @@ static u8 SamusInBlueShipInit(void)
     return FALSE;
 }
 
-static struct CutsceneSubroutineData sSamusInBlueShipSubroutineData[3] = {
+static struct CutsceneStageData sSamusInBlueShipStageData[3] = {
     [0] = {
         .pFunction = SamusInBlueShipInit,
         .oamLength = 1
@@ -221,15 +221,15 @@ static struct CutsceneSubroutineData sSamusInBlueShipSubroutineData[3] = {
 };
 
 /**
- * @brief 680bc | 34 | Subroutine for the samus in blue ship cutscene
+ * @brief 680bc | 34 | Main loop for the samus in blue ship cutscene
  * 
  * @return u8 bool, ended
  */
-u8 SamusInBlueShipSubroutine(void)
+u8 SamusInBlueShipMainLoop(void)
 {
     u8 ended;
 
-    ended = sSamusInBlueShipSubroutineData[CUTSCENE_DATA.timeInfo.stage].pFunction();
+    ended = sSamusInBlueShipStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
     CutsceneUpdateBackgroundsPosition(TRUE);
     SamusInBlueShipProcessOAM();
 
@@ -243,6 +243,6 @@ u8 SamusInBlueShipSubroutine(void)
 static void SamusInBlueShipProcessOAM(void)
 {
     gNextOamSlot = 0;
-    ProcessCutsceneOam(sSamusInBlueShipSubroutineData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sSamusInBlueShipOam);
+    ProcessCutsceneOam(sSamusInBlueShipStageData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sSamusInBlueShipOam);
     ResetFreeOam();
 }

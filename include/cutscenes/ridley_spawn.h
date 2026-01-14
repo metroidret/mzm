@@ -12,6 +12,6 @@ enum RidleySpawnOamId {
     RIDLEY_SPAWN_OAM_ID_END
 };
 
-u8 RidleySpawnSubroutine(void);
+u8 RidleySpawnMainLoop(void);
 
 #endif /* RIDLEY_SPAWN_CUTSCENE */

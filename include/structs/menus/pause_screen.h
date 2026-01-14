@@ -70,8 +70,8 @@ struct MinimapAreaName {
     s8 yOffset2;
 };
 
-struct PauseScreenSubroutineData {
-    u8 currentSubroutine;
+struct PauseScreenStateData {
+    u8 state;
     u8 padding_1[3];
     u8 stage;
     u16 timer;
@@ -171,7 +171,7 @@ struct PauseScreenEwramData {
 
 struct PauseScreenData {
     u16 typeFlags;
-    struct PauseScreenSubroutineData subroutineInfo;
+    struct PauseScreenStateData stateInfo;
     u8 unk_10; // unused
 
     u8 onWorldMap;

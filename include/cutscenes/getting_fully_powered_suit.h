@@ -16,6 +16,6 @@ enum GettingFullyPoweredSuitOamId {
 
 #define OAM_RING_SPARKLES_AMOUNT 6
 
-u8 GettingFullyPoweredSuitSubroutine(void);
+u8 GettingFullyPoweredSuitMainLoop(void);
 
 #endif /* GETTING_FULLY_POWERED_SUIT_CUTSCENE */

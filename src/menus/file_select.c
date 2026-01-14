@@ -31,21 +31,21 @@
 
 static void OptionsUpdateStereoOam(u16 flags);
 static void FileSelectResetIOTransferInfo(void);
-static u8 OptionsNesMetroidSubroutine(void);
+static u8 OptionsNesMetroidMainLoop(void);
 static u8 OptionsSubMenu_Empty(void);
-static u8 OptionsGallerySubroutine(void);
-static u8 OptionsStereoSubroutine(void);
-static u8 OptionsSoundTestSubroutine(void);
+static u8 OptionsGalleryMainLoop(void);
+static u8 OptionsStereoMainLoop(void);
+static u8 OptionsSoundTestMainLoop(void);
 static u32 OptionsSoundTestCheckNotAlreadyPlaying(void);
 static void OptionsSoundTestUpdateIdGfx(void);
-static u8 OptionsTimeAttackRecordsSubroutine(void);
+static u8 OptionsTimeAttackRecordsMainLoop(void);
 #ifndef REGION_US_BETA
 static void OptionsTimeAttackLoadBestTimeMessage(void);
 #endif // !REGION_US_BETA
 static void OptionsTimeAttackLoadRecord(u8 id);
 static void unk_7b854(void);
 static void OptionsTimeAttackLoadPassword(u8 part);
-static u8 OptionsMetroidFusionLinkSubroutine(void);
+static u8 OptionsMetroidFusionLinkMainLoop(void);
 static u32 FileSelectUpdateFading(void);
 static void FileSelectInitFading(u8 fadingOut);
 static void FileSelectApplyFading(void);
@@ -1157,7 +1157,7 @@ static void FileSelectFileCopyChooseBaseDestinationFile(void)
 }
 
 #ifdef NON_MATCHING
-static u32 FileSelectCopyFileSubroutine(void)
+static u32 FileSelectCopyFileMainLoop(void)
 {
     // https://decomp.me/scratch/Rz4bp
 
@@ -1166,9 +1166,9 @@ static u32 FileSelectCopyFileSubroutine(void)
     
     ended = FALSE;
 
-    FILE_SELECT_DATA.subroutineTimer++;
+    FILE_SELECT_DATA.subMenuTimer++;
 
-    switch (FILE_SELECT_DATA.subroutineStage)
+    switch (FILE_SELECT_DATA.subMenuStage)
     {
         case 0:
             FileScreenUpdateMessageInfoIdQueue(0, 1);
@@ -1181,17 +1181,17 @@ static u32 FileSelectCopyFileSubroutine(void)
             FILE_SELECT_DATA.fileSelectCursors.confirmCopy = sFileSelectMenuCursors_Empty.confirmCopy;
             FILE_SELECT_DATA.unk_3A = 0;
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 1:
             if (FileSelectUpdateTilemap(TILEMAP_REQUEST_COPY_SPAWN))
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 2:
             if (FileScreenUpdateMessageInfoIdQueue(1, 2))
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 3:
@@ -1205,7 +1205,7 @@ static u32 FileSelectCopyFileSubroutine(void)
                 }
                 else if (gChangedInput & KEY_B)
                 {
-                    FILE_SELECT_DATA.subroutineStage = 14;
+                    FILE_SELECT_DATA.subMenuStage = 14;
                     break;
                 }
                 else if (gChangedInput & KEY_A)
@@ -1230,7 +1230,7 @@ static u32 FileSelectCopyFileSubroutine(void)
                 {
                     SoundPlay(SOUND_REFUSE_MENU);
                     FileScreenUpdateMessageInfoIdQueue(0, 4);
-                    FILE_SELECT_DATA.subroutineStage = 9;
+                    FILE_SELECT_DATA.subMenuStage = 9;
                 }
                 else
                 {
@@ -1238,7 +1238,7 @@ static u32 FileSelectCopyFileSubroutine(void)
                     FileSelectFileCopyChooseBaseDestinationFile();
                     FileSelectUpdateCopyArrow(ARROW_COPY_POSE_DEFAULT, FILE_SELECT_DATA.currentFile);
                     FileSelectUpdateTilemap(TILEMAP_REQUEST_COPY_DESTINATION_SPAWN);
-                    FILE_SELECT_DATA.subroutineStage++;
+                    FILE_SELECT_DATA.subMenuStage++;
                 }
             }
             break;
@@ -1268,7 +1268,7 @@ static u32 FileSelectCopyFileSubroutine(void)
                         FileSelectUpdateCopyArrow(ARROW_COPY_POSE_KILL, FILE_SELECT_DATA.currentFile);
     
                         FileSelectUpdateTilemap(TILEMAP_REQUEST_COPY_DESTINATION_DESPAWN);
-                        FILE_SELECT_DATA.subroutineStage = 3;
+                        FILE_SELECT_DATA.subMenuStage = 3;
                         break;
                     }
                 }
@@ -1291,12 +1291,12 @@ static u32 FileSelectCopyFileSubroutine(void)
                     FileScreenUpdateMessageInfoIdQueue(0, 3);
                     FileSelectUpdateTilemap(TILEMAP_REQUEST_COPY_OVERRIDE_SPAWN_INIT);
                     FileSelectPlayMenuSound(MENU_SOUND_REQUEST_COPY_DELETE);
-                    FILE_SELECT_DATA.subroutineStage = 5;
+                    FILE_SELECT_DATA.subMenuStage = 5;
                 }
                 else
                 {
                     FileSelectPlayMenuSound(MENU_SOUND_REQUEST_COPY_CONFIRM);
-                    FILE_SELECT_DATA.subroutineStage = 11;
+                    FILE_SELECT_DATA.subMenuStage = 11;
                 }
             }
             break;
@@ -1305,7 +1305,7 @@ static u32 FileSelectCopyFileSubroutine(void)
             if (FileSelectUpdateTilemap(TILEMAP_REQUEST_COPY_OVERRIDE_SPAWN))
             {
                 unk_7e3fc(4, FILE_SELECT_DATA.fileSelectCursors.confirmCopy);
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
@@ -1317,17 +1317,17 @@ static u32 FileSelectCopyFileSubroutine(void)
                 if (gChangedInput & KEY_A)
                 {
                     if (FILE_SELECT_DATA.fileSelectCursors.confirmCopy != 0)
-                        FILE_SELECT_DATA.subroutineStage = 7;
+                        FILE_SELECT_DATA.subMenuStage = 7;
                     else
                     {
                         FileSelectPlayMenuSound(MENU_SOUND_REQUEST_COPY_CONFIRM);
                         action = 0x80;
-                        FILE_SELECT_DATA.subroutineStage = 11;
+                        FILE_SELECT_DATA.subMenuStage = 11;
                     }
                 }
                 else if (gChangedInput & KEY_B)
                 {
-                    FILE_SELECT_DATA.subroutineStage = 7;
+                    FILE_SELECT_DATA.subMenuStage = 7;
                 }
                 else if (gChangedInput & KEY_LEFT)
                 {
@@ -1357,14 +1357,14 @@ static u32 FileSelectCopyFileSubroutine(void)
             SoundPlay(SOUND_REFUSE_MENU);
             unk_7e3fc(4, 0x81);
             FileSelectUpdateTilemap(TILEMAP_REQUEST_COPY_OVERRIDE_DESPAWN_INIT);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 8:
             if (FileSelectUpdateTilemap(TILEMAP_REQUEST_COPY_OVERRIDE_DESPAWN))
             {
                 FileSelectUpdateCopyArrow(ARROW_COPY_POSE_DEFAULT, FILE_SELECT_DATA.currentFile);
-                FILE_SELECT_DATA.subroutineStage = 4;
+                FILE_SELECT_DATA.subMenuStage = 4;
             }
             break;
 
@@ -1372,7 +1372,7 @@ static u32 FileSelectCopyFileSubroutine(void)
             if (FileScreenUpdateMessageInfoIdQueue(1, 4))
             {
                 FileSelectUpdateTilemap(0x1C);
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
@@ -1381,7 +1381,7 @@ static u32 FileSelectCopyFileSubroutine(void)
             {
                 FileSelectUpdateCopyCursor(CURSOR_COPY_POSE_DEFAULT, FILE_SELECT_DATA.copySourceFile);
                 FileSelectUpdateTilemap(TILEMAP_REQUEST_COPY_DESTINATION_DESPAWN);
-                FILE_SELECT_DATA.subroutineStage = 3;
+                FILE_SELECT_DATA.subMenuStage = 3;
             }
             break;
 
@@ -1390,21 +1390,21 @@ static u32 FileSelectCopyFileSubroutine(void)
             {
                 FILE_SELECT_DATA.unk_3A = 1;
                 if (FILE_SELECT_DATA.fileSelectCursors.confirmCopy != 0)
-                    FILE_SELECT_DATA.subroutineStage = 14;
+                    FILE_SELECT_DATA.subMenuStage = 14;
                 else
-                    FILE_SELECT_DATA.subroutineStage = 12;
+                    FILE_SELECT_DATA.subMenuStage = 12;
             }
             break;
 
         case 12:
             unk_7e3fc(4, 0x81);
             FileSelectUpdateTilemap(TILEMAP_REQUEST_COPY_OVERRIDE_DESPAWN_INIT);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 13:
             if (FileSelectUpdateTilemap(TILEMAP_REQUEST_COPY_OVERRIDE_DESPAWN))
-                FILE_SELECT_DATA.subroutineStage = 14;
+                FILE_SELECT_DATA.subMenuStage = 14;
             break;
 
         case 14:
@@ -1425,7 +1425,7 @@ static u32 FileSelectCopyFileSubroutine(void)
             FileSelectUpdateCopyArrow(ARROW_COPY_POSE_KILL, FILE_SELECT_DATA.currentFile);
             
             FileSelectUpdateTilemap(TILEMAP_REQUEST_COPY_DESPAWN_INIT);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 15:
@@ -1441,7 +1441,7 @@ static u32 FileSelectCopyFileSubroutine(void)
 }
 #else
 NAKED_FUNCTION
-static u32 FileSelectCopyFileSubroutine(void)
+static u32 FileSelectCopyFileMainLoop(void)
 {
     asm(" \n\
     push {r4, r5, r6, r7, lr} \n\
@@ -2114,21 +2114,21 @@ lbl_08079794: \n\
 
 
 /**
- * @brief 797a0 | 3b0 | File erasure subroutine
+ * @brief 797a0 | 3b0 | File erasure main loop
  * 
  * @return u32 bool, ended
  */
-static u32 FileSelectEraseFileSubroutine(void)
+static u32 FileSelectEraseFileMainLoop(void)
 {
     u32 ended;
     u32 action;
 
     ended = FALSE;
 
-    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subroutineTimer);
-    switch (FILE_SELECT_DATA.subroutineStage)
+    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subMenuTimer);
+    switch (FILE_SELECT_DATA.subMenuStage)
     {
-        case FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_INIT:
+        case FILE_SELECT_ERASE_FILE_STAGE_INIT:
             FileScreenUpdateMessageInfoIdQueue(0, FILE_SCREEN_MESSAGE_INFO_ID_ERASE_CHOOSE);
             FileScreenUpdateMessageInfoIdQueue(0, FILE_SCREEN_MESSAGE_INFO_ID_ERASE_CONFIRM);
 
@@ -2137,15 +2137,15 @@ static u32 FileSelectEraseFileSubroutine(void)
             FileSelectUpdateTilemap(TILEMAP_REQUEST_ERASE_SPAWN_INIT);
 
             FILE_SELECT_DATA.unk_3A = 0;
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
-        case FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_WAIT_FOR_CHOOSE:
+        case FILE_SELECT_ERASE_FILE_STAGE_WAIT_FOR_CHOOSE:
             if (FileSelectUpdateTilemap(TILEMAP_REQUEST_ERASE_SPAWN))
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             break;
 
-        case FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_UPDATE_CHOOSE:
+        case FILE_SELECT_ERASE_FILE_STAGE_UPDATE_CHOOSE:
             action = 0;
 
             if (gChangedInput)
@@ -2157,7 +2157,7 @@ static u32 FileSelectEraseFileSubroutine(void)
                 else if (gChangedInput & KEY_B)
                 {
                     #ifdef NON_MATCHING
-                    FILE_SELECT_DATA.subroutineStage = 10;
+                    FILE_SELECT_DATA.subMenuStage = 10;
                     break;
                     #else // !NON_MATCHING
                     goto lbl_case_9;
@@ -2182,20 +2182,20 @@ static u32 FileSelectEraseFileSubroutine(void)
                 SoundPlay(SOUND_SELECTING_FILE_TO_DELETE);
                 FileSelectUpdateEraseCursor(CURSOR_ERASE_POSE_SELECTING_FILE, FILE_SELECT_DATA.eraseFile);
                 FileSelectUpdateTilemap(TILEMAP_REQUEST_ERASE_YES_NO_SPAWN_INIT);
-                FILE_SELECT_DATA.subroutineStage = FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_WAIT_FOR_CONFIRM;
+                FILE_SELECT_DATA.subMenuStage = FILE_SELECT_ERASE_FILE_STAGE_WAIT_FOR_CONFIRM;
             }
             break;
 
-        case FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_WAIT_FOR_CONFIRM:
+        case FILE_SELECT_ERASE_FILE_STAGE_WAIT_FOR_CONFIRM:
             if (FileSelectUpdateTilemap(TILEMAP_REQUEST_ERASE_YES_NO_SPAWN))
             {
                 FILE_SELECT_DATA.fileSelectCursors.confirmErase = sFileSelectMenuCursors_Empty.confirmErase;
                 unk_7e3fc(3, FILE_SELECT_DATA.fileSelectCursors.confirmErase);
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
-        case FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_UPDATE_CONFIRM:
+        case FILE_SELECT_ERASE_FILE_STAGE_UPDATE_CONFIRM:
             action = UCHAR_MAX;
 
             if (gChangedInput)
@@ -2204,18 +2204,18 @@ static u32 FileSelectEraseFileSubroutine(void)
                 {
                     if (FILE_SELECT_DATA.fileSelectCursors.confirmErase != 0)
                     {
-                        FILE_SELECT_DATA.subroutineStage = FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_CANCEL_CONFIRM;
+                        FILE_SELECT_DATA.subMenuStage = FILE_SELECT_ERASE_FILE_STAGE_CANCEL_CONFIRM;
                     }
                     else
                     {
                         action = 0x80;
                         SoundPlay(SOUND_FILE_DELETE);
-                        FILE_SELECT_DATA.subroutineStage = FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_ERASE_FILE;
+                        FILE_SELECT_DATA.subMenuStage = FILE_SELECT_ERASE_FILE_STAGE_ERASE_FILE;
                     }
                 }
                 else if (gChangedInput & KEY_B)
                 {
-                    FILE_SELECT_DATA.subroutineStage = FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_CANCEL_CONFIRM;
+                    FILE_SELECT_DATA.subMenuStage = FILE_SELECT_ERASE_FILE_STAGE_CANCEL_CONFIRM;
                 }
                 else if (gChangedInput & KEY_LEFT)
                 {
@@ -2242,44 +2242,44 @@ static u32 FileSelectEraseFileSubroutine(void)
                 unk_7e3fc(3, action);
             break;
 
-        case FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_CANCEL_CONFIRM:
+        case FILE_SELECT_ERASE_FILE_STAGE_CANCEL_CONFIRM:
             SoundPlay(SOUND_REFUSE_MENU);
             unk_7e3fc(3, 0x81);
             FileSelectUpdateTilemap(TILEMAP_REQUEST_ERASE_YES_NO_DESPAWN_INIT);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
-        case FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_RESTART_CHOOSE:
+        case FILE_SELECT_ERASE_FILE_STAGE_RESTART_CHOOSE:
             if (FileSelectUpdateTilemap(TILEMAP_REQUEST_ERASE_YES_NO_DESPAWN))
             {
                 FileSelectUpdateEraseCursor(CURSOR_ERASE_POSE_DEFAULT, FILE_SELECT_DATA.eraseFile);
-                FILE_SELECT_DATA.subroutineStage = FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_UPDATE_CHOOSE;
+                FILE_SELECT_DATA.subMenuStage = FILE_SELECT_ERASE_FILE_STAGE_UPDATE_CHOOSE;
             }
             break;
 
-        case FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_ERASE_FILE:
+        case FILE_SELECT_ERASE_FILE_STAGE_ERASE_FILE:
             if (SramDeleteFile(FILE_SELECT_DATA.eraseFile))
             {
                 FILE_SELECT_DATA.unk_3A = 1;
-                FILE_SELECT_DATA.subroutineStage = FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_BEGIN_EXIT;
+                FILE_SELECT_DATA.subMenuStage = FILE_SELECT_ERASE_FILE_STAGE_BEGIN_EXIT;
             }
             break;
 
-        case FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_BEGIN_EXIT:
+        case FILE_SELECT_ERASE_FILE_STAGE_BEGIN_EXIT:
             unk_7e3fc(3, 0x81);
             FileSelectUpdateTilemap(TILEMAP_REQUEST_ERASE_YES_NO_DESPAWN_INIT);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
         
-        case FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_WAIT_FOR_EXIT:
+        case FILE_SELECT_ERASE_FILE_STAGE_WAIT_FOR_EXIT:
             if (FileSelectUpdateTilemap(TILEMAP_REQUEST_ERASE_YES_NO_DESPAWN))
             {
                 lbl_case_9:
-                FILE_SELECT_DATA.subroutineStage = FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_UPDATE_ERASED_FILE;
+                FILE_SELECT_DATA.subMenuStage = FILE_SELECT_ERASE_FILE_STAGE_UPDATE_ERASED_FILE;
             }
             break;
 
-        case FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_UPDATE_ERASED_FILE:
+        case FILE_SELECT_ERASE_FILE_STAGE_UPDATE_ERASED_FILE:
             if (FILE_SELECT_DATA.unk_3A != 0)
             {
                 FileSelectDisplaySaveFileHealth(FILE_SELECT_DATA.eraseFile);
@@ -2296,10 +2296,10 @@ static u32 FileSelectEraseFileSubroutine(void)
             FileSelectUpdateEraseCursor(CURSOR_ERASE_POSE_ERASED, FILE_SELECT_DATA.eraseFile);
             FileSelectUpdateTilemap(TILEMAP_REQUEST_ERASE_DESPAWN_INIT);
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
-        case FILE_SELECT_ERASE_FILE_SUBROUTINE_STAGE_EXIT:
+        case FILE_SELECT_ERASE_FILE_STAGE_EXIT:
             if (FileSelectUpdateTilemap(TILEMAP_REQUEST_ERASE_DESPAWN))
             {
                 FileScreenUpdateMessageInfoIdQueue(2, UCHAR_MAX);
@@ -2312,17 +2312,17 @@ static u32 FileSelectEraseFileSubroutine(void)
 }
 
 /**
- * @brief 79b50 | 37c | Corrupted file subroutine
+ * @brief 79b50 | 37c | Corrupted file main loop
  * 
  * @return u32 bool, ended
  */
-static u32 FileSelectCorruptedFileSubroutine(void)
+static u32 FileSelectCorruptedFileMainLoop(void)
 {
     u8 done;
 
-    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subroutineTimer);
+    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subMenuTimer);
 
-    switch (FILE_SELECT_DATA.subroutineStage)
+    switch (FILE_SELECT_DATA.subMenuStage)
     {
         case 0:
             FILE_SELECT_DATA.corruptMessageFileA = FILE_SELECT_DATA.corruptMessageFileB = FILE_SELECT_DATA.corruptMessageFileC = 0;
@@ -2351,7 +2351,7 @@ static u32 FileSelectCorruptedFileSubroutine(void)
             if (FILE_SELECT_DATA.corruptMessageFileC)
                 FileScreenUpdateMessageInfoIdQueue(0, FILE_SELECT_DATA.corruptMessageFileC);
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 1:
@@ -2382,7 +2382,7 @@ static u32 FileSelectCorruptedFileSubroutine(void)
             }
             else
             {
-                FILE_SELECT_DATA.subroutineStage = 10;
+                FILE_SELECT_DATA.subMenuStage = 10;
                 break;
             }
 
@@ -2390,20 +2390,20 @@ static u32 FileSelectCorruptedFileSubroutine(void)
                 break;
 
             FileSelectUpdateTilemap(0x26);
-            FILE_SELECT_DATA.subroutineStage = 2;
+            FILE_SELECT_DATA.subMenuStage = 2;
             break;
 
         case 2:
             if (FileSelectUpdateTilemap(0x27))
             {
-                FILE_SELECT_DATA.subroutineStage++;
-                FILE_SELECT_DATA.subroutineTimer = 0;
+                FILE_SELECT_DATA.subMenuStage++;
+                FILE_SELECT_DATA.subMenuTimer = 0;
             }
             break;
 
         case 3:
-            if (FILE_SELECT_DATA.subroutineTimer > CONVERT_SECONDS(.5f))
-                FILE_SELECT_DATA.subroutineStage++;
+            if (FILE_SELECT_DATA.subMenuTimer > CONVERT_SECONDS(.5f))
+                FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 4:
@@ -2412,7 +2412,7 @@ static u32 FileSelectCorruptedFileSubroutine(void)
                 gUnk_3000C20 = 0;
 
                 gMostRecentSaveFile = FILE_SELECT_DATA.corruptFile;
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
@@ -2424,10 +2424,10 @@ static u32 FileSelectCorruptedFileSubroutine(void)
                 if (gSaveFilesInfo[gMostRecentSaveFile].corruptionFlag == CORRUPTED_FILE_FLAG_CURRENT)
                 {
                     gSaveFilesInfo[gMostRecentSaveFile].corruptionFlag = 0;
-                    FILE_SELECT_DATA.subroutineStage = 7;
+                    FILE_SELECT_DATA.subMenuStage = 7;
                     break;
                 }
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
@@ -2435,7 +2435,7 @@ static u32 FileSelectCorruptedFileSubroutine(void)
             if (unk_fbc(0x1))
             {
                 gUnk_3000C20 = 0;
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
@@ -2456,28 +2456,28 @@ static u32 FileSelectCorruptedFileSubroutine(void)
             DmaTransfer(3, (void*)sEwramPointer + 0x800, VRAM_BASE + 0xD800, 0x800, 16);
             FILE_SELECT_DATA.fileScreenOam[FILE_SELECT_DATA.corruptFile + FILE_SELECT_OAM_FILE_A_LOGO].notDrawn = FALSE;
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 8:
             FileSelectUpdateTilemap(0x28);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 9:
             if (FileSelectUpdateTilemap(0x29))
-                FILE_SELECT_DATA.subroutineStage = 1;
+                FILE_SELECT_DATA.subMenuStage = 1;
             break;
 
         case 10:
             FileScreenUpdateMessageInfoIdQueue(2, UCHAR_MAX);
             gMostRecentSaveFile = FILE_SELECT_DATA.unk_24;
-            FILE_SELECT_DATA.subroutineStage++;
-            FILE_SELECT_DATA.subroutineTimer = 0;
+            FILE_SELECT_DATA.subMenuStage++;
+            FILE_SELECT_DATA.subMenuTimer = 0;
             break;
 
         case 11:
-            if (FILE_SELECT_DATA.subroutineTimer > CONVERT_SECONDS(.25f) + 1 * DELTA_TIME)
+            if (FILE_SELECT_DATA.subMenuTimer > CONVERT_SECONDS(.25f) + 1 * DELTA_TIME)
             {
                 FILE_SELECT_DATA.fileScreenOam[FILE_SELECT_OAM_CURSOR].notDrawn = FALSE;
                 FileSelectUpdateCursor(CURSOR_POSE_DEFAULT, FILE_SELECT_DATA.unk_24);
@@ -2710,20 +2710,20 @@ static u8 FileSelectOptionTransition(u8 leavingOptions)
     u16 bgPos;
     u32 fadeEnded;
 
-    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subroutineTimer);
+    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subMenuTimer);
 
-    switch (FILE_SELECT_DATA.subroutineStage)
+    switch (FILE_SELECT_DATA.subMenuStage)
     {
         case 0:
             if (leavingOptions)
-                FILE_SELECT_DATA.subroutineStage = 7; // Options -> file select
+                FILE_SELECT_DATA.subMenuStage = 7; // Options -> file select
             else
-                FILE_SELECT_DATA.subroutineStage = 1; // File select -> options
-            FILE_SELECT_DATA.subroutineTimer = 0;
+                FILE_SELECT_DATA.subMenuStage = 1; // File select -> options
+            FILE_SELECT_DATA.subMenuTimer = 0;
             break;
 
         case 1:
-            if (FILE_SELECT_DATA.subroutineTimer < CONVERT_SECONDS(1.f / 6))
+            if (FILE_SELECT_DATA.subMenuTimer < CONVERT_SECONDS(1.f / 6))
                 break;
             
             gWrittenToBldalpha_H = 0;
@@ -2749,8 +2749,8 @@ static u8 FileSelectOptionTransition(u8 leavingOptions)
             gBg0HOFS_NonGameplay = BLOCK_SIZE * 32;
             gBg0VOFS_NonGameplay = BLOCK_SIZE * 24;
 
-            FILE_SELECT_DATA.subroutineTimer = 0;
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuTimer = 0;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 2:
@@ -2787,7 +2787,7 @@ static u8 FileSelectOptionTransition(u8 leavingOptions)
             // Remove BG1
             FILE_SELECT_DATA.dispcnt &= ~DCNT_BG1;
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 3:
@@ -2803,13 +2803,13 @@ static u8 FileSelectOptionTransition(u8 leavingOptions)
 
             // Initializes options
             OptionsSetupTiletable();
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 4:
             unk_79ecc();
             FILE_SELECT_DATA.bldcnt = BLDCNT_BG2_FIRST_TARGET_PIXEL | BLDCNT_OBJ_FIRST_TARGET_PIXEL | BLDCNT_ALPHA_BLENDING_EFFECT | BLDCNT_SCREEN_SECOND_TARGET; 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 5:
@@ -2837,7 +2837,7 @@ static u8 FileSelectOptionTransition(u8 leavingOptions)
             if (!fadeEnded)
                 break;
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 6:
@@ -2849,7 +2849,7 @@ static u8 FileSelectOptionTransition(u8 leavingOptions)
 
         case 7:
             // todo: seconds or delta time?
-            if (FILE_SELECT_DATA.subroutineTimer < 4)
+            if (FILE_SELECT_DATA.subMenuTimer < 4)
                 break;
 
             BitFill(3, 0, VRAM_BASE + 0xE000, 0x800, 16);
@@ -2867,7 +2867,7 @@ static u8 FileSelectOptionTransition(u8 leavingOptions)
 
             FILE_SELECT_DATA.bg0cnt = FILE_SELECT_DATA.unk_1E;
             FILE_SELECT_DATA.dispcnt |= DCNT_BG0;
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 8:
@@ -2895,7 +2895,7 @@ static u8 FileSelectOptionTransition(u8 leavingOptions)
             if (!fadeEnded)
                 break;
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 9:
@@ -2908,7 +2908,7 @@ static u8 FileSelectOptionTransition(u8 leavingOptions)
             }
 
             gBg0VOFS_NonGameplay = BLOCK_SIZE * 24;
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 10:
@@ -2930,7 +2930,7 @@ static u8 FileSelectOptionTransition(u8 leavingOptions)
 
             FILE_SELECT_DATA.bldcnt = BLDCNT_BG1_FIRST_TARGET_PIXEL | BLDCNT_ALPHA_BLENDING_EFFECT | BLDCNT_SCREEN_SECOND_TARGET;
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 11:
@@ -2967,7 +2967,7 @@ static u8 FileSelectOptionTransition(u8 leavingOptions)
             FILE_SELECT_DATA.fileScreenOam[FILE_SELECT_OAM_FILE_B_LOGO].notDrawn = FALSE;
             FILE_SELECT_DATA.fileScreenOam[FILE_SELECT_OAM_FILE_C_LOGO].notDrawn = FALSE;
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 12:
@@ -2983,37 +2983,37 @@ static u8 FileSelectOptionTransition(u8 leavingOptions)
     return FALSE;
 }
 
-static struct OptionsSubroutineInfo sOptionsSubroutineInfo[OPTION_END + 1] = {
+static struct OptionsSubMenuInfo sOptionsSubMenuInfo[OPTION_END + 1] = {
     [OPTION_NONE] = {
         .pFunction = OptionsSubMenu_Empty,
         .gameMode = 0
     },
     [OPTION_STEREO_SELECT] = {
-        .pFunction = OptionsStereoSubroutine,
+        .pFunction = OptionsStereoMainLoop,
         .gameMode = 0
     },
     [OPTION_SOUND_TEST] = {
-        .pFunction = OptionsSoundTestSubroutine,
+        .pFunction = OptionsSoundTestMainLoop,
         .gameMode = 0
     },
     [OPTION_TIME_ATTACK] = {
-        .pFunction = OptionsTimeAttackRecordsSubroutine,
+        .pFunction = OptionsTimeAttackRecordsMainLoop,
         .gameMode = 0
     },
     [OPTION_GALLERY] = {
-        .pFunction = OptionsGallerySubroutine,
+        .pFunction = OptionsGalleryMainLoop,
         .gameMode = 5
     },
     [OPTION_FUSION_GALLERY] = {
-        .pFunction = OptionsMetroidFusionLinkSubroutine,
+        .pFunction = OptionsMetroidFusionLinkMainLoop,
         .gameMode = 4
     },
     [OPTION_FUSION_LINK] = {
-        .pFunction = OptionsMetroidFusionLinkSubroutine,
+        .pFunction = OptionsMetroidFusionLinkMainLoop,
         .gameMode = 0
     },
     [OPTION_NES_METROID] = {
-        .pFunction = OptionsNesMetroidSubroutine,
+        .pFunction = OptionsNesMetroidMainLoop,
         .gameMode = 0
     },
     [8] = {
@@ -3023,11 +3023,11 @@ static struct OptionsSubroutineInfo sOptionsSubroutineInfo[OPTION_END + 1] = {
 };
 
 /**
- * @brief 7a7e4 | 248 | Subroutine for the options
+ * @brief 7a7e4 | 248 | Main loop for the options
  * 
  * @return u8 bool, leaving
  */
-static u8 OptionsSubroutine(void)
+static u8 OptionsMainLoop(void)
 {
     u8 result;
 
@@ -3079,9 +3079,9 @@ static u8 OptionsSubroutine(void)
                     // Update cursor
                     OptionsUpdateCursor(CURSOR_OPTIONS_POSE_SELECTING);
                     
-                    // Setup subroutine info
-                    FILE_SELECT_DATA.subroutineStage = 0;
-                    FILE_SELECT_DATA.subroutineTimer = 0;
+                    // Setup sub menu info
+                    FILE_SELECT_DATA.subMenuStage = 0;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
                     FILE_SELECT_DATA.unk_68 = 0;
                     FILE_SELECT_DATA.unk_6A = 0;
 
@@ -3112,13 +3112,13 @@ static u8 OptionsSubroutine(void)
             break;
 
         case 3:
-            // Call subroutine of currently selected option
-            result = sOptionsSubroutineInfo[FILE_SELECT_DATA.optionsUnlocked[gOptionsOptionSelected]].pFunction();
+            // Call main loop of currently selected option
+            result = sOptionsSubMenuInfo[FILE_SELECT_DATA.optionsUnlocked[gOptionsOptionSelected]].pFunction();
             if (result == 0)
                 break;
 
             if (result == 2)
-                gSubGameMode2 = sOptionsSubroutineInfo[FILE_SELECT_DATA.optionsUnlocked[gOptionsOptionSelected]].gameMode;
+                gSubGameMode2 = sOptionsSubMenuInfo[FILE_SELECT_DATA.optionsUnlocked[gOptionsOptionSelected]].gameMode;
             else
                 gSubGameMode2 = 0;
 
@@ -3165,33 +3165,33 @@ static void FileSelectResetIOTransferInfo(void)
 }
 
 /**
- * @brief 7aa74 | 150 | Subroutine for the NES metroid
+ * @brief 7aa74 | 150 | Main loop for the NES metroid
  * 
  * @return u8 bool, leaving
  */
-static u8 OptionsNesMetroidSubroutine(void)
+static u8 OptionsNesMetroidMainLoop(void)
 {
     u8 i;
     NesEmuFunc_T func;
     void* entryPoint;
 
-    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subroutineTimer);
+    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subMenuTimer);
 
-    switch (FILE_SELECT_DATA.subroutineStage)
+    switch (FILE_SELECT_DATA.subMenuStage)
     {
         case 0:
             if (gChangedInput & KEY_B)
             {
                 // Exit
-                FILE_SELECT_DATA.subroutineTimer = 0;
-                FILE_SELECT_DATA.subroutineStage = 0;
+                FILE_SELECT_DATA.subMenuTimer = 0;
+                FILE_SELECT_DATA.subMenuStage = 0;
                 return TRUE;
             }
 
-            if (FILE_SELECT_DATA.subroutineTimer > CONVERT_SECONDS(1.f / 6))
+            if (FILE_SELECT_DATA.subMenuTimer > CONVERT_SECONDS(1.f / 6))
             {
-                FILE_SELECT_DATA.subroutineStage++;
-                FILE_SELECT_DATA.subroutineTimer = 0;
+                FILE_SELECT_DATA.subMenuStage++;
+                FILE_SELECT_DATA.subMenuTimer = 0;
             }
             break;
 
@@ -3202,8 +3202,8 @@ static u8 OptionsNesMetroidSubroutine(void)
                 if (sNesMetroidData_Text[i] != sNesMetroidDataCheck[i])
                     return TRUE;
             }
-            FILE_SELECT_DATA.subroutineStage++;
-            FILE_SELECT_DATA.subroutineTimer = 0;
+            FILE_SELECT_DATA.subMenuStage++;
+            FILE_SELECT_DATA.subMenuTimer = 0;
             break;
 
         case 2:
@@ -3214,8 +3214,8 @@ static u8 OptionsNesMetroidSubroutine(void)
             FILE_SELECT_DATA.bldcnt = BLDCNT_SCREEN_FIRST_TARGET | BLDCNT_BRIGHTNESS_DECREASE_EFFECT;
             gWrittenToBldy_NonGameplay = 0;
 
-            FILE_SELECT_DATA.subroutineStage++;
-            FILE_SELECT_DATA.subroutineTimer = 0;
+            FILE_SELECT_DATA.subMenuStage++;
+            FILE_SELECT_DATA.subMenuTimer = 0;
             break;
 
         case 3:
@@ -3230,8 +3230,8 @@ static u8 OptionsNesMetroidSubroutine(void)
 
                 // Black out screen
                 FILE_SELECT_DATA.dispcnt &= ~(DCNT_BG0 | DCNT_BG1 | DCNT_BG2 | DCNT_BG3 | DCNT_OBJ);
-                FILE_SELECT_DATA.subroutineStage++;
-                FILE_SELECT_DATA.subroutineTimer = 0;
+                FILE_SELECT_DATA.subMenuStage++;
+                FILE_SELECT_DATA.subMenuTimer = 0;
             }
             break;
 
@@ -3251,13 +3251,13 @@ static u8 OptionsNesMetroidSubroutine(void)
 }
 
 /**
- * @brief 7abc4 | 34 | Subroutine for 
+ * @brief 7abc4 | 34 | Main loop for 
  * 
  * @return u8 bool, leaving
  */
 static u8 OptionsSubMenu_Empty(void)
 {
-    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subroutineTimer);
+    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subMenuTimer);
 
     if (gChangedInput && gChangedInput & KEY_B)
         return TRUE;
@@ -3266,25 +3266,25 @@ static u8 OptionsSubMenu_Empty(void)
 }
 
 /**
- * @brief 7abf8 | 5c | Subroutine for the gallery
+ * @brief 7abf8 | 5c | Main loop for the gallery
  * 
  * @return u8 bool, leaving
  */
-static u8 OptionsGallerySubroutine(void)
+static u8 OptionsGalleryMainLoop(void)
 {
-    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subroutineTimer);
+    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subMenuTimer);
 
     if (gChangedInput & KEY_B)
     {
-        FILE_SELECT_DATA.subroutineTimer = 0;
-        FILE_SELECT_DATA.subroutineStage = 0;
+        FILE_SELECT_DATA.subMenuTimer = 0;
+        FILE_SELECT_DATA.subMenuStage = 0;
         return TRUE;
     }
     
-    if (gChangedInput & KEY_A || FILE_SELECT_DATA.subroutineTimer > CONVERT_SECONDS(1.f / 6))
+    if (gChangedInput & KEY_A || FILE_SELECT_DATA.subMenuTimer > CONVERT_SECONDS(1.f / 6))
     {
-        FILE_SELECT_DATA.subroutineTimer = 0;
-        FILE_SELECT_DATA.subroutineStage = 0;
+        FILE_SELECT_DATA.subMenuTimer = 0;
+        FILE_SELECT_DATA.subMenuStage = 0;
         return TRUE + 1;
     }
 
@@ -3292,20 +3292,20 @@ static u8 OptionsGallerySubroutine(void)
 }
 
 /**
- * @brief 7ac54 | bc | Subroutine for the stereo selection
+ * @brief 7ac54 | bc | Main loop for the stereo selection
  * 
  * @return u8 bool, leaving
  */
-static u8 OptionsStereoSubroutine(void)
+static u8 OptionsStereoMainLoop(void)
 {
     u8 updatedStereo;
 
-    switch (FILE_SELECT_DATA.subroutineStage)
+    switch (FILE_SELECT_DATA.subMenuStage)
     {
         case 0:
             // Update OAM to have the animation
             OptionsUpdateStereoOam(STEREO_UPDATE_FLAGS_ACTIVE);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 1:
@@ -3317,7 +3317,7 @@ static u8 OptionsStereoSubroutine(void)
             {
                 // Exit menu
                 SoundPlay(SOUND_ACCEPT_CONFIRM_MENU);
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
                 break;
             }
 
@@ -3353,12 +3353,12 @@ static u8 OptionsStereoSubroutine(void)
             OptionsUpdateStereoOam(STEREO_UPDATE_FLAGS_IDLE);
             // Write to SRAM
             SramWrite_SoundMode();
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 3:
-            FILE_SELECT_DATA.subroutineTimer = 0;
-            FILE_SELECT_DATA.subroutineStage = 0;
+            FILE_SELECT_DATA.subMenuTimer = 0;
+            FILE_SELECT_DATA.subMenuStage = 0;
             return TRUE;
     }
 
@@ -3366,17 +3366,17 @@ static u8 OptionsStereoSubroutine(void)
 }
 
 /**
- * @brief 7ad10 | 2f8 | Subroutine for the sound test
+ * @brief 7ad10 | 2f8 | Main loop for the sound test
  * 
  * @return u8 bool, leaving
  */
-static u8 OptionsSoundTestSubroutine(void)
+static u8 OptionsSoundTestMainLoop(void)
 {
     s32 action;
 
-    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subroutineTimer);
+    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subMenuTimer);
 
-    switch (FILE_SELECT_DATA.subroutineStage)
+    switch (FILE_SELECT_DATA.subMenuStage)
     {
         case 0:
             if (OptionsSoundTestCheckNotAlreadyPlaying())
@@ -3400,7 +3400,7 @@ static u8 OptionsSoundTestSubroutine(void)
             #else // !REGION_EU
             FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_PANEL].priority = BGCNT_LOW_PRIORITY;
             #endif // REGION_EU
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 1:
@@ -3414,7 +3414,7 @@ static u8 OptionsSoundTestSubroutine(void)
                     OPTIONS_OAM_ID_LEFT_ARROW_IDLE);
                 UpdateMenuOamDataID(&FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_RIGHT_ARROW],
                     OPTIONS_OAM_ID_RIGHT_ARROW_IDLE);
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
@@ -3426,14 +3426,14 @@ static u8 OptionsSoundTestSubroutine(void)
                 if (gChangedInput & KEY_B)
                 {
                     // Exit
-                    FILE_SELECT_DATA.subroutineStage = 6;
+                    FILE_SELECT_DATA.subMenuStage = 6;
                 }
                 else if (gChangedInput & KEY_A)
                 {
                     // Replay current music
                     ReplaySoundTest(sSoundTestSoundIds[FILE_SELECT_DATA.soundTestId]);
-                    FILE_SELECT_DATA.subroutineTimer = 0;
-                    FILE_SELECT_DATA.subroutineStage = 5;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
+                    FILE_SELECT_DATA.subMenuStage = 5;
                 }
                 else if (gChangedInput & KEY_RIGHT)
                 {
@@ -3446,7 +3446,7 @@ static u8 OptionsSoundTestSubroutine(void)
                     // Set right arrow to move
                     UpdateMenuOamDataID(&FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_RIGHT_ARROW],
                         OPTIONS_OAM_ID_RIGHT_ARROW_MOVING);
-                    FILE_SELECT_DATA.subroutineStage = 3;
+                    FILE_SELECT_DATA.subMenuStage = 3;
                     action = 1;
                 }
                 else if (gChangedInput & KEY_LEFT)
@@ -3460,7 +3460,7 @@ static u8 OptionsSoundTestSubroutine(void)
                     // Set left arrow to move
                     UpdateMenuOamDataID(&FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_LEFT_ARROW],
                         OPTIONS_OAM_ID_LEFT_ARROW_MOVING);
-                    FILE_SELECT_DATA.subroutineStage = 4;
+                    FILE_SELECT_DATA.subMenuStage = 4;
                     action = -1;
                 }
             }
@@ -3484,7 +3484,7 @@ static u8 OptionsSoundTestSubroutine(void)
                 FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_RIGHT_ARROW].currentAnimationFrame =
                     FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_LEFT_ARROW].currentAnimationFrame;
 
-                FILE_SELECT_DATA.subroutineStage = 2;
+                FILE_SELECT_DATA.subMenuStage = 2;
             }
             break;
 
@@ -3498,13 +3498,13 @@ static u8 OptionsSoundTestSubroutine(void)
                 FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_LEFT_ARROW].currentAnimationFrame =
                     FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_RIGHT_ARROW].currentAnimationFrame;
 
-                FILE_SELECT_DATA.subroutineStage = 2;
+                FILE_SELECT_DATA.subMenuStage = 2;
             }
             break;
 
         case 5:
-            if (FILE_SELECT_DATA.subroutineTimer > CONVERT_SECONDS(.5f))
-                FILE_SELECT_DATA.subroutineStage = 2;
+            if (FILE_SELECT_DATA.subMenuTimer > CONVERT_SECONDS(.5f))
+                FILE_SELECT_DATA.subMenuStage = 2;
             break;
 
         case 6:
@@ -3517,18 +3517,18 @@ static u8 OptionsSoundTestSubroutine(void)
 
             // Start panel disappearing animation
             FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_PANEL].oamID++;
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 7:
             // Wait for panel to disappear
             if (!FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_SOUND_TEST_PANEL].exists)
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 8:
-            FILE_SELECT_DATA.subroutineTimer = 0;
-            FILE_SELECT_DATA.subroutineStage = 0;
+            FILE_SELECT_DATA.subMenuTimer = 0;
+            FILE_SELECT_DATA.subMenuStage = 0;
             return TRUE;
     }
 
@@ -3587,17 +3587,17 @@ static void OptionsSoundTestUpdateIdGfx(void)
 }
 
 /**
- * @brief 7b144 | 5d8 | Subroutine for the time attack records
+ * @brief 7b144 | 5d8 | Main loop for the time attack records
  * 
  * @return u8 bool, ended
  */
-static u8 OptionsTimeAttackRecordsSubroutine(void)
+static u8 OptionsTimeAttackRecordsMainLoop(void)
 {
     u32 action;
 
-    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subroutineTimer);
+    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subMenuTimer);
 
-    switch (FILE_SELECT_DATA.subroutineStage)
+    switch (FILE_SELECT_DATA.subMenuStage)
     {
         case OPTIONS_TIME_ATTACK_STAGE_0:
             if (FILE_SELECT_DATA.timeAttackRecordFlags & 1)
@@ -3655,8 +3655,8 @@ static u8 OptionsTimeAttackRecordsSubroutine(void)
             FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_TIME_ATTACK_RIGHT_ARROW].notDrawn = TRUE;
             #endif // !REGION_US_BETA
 
-            FILE_SELECT_DATA.subroutineStage++;
-            FILE_SELECT_DATA.subroutineTimer = 0;
+            FILE_SELECT_DATA.subMenuStage++;
+            FILE_SELECT_DATA.subMenuTimer = 0;
             break;
 
         case OPTIONS_TIME_ATTACK_STAGE_1:
@@ -3667,7 +3667,7 @@ static u8 OptionsTimeAttackRecordsSubroutine(void)
                 break;
 
             unk_7b854();
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case OPTIONS_TIME_ATTACK_STAGE_2:
@@ -3676,11 +3676,11 @@ static u8 OptionsTimeAttackRecordsSubroutine(void)
                 OptionsTimeAttackLoadPassword(0|0);
                 OptionsTimeAttackLoadPassword(0|1);
             }
-            FILE_SELECT_DATA.subroutineStage = OPTIONS_TIME_ATTACK_STAGE_4;
+            FILE_SELECT_DATA.subMenuStage = OPTIONS_TIME_ATTACK_STAGE_4;
             break;
 
         case OPTIONS_TIME_ATTACK_STAGE_3:
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case OPTIONS_TIME_ATTACK_STAGE_4:
@@ -3689,11 +3689,11 @@ static u8 OptionsTimeAttackRecordsSubroutine(void)
                 OptionsTimeAttackLoadPassword(2|0);
                 OptionsTimeAttackLoadPassword(2|1);
             }
-            FILE_SELECT_DATA.subroutineStage = OPTIONS_TIME_ATTACK_STAGE_6;
+            FILE_SELECT_DATA.subMenuStage = OPTIONS_TIME_ATTACK_STAGE_6;
             break;
 
         case OPTIONS_TIME_ATTACK_STAGE_5:
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case OPTIONS_TIME_ATTACK_STAGE_6:
@@ -3705,9 +3705,9 @@ static u8 OptionsTimeAttackRecordsSubroutine(void)
 
             SoundPlay(SOUND_OPEN_SUB_MENU);
             #ifdef REGION_US_BETA
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             #else // !REGION_US_BETA
-            FILE_SELECT_DATA.subroutineStage = OPTIONS_TIME_ATTACK_STAGE_7;
+            FILE_SELECT_DATA.subMenuStage = OPTIONS_TIME_ATTACK_STAGE_7;
             #endif // REGION_US_BETA
             break;
         
@@ -3717,7 +3717,7 @@ static u8 OptionsTimeAttackRecordsSubroutine(void)
                 FileScreenUpdateMessageInfoIdQueue(0, FILE_SCREEN_MESSAGE_INFO_ID_BEST_TIME_100);
             else
                 FileScreenUpdateMessageInfoIdQueue(0, FILE_SCREEN_MESSAGE_INFO_ID_BEST_TIME);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
         #endif // REGION_US_BETA
 
@@ -3764,19 +3764,19 @@ static u8 OptionsTimeAttackRecordsSubroutine(void)
             OptionsTimeAttackLoadRecord(FILE_SELECT_DATA.timeAttack100Only);
 
             FILE_SELECT_DATA.dispcnt |= (DCNT_BG0 | DCNT_BG1);
-            FILE_SELECT_DATA.subroutineTimer = 0;
-            FILE_SELECT_DATA.subroutineStage = OPTIONS_TIME_ATTACK_STAGE_8;
+            FILE_SELECT_DATA.subMenuTimer = 0;
+            FILE_SELECT_DATA.subMenuStage = OPTIONS_TIME_ATTACK_STAGE_8;
             break;
 
         case OPTIONS_TIME_ATTACK_STAGE_8:
-            if (FILE_SELECT_DATA.subroutineTimer > CONVERT_SECONDS(1.f / 6))
+            if (FILE_SELECT_DATA.subMenuTimer > CONVERT_SECONDS(1.f / 6))
             {
-                FILE_SELECT_DATA.subroutineTimer = 0;
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuTimer = 0;
+                FILE_SELECT_DATA.subMenuStage++;
             }
 
             if (gChangedInput & KEY_B)
-                FILE_SELECT_DATA.subroutineStage = OPTIONS_TIME_ATTACK_STAGE_10;
+                FILE_SELECT_DATA.subMenuStage = OPTIONS_TIME_ATTACK_STAGE_10;
             break;
 
         case OPTIONS_TIME_ATTACK_STAGE_9:
@@ -3785,7 +3785,7 @@ static u8 OptionsTimeAttackRecordsSubroutine(void)
 
             if (gChangedInput & KEY_B)
             {
-                FILE_SELECT_DATA.subroutineStage = OPTIONS_TIME_ATTACK_STAGE_10;
+                FILE_SELECT_DATA.subMenuStage = OPTIONS_TIME_ATTACK_STAGE_10;
                 break;
             }
             
@@ -3832,9 +3832,9 @@ static u8 OptionsTimeAttackRecordsSubroutine(void)
 
             FILE_SELECT_DATA.dispcnt &= ~(DCNT_BG0 | DCNT_BG1);
             #ifdef REGION_US_BETA
-            FILE_SELECT_DATA.subroutineStage = OPTIONS_TIME_ATTACK_STAGE_6B;
+            FILE_SELECT_DATA.subMenuStage = OPTIONS_TIME_ATTACK_STAGE_6B;
             #else // !REGION_US_BETA
-            FILE_SELECT_DATA.subroutineStage = OPTIONS_TIME_ATTACK_STAGE_7;
+            FILE_SELECT_DATA.subMenuStage = OPTIONS_TIME_ATTACK_STAGE_7;
             #endif // REGION_US_BETA
             break;
 
@@ -3851,7 +3851,7 @@ static u8 OptionsTimeAttackRecordsSubroutine(void)
 
             FILE_SELECT_DATA.dispcnt &= ~(DCNT_BG0 | DCNT_BG1);
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case OPTIONS_TIME_ATTACK_STAGE_11:
@@ -3859,13 +3859,13 @@ static u8 OptionsTimeAttackRecordsSubroutine(void)
                 FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL].exists)
                 break;
 
-            APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subroutineTimer);
-            FILE_SELECT_DATA.subroutineStage++;
+            APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subMenuTimer);
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case OPTIONS_TIME_ATTACK_STAGE_12:
-            FILE_SELECT_DATA.subroutineTimer = 0;
-            FILE_SELECT_DATA.subroutineStage = 0;
+            FILE_SELECT_DATA.subMenuTimer = 0;
+            FILE_SELECT_DATA.subMenuStage = 0;
             return TRUE;
     }
 
@@ -4038,13 +4038,13 @@ static void OptionsTimeAttackLoadPassword(u8 part)
 }
 
 /**
- * @brief 7b9e8 | 73c | Subroutine for the metroid fusion link
+ * @brief 7b9e8 | 73c | Main loop for the metroid fusion link
  * 
  * @return u8 bool, ended
  */
-static u8 OptionsMetroidFusionLinkSubroutine(void)
+static u8 OptionsMetroidFusionLinkMainLoop(void)
 {
-    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subroutineTimer);
+    APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subMenuTimer);
 
     if (gIoTransferInfo.active == ACTIVE_TRANSFER_CONNECT)
         FusionGalleryConnectProcess();
@@ -4053,7 +4053,7 @@ static u8 OptionsMetroidFusionLinkSubroutine(void)
     else
         gIoTransferInfo.result = TRANSFER_RESULT_NONE;
 
-    switch (FILE_SELECT_DATA.subroutineStage)
+    switch (FILE_SELECT_DATA.subMenuStage)
     {
         case 0:
             #ifdef DEBUG
@@ -4063,7 +4063,7 @@ static u8 OptionsMetroidFusionLinkSubroutine(void)
             if (gFileScreenOptionsUnlocked.fusionGalleryImages)
             #endif // DEBUG
             {
-                FILE_SELECT_DATA.subroutineStage = 1;
+                FILE_SELECT_DATA.subMenuStage = 1;
             }
             else
             {
@@ -4093,24 +4093,24 @@ static u8 OptionsMetroidFusionLinkSubroutine(void)
                 gBg0HOFS_NonGameplay = 0x660,
                 gBg0VOFS_NonGameplay = 0x7E0;
 
-                FILE_SELECT_DATA.subroutineStage = 2;
+                FILE_SELECT_DATA.subMenuStage = 2;
             }
 
-            FILE_SELECT_DATA.subroutineTimer = 0;
+            FILE_SELECT_DATA.subMenuTimer = 0;
             break;
 
         case 1:
             if (gChangedInput & KEY_B)
             {
-                FILE_SELECT_DATA.subroutineTimer = 0;
-                FILE_SELECT_DATA.subroutineStage = 0;
+                FILE_SELECT_DATA.subMenuTimer = 0;
+                FILE_SELECT_DATA.subMenuStage = 0;
                 return TRUE;
             }
 
-            if (gChangedInput & KEY_A || FILE_SELECT_DATA.subroutineTimer > CONVERT_SECONDS(1.f / 6))
+            if (gChangedInput & KEY_A || FILE_SELECT_DATA.subMenuTimer > CONVERT_SECONDS(1.f / 6))
             {
-                FILE_SELECT_DATA.subroutineTimer = 0;
-                FILE_SELECT_DATA.subroutineStage = 0;
+                FILE_SELECT_DATA.subMenuTimer = 0;
+                FILE_SELECT_DATA.subMenuStage = 0;
                 return 2;
             }
             break;
@@ -4119,7 +4119,7 @@ static u8 OptionsMetroidFusionLinkSubroutine(void)
             if ((FILE_SELECT_DATA.dispcnt & (DCNT_BG0 | DCNT_BG1)) == (DCNT_BG0 | DCNT_BG1))
             {
                 gIoTransferInfo.active = ACTIVE_TRANSFER_CONNECT;
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
                 break;
             }
 
@@ -4151,26 +4151,26 @@ static u8 OptionsMetroidFusionLinkSubroutine(void)
             {
                 case TRANSFER_RESULT_SUCCESS:
                     SramWrite_FileScreenOptionsUnlocked();
-                    FILE_SELECT_DATA.subroutineStage = 8;
-                    FILE_SELECT_DATA.subroutineTimer = 0;
+                    FILE_SELECT_DATA.subMenuStage = 8;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
                     break;
 
                 case TRANSFER_RESULT_FAILURE:
-                    FILE_SELECT_DATA.subroutineStage = 4;
-                    FILE_SELECT_DATA.subroutineTimer = 0;
+                    FILE_SELECT_DATA.subMenuStage = 4;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
                     break;
 
                 case TRANSFER_RESULT_SUCCESS2:
-                    FILE_SELECT_DATA.subroutineStage = 14;
-                    FILE_SELECT_DATA.subroutineTimer = 0;
+                    FILE_SELECT_DATA.subMenuStage = 14;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
                     break;
 
                 case TRANSFER_RESULT_TIMED_OUT:
-                    FILE_SELECT_DATA.subroutineStage = 18;
+                    FILE_SELECT_DATA.subMenuStage = 18;
                     break;
 
                 case TRANSFER_RESULT_BACKED_OUT:
-                    FILE_SELECT_DATA.subroutineStage = 21;
+                    FILE_SELECT_DATA.subMenuStage = 21;
                     break;
             }
             break;
@@ -4185,7 +4185,7 @@ static u8 OptionsMetroidFusionLinkSubroutine(void)
             if (FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL].oamID == 0)
                 UpdateMenuOamDataID(&FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL], OPTIONS_OAM_ID_LARGE_PANEL);
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 5:
@@ -4201,14 +4201,14 @@ static u8 OptionsMetroidFusionLinkSubroutine(void)
             if (FileScreenUpdateMessageInfoIdQueue(1, FILE_SCREEN_MESSAGE_INFO_ID_LINKING_ERROR))
             {
                 FILE_SELECT_DATA.dispcnt |= (DCNT_BG0 | DCNT_BG1);
-                FILE_SELECT_DATA.subroutineStage++;
-                FILE_SELECT_DATA.subroutineTimer = 0;
+                FILE_SELECT_DATA.subMenuStage++;
+                FILE_SELECT_DATA.subMenuTimer = 0;
             }
             break;
 
         case 6:
-            if (FILE_SELECT_DATA.subroutineTimer > CONVERT_SECONDS(.5f))
-                FILE_SELECT_DATA.subroutineStage++;
+            if (FILE_SELECT_DATA.subMenuTimer > CONVERT_SECONDS(.5f))
+                FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 7:
@@ -4225,21 +4225,21 @@ static u8 OptionsMetroidFusionLinkSubroutine(void)
                 FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL].oamID++;
 
             FileScreenUpdateMessageInfoIdQueue(0, FILE_SCREEN_MESSAGE_INFO_ID_DATA_UPLOAD_COMPLETE);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 9:
             if (FileScreenUpdateMessageInfoIdQueue(1, FILE_SCREEN_MESSAGE_INFO_ID_DATA_UPLOAD_COMPLETE))
             {
                 FILE_SELECT_DATA.dispcnt |= DCNT_BG1;
-                FILE_SELECT_DATA.subroutineStage++;
-                FILE_SELECT_DATA.subroutineTimer = 0;
+                FILE_SELECT_DATA.subMenuStage++;
+                FILE_SELECT_DATA.subMenuTimer = 0;
             }
             break;
 
         case 10:
-            if (FILE_SELECT_DATA.subroutineTimer > CONVERT_SECONDS(1.f))
-                FILE_SELECT_DATA.subroutineStage++;
+            if (FILE_SELECT_DATA.subMenuTimer > CONVERT_SECONDS(1.f))
+                FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 11:
@@ -4247,24 +4247,24 @@ static u8 OptionsMetroidFusionLinkSubroutine(void)
             {
                 FILE_SELECT_DATA.dispcnt &= ~(DCNT_BG0 | DCNT_BG1);
                 FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_HUGE_PANEL].oamID++;
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
         case 12:
             if (FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_HUGE_PANEL].oamID == 0)
             {
-                FILE_SELECT_DATA.subroutineStage++;
-                FILE_SELECT_DATA.subroutineTimer = 0;
+                FILE_SELECT_DATA.subMenuStage++;
+                FILE_SELECT_DATA.subMenuTimer = 0;
             }
             break;
 
         case 13:
-            if (FILE_SELECT_DATA.subroutineTimer > CONVERT_SECONDS(.5f))
+            if (FILE_SELECT_DATA.subMenuTimer > CONVERT_SECONDS(.5f))
             {
                 OptionsSetupTiletable();
                 DmaTransfer(3, (void*)sEwramPointer + 0x5100, VRAM_BASE + 0xF000, 0x800, 16);
-                FILE_SELECT_DATA.subroutineStage = 23;
+                FILE_SELECT_DATA.subMenuStage = 23;
             }
             break;
 
@@ -4276,34 +4276,34 @@ static u8 OptionsMetroidFusionLinkSubroutine(void)
             if (FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL].oamID != 0)
                 FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL].oamID++;
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 15:
             if (FileScreenUpdateMessageInfoIdQueue(1, FILE_SCREEN_MESSAGE_INFO_ID_UNABLE_TO_DETECT_FUSION))
             {
                 FILE_SELECT_DATA.dispcnt |= DCNT_BG1;
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
         case 16:
             if (gIoTransferInfo.result == TRANSFER_RESULT_FAILURE)
             {
-                FILE_SELECT_DATA.subroutineStage = 4;
+                FILE_SELECT_DATA.subMenuStage = 4;
                 break;
             }
 
             if (gChangedInput & (KEY_A | KEY_START))
             {
                 gIoTransferInfo.linkInProgress = 0;
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
         case 17:
             if (gIoTransferInfo.result == TRANSFER_RESULT_FAILURE)
-                FILE_SELECT_DATA.subroutineStage = 21;
+                FILE_SELECT_DATA.subMenuStage = 21;
             break;
 
         case 18:
@@ -4314,20 +4314,20 @@ static u8 OptionsMetroidFusionLinkSubroutine(void)
                 FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL].oamID++;
 
             FileScreenUpdateMessageInfoIdQueue(0, FILE_SCREEN_MESSAGE_INFO_ID_LINKING_ERROR_CHECK_CONNECTION);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 19:
             if (FileScreenUpdateMessageInfoIdQueue(1, FILE_SCREEN_MESSAGE_INFO_ID_LINKING_ERROR_CHECK_CONNECTION))
             {
                 FILE_SELECT_DATA.dispcnt |= DCNT_BG1;
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
         case 20:
             if (gChangedInput & (KEY_A | KEY_START))
-                FILE_SELECT_DATA.subroutineStage = 21;
+                FILE_SELECT_DATA.subMenuStage = 21;
             break;
 
         case 21:
@@ -4339,7 +4339,7 @@ static u8 OptionsMetroidFusionLinkSubroutine(void)
 
             if (FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL].oamID != 0)
                 FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL].oamID++;
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 22:
@@ -4349,12 +4349,12 @@ static u8 OptionsMetroidFusionLinkSubroutine(void)
             if (FILE_SELECT_DATA.optionsOam[OPTIONS_OAM_LARGE_PANEL].oamID != 0)
                 break;
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 23:
-            FILE_SELECT_DATA.subroutineTimer = 0;
-            FILE_SELECT_DATA.subroutineStage = 0;
+            FILE_SELECT_DATA.subMenuTimer = 0;
+            FILE_SELECT_DATA.subMenuStage = 0;
             return TRUE;
     }
 
@@ -4362,11 +4362,11 @@ static u8 OptionsMetroidFusionLinkSubroutine(void)
 }
 
 /**
- * @brief 7c124 | 1dc | Subroutine for the file select menu
+ * @brief 7c124 | 1dc | Main loop for the file select menu
  * 
  * @return u32 bool, leaving
  */
-u32 FileSelectMenuSubroutine(void)
+u32 FileSelectMenuMainLoop(void)
 {
     APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.timer);
 
@@ -4414,7 +4414,7 @@ u32 FileSelectMenuSubroutine(void)
             break;
 
         case 10:
-            if (OptionsSubroutine())
+            if (OptionsMainLoop())
             {
                 if (gSubGameMode2)
                 {
@@ -4426,8 +4426,8 @@ u32 FileSelectMenuSubroutine(void)
                     gSubGameMode1 = 2;
                     FILE_SELECT_DATA.currentSubMenu = 6;
                     FILE_SELECT_DATA.timer = 0;
-                    FILE_SELECT_DATA.subroutineStage = 0;
-                    FILE_SELECT_DATA.subroutineTimer = 0;
+                    FILE_SELECT_DATA.subMenuStage = 0;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
                 }
             }
             break;
@@ -5466,8 +5466,8 @@ static u8 FileSelectUpdateSubMenu(void)
                 if (result)
                 {
                     FileSelectUpdateCursor(cursorPose, FILE_SELECT_DATA.fileSelectCursorPosition);
-                    FILE_SELECT_DATA.subroutineStage = 0;
-                    FILE_SELECT_DATA.subroutineTimer = 0;
+                    FILE_SELECT_DATA.subMenuStage = 0;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
                 }
             }
             break;
@@ -5514,7 +5514,7 @@ static u8 FileSelectUpdateSubMenu(void)
             break;
 
         case 2:
-            if (FileSelectCopyFileSubroutine())
+            if (FileSelectCopyFileMainLoop())
             {
                 FileSelectUpdateCursor(CURSOR_POSE_DEFAULT, FILE_SELECT_DATA.fileSelectCursorPosition);
                 FILE_SELECT_DATA.currentSubMenu = 0;
@@ -5522,7 +5522,7 @@ static u8 FileSelectUpdateSubMenu(void)
             break;
 
         case 3:
-            if (FileSelectEraseFileSubroutine())
+            if (FileSelectEraseFileMainLoop())
             {
                 FileSelectUpdateCursor(CURSOR_POSE_DEFAULT, FILE_SELECT_DATA.fileSelectCursorPosition);
                 FILE_SELECT_DATA.currentSubMenu = 0;
@@ -5530,7 +5530,7 @@ static u8 FileSelectUpdateSubMenu(void)
             break;
 
         case 4:
-            if (FileSelectCorruptedFileSubroutine())
+            if (FileSelectCorruptedFileMainLoop())
             {
                 FileSelectUpdateCursor(CURSOR_POSE_DEFAULT, FILE_SELECT_DATA.fileSelectCursorPosition);
                 FILE_SELECT_DATA.currentSubMenu = 0;
@@ -5623,9 +5623,9 @@ static u8 FileSelectProcessFileSelection(void)
     u8 tmp;
 
     leaving = FALSE;
-    FILE_SELECT_DATA.subroutineTimer++;
+    FILE_SELECT_DATA.subMenuTimer++;
 
-    switch (FILE_SELECT_DATA.subroutineStage)
+    switch (FILE_SELECT_DATA.subMenuStage)
     {
         case 0:
             gMostRecentSaveFile = FILE_SELECT_DATA.fileSelectCursorPosition;
@@ -5665,7 +5665,7 @@ static u8 FileSelectProcessFileSelection(void)
             if (FILE_SELECT_DATA.fileSelectCursorPosition != FILE_SELECT_CURSOR_POSITION_FILE_C)
                 FILE_SELECT_DATA.fileScreenOam[FILE_SELECT_OAM_FILE_C_LOGO].notDrawn = TRUE;
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 1:
@@ -5701,7 +5701,7 @@ static u8 FileSelectProcessFileSelection(void)
             if (FILE_SELECT_DATA.fileSelectCursorPosition != FILE_SELECT_CURSOR_POSITION_FILE_C)
                 FILE_SELECT_DATA.fileScreenOam[FILE_SELECT_OAM_FILE_C_MARKER].notDrawn = TRUE;
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 2:
@@ -5715,7 +5715,7 @@ static u8 FileSelectProcessFileSelection(void)
 
                 break;
             }
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 3:
@@ -5725,7 +5725,7 @@ static u8 FileSelectProcessFileSelection(void)
             FileSelectUpdateTilemap(TILEMAP_REQUEST_START_GAME_INIT);
             FileScreenUpdateMessageInfoIdQueue(0, FILE_SCREEN_MESSAGE_INFO_ID_START_GAME);
             
-            FILE_SELECT_DATA.subroutineStage = 4;
+            FILE_SELECT_DATA.subMenuStage = 4;
             break;
 
         case 4:
@@ -5734,7 +5734,7 @@ static u8 FileSelectProcessFileSelection(void)
 
         case 5:
             unk_7e3fc(0, FILE_SELECT_DATA.fileSelectCursors.startGame);
-            FILE_SELECT_DATA.subroutineStage = 6;
+            FILE_SELECT_DATA.subMenuStage = 6;
             break;
 
         case 6:
@@ -5742,7 +5742,7 @@ static u8 FileSelectProcessFileSelection(void)
             FILE_SELECT_DATA.numberOfTimeAttackInputs = 0;
             FILE_SELECT_DATA.timeAttackInputCooldown = 0;
             FILE_SELECT_DATA.inputtedTimeAttack = FALSE;
-            FILE_SELECT_DATA.subroutineStage = 7;
+            FILE_SELECT_DATA.subMenuStage = 7;
 
         case 7:
             action = UCHAR_MAX;
@@ -5759,17 +5759,17 @@ static u8 FileSelectProcessFileSelection(void)
                      pSFI[pFSD->fileSelectCursorPosition].introPlayed))
                 {
                     FILE_SELECT_DATA.unk_3A = 0;
-                    FILE_SELECT_DATA.subroutineStage = 34;
+                    FILE_SELECT_DATA.subMenuStage = 34;
                 }
                 else
                 {
-                    pFSD->subroutineStage = 8;
+                    pFSD->subMenuStage = 8;
                 }
             }
             else if (gChangedInput & KEY_B)
             {
                 action = 0x81;
-                FILE_SELECT_DATA.subroutineStage = 39;
+                FILE_SELECT_DATA.subMenuStage = 39;
             }
             else if (gFileScreenOptionsUnlocked.timeAttack & TRUE && gSaveFilesInfo[FILE_SELECT_DATA.fileSelectCursorPosition].completedGame)
             {
@@ -5778,7 +5778,7 @@ static u8 FileSelectProcessFileSelection(void)
                     action = 0x80;
                     FILE_SELECT_DATA.fileSelectCursors.completedFileOptions = 2;
                     FILE_SELECT_DATA.inputtedTimeAttack = TRUE;
-                    FILE_SELECT_DATA.subroutineStage = 8;
+                    FILE_SELECT_DATA.subMenuStage = 8;
                 }
             }
 
@@ -5793,12 +5793,12 @@ static u8 FileSelectProcessFileSelection(void)
                     FILE_SELECT_DATA.continueNewMessage = FILE_SCREEN_MESSAGE_INFO_ID_CONTINUE_NEW_TIME_ATTACK;
                 else
                     FILE_SELECT_DATA.continueNewMessage = FILE_SCREEN_MESSAGE_INFO_ID_CONTINUE_NEW;
-                FILE_SELECT_DATA.subroutineStage = 9;
+                FILE_SELECT_DATA.subMenuStage = 9;
             }
             else
-                FILE_SELECT_DATA.subroutineStage = 21;
+                FILE_SELECT_DATA.subMenuStage = 21;
 
-            FILE_SELECT_DATA.subroutineTimer = 0;
+            FILE_SELECT_DATA.subMenuTimer = 0;
             break;
 
         case 9:
@@ -5806,14 +5806,14 @@ static u8 FileSelectProcessFileSelection(void)
             FileScreenUpdateMessageInfoIdQueue(0, FILE_SCREEN_MESSAGE_INFO_ID_ERASE_FILE_CONFIRM);
 
             FileSelectUpdateTilemap(0x1D);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 10:
             if (FileSelectUpdateTilemap(0x1E))
             {
                 unk_7e3fc(5, FILE_SELECT_DATA.fileSelectCursors.completedFileOptions);
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
@@ -5825,16 +5825,16 @@ static u8 FileSelectProcessFileSelection(void)
                 if (gChangedInput & KEY_A)
                 {
                     action = 0x80;
-                    FILE_SELECT_DATA.subroutineTimer = 0;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
                     FileSelectPlayMenuSound(MENU_SOUND_REQUEST_ACCEPT_CONFIRM_MENU);
-                    FILE_SELECT_DATA.subroutineStage = 13;
+                    FILE_SELECT_DATA.subMenuStage = 13;
                 }
                 else if (gChangedInput & KEY_B)
                 {
                     FileSelectUpdateTilemap(0x1F);
                     action = 0x81;
-                    FILE_SELECT_DATA.subroutineTimer = 0;
-                    FILE_SELECT_DATA.subroutineStage = 12;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
+                    FILE_SELECT_DATA.subMenuStage = 12;
                 }
                 else if (gChangedInput & KEY_UP)
                 {
@@ -5874,31 +5874,31 @@ static u8 FileSelectProcessFileSelection(void)
             {
                 if (FILE_SELECT_DATA.fileSelectCursors.completedFileOptions == 2)
                     FILE_SELECT_DATA.fileSelectCursors.completedFileOptions = 0;
-                FILE_SELECT_DATA.subroutineStage = 5;
+                FILE_SELECT_DATA.subMenuStage = 5;
             }
             break;
 
         case 13:
-            FILE_SELECT_DATA.subroutineTimer = 0;
+            FILE_SELECT_DATA.subMenuTimer = 0;
 
             if (FILE_SELECT_DATA.fileSelectCursors.completedFileOptions == 0)
             {
                 FILE_SELECT_DATA.unk_3A = 1;
-                FILE_SELECT_DATA.subroutineStage = 34;
+                FILE_SELECT_DATA.subMenuStage = 34;
             }
             else
             {
-                FILE_SELECT_DATA.subroutineStage = 14;
+                FILE_SELECT_DATA.subMenuStage = 14;
             }
             break;
 
         case 14:
-            if (FILE_SELECT_DATA.subroutineTimer > 10)
-                FILE_SELECT_DATA.subroutineStage = 15;
+            if (FILE_SELECT_DATA.subMenuTimer > 10)
+                FILE_SELECT_DATA.subMenuStage = 15;
             break;
 
         case 15:
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 16:
@@ -5906,7 +5906,7 @@ static u8 FileSelectProcessFileSelection(void)
             {
                 FILE_SELECT_DATA.fileSelectCursors.confirmOverwritingCompleted = sFileSelectMenuCursors_Empty.confirmOverwritingCompleted;
                 unk_7e3fc(6, FILE_SELECT_DATA.fileSelectCursors.confirmOverwritingCompleted);
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
@@ -5917,7 +5917,7 @@ static u8 FileSelectProcessFileSelection(void)
             {
                 if (gChangedInput & KEY_A)
                 {
-                    FILE_SELECT_DATA.subroutineTimer = 0;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
                     action = 0x80;
 
                     if (FILE_SELECT_DATA.fileSelectCursors.confirmOverwritingCompleted != 0)
@@ -5925,14 +5925,14 @@ static u8 FileSelectProcessFileSelection(void)
                     else
                         FileSelectPlayMenuSound(MENU_SOUND_REQUEST_ACCEPT_CONFIRM_MENU);
 
-                    FILE_SELECT_DATA.subroutineStage = 18;
+                    FILE_SELECT_DATA.subMenuStage = 18;
                 }
                 else if (gChangedInput & KEY_B)
                 {
-                    FILE_SELECT_DATA.subroutineTimer = 0;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
                     action = 0x81;
                     SoundPlay(SOUND_REFUSE_MENU);
-                    FILE_SELECT_DATA.subroutineStage = 19;
+                    FILE_SELECT_DATA.subMenuStage = 19;
                 }
                 else if (gChangedInput & KEY_LEFT)
                 {
@@ -5959,12 +5959,12 @@ static u8 FileSelectProcessFileSelection(void)
             break;
 
         case 18:
-            if (FILE_SELECT_DATA.subroutineTimer <= 10)
+            if (FILE_SELECT_DATA.subMenuTimer <= 10)
                 break;
 
             if (FILE_SELECT_DATA.fileSelectCursors.confirmOverwritingCompleted != 0)
             {
-                FILE_SELECT_DATA.subroutineStage = 19;
+                FILE_SELECT_DATA.subMenuStage = 19;
                 break;
             }
 
@@ -5986,13 +5986,13 @@ static u8 FileSelectProcessFileSelection(void)
             {
                 unk_7e3fc(6, 0x81);
                 FileSelectUpdateTilemap(0x23);
-                FILE_SELECT_DATA.subroutineStage = 20;
+                FILE_SELECT_DATA.subMenuStage = 20;
             }
             #if defined(DEBUG) || !defined(REGION_JP)
             else
             {
                 FILE_SELECT_DATA.unk_3A = 2;
-                FILE_SELECT_DATA.subroutineStage = 34;
+                FILE_SELECT_DATA.subMenuStage = 34;
             }
             #endif // DEBUG || !REGION_JP
             break;
@@ -6000,12 +6000,12 @@ static u8 FileSelectProcessFileSelection(void)
         case 19:
             FileSelectUpdateTilemap(0x25);
             unk_7e3fc(5, FILE_SELECT_DATA.fileSelectCursors.completedFileOptions);
-            FILE_SELECT_DATA.subroutineStage = 11;
+            FILE_SELECT_DATA.subMenuStage = 11;
             break;
 
         case 20:
             if (FileSelectUpdateTilemap(0x24))
-                FILE_SELECT_DATA.subroutineStage = 21;
+                FILE_SELECT_DATA.subMenuStage = 21;
             break;
 
         case 21:
@@ -6016,7 +6016,7 @@ static u8 FileSelectProcessFileSelection(void)
             if (gSaveFilesInfo[FILE_SELECT_DATA.fileSelectCursorPosition].language <= LANGUAGE_HIRAGANA)
             #endif // DEBUG
             {
-                FILE_SELECT_DATA.subroutineStage = 22;
+                FILE_SELECT_DATA.subMenuStage = 22;
                 FileScreenUpdateMessageInfoIdQueue(0, FILE_SCREEN_MESSAGE_INFO_ID_MESSAGE_OPTION);
             }
             #endif // DEBUG || REGION_JP
@@ -6025,7 +6025,7 @@ static u8 FileSelectProcessFileSelection(void)
             else
             #endif // DEBUG
             {
-                FILE_SELECT_DATA.subroutineStage = 28;
+                FILE_SELECT_DATA.subMenuStage = 28;
             }
             #endif // DEBUG || !REGION_JP
 
@@ -6046,14 +6046,14 @@ static u8 FileSelectProcessFileSelection(void)
 
         case 22:
             FileSelectUpdateTilemap(0x2);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 23:
             if (FileSelectUpdateTilemap(0x3))
             {
                 unk_7e3fc(1, FILE_SELECT_DATA.fileSelectCursors.japaneseText);
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
@@ -6065,16 +6065,16 @@ static u8 FileSelectProcessFileSelection(void)
                 if (gChangedInput & KEY_A)
                 {
                     action = 0x80;
-                    FILE_SELECT_DATA.subroutineTimer = 0;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
                     FileSelectPlayMenuSound(MENU_SOUND_REQUEST_ACCEPT_CONFIRM_MENU);
-                    FILE_SELECT_DATA.subroutineStage = 26;
+                    FILE_SELECT_DATA.subMenuStage = 26;
                 }
                 else if (gChangedInput & KEY_B)
                 {
                     FileSelectUpdateTilemap(0x4);
                     action = 0x81;
-                    FILE_SELECT_DATA.subroutineTimer = 0;
-                    FILE_SELECT_DATA.subroutineStage = 25;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
+                    FILE_SELECT_DATA.subMenuStage = 25;
                 }
                 else if (gChangedInput & KEY_UP)
                 {
@@ -6106,47 +6106,47 @@ static u8 FileSelectProcessFileSelection(void)
 
             if (gSaveFilesInfo[FILE_SELECT_DATA.fileSelectCursorPosition].completedGame == 0)
             {
-                FILE_SELECT_DATA.subroutineStage = 5;
+                FILE_SELECT_DATA.subMenuStage = 5;
                 break;
             }
 
-            FILE_SELECT_DATA.subroutineStage = 8;
+            FILE_SELECT_DATA.subMenuStage = 8;
             break;
 
         case 26:
-            if (FILE_SELECT_DATA.subroutineTimer <= 10)
+            if (FILE_SELECT_DATA.subMenuTimer <= 10)
                 break;
 
             if (FILE_SELECT_DATA.fileSelectCursors.completedFileOptions == 2)
             {
                 FILE_SELECT_DATA.unk_3A = 3;
-                FILE_SELECT_DATA.subroutineStage = 34;
+                FILE_SELECT_DATA.subMenuStage = 34;
                 break;
             }
 
             FileSelectUpdateTilemap(0x4);
             unk_7e3fc(1, 0x81);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 27:
             if (FileSelectUpdateTilemap(0x5))
             {
-                FILE_SELECT_DATA.subroutineStage = 28;
+                FILE_SELECT_DATA.subMenuStage = 28;
                 FILE_SELECT_DATA.fileSelectCursors.difficulty = FILE_SELECT_DATA.fileSelectCursors.japaneseText ^ 1;
             }
             break;
 
         case 28:
             FileSelectUpdateTilemap(TILEMAP_REQUEST_DIFFICULTY_SPAWN_INIT);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 29:
             if (FileSelectUpdateTilemap(TILEMAP_REQUEST_DIFFICULTY_SPAWN))
             {
                 unk_7e3fc(2, FILE_SELECT_DATA.fileSelectCursors.difficulty);
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
@@ -6158,16 +6158,16 @@ static u8 FileSelectProcessFileSelection(void)
                 if (gChangedInput & KEY_A)
                 {
                     action = 0x80;
-                    FILE_SELECT_DATA.subroutineTimer = 0;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
                     FILE_SELECT_DATA.unk_3A = 4;
-                    FILE_SELECT_DATA.subroutineStage = 34;
+                    FILE_SELECT_DATA.subMenuStage = 34;
                 }
                 else if (gChangedInput & KEY_B)
                 {
                     FileSelectUpdateTilemap(TILEMAP_REQUEST_DIFFICULTY_DESPAWN_INIT);
                     action = 0x81;
-                    FILE_SELECT_DATA.subroutineTimer = 0;
-                    FILE_SELECT_DATA.subroutineStage = 31;
+                    FILE_SELECT_DATA.subMenuTimer = 0;
+                    FILE_SELECT_DATA.subMenuStage = 31;
                 }
                 else if (gChangedInput & KEY_UP)
                 {
@@ -6210,7 +6210,7 @@ static u8 FileSelectProcessFileSelection(void)
                 if (gSaveFilesInfo[FILE_SELECT_DATA.fileSelectCursorPosition].language <= LANGUAGE_HIRAGANA)
                 #endif // DEBUG
                 {
-                    FILE_SELECT_DATA.subroutineStage = 22;
+                    FILE_SELECT_DATA.subMenuStage = 22;
                 }
                 #endif // DEBUG || REGION_JP
                 #if defined(DEBUG) || !defined(REGION_JP)
@@ -6219,9 +6219,9 @@ static u8 FileSelectProcessFileSelection(void)
                 #endif // DEBUG
                 {
                     if (gSaveFilesInfo[FILE_SELECT_DATA.fileSelectCursorPosition].exists)
-                        FILE_SELECT_DATA.subroutineStage = 8;
+                        FILE_SELECT_DATA.subMenuStage = 8;
                     else
-                        FILE_SELECT_DATA.subroutineStage = 6;
+                        FILE_SELECT_DATA.subMenuStage = 6;
                 }
                 #endif // DEBUG || !REGION_JP
             }
@@ -6230,38 +6230,38 @@ static u8 FileSelectProcessFileSelection(void)
         case 34:
             FileSelectUpdateCursor(CURSOR_POSE_STARTING_GAME, FILE_SELECT_DATA.fileSelectCursorPosition);
             FileSelectPlayMenuSound(MENU_SOUND_REQUEST_START_GAME);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 35:
             if (gChangedInput & KEY_B)
             {
-                FILE_SELECT_DATA.subroutineStage = 37;
+                FILE_SELECT_DATA.subMenuStage = 37;
                 break;
             }
 
             if (FILE_SELECT_DATA.fileScreenOam[FILE_SELECT_OAM_CURSOR].ended)
             {
-                FILE_SELECT_DATA.subroutineTimer = 0;
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuTimer = 0;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
         case 36:
             if (gChangedInput & KEY_B)
             {
-                FILE_SELECT_DATA.subroutineStage = 37;
+                FILE_SELECT_DATA.subMenuStage = 37;
                 break;
             }
 
-            if (FILE_SELECT_DATA.subroutineTimer > 16)
+            if (FILE_SELECT_DATA.subMenuTimer > 16)
                 leaving = 2;
             break;
 
         case 37:
             FileSelectUpdateCursor(0x8, FILE_SELECT_DATA.fileSelectCursorPosition);
             FileSelectPlayMenuSound(MENU_SOUND_REQUEST_CLOSE_SUB_MENU2);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 38:
@@ -6271,27 +6271,27 @@ static u8 FileSelectProcessFileSelection(void)
             switch (FILE_SELECT_DATA.unk_3A)
             {
                 case 0:
-                    FILE_SELECT_DATA.subroutineStage = 5;
+                    FILE_SELECT_DATA.subMenuStage = 5;
                     break;
 
                 case 1:
                     unk_7e3fc(5, FILE_SELECT_DATA.fileSelectCursors.completedFileOptions);
-                    FILE_SELECT_DATA.subroutineStage = 11;
+                    FILE_SELECT_DATA.subMenuStage = 11;
                     break;
 
                 case 2:
                     unk_7e3fc(6, FILE_SELECT_DATA.fileSelectCursors.confirmOverwritingCompleted);
-                    FILE_SELECT_DATA.subroutineStage = 17;
+                    FILE_SELECT_DATA.subMenuStage = 17;
                     break;
 
                 case 3:
                     unk_7e3fc(1, FILE_SELECT_DATA.fileSelectCursors.japaneseText);
-                    FILE_SELECT_DATA.subroutineStage = 24;
+                    FILE_SELECT_DATA.subMenuStage = 24;
                     break;
 
                 case 4:
                     unk_7e3fc(2, FILE_SELECT_DATA.fileSelectCursors.difficulty);
-                    FILE_SELECT_DATA.subroutineStage = 30;
+                    FILE_SELECT_DATA.subMenuStage = 30;
                     break;
             }
 
@@ -6302,7 +6302,7 @@ static u8 FileSelectProcessFileSelection(void)
             FILE_SELECT_DATA.fileScreenOam[FILE_SELECT_OAM_SMALL_PANEL].oamID = FILE_SELECT_OAM_ID_SMALL_PANEL + 1;
 
             FileSelectPlayMenuSound(MENU_SOUND_REQUEST_CLOSE_SUB_MENU);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 40:
@@ -6312,13 +6312,13 @@ static u8 FileSelectProcessFileSelection(void)
                 FILE_SELECT_DATA.bg1cnt = FILE_SELECT_DATA.unk_18;
                 gBg1HOFS_NonGameplay = BLOCK_SIZE * 32;
                 gBg1VOFS_NonGameplay = BLOCK_SIZE * 32;
-                FILE_SELECT_DATA.subroutineStage++;
+                FILE_SELECT_DATA.subMenuStage++;
             }
             break;
 
         case 41:
             BitFill(3, 0, VRAM_BASE + 0xF000 + FILE_SELECT_DATA.fileSelectCursorPosition * 0xC0, 0xC0, 16);
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
 
         case 42:
             action = BLOCK_SIZE * 32;
@@ -6335,7 +6335,7 @@ static u8 FileSelectProcessFileSelection(void)
             FILE_SELECT_DATA.fileScreenOam[FILE_SELECT_OAM_FILE_B_MARKER].notDrawn = FALSE;
             FILE_SELECT_DATA.fileScreenOam[FILE_SELECT_OAM_FILE_C_MARKER].notDrawn = FALSE;
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 43:
@@ -6367,7 +6367,7 @@ static u8 FileSelectProcessFileSelection(void)
             FILE_SELECT_DATA.fileScreenOam[FILE_SELECT_OAM_FILE_B_LOGO].notDrawn = FALSE;
             FILE_SELECT_DATA.fileScreenOam[FILE_SELECT_OAM_FILE_C_LOGO].notDrawn = FALSE;
 
-            FILE_SELECT_DATA.subroutineStage++;
+            FILE_SELECT_DATA.subMenuStage++;
             break;
 
         case 44:

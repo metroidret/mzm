@@ -462,7 +462,7 @@ static u8 KraidRisingInit(void)
     return FALSE;
 }
 
-static struct CutsceneSubroutineData sKraidRisingSubroutineData[4] = {
+static struct CutsceneStageData sKraidRisingStageData[4] = {
     [0] = {
         .pFunction = KraidRisingInit,
         .oamLength = 18
@@ -482,15 +482,15 @@ static struct CutsceneSubroutineData sKraidRisingSubroutineData[4] = {
 };
 
 /**
- * @brief 62b24 | 37 | Kraid rising cutscene subroutine
+ * @brief 62b24 | 37 | Kraid rising cutscene main loop
  * 
  * @return u8 1 if ended, 0 otherwise
  */
-u8 KraidRisingSubroutine(void)
+u8 KraidRisingMainLoop(void)
 {
     u8 ended;
 
-    ended = sKraidRisingSubroutineData[CUTSCENE_DATA.timeInfo.stage].pFunction();
+    ended = sKraidRisingStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
 
     CutsceneUpdateBackgroundsPosition(TRUE);
     KraidRisingProcessOam();
@@ -506,6 +506,6 @@ static void KraidRisingProcessOam(void)
 {
     gNextOamSlot = 0;
 
-    ProcessCutsceneOam(sKraidRisingSubroutineData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sKraidRisingCutsceneOam);
+    ProcessCutsceneOam(sKraidRisingStageData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sKraidRisingCutsceneOam);
     ResetFreeOam();
 }

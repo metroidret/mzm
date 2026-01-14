@@ -124,7 +124,7 @@ SamusPose SamusGrabbingALedgeSuitlessGfx(struct SamusData* pData);
 SamusPose SamusFacingTheBackground(struct SamusData* pData);
 SamusPose SamusTurningFromFacingTheBackgroundGfx(struct SamusData* pData);
 SamusPose SamusTurningToEnterEscapeShipGfx(struct SamusData* pData);
-SamusPose SamusExecutePoseSubroutine(struct SamusData* pData);
+SamusPose SamusExecutePoseMainLoop(struct SamusData* pData);
 void SamusUpdateVelocityPosition(struct SamusData* pData);
 void SamusUpdateGraphicsOam(struct SamusData* pData, u8 direction);
 void SamusUpdatePalette(struct SamusData* pData);

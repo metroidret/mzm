@@ -28,6 +28,6 @@ struct KraidRisingEwramData {
 
 #define KRAID_RISING_EWRAM sEwramPointer->kraidRising
 
-u8 KraidRisingSubroutine(void);
+u8 KraidRisingMainLoop(void);
 
 #endif /* KRAID_RISING_CUTSCENE */

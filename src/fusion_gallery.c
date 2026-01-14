@@ -195,11 +195,11 @@ static u32 FusionGalleryDisplay(void)
 }
 
 /**
- * @brief 84b60 | d4 | Fusion gallery subroutine
+ * @brief 84b60 | d4 | Fusion gallery main loop
  * 
  * @return u32 bool, ended
  */
-u32 FusionGallerySubroutine(void)
+u32 FusionGalleryMainLoop(void)
 {
     u32 ended;
 

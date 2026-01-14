@@ -971,7 +971,7 @@ static u8 IntroFuzz(void)
     return FALSE;
 }
 
-static IntroFunc_T sIntroSubroutinesFunctionsPointer[8] = {
+static IntroFunc_T sIntroStageFunctionsPointer[8] = {
     [0] = IntroEmergencyOrder,
     [1] = IntroShipFlyingTowardsCamera,
     [2] = IntroSamusInHerShip,
@@ -983,11 +983,11 @@ static IntroFunc_T sIntroSubroutinesFunctionsPointer[8] = {
 };
 
 /**
- * @brief 8117c | cc | Subroutine for the intro
+ * @brief 8117c | cc | Main loop for the intro
  * 
  * @return u32 bool, ended
  */
-u32 IntroSubroutine(void)
+u32 IntroMainLoop(void)
 {
     u32 ended;
 
@@ -1020,7 +1020,7 @@ u32 IntroSubroutine(void)
                 FadeAllSounds(CONVERT_SECONDS(1.f / 6));
                 FadeMusic(CONVERT_SECONDS(1.f / 6));
             }
-            else if (sIntroSubroutinesFunctionsPointer[INTRO_DATA.stage]())
+            else if (sIntroStageFunctionsPointer[INTRO_DATA.stage]())
             {
                 gSubGameMode1++;
                 gSubGameMode2 = 0;

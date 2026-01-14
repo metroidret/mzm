@@ -657,7 +657,7 @@ static u8 EnterTourianInit(void)
     return FALSE;
 }
 
-static struct CutsceneSubroutineData sEnterTourianSubroutineData[3] = {
+static struct CutsceneStageData sEnterTourianStageData[3] = {
     [0] = {
         .pFunction = EnterTourianInit,
         .oamLength = 9
@@ -672,11 +672,11 @@ static struct CutsceneSubroutineData sEnterTourianSubroutineData[3] = {
     }
 };
 
-u8 EnterTourianSubroutine(void)
+u8 EnterTourianMainLoop(void)
 {
     u8 ended;
 
-    ended = sEnterTourianSubroutineData[CUTSCENE_DATA.timeInfo.stage].pFunction();
+    ended = sEnterTourianStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
 
     CutsceneUpdateBackgroundsPosition(TRUE);
     EnterTourianProcessOAM();
@@ -691,7 +691,7 @@ u8 EnterTourianSubroutine(void)
 static void EnterTourianProcessOAM(void)
 {
     gNextOamSlot = 0;
-    ProcessCutsceneOam(sEnterTourianSubroutineData[CUTSCENE_DATA.timeInfo.stage].oamLength,
+    ProcessCutsceneOam(sEnterTourianStageData[CUTSCENE_DATA.timeInfo.stage].oamLength,
         CUTSCENE_DATA.oam, sEnterTourianOam);
     ResetFreeOam();
     CalculateOamPart4(gCurrentOamRotation, gCurrentOamScaling, 0);

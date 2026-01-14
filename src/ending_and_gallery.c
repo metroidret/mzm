@@ -1900,14 +1900,14 @@ static CreditsFunc_T sUnlockedOptionsFunctionPointers[2] = {
 };
 
 /**
- * @brief 871dc | 208 | Subroutine for the credits
+ * @brief 871dc | 208 | Main loop for the credits
  * 
  * @return u32 bool, ended
  */
-u32 CreditsSubroutine(void)
+u32 CreditsMainLoop(void)
 {
     u32 ended;
-    u32 subroutineResult;
+    u32 stageResult;
 
     ended = FALSE;
     ENDING_DATA.unk_6 = 0;
@@ -1931,15 +1931,15 @@ u32 CreditsSubroutine(void)
                 break;
             }
             #endif // DEBUG && !REGION_US_BETA
-            subroutineResult = sCreditsFunctionPointers[ENDING_DATA.stage]();
-            if (subroutineResult)
+            stageResult = sCreditsFunctionPointers[ENDING_DATA.stage]();
+            if (stageResult)
             {
                 ENDING_DATA.stage++;
                 ENDING_DATA.unk_1 = 0;
                 ENDING_DATA.endScreenTimer = 0;
                 ENDING_DATA.timer = 0;
 
-                if (subroutineResult > 1)
+                if (stageResult > 1)
                     gSubGameMode1++;
             }
 
@@ -2025,8 +2025,8 @@ u32 CreditsSubroutine(void)
             break;
 
         case 14:
-            subroutineResult = sUnlockedOptionsFunctionPointers[ENDING_DATA.stage]();
-            if (subroutineResult)
+            stageResult = sUnlockedOptionsFunctionPointers[ENDING_DATA.stage]();
+            if (stageResult)
             {
                 gEndingFlags = 0;
                 ENDING_DATA.stage++;
@@ -2034,7 +2034,7 @@ u32 CreditsSubroutine(void)
                 ENDING_DATA.endScreenTimer = 0;
                 ENDING_DATA.timer = 0;
 
-                if (subroutineResult > 1)
+                if (stageResult > 1)
                     gSubGameMode1++;
             }
 
@@ -2245,11 +2245,11 @@ static u32 GalleryDisplay(void)
 }
 
 /**
- * @brief 87778 | d8 | Subroutine for the gallery
+ * @brief 87778 | d8 | Main loop for the gallery
  * 
  * @return u32 bool, ended
  */
-u32 GallerySubroutine(void)
+u32 GalleryMainLoop(void)
 {
     u32 ended;
 

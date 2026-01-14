@@ -217,7 +217,7 @@ static u8 StatueOpeningInit(void)
     return FALSE;
 }
 
-static struct CutsceneSubroutineData sStatueOpeningSubroutineData[3] = {
+static struct CutsceneStageData sStatueOpeningStageData[3] = {
     [0] = {
         .pFunction = StatueOpeningInit,
         .oamLength = 2
@@ -233,15 +233,15 @@ static struct CutsceneSubroutineData sStatueOpeningSubroutineData[3] = {
 };
 
 /**
- * @brief 67014 | 34 | Subroutine for the statue opening cutscene
+ * @brief 67014 | 34 | Main loop for the statue opening cutscene
  * 
  * @return u8 bool, ended
  */
-u8 StatueOpeningSubroutine(void)
+u8 StatueOpeningMainLoop(void)
 {
     u8 ended;
 
-    ended = sStatueOpeningSubroutineData[CUTSCENE_DATA.timeInfo.stage].pFunction();
+    ended = sStatueOpeningStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
 
     CutsceneUpdateBackgroundsPosition(TRUE);
     StatueOpeningProcessOAM();
@@ -256,6 +256,6 @@ u8 StatueOpeningSubroutine(void)
 static void StatueOpeningProcessOAM(void)
 {
     gNextOamSlot = 0;
-    ProcessCutsceneOam(sStatueOpeningSubroutineData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sStatueOpeningOam);
+    ProcessCutsceneOam(sStatueOpeningStageData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sStatueOpeningOam);
     ResetFreeOam();
 }

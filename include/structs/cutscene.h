@@ -74,7 +74,7 @@ struct CutsceneInfo {
     Event event;
 };
 
-struct CutsceneSubroutineData {
+struct CutsceneStageData {
     CutsceneFunc_T pFunction;
     u8 oamLength;
 };

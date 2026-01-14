@@ -309,23 +309,23 @@ void PauseDebugActivateAbilities(void)
  * 
  * @return u32 Leaving
  */
-u32 PauseDebugSubroutine(void)
+u32 PauseDebugMainLoop(void)
 {
     if (!PAUSE_SCREEN_DATA.debugOnEventList)
     {
         if (gChangedInput == KEY_NONE)
             return FALSE;
 
-        if (gChangedInput & (gButtonAssignments.pause | KEY_B) && PAUSE_SCREEN_DATA.subroutineInfo.stage == 0)
+        if (gChangedInput & (gButtonAssignments.pause | KEY_B) && PAUSE_SCREEN_DATA.stateInfo.stage == 0)
             return TRUE;
 
-        if (gChangedInput & (KEY_L | KEY_R) && PAUSE_SCREEN_DATA.subroutineInfo.stage == 0)
+        if (gChangedInput & (KEY_L | KEY_R) && PAUSE_SCREEN_DATA.stateInfo.stage == 0)
         {
-            PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = 0xC;
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
-            PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
+            PAUSE_SCREEN_DATA.stateInfo.state = 0xC;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.stage = 0;
         }
-        else if (gChangedInput & KEY_SELECT && PAUSE_SCREEN_DATA.subroutineInfo.stage == 0)
+        else if (gChangedInput & KEY_SELECT && PAUSE_SCREEN_DATA.stateInfo.stage == 0)
         {
             PAUSE_SCREEN_DATA.debugOnEventList = TRUE;
             PAUSE_SCREEN_DATA.debugEventListStage = 0;
@@ -439,9 +439,9 @@ void PauseDebugStatusScreen(void)
     if (!work1)
         return;
 
-    if (sPauseDebugGroupsPositions[i].group != PAUSE_DEBUG_GROUP_EQUIP_TANK && gChangedInput & KEY_B && PAUSE_SCREEN_DATA.subroutineInfo.stage != 0)
+    if (sPauseDebugGroupsPositions[i].group != PAUSE_DEBUG_GROUP_EQUIP_TANK && gChangedInput & KEY_B && PAUSE_SCREEN_DATA.stateInfo.stage != 0)
     {
-        PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
+        PAUSE_SCREEN_DATA.stateInfo.stage = 0;
         UpdateMenuOamDataID(&PAUSE_SCREEN_DATA.miscOam[0], 0x35);
         if (sPauseDebugGroupsPositions[i].group == PAUSE_DEBUG_GROUP_TIME)
             gMaxInGameTimerFlag = 0;
@@ -477,9 +477,9 @@ void PauseDebugStatusScreen(void)
             if (gChangedInput & KEY_A)
             {
                 UpdateMenuOamDataID(&PAUSE_SCREEN_DATA.miscOam[0], 0x36);
-                PAUSE_SCREEN_DATA.subroutineInfo.stage = 1;
+                PAUSE_SCREEN_DATA.stateInfo.stage = 1;
             }
-            else if (PAUSE_SCREEN_DATA.subroutineInfo.stage != 0 && PauseDebugEnergyAmmoInput(xPos, sPauseDebugGroupsPositions[i].group))
+            else if (PAUSE_SCREEN_DATA.stateInfo.stage != 0 && PauseDebugEnergyAmmoInput(xPos, sPauseDebugGroupsPositions[i].group))
             {
                 PauseDebugDrawAffectedGroups(1 << sPauseDebugGroupsPositions[i].group);
             }
@@ -520,23 +520,23 @@ void PauseDebugStatusScreen(void)
             break;
 
         case PAUSE_DEBUG_GROUP_EQUIP_TANK:
-            if (PAUSE_SCREEN_DATA.subroutineInfo.stage == 0)
+            if (PAUSE_SCREEN_DATA.stateInfo.stage == 0)
             {
                 if (gChangedInput & KEY_A)
                 {
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage = 1;
+                    PAUSE_SCREEN_DATA.stateInfo.stage = 1;
                     UpdateMenuOamDataID(&PAUSE_SCREEN_DATA.miscOam[0], 0x36);
                     break;
                 }
             }
             else if (gChangedInput & (KEY_A | KEY_B))
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage = 0;
                 UpdateMenuOamDataID(&PAUSE_SCREEN_DATA.miscOam[0], 0x35);
                 break;
             }
             
-            if (PAUSE_SCREEN_DATA.subroutineInfo.stage != 0)
+            if (PAUSE_SCREEN_DATA.stateInfo.stage != 0)
             {
                 if (gChangedInput & KEY_RIGHT)
                 {
@@ -558,27 +558,27 @@ void PauseDebugStatusScreen(void)
         
         case PAUSE_DEBUG_GROUP_S_EVENT:
             work3 = FALSE;
-            if (PAUSE_SCREEN_DATA.subroutineInfo.stage == 0)
+            if (PAUSE_SCREEN_DATA.stateInfo.stage == 0)
             {
                 if (gChangedInput & KEY_A)
                 {
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage = 1;
+                    PAUSE_SCREEN_DATA.stateInfo.stage = 1;
                     UpdateMenuOamDataID(&PAUSE_SCREEN_DATA.miscOam[0], 0x36);
                 }
             }
             else if (gChangedInput & (KEY_A | KEY_B))
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage = 0;
                 UpdateMenuOamDataID(&PAUSE_SCREEN_DATA.miscOam[0], 0x35);
             }
             break;
 
         case PAUSE_DEBUG_GROUP_TIME:
-            if (PAUSE_SCREEN_DATA.subroutineInfo.stage == 0)
+            if (PAUSE_SCREEN_DATA.stateInfo.stage == 0)
             {
                 if (gChangedInput & KEY_A) {
                     UpdateMenuOamDataID(&PAUSE_SCREEN_DATA.miscOam[0], 0x36);
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage = 1;
+                    PAUSE_SCREEN_DATA.stateInfo.stage = 1;
                     gMaxInGameTimerFlag = 1;
                 }
                 break;
@@ -690,12 +690,12 @@ void PauseDebugStatusScreen(void)
             break;
 
         case PAUSE_DEBUG_GROUP_LANGUAGE:
-            if (PAUSE_SCREEN_DATA.subroutineInfo.stage == 0)
+            if (PAUSE_SCREEN_DATA.stateInfo.stage == 0)
             {
                 if (gChangedInput & KEY_A)
                 {
                     UpdateMenuOamDataID(&PAUSE_SCREEN_DATA.miscOam[0], 0x36);
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage = 1;
+                    PAUSE_SCREEN_DATA.stateInfo.stage = 1;
                 }
             }
             else
@@ -720,12 +720,12 @@ void PauseDebugStatusScreen(void)
             break;
 
         case PAUSE_DEBUG_GROUP_DIFFICULTY:
-            if (PAUSE_SCREEN_DATA.subroutineInfo.stage == 0)
+            if (PAUSE_SCREEN_DATA.stateInfo.stage == 0)
             {
                 if (gChangedInput & KEY_A)
                 {
                     UpdateMenuOamDataID(&PAUSE_SCREEN_DATA.miscOam[0], 0x36);
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage = 1;
+                    PAUSE_SCREEN_DATA.stateInfo.stage = 1;
                 }
             }
             else
@@ -1528,7 +1528,7 @@ void PauseDebugEventList(void)
             break;
 
         case 3:
-            if (gChangedInput & (KEY_B | KEY_SELECT) && PAUSE_SCREEN_DATA.subroutineInfo.stage == 0)
+            if (gChangedInput & (KEY_B | KEY_SELECT) && PAUSE_SCREEN_DATA.stateInfo.stage == 0)
                 PAUSE_SCREEN_DATA.debugEventListStage++;
             else
                 PauseDebugEventListInput();
@@ -2707,22 +2707,22 @@ u32 StatusScreenSuitlessItems(void)
 
     ended = FALSE;
 
-    if (PAUSE_SCREEN_DATA.subroutineInfo.stage > 5)
+    if (PAUSE_SCREEN_DATA.stateInfo.stage > 5)
         ended = gPrevChangedInput != 0;
 
     if (ended)
         return ended;
 
-    if (PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeStage != 0)
+    if (PAUSE_SCREEN_DATA.stateInfo.fadeWireframeStage != 0)
     {
         PauseScreenFadeWireframeSamus();
     }
     else
     {
-        switch (PAUSE_SCREEN_DATA.subroutineInfo.stage)
+        switch (PAUSE_SCREEN_DATA.stateInfo.stage)
         {
             case 0:
-                if (PAUSE_SCREEN_DATA.subroutineInfo.timer <= CONVERT_SECONDS(4.f / 15))
+                if (PAUSE_SCREEN_DATA.stateInfo.timer <= CONVERT_SECONDS(4.f / 15))
                     break;
 
                 if (PAUSE_SCREEN_DATA.statusScreenData.currentStatusSlot != STATUS_SLOT_0)
@@ -2733,24 +2733,24 @@ u32 StatusScreenSuitlessItems(void)
                     if (togglingResult < 0)
                     {
                         if (gDemoState != DEMO_STATE_NONE)
-                            PAUSE_SCREEN_DATA.subroutineInfo.stage = 3;
+                            PAUSE_SCREEN_DATA.stateInfo.stage = 3;
                         else
-                            PAUSE_SCREEN_DATA.subroutineInfo.stage = 5;
+                            PAUSE_SCREEN_DATA.stateInfo.stage = 5;
                     }
                     else
-                        PAUSE_SCREEN_DATA.subroutineInfo.stage = 1;
+                        PAUSE_SCREEN_DATA.stateInfo.stage = 1;
                     gCurrentMessage.messageEnded = FALSE;
                 }
                 else
                 {
                     gCurrentMessage.messageEnded = TRUE;
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage = 7;
+                    PAUSE_SCREEN_DATA.stateInfo.stage = 7;
                 }
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
                 break;
 
             case 1:
-                if (PAUSE_SCREEN_DATA.subroutineInfo.timer <= CONVERT_SECONDS(2.f / 15))
+                if (PAUSE_SCREEN_DATA.stateInfo.timer <= CONVERT_SECONDS(2.f / 15))
                     break;
 
                 StatusScreenToggleItem(PAUSE_SCREEN_DATA.statusScreenData.currentStatusSlot, ITEM_TOGGLE_TOGGLING);
@@ -2777,26 +2777,26 @@ u32 StatusScreenSuitlessItems(void)
                         break;
                 }
                 
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
-                PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage++;
                 break;
 
             case 2:
-                if (PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeStage != 0)
+                if (PAUSE_SCREEN_DATA.stateInfo.fadeWireframeStage != 0)
                     break;
 
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
                 if (gDemoState != DEMO_STATE_NONE)
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage = 3;
+                    PAUSE_SCREEN_DATA.stateInfo.stage = 3;
                 else
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage = 5;
+                    PAUSE_SCREEN_DATA.stateInfo.stage = 5;
                 break;
 
             case 3:
                 if (gCurrentMessage.messageEnded)
                 {
-                    PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+                    PAUSE_SCREEN_DATA.stateInfo.timer = 0;
+                    PAUSE_SCREEN_DATA.stateInfo.stage++;
                     break;
                 }
 
@@ -2804,14 +2804,14 @@ u32 StatusScreenSuitlessItems(void)
                 break;
 
             case 4:
-                if (PAUSE_SCREEN_DATA.subroutineInfo.timer > CONVERT_SECONDS(.5f))
+                if (PAUSE_SCREEN_DATA.stateInfo.timer > CONVERT_SECONDS(.5f))
                     ended = TRUE;
                 break;
 
             case 5:
                 TextProcessDescription();
                 if (gCurrentMessage.messageEnded)
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage = 7;
+                    PAUSE_SCREEN_DATA.stateInfo.stage = 7;
                 break;
 
             case 6:
@@ -3003,33 +3003,33 @@ u32 StatusScreenFullyPoweredItems(void)
     u32 result;
     u8 rightSlot;
 
-    if (PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeStage != 0)
+    if (PAUSE_SCREEN_DATA.stateInfo.fadeWireframeStage != 0)
     {
         PauseScreenFadeWireframeSamus();
         return FALSE;
     }
 
-    switch (PAUSE_SCREEN_DATA.subroutineInfo.stage)
+    switch (PAUSE_SCREEN_DATA.stateInfo.stage)
     {
         case FULLY_POWERED_ITEMS_CHECK_ENABLE_SUIT:
             // Wait
-            if (PAUSE_SCREEN_DATA.subroutineInfo.timer > CONVERT_SECONDS(5.f / 6))
+            if (PAUSE_SCREEN_DATA.stateInfo.timer > CONVERT_SECONDS(5.f / 6))
             {
                 // Update to suit wireframe
                 PauseScreenUpdateWireframeSamus(2);
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
-                PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage++;
             }
             break;
 
         case FULLY_POWERED_ITEMS_DELAY:
             // Wait
-            if (PAUSE_SCREEN_DATA.subroutineInfo.timer > CONVERT_SECONDS(.5f))
+            if (PAUSE_SCREEN_DATA.stateInfo.timer > CONVERT_SECONDS(.5f))
             {
                 PAUSE_SCREEN_DATA.statusScreenData.currentStatusSlot = STATUS_SLOT_LONG_BEAM;
                 PAUSE_SCREEN_DATA.notPlayingEnablingNormalItemSound = TRUE;
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
-                PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage++;
             }
             break;
 
@@ -3044,12 +3044,12 @@ u32 StatusScreenFullyPoweredItems(void)
 
             // If the slot was invalid, it'll stay on this stage, if it found a normal item it'll go to stage 3,
             // and if it reached the end of the slots, it'll go to stage 4
-            PAUSE_SCREEN_DATA.subroutineInfo.stage += result;
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.stage += result;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             break;
 
         case FULLY_POWERED_ITEMS_ACTIVATE_NORMAL_SLOT:
-            if (PAUSE_SCREEN_DATA.subroutineInfo.timer <= CONVERT_SECONDS(.1f))
+            if (PAUSE_SCREEN_DATA.stateInfo.timer <= CONVERT_SECONDS(.1f))
                 break;
             
             // Update row (enables it)
@@ -3075,8 +3075,8 @@ u32 StatusScreenFullyPoweredItems(void)
             // Goto next slot
             PAUSE_SCREEN_DATA.statusScreenData.currentStatusSlot++;
             // Go back to looking for normal items
-            PAUSE_SCREEN_DATA.subroutineInfo.stage--;
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.stage--;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             break;
 
         case FULLY_POWERED_ITEMS_SEARCH_FOR_UNKNOWN_ITEM:
@@ -3085,14 +3085,14 @@ u32 StatusScreenFullyPoweredItems(void)
             {
                 // Found unknown item
                 BitFill(3, 0, VRAM_BASE + 0x7800, 0x800, 16);
-                PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+                PAUSE_SCREEN_DATA.stateInfo.stage++;
             }
             else
             {
                 // Didn't found any unknown item, finish sequence
-                PAUSE_SCREEN_DATA.subroutineInfo.stage = FULLY_POWERED_ITEMS_FINISH;
+                PAUSE_SCREEN_DATA.stateInfo.stage = FULLY_POWERED_ITEMS_FINISH;
             }
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             break;
 
         case FULLY_POWERED_ITEMS_ENABLE_UNKNOWN_ITEM_INIT:
@@ -3116,16 +3116,16 @@ u32 StatusScreenFullyPoweredItems(void)
 
             StatusScreenUpdateUnknownItemPalette(0);
             SoundPlay(SOUND_ENABLING_UNKNOWN_ITEM);
-            PAUSE_SCREEN_DATA.subroutineInfo.stage++;
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.stage++;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             break;
 
         case FULLY_POWERED_ITEMS_UNKNOWN_ITEM_ACTIVATING_ANIMATION_PART1:
             if (StatusScreenUpdateUnknownItemPalette(1))
             {
                 // Goto part 2
-                PAUSE_SCREEN_DATA.subroutineInfo.stage++;
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage++;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             }
             break;
 
@@ -3144,8 +3144,8 @@ u32 StatusScreenFullyPoweredItems(void)
             else
                 PAUSE_SCREEN_DATA.statusScreenData.previousLeftStatusSlot = PAUSE_SCREEN_DATA.statusScreenData.currentStatusSlot;
 
-            PAUSE_SCREEN_DATA.subroutineInfo.stage++;
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.stage++;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
 
             PAUSE_SCREEN_DATA.miscOam[10].oamID++;
 
@@ -3161,8 +3161,8 @@ u32 StatusScreenFullyPoweredItems(void)
             if (StatusScreenUpdateUnknownItemPalette(2))
             {
                 // Goto enable unknown item
-                PAUSE_SCREEN_DATA.subroutineInfo.stage++;
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage++;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             }
             break;
 
@@ -3180,7 +3180,7 @@ u32 StatusScreenFullyPoweredItems(void)
                     gCurrentMessage.messageEnded = FALSE;
                     UpdateMenuOamDataID(&PAUSE_SCREEN_DATA.miscOam[10], 0);
                     UpdateMenuOamDataID(&PAUSE_SCREEN_DATA.miscOam[0], 0);
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage = FULLY_POWERED_ITEMS_SEARCH_FOR_UNKNOWN_ITEM;
+                    PAUSE_SCREEN_DATA.stateInfo.stage = FULLY_POWERED_ITEMS_SEARCH_FOR_UNKNOWN_ITEM;
                 }
                 break;
             }
@@ -3202,8 +3202,8 @@ u32 StatusScreenFullyPoweredItems(void)
             else
                 PAUSE_SCREEN_DATA.statusScreenData.currentStatusSlot = rightSlot;
 
-            PAUSE_SCREEN_DATA.subroutineInfo.stage++;
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.stage++;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             break;
 
         case FULLY_POWERED_ITEMS_END:
@@ -3215,22 +3215,22 @@ u32 StatusScreenFullyPoweredItems(void)
 }
 
 /**
- * @brief 71800 | 94 | Subroutine for the status screen
+ * @brief 71800 | 94 | Main loop for the status screen
  * 
  */
-void StatusScreenSubroutine(void)
+void StatusScreenMainLoop(void)
 {
     u32 toggleResult;
 
     // Check leaving status screen
-    if (gChangedInput & (KEY_B | KEY_L | KEY_R) && PAUSE_SCREEN_DATA.subroutineInfo.stage == 0)
+    if (gChangedInput & (KEY_B | KEY_L | KEY_R) && PAUSE_SCREEN_DATA.stateInfo.stage == 0)
     {
-        if (PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeStage == 0)
+        if (PAUSE_SCREEN_DATA.stateInfo.fadeWireframeStage == 0)
         {
             // Set leaving
-            PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_STATUS_SCREEN_LEAVING;
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
-            PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
+            PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_STATUS_SCREEN_LEAVING;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.stage = 0;
             return;
         }
         else
@@ -3240,7 +3240,7 @@ void StatusScreenSubroutine(void)
     }
     else
     {
-        if (PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeStage != 0)
+        if (PAUSE_SCREEN_DATA.stateInfo.fadeWireframeStage != 0)
         {
             PauseScreenFadeWireframeSamus();
         }

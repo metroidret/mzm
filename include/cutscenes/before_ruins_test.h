@@ -21,6 +21,6 @@ struct BeforeRuinsTestEwramData {
 
 #define BEFORE_RUINS_TEST_EWRAM sEwramPointer->beforeRuinsTest
 
-u8 BeforeRuinsTestSubroutine(void);
+u8 BeforeRuinsTestMainLoop(void);
 
 #endif /* BEFORE_RUINS_TEST_CUTSCENE */

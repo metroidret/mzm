@@ -6,6 +6,6 @@
 
 #define MAX_METROID_IDS 4
 
-u8 EnterTourianSubroutine(void);
+u8 EnterTourianMainLoop(void);
 
 #endif /* ENTER_TOURIAN_CUTSCENE */

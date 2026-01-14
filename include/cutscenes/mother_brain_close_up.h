@@ -14,6 +14,6 @@ enum MotherBrainCloseUpOamId {
     MOTHER_BRAIN_CLOSE_UP_OAM_ID_END
 };
 
-u8 MotherBrainCloseUpSubroutine(void);
+u8 MotherBrainCloseUpMainLoop(void);
 
 #endif /* MOTHER_BRAIN_CLOSE_UP_CUTSCENE */

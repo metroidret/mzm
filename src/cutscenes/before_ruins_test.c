@@ -424,7 +424,7 @@ static u8 BeforeRuinsTestInit(void)
     return FALSE;
 }
 
-static struct CutsceneSubroutineData sBeforeRuinsTestSubroutineData[5] = {
+static struct CutsceneStageData sBeforeRuinsTestStageData[5] = {
     [0] = {
         .pFunction = BeforeRuinsTestInit,
         .oamLength = 0
@@ -448,15 +448,15 @@ static struct CutsceneSubroutineData sBeforeRuinsTestSubroutineData[5] = {
 };
 
 /**
- * @brief 66bd0 | 30 | Subroutine for the before Ruins Test cutscene
+ * @brief 66bd0 | 30 | Main loop for the before Ruins Test cutscene
  * 
  * @return u8 bool, ended
  */
-u8 BeforeRuinsTestSubroutine(void)
+u8 BeforeRuinsTestMainLoop(void)
 {
     u8 ended;
 
-    ended = sBeforeRuinsTestSubroutineData[CUTSCENE_DATA.timeInfo.stage].pFunction();
+    ended = sBeforeRuinsTestStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
 
     CutsceneUpdateBackgroundsPosition(TRUE);
     return ended;

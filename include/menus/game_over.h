@@ -5,6 +5,6 @@
 
 #include "constants/game_over.h"
 
-u32 GameOverSubroutine(void);
+u32 GameOverMainLoop(void);
 
 #endif /* GAME_OVER_H */

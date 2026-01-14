@@ -4,11 +4,11 @@
 #include "types.h"
 #include "structs/cutscene.h"
 
-u8 CutsceneDefaultRoutine(void);
-u8 TourianEscapeSubroutine(void);
+u8 CutsceneDummyStage(void);
+u8 TourianEscapeMainLoop(void);
 void CutsceneUpdateMusicAfterSkip(void);
 void CutsceneEnd(void);
-u8 CutsceneSubroutine(void);
+u8 CutsceneMainLoop(void);
 u8 CutsceneEndFunction(void);
 void CutsceneVBlank(void);
 void CutsceneLoadingVBlank(void);

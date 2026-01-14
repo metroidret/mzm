@@ -16,6 +16,6 @@ enum StatueOpeningOamId {
     STATUE_OPENING_OAM_ID_END
 };
 
-u8 StatueOpeningSubroutine(void);
+u8 StatueOpeningMainLoop(void);
 
 #endif /* STATUE_OPENING_CUTSCENE */

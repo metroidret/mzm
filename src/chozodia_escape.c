@@ -1213,14 +1213,14 @@ static ChozodiaEscapeFunc_T sChozodiaEscapeFunctionPointers[5] = {
 };
 
 /**
- * @brief 88d5c | 144 | Subroutine for the chozodia escape
+ * @brief 88d5c | 144 | Main loop for the chozodia escape
  * 
  * @return u32 bool, ended
  */
-u32 ChozodiaEscapeSubroutine(void)
+u32 ChozodiaEscapeMainLoop(void)
 {
     u32 ended;
-    u8 subroutineResult;
+    u8 stageResult;
     u8 i;
 
     ended = FALSE;
@@ -1246,12 +1246,12 @@ u32 ChozodiaEscapeSubroutine(void)
             break;
 
         case 2:
-            // Call subroutine
-            subroutineResult = sChozodiaEscapeFunctionPointers[CHOZODIA_ESCAPE_DATA.stage]();
+            // Call current stage
+            stageResult = sChozodiaEscapeFunctionPointers[CHOZODIA_ESCAPE_DATA.stage]();
 
-            if (subroutineResult == 1)
+            if (stageResult == 1)
             {
-                // Subroutine ended
+                // Stage ended
 
                 // Reset info
                 CHOZODIA_ESCAPE_DATA.stage++;
@@ -1280,7 +1280,7 @@ u32 ChozodiaEscapeSubroutine(void)
                 }
             }
 
-            if (subroutineResult == 2)
+            if (stageResult == 2)
             {
                 // Cutscene ended
                 gSubGameMode1++;

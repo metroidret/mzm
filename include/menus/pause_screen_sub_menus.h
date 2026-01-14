@@ -4,11 +4,11 @@
 #include "types.h"
 #include "structs/menus/pause_screen.h"
 
-u32 PauseScreenEasySleepSubroutine(void);
+u32 PauseScreenEasySleepMainLoop(void);
 u32 ChozoStatueHintCalculateCoordinates(struct ChozoHintMapData* pHintMapData);
 void ChozoStatueHintMovement(void);
 void ChozoStatueHintScrolling(void);
-u32 ChozoStatueHintSubroutine(void);
+u32 ChozoStatueHintMainLoop(void);
 void ChozoStatueHintChangeArea(u8* pXPosition, u8* pYPosition, struct MenuOamData* pOam, const s8* pTarget);
 void ChozoStatueHintDeterminePath(u8 param_1);
 s32 ChozoStatueHintCheckTargetIsActivated(u8 target);

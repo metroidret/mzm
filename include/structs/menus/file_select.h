@@ -31,7 +31,7 @@ struct FileSelectCursorOamData {
     u8 oamIds[SUIT_END];
 };
 
-struct OptionsSubroutineInfo {
+struct OptionsSubMenuInfo {
     OptionsFunc_T pFunction;
     u8 gameMode;
 };
@@ -102,8 +102,8 @@ struct FileSelectData {
     u16 timer;
     u8 currentSubMenu;
     u8 fileSelectCursorPosition;
-    u8 subroutineStage;
-    u16 subroutineTimer;
+    u8 subMenuStage;
+    u16 subMenuTimer;
     u8 corruptMessageFileA;
     u8 corruptMessageFileB;
     u8 corruptMessageFileC;

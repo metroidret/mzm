@@ -327,11 +327,11 @@ void PauseScreenInitMapDownload(void)
 }
 
 /**
- * @brief 6d448 | 38 | Subroutine for the map download
+ * @brief 6d448 | 38 | Main loop for the map download
  * 
  * @return u32 bool, ended
  */
-u32 PauseScreenMapDownloadSubroutine(void)
+u32 PauseScreenMapDownloadMainLoop(void)
 {
     u32 ended;
 
@@ -970,10 +970,10 @@ void PauseScreenMapCheckExploredAreas(void)
 }
 
 /**
- * @brief 6e04c | 1a8 | Map screen subroutine
+ * @brief 6e04c | 1a8 | Map screen main loop
  * 
  */
-void MapScreenSubroutine(void)
+void MapScreenMainLoop(void)
 {
     u8 action;
 
@@ -1040,21 +1040,21 @@ void MapScreenSubroutine(void)
             if (gChangedInput & KEY_R)
             {
                 // Status screen
-                PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_STATUS_SCREEN_INIT;
+                PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_STATUS_SCREEN_INIT;
                 action = 2;
             }
             else if (gChangedInput & KEY_L)
             {
                 // Easy sleep
                 SoundPlay(SOUND_OPENING_EASY_SLEEP_SCREEN);
-                PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_EASY_SLEEP_INIT;
+                PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_EASY_SLEEP_INIT;
                 action = 2;
             }
     
             if (action != 0)
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
-                PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.stage = 0;
 
                 // Force qui world map
                 MapScreenToggleWorldMap(TRUE);

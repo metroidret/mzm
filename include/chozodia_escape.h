@@ -6,6 +6,6 @@
 typedef u8 (*ChozodiaEscapeFunc_T)(void);
 
 u32 ChozodiaEscapeGetItemCountAndEndingNumber(void);
-u32 ChozodiaEscapeSubroutine(void);
+u32 ChozodiaEscapeMainLoop(void);
 
 #endif /* CHOZODIA_ESCAPE_H */

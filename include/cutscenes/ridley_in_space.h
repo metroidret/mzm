@@ -30,6 +30,6 @@ enum RidleyInSpaceShipSlot {
     RIDLEY_INSPACE_SHIP_SLOT_END
 };
 
-u8 RidleyInSpaceSubroutine(void);
+u8 RidleyInSpaceMainLoop(void);
 
 #endif /* RIDLEY_IN_SPACE_CUTSCENE */

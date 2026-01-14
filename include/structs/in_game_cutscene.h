@@ -22,13 +22,13 @@ struct InGameCutscene {
     InGameCutsceneScene cutsceneNumber;
     InGameCutsceneScene queuedCutscene;
     u8 unknown;
-    InGameCutsceneFunc_T pSubroutine;
+    InGameCutsceneFunc_T pFunction;
 };
 
 struct InGameCutsceneData {
     u8 unk_0;
     Area area;
-    InGameCutsceneFunc_T pSubroutine;
+    InGameCutsceneFunc_T pFunction;
 };
 
 extern struct InGameCutscene gInGameCutscene;

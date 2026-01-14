@@ -405,7 +405,7 @@ static u8 MotherBrainCloseUpInit(void)
     return FALSE;
 }
 
-static struct CutsceneSubroutineData sMotherBrainCloseUpSubroutineData[5] = {
+static struct CutsceneStageData sMotherBrainCloseUpData[5] = {
     [0] = {
         .pFunction = MotherBrainCloseUpInit,
         .oamLength = 0
@@ -429,15 +429,15 @@ static struct CutsceneSubroutineData sMotherBrainCloseUpSubroutineData[5] = {
 };
 
 /**
- * @brief 6363c | 34 | Subroutine for the mother brain close up cutscene
+ * @brief 6363c | 34 | Main loop for the mother brain close up cutscene
  * 
  * @return u8 bool, ended
  */
-u8 MotherBrainCloseUpSubroutine(void)
+u8 MotherBrainCloseUpMainLoop(void)
 {
     u8 ended;
 
-    ended = sMotherBrainCloseUpSubroutineData[CUTSCENE_DATA.timeInfo.stage].pFunction();
+    ended = sMotherBrainCloseUpData[CUTSCENE_DATA.timeInfo.stage].pFunction();
     CutsceneUpdateBackgroundsPosition(TRUE);
     MotherBrainCloseUpProcessOAM();
 
@@ -451,7 +451,7 @@ u8 MotherBrainCloseUpSubroutine(void)
 static void MotherBrainCloseUpProcessOAM(void)
 {
     gNextOamSlot = 0;
-    ProcessCutsceneOam(sMotherBrainCloseUpSubroutineData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sMotherBrainCloseUpCutsceneOam);
+    ProcessCutsceneOam(sMotherBrainCloseUpData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sMotherBrainCloseUpCutsceneOam);
     ResetFreeOam();
 }
 

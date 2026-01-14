@@ -684,12 +684,12 @@ void InGameCutsceneProcess(void)
     // Check was init
     if (cutsceneNumber & IGC_STARTED_FLAG)
     {
-        // Check has subroutine pointer, and check if has cutscene again (why?)
-        if (gInGameCutscene.pSubroutine == NULL || !(cutsceneNumber & IGC_NO_STARTED_FLAG))
+        // Check has a function pointer, and check if has cutscene again (why?)
+        if (gInGameCutscene.pFunction == NULL || !(cutsceneNumber & IGC_NO_STARTED_FLAG))
             return;
 
-        // Execute subroutine
-        result = gInGameCutscene.pSubroutine(cutsceneNumber & IGC_NO_STARTED_FLAG, cutsceneNumber);
+        // Execute function
+        result = gInGameCutscene.pFunction(cutsceneNumber & IGC_NO_STARTED_FLAG, cutsceneNumber);
 
         if (result != IGC_RESULT_NONE)
             gInGameCutscene.timer = 0;
@@ -759,7 +759,7 @@ void InGameCutsceneInit(void)
     gInGameCutscene.stage = 0;
     gInGameCutscene.timer = 0;
 
-    gInGameCutscene.pSubroutine = sInGameCutsceneData[gInGameCutscene.cutsceneNumber].pSubroutine;
+    gInGameCutscene.pFunction = sInGameCutsceneData[gInGameCutscene.cutsceneNumber].pFunction;
     gInGameCutscene.cutsceneNumber |= IGC_STARTED_FLAG;
 }
 

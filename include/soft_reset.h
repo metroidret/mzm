@@ -3,7 +3,7 @@
 
 #include "types.h"
 
-u32 SoftResetSubroutine(void);
+u32 SoftResetMainLoop(void);
 void SoftResetInit(void);
 void SoftResetVBlank(void);
 void SoftResetVBlank_Empty(void);

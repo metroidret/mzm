@@ -17,18 +17,18 @@ struct ColorFading {
     u8 unk_3;
     u8 status;
     u8 useSecondColorSet;
-    u16 subroutineTimer;
+    u16 workTimer;
 };
 
 struct ColorFadingData {
     boolu8 isWhite;
-    ColorFadingUnkFunc_T pUpdateSubroutine;
+    ColorFadingUnkFunc_T pUpdateFunction;
     u8 firstColorSet;
-    ColorFadingUnkFunc_T pProcessSubroutine;
+    ColorFadingUnkFunc_T pProcessFunction;
     u8 secondColorSet;
     u16 bgColorMask;
     u16 objColorMask;
-    u8 fadeSubroutine;
+    u8 fadeFunction;
 };
 
 struct ColorFadingColorInfo {

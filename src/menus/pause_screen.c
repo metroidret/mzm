@@ -34,8 +34,8 @@
 #include "structs/game_state.h"
 #include "structs/text.h"
 
-static struct PauseScreenSubroutineData sMapScreenSubroutineInfo_Empty = {
-    .currentSubroutine = PAUSE_SCREEN_SUBROUTINE_MAP_SCREEN,
+static struct PauseScreenStateData sPauseScreenStateInfo_Empty = {
+    .state = PAUSE_SCREEN_STATE_MAP_SCREEN,
     .padding_1 = { 0, 0, 0 },
     .stage = 0,
     .timer = 0,
@@ -440,9 +440,9 @@ void PauseScreenUpdateMapArrows(void)
     if (gPauseScreenFlag != PAUSE_SCREEN_PAUSE_OR_CUTSCENE)
         return;
 
-    if (PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine == PAUSE_SCREEN_SUBROUTINE_MAP_SCREEN)
+    if (PAUSE_SCREEN_DATA.stateInfo.state == PAUSE_SCREEN_STATE_MAP_SCREEN)
         onMapScreen = TRUE;
-    else if (PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine == PAUSE_SCREEN_SUBROUTINE_STATUS_SCREEN_LEAVING)
+    else if (PAUSE_SCREEN_DATA.stateInfo.state == PAUSE_SCREEN_STATE_STATUS_SCREEN_LEAVING)
         onMapScreen = TRUE + 1;
     else
         onMapScreen = FALSE;
@@ -788,10 +788,10 @@ void PauseScreenUpdateWireframeSamus(u8 updateWireframeOption)
 
     if (updateWireframeOption == 2)
     {
-        if (PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeStage == 0)
+        if (PAUSE_SCREEN_DATA.stateInfo.fadeWireframeStage == 0)
         {
-            PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeStage = 1;
-            PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeTimer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.fadeWireframeStage = 1;
+            PAUSE_SCREEN_DATA.stateInfo.fadeWireframeTimer = 0;
         }
         return;
     }
@@ -831,9 +831,9 @@ void PauseScreenUpdateWireframeSamus(u8 updateWireframeOption)
  */
 void PauseScreenFadeWireframeSamus(void)
 {
-    APPLY_DELTA_TIME_INC(PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeTimer);
+    APPLY_DELTA_TIME_INC(PAUSE_SCREEN_DATA.stateInfo.fadeWireframeTimer);
 
-    switch (PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeStage)
+    switch (PAUSE_SCREEN_DATA.stateInfo.fadeWireframeStage)
     {
         case 0:
             break;
@@ -841,7 +841,7 @@ void PauseScreenFadeWireframeSamus(void)
         case 1:
             PAUSE_SCREEN_DATA.bldcnt &= ~BLDCNT_BG2_FIRST_TARGET_PIXEL;
             WRITE_8(REG_WINOUT + 1, 0xD0);
-            PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeStage++;
+            PAUSE_SCREEN_DATA.stateInfo.fadeWireframeStage++;
             break;
 
         case 2:
@@ -854,20 +854,20 @@ void PauseScreenFadeWireframeSamus(void)
             gWrittenToBldalpha_L = 16 - gWrittenToBldalpha_H;
             if (gWrittenToBldalpha_L == 0)
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeStage++;
-                PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeTimer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.fadeWireframeStage++;
+                PAUSE_SCREEN_DATA.stateInfo.fadeWireframeTimer = 0;
             }
             break;
 
         case 3:
             PauseScreenUpdateWireframeSamus(1);
-            PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeStage++;
-            PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeTimer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.fadeWireframeStage++;
+            PAUSE_SCREEN_DATA.stateInfo.fadeWireframeTimer = 0;
             break;
 
         case 4:
-            PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeStage++;
-            PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeTimer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.fadeWireframeStage++;
+            PAUSE_SCREEN_DATA.stateInfo.fadeWireframeTimer = 0;
 
         case 5:
             if (gWrittenToBldalpha_L < 16)
@@ -879,8 +879,8 @@ void PauseScreenFadeWireframeSamus(void)
             gWrittenToBldalpha_H = 16 - gWrittenToBldalpha_L;
             if (gWrittenToBldalpha_H == 0)
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeStage++;
-                PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeTimer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.fadeWireframeStage++;
+                PAUSE_SCREEN_DATA.stateInfo.fadeWireframeTimer = 0;
             }
             break;
 
@@ -889,7 +889,7 @@ void PauseScreenFadeWireframeSamus(void)
                 BLDCNT_BG2_SECOND_TARGET_PIXEL | BLDCNT_BG3_SECOND_TARGET_PIXEL |
                 BLDCNT_OBJ_SECOND_TARGET_PIXEL | BLDCNT_BACKDROP_SECOND_TARGET_PIXEL;
             WRITE_8(REG_WINOUT + 1, (WIN1_BG3 | WIN1_OBJ) >> 8);
-            PAUSE_SCREEN_DATA.subroutineInfo.fadeWireframeStage = 0;
+            PAUSE_SCREEN_DATA.stateInfo.fadeWireframeStage = 0;
             break;
     }
 }
@@ -1047,14 +1047,14 @@ void PauseScreenLoadAreaNamesAndIcons(void)
     }
 
     #ifdef DEBUG
-    if (PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine == PAUSE_SCREEN_SUBROUTINE_STATUS_SCREEN)
+    if (PAUSE_SCREEN_DATA.stateInfo.state == PAUSE_SCREEN_STATE_STATUS_SCREEN)
     {
         if (PAUSE_SCREEN_DATA.typeFlags & PAUSE_SCREEN_TYPE_DEBUG)
             PauseDebugInitCursor();
     }
     else
     #else // !DEBUG
-    if (PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine != PAUSE_SCREEN_SUBROUTINE_STATUS_SCREEN)
+    if (PAUSE_SCREEN_DATA.stateInfo.state != PAUSE_SCREEN_STATE_STATUS_SCREEN)
     #endif // DEBUG
     {
         PAUSE_SCREEN_DATA.miscOam[0].oamID = 0;
@@ -1134,7 +1134,7 @@ void PauseScreenProcessOam(void)
     gNextOamSlot = 0;
 
     #ifdef DEBUG
-    if (PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine == 0 && PAUSE_SCREEN_DATA.currentArea == gCurrentArea)
+    if (PAUSE_SCREEN_DATA.stateInfo.state == 0 && PAUSE_SCREEN_DATA.currentArea == gCurrentArea)
         ProcessMenuOam(ARRAY_SIZE(PAUSE_SCREEN_DATA.minimapRoomInfoOam), PAUSE_SCREEN_DATA.minimapRoomInfoOam, sPauseScreenMiscOam);
     #endif // DEBUG
 
@@ -2055,11 +2055,11 @@ void ProcessCutsceneOam(u8 length, struct CutsceneOamData* pOam, const struct Oa
 }
 
 /**
- * @brief 6a180 | 178 | Main subroutine for the pause screen
+ * @brief 6a180 | 178 | Main loop for the pause screen
  * 
  * @return u32 bool, leaving
  */
-u32 PauseScreenSubroutine(void)
+u32 PauseScreenMainLoop(void)
 {
     u32 leaving;
 
@@ -2082,7 +2082,7 @@ u32 PauseScreenSubroutine(void)
 
         case 2:
             PauseScreenUpdateOrStartFading(0);
-            if (PauseScreenCallCurrentSubroutine())
+            if (PauseScreenCallStateMainLoop())
             {
                 PauseScreenUpdateOrStartFading(PAUSE_SCREEN_FADING_OUT_INIT);
                 gSubGameModeStage++;
@@ -2126,7 +2126,7 @@ u32 PauseScreenSubroutine(void)
             else
             {
                 gButtonInput = gChangedInput = KEY_NONE;
-                if (PauseScreenCallCurrentSubroutine())
+                if (PauseScreenCallStateMainLoop())
                 {
                     gSubGameMode2 = 11;
                     leaving = TRUE;
@@ -2365,20 +2365,20 @@ void PauseScreenInit(void)
     gBg2HOFS_NonGameplay = gBg2VOFS_NonGameplay = 0;
     gBg3HOFS_NonGameplay = gBg3VOFS_NonGameplay = 0;
 
-    PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
-    PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
-    PAUSE_SCREEN_DATA.subroutineInfo = sMapScreenSubroutineInfo_Empty;
+    PAUSE_SCREEN_DATA.stateInfo.stage = 0;
+    PAUSE_SCREEN_DATA.stateInfo.timer = 0;
+    PAUSE_SCREEN_DATA.stateInfo = sPauseScreenStateInfo_Empty;
 
     gBg1VOFS_NonGameplay = BLOCK_SIZE * 16;
 
     if (PAUSE_SCREEN_DATA.typeFlags & PAUSE_SCREEN_TYPE_CHOZO_STATUE_HINT)
     {
-        PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_CHOZO_STATUE_HINT_INIT;
+        PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_CHOZO_STATUE_HINT_INIT;
     }
     else if (PAUSE_SCREEN_DATA.typeFlags & PAUSE_SCREEN_TYPE_DOWNLOADING_MAP)
     {
         gEquipment.downloadedMapStatus |= (1 << gCurrentArea);
-        PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_MAP_DOWNLOAD;
+        PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_MAP_DOWNLOAD;
 
         PauseScreenGetMinimapData(gCurrentArea, gDecompressedMinimapVisitedTiles);
         MinimapSetDownloadedTiles(gCurrentArea, gDecompressedMinimapVisitedTiles);
@@ -2386,11 +2386,11 @@ void PauseScreenInit(void)
     }
     else if (PAUSE_SCREEN_DATA.typeFlags & PAUSE_SCREEN_TYPE_GETTING_FULLY_POWERED)
     {
-        PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_FULLY_POWERED_ITEMS_INIT;
+        PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_FULLY_POWERED_ITEMS_INIT;
     }
     else if (PAUSE_SCREEN_DATA.typeFlags & PAUSE_SCREEN_TYPE_GETTING_NEW_ITEM)
     {
-        PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_SUITLESS_ITEMS_INIT;
+        PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_SUITLESS_ITEMS_INIT;
         StatusScreenGetSlotForNewItem(1, gCurrentItemBeingAcquired);
     }
 
@@ -2743,11 +2743,11 @@ void PauseScreenGetMinimapData(Area area, u16* dst)
 }
 
 /**
- * @brief 6b240 | 2c4 | Calls the current pause screen subroutine
+ * @brief 6b240 | 2c4 | Calls the main loop for the current state
  * 
  * @return u32 bool, ended
  */
-u32 PauseScreenCallCurrentSubroutine(void)
+u32 PauseScreenCallStateMainLoop(void)
 {
     u32 leaving;
 
@@ -2758,41 +2758,41 @@ u32 PauseScreenCallCurrentSubroutine(void)
     CheckForMaintainedInput();
     #endif // REGION_EU
 
-    APPLY_DELTA_TIME_INC(PAUSE_SCREEN_DATA.subroutineInfo.timer);
+    APPLY_DELTA_TIME_INC(PAUSE_SCREEN_DATA.stateInfo.timer);
 
-    switch (PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine)
+    switch (PAUSE_SCREEN_DATA.stateInfo.state)
     {
-        case PAUSE_SCREEN_SUBROUTINE_MAP_SCREEN:
+        case PAUSE_SCREEN_STATE_MAP_SCREEN:
             if (!(gChangedInput & (gButtonAssignments.pause | KEY_B)))
             {
-                MapScreenSubroutine();
+                MapScreenMainLoop();
                 break;
             }
             
             if (PAUSE_SCREEN_DATA.onWorldMap)
             {
-                MapScreenSubroutine();
+                MapScreenMainLoop();
                 break;
             }
 
             leaving = TRUE;
             break;
 
-        case PAUSE_SCREEN_SUBROUTINE_STATUS_SCREEN:
+        case PAUSE_SCREEN_STATE_STATUS_SCREEN:
             if (PAUSE_SCREEN_DATA.typeFlags & PAUSE_SCREEN_TYPE_DEBUG)
             {
                 if (!PAUSE_SCREEN_DATA.debugOnEventList)
                     PauseScreenMoveDebugCursor(TRUE);
 
                 #ifdef DEBUG
-                leaving = PauseDebugSubroutine();
+                leaving = PauseDebugMainLoop();
                 #else // !DEBUG
                 leaving = FALSE;
                 #endif
             }
             else
             {
-                StatusScreenSubroutine();
+                StatusScreenMainLoop();
             }
             break;
 
@@ -2810,51 +2810,51 @@ u32 PauseScreenCallCurrentSubroutine(void)
             
             break;
 
-        case PAUSE_SCREEN_SUBROUTINE_SUITLESS_ITEMS:
+        case PAUSE_SCREEN_STATE_SUITLESS_ITEMS:
             if (StatusScreenSuitlessItems())
             {
                 PauseScreenUpdateStatusScreenOam(4);
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
-                PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = 0x5;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.state = 0x5;
             }
             break;
 
-        case PAUSE_SCREEN_SUBROUTINE_FULLY_POWERED_ITEMS:
+        case PAUSE_SCREEN_STATE_FULLY_POWERED_ITEMS:
             if (StatusScreenFullyPoweredItems())
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
-                PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = 0x7;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.state = 0x7;
             }
             break;
 
         case 5:
         case 7:
-            if (PAUSE_SCREEN_DATA.subroutineInfo.timer > CONVERT_SECONDS(.2f))
+            if (PAUSE_SCREEN_DATA.stateInfo.timer > CONVERT_SECONDS(.2f))
                 leaving = TRUE;
             break;
 
-        case PAUSE_SCREEN_SUBROUTINE_CHOZO_STATUE_HINT:
-            if (ChozoStatueHintSubroutine())
+        case PAUSE_SCREEN_STATE_CHOZO_STATUE_HINT:
+            if (ChozoStatueHintMainLoop())
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = 14;
+                PAUSE_SCREEN_DATA.stateInfo.state = 14;
             }
             break;
 
-        case PAUSE_SCREEN_SUBROUTINE_MAP_DOWNLOAD:
-            if (PauseScreenMapDownloadSubroutine())
+        case PAUSE_SCREEN_STATE_MAP_DOWNLOAD:
+            if (PauseScreenMapDownloadMainLoop())
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = 18;
+                PAUSE_SCREEN_DATA.stateInfo.state = 18;
             }
             break;
 
-        case PAUSE_SCREEN_SUBROUTINE_EASY_SLEEP:
-            if (PauseScreenEasySleepSubroutine())
+        case PAUSE_SCREEN_STATE_EASY_SLEEP:
+            if (PauseScreenEasySleepMainLoop())
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_EASY_SLEEP_LEAVING;
+                PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_EASY_SLEEP_LEAVING;
             }
             break;
 
-        case PAUSE_SCREEN_SUBROUTINE_STATUS_SCREEN_INIT:
+        case PAUSE_SCREEN_STATE_STATUS_SCREEN_INIT:
             if (PAUSE_SCREEN_DATA.isFading)
             {
                 PauseScreenApplyFading();
@@ -2863,15 +2863,15 @@ u32 PauseScreenCallCurrentSubroutine(void)
             {
                 if (PauseScreenStatusScreenInit())
                 {
-                    PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_STATUS_SCREEN;
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
-                    PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
-                    PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                    PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_STATUS_SCREEN;
+                    PAUSE_SCREEN_DATA.stateInfo.stage = 0;
+                    PAUSE_SCREEN_DATA.stateInfo.timer = 0;
+                    PAUSE_SCREEN_DATA.stateInfo.timer = 0;
                 }
             }
             break;
 
-        case PAUSE_SCREEN_SUBROUTINE_STATUS_SCREEN_LEAVING:
+        case PAUSE_SCREEN_STATE_STATUS_SCREEN_LEAVING:
             if (PAUSE_SCREEN_DATA.isFading)
             {
                 PauseScreenApplyFading();
@@ -2880,37 +2880,37 @@ u32 PauseScreenCallCurrentSubroutine(void)
             {
                 if (PauseScreenQuitStatusScreen())
                 {
-                    PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_MAP_SCREEN;
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
-                    PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
-                    PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                    PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_MAP_SCREEN;
+                    PAUSE_SCREEN_DATA.stateInfo.stage = 0;
+                    PAUSE_SCREEN_DATA.stateInfo.timer = 0;
+                    PAUSE_SCREEN_DATA.stateInfo.timer = 0;
                 }
             }
             break;
 
         case 13:
-        case PAUSE_SCREEN_SUBROUTINE_CHOZO_STATUE_HINT_INIT:
-            PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_CHOZO_STATUE_HINT;
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
-            PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
-            PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+        case PAUSE_SCREEN_STATE_CHOZO_STATUE_HINT_INIT:
+            PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_CHOZO_STATUE_HINT;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.stage = 0;
+            PAUSE_SCREEN_DATA.stateInfo.stage = 0;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             break;
 
         case 18:
-            PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = 3;
-            PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.state = 3;
+            PAUSE_SCREEN_DATA.stateInfo.stage = 0;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             break;
 
         case 14:
             if (PAUSE_SCREEN_DATA.typeFlags & PAUSE_SCREEN_TYPE_ON_MAP_SCREEN)
-                PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = 2;
+                PAUSE_SCREEN_DATA.stateInfo.state = 2;
             else
-                PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_MAP_SCREEN;
+                PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_MAP_SCREEN;
             break;
 
-        case PAUSE_SCREEN_SUBROUTINE_EASY_SLEEP_INIT:
+        case PAUSE_SCREEN_STATE_EASY_SLEEP_INIT:
             if (PAUSE_SCREEN_DATA.isFading)
             {
                 PauseScreenApplyFading();
@@ -2919,9 +2919,9 @@ u32 PauseScreenCallCurrentSubroutine(void)
             {
                 if (PauseScreenEasySleepInit())
                 {
-                    PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_EASY_SLEEP;
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
-                    PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                    PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_EASY_SLEEP;
+                    PAUSE_SCREEN_DATA.stateInfo.stage = 0;
+                    PAUSE_SCREEN_DATA.stateInfo.timer = 0;
                     #ifdef DEBUG
                     PAUSE_SCREEN_DATA.minimapRoomInfoOam[0].notDrawn ^= TRUE;
                     #endif // DEBUG
@@ -2929,7 +2929,7 @@ u32 PauseScreenCallCurrentSubroutine(void)
             }
             break;
 
-        case PAUSE_SCREEN_SUBROUTINE_EASY_SLEEP_LEAVING:
+        case PAUSE_SCREEN_STATE_EASY_SLEEP_LEAVING:
             if (PAUSE_SCREEN_DATA.isFading)
             {
                 PauseScreenApplyFading();
@@ -2938,28 +2938,28 @@ u32 PauseScreenCallCurrentSubroutine(void)
             {
                 if (PauseScreenQuitEasySleep())
                 {
-                    PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_MAP_SCREEN;
-                    PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
-                    PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                    PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_MAP_SCREEN;
+                    PAUSE_SCREEN_DATA.stateInfo.stage = 0;
+                    PAUSE_SCREEN_DATA.stateInfo.timer = 0;
                 }
             }
             break;
 
-        case PAUSE_SCREEN_SUBROUTINE_SUITLESS_ITEMS_INIT:
+        case PAUSE_SCREEN_STATE_SUITLESS_ITEMS_INIT:
             if (PauseScreenSuitChangingStart())
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_SUITLESS_ITEMS;
-                PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_SUITLESS_ITEMS;
+                PAUSE_SCREEN_DATA.stateInfo.stage = 0;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             }
             break;
 
-        case PAUSE_SCREEN_SUBROUTINE_FULLY_POWERED_ITEMS_INIT:
+        case PAUSE_SCREEN_STATE_FULLY_POWERED_ITEMS_INIT:
             if (PauseScreenSuitChangingStart())
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.currentSubroutine = PAUSE_SCREEN_SUBROUTINE_FULLY_POWERED_ITEMS;
-                PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
-                PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+                PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_FULLY_POWERED_ITEMS;
+                PAUSE_SCREEN_DATA.stateInfo.stage = 0;
+                PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             }
             break;
     }
@@ -2981,7 +2981,7 @@ void PauseScreenMoveDebugCursor(u8 allowOverflow)
     if (gButtonInput & KEY_A)
         return;
 
-    if (PAUSE_SCREEN_DATA.subroutineInfo.stage != 0)
+    if (PAUSE_SCREEN_DATA.stateInfo.stage != 0)
         return;
 
     if (allowOverflow == FALSE)
@@ -3066,8 +3066,8 @@ u32 unk_6b66c_Unused(u16* param_1, u16 param_2)
     else
         var_0 = 1;
 
-    if (PAUSE_SCREEN_DATA.subroutineInfo.timer + 4 < 32)
-        *param_1 += var_0 * (PAUSE_SCREEN_DATA.subroutineInfo.timer + 4);
+    if (PAUSE_SCREEN_DATA.stateInfo.timer + 4 < 32)
+        *param_1 += var_0 * (PAUSE_SCREEN_DATA.stateInfo.timer + 4);
     else
         *param_1 += var_0 * 32;
 
@@ -3112,8 +3112,8 @@ u32 unk_6b6c4_Unused(u16* param_1, u16 param_2)
     else
         var_0 = 1;
 
-    if (PAUSE_SCREEN_DATA.subroutineInfo.timer + 4 < 32)
-        *param_1 += var_0 * (PAUSE_SCREEN_DATA.subroutineInfo.timer + 4);
+    if (PAUSE_SCREEN_DATA.stateInfo.timer + 4 < 32)
+        *param_1 += var_0 * (PAUSE_SCREEN_DATA.stateInfo.timer + 4);
     else
         *param_1 += var_0 * 32;
 
@@ -3176,7 +3176,7 @@ s32 PauseScreenSuitChangingStart(void)
 
     stage = 0;
 
-    switch (PAUSE_SCREEN_DATA.subroutineInfo.stage)
+    switch (PAUSE_SCREEN_DATA.stateInfo.stage)
     {
         case 0:
             // Nothing to do, next stage
@@ -3192,7 +3192,7 @@ s32 PauseScreenSuitChangingStart(void)
 
         case 2:
             // Draw status screen
-            if (StatusScreenDrawItems(PAUSE_SCREEN_DATA.subroutineInfo.timer - 1))
+            if (StatusScreenDrawItems(PAUSE_SCREEN_DATA.stateInfo.timer - 1))
                 stage = UCHAR_MAX + 1;
             break;
 
@@ -3216,11 +3216,11 @@ s32 PauseScreenSuitChangingStart(void)
     {
         // Set direct value or increment
         if (stage > UCHAR_MAX)
-            PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+            PAUSE_SCREEN_DATA.stateInfo.stage++;
         else
-            PAUSE_SCREEN_DATA.subroutineInfo.stage = stage;
+            PAUSE_SCREEN_DATA.stateInfo.stage = stage;
 
-        PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+        PAUSE_SCREEN_DATA.stateInfo.timer = 0;
         stage = FALSE;
     }
 
@@ -3237,7 +3237,7 @@ s32 PauseScreenStatusScreenInit(void)
     s32 stage;
     
     stage = 0;
-    switch (PAUSE_SCREEN_DATA.subroutineInfo.stage)
+    switch (PAUSE_SCREEN_DATA.stateInfo.stage)
     {
         case 0:
             // Background tilemap?
@@ -3327,7 +3327,7 @@ s32 PauseScreenStatusScreenInit(void)
 
         case 7:
             // Draw status screen
-            if (StatusScreenDrawItems(PAUSE_SCREEN_DATA.subroutineInfo.timer - 1))
+            if (StatusScreenDrawItems(PAUSE_SCREEN_DATA.stateInfo.timer - 1))
                 stage = UCHAR_MAX + 1;
             break;
 
@@ -3358,11 +3358,11 @@ s32 PauseScreenStatusScreenInit(void)
     {
         // Set direct value or increment
         if (stage > UCHAR_MAX)
-            PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+            PAUSE_SCREEN_DATA.stateInfo.stage++;
         else
-            PAUSE_SCREEN_DATA.subroutineInfo.stage = stage;
+            PAUSE_SCREEN_DATA.stateInfo.stage = stage;
 
-        PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+        PAUSE_SCREEN_DATA.stateInfo.timer = 0;
         stage = FALSE;
     }
     else if (stage < 0)
@@ -3384,7 +3384,7 @@ s32 PauseScreenQuitStatusScreen(void)
     s32 stage;
     
     stage = 0;
-    switch (PAUSE_SCREEN_DATA.subroutineInfo.stage)
+    switch (PAUSE_SCREEN_DATA.stateInfo.stage)
     {
         case 0:
             SoundPlay(SOUND_LEAVING_STATUS_SCREEN);
@@ -3416,7 +3416,7 @@ s32 PauseScreenQuitStatusScreen(void)
             break;
 
         case 2:
-            if (PAUSE_SCREEN_DATA.subroutineInfo.timer > CONVERT_SECONDS(.2f))
+            if (PAUSE_SCREEN_DATA.stateInfo.timer > CONVERT_SECONDS(.2f))
                 stage = UCHAR_MAX + 1;
             break;
 
@@ -3443,7 +3443,7 @@ s32 PauseScreenQuitStatusScreen(void)
             gWrittenToBldalpha_L = 0;
             PAUSE_SCREEN_DATA.dispcnt |= DCNT_BG1;
             PAUSE_SCREEN_DATA.overlayOam[0].exists = TRUE;
-            PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+            PAUSE_SCREEN_DATA.stateInfo.stage++;
 
         case 6:
             PAUSE_SCREEN_DATA.bg2cnt = PAUSE_SCREEN_DATA.unk_72;
@@ -3468,11 +3468,11 @@ s32 PauseScreenQuitStatusScreen(void)
     {
         // Set direct value or increment
         if (stage > UCHAR_MAX)
-            PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+            PAUSE_SCREEN_DATA.stateInfo.stage++;
         else
-            PAUSE_SCREEN_DATA.subroutineInfo.stage = stage;
+            PAUSE_SCREEN_DATA.stateInfo.stage = stage;
 
-        PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+        PAUSE_SCREEN_DATA.stateInfo.timer = 0;
         stage = FALSE;
     }
     else if (stage < 0)
@@ -3495,11 +3495,11 @@ s32 PauseScreenEasySleepInit(void)
     if (PAUSE_SCREEN_DATA.easySleepTextState >= 0)
         TextDrawEasySleep();
 
-    switch (PAUSE_SCREEN_DATA.subroutineInfo.stage)
+    switch (PAUSE_SCREEN_DATA.stateInfo.stage)
     {
         case 0:
             if (!PauseScreenInitFading(C_16_2_8(16, 0), 4, 0))
-                PAUSE_SCREEN_DATA.subroutineInfo.stage--;
+                PAUSE_SCREEN_DATA.stateInfo.stage--;
             break;
 
         case 1: 
@@ -3556,7 +3556,7 @@ s32 PauseScreenEasySleepInit(void)
             }
             else
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.stage--;
+                PAUSE_SCREEN_DATA.stateInfo.stage--;
             }
             break;
 
@@ -3572,7 +3572,7 @@ s32 PauseScreenEasySleepInit(void)
             }
             else
             {
-                PAUSE_SCREEN_DATA.subroutineInfo.stage--;
+                PAUSE_SCREEN_DATA.stateInfo.stage--;
             }
             break;
 
@@ -3582,11 +3582,11 @@ s32 PauseScreenEasySleepInit(void)
                 BLDCNT_BACKDROP_SECOND_TARGET_PIXEL;
 
             PAUSE_SCREEN_DATA.dispcnt |= DCNT_BG2;
-            PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+            PAUSE_SCREEN_DATA.stateInfo.stage++;
 
         case 10:
             if (!PauseScreenInitFading(C_16_2_8(0, 16), 4, 0))
-                PAUSE_SCREEN_DATA.subroutineInfo.stage--;
+                PAUSE_SCREEN_DATA.stateInfo.stage--;
             break;
 
         case 11:
@@ -3598,12 +3598,12 @@ s32 PauseScreenEasySleepInit(void)
 
             gDisableSoftReset = TRUE;
 
-            PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.stage = 0;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             return TRUE;
     }
 
-    PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+    PAUSE_SCREEN_DATA.stateInfo.stage++;
     return FALSE;
 }
 
@@ -3614,16 +3614,16 @@ s32 PauseScreenEasySleepInit(void)
  */
 s32 PauseScreenQuitEasySleep(void)
 {
-    switch (PAUSE_SCREEN_DATA.subroutineInfo.stage)
+    switch (PAUSE_SCREEN_DATA.stateInfo.stage)
     {
         case 0:
             gDisableSoftReset = FALSE;
             PauseScreenUpdateTopVisorOverlay(0);
-            PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+            PAUSE_SCREEN_DATA.stateInfo.stage++;
 
         case 1:
             if (!PauseScreenInitFading(C_16_2_8(16, 0), 4, 0))
-                PAUSE_SCREEN_DATA.subroutineInfo.stage--;
+                PAUSE_SCREEN_DATA.stateInfo.stage--;
             break;
 
         case 2:
@@ -3655,21 +3655,21 @@ s32 PauseScreenQuitEasySleep(void)
             PAUSE_SCREEN_DATA.bldcnt = BLDCNT_BG2_FIRST_TARGET_PIXEL | BLDCNT_ALPHA_BLENDING_EFFECT |
                 BLDCNT_BG3_SECOND_TARGET_PIXEL | BLDCNT_OBJ_SECOND_TARGET_PIXEL | BLDCNT_BACKDROP_SECOND_TARGET_PIXEL;
             PAUSE_SCREEN_DATA.dispcnt |= DCNT_BG2;
-            PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+            PAUSE_SCREEN_DATA.stateInfo.stage++;
 
         case 7:
             if (!PauseScreenInitFading(PAUSE_SCREEN_DATA.targetBldAlpha, 4, 0))
-                PAUSE_SCREEN_DATA.subroutineInfo.stage--;
+                PAUSE_SCREEN_DATA.stateInfo.stage--;
             break;
 
         case 8:
             PauseScreenUpdateBottomVisorOverlay(1, 1);
-            PAUSE_SCREEN_DATA.subroutineInfo.stage = 0;
-            PAUSE_SCREEN_DATA.subroutineInfo.timer = 0;
+            PAUSE_SCREEN_DATA.stateInfo.stage = 0;
+            PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             return TRUE;
     }
 
-    PAUSE_SCREEN_DATA.subroutineInfo.stage++;
+    PAUSE_SCREEN_DATA.stateInfo.stage++;
     return FALSE;
 }
 
