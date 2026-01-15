@@ -228,287 +228,295 @@ _030029D8: .4byte sub_03005844
 _030029DC: .4byte sub_03005844
 _030029E0: .4byte sub_03005844
 _030029E4: .4byte _03003044
-_030029E8: .4byte _030033A4
-_030029EC: .4byte _0300305C
+_030029E8: .4byte sub_030033A4
+_030029EC: .4byte sub_0300305C
 
 	.global _030029F0
-_030029F0: .4byte _03004FB0
-_030029F4: .4byte _030041D8
-_030029F8: .4byte _0300512C
-_030029FC: .4byte _0300512C
-_03002A00: .4byte _0300512C
-_03002A04: .4byte _03004234
-_03002A08: .4byte _030048B4
-_03002A0C: .4byte _0300512C
-_03002A10: .4byte _03004FC0
-_03002A14: .4byte _03004218
-_03002A18: .4byte _03004898
-_03002A1C: .4byte _0300512C
-_03002A20: .4byte _0300512C
-_03002A24: .4byte _0300427C
-_03002A28: .4byte _030048D8
-_03002A2C: .4byte _0300512C
-_03002A30: .4byte _03004D2C
-_03002A34: .4byte _03004320
-_03002A38: .4byte _0300512C
-_03002A3C: .4byte _0300512C
-_03002A40: .4byte _0300512C
-_03002A44: .4byte _03004254
-_03002A48: .4byte _0300497C
-_03002A4C: .4byte _0300512C
-_03002A50: .4byte _030039C0
-_03002A54: .4byte _030042E8
-_03002A58: .4byte _0300512C
-_03002A5C: .4byte _0300512C
-_03002A60: .4byte _0300512C
-_03002A64: .4byte _030042B0
-_03002A68: .4byte _03004928
-_03002A6C: .4byte _0300512C
-_03002A70: .4byte _03004E40
-_03002A74: .4byte _030043F4
-_03002A78: .4byte _0300512C
-_03002A7C: .4byte _0300512C
-_03002A80: .4byte _030044E0
-_03002A84: .4byte _03004378
-_03002A88: .4byte _03004AD8
-_03002A8C: .4byte _0300512C
-_03002A90: .4byte _03004FF0
-_03002A94: .4byte _0300435C
-_03002A98: .4byte _03004AB8
-_03002A9C: .4byte _0300512C
-_03002AA0: .4byte _03004514
-_03002AA4: .4byte _030043C0
-_03002AA8: .4byte _03004B30
-_03002AAC: .4byte _0300512C
-_03002AB0: .4byte _03004D60
-_03002AB4: .4byte _030044A4
-_03002AB8: .4byte _0300512C
-_03002ABC: .4byte _0300512C
-_03002AC0: .4byte _0300512C
-_03002AC4: .4byte _03004398
-_03002AC8: .4byte _03004B00
-_03002ACC: .4byte _0300512C
-_03002AD0: .4byte _030039C0
-_03002AD4: .4byte _0300446C
-_03002AD8: .4byte _0300512C
-_03002ADC: .4byte _0300512C
-_03002AE0: .4byte _0300512C
-_03002AE4: .4byte _03004434
-_03002AE8: .4byte _03004B88
-_03002AEC: .4byte _0300512C
-_03002AF0: .4byte _03005038
-_03002AF4: .4byte _03004664
-_03002AF8: .4byte _0300512C
-_03002AFC: .4byte _0300512C
-_03002B00: .4byte _0300512C
-_03002B04: .4byte _03004578
-_03002B08: .4byte _030049C4
-_03002B0C: .4byte _0300512C
-_03002B10: .4byte _03004E84
-_03002B14: .4byte _0300455C
-_03002B18: .4byte _030049A8
-_03002B1C: .4byte _0300512C
-_03002B20: .4byte _03004EF8
-_03002B24: .4byte _030045C0
-_03002B28: .4byte _03004A14
-_03002B2C: .4byte _0300512C
-_03002B30: .4byte _03004D80
-_03002B34: .4byte _030046A4
-_03002B38: .4byte _0300512C
-_03002B3C: .4byte _0300512C
-_03002B40: .4byte _0300512C
-_03002B44: .4byte _03004598
-_03002B48: .4byte _030049E8
-_03002B4C: .4byte _0300512C
-_03002B50: .4byte _0300509C
-_03002B54: .4byte _0300462C
-_03002B58: .4byte _0300512C
-_03002B5C: .4byte _0300512C
-_03002B60: .4byte _0300512C
-_03002B64: .4byte _030045F4
-_03002B68: .4byte _03004A64
-_03002B6C: .4byte _0300512C
-_03002B70: .4byte _03004EC0
-_03002B74: .4byte _03003F38
-_03002B78: .4byte _0300512C
-_03002B7C: .4byte _0300512C
-_03002B80: .4byte _0300512C
-_03002B84: .4byte _03003D68
-_03002B88: .4byte _03004C08
-_03002B8C: .4byte _0300512C
-_03002B90: .4byte _03004E9C
-_03002B94: .4byte _03003D30
-_03002B98: .4byte _03004BE4
-_03002B9C: .4byte _0300512C
-_03002BA0: .4byte _03004F24
-_03002BA4: .4byte _03003DE8
-_03002BA8: .4byte _03004C68
-_03002BAC: .4byte _0300512C
-_03002BB0: .4byte _03004DA0
-_03002BB4: .4byte _03003EE0
-_03002BB8: .4byte _0300512C
-_03002BBC: .4byte _0300512C
-_03002BC0: .4byte _0300512C
-_03002BC4: .4byte _03003DA4
-_03002BC8: .4byte _03004C34
-_03002BCC: .4byte _0300512C
-_03002BD0: .4byte _030050C4
-_03002BD4: .4byte _03003E8C
-_03002BD8: .4byte _0300512C
-_03002BDC: .4byte _0300512C
-_03002BE0: .4byte _0300512C
-_03002BE4: .4byte _03003E38
-_03002BE8: .4byte _03004CC8
-_03002BEC: .4byte _0300512C
-_03002BF0: .4byte _0300512C
-_03002BF4: .4byte _0300394C
-_03002BF8: .4byte _0300512C
-_03002BFC: .4byte _0300512C
-_03002C00: .4byte _030037DC
-_03002C04: .4byte _030037AC
-_03002C08: .4byte _030037C4
-_03002C0C: .4byte _0300512C
-_03002C10: .4byte _03003A04
-_03002C14: .4byte _0300512C
-_03002C18: .4byte _03003A34
-_03002C1C: .4byte _0300512C
-_03002C20: .4byte _030038B4
-_03002C24: .4byte _03003854
-_03002C28: .4byte _03003884
-_03002C2C: .4byte _0300512C
-_03002C30: .4byte _03004DC0
-_03002C34: .4byte _03003988
-_03002C38: .4byte _0300512C
-_03002C3C: .4byte _0300512C
-_03002C40: .4byte _03003834
-_03002C44: .4byte _030037F4
-_03002C48: .4byte _03003814
-_03002C4C: .4byte _0300512C
-_03002C50: .4byte _03003A4C
-_03002C54: .4byte _03003918
-_03002C58: .4byte _030050D8
-_03002C5C: .4byte _0300512C
-_03002C60: .4byte _0300512C
-_03002C64: .4byte _030038E4
-_03002C68: .4byte _0300512C
-_03002C6C: .4byte _0300512C
-_03002C70: .4byte _03003500
-_03002C74: .4byte _03003770
-_03002C78: .4byte _030034E8
-_03002C7C: .4byte _0300512C
-_03002C80: .4byte _03003550
-_03002C84: .4byte _03003518
-_03002C88: .4byte _03003534
-_03002C8C: .4byte _0300512C
-_03002C90: .4byte _03003A7C
-_03002C94: .4byte _030034D0
-_03002C98: .4byte _03003A64
-_03002C9C: .4byte _0300512C
-_03002CA0: .4byte _03003638
-_03002CA4: .4byte _030035D8
-_03002CA8: .4byte _03003608
-_03002CAC: .4byte _0300512C
-_03002CB0: .4byte _03004DE0
-_03002CB4: .4byte _03003738
-_03002CB8: .4byte _0300512C
-_03002CBC: .4byte _0300512C
-_03002CC0: .4byte _030035B4
-_03002CC4: .4byte _0300356C
-_03002CC8: .4byte _03003590
-_03002CCC: .4byte _0300512C
-_03002CD0: .4byte _03005108
-_03002CD4: .4byte _0300369C
-_03002CD8: .4byte _030050F0
-_03002CDC: .4byte _0300512C
-_03002CE0: .4byte _03003704
-_03002CE4: .4byte _03003668
-_03002CE8: .4byte _030036D0
-_03002CEC: .4byte _0300512C
-_03002CF0: .4byte _03003AD4
-_03002CF4: .4byte _03003CAC
-_03002CF8: .4byte _0300512C
-_03002CFC: .4byte _0300512C
-_03002D00: .4byte _03003B3C
-_03002D04: .4byte _03003AF4
-_03002D08: .4byte _030047BC
-_03002D0C: .4byte _0300512C
-_03002D10: .4byte _03003A1C
-_03002D14: .4byte _03003A94
-_03002D18: .4byte _030039D4
-_03002D1C: .4byte _0300512C
-_03002D20: .4byte _03003BFC
-_03002D24: .4byte _03003B8C
-_03002D28: .4byte _03004804
-_03002D2C: .4byte _0300512C
-_03002D30: .4byte _03004E00
-_03002D34: .4byte _03003CF0
-_03002D38: .4byte _0300512C
-_03002D3C: .4byte _0300512C
-_03002D40: .4byte _0300512C
-_03002D44: .4byte _03003B60
-_03002D48: .4byte _030047DC
-_03002D4C: .4byte _0300512C
-_03002D50: .4byte _0300511C
-_03002D54: .4byte _03003C70
-_03002D58: .4byte _0300512C
-_03002D5C: .4byte _0300512C
-_03002D60: .4byte _0300512C
-_03002D64: .4byte _03003C34
-_03002D68: .4byte _0300484C
-_03002D6C: .4byte _0300512C
-_03002D70: .4byte _03003AB4
-_03002D74: .4byte _03003F94
-_03002D78: .4byte _0300512C
-_03002D7C: .4byte _0300512C
-_03002D80: .4byte _03003B18
-_03002D84: .4byte _03004020
-_03002D88: .4byte _030046E0
-_03002D8C: .4byte _0300512C
-_03002D90: .4byte _030039EC
-_03002D94: .4byte _03003FEC
-_03002D98: .4byte _0300512C
-_03002D9C: .4byte _0300512C
-_03002DA0: .4byte _03003BC4
-_03002DA4: .4byte _03004098
-_03002DA8: .4byte _03004728
-_03002DAC: .4byte _0300512C
-_03002DB0: .4byte _03004E20
-_03002DB4: .4byte _03004184
-_03002DB8: .4byte _0300512C
-_03002DBC: .4byte _0300512C
-_03002DC0: .4byte _0300512C
-_03002DC4: .4byte _03004058
-_03002DC8: .4byte _03004700
-_03002DCC: .4byte _0300512C
-_03002DD0: .4byte _0300511C
-_03002DD4: .4byte _03004134
-_03002DD8: .4byte _0300512C
-_03002DDC: .4byte _0300512C
-_03002DE0: .4byte _0300512C
-_03002DE4: .4byte _030040E4
-_03002DE8: .4byte _03004770
-_03002DEC: .4byte _0300512C
+_030029F0: .4byte Opcode_BRK @ 0x00
+_030029F4: .4byte Opcode_ORA_IndirectX @ 0x01
+_030029F8: .4byte Opcode_NOP @ 0x02
+_030029FC: .4byte Opcode_NOP @ 0x03
+_03002A00: .4byte Opcode_NOP @ 0x04
+_03002A04: .4byte Opcode_ORA_ZeroPage @ 0x05
+_03002A08: .4byte Opcode_ASL_ZeroPage @ 0x06
+_03002A0C: .4byte Opcode_NOP @ 0x07
+_03002A10: .4byte Opcode_PHP @ 0x08
+_03002A14: .4byte Opcode_ORA_Immediate @ 0x09
+_03002A18: .4byte Opcode_ASL_Accumulator @ 0x0A
+_03002A1C: .4byte Opcode_NOP @ 0x0B
+_03002A20: .4byte Opcode_NOP @ 0x0C
+_03002A24: .4byte Opcode_ORA_Absolute @ 0x0D
+_03002A28: .4byte Opcode_ASL_Absolute @ 0x0E
+_03002A2C: .4byte Opcode_NOP @ 0x0F
+_03002A30: .4byte Opcode_BPL @ 0x10
+_03002A34: .4byte Opcode_ORA_IndirectY @ 0x11
+_03002A38: .4byte Opcode_NOP @ 0x12
+_03002A3C: .4byte Opcode_NOP @ 0x13
+_03002A40: .4byte Opcode_NOP @ 0x14
+_03002A44: .4byte Opcode_ORA_ZeroPageX @ 0x15
+_03002A48: .4byte Opcode_ASL_ZeroPageX @ 0x16
+_03002A4C: .4byte Opcode_NOP @ 0x17
+_03002A50: .4byte Opcode_CLC_SEC @ 0x18
+_03002A54: .4byte Opcode_ORA_AbsoluteY @ 0x19
+_03002A58: .4byte Opcode_NOP @ 0x1A
+_03002A5C: .4byte Opcode_NOP @ 0x1B
+_03002A60: .4byte Opcode_NOP @ 0x1C
+_03002A64: .4byte Opcode_ORA_AbsoluteX @ 0x1D
+_03002A68: .4byte Opcode_ASL_AbsoluteX @ 0x1E
+_03002A6C: .4byte Opcode_NOP @ 0x1F
+_03002A70: .4byte Opcode_JSR @ 0x20
+_03002A74: .4byte Opcode_AND_IndirectX @ 0x21
+_03002A78: .4byte Opcode_NOP @ 0x22
+_03002A7C: .4byte Opcode_NOP @ 0x23
+_03002A80: .4byte Opcode_BIT_ZeroPage @ 0x24
+_03002A84: .4byte Opcode_AND_ZeroPage @ 0x25
+_03002A88: .4byte Opcode_ROL_ZeroPage @ 0x26
+_03002A8C: .4byte Opcode_NOP @ 0x27
+_03002A90: .4byte Opcode_PLP @ 0x28
+_03002A94: .4byte Opcode_AND_Immediate @ 0x29
+_03002A98: .4byte Opcode_ROL_Accumulator @ 0x2A
+_03002A9C: .4byte Opcode_NOP @ 0x2B
+_03002AA0: .4byte Opcode_BIT_Absolute @ 0x2C
+_03002AA4: .4byte Opcode_AND_Absolute @ 0x2D
+_03002AA8: .4byte Opcode_ROL_Absolute @ 0x2E
+_03002AAC: .4byte Opcode_NOP @ 0x2F
+_03002AB0: .4byte Opcode_BMI @ 0x30
+_03002AB4: .4byte Opcode_AND_IndirectY @ 0x31
+_03002AB8: .4byte Opcode_NOP @ 0x32
+_03002ABC: .4byte Opcode_NOP @ 0x33
+_03002AC0: .4byte Opcode_NOP @ 0x34
+_03002AC4: .4byte Opcode_AND_ZeroPageX @ 0x35
+_03002AC8: .4byte Opcode_ROL_ZeroPageX @ 0x36
+_03002ACC: .4byte Opcode_NOP @ 0x37
+_03002AD0: .4byte Opcode_CLC_SEC @ 0x38
+_03002AD4: .4byte Opcode_AND_AbsoluteY @ 0x39
+_03002AD8: .4byte Opcode_NOP @ 0x3A
+_03002ADC: .4byte Opcode_NOP @ 0x3B
+_03002AE0: .4byte Opcode_NOP @ 0x3C
+_03002AE4: .4byte Opcode_AND_AbsoluteX @ 0x3D
+_03002AE8: .4byte Opcode_ROL_AbsoluteX @ 0x3E
+_03002AEC: .4byte Opcode_NOP @ 0x3F
+_03002AF0: .4byte Opcode_RTI @ 0x40
+_03002AF4: .4byte Opcode_EOR_IndirectX @ 0x41
+_03002AF8: .4byte Opcode_NOP @ 0x42
+_03002AFC: .4byte Opcode_NOP @ 0x43
+_03002B00: .4byte Opcode_NOP @ 0x44
+_03002B04: .4byte Opcode_EOR_ZeroPage @ 0x45
+_03002B08: .4byte Opcode_LSR_ZeroPage @ 0x46
+_03002B0C: .4byte Opcode_NOP @ 0x47
+_03002B10: .4byte Opcode_PHA @ 0x48
+_03002B14: .4byte Opcode_EOR_Immediate @ 0x49
+_03002B18: .4byte Opcode_LSR_Accumulator @ 0x4A
+_03002B1C: .4byte Opcode_NOP @ 0x4B
+_03002B20: .4byte Opcode_JMP_Absolute @ 0x4C
+_03002B24: .4byte Opcode_EOR_Absolute @ 0x4D
+_03002B28: .4byte Opcode_LSR_Absolute @ 0x4E
+_03002B2C: .4byte Opcode_NOP @ 0x4F
+_03002B30: .4byte Opcode_BVC @ 0x50
+_03002B34: .4byte Opcode_EOR_IndirectY @ 0x51
+_03002B38: .4byte Opcode_NOP @ 0x52
+_03002B3C: .4byte Opcode_NOP @ 0x53
+_03002B40: .4byte Opcode_NOP @ 0x54
+_03002B44: .4byte Opcode_EOR_ZeroPageX @ 0x55
+_03002B48: .4byte Opcode_LSR_ZeroPageX @ 0x56
+_03002B4C: .4byte Opcode_NOP @ 0x57
+_03002B50: .4byte Opcode_CLI @ 0x58
+_03002B54: .4byte Opcode_EOR_AbsoluteY @ 0x59
+_03002B58: .4byte Opcode_NOP @ 0x5A
+_03002B5C: .4byte Opcode_NOP @ 0x5B
+_03002B60: .4byte Opcode_NOP @ 0x5C
+_03002B64: .4byte Opcode_EOR_AbsoluteX @ 0x5D
+_03002B68: .4byte Opcode_LSR_AbsoluteX @ 0x5E
+_03002B6C: .4byte Opcode_NOP @ 0x5F
+_03002B70: .4byte Opcode_RTS @ 0x60
+_03002B74: .4byte Opcode_ADC_IndirectX @ 0x61
+_03002B78: .4byte Opcode_NOP @ 0x62
+_03002B7C: .4byte Opcode_NOP @ 0x63
+_03002B80: .4byte Opcode_NOP @ 0x64
+_03002B84: .4byte Opcode_ADC_ZeroPage @ 0x65
+_03002B88: .4byte Opcode_ROR_ZeroPage @ 0x66
+_03002B8C: .4byte Opcode_NOP @ 0x67
+_03002B90: .4byte Opcode_PLA @ 0x68
+_03002B94: .4byte Opcode_ADC_Immediate @ 0x69
+_03002B98: .4byte Opcode_ROR_Accumulator @ 0x6A
+_03002B9C: .4byte Opcode_NOP @ 0x6B
+_03002BA0: .4byte Opcode_JMP_Indirect @ 0x6C
+_03002BA4: .4byte Opcode_ADC_Absolute @ 0x6D
+_03002BA8: .4byte Opcode_ROR_Absolute @ 0x6E
+_03002BAC: .4byte Opcode_NOP @ 0x6F
+_03002BB0: .4byte Opcode_BVS @ 0x70
+_03002BB4: .4byte Opcode_ADC_IndirectY @ 0x71
+_03002BB8: .4byte Opcode_NOP @ 0x72
+_03002BBC: .4byte Opcode_NOP @ 0x73
+_03002BC0: .4byte Opcode_NOP @ 0x74
+_03002BC4: .4byte Opcode_ADC_ZeroPageX @ 0x75
+_03002BC8: .4byte Opcode_ROR_ZeroPageX @ 0x76
+_03002BCC: .4byte Opcode_NOP @ 0x77
+_03002BD0: .4byte Opcode_SEI @ 0x78
+_03002BD4: .4byte Opcode_ADC_AbsoluteY @ 0x79
+_03002BD8: .4byte Opcode_NOP @ 0x7A
+_03002BDC: .4byte Opcode_NOP @ 0x7B
+_03002BE0: .4byte Opcode_NOP @ 0x7C
+_03002BE4: .4byte Opcode_ADC_AbsoluteX @ 0x7D
+_03002BE8: .4byte Opcode_ROR_AbsoluteX @ 0x7E
+_03002BEC: .4byte Opcode_NOP @ 0x7F
+_03002BF0: .4byte Opcode_NOP @ 0x80
+_03002BF4: .4byte Opcode_STA_IndirectX @ 0x81
+_03002BF8: .4byte Opcode_NOP @ 0x82
+_03002BFC: .4byte Opcode_NOP @ 0x83
+_03002C00: .4byte Opcode_STY_ZeroPage @ 0x84
+_03002C04: .4byte Opcode_STA_ZeroPage @ 0x85
+_03002C08: .4byte Opcode_STX_ZeroPage @ 0x86
+_03002C0C: .4byte Opcode_NOP @ 0x87
+_03002C10: .4byte Opcode_DEY @ 0x88
+_03002C14: .4byte Opcode_NOP @ 0x89
+_03002C18: .4byte Opcode_TXA @ 0x8A
+_03002C1C: .4byte Opcode_NOP @ 0x8B
+_03002C20: .4byte Opcode_STY_Absolute @ 0x8C
+_03002C24: .4byte Opcode_STA_Absolute @ 0x8D
+_03002C28: .4byte Opcode_STX_Absolute @ 0x8E
+_03002C2C: .4byte Opcode_NOP @ 0x8F
+_03002C30: .4byte Opcode_BCC @ 0x90
+_03002C34: .4byte Opcode_STA_IndirectY @ 0x91
+_03002C38: .4byte Opcode_NOP @ 0x92
+_03002C3C: .4byte Opcode_NOP @ 0x93
+_03002C40: .4byte Opcode_STY_ZeroPageX @ 0x94
+_03002C44: .4byte Opcode_STA_ZeroPageX @ 0x95
+_03002C48: .4byte Opcode_STX_ZeroPageX @ 0x96
+_03002C4C: .4byte Opcode_NOP @ 0x97
+_03002C50: .4byte Opcode_TYA @ 0x98
+_03002C54: .4byte Opcode_STA_AbsoluteY @ 0x99
+_03002C58: .4byte Opcode_TXS @ 0x9A
+_03002C5C: .4byte Opcode_NOP @ 0x9B
+_03002C60: .4byte Opcode_NOP @ 0x9C
+_03002C64: .4byte Opcode_STA_AbsoluteX @ 0x9D
+_03002C68: .4byte Opcode_NOP @ 0x9E
+_03002C6C: .4byte Opcode_NOP @ 0x9F
+_03002C70: .4byte Opcode_LDY_Immediate @ 0xA0
+_03002C74: .4byte Opcode_LDA_IndirectX @ 0xA1
+_03002C78: .4byte Opcode_LDX_Immediate @ 0xA2
+_03002C7C: .4byte Opcode_NOP @ 0xA3
+_03002C80: .4byte Opcode_LDY_ZeroPage @ 0xA4
+_03002C84: .4byte Opcode_LDA_ZeroPage @ 0xA5
+_03002C88: .4byte Opcode_LDX_ZeroPage @ 0xA6
+_03002C8C: .4byte Opcode_NOP @ 0xA7
+_03002C90: .4byte Opcode_TAY @ 0xA8
+_03002C94: .4byte Opcode_LDA_Immediate @ 0xA9
+_03002C98: .4byte Opcode_TAX @ 0xAA
+_03002C9C: .4byte Opcode_NOP @ 0xAB
+_03002CA0: .4byte Opcode_LDY_Absolute @ 0xAC
+_03002CA4: .4byte Opcode_LDA_Absolute @ 0xAD
+_03002CA8: .4byte Opcode_LDX_Absolute @ 0xAE
+_03002CAC: .4byte Opcode_NOP @ 0xAF
+_03002CB0: .4byte Opcode_BCS @ 0xB0
+_03002CB4: .4byte Opcode_LDA_IndirectY @ 0xB1
+_03002CB8: .4byte Opcode_NOP @ 0xB2
+_03002CBC: .4byte Opcode_NOP @ 0xB3
+_03002CC0: .4byte Opcode_LDY_ZeroPageX @ 0xB4
+_03002CC4: .4byte Opcode_LDA_ZeroPageX @ 0xB5
+_03002CC8: .4byte Opcode_LDX_ZeroPageX @ 0xB6
+_03002CCC: .4byte Opcode_NOP @ 0xB7
+_03002CD0: .4byte Opcode_CLV @ 0xB8
+_03002CD4: .4byte Opcode_LDA_AbsoluteY @ 0xB9
+_03002CD8: .4byte Opcode_TSX @ 0xBA
+_03002CDC: .4byte Opcode_NOP @ 0xBB
+_03002CE0: .4byte Opcode_LDY_AbsoluteX @ 0xBC
+_03002CE4: .4byte Opcode_LDA_AbsoluteX @ 0xBD
+_03002CE8: .4byte Opcode_LDX_AbsoluteY @ 0xBE
+_03002CEC: .4byte Opcode_NOP @ 0xBF
+_03002CF0: .4byte Opcode_CPY_Immediate @ 0xC0
+_03002CF4: .4byte Opcode_CMP_IndirectX @ 0xC1
+_03002CF8: .4byte Opcode_NOP @ 0xC2
+_03002CFC: .4byte Opcode_NOP @ 0xC3
+_03002D00: .4byte Opcode_CPY_ZeroPage @ 0xC4
+_03002D04: .4byte Opcode_CMP_ZeroPage @ 0xC5
+_03002D08: .4byte Opcode_DEC_ZeroPage @ 0xC6
+_03002D0C: .4byte Opcode_NOP @ 0xC7
+_03002D10: .4byte Opcode_INY @ 0xC8
+_03002D14: .4byte Opcode_CMP_Immediate @ 0xC9
+_03002D18: .4byte Opcode_DEX @ 0xCA
+_03002D1C: .4byte Opcode_NOP @ 0xCB
+_03002D20: .4byte Opcode_CPY_Absolute @ 0xCC
+_03002D24: .4byte Opcode_CMP_Absolute @ 0xCD
+_03002D28: .4byte Opcode_DEC_Absolute @ 0xCE
+_03002D2C: .4byte Opcode_NOP @ 0xCF
+_03002D30: .4byte Opcode_BNE @ 0xD0
+_03002D34: .4byte Opcode_CMP_IndirectY @ 0xD1
+_03002D38: .4byte Opcode_NOP @ 0xD2
+_03002D3C: .4byte Opcode_NOP @ 0xD3
+_03002D40: .4byte Opcode_NOP @ 0xD4
+_03002D44: .4byte Opcode_CMP_ZeroPageX @ 0xD5
+_03002D48: .4byte Opcode_DEC_ZeroPageX @ 0xD6
+_03002D4C: .4byte Opcode_NOP @ 0xD7
+_03002D50: .4byte Opcode_CLD_SED @ 0xD8
+_03002D54: .4byte Opcode_CMP_AbsoluteY @ 0xD9
+_03002D58: .4byte Opcode_NOP @ 0xDA
+_03002D5C: .4byte Opcode_NOP @ 0xDB
+_03002D60: .4byte Opcode_NOP @ 0xDC
+_03002D64: .4byte Opcode_CMP_AbsoluteX @ 0xDD
+_03002D68: .4byte Opcode_DEC_AbsoluteX @ 0xDE
+_03002D6C: .4byte Opcode_NOP @ 0xDF
+_03002D70: .4byte Opcode_CPX_Immediate @ 0xE0
+_03002D74: .4byte Opcode_SBC_IndirectX @ 0xE1
+_03002D78: .4byte Opcode_NOP @ 0xE2
+_03002D7C: .4byte Opcode_NOP @ 0xE3
+_03002D80: .4byte Opcode_CPX_ZeroPage @ 0xE4
+_03002D84: .4byte Opcode_SBC_ZeroPage @ 0xE5
+_03002D88: .4byte Opcode_INC_ZeroPage @ 0xE6
+_03002D8C: .4byte Opcode_NOP @ 0xE7
+_03002D90: .4byte Opcode_INX @ 0xE8
+_03002D94: .4byte Opcode_SBC_Immediate @ 0xE9
+_03002D98: .4byte Opcode_NOP @ 0xEA
+_03002D9C: .4byte Opcode_NOP @ 0xEB
+_03002DA0: .4byte Opcode_CPX_Absolute @ 0xEC
+_03002DA4: .4byte Opcode_SBC_Absolute @ 0xED
+_03002DA8: .4byte Opcode_INC_Absolute @ 0xEE
+_03002DAC: .4byte Opcode_NOP @ 0xEF
+_03002DB0: .4byte Opcode_BEQ @ 0xF0
+_03002DB4: .4byte Opcode_SBC_IndirectY @ 0xF1
+_03002DB8: .4byte Opcode_NOP @ 0xF2
+_03002DBC: .4byte Opcode_NOP @ 0xF3
+_03002DC0: .4byte Opcode_NOP @ 0xF4
+_03002DC4: .4byte Opcode_SBC_ZeroPageX @ 0xF5
+_03002DC8: .4byte Opcode_INC_ZeroPageX @ 0xF6
+_03002DCC: .4byte Opcode_NOP @ 0xF7
+_03002DD0: .4byte Opcode_CLD_SED @ 0xF8
+_03002DD4: .4byte Opcode_SBC_AbsoluteY @ 0xF9
+_03002DD8: .4byte Opcode_NOP @ 0xFA
+_03002DDC: .4byte Opcode_NOP @ 0xFB
+_03002DE0: .4byte Opcode_NOP @ 0xFC
+_03002DE4: .4byte Opcode_SBC_AbsoluteX @ 0xFD
+_03002DE8: .4byte Opcode_INC_AbsoluteX @ 0xFE
+_03002DEC: .4byte Opcode_NOP @ 0xFF
 
+	@ Potentially some sort of checksum/CRC function
 	arm_func_start sub_03002DF0
 sub_03002DF0: @ 0x03002DF0
-	eor r8, r8, sb
+	eor r8, r8, sb   @ r8 ^= sb
+
+	@ loop 20 times:
 	mov ip, #0x20
 _03002DF8:
-	lsrs r8, r8, #1
-	eorhs r8, r8, sl
+	lsrs r8, r8, #1  @ r8 >>= 1
+	eorhs r8, r8, sl @ if (r8 & 1): r8 ^= sl
 	subs ip, ip, #1
 	bne _03002DF8
+
 	bx lr
 
+	@ Seems to be the opcode handler
+	@ r5 = 0x030073FC (is it always?)
+	@ ip = 0x030029F0 (is it always?)
 	arm_func_start sub_03002E0C
 sub_03002E0C: @ 0x03002E0C
-	ldrb r1, [r5], #1
+	ldrb r1, [r5], #1 @ r1 = *r5++
 	ldrb r0, [sp, #SP_A33]
-	cmp r0, #0
-	ldrbne r1, [sp, #SP_A32]
+	cmp r0, #0               @ if SP_A33 != 0:
+	ldrbne r1, [sp, #SP_A32]     @ r1 = SP_A32
 	movne r0, #0
-	strbne r0, [sp, #SP_A32]
-	strbne r0, [sp, #SP_A33]
+	strbne r0, [sp, #SP_A32]     @ SP_A32 = 0
+	strbne r0, [sp, #SP_A33]     @ SP_A33 = 0
+	@ Goto ip[r1]
 	ldr pc, [ip, r1, lsl #2]
 
 	arm_func_start sub_03002E2C
@@ -523,6 +531,7 @@ sub_03002E38: @ 0x03002E38
 	ldrb r3, [r0, r1, lsl #8]
 	mov pc, lr
 
+	@ TODO: continue commenting from here
 	arm_func_start sub_03002E44
 sub_03002E44: @ 0x03002E44
 	and r1, r0, #7
@@ -660,7 +669,9 @@ _03003028:
 	lsl r2, r2, #1
 	str r2, [sp, #SP_82C]
 	mov pc, lr
-_03003034:
+
+	arm_func_start sub_03003034
+sub_03003034: @ 0x03003034
 	cmp r4, #0
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
@@ -672,15 +683,26 @@ _03003044:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_0300305C:
+
+	arm_func_start sub_0300305C
+sub_0300305C: @ 0x0300305C
+	@ Goto _0300306C[r0]
 	and r0, r0, #7
 	ldr pc, [pc, r0, lsl #2]
-	andeq r0, r0, r0
 _03003068:
-	.byte 0x18, 0xB0, 0x00, 0x06, 0x78, 0xB0, 0x00, 0x06
-	.byte 0x34, 0x30, 0x00, 0x03, 0x78, 0xB0, 0x00, 0x06, 0x68, 0xB0, 0x00, 0x06, 0x90, 0xB0, 0x00, 0x06
-	.byte 0xD4, 0x31, 0x00, 0x03, 0x88, 0x30, 0x00, 0x03
-_03003088:
+	.byte 0x00, 0x00, 0x00, 0x00
+_0300306C:
+	.4byte sub_0600B018
+	.4byte sub_0600B078
+	.4byte sub_03003034
+	.4byte sub_0600B078
+	.4byte sub_0600B068
+	.4byte sub_0600B090
+	.4byte sub_030031D4
+	.4byte sub_03003088
+
+	arm_func_start sub_03003088
+sub_03003088: @ 0x03003088
 	ldr r0, [sp, #SP_8B8]
 	cmp r0, #0x3000
 	bge _03003348
@@ -769,7 +791,9 @@ _03003100:
 _030031C8: .4byte sub_03000380
 _030031CC: .4byte 0x06015400
 _030031D0: .4byte 0x06015540
-_030031D4:
+
+	arm_func_start sub_030031D4
+sub_030031D4: @ 0x030031D4
 	tst fp, #0x200000
 	eor fp, fp, #0x200000
 	bne _030031F8
@@ -893,7 +917,9 @@ _03003380:
 	strb r1, [sp, #SP_8DC]
 	strb r1, [sp, #SP_8E0]
 	b _03003260
-_030033A4:
+
+	arm_func_start sub_030033A4
+sub_030033A4: @ 0x030033A4
 	tst r0, #0x1fc0
 	bne _030034A8
 	and r2, r0, #0x3f
@@ -901,13 +927,23 @@ _030033A4:
 	bge _030034A8
 	subs r2, r2, #0x14
 	blt _030034A8
+	@ goto _030033C8[r2]
 	ldr pc, [pc, r2, lsl #2]
-	andeq r0, r0, r0
+
+	.4byte 0x000000
 _030033C8:
-	.byte 0xF8, 0x33, 0x00, 0x03, 0xA8, 0x34, 0x00, 0x03
-	.byte 0x44, 0x34, 0x00, 0x03, 0x94, 0x34, 0x00, 0x03, 0x34, 0x30, 0x00, 0x03, 0x34, 0x30, 0x00, 0x03
-	.byte 0x34, 0x30, 0x00, 0x03, 0x34, 0x30, 0x00, 0x03, 0x34, 0x30, 0x00, 0x03, 0x34, 0x30, 0x00, 0x03
-	.byte 0x34, 0x30, 0x00, 0x03, 0x34, 0x30, 0x00, 0x03
+	.4byte _030033F8
+	.4byte _030034A8
+	.4byte _03003444
+	.4byte _03003494
+	.4byte sub_03003034
+	.4byte sub_03003034
+	.4byte sub_03003034
+	.4byte sub_03003034
+	.4byte sub_03003034
+	.4byte sub_03003034
+	.4byte sub_03003034
+	.4byte sub_03003034
 _030033F8:
 	mov lr, #0x4000000
 	add lr, lr, #0xd4
@@ -967,28 +1003,28 @@ _030034A8:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030034D0:
+Opcode_LDA_Immediate:
 	ldrb r3, [r5], #1
 	and r7, r3, #0xff
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030034E8:
+Opcode_LDX_Immediate:
 	ldrb r3, [r5], #1
 	and r8, r3, #0xff
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003500:
+Opcode_LDY_Immediate:
 	ldrb r3, [r5], #1
 	and sb, r3, #0xff
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003518:
+Opcode_LDA_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	and r7, r3, #0xff
@@ -996,7 +1032,7 @@ _03003518:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003534:
+Opcode_LDX_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	and r8, r3, #0xff
@@ -1004,7 +1040,7 @@ _03003534:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003550:
+Opcode_LDY_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	and sb, r3, #0xff
@@ -1012,7 +1048,7 @@ _03003550:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_0300356C:
+Opcode_LDA_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -1022,7 +1058,7 @@ _0300356C:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003590:
+Opcode_LDX_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, sb
 	and r0, r0, #0xff
@@ -1032,7 +1068,7 @@ _03003590:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030035B4:
+Opcode_LDY_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -1042,7 +1078,7 @@ _030035B4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030035D8:
+Opcode_LDA_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1050,12 +1086,13 @@ _030035D8:
 	add lr, pc, #0x4 @ =0x030035F4
 	ldrne pc, [fp, -r2, lsl #2]
 	ldrb r3, [sp, r0]
+_030035F4:
 	and r7, r3, #0xff
 	adds r4, r4, #0x4000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003608:
+Opcode_LDX_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1068,7 +1105,7 @@ _03003608:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003638:
+Opcode_LDY_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1081,7 +1118,7 @@ _03003638:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003668:
+Opcode_LDA_AbsoluteX:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1095,7 +1132,7 @@ _03003668:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_0300369C:
+Opcode_LDA_AbsoluteY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1109,7 +1146,7 @@ _0300369C:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030036D0:
+Opcode_LDX_AbsoluteY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1123,7 +1160,7 @@ _030036D0:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003704:
+Opcode_LDY_AbsoluteX:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1137,7 +1174,7 @@ _03003704:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003738:
+Opcode_LDA_IndirectY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r0, sp]!
 	ldrb r0, [r0, #1]
@@ -1152,7 +1189,7 @@ _03003738:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003770:
+Opcode_LDA_IndirectX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -1168,28 +1205,28 @@ _03003770:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030037AC:
+Opcode_STA_ZeroPage:
 	ldrb r0, [r5], #1
 	strb r7, [sp, r0]
 	adds r4, r4, #0x3000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030037C4:
+Opcode_STX_ZeroPage:
 	ldrb r0, [r5], #1
 	strb r8, [sp, r0]
 	adds r4, r4, #0x3000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030037DC:
+Opcode_STY_ZeroPage:
 	ldrb r0, [r5], #1
 	strb sb, [sp, r0]
 	adds r4, r4, #0x3000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030037F4:
+Opcode_STA_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -1198,7 +1235,7 @@ _030037F4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003814:
+Opcode_STX_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, sb
 	and r0, r0, #0xff
@@ -1207,7 +1244,7 @@ _03003814:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003834:
+Opcode_STY_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -1216,7 +1253,7 @@ _03003834:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003854:
+Opcode_STA_Absolute:
 	add r4, r4, #0x4000000
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
@@ -1229,7 +1266,7 @@ _03003854:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003884:
+Opcode_STX_Absolute:
 	add r4, r4, #0x4000000
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
@@ -1242,7 +1279,7 @@ _03003884:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030038B4:
+Opcode_STY_Absolute:
 	add r4, r4, #0x4000000
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
@@ -1255,7 +1292,7 @@ _030038B4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030038E4:
+Opcode_STA_AbsoluteX:
 	add r4, r4, #0x5000000
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
@@ -1269,7 +1306,7 @@ _030038E4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003918:
+Opcode_STA_AbsoluteY:
 	add r4, r4, #0x5000000
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
@@ -1283,7 +1320,7 @@ _03003918:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_0300394C:
+Opcode_STA_IndirectX:
 	add r4, r4, #0x6000000
 	ldrb r0, [r5], #1
 	add r0, r0, r8
@@ -1299,7 +1336,7 @@ _0300394C:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003988:
+Opcode_STA_IndirectY:
 	add r4, r4, #0x6000000
 	ldrb r0, [r5], #1
 	ldrb r1, [r0, sp]!
@@ -1314,69 +1351,69 @@ _03003988:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030039C0:
+Opcode_CLC_SEC:
 	lsl sl, r1, #0x1a
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030039D4:
+Opcode_DEX:
 	sub r3, r8, #1
 	and r8, r3, #0xff
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030039EC:
+Opcode_INX:
 	add r3, r8, #1
 	and r8, r3, #0xff
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003A04:
+Opcode_DEY:
 	sub r3, sb, #1
 	and sb, r3, #0xff
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003A1C:
+Opcode_INY:
 	add r3, sb, #1
 	and sb, r3, #0xff
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003A34:
+Opcode_TXA:
 	mov r3, r8
 	and r7, r3, #0xff
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003A4C:
+Opcode_TYA:
 	mov r3, sb
 	and r7, r3, #0xff
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003A64:
+Opcode_TAX:
 	mov r3, r7
 	and r8, r3, #0xff
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003A7C:
+Opcode_TAY:
 	mov r3, r7
 	and sb, r3, #0xff
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003A94:
+Opcode_CMP_Immediate:
 	ldrb r3, [r5], #1
 	subs r3, r7, r3
 	rrx sl, sl
@@ -1385,7 +1422,7 @@ _03003A94:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003AB4:
+Opcode_CPX_Immediate:
 	ldrb r3, [r5], #1
 	subs r3, r8, r3
 	rrx sl, sl
@@ -1394,7 +1431,7 @@ _03003AB4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003AD4:
+Opcode_CPY_Immediate:
 	ldrb r3, [r5], #1
 	subs r3, sb, r3
 	rrx sl, sl
@@ -1403,7 +1440,7 @@ _03003AD4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003AF4:
+Opcode_CMP_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	subs r3, r7, r3
@@ -1413,7 +1450,7 @@ _03003AF4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003B18:
+Opcode_CPX_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	subs r3, r8, r3
@@ -1423,7 +1460,7 @@ _03003B18:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003B3C:
+Opcode_CPY_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	subs r3, sb, r3
@@ -1433,7 +1470,7 @@ _03003B3C:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003B60:
+Opcode_CMP_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -1445,7 +1482,7 @@ _03003B60:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003B8C:
+Opcode_CMP_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1460,7 +1497,7 @@ _03003B8C:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003BC4:
+Opcode_CPX_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1475,7 +1512,7 @@ _03003BC4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003BFC:
+Opcode_CPY_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1490,7 +1527,7 @@ _03003BFC:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003C34:
+Opcode_CMP_AbsoluteX:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1506,7 +1543,7 @@ _03003C34:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003C70:
+Opcode_CMP_AbsoluteY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1522,7 +1559,7 @@ _03003C70:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003CAC:
+Opcode_CMP_IndirectX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -1540,7 +1577,7 @@ _03003CAC:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003CF0:
+Opcode_CMP_IndirectY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r0, sp]!
 	ldrb r0, [r0, #1]
@@ -1557,7 +1594,7 @@ _03003CF0:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003D30:
+Opcode_ADC_Immediate:
 	ldrb r3, [r5], #1
 	lsr sl, sl, #8
 	orr r7, sl, r7, lsl #24
@@ -1572,7 +1609,7 @@ _03003D30:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003D68:
+Opcode_ADC_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	lsr sl, sl, #8
@@ -1588,7 +1625,7 @@ _03003D68:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003DA4:
+Opcode_ADC_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -1606,7 +1643,7 @@ _03003DA4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003DE8:
+Opcode_ADC_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1627,7 +1664,7 @@ _03003DE8:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003E38:
+Opcode_ADC_AbsoluteX:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1649,7 +1686,7 @@ _03003E38:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003E8C:
+Opcode_ADC_AbsoluteY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1671,7 +1708,7 @@ _03003E8C:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003EE0:
+Opcode_ADC_IndirectY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r0, sp]!
 	ldrb r0, [r0, #1]
@@ -1694,7 +1731,7 @@ _03003EE0:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003F38:
+Opcode_ADC_IndirectX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -1718,7 +1755,7 @@ _03003F38:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003F94:
+Opcode_SBC_IndirectX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -1741,7 +1778,7 @@ _03003F94:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03003FEC:
+Opcode_SBC_Immediate:
 	ldrb r3, [r5], #1
 	lsls sl, sl, #1
 	lsl r7, r7, #0x18
@@ -1755,7 +1792,7 @@ _03003FEC:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004020:
+Opcode_SBC_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	lsls sl, sl, #1
@@ -1770,7 +1807,7 @@ _03004020:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004058:
+Opcode_SBC_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -1787,7 +1824,7 @@ _03004058:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004098:
+Opcode_SBC_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1807,7 +1844,7 @@ _03004098:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030040E4:
+Opcode_SBC_AbsoluteX:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1828,7 +1865,7 @@ _030040E4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004134:
+Opcode_SBC_AbsoluteY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1849,7 +1886,7 @@ _03004134:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004184:
+Opcode_SBC_IndirectY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r0, sp]!
 	ldrb r0, [r0, #1]
@@ -1871,7 +1908,7 @@ _03004184:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030041D8:
+Opcode_ORA_IndirectX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -1888,7 +1925,7 @@ _030041D8:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004218:
+Opcode_ORA_Immediate:
 	ldrb r3, [r5], #1
 	orr r3, r7, r3
 	and r7, r3, #0xff
@@ -1896,7 +1933,7 @@ _03004218:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004234:
+Opcode_ORA_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	orr r3, r7, r3
@@ -1905,7 +1942,7 @@ _03004234:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004254:
+Opcode_ORA_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -1916,7 +1953,7 @@ _03004254:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_0300427C:
+Opcode_ORA_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1930,7 +1967,7 @@ _0300427C:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030042B0:
+Opcode_ORA_AbsoluteX:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1945,7 +1982,7 @@ _030042B0:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030042E8:
+Opcode_ORA_AbsoluteY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -1960,7 +1997,7 @@ _030042E8:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004320:
+Opcode_ORA_IndirectY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r0, sp]!
 	ldrb r0, [r0, #1]
@@ -1976,7 +2013,7 @@ _03004320:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_0300435C:
+Opcode_AND_Immediate:
 	ldrb r3, [r5], #1
 	and r3, r7, r3
 	and r7, r3, #0xff
@@ -1984,7 +2021,7 @@ _0300435C:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004378:
+Opcode_AND_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	and r3, r7, r3
@@ -1993,7 +2030,7 @@ _03004378:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004398:
+Opcode_AND_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -2004,7 +2041,7 @@ _03004398:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030043C0:
+Opcode_AND_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2018,7 +2055,7 @@ _030043C0:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030043F4:
+Opcode_AND_IndirectX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -2035,7 +2072,7 @@ _030043F4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004434:
+Opcode_AND_AbsoluteX:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2050,7 +2087,7 @@ _03004434:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_0300446C:
+Opcode_AND_AbsoluteY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2065,7 +2102,7 @@ _0300446C:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030044A4:
+Opcode_AND_IndirectY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r0, sp]!
 	ldrb r0, [r0, #1]
@@ -2081,7 +2118,7 @@ _030044A4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030044E0:
+Opcode_BIT_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	bic sp, sp, #0x200000
@@ -2095,7 +2132,7 @@ _030044E0:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004514:
+Opcode_BIT_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2114,7 +2151,7 @@ _03004514:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_0300455C:
+Opcode_EOR_Immediate:
 	ldrb r3, [r5], #1
 	eor r3, r7, r3
 	and r7, r3, #0xff
@@ -2122,7 +2159,7 @@ _0300455C:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004578:
+Opcode_EOR_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	eor r3, r7, r3
@@ -2131,7 +2168,7 @@ _03004578:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004598:
+Opcode_EOR_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -2142,7 +2179,7 @@ _03004598:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030045C0:
+Opcode_EOR_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2156,7 +2193,7 @@ _030045C0:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030045F4:
+Opcode_EOR_AbsoluteX:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2171,7 +2208,7 @@ _030045F4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_0300462C:
+Opcode_EOR_AbsoluteY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2186,7 +2223,7 @@ _0300462C:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004664:
+Opcode_EOR_IndirectX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -2203,7 +2240,7 @@ _03004664:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030046A4:
+Opcode_EOR_IndirectY:
 	ldrb r0, [r5], #1
 	ldrb r1, [r0, sp]!
 	ldrb r0, [r0, #1]
@@ -2219,7 +2256,7 @@ _030046A4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030046E0:
+Opcode_INC_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	add r3, r3, #1
@@ -2228,7 +2265,7 @@ _030046E0:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004700:
+Opcode_INC_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -2239,7 +2276,7 @@ _03004700:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004728:
+Opcode_INC_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2259,7 +2296,7 @@ _0300475C:
 	and r1, r3, #0xff
 	lsrs r2, r0, #0xd
 	ldr pc, [ip, -r2, lsl #2]
-_03004770:
+Opcode_INC_AbsoluteX:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2280,7 +2317,7 @@ _030047A8:
 	and r1, r3, #0xff
 	lsrs r2, r0, #0xd
 	ldr pc, [ip, -r2, lsl #2]
-_030047BC:
+Opcode_DEC_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	sub r3, r3, #1
@@ -2289,7 +2326,7 @@ _030047BC:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030047DC:
+Opcode_DEC_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -2300,7 +2337,7 @@ _030047DC:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004804:
+Opcode_DEC_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2320,7 +2357,7 @@ _03004838:
 	and r1, r3, #0xff
 	lsrs r2, r0, #0xd
 	ldr pc, [ip, -r2, lsl #2]
-_0300484C:
+Opcode_DEC_AbsoluteX:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2341,7 +2378,7 @@ _03004884:
 	and r1, r3, #0xff
 	lsrs r2, r0, #0xd
 	ldr pc, [ip, -r2, lsl #2]
-_03004898:
+Opcode_ASL_Accumulator:
 	lsl r3, r7, #1
 	lsl sl, r3, #0x17
 	and r7, r3, #0xff
@@ -2349,7 +2386,7 @@ _03004898:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030048B4:
+Opcode_ASL_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	lsl r3, r3, #1
@@ -2359,7 +2396,7 @@ _030048B4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030048D8:
+Opcode_ASL_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2381,7 +2418,7 @@ _03004910:
 	and r1, r3, #0xff
 	lsrs r2, r0, #0xd
 	ldr pc, [ip, -r2, lsl #2]
-_03004928:
+Opcode_ASL_AbsoluteX:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2404,7 +2441,7 @@ _03004964:
 	and r1, r3, #0xff
 	lsrs r2, r0, #0xd
 	ldr pc, [ip, -r2, lsl #2]
-_0300497C:
+Opcode_ASL_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -2416,7 +2453,7 @@ _0300497C:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030049A8:
+Opcode_LSR_Accumulator:
 	lsr r3, r7, #1
 	lsl sl, r7, #0x1f
 	and r7, r3, #0xff
@@ -2424,7 +2461,7 @@ _030049A8:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030049C4:
+Opcode_LSR_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	lsl sl, r3, #0x1f
@@ -2434,7 +2471,7 @@ _030049C4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030049E8:
+Opcode_LSR_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -2446,7 +2483,7 @@ _030049E8:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004A14:
+Opcode_LSR_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2468,7 +2505,7 @@ _03004A4C:
 	and r1, r3, #0xff
 	lsrs r2, r0, #0xd
 	ldr pc, [ip, -r2, lsl #2]
-_03004A64:
+Opcode_LSR_AbsoluteX:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2491,7 +2528,7 @@ _03004AA0:
 	and r1, r3, #0xff
 	lsrs r2, r0, #0xd
 	ldr pc, [ip, -r2, lsl #2]
-_03004AB8:
+Opcode_ROL_Accumulator:
 	lsl r3, r7, #1
 	orr r3, r3, sl, lsr #31
 	lsl sl, r3, #0x17
@@ -2500,7 +2537,7 @@ _03004AB8:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004AD8:
+Opcode_ROL_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	lsl r3, r3, #1
@@ -2511,7 +2548,7 @@ _03004AD8:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004B00:
+Opcode_ROL_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -2524,7 +2561,7 @@ _03004B00:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004B30:
+Opcode_ROL_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2548,7 +2585,7 @@ _03004B6C:
 	and r1, r3, #0xff
 	lsrs r2, r0, #0xd
 	ldr pc, [ip, -r2, lsl #2]
-_03004B88:
+Opcode_ROL_AbsoluteX:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2573,7 +2610,7 @@ _03004BC8:
 	and r1, r3, #0xff
 	lsrs r2, r0, #0xd
 	ldr pc, [ip, -r2, lsl #2]
-_03004BE4:
+Opcode_ROR_Accumulator:
 	tst sl, #-0x80000000
 	orrne r7, r7, #0x100
 	lsl sl, r7, #0x1f
@@ -2583,7 +2620,7 @@ _03004BE4:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004C08:
+Opcode_ROR_ZeroPage:
 	ldrb r0, [r5], #1
 	ldrb r3, [sp, r0]
 	tst sl, #-0x80000000
@@ -2595,7 +2632,7 @@ _03004C08:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004C34:
+Opcode_ROR_ZeroPageX:
 	ldrb r0, [r5], #1
 	add r0, r0, r8
 	and r0, r0, #0xff
@@ -2609,7 +2646,7 @@ _03004C34:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004C68:
+Opcode_ROR_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2635,7 +2672,7 @@ _03004CA8:
 	and r1, r3, #0xff
 	lsrs r2, r0, #0xd
 	ldr pc, [ip, -r2, lsl #2]
-_03004CC8:
+Opcode_ROR_AbsoluteX:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2662,7 +2699,7 @@ _03004D0C:
 	and r1, r3, #0xff
 	lsrs r2, r0, #0xd
 	ldr pc, [ip, -r2, lsl #2]
-_03004D2C:
+Opcode_BPL:
 	tst r3, #0x280
 	bne _03004D4C
 	ldrsb r0, [r5], #1
@@ -2677,7 +2714,7 @@ _03004D4C:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004D60:
+Opcode_BMI:
 	tst r3, #0x280
 	beq _03004D4C
 	ldrsb r0, [r5], #1
@@ -2686,7 +2723,7 @@ _03004D60:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004D80:
+Opcode_BVC:
 	tst sp, #0x200000
 	bne _03004D4C
 	ldrsb r0, [r5], #1
@@ -2695,7 +2732,7 @@ _03004D80:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004DA0:
+Opcode_BVS:
 	tst sp, #0x200000
 	beq _03004D4C
 	ldrsb r0, [r5], #1
@@ -2704,7 +2741,7 @@ _03004DA0:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004DC0:
+Opcode_BCC:
 	tst sl, #-0x80000000
 	bne _03004D4C
 	ldrsb r0, [r5], #1
@@ -2713,7 +2750,7 @@ _03004DC0:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004DE0:
+Opcode_BCS:
 	tst sl, #-0x80000000
 	beq _03004D4C
 	ldrsb r0, [r5], #1
@@ -2722,7 +2759,7 @@ _03004DE0:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004E00:
+Opcode_BNE:
 	tst r3, #0xff
 	beq _03004D4C
 	ldrsb r0, [r5], #1
@@ -2731,7 +2768,7 @@ _03004E00:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004E20:
+Opcode_BEQ:
 	tst r3, #0xff
 	bne _03004D4C
 	ldrsb r0, [r5], #1
@@ -2740,7 +2777,7 @@ _03004E20:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004E40:
+Opcode_JSR:
 	ldrb r0, [r5], #1
 	sub r2, r5, r4, lsl #8
 	ldrb r1, [r5], #1
@@ -2758,14 +2795,14 @@ _03004E40:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004E84:
+Opcode_PHA:
 	strb r7, [r6], #-1
 	orr r6, r6, #0x100
 	adds r4, r4, #0x3000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004E9C:
+Opcode_PLA:
 	and r0, r6, #0xff
 	cmp r0, #0xff
 	subeq r6, r6, #0x100
@@ -2775,7 +2812,7 @@ _03004E9C:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004EC0:
+Opcode_RTS:
 	ldrb r0, [r6, #1]!
 	ldrb r1, [r6, #1]!
 	tst r6, #0x100
@@ -2790,7 +2827,7 @@ _03004EC0:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004EF8:
+Opcode_JMP_Absolute:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2802,7 +2839,7 @@ _03004EF8:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004F24:
+Opcode_JMP_Indirect:
 	ldrb r0, [r5], #1
 	ldrb r1, [r5], #1
 	orr r0, r0, r1, lsl #8
@@ -2821,13 +2858,15 @@ _03004F24:
 	b _03005398
 _03004F64:
 	str r3, [sp, #SP_884]
-	add lr, pc, #0x0 @ =0x03004F70
+	add lr, pc, #0x0 @ =_03004F70
 	ldr pc, [fp, -r2, lsl #2]
+_03004F70:
 	strb r3, [sp, #SP_A3E]
 	add r0, r0, #1
 	lsrs r2, r0, #0xd
-	add lr, pc, #0x0 @ =0x03004F84
+	add lr, pc, #0x0 @ =_03004F84
 	ldr pc, [fp, -r2, lsl #2]
+_03004F84:
 	ldrb r0, [sp, #SP_A3E]
 	orr r0, r0, r3, lsl #8
 	ldr r3, [sp, #SP_884]
@@ -2839,12 +2878,12 @@ _03004F64:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004FB0:
+Opcode_BRK:
 	add r5, r5, #1
 	mvn r0, #1
 	mov lr, #0xa0000
 	b _0300516C
-_03004FC0:
+Opcode_PHP:
 	lsr r1, sl, #0x1f
 	tst r3, #0xff
 	orreq r1, r1, #2
@@ -2857,7 +2896,7 @@ _03004FC0:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03004FF0:
+Opcode_PLP:
 	and r0, r6, #0xff
 	cmp r0, #0xff
 	subeq r6, r6, #0x100
@@ -2876,7 +2915,7 @@ _03004FF0:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03005038:
+Opcode_RTI:
 	ldrb r0, [r6, #1]!
 	lsl sl, r0, #0x1f
 	and r3, r0, #2
@@ -2902,7 +2941,7 @@ _03005038:
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_0300509C:
+Opcode_CLI:
 	bic sp, sp, #0x20000
 	tst sp, #0x800000
 	beq _030050B8
@@ -2915,38 +2954,38 @@ _030050B8:
 _030050BC:
 	mvn r0, #1
 	b _03005168
-_030050C4:
+Opcode_SEI:
 	orr sp, sp, #0x20000
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030050D8:
+Opcode_TXS:
 	bic r6, r6, #0xff
 	orr r6, r6, r8
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_030050F0:
+Opcode_TSX:
 	and r3, r6, #0xff
 	and r8, r3, #0xff
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_03005108:
+Opcode_CLV:
 	bic sp, sp, #0x200000
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_0300511C:
+Opcode_CLD_SED:
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
 	b _03005398
-_0300512C:
+Opcode_NOP:
 	adds r4, r4, #0x2000000
 	ldrblt r1, [r5], #1
 	ldrlt pc, [ip, r1, lsl #2]
@@ -3122,14 +3161,14 @@ _03005394: .4byte 0xA2600002
     arm_func_start _03005398
 _03005398: @ 0x03005398
 	ldr ip, [sp, #SP_8B4]
-	cmp ip, #0xf0
-	bhs _0300552C
-	cmp ip, #0xe2
-	bhs _03005478
-	subs r0, ip, #0xc
-	ldrlo r0, [sp, #SP_9C0]
-	blo _03005478
-	bne _03005418
+	cmp ip, #0xf0 @ if SP_8B4 > 0xF0:
+	bhs _0300552C     @ goto _0300552C
+	cmp ip, #0xe2 @ if SP_8B4 > 0xE2:
+	bhs _03005478     @ goto _03005478
+	subs r0, ip, #0xc @ r0 = SP_8B4 - 0xC
+	ldrlo r0, [sp, #SP_9C0] @ if r0 < 0: r0 = SP_9C0
+	blo _03005478			    @ goto _03005478
+	bne _03005418 @ if r0 != 0: goto _03005418
 	mov lr, #0x4000000
 	ldrh r1, [lr]
 	ldrb r2, [sp, #SP_8BD]

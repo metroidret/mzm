@@ -231,28 +231,31 @@ sub_0600E1C4: @ 0x0600E1C4
 	mov r4, #0x4000000
 	mov r1, #0x1000
 	orr r1, r1, #0x60
-	strh r1, [r4]
+	strh r1, [r4] @ DISPCNT = 0x1060 (H-Blank Interval Free, One dimension OBJ Character VRAM Mapping, Screen Display OBJ=on)
 	add r5, r4, #0x208
 	mov r0, #0
-	strh r0, [r5]
+	strh r0, [r5] @ IME = 0 (disable interrupts)
 	add r6, r4, #0x100
-	strh r0, [r6, #2]
-	strh r0, [r6, #6]
-	strh r0, [r6, #0xa]
-	strh r0, [r6, #0xe]
+	strh r0, [r6, #2]   @ TM0CNT_H = 0
+	strh r0, [r6, #6]   @ TM1CNT_H = 0
+	strh r0, [r6, #0xa] @ TM2CNT_H = 0
+	strh r0, [r6, #0xe] @ TM3CNT_H = 0
 	mov r1, #8
-	strh r1, [r4, #4]
+	strh r1, [r4, #4] @ DISPSTAT = 8 (V-Blank IRQ Enable) (why does debugger say 0xA?)
 	mov r1, #0x31
 	orr r1, r1, #0x2000
-	strh r1, [r5, #-8]
+	strh r1, [r5, #-8] @ IE = 0x2031 (Game Pak, Timer 1 Overflow, Timer 0 Overflow, LCD V-Blank)
 	mvn r1, #0
-	strh r1, [r5, #-6]
+	strh r1, [r5, #-6] @ IF = 0xFFFF (acknowledge all interrupt requests)
 	mov r1, #1
-	strh r1, [r5]
+	strh r1, [r5] @ IME = 1 (enable interrupts)
+	@ sub_03000488()
 	ldr r4, _0600E234 @ =sub_03000488
 	add lr, pc, #0x0 @ =_0600E224
 	bx r4
 _0600E224:
+	@ sub_03000368(SP_91C)
+	@ goto _0600E23C
 	ldr r4, _0600E238 @ =sub_03000368
 	ldr r0, [sp, #SP_91C]
 	add lr, pc, #0x8 @ =_0600E23C
@@ -261,14 +264,16 @@ _0600E224:
 _0600E234: .4byte sub_03000488
 _0600E238: .4byte sub_03000368
 _0600E23C:
-	bl _0600EBF8
+	bl sub_0600EBF8
 _0600E240:
 	add lr, pc, #0x9C @ =_0600E2E4
-	str lr, [sp, #SP_940]
+	str lr, [sp, #SP_940] @ SP_940 = &_0600E2E4
 _0600E248:
 	ldrb r0, [sp, #SP_A30]
-	cmp r0, #0
-	beq _0600E274
+	cmp r0, #0    @ if SP_A30 == 0:
+	beq _0600E274     @ goto _0600E274
+
+	@ r0 = sub_0203E38C(SP, 0x0600A010) (always 0)
 	add lr, pc, #0x14 @ =_0600E270
 	mov r0, sp
 	ldr r1, _0600E268 @ =0x0600A010
@@ -277,27 +282,40 @@ _0600E248:
 	.align 2, 0
 _0600E268: .4byte 0x0600A010
 _0600E26C: .4byte sub_0203E38C
+
 _0600E270:
-	strb r0, [sp, #SP_A30]
+	strb r0, [sp, #SP_A30] @ SP_A30 = r0 (always 0)
 _0600E274:
 	ldr r1, [sp, #SP_9B8]
-	cmp r1, #0
-	beq _0600E290
+	cmp r1, #0    @ if SP_9B8 == 0:
+	beq _0600E290     @ goto _0600E290
 	mov r2, #0
-	str r2, [sp, #SP_9B8]
+	str r2, [sp, #SP_9B8] @ SP_9B8 = 0
+	@ sub_030030E8() with r1 = SP_9B8
 	add lr, pc, #0x0 @ =_0600E290
 	ldr pc, _0600E2BC @ =sub_030030E8
+
 _0600E290:
+	@ TODO: check if values are the same everytime
+	@ Load 0x28 bytes from SP_884 to r3-ip
+	@ r3-r4 = 0x00000000
+	@ r5 = 0x030073FC
+	@ r6 = 0x030073FF
+	@ r7-r10 = 0x00000000
+	@ r11 = 0x030029AC
+	@ r12 = 0x030029F0
 	add r0, sp, #0x800
 	add r0, r0, #0x84
 	ldm r0!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, ip}
-	ldr r0, [r0]
+	ldr r0, [r0] @ r0 = [SP_8AC] (always 0x00820000?)
+	@ NOTE: this is a mirroring trick, the bits are ignored when accessing EWRAM
 	bic sp, sp, #0xfe0000
 	orr sp, sp, r0
-	str pc, [sp, #0x9b0]
+	str pc, [sp, #0x9b0] @ SP_9B0 = 0x0600E2B4
 	ldr r0, [sp, #0x9cc]
 	add r0, r0, #1
-	str r0, [sp, #0x9cc]
+	str r0, [sp, #0x9cc] @ SP_9CC += 1
+	@ goto sub_03002E0C() with r5 = 0x030073FC, ip = 0x030029F0 (no return)
 	ldr pc, _0600E2C0 @ =sub_03002E0C
 	.align 2, 0
 _0600E2BC: .4byte sub_030030E8
@@ -480,7 +498,7 @@ _0600E4C0:
 	arm_func_start sub_0600E4D0
 sub_0600E4D0: @ 0x0600E4D0
 	mov r7, lr
-	@ r0 = sub_0203E414(r0, SP_854, SP)
+	@ r0 = sub_0203E414(src=r0, dst=SP_854, arg2=SP)
 	ldr r1, [sp, #SP_854]
 	mov r2, sp
 	add lr, pc, #0x4 @ =_0600E4E8
@@ -511,28 +529,31 @@ _0600E504:
 	mov r1, #0
 	strh r1, [r2, #0xe] @ [SP_854 + 0xE] = 0
 	mov lr, r7
-	@ TODO: continue commenting from here
 
 	arm_func_start sub_0600E534
 sub_0600E534: @ 0x0600E534
 	mov r7, lr
+
+	@ Put [SP_854] through sub_03002DF0 until [SP_854 + r0]
+	@ Likely creating a checksum for SP_854
 	ldr sl, _0600E584 @ =0x0000C399
 	ldr r2, [sp, #SP_854]
 	mov r8, #0
 	add fp, r2, r0
 _0600E548:
+	@ sub_03002DF0() with r8, sl, sb parameters
 	ldr sb, [r2], #4
 	add lr, pc, #0x0 @ =0x0600E554
 	ldr pc, _0600E580 @ =sub_03002DF0
 	cmp r2, fp
 	blo _0600E548
 
-	cmp r8, r6
-	movne r0, #3
+	cmp r8, r6   @ if r8 != r6:
+	movne r0, #3     @ return r0 = 3
 	bxne r7
 	ldr r2, [sp, #SP_854]
 	ldrb r0, [r2, #0xd]
-	bx r7
+	bx r7 @ return r0 = [SP_854 + 0xD]
 	.align 2, 0
 _0600E574: .4byte sub_03000380
 _0600E578: .4byte sub_0300053C
@@ -1011,27 +1032,32 @@ _0600EBE8: .4byte sub_0600E440
 _0600EBEC: .4byte _0600E3D8
 _0600EBF0: .4byte sub_03000500
 _0600EBF4: .4byte 0x0600A000
-_0600EBF8:
+
+	arm_func_start sub_0600EBF8
+sub_0600EBF8: @ 0x0600EBF8
 	ldr r0, _0600EBF4 @ =0x0600A000
 	ldr r1, [r0]
 	ldr r0, [sp, #SP_924]
 	ldr r2, [r0, #0xc0]
-	cmp r1, r2
-	bxne lr
+	cmp r1, r2 @ if [0x0600A000] != [SP_924 + 0xC0]:
+	bxne lr        @ return
+
+	@ Set 0x800 bytes at SP to 0xDA
 	ldr r0, _0600EC48 @ =0xDADADADA
 	mov r1, r0
 	mov r2, r0
 	mov r3, r0
 	mov r4, sp
 	add r5, sp, #0x800
-	ldr ip, [sp, #0x1fc]
+	ldr ip, [sp, #0x1fc] @ backup SP_1FC
 _0600EC2C:
 	stmdb r5!, {r0, r1, r2, r3}
 	cmp r5, r4
 	bne _0600EC2C
-	str ip, [sp, #0x1fc]
+
+	str ip, [sp, #0x1fc] @ restore SP_1FC
 	mov r0, #1
-	strb r0, [sp, #SP_A30]
+	strb r0, [sp, #SP_A30] @ SP_A30 = 1
 	bx lr
 	.align 2, 0
 _0600EC48: .4byte 0xDADADADA
@@ -1054,7 +1080,7 @@ _0600EC70:
 	str r2, [r3]
 _0600EC80:
 	mov lr, fp
-	b _0600EBF8
+	b sub_0600EBF8
 	.align 2, 0
 _0600EC88: .4byte 0x0600A010
 _0600EC8C: .4byte sub_0203E374

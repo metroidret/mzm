@@ -4,8 +4,13 @@
 
     .syntax unified
 
+	@ input r6=0x06007C00 (dst?)
 	arm_func_start sub_06006000
 sub_06006000: @ 0x06006000
+	@ Creates a u32 table that is 256 entries long at r6
+	@ It goes through all values 0x00 to 0xFF (stored in r7)
+	@ From MSB to LSB, if bit X is set, then set the first bit of the (7-X)th nybble
+	@ Some kind of 1bpp to 4bpp LUT?
 	mov r7, #0xff
 	add r6, r6, r7, lsl #2
 _06006008:
@@ -28,11 +33,12 @@ _06006008:
 	subs r7, r7, #1
 	bhs _06006008
 
+	@ Store 0x01820182 at 0x06003000-0x0600303F and 0x06003800-0x0600383F
 	mov r6, #0x100
 	orr r6, r6, #0x82
-	orr r6, r6, r6, lsl #16
+	orr r6, r6, r6, lsl #16 @ r6 = 0x01820182
 	mov r7, #0x3000
-	orr r7, r7, #0x6000000
+	orr r7, r7, #0x6000000  @ r7 = 0x06003000
 _06006064:
 	str r6, [r7, #0x800]
 	str r6, [r7], #4
@@ -41,11 +47,14 @@ _06006064:
 
 	mov r7, #0x6700
 	orr r7, r7, #0x6000000
-	strh r6, [r7]
+	strh r6, [r7] @ 0x06006700 = 0x0182
+
+	@ Copy 0x120 bytes of _06006110 using the 0x06007C00 LUT to 0x0600C000
+	@ This seems to be 0-9 and uppercase alphabet
 	mov r5, #0x7c00
-	orr r5, r5, #0x6000000
+	orr r5, r5, #0x6000000 @ r5 = 0x06007C00
 	mov r4, #0xc000
-	orr r4, r4, #0x6000000
+	orr r4, r4, #0x6000000 @ r4 = 0x0600C000
 	add r3, pc, #0x78 @ =_06006110
 	add r2, r3, #0x120
 _06006098:
@@ -55,6 +64,9 @@ _06006098:
 	teq r3, r2
 	bne _06006098
 
+	@ Copy 0xE0 bytes of _06006230 using the 0x06007C00 LUT to 0x0600C480
+	@ Each byte is ORed with itself left shifted by 1 (possibly for thickness?)
+	@ This seems to be lowercase alphabet tiles, as well as ? and -
 	add r2, r3, #0xe0
 _060060B0:
 	ldrb r0, [r3], #1
@@ -64,8 +76,9 @@ _060060B0:
 	teq r3, r2
 	bne _060060B0
 
+	@ Clear 0x0600DFE0-0x0600DFFF
 	mov r2, #0xe000
-	orr r2, r2, #0x6000000
+	orr r2, r2, #0x6000000 @ r2 = 0x0600E000
 	sub r3, r2, #0x20
 	mov r0, #0
 _060060D8:
@@ -73,6 +86,9 @@ _060060D8:
 	teq r3, r2
 	bne _060060D8
 
+	@ Copy 0x50 bytes of _06006110 using the 0x06007C00 LUT to 0x06011400
+	@ Each byte is shifted by 1 (why?)
+	@ This seems to be 0-9 tiles
 	ldr r4, _0600610C @ =0x06011400
 	add r3, pc, #0x20 @ =_06006110
 	add r2, r3, #0x50
@@ -84,7 +100,7 @@ _060060F0:
 	teq r3, r2
 	bne _060060F0
 
-	b sub_0600E1C4
+	b sub_0600E1C4 @ goto sub_0600E1C4() (no return)
 	.align 2, 0
 _0600610C: .4byte 0x06011400
 _06006110:
@@ -106,6 +122,7 @@ _06006110:
 	.byte 0xC6, 0xC6, 0xC6, 0xC6, 0xC6, 0xC6, 0x7C, 0x00, 0xC6, 0xC6, 0xC6, 0xEE, 0x7C, 0x38, 0x10, 0x00
 	.byte 0xC6, 0xC6, 0xD6, 0xFE, 0xFE, 0xEE, 0xC6, 0x00, 0xC6, 0xEE, 0x7C, 0x38, 0x7C, 0xEE, 0xC6, 0x00
 	.byte 0x66, 0x66, 0x66, 0x3C, 0x18, 0x18, 0x18, 0x00, 0xFE, 0x0E, 0x1C, 0x38, 0x70, 0xE0, 0xFE, 0x00
+_06006230:
 	.byte 0x00, 0x30, 0x08, 0x38, 0x48, 0x48, 0x34, 0x00, 0x00, 0x20, 0x20, 0x38, 0x24, 0x24, 0x38, 0x00
 	.byte 0x00, 0x00, 0x38, 0x40, 0x40, 0x40, 0x38, 0x00, 0x00, 0x04, 0x04, 0x1C, 0x24, 0x24, 0x1C, 0x00
 	.byte 0x00, 0x00, 0x38, 0x44, 0x78, 0x40, 0x3C, 0x00, 0x00, 0x18, 0x10, 0x3C, 0x10, 0x10, 0x10, 0x00
@@ -401,29 +418,31 @@ _0600683C:
 	ldr r1, _060069E0 @ =sub_030057A8
 	ldr r2, _060069E4 @ =0x03007000
 	str r1, [r2, #0xffc] @ 0x03007FFC = sub_030057A8
+
 _06006880:
 	bl sub_0600E754
 _06006884:
 	mov r0, #0
-	strb r0, [sp, #SP_A2F] @ SP_A2F = 0x00
+	strb r0, [sp, #SP_A2F] @ SP_A2F = r0 = 0x00
 	bl sub_0600E4D0
-	strb r0, [sp, #SP_A2E]
-	cmp r0, #2
+	strb r0, [sp, #SP_A2E] @ SP_A2E = r0 = sub_0600E4D0(r0)
+	cmp r0, #2    @ if r0 > 2: 
 	ldr r0, _060069E8 @ =0x0E007FD8
-	bhs _060068D0
+	bhs _060068D0     @ goto _060068D0
 	bl sub_0600E4D0
-	strb r0, [sp, #SP_A2F]
-	cmp r0, #2
-	bhs _060068BC
+	strb r0, [sp, #SP_A2F] @ SP_A2F = r0 = sub_0600E4D0(r0)
+	cmp r0, #2    @ if r0 > 2:
+	bhs _060068BC     @ goto _060068BC
 	ldrb r1, [sp, #SP_A2E]
-	eors r0, r0, r1
-	bne _0600694C
+	eors r0, r0, r1 @ if r0 ^ SP_A2E != 0:
+	bne _0600694C       @ goto _0600694C
 _060068BC:
 	mov r0, #0
-	bl sub_0600E4D0
-	cmp r0, #2
-	blo _0600694C
-	b _06006884
+	bl sub_0600E4D0 @ r0 = sub_0600E4D0(r0)
+	cmp r0, #2    @ if r0 < 2:
+	blo _0600694C     @ goto _0600694C
+	b _06006884   @ else goto _06006884
+
 _060068D0:
 	bl sub_0600E4D0
 	strb r0, [sp, #SP_A2F]
@@ -461,19 +480,24 @@ _06006934:
 	b _06006964
 	.align 2, 0
 _06006948: .4byte 0x0600A000
+
 _0600694C:
 	ldr r0, [sp, #SP_854]
 	ldr r3, _06006948 @ =0x0600A000
-	stm r4, {r0, r3, r5}
+	stm r4, {r0, r3, r5} @ DMA(src=SP_854, dst=0x0600A000, cnt=r5(always Enable, 32bit, 0x800 bytes?))
+	@ r0 = sub_0203E24C(SP_854) (returns input as output)
 	add lr, pc, #0x4 @ =_06006964
 	ldr ip, _060069EC @ =sub_0203E24C
 	bx ip
+
 _06006964:
-	bl sub_0600E794
+	bl sub_0600E794 @ sub_0600E794()
 _06006968:
 	mov ip, #0x4000000
 	mov r0, #0
-	strh r0, [ip]
+	strh r0, [ip] @ DISPCNT = 0 (Display off)
+	@ sub_0600E048(0x920, SP)
+	@ goto sub_0600C00C() (does not return)
 	mov r0, #0x900
 	orr r0, r0, #0x20
 	mov r1, sp
