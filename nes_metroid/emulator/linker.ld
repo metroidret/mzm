@@ -143,7 +143,7 @@ SECTIONS {
 
     .ewram_text 0x0203E000 : AT(__rom_cursor) {
         src/part6.o(.text);
-        src/part6.o(.rodata);
+        src/part6.o(.data);
         src/sram/sram.o(.text);
         src/sram/sram.o(.rodata);
         *libgcc.a:_call_via_rX.o(.text);

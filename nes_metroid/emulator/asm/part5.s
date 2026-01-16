@@ -334,28 +334,28 @@ _0600E2E0:
 	ldr pc, [sp, #SP_940]
 _0600E2E4:
 	add lr, pc, #0x8 @ =sub_0600E2F4
-	ldr ip, _0600E2F0 @ =sub_0203E260
+	ldr ip, _0600E2F0 @ =EmulatorReplaceCopyrightYear
 	bx ip
 	.align 2, 0
-_0600E2F0: .4byte sub_0203E260
+_0600E2F0: .4byte EmulatorReplaceCopyrightYear
 
 	arm_func_start sub_0600E2F4
 sub_0600E2F4: @ 0x0600E2F4
 	mov r0, sp
 	add lr, pc, #0x8 @ =sub_0600E308
-	ldr ip, _0600E304 @ =sub_0203E118
+	ldr ip, _0600E304 @ =EmulatorFillPasswordWithSaved
 	bx ip
 	.align 2, 0
-_0600E304: .4byte sub_0203E118
+_0600E304: .4byte EmulatorFillPasswordWithSaved
 
 	arm_func_start sub_0600E308
 sub_0600E308: @ 0x0600E308
 	mov r0, sp
 	add lr, pc, #0x8 @ =sub_0600E31C
-	ldr ip, _0600E318 @ =sub_0203E000
+	ldr ip, _0600E318 @ =EmulatorRetrieveGameOverPassword
 	bx ip
 	.align 2, 0
-_0600E318: .4byte sub_0203E000
+_0600E318: .4byte EmulatorRetrieveGameOverPassword
 
 	arm_func_start sub_0600E31C
 sub_0600E31C: @ 0x0600E31C
@@ -498,15 +498,15 @@ _0600E4C0:
 	arm_func_start sub_0600E4D0
 sub_0600E4D0: @ 0x0600E4D0
 	mov r7, lr
-	@ r0 = sub_0203E414(src=r0, dst=SP_854, arg2=SP)
+	@ r0 = EmulatorLoadFromSram(src=r0, dst=SP_854, arg2=SP)
 	ldr r1, [sp, #SP_854]
 	mov r2, sp
 	add lr, pc, #0x4 @ =_0600E4E8
-	ldr ip, _0600E57C @ =sub_0203E414
+	ldr ip, _0600E57C @ =EmulatorLoadFromSram
 	bx ip
 _0600E4E8:
 	cmp r0, #0   @ if r0 == 0: (never true?)
-	moveq r0, #4     @ r0 = 0
+	moveq r0, #4     @ r0 = 4
 	bxeq r7          @ return r0
 
 	@ Compare 0xC bytes between [SP_924 + 0xC0] and [SP_854]
@@ -557,7 +557,7 @@ _0600E548:
 	.align 2, 0
 _0600E574: .4byte sub_03000380
 _0600E578: .4byte sub_0300053C
-_0600E57C: .4byte sub_0203E414
+_0600E57C: .4byte EmulatorLoadFromSram
 _0600E580: .4byte sub_03002DF0
 _0600E584: .4byte 0x0000C399
 _0600E588:
@@ -682,7 +682,7 @@ sub_0600E700: @ 0x0600E700
 	add r1, r0, #0x10
 	mov r0, sp
 	add lr, pc, #0x68 @ =sub_0600E7B8
-	ldr ip, _0600E7B4 @ =sub_0203E374
+	ldr ip, _0600E7B4 @ =EmulatorLoadFromPasswordBytes
 	bx ip
 
 	arm_func_start sub_0600E754
@@ -716,7 +716,7 @@ sub_0600E794: @ 0x0600E794
 	.align 2, 0
 _0600E7AC: .4byte sub_0600E440
 _0600E7B0: .4byte sub_0203E390
-_0600E7B4: .4byte sub_0203E374
+_0600E7B4: .4byte EmulatorLoadFromPasswordBytes
 
 	arm_func_start sub_0600E7B8
 sub_0600E7B8: @ 0x0600E7B8
@@ -760,11 +760,11 @@ _0600E810:
 	movs r2, r6
 	ldrne r2, _0600E858 @ =0x0E007FD8
 	add lr, pc, #0xC @ =sub_0600E860
-	ldr ip, _0600E85C @ =sub_0203E3DC
+	ldr ip, _0600E85C @ =EmulatorSaveToSram
 	bx ip
 	.align 2, 0
 _0600E858: .4byte 0x0E007FD8
-_0600E85C: .4byte sub_0203E3DC
+_0600E85C: .4byte EmulatorSaveToSram
 
 	arm_func_start sub_0600E860
 sub_0600E860: @ 0x0600E860
@@ -1071,7 +1071,7 @@ sub_0600EC4C: @ 0x0600EC4C
 	mov r0, sp
 	ldr r1, _0600EC88 @ =0x0600A010
 	add lr, pc, #0x4 @ =_0600EC70
-	ldr ip, _0600EC8C @ =sub_0203E374
+	ldr ip, _0600EC8C @ =EmulatorLoadFromPasswordBytes
 	bx ip
 _0600EC70:
 	ldr r3, [sp, #SP_924]
@@ -1083,7 +1083,7 @@ _0600EC80:
 	b sub_0600EBF8
 	.align 2, 0
 _0600EC88: .4byte 0x0600A010
-_0600EC8C: .4byte sub_0203E374
+_0600EC8C: .4byte EmulatorLoadFromPasswordBytes
 
 	arm_func_start sub_0600EC90
 sub_0600EC90: @ 0x0600EC90

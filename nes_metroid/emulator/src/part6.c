@@ -12,86 +12,120 @@ struct EmulatorSP {
     s32 SP_904;
 };
 
-s32 sub_0203E000(struct EmulatorSP* arg0);
-void sub_0203E118(struct EmulatorSP* arg0);
-u8* sub_0203E24C(u8* arg0);
-void sub_0203E260(void);
-void sub_0203E2C4(u16* dst, u8* src, s32 size);
-void sub_0203E2E4(u8* dst, u8* src, s32 size);
-void sub_0203E314(u8* dst, u8* src, s32 size);
-u32 sub_0203E32C(u8* src1, u8* src2, s32 size);
-u32 sub_0203E34C(u16* src1, u16* src2, s32 size);
-s32 sub_0203E374(u32 arg0, u16* dst);
+s32 EmulatorRetrieveGameOverPassword(struct EmulatorSP* sp);
+void EmulatorFillPasswordWithSaved(struct EmulatorSP* sp);
+u8* EmulatorSaveToPasswordBytes(u8* src);
+void EmulatorReplaceCopyrightYear(void);
+
+void MemoryCopy8To16(u16* dst, u8* src, s32 size);
+void MemoryCopyAligned16(u8* dst, u8* src, s32 size);
+void MemoryCopy(u8* dst, u8* src, s32 size);
+u32 MemoryCompare(u8* src1, u8* src2, s32 size);
+u32 MemoryCompareAlign16(u16* src1, u16* src2, s32 size);
+
+s32 EmulatorLoadFromPasswordBytes(struct EmulatorSP* sp, u16* dst);
 s32 sub_0203E38C(void);
 s32 sub_0203E390(void);
-void sub_0203E394(s32 arg0, u8* src);
-void sub_0203E3A8(u8* arg0);
-u8* sub_0203E3AC(u8* src);
-u8* sub_0203E3DC(u8* arg0, u8* src, u8* dst);
-s32 sub_0203E414(u8* src, u8* dst, u8* arg2);
+void EmulatorSaveToPasswordBytes_Inner(s32 arg0, u8* src);
+void sub_0203E3A8(struct EmulatorSP* sp);
+u8* sub_0203E3AC(struct EmulatorSP* sp);
+u8* EmulatorSaveToSram(struct EmulatorSP* sp, u8* src, u8* dst);
+s32 EmulatorLoadFromSram(u8* src, u8* dst, struct EmulatorSP* sp);
 
-const u8 sUnk_0203E43C[] = {
+// Password bytes buffer
+u8 sPasswordBytes[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 
-const u16 sUnk_0203E44E[] = {
+// PASSWORD
+u16 sPasswordCharacters[] = {
     0x19, 0x0A, 0x1C, 0x1C, 0x20, 0x18, 0x1B, 0x0D
 };
 
-const u16 sUnk_0203E45E[] = {
+// PASSWORD PLEASE
+u16 sPasswordPleaseCharacters[] = {
     0x19, 0x0A, 0x1C, 0x1C, 0x20, 0x18, 0x1B, 0x0D,
     0xFF, 0x19, 0x15, 0x0E, 0x0A, 0x1C, 0x0E
 };
 
-const u8 sUnk_0203E47C[] = {
-    0x01, 0x20, 0x09, 0x20, 0x08, 0x20, 0x06, 0x20
+// 1986
+u16 sTitleScreenOriginalCopyrightText[] = {
+    0x2001, 0x2009, 0x2008, 0x2006
 };
 
-const u16 sUnk_0203E484[] = {
+// 1986
+u16 sCreditsOriginalCopyrightYear[] = {
     0x01, 0x09, 0x08, 0x06
 };
 
-const u8 sUnk_0203E48C[] = {
-    0x8F, 0x30, 0x01, 0x20, 0x09, 0x20, 0x08, 0x20,
-    0x06, 0x20, 0x3F, 0x40, 0x02, 0x20, 0x00, 0x20,
-    0x00, 0x20, 0x04, 0x20, 0xFF, 0x20, 0x17, 0x30,
-    0x12, 0x30, 0x17, 0x30, 0x1D, 0x30, 0x0E, 0x30,
-    0x17, 0x30, 0x0D, 0x30, 0x18, 0x30
+// ©1986-2004 NINTENDO
+u16 sTitleScreenNewCopyrightText[] = {
+    0x308F, 0x2001, 0x2009, 0x2008, 0x2006, 0x403F,
+    0x2002, 0x2000, 0x2000, 0x2004, 0x20FF,
+    0x3017, 0x3012, 0x3017, 0x301D, 0x300E, 0x3017, 0x300D, 0x3018
 };
 
-const u16 sUnk_0203E4B2[] = {
+// 1986-2004 TODO:verify
+u16 sCreditsNewCopyrightYear[] = {
     0x01, 0x09, 0x08, 0x06, 0xA9, 0xAA, 0xA8, 0xA8, 0xAB
 };
 
-const u8 sUnk_0203E4C4[] = {
+u8 sUnk_0203E4C4[] = {
     0x50, 0x3A, 0x00, 0x06, 0x2D, 0x4B, 0x4D, 0x4B, 0x6D, 0x20, 0x2C, 0x4B,
     0x6D, 0x2D, 0x6C, 0x6B, 0x67, 0x66, 0x00, 0x00, 0x06, 0x3B, 0x00, 0x06, 0x68, 0x2D, 0x6C, 0x25,
     0x2D, 0x4B, 0x4D, 0x4D, 0x20, 0x4D, 0x6B, 0x4C, 0x2B, 0x4B, 0x20, 0x6D, 0x28, 0x4B, 0x20, 0x48,
     0x27, 0x4D, 0x6D, 0x00, 0x46, 0x3B, 0x00, 0x06, 0x20, 0x20, 0x20, 0x4D, 0x27, 0x26, 0x4B, 0x20,
     0x46, 0x6B, 0x48, 0x48, 0x20, 0x47, 0x4B, 0x20, 0x48, 0x6C, 0x4D, 0x6D, 0x2A, 0x00, 0x00, 0x00,
-    0xFF, 0xFF, 0xFF, 0xFF, 0x50, 0x3A, 0x00, 0x06, 0x65, 0x2E, 0x6B, 0x6D, 0x20, 0x2C, 0x4B, 0x6D,
+    0xFF, 0xFF, 0xFF, 0xFF
+};
+
+u8 sUnk_0203E514[] = {
+    0x50, 0x3A, 0x00, 0x06, 0x65, 0x2E, 0x6B, 0x6D, 0x20, 0x2C, 0x4B, 0x6D,
     0x2D, 0x6C, 0x6B, 0x67, 0x66, 0x00, 0x00, 0x00, 0x06, 0x3B, 0x00, 0x06, 0x68, 0x2D, 0x6C, 0x25,
     0x2D, 0x4B, 0x4D, 0x4D, 0x20, 0x4D, 0x6B, 0x4C, 0x2B, 0x4B, 0x20, 0x6D, 0x28, 0x4B, 0x20, 0x48,
     0x27, 0x4D, 0x6D, 0x00, 0x46, 0x3B, 0x00, 0x06, 0x20, 0x20, 0x20, 0x4D, 0x27, 0x26, 0x4B, 0x20,
     0x46, 0x6B, 0x48, 0x48, 0x20, 0x47, 0x4B, 0x20, 0x48, 0x6C, 0x4D, 0x6D, 0x2A, 0x00, 0x00, 0x00,
-    0xFF, 0xFF, 0xFF, 0xFF, 0xD4, 0x3B, 0x00, 0x06, 0x03, 0x20, 0x29, 0x4B, 0x4D, 0x20, 0x20, 0x02,
-    0x05, 0x4C, 0x6C, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xD4, 0x3B, 0x00, 0x06, 0x05, 0x29, 0x4B, 0x4D,
-    0x20, 0x20, 0x20, 0x03, 0x4C, 0x6C, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x0C, 0x3B, 0x00, 0x06,
+    0xFF, 0xFF, 0xFF, 0xFF
+};
+
+u8 sUnk_0203E564[] = {
+    0xD4, 0x3B, 0x00, 0x06, 0x03, 0x20, 0x29, 0x4B, 0x4D, 0x20, 0x20, 0x02,
+    0x05, 0x4C, 0x6C, 0x00, 0xFF, 0xFF, 0xFF, 0xFF
+};
+
+u8 sUnk_0203E578[] = {
+    0xD4, 0x3B, 0x00, 0x06, 0x05, 0x29, 0x4B, 0x4D,
+    0x20, 0x20, 0x20, 0x03, 0x4C, 0x6C, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF
+};
+
+u8 sUnk_0203E58C[] = {
+    0x0C, 0x3B, 0x00, 0x06,
     0x4D, 0x27, 0x26, 0x4B, 0x20, 0x29, 0x6C, 0x2E, 0x2D, 0x20, 0x68, 0x2D, 0x6C, 0x25, 0x2D, 0x4B,
     0x4D, 0x4D, 0x00, 0x00, 0x4C, 0x3B, 0x00, 0x06, 0x20, 0x20, 0x6D, 0x6C, 0x20, 0x6D, 0x28, 0x4B,
     0x20, 0x2C, 0x4B, 0x2C, 0x6C, 0x2D, 0x29, 0x66, 0x00, 0x00, 0x00, 0x00, 0xCC, 0x3B, 0x00, 0x06,
     0x68, 0x2D, 0x4B, 0x26, 0x6B, 0x6C, 0x2E, 0x4D, 0x20, 0x67, 0x27, 0x6D, 0x27, 0x20, 0x46, 0x6B,
     0x48, 0x48, 0x00, 0x00, 0x0C, 0x3C, 0x00, 0x06, 0x20, 0x20, 0x47, 0x4B, 0x20, 0x6C, 0x26, 0x4B,
     0x2D, 0x46, 0x2D, 0x6B, 0x6D, 0x6D, 0x4B, 0x4C, 0x2A, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
+};
+
+u8 sUnk_0203E5F0[] = {
     0x94, 0x3C, 0x00, 0x06, 0x03, 0x20, 0x29, 0x4B, 0x4D, 0x20, 0x20, 0x02, 0x05, 0x4C, 0x6C, 0x00,
-    0xFF, 0xFF, 0xFF, 0xFF, 0x94, 0x3C, 0x00, 0x06, 0x05, 0x29, 0x4B, 0x4D, 0x20, 0x20, 0x20, 0x03,
-    0x4C, 0x6C, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x8C, 0x3B, 0x00, 0x06, 0x2B, 0x6C, 0x4C, 0x6D,
+    0xFF, 0xFF, 0xFF, 0xFF
+};
+
+u8 sUnk_0203E604[] = {
+    0x94, 0x3C, 0x00, 0x06, 0x05, 0x29, 0x4B, 0x4D, 0x20, 0x20, 0x20, 0x03,
+    0x4C, 0x6C, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF
+};
+
+u8 sUnk_0203E618[] = {
+    0x8C, 0x3B, 0x00, 0x06, 0x2B, 0x6C, 0x4C, 0x6D,
     0x6B, 0x4C, 0x2E, 0x4B, 0x20, 0x68, 0x48, 0x27, 0x29, 0x6B, 0x4C, 0x25, 0x66, 0x00, 0x00, 0x00,
     0xFF, 0xFF, 0xFF, 0xFF
 };
 
-const u8 sUnk_0203E634[] = {
+u8 sUnk_0203E634[] = {
     0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xEE, 0xFF, 0xFF, 0xFF, 0xEE, 0xFE, 0xFF,
     0xFF, 0xEE, 0xEE, 0xFF, 0xFF, 0xEE, 0xFE, 0xFF, 0xFF, 0xEE, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
     0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xEF, 0xFE, 0xFF, 0xFF, 0xEF, 0xEE, 0xFF, 0xFF,
@@ -107,182 +141,226 @@ const u8 sUnk_0203E634[] = {
     0xFF, 0xFF, 0xFF, 0xFF
 };
 
-s32 sub_0203E000(struct EmulatorSP* arg0)
+/**
+ * @brief 0203E000 | Load the password from the game over password screen
+ * 
+ * @param sp Stack pointer (emulator scratch)
+ * @return bool, password retrieved from game over password
+ */
+s32 EmulatorRetrieveGameOverPassword(struct EmulatorSP* sp)
 {
-    s32 var_r4;
-    u32 var_r5;
-    u32 temp_r3;
-    u8* unk_06002000;
-    s32 var_0;
-    u8 subroutine_arg0[0x14];
+    u32 nametableIndex;
+    u32 i;
+    u8 passwordChar;
+    u16* nametable;
+    u32 byteIndex;
+    u8 passwordBytes[0x14];
 
-    unk_06002000 = (u8*)0x06002000;
-    if (sub_0203E34C((void*)unk_06002000 + 0x298, (u16*)sUnk_0203E44E, sizeof(sUnk_0203E44E)) != 0)
+    nametable = (u16*)0x06002000;
+    // Check for tiles to say "PASSWORD" on game over screen
+    if (MemoryCompareAlign16(nametable + 0x14C, sPasswordCharacters, sizeof(sPasswordCharacters)) != 0)
     {
-        arg0->SP_904 &= ~4;
-        if (arg0->SP_830 == 0x30)
+        sp->SP_904 &= ~4;
+        if (sp->SP_830 == 0x30)
         {
-            arg0->SP_830 = 0;
+            sp->SP_830 = 0;
         }
         return 0;
     }
 
-    if (arg0->SP_904 & 4)
+    if (sp->SP_904 & 4)
         return 0;
 
-    arg0->SP_830 = 0x30;
+    sp->SP_830 = 0x30;
     if (!(READ_16(REG_DISPCNT) & DCNT_BG3))
         return 0;
 
-    var_0 = 0;
-    var_r4 = 0;
-    for (var_r5 = 0; var_r5 < 0x18; var_r5++)
+    byteIndex = 0;
+    nametableIndex = 0;
+    for (i = 0; i < 0x18; i++)
     {
-        temp_r3 = unk_06002000[0x6A4/2 + (var_r4 * 2)];
+        passwordChar = nametable[0x1A9 + nametableIndex];
 
-        var_r4 += 1;
-        if (var_r4 == 6 || var_r4 == 0x46)
+        nametableIndex += 1;
+        // Skip space between 1st/2nd and 3rd/4th password character sets
+        if (nametableIndex == 6 || nametableIndex == 0x46)
         {
-            var_r4 += 1;
+            nametableIndex += 1;
         }
-        else if (var_r4 == 0xD)
+        // Wrap to 3rd set of password characters
+        else if (nametableIndex == 0xD)
         {
-            var_r4 = 0x40;
+            nametableIndex = 0x40;
         }
 
-        if (temp_r3 >= 0x40)
+        if (passwordChar >= 0x40)
             return 0;
 
-        switch (var_r5 & 3)
+        switch (i & 3)
         {
             case 0:
-                subroutine_arg0[var_0] = temp_r3;
+                passwordBytes[byteIndex] = passwordChar;
                 break;
 
             case 1:
-                subroutine_arg0[var_0] |= temp_r3 << 6;
-                var_0++;
-                subroutine_arg0[var_0] = temp_r3 >> 2;
+                passwordBytes[byteIndex] |= passwordChar << 6;
+                byteIndex++;
+                passwordBytes[byteIndex] = passwordChar >> 2;
                 break;
 
             case 2:
-                subroutine_arg0[var_0] |= temp_r3 << 4;
-                var_0++;
-                subroutine_arg0[var_0] = temp_r3 >> 4;
+                passwordBytes[byteIndex] |= passwordChar << 4;
+                byteIndex++;
+                passwordBytes[byteIndex] = passwordChar >> 4;
                 break;
 
             case 3:
-                subroutine_arg0[var_0] |= temp_r3 << 2;
-                var_0++;
+                passwordBytes[byteIndex] |= passwordChar << 2;
+                byteIndex++;
                 break;
         }
     }
 
-    sub_0203E314((u8*)sUnk_0203E43C, subroutine_arg0, sizeof(sUnk_0203E43C));
-    arg0->SP_904 |= 4;
+    // Save to sPasswordBytes buffer
+    MemoryCopy(sPasswordBytes, passwordBytes, sizeof(sPasswordBytes));
+    sp->SP_904 |= 4;
     return 1;
 }
 
-void sub_0203E118(struct EmulatorSP* arg0)
+/**
+ * @brief 0203E118 | Fill in the password on the password screen with saved password
+ * 
+ * @param sp Stack pointer (emulator scratch)
+ */
+void EmulatorFillPasswordWithSaved(struct EmulatorSP* sp)
 {
-    s32 var_r5;
-    s32 var_r3;
-    u32 var_r4;
-    u32 var_r6;
-    u16* unk_06002000;
+    u32 nametableIndex;
+    u32 byteIndex;
+    u32 passwordChar;
+    u32 i;
+    u16* nametable;
 
-    unk_06002000 = (u16*)0x06002000;
-    if (sub_0203E34C((void*)unk_06002000 + 0x150, (u16*)sUnk_0203E45E, sizeof(sUnk_0203E45E)) != 0)
+    nametable = (u16*)0x06002000;
+    // Check for "PASSWORD PLEASE" tiles at password entry screen
+    if (MemoryCompareAlign16(nametable + 0xA8, sPasswordPleaseCharacters, sizeof(sPasswordPleaseCharacters)) != 0)
     {
-        if (arg0->SP_830 == 0x18)
+        if (sp->SP_830 == 0x18)
         {
-            arg0->SP_830 = 0;
+            sp->SP_830 = 0;
         }
         return;
     }
 
-    for (var_r6 = 0; var_r6 < 13; var_r6 += 1)
+    for (i = 0; i < 13; i += 1)
     {
-        if ((unk_06002000[0x212/2 + var_r6] & 0xFF) < 0x40)
+        // Check if first row already has password characters
+        if ((nametable[0x109 + i] & 0xFF) < 0x40)
             return;
 
-        if ((unk_06002000[0x292/2 + var_r6] & 0xFF) < 0x40)
+        // Check if second row already has password characters
+        if ((nametable[0x149 + i] & 0xFF) < 0x40)
             return;
     }
 
-    arg0->SP_830 = 0x18;
-    for (var_r6 = 0; var_r6 < sizeof(sUnk_0203E43C); var_r6++)
+    sp->SP_830 = 0x18;
+
+    // Check for sPasswordBytes already filled
+    for (i = 0; i < sizeof(sPasswordBytes); i++)
     {
-        if (sUnk_0203E43C[var_r6] != 0)
+        if (sPasswordBytes[i] != 0)
             break;
     }
 
-    if (var_r6 == 0x12)
+    // Exit if sPasswordBytes is empty
+    if (i == sizeof(sPasswordBytes))
         return;
 
-    var_r3 = 0;
-    var_r5 = 0;
-    for (var_r6 = 0; var_r6 < 0x18; var_r6++)
+    byteIndex = 0;
+    nametableIndex = 0;
+    for (i = 0; i < 0x18; i++)
     {
-        switch (var_r6 & 3)
+        switch (i & 3)
         {
             case 0:
-                var_r4 = sUnk_0203E43C[var_r3];
-                var_r3++;
+                passwordChar = sPasswordBytes[byteIndex];
+                byteIndex++;
                 break;
 
             case 1:
-                var_r4 = (var_r4 >> 6) | (sUnk_0203E43C[var_r3] << 2);
-                var_r3++;
+                passwordChar = (passwordChar >> 6) | (sPasswordBytes[byteIndex] << 2);
+                byteIndex++;
                 break;
 
             case 2:
-                var_r4 = (var_r4 >> 6) | (sUnk_0203E43C[var_r3] << 4);
-                var_r3++;
+                passwordChar = (passwordChar >> 6) | (sPasswordBytes[byteIndex] << 4);
+                byteIndex++;
                 break;
 
             case 3:
-                var_r4 = var_r4 >> 6;
+                passwordChar = passwordChar >> 6;
                 break;
         }
 
-        arg0->SP_84C[0x99A + var_r6] = var_r4 & 0x3F;
-        unk_06002000[0x212/2 + var_r5] = (var_r4 & 0x3F) | 0x1000;
+        sp->SP_84C[0x99A + i] = passwordChar & 0x3F; // Save to NES RAM $699A (PasswordChar)
+        nametable[0x109 + nametableIndex] = (passwordChar & 0x3F) | 0x1000; // Display to screen, | 0x1000 to set tile address
 
-        var_r5 += 1;
-        if (var_r5 == 0x6 || var_r5 == 0x46)
+        nametableIndex += 1;
+        // Skip space between 1st/2nd and 3rd/4th password character sets
+        if (nametableIndex == 0x6 || nametableIndex == 0x46)
         {
-            var_r5 += 1;
+            nametableIndex += 1;
         }
-        else if (var_r5 == 0xD)
+        // Wrap to 3rd set of password characters
+        else if (nametableIndex == 0xD)
         {
-            var_r5 = 0x40;
+            nametableIndex = 0x40;
         }
     }
 }
 
-u8* sub_0203E24C(u8* arg0)
+/**
+ * @brief 0203E24C | Save to Password Bytes buffer
+ * 
+ * @param src Source
+ * @return u8* Source
+ */
+u8* EmulatorSaveToPasswordBytes(u8* src)
 {
-    sub_0203E394(0, arg0);
-    return arg0;
+    EmulatorSaveToPasswordBytes_Inner(0, src);
+    return src;
 }
 
-void sub_0203E260(void)
+/**
+ * @brief 0203E260 | Replace the copyright year in the title screen and credits
+ * 
+ */
+void EmulatorReplaceCopyrightYear(void)
 {
-    u16* unk_06002000;
+    u16* nametable;
 
-    unk_06002000 = (u16*)0x06002000;
-    if (sub_0203E34C(unk_06002000 + 0x4D6/2, (u16*)sUnk_0203E47C, sizeof(sUnk_0203E47C)) == 0)
+    nametable = (u16*)0x06002000;
+    // Check for original Nintendo copyright on title screen
+    if (MemoryCompareAlign16(nametable + 0x26B, sTitleScreenOriginalCopyrightText, sizeof(sTitleScreenOriginalCopyrightText)) == 0)
     {
-        sub_0203E2C4(unk_06002000 + 0x4CE/2, (u8*)sUnk_0203E48C, sizeof(sUnk_0203E48C));
+        // Replace with new Nintendo copyright
+        MemoryCopy8To16(nametable + 0x267, (u8*)sTitleScreenNewCopyrightText, sizeof(sTitleScreenNewCopyrightText));
     }
-    else if (sub_0203E34C(unk_06002000 + 0x71C/2, (u16*)sUnk_0203E484, sizeof(sUnk_0203E484)) == 0)
+    // Check for original Nintendo copyright year in credits
+    else if (MemoryCompareAlign16(nametable + 0x38E, sCreditsOriginalCopyrightYear, sizeof(sCreditsOriginalCopyrightYear)) == 0)
     {
-        sub_0203E2C4(unk_06002000 + 0x716/2, (u8*)sUnk_0203E4B2, sizeof(sUnk_0203E4B2));
+        // Replace with new Nintendo copyright year
+        MemoryCopy8To16(nametable + 0x38B, (u8*)sCreditsNewCopyrightYear, sizeof(sCreditsNewCopyrightYear));
     }
 }
 
-void sub_0203E2C4(u16* dst, u8* src, s32 size)
+/**
+ * @brief 0203E2C4 | Copy two bytes at a time in little endian from src to dst
+ * 
+ * @param dst Destination
+ * @param src Source
+ * @param size Size in bytes
+ */
+void MemoryCopy8To16(u16* dst, u8* src, s32 size)
 {
     void* end;
 
@@ -295,7 +373,14 @@ void sub_0203E2C4(u16* dst, u8* src, s32 size)
     while ((u32)src < (u32)end);
 }
 
-void sub_0203E2E4(u8* dst, u8* src, s32 size)
+/**
+ * @brief 0203E2E4 | Copy bytes using 16-bit alignment from src to dst
+ * 
+ * @param dst Destination
+ * @param src Source
+ * @param size Size in bytes
+ */
+void MemoryCopyAligned16(u8* dst, u8* src, s32 size)
 {
     u32 srcByte;
     void* end;
@@ -317,7 +402,14 @@ void sub_0203E2E4(u8* dst, u8* src, s32 size)
     while ((u32)src < (u32)end);
 }
 
-void sub_0203E314(u8* dst, u8* src, s32 size)
+/**
+ * @brief 0203E314 | Copy bytes from src to dst
+ * 
+ * @param dst Destination
+ * @param src Source
+ * @param size Size in bytes
+ */
+void MemoryCopy(u8* dst, u8* src, s32 size)
 {
     void* end;
 
@@ -329,7 +421,15 @@ void sub_0203E314(u8* dst, u8* src, s32 size)
     while ((u32)src < (u32)end);
 }
 
-u32 sub_0203E32C(u8* src1, u8* src2, s32 size)
+/**
+ * @brief 0203E32C | Compare bytes from src1 and src2
+ * 
+ * @param src1 First source
+ * @param src2 Second source
+ * @param size Size in bytes
+ * @return u32 0 if same, otherwise difference in bytes
+ */
+u32 MemoryCompare(u8* src1, u8* src2, s32 size)
 {
     u32 diff;
 
@@ -343,7 +443,15 @@ u32 sub_0203E32C(u8* src1, u8* src2, s32 size)
     return diff;
 }
 
-u32 sub_0203E34C(u16* src1, u16* src2, s32 size)
+/**
+ * @brief 0203E34C | Compare two bytes at a time at 16-bit aligned boundary from src1 and src2
+ * 
+ * @param src1 First source
+ * @param src2 Second source
+ * @param size Size in bytes
+ * @return u32 0 if same, otherwise difference in bytes
+ */
+u32 MemoryCompareAlign16(u16* src1, u16* src2, s32 size)
 {
     u32 diff;
 
@@ -359,9 +467,16 @@ u32 sub_0203E34C(u16* src1, u16* src2, s32 size)
     return diff;
 }
 
-s32 sub_0203E374(u32 arg0, u16* dst)
+/**
+ * @brief 0203E374 | Load from Password Bytes buffer
+ * 
+ * @brief sp Stack pointer (emulator scratch)
+ * @brief dst Destination
+ * @return s32 0x18
+ */
+s32 EmulatorLoadFromPasswordBytes(struct EmulatorSP* sp, u16* dst)
 {
-    sub_0203E2C4(dst, (u8*)sUnk_0203E43C, sizeof(sUnk_0203E43C));
+    MemoryCopy8To16(dst, sPasswordBytes, sizeof(sPasswordBytes));
     return 0x18;
 }
 
@@ -375,34 +490,48 @@ s32 sub_0203E390(void)
     return 0;
 }
 
-void sub_0203E394(s32 arg0, u8* src)
+/**
+ * @brief 0203E394 | Save to Password Bytes buffer
+ * 
+ * @brief arg0 Unused
+ * @brief src Source
+ */
+void EmulatorSaveToPasswordBytes_Inner(s32 arg0, u8* src)
 {
-    sub_0203E314((u8*)sUnk_0203E43C, src + 0x10, sizeof(sUnk_0203E43C));
+    MemoryCopy(sPasswordBytes, src + 0x10, sizeof(sPasswordBytes));
 }
 
-void sub_0203E3A8(u8* arg0)
+void sub_0203E3A8(struct EmulatorSP* sp)
 {
     return;
 }
 
-u8* sub_0203E3AC(u8* src)
+u8* sub_0203E3AC(struct EmulatorSP* sp)
 {
     u8* ret;
 
-    sub_0203E3A8(src);
-    ret = SramWriteChecked(src, SRAM_BASE + 0x7FB0, 0x10);
+    sub_0203E3A8(sp);
+    ret = SramWriteChecked((u8*)sp, SRAM_BASE + 0x7FB0, 0x10);
     if (ret == 0)
     {
-        ret = SramWriteChecked(src, SRAM_BASE + 0x7FD8, 0x10);
+        ret = SramWriteChecked((u8*)sp, SRAM_BASE + 0x7FD8, 0x10);
     }
     return ret;
 }
 
-u8* sub_0203E3DC(u8* arg0, u8* src, u8* dst)
+/**
+ * @brief 0203E3DC | Saves emulator data to SRAM
+ * 
+ * @brief sp Stack pointer (emulator scratch)
+ * @brief src Source
+ * @brief dst Destination
+ * @return u8* 0 if SRAM write successful, else error address
+ */
+u8* EmulatorSaveToSram(struct EmulatorSP* sp, u8* src, u8* dst)
 {
     u8* ret;
 
-    sub_0203E3A8(arg0);
+    sub_0203E3A8(sp);
     if (dst == NULL)
     {
         dst = SRAM_BASE + 0x7FB0;
@@ -416,9 +545,17 @@ u8* sub_0203E3DC(u8* arg0, u8* src, u8* dst)
     return ret;
 }
 
-s32 sub_0203E414(u8* src, u8* dst, u8* arg2)
+/**
+ * @brief 0203E414 | Loads emulator data from SRAM
+ * 
+ * @brief src Source
+ * @brief dst Destination
+ * @brief sp Stack pointer (emulator scratch)
+ * @return u8* 0 if SRAM write successful, else error address
+ */
+s32 EmulatorLoadFromSram(u8* src, u8* dst, struct EmulatorSP* sp)
 {
-    sub_0203E3A8(arg2);
+    sub_0203E3A8(sp);
     if (src == NULL)
     {
         src = SRAM_BASE + 0x7FB0;
