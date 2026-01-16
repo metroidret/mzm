@@ -43,6 +43,7 @@ The default built ROM is mzm_us.gba
 - Enter the agbcc folder (run `cd agbcc`) and build it (run `./build.sh`)
 - Add agbcc to your path (`export PATH="<agbcc_path>:$PATH"`, where `<agbcc_path>` is the full path to the agbcc directory)
 - Locate yourself in the decompilation root, and then build preproc (run `cd tools/preproc && make`)
+- Again locate yourself in the decompilation root, and then build aif2pcm (run `cd tools/aif2pcm && make`)
 
 ## Build
 

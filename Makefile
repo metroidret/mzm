@@ -95,6 +95,7 @@ GBAFIX = tools/gbafix/gbafix
 PYTHON = python3
 EXTRACTOR = tools/extractor.py
 PREPROC = tools/preproc/preproc
+AIF2PCM = tools/aif2pcm/aif2pcm
 
 # Flags
 ASFLAGS += -mcpu=arm7tdmi
@@ -173,6 +174,8 @@ ifeq ($(DATA),1)
 endif
 	$(MSG) RM linker.ld.pp
 	$Q$(RM) linker.ld.pp
+	$(MSG) RM sound/direct_sound_samples/\*.bin
+	$Q$(RM) sound/direct_sound_samples/*.bin
 
 .PHONY: help
 help:
@@ -189,6 +192,11 @@ help:
 	@echo '  V=1: enable verbose output'
 	@echo '  REGION=<region>: selects the region of the ROM, possible values are "us", "eu", "jp", "cn", "us_beta", and "eu_beta"'
 	@echo '  DEBUG=1: enables the debug code'
+
+# Force dependency check on .aif
+AIF_FILES := $(wildcard sound/direct_sound_samples/*.aif)
+BIN_FILES := $(patsubst %.aif,%.bin,$(AIF_FILES))
+sound/direct_sound_data.s: $(BIN_FILES)
 
 $(TARGET): $(ELF) $(GBAFIX)
 	$(MSG) OBJCOPY $@
@@ -215,6 +223,9 @@ $(LD_SCRIPT): linker.ld
 %.s: %.c
 	$(MSG) CC $@
 	$Q$(PREPROC) $< $(PREPROCFLAGS) | $(CPP) $(CPPFLAGS) | $(CC) -o $@ $(CFLAGS) && printf '\t.align 2, 0 @ dont insert nops\n' >> $@
+
+sound/%.bin: sound/%.aif
+	$Q$(AIF2PCM) $< $@
 
 src/dma.s: CFLAGS = -Werror -O1 -mthumb-interwork -fhex-asm -f2003-patch
 src/dma.s: src/dma.c
