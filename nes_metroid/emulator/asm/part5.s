@@ -4,6 +4,8 @@
 
     .syntax unified
 
+	.section .rodata
+
 	.4byte 0x006D3D34
 	.4byte 0x001B4F4D
 
@@ -27,11 +29,13 @@ sUnk_0600E008:
 	.4byte 0x00000370
 	.4byte 0x0000036B
 
+	.section .text
+
 	thumb_func_start sub_0600E048
 sub_0600E048: @ 0x0600E048
 	push {r4, r5, r6, r7, lr}
-	mov r7, sl
-	mov r6, sb
+	mov r7, r10
+	mov r6, r9
 	mov r5, r8
 	push {r5, r6, r7}
 	sub sp, #0xc
@@ -55,15 +59,15 @@ _0600E05A:
 	svc #0x12
 	ldr r3, _0600E0E8 @ =0x0600B800
 	adds r3, #0x80
-	mov sl, r3
+	mov r10, r3
 	movs r7, #1
 	movs r5, #0xf8
 	lsls r5, r5, #5
 	movs r0, #0x80
 	lsls r0, r0, #4
-	mov sb, r0
+	mov r9, r0
 _0600E088:
-	mov r1, sl
+	mov r1, r10
 	adds r1, #0x80
 	str r1, [sp, #4]
 	adds r2, r7, #1
@@ -73,13 +77,13 @@ _0600E088:
 	movs r0, #7
 	ands r3, r0
 	mov r8, r3
-	mov r4, sl
+	mov r4, r10
 	ldr r6, _0600E0E8 @ =0x0600B800
-	mov ip, r7
-	mov r1, ip
+	mov r12, r7
+	mov r1, r12
 	movs r2, #1
 	ands r1, r2
-	mov ip, r1
+	mov r12, r1
 _0600E0AA:
 	ldrh r0, [r6]
 	movs r1, #0x1f
@@ -130,10 +134,10 @@ _0600E0FE:
 _0600E106:
 	adds r3, r1, #0
 	adds r2, r3, #0
-	mov r0, ip
+	mov r0, r12
 	cmp r0, #0
 	beq _0600E11C
-	mov r0, sb
+	mov r0, r9
 	adds r1, r3, r0
 	cmp r1, r5
 	bls _0600E11C
@@ -144,7 +148,7 @@ _0600E11C:
 	ands r0, r7
 	cmp r0, #0
 	beq _0600E12E
-	add r2, sb
+	add r2, r9
 	cmp r2, r5
 	bls _0600E12E
 	movs r2, #0xf8
@@ -154,7 +158,7 @@ _0600E12E:
 	ands r0, r7
 	cmp r0, #0
 	beq _0600E140
-	add r3, sb
+	add r3, r9
 	cmp r3, r5
 	bls _0600E140
 	movs r3, #0xf8
@@ -170,12 +174,12 @@ _0600E140:
 	strh r1, [r4]
 	adds r4, #2
 	adds r6, #2
-	mov r0, sl
+	mov r0, r10
 	adds r0, #0x7e
 	cmp r4, r0
 	bls _0600E0AA
 	ldr r1, [sp, #4]
-	mov sl, r1
+	mov r10, r1
 	ldr r7, [sp, #8]
 	cmp r7, #0xf
 	bls _0600E088
@@ -190,19 +194,19 @@ _0600E140:
 	subs r3, #0xd0
 	adds r0, r2, r3
 	ldr r2, _0600E1C0 @ =0x0000FFFF
-	mov sl, r2
+	mov r10, r2
 	ldr r0, [r0]
 	mov r8, r0
-	mov sb, r1
+	mov r9, r1
 	movs r7, #0x18
 _0600E186:
-	mov r3, sb
+	mov r3, r9
 	adds r3, #4
-	mov sb, r3
+	mov r9, r3
 	subs r3, #4
 	ldm r3!, {r5}
 	adds r4, r5, #0
-	mov r0, sl
+	mov r0, r10
 	ands r4, r0
 	lsls r4, r4, #4
 	add r4, r8
@@ -217,8 +221,8 @@ _0600E186:
 	add sp, #0xc
 	pop {r3, r4, r5}
 	mov r8, r3
-	mov sb, r4
-	mov sl, r5
+	mov r9, r4
+	mov r10, r5
 	pop {r4, r5, r6, r7}
 	pop {r0}
 	bx r0
@@ -231,24 +235,24 @@ sub_0600E1C4: @ 0x0600E1C4
 	mov r4, #0x4000000
 	mov r1, #0x1000
 	orr r1, r1, #0x60
-	strh r1, [r4] @ DISPCNT = 0x1060 (H-Blank Interval Free, One dimension OBJ Character VRAM Mapping, Screen Display OBJ=on)
+	strh r1, [r4] @ REG_DISPCNT = 0x1060 (H-Blank Interval Free, One dimension OBJ Character VRAM Mapping, Screen Display OBJ=on)
 	add r5, r4, #0x208
 	mov r0, #0
-	strh r0, [r5] @ IME = 0 (disable interrupts)
+	strh r0, [r5] @ REG_IME = 0 (disable interrupts)
 	add r6, r4, #0x100
-	strh r0, [r6, #2]   @ TM0CNT_H = 0
-	strh r0, [r6, #6]   @ TM1CNT_H = 0
-	strh r0, [r6, #0xa] @ TM2CNT_H = 0
-	strh r0, [r6, #0xe] @ TM3CNT_H = 0
+	strh r0, [r6, #2]   @ REG_TM0CNT_H = 0
+	strh r0, [r6, #6]   @ REG_TM1CNT_H = 0
+	strh r0, [r6, #0xa] @ REG_TM2CNT_H = 0
+	strh r0, [r6, #0xe] @ REG_TM3CNT_H = 0
 	mov r1, #8
-	strh r1, [r4, #4] @ DISPSTAT = 8 (V-Blank IRQ Enable) (why does debugger say 0xA?)
+	strh r1, [r4, #4] @ REG_DISPSTAT = 8 (V-Blank IRQ Enable) (why does debugger say 0xA?)
 	mov r1, #0x31
 	orr r1, r1, #0x2000
-	strh r1, [r5, #-8] @ IE = 0x2031 (Game Pak, Timer 1 Overflow, Timer 0 Overflow, LCD V-Blank)
+	strh r1, [r5, #-8] @ REG_IE = 0x2031 (Game Pak, Timer 1 Overflow, Timer 0 Overflow, LCD V-Blank)
 	mvn r1, #0
-	strh r1, [r5, #-6] @ IF = 0xFFFF (acknowledge all interrupt requests)
+	strh r1, [r5, #-6] @ REG_IF = 0xFFFF (acknowledge all interrupt requests)
 	mov r1, #1
-	strh r1, [r5] @ IME = 1 (enable interrupts)
+	strh r1, [r5] @ REG_IME = 1 (enable interrupts)
 	@ sub_03000488()
 	ldr r4, _0600E234 @ =sub_03000488
 	add lr, pc, #0x0 @ =_0600E224
@@ -277,8 +281,8 @@ _0600E248:
 	add lr, pc, #0x14 @ =_0600E270
 	mov r0, sp
 	ldr r1, _0600E268 @ =0x0600A010
-	ldr ip, _0600E26C @ =sub_0203E38C
-	bx ip
+	ldr r12, _0600E26C @ =sub_0203E38C
+	bx r12
 	.align 2, 0
 _0600E268: .4byte 0x0600A010
 _0600E26C: .4byte sub_0203E38C
@@ -297,7 +301,7 @@ _0600E274:
 
 _0600E290:
 	@ TODO: check if values are the same everytime
-	@ Load 0x28 bytes from SP_884 to r3-ip
+	@ Load 0x28 bytes from SP_884 to r3-r12
 	@ r3-r4 = 0x00000000
 	@ r5 = 0x030073FC
 	@ r6 = 0x030073FF
@@ -306,7 +310,7 @@ _0600E290:
 	@ r12 = 0x030029F0
 	add r0, sp, #0x800
 	add r0, r0, #0x84
-	ldm r0!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, ip}
+	ldm r0!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, r12}
 	ldr r0, [r0] @ r0 = [SP_8AC] (always 0x00820000?)
 	@ NOTE: this is a mirroring trick, the bits are ignored when accessing EWRAM
 	bic sp, sp, #0xfe0000
@@ -315,7 +319,7 @@ _0600E290:
 	ldr r0, [sp, #0x9cc]
 	add r0, r0, #1
 	str r0, [sp, #0x9cc] @ SP_9CC += 1
-	@ goto sub_03002E0C() with r5 = 0x030073FC, ip = 0x030029F0 (no return)
+	@ goto sub_03002E0C() with r5 = 0x030073FC, r12 = 0x030029F0 (no return)
 	ldr pc, _0600E2C0 @ =sub_03002E0C
 	.align 2, 0
 _0600E2BC: .4byte sub_030030E8
@@ -334,8 +338,8 @@ _0600E2E0:
 	ldr pc, [sp, #SP_940]
 _0600E2E4:
 	add lr, pc, #0x8 @ =sub_0600E2F4
-	ldr ip, _0600E2F0 @ =EmulatorReplaceCopyrightYear
-	bx ip
+	ldr r12, _0600E2F0 @ =EmulatorReplaceCopyrightYear
+	bx r12
 	.align 2, 0
 _0600E2F0: .4byte EmulatorReplaceCopyrightYear
 
@@ -343,8 +347,8 @@ _0600E2F0: .4byte EmulatorReplaceCopyrightYear
 sub_0600E2F4: @ 0x0600E2F4
 	mov r0, sp
 	add lr, pc, #0x8 @ =sub_0600E308
-	ldr ip, _0600E304 @ =EmulatorFillPasswordWithSaved
-	bx ip
+	ldr r12, _0600E304 @ =EmulatorFillPasswordWithSaved
+	bx r12
 	.align 2, 0
 _0600E304: .4byte EmulatorFillPasswordWithSaved
 
@@ -352,8 +356,8 @@ _0600E304: .4byte EmulatorFillPasswordWithSaved
 sub_0600E308: @ 0x0600E308
 	mov r0, sp
 	add lr, pc, #0x8 @ =sub_0600E31C
-	ldr ip, _0600E318 @ =EmulatorRetrieveGameOverPassword
-	bx ip
+	ldr r12, _0600E318 @ =EmulatorRetrieveGameOverPassword
+	bx r12
 	.align 2, 0
 _0600E318: .4byte EmulatorRetrieveGameOverPassword
 
@@ -435,13 +439,13 @@ sub_0600E3FC: @ 0x0600E3FC
 	cmp r0, #0x10
 	addlo r0, r0, #1
 	strblo r0, [sp, #SP_A45]
-	mov ip, #0x4000000
+	mov r12, #0x4000000
 	rsb r2, r0, #0x10
 	orr r0, r0, r2, lsl #8
-	strhlo r0, [ip, #0x52]
+	strhlo r0, [r12, #0x52]
 	mov r1, #0x3800
 	orr r1, r1, #0x41
-	strh r1, [ip, #0x50]
+	strh r1, [r12, #0x50]
 	mov r0, #1
 	strbhs r0, [sp, #SP_A44]
 	add lr, pc, #0x3C @ =sub_0600E474
@@ -502,8 +506,8 @@ sub_0600E4D0: @ 0x0600E4D0
 	ldr r1, [sp, #SP_854]
 	mov r2, sp
 	add lr, pc, #0x4 @ =_0600E4E8
-	ldr ip, _0600E57C @ =EmulatorLoadFromSram
-	bx ip
+	ldr r12, _0600E57C @ =EmulatorLoadFromSram
+	bx r12
 _0600E4E8:
 	cmp r0, #0   @ if r0 == 0: (never true?)
 	moveq r0, #4     @ r0 = 4
@@ -536,16 +540,16 @@ sub_0600E534: @ 0x0600E534
 
 	@ Put [SP_854] through sub_03002DF0 until [SP_854 + r0]
 	@ Likely creating a checksum for SP_854
-	ldr sl, _0600E584 @ =0x0000C399
+	ldr r10, _0600E584 @ =0x0000C399
 	ldr r2, [sp, #SP_854]
 	mov r8, #0
-	add fp, r2, r0
+	add r11, r2, r0
 _0600E548:
-	@ sub_03002DF0() with r8, sl, sb parameters
-	ldr sb, [r2], #4
+	@ sub_03002DF0() with r8, r10, r9 parameters
+	ldr r9, [r2], #4
 	add lr, pc, #0x0 @ =0x0600E554
 	ldr pc, _0600E580 @ =sub_03002DF0
-	cmp r2, fp
+	cmp r2, r11
 	blo _0600E548
 
 	cmp r8, r6   @ if r8 != r6:
@@ -566,13 +570,13 @@ _0600E588:
 	mov r1, #0
 	strb r1, [sp, #SP_A43]
 	mov r0, #0x10
-	mov ip, #0x4000000
+	mov r12, #0x4000000
 	rsb r2, r0, #0x10
 	orr r0, r0, r2, lsl #8
-	strh r0, [ip, #0x52]
+	strh r0, [r12, #0x52]
 	mov r1, #0x3800
 	orr r1, r1, #0x41
-	strh r1, [ip, #0x50]
+	strh r1, [r12, #0x50]
 	bl sub_0600EB18
 	bl _0600E3D4
 	ldr r0, [sp, #SP_910]
@@ -652,27 +656,27 @@ sub_0600E670: @ 0x0600E670
 	b _0600E3D4
 _0600E6DC:
 	bl _0600E3D4
-	mov ip, #0x4000000
-	ldr r1, [ip, #0x200]
+	mov r12, #0x4000000
+	ldr r1, [r12, #0x200]
 	str r1, [sp, #SP_944]
 	mov r0, #0x10
 	bl sub_06006E08
 	add lr, pc, #0x4 @ =sub_0600E700
-	ldr ip, _0600E7B0 @ =sub_0203E390
-	bx ip
+	ldr r12, _0600E7B0 @ =sub_0203E390
+	bx r12
 
 	arm_func_start sub_0600E700
 sub_0600E700: @ 0x0600E700
 	cmp r0, #0
 	movne r0, #0x18
 	blne sub_06006E08
-	mov ip, #0x5000000
+	mov r12, #0x5000000
 	mov r0, #0
-	strh r0, [ip]
+	strh r0, [r12]
 	bl sub_0600ED14
-	mov ip, #0x4000000
+	mov r12, #0x4000000
 	mov r0, #0
-	str r0, [ip, #0x200]
+	str r0, [r12, #0x200]
 	ldrb r0, [sp, #SP_A30]
 	cmp r0, #0
 	movne r0, #0
@@ -682,8 +686,8 @@ sub_0600E700: @ 0x0600E700
 	add r1, r0, #0x10
 	mov r0, sp
 	add lr, pc, #0x68 @ =sub_0600E7B8
-	ldr ip, _0600E7B4 @ =EmulatorLoadFromPasswordBytes
-	bx ip
+	ldr r12, _0600E7B4 @ =EmulatorLoadFromPasswordBytes
+	bx r12
 
 	arm_func_start sub_0600E754
 sub_0600E754: @ 0x0600E754
@@ -760,8 +764,8 @@ _0600E810:
 	movs r2, r6
 	ldrne r2, _0600E858 @ =0x0E007FD8
 	add lr, pc, #0xC @ =sub_0600E860
-	ldr ip, _0600E85C @ =EmulatorSaveToSram
-	bx ip
+	ldr r12, _0600E85C @ =EmulatorSaveToSram
+	bx r12
 	.align 2, 0
 _0600E858: .4byte 0x0E007FD8
 _0600E85C: .4byte EmulatorSaveToSram
@@ -777,8 +781,8 @@ _0600E868:
 	cmp r0, #0
 	addeq r6, sp, r6 @ WARNING: disassembler produces wrong instruction here
 	strbeq r7, [r6, #SP_A2E]
-	mov ip, #0x4000000
-	add r2, ip, #0x208
+	mov r12, #0x4000000
+	add r2, r12, #0x208
 	mov r0, #0
 	strh r0, [r2]
 	ldr r1, [sp, #SP_944]
@@ -830,9 +834,9 @@ _0600E938: .4byte sub_0600E440
 	arm_func_start sub_0600E93C
 sub_0600E93C: @ 0x0600E93C
 	bl _0600E3D4
-	mov ip, #0x4000000
+	mov r12, #0x4000000
 	mov r0, #0x60
-	strh r0, [ip]
+	strh r0, [r12]
 	mov r0, #1
 	strb r0, [sp, #SP_A48]
 	add lr, pc, #0x4 @ =sub_0600E960
@@ -844,11 +848,11 @@ sub_0600E960: @ 0x0600E960
 	ldrb r0, [sp, #SP_A48]
 	cmp r0, #0
 	bne sub_0600E2C4
-	mov ip, #0x4000000
+	mov r12, #0x4000000
 	mov r0, #0x80
-	strh r0, [ip]
+	strh r0, [r12]
 	mov r0, #0
-	add r2, ip, #0x208
+	add r2, r12, #0x208
 	strh r0, [r2]
 	ldr r1, [r2, #-8]
 	str r1, [sp, #SP_944]
@@ -869,8 +873,8 @@ sub_0600E960: @ 0x0600E960
 	svc #0x30000
 	mov r0, #1
 	svc #0x190000
-	mov ip, #0x4000000
-	add r2, ip, #0x208
+	mov r12, #0x4000000
+	add r2, r12, #0x208
 	mov r0, #0
 	strh r0, [r2]
 	ldr r1, [sp, #SP_944]
@@ -888,7 +892,7 @@ sub_0600E960: @ 0x0600E960
 	ldrb r0, [sp, #SP_A42]
 	cmp r0, #0
 	orreq r1, r1, #0x1000
-	strh r1, [ip]
+	strh r1, [r12]
 	mov r0, #0x3c
 	strb r0, [sp, #SP_A47]
 	strb r0, [sp, #SP_A44]
@@ -930,22 +934,22 @@ _0600EAA8:
 	cmp r1, r3
 	moveq r0, #0
 	movne r0, #0x8000
-	add ip, r2, #0x1e
+	add r12, r2, #0x1e
 _0600EAB8:
-	ldrh r4, [ip, #-2]!
+	ldrh r4, [r12, #-2]!
 	bic r4, r4, #0xc000
 	add r4, r4, r0
-	strh r4, [ip], #-0x40
-	ldrh r4, [ip]
+	strh r4, [r12], #-0x40
+	ldrh r4, [r12]
 	bic r4, r4, #0xc000
 	add r4, r4, r0
-	strh r4, [ip], #0x40
-	cmp r2, ip
+	strh r4, [r12], #0x40
+	cmp r2, r12
 	bne _0600EAB8
 	cmp r1, r3
 	ldreq r4, _0600EB00 @ =0x11840183
 	ldrne r4, [pc, #0x12] @ WARNING: disassembler fails to produce this instruction
-	strh r4, [ip, #4]
+	strh r4, [r12, #4]
 	sub r2, r2, #0x80
 	subs r3, r3, #1
 	bhs _0600EAA8
@@ -962,8 +966,8 @@ sub_0600EB04: @ 0x0600EB04
 sub_0600EB0C: @ 0x0600EB0C
 	mov r0, #1
 _0600EB10:
-	ldr ip, _0600EBE4 @ =sub_03001D24
-	bx ip
+	ldr r12, _0600EBE4 @ =sub_03001D24
+	bx r12
 
 	arm_func_start sub_0600EB18
 sub_0600EB18: @ 0x0600EB18
@@ -1049,13 +1053,13 @@ sub_0600EBF8: @ 0x0600EBF8
 	mov r3, r0
 	mov r4, sp
 	add r5, sp, #0x800
-	ldr ip, [sp, #0x1fc] @ backup SP_1FC
+	ldr r12, [sp, #0x1fc] @ backup SP_1FC
 _0600EC2C:
 	stmdb r5!, {r0, r1, r2, r3}
 	cmp r5, r4
 	bne _0600EC2C
 
-	str ip, [sp, #0x1fc] @ restore SP_1FC
+	str r12, [sp, #0x1fc] @ restore SP_1FC
 	mov r0, #1
 	strb r0, [sp, #SP_A30] @ SP_A30 = 1
 	bx lr
@@ -1064,22 +1068,22 @@ _0600EC48: .4byte 0xDADADADA
 
 	arm_func_start sub_0600EC4C
 sub_0600EC4C: @ 0x0600EC4C
-	mov fp, lr
+	mov r11, lr
 	ldrb r0, [sp, #SP_A30]
 	cmp r0, #0
 	bne _0600EC80
 	mov r0, sp
 	ldr r1, _0600EC88 @ =0x0600A010
 	add lr, pc, #0x4 @ =_0600EC70
-	ldr ip, _0600EC8C @ =EmulatorLoadFromPasswordBytes
-	bx ip
+	ldr r12, _0600EC8C @ =EmulatorLoadFromPasswordBytes
+	bx r12
 _0600EC70:
 	ldr r3, [sp, #SP_924]
 	ldr r2, [r3, #0xc0]
 	ldr r3, _0600EBF4 @ =0x0600A000
 	str r2, [r3]
 _0600EC80:
-	mov lr, fp
+	mov lr, r11
 	b sub_0600EBF8
 	.align 2, 0
 _0600EC88: .4byte 0x0600A010
@@ -1126,9 +1130,9 @@ _0600ED10: .4byte sub_0600ED14
 
 	arm_func_start sub_0600ED14
 sub_0600ED14: @ 0x0600ED14
-	mov fp, lr
+	mov r11, lr
 	bl sub_0600EB0C
-	movs r0, fp
+	movs r0, r11
 	movne r0, #0x100
 	bl sub_0600EB1C
 	bic r2, r2, #0x1800
@@ -1154,6 +1158,6 @@ _0600ED70:
 	ldrb r1, [sp, #SP_A48]
 	cmp r0, r1
 	bne _0600ED70
-	bx fp
+	bx r11
 	.align 2, 0
 _0600ED84: .4byte 0x84400004

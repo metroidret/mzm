@@ -30,6 +30,7 @@ SECTIONS {
         *libgcc.a:_dvmd_tls.o(.text);
         *libgcc.a:_udivsi3.o(.text);
         src/part2/part2.o(.data);
+        asm/part2/part2_handwritten.o(.data);
         asm/part2/part2_handwritten.o(.text);
     } > iwram
     __rom_cursor += SIZEOF(.iwram_text);
@@ -137,6 +138,7 @@ SECTIONS {
     __rom_cursor += SIZEOF(.vram_text_3);
 
     .vram_text_4 0x0600E000 : AT(__rom_cursor) {
+        asm/part5.o(.rodata);
         asm/part5.o(.text);
     } > vram
     __rom_cursor += SIZEOF(.vram_text_4);

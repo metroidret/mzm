@@ -50,6 +50,7 @@
     .set SP_900, 0x900
     .set SP_904, 0x904
     .set SP_908, 0x908
+    .set SP_90C, 0x90c
     .set SP_910, 0x910
     .set SP_914, 0x914
     .set SP_91C, 0x91c
