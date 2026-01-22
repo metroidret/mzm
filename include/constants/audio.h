@@ -874,4 +874,15 @@ enum SoundModeFrequency {
 
 #define PCM_DMA_BUF_SIZE 1536
 
+// #define MPT_FLG_VOLSET 0x01
+#define MPT_FLG_VOLCHG 0x04
+// #define MPT_FLG_PITSET 0x04
+#define MPT_FLG_PITCHG 0x08
+// #define MPT_FLG_START  0x40
+// #define MPT_FLG_EXIST  0x80
+
+#define VOLUME_UPDATE_FLAG_RESET   (1 << 1)
+#define VOLUME_UPDATE_FLAG_NOTHING (1 << 2)
+#define VOLUME_UPDATE_FLAG_UPDATE  (1 << 4)
+
 #endif /* AUDIO_CONSTANTS_H */

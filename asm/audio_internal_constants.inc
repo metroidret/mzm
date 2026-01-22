@@ -1,6 +1,13 @@
 #ifndef AUDIO_INTERNAL_CONSTANTS_INC
 #define AUDIO_INTERNAL_CONSTANTS_INC
 
+    .equiv MPT_FLG_VOLSET, 0x01
+    .equiv MPT_FLG_VOLCHG, 0x03
+    .equiv MPT_FLG_PITSET, 0x04
+    .equiv MPT_FLG_PITCHG, 0x0C
+    .equiv MPT_FLG_START,  0x40
+    .equiv MPT_FLG_EXIST,  0x80
+
     .macro struct_begin
     .struct 0
     .endm
@@ -37,31 +44,31 @@
     struct_field o_SoundQueue_pHeader, 4
 
     struct_begin
-    struct_field o_SoundChannel_unk_0, 1
+    struct_field o_SoundChannel_envelopeStage_maybe, 1
     struct_field o_SoundChannel_unk_1, 1
     struct_field o_SoundChannel_unk_2, 1
     struct_field o_SoundChannel_unk_3, 1
-    struct_field o_SoundChannel_unk_4, 1
-    struct_field o_SoundChannel_unk_5, 1
+    struct_field o_SoundChannel_rightVol_maybe, 1
+    struct_field o_SoundChannel_leftVol_maybe, 1
     struct_field o_SoundChannel_unk_6, 1
     struct_field o_SoundChannel_unk_7, 1
     struct_field o_SoundChannel_envelope, 4
-    struct_field o_SoundChannel_unk_C, 1
-    struct_field o_SoundChannel_unk_D, 1
-    struct_field o_SoundChannel_unk_E, 1
-    struct_field o_SoundChannel_unk_F, 1
-    struct_field o_SoundChannel_unk_10, 1
-    struct_field o_SoundChannel_unk_11, 1
-    struct_field o_SoundChannel_unk_12, 1
-    struct_field o_SoundChannel_unk_13, 1
+    struct_field o_SoundChannel_echoVol_maybe, 1
+    struct_field o_SoundChannel_echoLen_maybe, 1
+    struct_field o_SoundChannel_gateTime_maybe, 1
+    struct_field o_SoundChannel_velocity_maybe, 1
+    struct_field o_SoundChannel_envelopeVol_maybe, 1
+    struct_field o_SoundChannel_envelopeVolR_maybe, 1
+    struct_field o_SoundChannel_envelopeVolL_maybe, 1
+    struct_field o_SoundChannel_volumeUpdateFlag_maybe, 1
     struct_field o_SoundChannel_pSize, 4
     struct_field o_SoundChannel_unk_18, 4
     struct_field o_SoundChannel_unk_1C, 4
     struct_field o_SoundChannel_pSample, 4
     struct_field o_SoundChannel_pData, 4
     struct_field o_SoundChannel_pVariables, 4
-    struct_field o_SoundChannel_pChannel1, 4
-    struct_field o_SoundChannel_pChannel2, 4
+    struct_field o_SoundChannel_pChannelPrev_maybe, 4
+    struct_field o_SoundChannel_pChannelNext_maybe, 4
 
     struct_begin
     struct_field o_SoundChannelBackup_pChannel, 4
@@ -70,27 +77,27 @@
     struct_begin
     struct_field o_PSGSoundData_unk_0, 1
     struct_field o_PSGSoundData_unk_1, 1
-    struct_field o_PSGSoundData_unk_2, 1
-    struct_field o_PSGSoundData_unk_3, 1
+    struct_field o_PSGSoundData_rightVol_maybe, 1
+    struct_field o_PSGSoundData_leftVol_maybe, 1
     struct_field o_PSGSoundData_envelope, 4
     struct_field o_PSGSoundData_maybe_noteDelay, 2
-    struct_field o_PSGSoundData_unk_A, 1
+    struct_field o_PSGSoundData_velocity_maybe, 1
     struct_field o_PSGSoundData_unk_B, 1
     struct_field o_PSGSoundData_unk_C, 1
-    struct_field o_PSGSoundData_unk_D, 1
-    struct_field o_PSGSoundData_unk_E, 1
+    struct_field o_PSGSoundData_echoVol_maybe, 1
+    struct_field o_PSGSoundData_echoLen_maybe, 1
     struct_field o_PSGSoundData_unk_F, 1
-    struct_field o_PSGSoundData_unk_10, 1
-    struct_field o_PSGSoundData_unk_11, 1
-    struct_field o_PSGSoundData_unk_12, 1
+    struct_field o_PSGSoundData_nrx0, 1
+    struct_field o_PSGSoundData_nrx1, 1
+    struct_field o_PSGSoundData_nrx2, 1
     struct_field o_PSGSoundData_undefined_13, 1
-    struct_field o_PSGSoundData_unk_14, 2
+    struct_field o_PSGSoundData_nrx3_nrx4, 2
     struct_field o_PSGSoundData_unk_16, 1
     struct_field o_PSGSoundData_unk_17, 1
-    struct_field o_PSGSoundData_unk_18, 1
-    struct_field o_PSGSoundData_unk_19, 1
-    struct_field o_PSGSoundData_unk_1A, 1
-    struct_field o_PSGSoundData_unk_1B, 1
+    struct_field o_PSGSoundData_cgb_envelopeCtr_maybe, 1
+    struct_field o_PSGSoundData_cgb_envelopeVol_maybe, 1
+    struct_field o_PSGSoundData_cgb_envelopeGoal_maybe, 1
+    struct_field o_PSGSoundData_cgb_sustainGoal_maybe, 1
     struct_field o_PSGSoundData_unk_1C, 1
     struct_field o_PSGSoundData_unk_1D, 1
     struct_field o_PSGSoundData_unk_1E, 1
@@ -100,37 +107,37 @@
 
     struct_begin
     struct_field o_TrackVariables_unk_0, 1
-    struct_field o_TrackVariables_unk_1, 1
+    struct_field o_TrackVariables_key_maybe, 1
     struct_field o_TrackVariables_delay, 1
-    struct_field o_TrackVariables_unk_3, 1
+    struct_field o_TrackVariables_currentEvent, 1
     struct_field o_TrackVariables_volume, 1
-    struct_field o_TrackVariables_unk_5, 1
-    struct_field o_TrackVariables_unk_6, 1
-    struct_field o_TrackVariables_unk_7, 1
-    struct_field o_TrackVariables_unk_8, 1
-    struct_field o_TrackVariables_unk_9, 1
+    struct_field o_TrackVariables_volumeX_maybe, 1
+    struct_field o_TrackVariables_pan_maybe, 1
+    struct_field o_TrackVariables_panX_maybe, 1
+    struct_field o_TrackVariables_volRightCalculated_maybe, 1
+    struct_field o_TrackVariables_volLeftCalculated_maybe, 1
     struct_field o_TrackVariables_repeatCount, 1
     struct_field o_TrackVariables_priority, 1
-    struct_field o_TrackVariables_unk_C, 1
-    struct_field o_TrackVariables_unk_D, 1
-    struct_field o_TrackVariables_unk_E, 1
-    struct_field o_TrackVariables_unk_F, 1
+    struct_field o_TrackVariables_echoVolume_maybe, 1
+    struct_field o_TrackVariables_echoLength_maybe, 1
+    struct_field o_TrackVariables_gateTime_maybe, 1
+    struct_field o_TrackVariables_velocity_maybe, 1
     struct_field o_TrackVariables_lfoSpeed, 1
     struct_field o_TrackVariables_modulationDepth, 1
     struct_field o_TrackVariables_modulationType, 1
-    struct_field o_TrackVariables_unk_13, 1
-    struct_field o_TrackVariables_unk_14, 1
-    struct_field o_TrackVariables_unk_15, 1
-    struct_field o_TrackVariables_unk_16, 1
-    struct_field o_TrackVariables_unk_17, 1
-    struct_field o_TrackVariables_unk_18, 1
+    struct_field o_TrackVariables_modulationCalculated_maybe, 1
+    struct_field o_TrackVariables_lfoDelay_maybe, 1
+    struct_field o_TrackVariables_lfoDelayCounter_maybe, 1
+    struct_field o_TrackVariables_lfoSpeedC_maybe, 1
+    struct_field o_TrackVariables_keyShiftCalculated_maybe, 1
+    struct_field o_TrackVariables_pitchCalculated_maybe, 1
     struct_field o_TrackVariables_pitchBend, 1
     struct_field o_TrackVariables_bendRange, 1
     struct_field o_TrackVariables_unk_1B, 1
     struct_field o_TrackVariables_keyShift, 1
-    struct_field o_TrackVariables_unk_1D, 1
+    struct_field o_TrackVariables_keyShiftX_maybe, 1
     struct_field o_TrackVariables_tune, 1
-    struct_field o_TrackVariables_unk_1F, 1
+    struct_field o_TrackVariables_pitchX_maybe, 1
     struct_field o_TrackVariables_unk_20, 4
     struct_field o_TrackVariables_pRawData, 4
     struct_field o_TrackVariables_patternStartPointers, 12
@@ -150,14 +157,14 @@
     struct_field o_TrackData_flags, 1
     struct_field o_TrackData_amountOfTracks, 1
     struct_field o_TrackData_undefined_2, 1
-    struct_field o_TrackData_unk_3, 1
+    struct_field o_TrackData_trackHeaderPriority, 1
     struct_field o_TrackData_currentTrack, 1
     struct_field o_TrackData_maxAmountOfTracks, 1
     struct_field o_TrackData_maybe_volume, 2
     struct_field o_TrackData_fadingTimer, 2
-    struct_field o_TrackData_unk_A, 2
-    struct_field o_TrackData_unk_C, 2
-    struct_field o_TrackData_unk_E, 2
+    struct_field o_TrackData_tempoRawBpm_maybe, 2
+    struct_field o_TrackData_tempoInterval_maybe, 2
+    struct_field o_TrackData_tempoCounter_maybe, 2
     struct_field o_TrackData_pHeader, 4
     struct_field o_TrackData_pVoice, 4
     struct_field o_TrackData_pVariables, 4
@@ -216,14 +223,14 @@
     struct_field o_MusicInfo_volume, 1
     struct_field o_MusicInfo_freqIndex, 1
     struct_field o_MusicInfo_unk_8, 1
-    struct_field o_MusicInfo_unk_9, 1
+    struct_field o_maxScanlines_maybe, 1
     struct_field o_MusicInfo_currentSoundChannel, 1
     struct_field o_MusicInfo_volumeDownFlag, 1
     struct_field o_MusicInfo_unk_C, 1
     struct_field o_MusicInfo_unk_D, 1
-    struct_field o_MusicInfo_unk_E, 1
+    struct_field o_MusicInfo_maxDmaCount_maybe, 1
     struct_field o_MusicInfo_unk_F, 1
-    struct_field o_MusicInfo_unk_10, 1
+    struct_field o_MusicInfo_dmaCounter_maybe, 1
     struct_field o_MusicInfo_unk_11, 1
     struct_field o_MusicInfo_sampleRate, 2
     struct_field o_MusicInfo_unk_14, 4

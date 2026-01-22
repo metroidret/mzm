@@ -13,6 +13,15 @@ struct MusicTrackInfo {
     s8 unk;
 };
 
+struct WaveData {
+    u16 type;
+    u16 stat;
+    u32 freq;
+    u32 loop;
+    u32 size;
+    /* s8 data[size+1]; */
+};
+
 struct Envelope {
     u8 attack;
     u8 decay;
@@ -38,31 +47,31 @@ struct SoundQueue {
 };
 
 struct SoundChannel {
-    u8 unk_0;
+    u8 envelopeStage_maybe;
     u8 unk_1;
     u8 unk_2;
     u8 unk_3;
-    u8 unk_4;
-    u8 unk_5;
+    u8 rightVol_maybe;
+    u8 leftVol_maybe;
     u8 unk_6;
     u8 unk_7;
     struct Envelope envelope;
-    u8 unk_C;
-    u8 unk_D;
-    u8 unk_E;
-    u8 unk_F;
-    u8 unk_10;
-    u8 unk_11;
-    u8 unk_12;
-    u8 unk_13;
+    u8 echoVol_maybe;
+    u8 echoLen_maybe;
+    u8 gateTime_maybe;
+    u8 velocity_maybe;
+    u8 envelopeVol_maybe;
+    u8 envelopeVolR_maybe;
+    u8 envelopeVolL_maybe;
+    u8 volumeUpdateFlag_maybe;
     u32* pSize;
     u32 unk_18;
     u32 unk_1C;
     u32* pSample; // Type?
     u8* pData;
     struct TrackVariables* pVariables;
-    struct SoundChannel* pChannel1;
-    struct SoundChannel* pChannel2;
+    struct SoundChannel* pChannelPrev_maybe;
+    struct SoundChannel* pChannelNext_maybe;
 };
 
 struct SoundChannelBackup {
@@ -73,27 +82,27 @@ struct SoundChannelBackup {
 struct PSGSoundData {
     u8 unk_0;
     u8 unk_1;
-    u8 unk_2;
-    u8 unk_3;
+    u8 rightVol_maybe;
+    u8 leftVol_maybe;
     struct Envelope envelope;
     u16 maybe_noteDelay;
-    u8 unk_A;
+    u8 velocity_maybe;
     u8 unk_B;
     u8 unk_C;
-    u8 unk_D;
-    u8 unk_E;
+    u8 echoVol_maybe;
+    u8 echoLen_maybe;
     u8 unk_F;
-    u8 unk_10;
-    u8 unk_11;
-    u8 unk_12;
+    u8 nrx0; // written to REG_SOUND1CNT_L, REG_SOUND3CNT_L (sound channel sweep, ram select registers)
+    u8 nrx1; // written to low byte of REG_SOUND1CNT_H, REG_SOUND2CNT_L, REG_SOUND3CNT_H, REG_SOUND4CNT_L (sound channel duty/len/envelope/volume registers)
+    u8 nrx2; // written to high byte of REG_SOUND1CNT_H, REG_SOUND2CNT_L, REG_SOUND3CNT_H, REG_SOUND4CNT_L (sound channel duty/len/envelope/volume registers)
     u8 undefined_13;
-    u16 unk_14;
+    u16 nrx3_nrx4; // written to REG_SOUND1CNT_X, REG_SOUND2CNT_H, REG_SOUND3CNT_X, REG_SOUND4CNT_H (sound channel frequency/control registers)
     u8 unk_16;
     u8 unk_17;
-    u8 unk_18;
-    s8 unk_19;
-    u8 unk_1A;
-    u8 unk_1B;
+    u8 cgb_envelopeCtr_maybe;
+    s8 cgb_envelopeVol_maybe;
+    u8 cgb_envelopeGoal_maybe;
+    u8 cgb_sustainGoal_maybe;
     u8 unk_1C;
     u8 unk_1D;
     u8 unk_1E;
@@ -104,37 +113,37 @@ struct PSGSoundData {
 
 struct TrackVariables {
     u8 unk_0;
-    u8 unk_1;
+    u8 key_maybe;
     u8 delay;
-    u8 unk_3;
+    u8 currentEvent;
     u8 volume;
-    u8 unk_5;
-    u8 unk_6;
-    u8 unk_7;
-    u8 unk_8;
-    u8 unk_9;
+    u8 volumeX_maybe;
+    u8 pan_maybe;
+    s8 panX_maybe;
+    u8 volRightCalculated_maybe;
+    u8 volLeftCalculated_maybe;
     u8 repeatCount;
     u8 priority;
-    u8 unk_C;
-    u8 unk_D;
-    u8 unk_E;
-    u8 unk_F;
+    u8 echoVolume_maybe;
+    u8 echoLength_maybe;
+    u8 gateTime_maybe;
+    u8 velocity_maybe;
     u8 lfoSpeed;
     u8 modulationDepth;
     u8 modulationType;
-    s8 unk_13;
-    u8 unk_14;
-    u8 unk_15;
-    s8 unk_16;
-    s8 unk_17;
-    u8 unk_18;
+    s8 modulationCalculated_maybe;
+    u8 lfoDelay_maybe;
+    u8 lfoDelayCounter_maybe;
+    s8 lfoSpeedC_maybe;
+    s8 keyShiftCalculated_maybe;
+    u8 pitchCalculated_maybe;
     s8 pitchBend;
     u8 bendRange;
     u8 unk_1B;
-    u8 keyShift;
-    u8 unk_1D;
+    s8 keyShift;
+    s8 keyShiftX_maybe;
     u8 tune;
-    u8 unk_1F;
+    u8 pitchX_maybe;
     u32 unk_20;
     const u8* pRawData;
     const u8* patternStartPointers[3];
@@ -157,16 +166,16 @@ struct TrackData {
     u8 amountOfTracks;
 
     u8 undefined_2;
-    u8 unk_3;
+    u8 trackHeaderPriority;
     u8 currentTrack;
 
     u8 maxAmountOfTracks;
     u16 maybe_volume;
     u16 fadingTimer;
 
-    u16 unk_A;
-    u16 unk_C;
-    u16 unk_E;
+    u16 tempoRawBpm_maybe;
+    u16 tempoInterval_maybe;
+    u16 tempoCounter_maybe;
 
     const u8* pHeader;
     struct Voice* pVoice;
@@ -232,20 +241,20 @@ struct MusicInfo {
     u8 unk_2;
     u8 unk_3;
 
-    u8 reverb; // unused
+    u8 reverb;
     u8 maxSoundChannels;
     u8 volume;
     u8 freqIndex;
 
     u8 unk_8;
-    u8 unk_9;
+    u8 maxScanlines_maybe;
     u8 currentSoundChannel;
     u8 volumeDownFlag;
     u8 unk_C; // samplesPerFrame / 16
     u8 unk_D; // unused, number of frames to process sample?
-    u8 unk_E; // 96
+    u8 maxDmaCount_maybe; // 96
     u8 unk_F;
-    u8 unk_10; // 95
+    u8 dmaCounter_maybe;
     u8 unk_11; // (samplesPerFrame / 16) * 2
     u16 sampleRate;
     u32 unk_14; // unused, samples per frame

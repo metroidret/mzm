@@ -476,13 +476,11 @@ void InitAndLoadGenerics(void)
     DMA_SET(3, sCommonSpritesPal, PALRAM_BASE + 0x240, C_32_2_16(DMA_ENABLE, sizeof(sCommonSpritesPal) / 2));
     SamusInit();
 
-    do {
-    } while ((u16)(READ_16(REG_VCOUNT) - 21) < 140); // READ_16(REG_VCOUNT) <= SCREEN_SIZE_Y
+    while (READ_16(REG_VCOUNT) >= 21 && READ_16(REG_VCOUNT) <= SCREEN_SIZE_Y);
 
     RoomLoad();
 
-    do {
-    } while ((u16)(READ_16(REG_VCOUNT) - 21) < 140); // READ_16(REG_VCOUNT) <= SCREEN_SIZE_Y
+    while (READ_16(REG_VCOUNT) >= 21 && READ_16(REG_VCOUNT) <= SCREEN_SIZE_Y);
 
     if (gPauseScreenFlag == PAUSE_SCREEN_NONE && gSubGameMode3 != 0)
     {
@@ -495,8 +493,7 @@ void InitAndLoadGenerics(void)
 
     TransferSamusAndBgGraphics();
 
-    do {
-    } while ((u16)(READ_16(REG_VCOUNT) - 21) < 140); // READ_16(REG_VCOUNT) <= SCREEN_SIZE_Y
+    while (READ_16(REG_VCOUNT) >= 21 && READ_16(REG_VCOUNT) <= SCREEN_SIZE_Y);
 
     HudGenericResetHUDData();
     SpriteLoadAllData();
@@ -520,8 +517,7 @@ void InitAndLoadGenerics(void)
 
     gWrittenToBldy_NonGameplay = BLDY_MAX_VALUE - 1;
 
-    do {
-    } while ((u16)(READ_16(REG_VCOUNT) - 21) < 140); // READ_16(REG_VCOUNT) <= SCREEN_SIZE_Y
+    while (READ_16(REG_VCOUNT) >= 21 && READ_16(REG_VCOUNT) <= SCREEN_SIZE_Y);
 
 
     #ifdef REGION_EU_BETA
