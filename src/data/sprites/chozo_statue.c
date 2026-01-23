@@ -1,5 +1,5 @@
 #include "data/sprites/chozo_statue.h"
-#include "sprites_AI/chozo_statue.h"
+#include "sprites_ai/chozo_statue.h"
 #include "macros.h"
 
 static const s16 sChozoStatueMultiSpriteData_Standing_Frame0[CHOZO_STATUE_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {

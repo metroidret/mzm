@@ -42621,7 +42621,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080908E4.bin",
+    "path": "direct_sound_samples/080908e4.bin",
     "dir": "sound",
     "count": "0x645",
     "addr": {
@@ -42634,7 +42634,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08090F2C.bin",
+    "path": "direct_sound_samples/08090f2c.bin",
     "dir": "sound",
     "count": "0x16E",
     "addr": {
@@ -42647,7 +42647,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0809109C.bin",
+    "path": "direct_sound_samples/0809109c.bin",
     "dir": "sound",
     "count": "0x29C",
     "addr": {
@@ -42673,7 +42673,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08091DCC.bin",
+    "path": "direct_sound_samples/08091dcc.bin",
     "dir": "sound",
     "count": "0x471",
     "addr": {
@@ -42712,7 +42712,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08092C00.bin",
+    "path": "direct_sound_samples/08092c00.bin",
     "dir": "sound",
     "count": "0x11A",
     "addr": {
@@ -42725,7 +42725,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08092D1C.bin",
+    "path": "direct_sound_samples/08092d1c.bin",
     "dir": "sound",
     "count": "0x2C0",
     "addr": {
@@ -42738,7 +42738,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08092FDC.bin",
+    "path": "direct_sound_samples/08092fdc.bin",
     "dir": "sound",
     "count": "0x329",
     "addr": {
@@ -42764,7 +42764,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080934D8.bin",
+    "path": "direct_sound_samples/080934d8.bin",
     "dir": "sound",
     "count": "0x2AB",
     "addr": {
@@ -42790,7 +42790,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08093F44.bin",
+    "path": "direct_sound_samples/08093f44.bin",
     "dir": "sound",
     "count": "0x7C5",
     "addr": {
@@ -42803,7 +42803,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0809470C.bin",
+    "path": "direct_sound_samples/0809470c.bin",
     "dir": "sound",
     "count": "0x43C3",
     "addr": {
@@ -42816,7 +42816,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08098AD0.bin",
+    "path": "direct_sound_samples/08098ad0.bin",
     "dir": "sound",
     "count": "0x687D",
     "addr": {
@@ -42829,7 +42829,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0809F350.bin",
+    "path": "direct_sound_samples/0809f350.bin",
     "dir": "sound",
     "count": "0x552",
     "addr": {
@@ -42842,7 +42842,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0809F8A4.bin",
+    "path": "direct_sound_samples/0809f8a4.bin",
     "dir": "sound",
     "count": "0xA83",
     "addr": {
@@ -42855,7 +42855,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A0328.bin",
+    "path": "direct_sound_samples/080a0328.bin",
     "dir": "sound",
     "count": "0xDF7",
     "addr": {
@@ -42868,7 +42868,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A1120.bin",
+    "path": "direct_sound_samples/080a1120.bin",
     "dir": "sound",
     "count": "0x373",
     "addr": {
@@ -42881,7 +42881,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A1494.bin",
+    "path": "direct_sound_samples/080a1494.bin",
     "dir": "sound",
     "count": "0x471",
     "addr": {
@@ -42894,7 +42894,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A1908.bin",
+    "path": "direct_sound_samples/080a1908.bin",
     "dir": "sound",
     "count": "0x541",
     "addr": {
@@ -42907,7 +42907,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A1E4C.bin",
+    "path": "direct_sound_samples/080a1e4c.bin",
     "dir": "sound",
     "count": "0x631",
     "addr": {
@@ -42920,7 +42920,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A2480.bin",
+    "path": "direct_sound_samples/080a2480.bin",
     "dir": "sound",
     "count": "0xCC5",
     "addr": {
@@ -42933,7 +42933,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A3148.bin",
+    "path": "direct_sound_samples/080a3148.bin",
     "dir": "sound",
     "count": "0x1D2",
     "addr": {
@@ -42946,7 +42946,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A331C.bin",
+    "path": "direct_sound_samples/080a331c.bin",
     "dir": "sound",
     "count": "0x9BF",
     "addr": {
@@ -42959,7 +42959,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A3CDC.bin",
+    "path": "direct_sound_samples/080a3cdc.bin",
     "dir": "sound",
     "count": "0xE11",
     "addr": {
@@ -42972,7 +42972,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A4AF0.bin",
+    "path": "direct_sound_samples/080a4af0.bin",
     "dir": "sound",
     "count": "0x6F5",
     "addr": {
@@ -42985,7 +42985,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A51E8.bin",
+    "path": "direct_sound_samples/080a51e8.bin",
     "dir": "sound",
     "count": "0x1F01",
     "addr": {
@@ -42998,7 +42998,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A70EC.bin",
+    "path": "direct_sound_samples/080a70ec.bin",
     "dir": "sound",
     "count": "0xF1",
     "addr": {
@@ -43011,7 +43011,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A71E0.bin",
+    "path": "direct_sound_samples/080a71e0.bin",
     "dir": "sound",
     "count": "0x711",
     "addr": {
@@ -43024,7 +43024,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A78F4.bin",
+    "path": "direct_sound_samples/080a78f4.bin",
     "dir": "sound",
     "count": "0x1192",
     "addr": {
@@ -43037,7 +43037,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A8A88.bin",
+    "path": "direct_sound_samples/080a8a88.bin",
     "dir": "sound",
     "count": "0xD70",
     "addr": {
@@ -43050,7 +43050,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A97F8.bin",
+    "path": "direct_sound_samples/080a97f8.bin",
     "dir": "sound",
     "count": "0x771",
     "addr": {
@@ -43063,7 +43063,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080A9F6C.bin",
+    "path": "direct_sound_samples/080a9f6c.bin",
     "dir": "sound",
     "count": "0x9E6",
     "addr": {
@@ -43076,7 +43076,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080AA954.bin",
+    "path": "direct_sound_samples/080aa954.bin",
     "dir": "sound",
     "count": "0x711",
     "addr": {
@@ -43089,7 +43089,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080AB068.bin",
+    "path": "direct_sound_samples/080ab068.bin",
     "dir": "sound",
     "count": "0xC47",
     "addr": {
@@ -43102,7 +43102,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080ABCB0.bin",
+    "path": "direct_sound_samples/080abcb0.bin",
     "dir": "sound",
     "count": "0xB10",
     "addr": {
@@ -43115,7 +43115,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080AC7C0.bin",
+    "path": "direct_sound_samples/080ac7c0.bin",
     "dir": "sound",
     "count": "0xFD1",
     "addr": {
@@ -43128,7 +43128,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080AD794.bin",
+    "path": "direct_sound_samples/080ad794.bin",
     "dir": "sound",
     "count": "0x18DE",
     "addr": {
@@ -43141,7 +43141,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080AF074.bin",
+    "path": "direct_sound_samples/080af074.bin",
     "dir": "sound",
     "count": "0x901",
     "addr": {
@@ -43154,7 +43154,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080AF978.bin",
+    "path": "direct_sound_samples/080af978.bin",
     "dir": "sound",
     "count": "0x14B1",
     "addr": {
@@ -43167,7 +43167,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080B0E2C.bin",
+    "path": "direct_sound_samples/080b0e2c.bin",
     "dir": "sound",
     "count": "0x241",
     "addr": {
@@ -43180,7 +43180,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080B1070.bin",
+    "path": "direct_sound_samples/080b1070.bin",
     "dir": "sound",
     "count": "0x88C",
     "addr": {
@@ -43193,7 +43193,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080B18FC.bin",
+    "path": "direct_sound_samples/080b18fc.bin",
     "dir": "sound",
     "count": "0x1351",
     "addr": {
@@ -43206,7 +43206,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080B2C50.bin",
+    "path": "direct_sound_samples/080b2c50.bin",
     "dir": "sound",
     "count": "0x54A",
     "addr": {
@@ -43219,7 +43219,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080B319C.bin",
+    "path": "direct_sound_samples/080b319c.bin",
     "dir": "sound",
     "count": "0x1891",
     "addr": {
@@ -43232,7 +43232,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080B4A30.bin",
+    "path": "direct_sound_samples/080b4a30.bin",
     "dir": "sound",
     "count": "0xFD1",
     "addr": {
@@ -43245,7 +43245,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080B5A04.bin",
+    "path": "direct_sound_samples/080b5a04.bin",
     "dir": "sound",
     "count": "0x1891",
     "addr": {
@@ -43258,7 +43258,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080B7298.bin",
+    "path": "direct_sound_samples/080b7298.bin",
     "dir": "sound",
     "count": "0xFCD",
     "addr": {
@@ -43271,7 +43271,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080B8268.bin",
+    "path": "direct_sound_samples/080b8268.bin",
     "dir": "sound",
     "count": "0x187F",
     "addr": {
@@ -43284,7 +43284,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080B9AE8.bin",
+    "path": "direct_sound_samples/080b9ae8.bin",
     "dir": "sound",
     "count": "0xFD1",
     "addr": {
@@ -43297,7 +43297,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080BAABC.bin",
+    "path": "direct_sound_samples/080baabc.bin",
     "dir": "sound",
     "count": "0x848",
     "addr": {
@@ -43310,7 +43310,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080BB304.bin",
+    "path": "direct_sound_samples/080bb304.bin",
     "dir": "sound",
     "count": "0xFD1",
     "addr": {
@@ -43323,7 +43323,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080BC2D8.bin",
+    "path": "direct_sound_samples/080bc2d8.bin",
     "dir": "sound",
     "count": "0x1891",
     "addr": {
@@ -43336,7 +43336,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080BDB6C.bin",
+    "path": "direct_sound_samples/080bdb6c.bin",
     "dir": "sound",
     "count": "0x1891",
     "addr": {
@@ -43349,7 +43349,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080BF400.bin",
+    "path": "direct_sound_samples/080bf400.bin",
     "dir": "sound",
     "count": "0xFD1",
     "addr": {
@@ -43362,7 +43362,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C03D4.bin",
+    "path": "direct_sound_samples/080c03d4.bin",
     "dir": "sound",
     "count": "0x600",
     "addr": {
@@ -43375,7 +43375,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C09D4.bin",
+    "path": "direct_sound_samples/080c09d4.bin",
     "dir": "sound",
     "count": "0x7F1",
     "addr": {
@@ -43388,7 +43388,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C11C8.bin",
+    "path": "direct_sound_samples/080c11c8.bin",
     "dir": "sound",
     "count": "0x1874",
     "addr": {
@@ -43401,7 +43401,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C2A3C.bin",
+    "path": "direct_sound_samples/080c2a3c.bin",
     "dir": "sound",
     "count": "0xFC2",
     "addr": {
@@ -43414,7 +43414,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C3A00.bin",
+    "path": "direct_sound_samples/080c3a00.bin",
     "dir": "sound",
     "count": "0x186E",
     "addr": {
@@ -43427,7 +43427,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C5270.bin",
+    "path": "direct_sound_samples/080c5270.bin",
     "dir": "sound",
     "count": "0xFA2",
     "addr": {
@@ -43440,7 +43440,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C6214.bin",
+    "path": "direct_sound_samples/080c6214.bin",
     "dir": "sound",
     "count": "0x600",
     "addr": {
@@ -43453,7 +43453,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C6814.bin",
+    "path": "direct_sound_samples/080c6814.bin",
     "dir": "sound",
     "count": "0x600",
     "addr": {
@@ -43466,7 +43466,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C6E14.bin",
+    "path": "direct_sound_samples/080c6e14.bin",
     "dir": "sound",
     "count": "0x600",
     "addr": {
@@ -43479,7 +43479,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C7414.bin",
+    "path": "direct_sound_samples/080c7414.bin",
     "dir": "sound",
     "count": "0x2B1",
     "addr": {
@@ -43492,7 +43492,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C76C8.bin",
+    "path": "direct_sound_samples/080c76c8.bin",
     "dir": "sound",
     "count": "0xB71",
     "addr": {
@@ -43505,7 +43505,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C823C.bin",
+    "path": "direct_sound_samples/080c823c.bin",
     "dir": "sound",
     "count": "0x35F",
     "addr": {
@@ -43518,7 +43518,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C859C.bin",
+    "path": "direct_sound_samples/080c859c.bin",
     "dir": "sound",
     "count": "0x382",
     "addr": {
@@ -43531,7 +43531,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C8920.bin",
+    "path": "direct_sound_samples/080c8920.bin",
     "dir": "sound",
     "count": "0xF89",
     "addr": {
@@ -43544,7 +43544,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080C98AC.bin",
+    "path": "direct_sound_samples/080c98ac.bin",
     "dir": "sound",
     "count": "0xF31",
     "addr": {
@@ -43557,7 +43557,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080CA7E0.bin",
+    "path": "direct_sound_samples/080ca7e0.bin",
     "dir": "sound",
     "count": "0xBC1",
     "addr": {
@@ -43570,7 +43570,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080CB3A4.bin",
+    "path": "direct_sound_samples/080cb3a4.bin",
     "dir": "sound",
     "count": "0xA9C",
     "addr": {
@@ -43583,7 +43583,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080CBE40.bin",
+    "path": "direct_sound_samples/080cbe40.bin",
     "dir": "sound",
     "count": "0x9F1",
     "addr": {
@@ -43596,7 +43596,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080CC834.bin",
+    "path": "direct_sound_samples/080cc834.bin",
     "dir": "sound",
     "count": "0xB77",
     "addr": {
@@ -43609,7 +43609,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080CD3AC.bin",
+    "path": "direct_sound_samples/080cd3ac.bin",
     "dir": "sound",
     "count": "0x2D1",
     "addr": {
@@ -43622,7 +43622,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080CD680.bin",
+    "path": "direct_sound_samples/080cd680.bin",
     "dir": "sound",
     "count": "0x591",
     "addr": {
@@ -43635,7 +43635,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080CDC14.bin",
+    "path": "direct_sound_samples/080cdc14.bin",
     "dir": "sound",
     "count": "0x30E",
     "addr": {
@@ -43648,7 +43648,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080CDF24.bin",
+    "path": "direct_sound_samples/080cdf24.bin",
     "dir": "sound",
     "count": "0x54A",
     "addr": {
@@ -43661,7 +43661,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080CE470.bin",
+    "path": "direct_sound_samples/080ce470.bin",
     "dir": "sound",
     "count": "0xB71",
     "addr": {
@@ -43674,7 +43674,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080CEFE4.bin",
+    "path": "direct_sound_samples/080cefe4.bin",
     "dir": "sound",
     "count": "0x381",
     "addr": {
@@ -43687,7 +43687,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080CF368.bin",
+    "path": "direct_sound_samples/080cf368.bin",
     "dir": "sound",
     "count": "0x1371",
     "addr": {
@@ -43700,7 +43700,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D06DC.bin",
+    "path": "direct_sound_samples/080d06dc.bin",
     "dir": "sound",
     "count": "0x471",
     "addr": {
@@ -43713,7 +43713,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D0B50.bin",
+    "path": "direct_sound_samples/080d0b50.bin",
     "dir": "sound",
     "count": "0x2151",
     "addr": {
@@ -43726,7 +43726,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D2CA4.bin",
+    "path": "direct_sound_samples/080d2ca4.bin",
     "dir": "sound",
     "count": "0x541",
     "addr": {
@@ -43739,7 +43739,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D31E8.bin",
+    "path": "direct_sound_samples/080d31e8.bin",
     "dir": "sound",
     "count": "0xF2B",
     "addr": {
@@ -43752,7 +43752,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D4114.bin",
+    "path": "direct_sound_samples/080d4114.bin",
     "dir": "sound",
     "count": "0x1F91",
     "addr": {
@@ -43765,7 +43765,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D60A8.bin",
+    "path": "direct_sound_samples/080d60a8.bin",
     "dir": "sound",
     "count": "0x851",
     "addr": {
@@ -43778,7 +43778,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D68FC.bin",
+    "path": "direct_sound_samples/080d68fc.bin",
     "dir": "sound",
     "count": "0x470",
     "addr": {
@@ -43791,7 +43791,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D6D6C.bin",
+    "path": "direct_sound_samples/080d6d6c.bin",
     "dir": "sound",
     "count": "0x4F8",
     "addr": {
@@ -43804,7 +43804,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D7264.bin",
+    "path": "direct_sound_samples/080d7264.bin",
     "dir": "sound",
     "count": "0x312",
     "addr": {
@@ -43817,7 +43817,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D7578.bin",
+    "path": "direct_sound_samples/080d7578.bin",
     "dir": "sound",
     "count": "0x4F1",
     "addr": {
@@ -43830,7 +43830,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D7A6C.bin",
+    "path": "direct_sound_samples/080d7a6c.bin",
     "dir": "sound",
     "count": "0x42D",
     "addr": {
@@ -43843,7 +43843,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D7E9C.bin",
+    "path": "direct_sound_samples/080d7e9c.bin",
     "dir": "sound",
     "count": "0x399",
     "addr": {
@@ -43856,7 +43856,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D8238.bin",
+    "path": "direct_sound_samples/080d8238.bin",
     "dir": "sound",
     "count": "0x311",
     "addr": {
@@ -43869,7 +43869,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D854C.bin",
+    "path": "direct_sound_samples/080d854c.bin",
     "dir": "sound",
     "count": "0x10B1",
     "addr": {
@@ -43882,7 +43882,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D9600.bin",
+    "path": "direct_sound_samples/080d9600.bin",
     "dir": "sound",
     "count": "0x4DA",
     "addr": {
@@ -43895,7 +43895,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080D9ADC.bin",
+    "path": "direct_sound_samples/080d9adc.bin",
     "dir": "sound",
     "count": "0x641",
     "addr": {
@@ -43908,7 +43908,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080DA120.bin",
+    "path": "direct_sound_samples/080da120.bin",
     "dir": "sound",
     "count": "0x9BB",
     "addr": {
@@ -43921,7 +43921,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080DAADC.bin",
+    "path": "direct_sound_samples/080daadc.bin",
     "dir": "sound",
     "count": "0xA73",
     "addr": {
@@ -43934,7 +43934,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080DB550.bin",
+    "path": "direct_sound_samples/080db550.bin",
     "dir": "sound",
     "count": "0x1346",
     "addr": {
@@ -43947,7 +43947,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080DC898.bin",
+    "path": "direct_sound_samples/080dc898.bin",
     "dir": "sound",
     "count": "0xBCA",
     "addr": {
@@ -43960,7 +43960,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080DD464.bin",
+    "path": "direct_sound_samples/080dd464.bin",
     "dir": "sound",
     "count": "0x94F",
     "addr": {
@@ -43973,7 +43973,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080DDDB4.bin",
+    "path": "direct_sound_samples/080dddb4.bin",
     "dir": "sound",
     "count": "0x98C",
     "addr": {
@@ -43986,7 +43986,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080DE740.bin",
+    "path": "direct_sound_samples/080de740.bin",
     "dir": "sound",
     "count": "0x705",
     "addr": {
@@ -43999,7 +43999,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080DEE48.bin",
+    "path": "direct_sound_samples/080dee48.bin",
     "dir": "sound",
     "count": "0xA8D",
     "addr": {
@@ -44012,7 +44012,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080DF8D8.bin",
+    "path": "direct_sound_samples/080df8d8.bin",
     "dir": "sound",
     "count": "0xBED",
     "addr": {
@@ -44025,7 +44025,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E04C8.bin",
+    "path": "direct_sound_samples/080e04c8.bin",
     "dir": "sound",
     "count": "0x5AC",
     "addr": {
@@ -44038,7 +44038,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E0A74.bin",
+    "path": "direct_sound_samples/080e0a74.bin",
     "dir": "sound",
     "count": "0xDC2",
     "addr": {
@@ -44051,7 +44051,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E1838.bin",
+    "path": "direct_sound_samples/080e1838.bin",
     "dir": "sound",
     "count": "0x4A4",
     "addr": {
@@ -44064,7 +44064,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E1CDC.bin",
+    "path": "direct_sound_samples/080e1cdc.bin",
     "dir": "sound",
     "count": "0x968",
     "addr": {
@@ -44077,7 +44077,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E2644.bin",
+    "path": "direct_sound_samples/080e2644.bin",
     "dir": "sound",
     "count": "0xFD1",
     "addr": {
@@ -44090,7 +44090,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E3618.bin",
+    "path": "direct_sound_samples/080e3618.bin",
     "dir": "sound",
     "count": "0x10B1",
     "addr": {
@@ -44103,7 +44103,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E46CC.bin",
+    "path": "direct_sound_samples/080e46cc.bin",
     "dir": "sound",
     "count": "0x3AD",
     "addr": {
@@ -44116,7 +44116,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E4A7C.bin",
+    "path": "direct_sound_samples/080e4a7c.bin",
     "dir": "sound",
     "count": "0x711",
     "addr": {
@@ -44129,7 +44129,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E5190.bin",
+    "path": "direct_sound_samples/080e5190.bin",
     "dir": "sound",
     "count": "0x334",
     "addr": {
@@ -44142,7 +44142,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E54C4.bin",
+    "path": "direct_sound_samples/080e54c4.bin",
     "dir": "sound",
     "count": "0x2EF1",
     "addr": {
@@ -44155,7 +44155,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E83B8.bin",
+    "path": "direct_sound_samples/080e83b8.bin",
     "dir": "sound",
     "count": "0x221",
     "addr": {
@@ -44168,7 +44168,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E85DC.bin",
+    "path": "direct_sound_samples/080e85dc.bin",
     "dir": "sound",
     "count": "0x389",
     "addr": {
@@ -44181,7 +44181,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E8968.bin",
+    "path": "direct_sound_samples/080e8968.bin",
     "dir": "sound",
     "count": "0x9AD",
     "addr": {
@@ -44194,7 +44194,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E9318.bin",
+    "path": "direct_sound_samples/080e9318.bin",
     "dir": "sound",
     "count": "0x3C5",
     "addr": {
@@ -44207,7 +44207,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E96E0.bin",
+    "path": "direct_sound_samples/080e96e0.bin",
     "dir": "sound",
     "count": "0x59D",
     "addr": {
@@ -44220,7 +44220,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080E9C80.bin",
+    "path": "direct_sound_samples/080e9c80.bin",
     "dir": "sound",
     "count": "0x47C",
     "addr": {
@@ -44233,7 +44233,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080EA0FC.bin",
+    "path": "direct_sound_samples/080ea0fc.bin",
     "dir": "sound",
     "count": "0xFD1",
     "addr": {
@@ -44246,7 +44246,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080EB0D0.bin",
+    "path": "direct_sound_samples/080eb0d0.bin",
     "dir": "sound",
     "count": "0xF72",
     "addr": {
@@ -44259,7 +44259,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080EC044.bin",
+    "path": "direct_sound_samples/080ec044.bin",
     "dir": "sound",
     "count": "0x2D1",
     "addr": {
@@ -44272,7 +44272,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080EC318.bin",
+    "path": "direct_sound_samples/080ec318.bin",
     "dir": "sound",
     "count": "0x77C4",
     "addr": {
@@ -44285,7 +44285,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080F3ADC.bin",
+    "path": "direct_sound_samples/080f3adc.bin",
     "dir": "sound",
     "count": "0x471",
     "addr": {
@@ -44298,7 +44298,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080F3F50.bin",
+    "path": "direct_sound_samples/080f3f50.bin",
     "dir": "sound",
     "count": "0x1318",
     "addr": {
@@ -44311,7 +44311,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080F5268.bin",
+    "path": "direct_sound_samples/080f5268.bin",
     "dir": "sound",
     "count": "0x9D91",
     "addr": {
@@ -44324,7 +44324,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080FEFFC.bin",
+    "path": "direct_sound_samples/080feffc.bin",
     "dir": "sound",
     "count": "0xFD1",
     "addr": {
@@ -44337,7 +44337,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/080FFFD0.bin",
+    "path": "direct_sound_samples/080fffd0.bin",
     "dir": "sound",
     "count": "0xCEC",
     "addr": {
@@ -44350,7 +44350,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08100CBC.bin",
+    "path": "direct_sound_samples/08100cbc.bin",
     "dir": "sound",
     "count": "0xE81",
     "addr": {
@@ -44363,7 +44363,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08101B40.bin",
+    "path": "direct_sound_samples/08101b40.bin",
     "dir": "sound",
     "count": "0xF2E",
     "addr": {
@@ -44376,7 +44376,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08102A70.bin",
+    "path": "direct_sound_samples/08102a70.bin",
     "dir": "sound",
     "count": "0xE12",
     "addr": {
@@ -44402,7 +44402,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081040C8.bin",
+    "path": "direct_sound_samples/081040c8.bin",
     "dir": "sound",
     "count": "0xE11",
     "addr": {
@@ -44415,7 +44415,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08104EDC.bin",
+    "path": "direct_sound_samples/08104edc.bin",
     "dir": "sound",
     "count": "0xAD8",
     "addr": {
@@ -44428,7 +44428,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081059B4.bin",
+    "path": "direct_sound_samples/081059b4.bin",
     "dir": "sound",
     "count": "0x1AE1",
     "addr": {
@@ -44454,7 +44454,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0810782C.bin",
+    "path": "direct_sound_samples/0810782c.bin",
     "dir": "sound",
     "count": "0xF77",
     "addr": {
@@ -44467,7 +44467,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081087A4.bin",
+    "path": "direct_sound_samples/081087a4.bin",
     "dir": "sound",
     "count": "0x2877",
     "addr": {
@@ -44480,7 +44480,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0810B01C.bin",
+    "path": "direct_sound_samples/0810b01c.bin",
     "dir": "sound",
     "count": "0xE11",
     "addr": {
@@ -44493,7 +44493,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0810BE30.bin",
+    "path": "direct_sound_samples/0810be30.bin",
     "dir": "sound",
     "count": "0x997",
     "addr": {
@@ -44506,7 +44506,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0810C7C8.bin",
+    "path": "direct_sound_samples/0810c7c8.bin",
     "dir": "sound",
     "count": "0x562",
     "addr": {
@@ -44519,7 +44519,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0810CD2C.bin",
+    "path": "direct_sound_samples/0810cd2c.bin",
     "dir": "sound",
     "count": "0x3851",
     "addr": {
@@ -44545,7 +44545,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08110C94.bin",
+    "path": "direct_sound_samples/08110c94.bin",
     "dir": "sound",
     "count": "0x1EA7",
     "addr": {
@@ -44558,7 +44558,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08112B3C.bin",
+    "path": "direct_sound_samples/08112b3c.bin",
     "dir": "sound",
     "count": "0x7FF",
     "addr": {
@@ -44571,7 +44571,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0811333C.bin",
+    "path": "direct_sound_samples/0811333c.bin",
     "dir": "sound",
     "count": "0x1094",
     "addr": {
@@ -44584,7 +44584,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081143D0.bin",
+    "path": "direct_sound_samples/081143d0.bin",
     "dir": "sound",
     "count": "0xB98",
     "addr": {
@@ -44597,7 +44597,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08114F68.bin",
+    "path": "direct_sound_samples/08114f68.bin",
     "dir": "sound",
     "count": "0xD31",
     "addr": {
@@ -44610,7 +44610,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08115C9C.bin",
+    "path": "direct_sound_samples/08115c9c.bin",
     "dir": "sound",
     "count": "0xEEF",
     "addr": {
@@ -44623,7 +44623,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08116B8C.bin",
+    "path": "direct_sound_samples/08116b8c.bin",
     "dir": "sound",
     "count": "0x332B",
     "addr": {
@@ -44636,7 +44636,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08119EB8.bin",
+    "path": "direct_sound_samples/08119eb8.bin",
     "dir": "sound",
     "count": "0x1F91",
     "addr": {
@@ -44649,7 +44649,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0811BE4C.bin",
+    "path": "direct_sound_samples/0811be4c.bin",
     "dir": "sound",
     "count": "0x1D4E",
     "addr": {
@@ -44662,7 +44662,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0811DB9C.bin",
+    "path": "direct_sound_samples/0811db9c.bin",
     "dir": "sound",
     "count": "0x1A4B",
     "addr": {
@@ -44675,7 +44675,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0811F5E8.bin",
+    "path": "direct_sound_samples/0811f5e8.bin",
     "dir": "sound",
     "count": "0xA91",
     "addr": {
@@ -44688,7 +44688,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0812007C.bin",
+    "path": "direct_sound_samples/0812007c.bin",
     "dir": "sound",
     "count": "0x551",
     "addr": {
@@ -44701,7 +44701,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081205D0.bin",
+    "path": "direct_sound_samples/081205d0.bin",
     "dir": "sound",
     "count": "0x1511",
     "addr": {
@@ -44714,7 +44714,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08121AE4.bin",
+    "path": "direct_sound_samples/08121ae4.bin",
     "dir": "sound",
     "count": "0x115B",
     "addr": {
@@ -44727,7 +44727,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08122C40.bin",
+    "path": "direct_sound_samples/08122c40.bin",
     "dir": "sound",
     "count": "0xA91",
     "addr": {
@@ -44740,7 +44740,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081236D4.bin",
+    "path": "direct_sound_samples/081236d4.bin",
     "dir": "sound",
     "count": "0xCF8",
     "addr": {
@@ -44753,7 +44753,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081243CC.bin",
+    "path": "direct_sound_samples/081243cc.bin",
     "dir": "sound",
     "count": "0x149E",
     "addr": {
@@ -44766,7 +44766,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0812586C.bin",
+    "path": "direct_sound_samples/0812586c.bin",
     "dir": "sound",
     "count": "0x15F1",
     "addr": {
@@ -44779,7 +44779,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08126E60.bin",
+    "path": "direct_sound_samples/08126e60.bin",
     "dir": "sound",
     "count": "0x213D",
     "addr": {
@@ -44792,7 +44792,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08128FA0.bin",
+    "path": "direct_sound_samples/08128fa0.bin",
     "dir": "sound",
     "count": "0x25B1",
     "addr": {
@@ -44805,7 +44805,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0812B554.bin",
+    "path": "direct_sound_samples/0812b554.bin",
     "dir": "sound",
     "count": "0x2B1",
     "addr": {
@@ -44818,7 +44818,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0812B808.bin",
+    "path": "direct_sound_samples/0812b808.bin",
     "dir": "sound",
     "count": "0x2B1",
     "addr": {
@@ -44831,7 +44831,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0812BABC.bin",
+    "path": "direct_sound_samples/0812babc.bin",
     "dir": "sound",
     "count": "0x277",
     "addr": {
@@ -44844,7 +44844,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0812BD34.bin",
+    "path": "direct_sound_samples/0812bd34.bin",
     "dir": "sound",
     "count": "0x2B2",
     "addr": {
@@ -44857,7 +44857,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0812BFE8.bin",
+    "path": "direct_sound_samples/0812bfe8.bin",
     "dir": "sound",
     "count": "0xF1",
     "addr": {
@@ -44870,7 +44870,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0812C0DC.bin",
+    "path": "direct_sound_samples/0812c0dc.bin",
     "dir": "sound",
     "count": "0x4ED1",
     "addr": {
@@ -44883,7 +44883,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08130FB0.bin",
+    "path": "direct_sound_samples/08130fb0.bin",
     "dir": "sound",
     "count": "0x6D1",
     "addr": {
@@ -44909,7 +44909,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0813269C.bin",
+    "path": "direct_sound_samples/0813269c.bin",
     "dir": "sound",
     "count": "0x1CF",
     "addr": {
@@ -44922,7 +44922,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0813286C.bin",
+    "path": "direct_sound_samples/0813286c.bin",
     "dir": "sound",
     "count": "0xDFB",
     "addr": {
@@ -44948,7 +44948,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08134C34.bin",
+    "path": "direct_sound_samples/08134c34.bin",
     "dir": "sound",
     "count": "0x1B1",
     "addr": {
@@ -44961,7 +44961,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08134DE8.bin",
+    "path": "direct_sound_samples/08134de8.bin",
     "dir": "sound",
     "count": "0x259",
     "addr": {
@@ -44987,7 +44987,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08135BB8.bin",
+    "path": "direct_sound_samples/08135bb8.bin",
     "dir": "sound",
     "count": "0x17B9",
     "addr": {
@@ -45013,7 +45013,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0813BEC4.bin",
+    "path": "direct_sound_samples/0813bec4.bin",
     "dir": "sound",
     "count": "0x9B1",
     "addr": {
@@ -45026,7 +45026,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0813C878.bin",
+    "path": "direct_sound_samples/0813c878.bin",
     "dir": "sound",
     "count": "0x3386",
     "addr": {
@@ -45039,7 +45039,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0813FC00.bin",
+    "path": "direct_sound_samples/0813fc00.bin",
     "dir": "sound",
     "count": "0x3031",
     "addr": {
@@ -45052,7 +45052,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08142C34.bin",
+    "path": "direct_sound_samples/08142c34.bin",
     "dir": "sound",
     "count": "0x3C2",
     "addr": {
@@ -45065,7 +45065,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08142FF8.bin",
+    "path": "direct_sound_samples/08142ff8.bin",
     "dir": "sound",
     "count": "0x81F",
     "addr": {
@@ -45104,7 +45104,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081447E8.bin",
+    "path": "direct_sound_samples/081447e8.bin",
     "dir": "sound",
     "count": "0xD6B",
     "addr": {
@@ -45143,7 +45143,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08146B98.bin",
+    "path": "direct_sound_samples/08146b98.bin",
     "dir": "sound",
     "count": "0x403C",
     "addr": {
@@ -45156,7 +45156,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0814ABD4.bin",
+    "path": "direct_sound_samples/0814abd4.bin",
     "dir": "sound",
     "count": "0x2C2E",
     "addr": {
@@ -45169,7 +45169,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0814D804.bin",
+    "path": "direct_sound_samples/0814d804.bin",
     "dir": "sound",
     "count": "0x242E",
     "addr": {
@@ -45182,7 +45182,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0814FC34.bin",
+    "path": "direct_sound_samples/0814fc34.bin",
     "dir": "sound",
     "count": "0x22FD",
     "addr": {
@@ -45195,7 +45195,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08151F34.bin",
+    "path": "direct_sound_samples/08151f34.bin",
     "dir": "sound",
     "count": "0x22F9",
     "addr": {
@@ -45221,7 +45221,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0815596C.bin",
+    "path": "direct_sound_samples/0815596c.bin",
     "dir": "sound",
     "count": "0x17EA",
     "addr": {
@@ -45247,7 +45247,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08157CE4.bin",
+    "path": "direct_sound_samples/08157ce4.bin",
     "dir": "sound",
     "count": "0x998",
     "addr": {
@@ -45260,7 +45260,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0815867C.bin",
+    "path": "direct_sound_samples/0815867c.bin",
     "dir": "sound",
     "count": "0x1DDB",
     "addr": {
@@ -45273,7 +45273,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0815A458.bin",
+    "path": "direct_sound_samples/0815a458.bin",
     "dir": "sound",
     "count": "0x9E8",
     "addr": {
@@ -45286,7 +45286,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0815AE40.bin",
+    "path": "direct_sound_samples/0815ae40.bin",
     "dir": "sound",
     "count": "0xF41",
     "addr": {
@@ -45299,7 +45299,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0815BD84.bin",
+    "path": "direct_sound_samples/0815bd84.bin",
     "dir": "sound",
     "count": "0x2E1",
     "addr": {
@@ -45312,7 +45312,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0815C068.bin",
+    "path": "direct_sound_samples/0815c068.bin",
     "dir": "sound",
     "count": "0x1DC0",
     "addr": {
@@ -45325,7 +45325,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0815DE28.bin",
+    "path": "direct_sound_samples/0815de28.bin",
     "dir": "sound",
     "count": "0x3C1",
     "addr": {
@@ -45338,7 +45338,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0815E1EC.bin",
+    "path": "direct_sound_samples/0815e1ec.bin",
     "dir": "sound",
     "count": "0x727",
     "addr": {
@@ -45351,7 +45351,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0815E914.bin",
+    "path": "direct_sound_samples/0815e914.bin",
     "dir": "sound",
     "count": "0x21AA",
     "addr": {
@@ -45364,7 +45364,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08160AC0.bin",
+    "path": "direct_sound_samples/08160ac0.bin",
     "dir": "sound",
     "count": "0x1F0B",
     "addr": {
@@ -45377,7 +45377,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081629CC.bin",
+    "path": "direct_sound_samples/081629cc.bin",
     "dir": "sound",
     "count": "0x66E",
     "addr": {
@@ -45390,7 +45390,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0816303C.bin",
+    "path": "direct_sound_samples/0816303c.bin",
     "dir": "sound",
     "count": "0x15FF",
     "addr": {
@@ -45403,7 +45403,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0816463C.bin",
+    "path": "direct_sound_samples/0816463c.bin",
     "dir": "sound",
     "count": "0x2047",
     "addr": {
@@ -45429,7 +45429,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08166EB4.bin",
+    "path": "direct_sound_samples/08166eb4.bin",
     "dir": "sound",
     "count": "0x1227",
     "addr": {
@@ -45442,7 +45442,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081680DC.bin",
+    "path": "direct_sound_samples/081680dc.bin",
     "dir": "sound",
     "count": "0x8F2",
     "addr": {
@@ -45455,7 +45455,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081689D0.bin",
+    "path": "direct_sound_samples/081689d0.bin",
     "dir": "sound",
     "count": "0x7C9",
     "addr": {
@@ -45468,7 +45468,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0816919C.bin",
+    "path": "direct_sound_samples/0816919c.bin",
     "dir": "sound",
     "count": "0x874",
     "addr": {
@@ -45481,7 +45481,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08169A10.bin",
+    "path": "direct_sound_samples/08169a10.bin",
     "dir": "sound",
     "count": "0x1402",
     "addr": {
@@ -45494,7 +45494,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0816AE14.bin",
+    "path": "direct_sound_samples/0816ae14.bin",
     "dir": "sound",
     "count": "0x1E2A",
     "addr": {
@@ -45507,7 +45507,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0816CC40.bin",
+    "path": "direct_sound_samples/0816cc40.bin",
     "dir": "sound",
     "count": "0x3240",
     "addr": {
@@ -45520,7 +45520,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0816FE80.bin",
+    "path": "direct_sound_samples/0816fe80.bin",
     "dir": "sound",
     "count": "0x1778",
     "addr": {
@@ -45533,7 +45533,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081715F8.bin",
+    "path": "direct_sound_samples/081715f8.bin",
     "dir": "sound",
     "count": "0xE8E",
     "addr": {
@@ -45559,7 +45559,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0817340C.bin",
+    "path": "direct_sound_samples/0817340c.bin",
     "dir": "sound",
     "count": "0x14AC",
     "addr": {
@@ -45572,7 +45572,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081748B8.bin",
+    "path": "direct_sound_samples/081748b8.bin",
     "dir": "sound",
     "count": "0x29D1",
     "addr": {
@@ -45585,7 +45585,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0817728C.bin",
+    "path": "direct_sound_samples/0817728c.bin",
     "dir": "sound",
     "count": "0xC6D",
     "addr": {
@@ -45598,7 +45598,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08177EFC.bin",
+    "path": "direct_sound_samples/08177efc.bin",
     "dir": "sound",
     "count": "0x20F1",
     "addr": {
@@ -45611,7 +45611,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08179FF0.bin",
+    "path": "direct_sound_samples/08179ff0.bin",
     "dir": "sound",
     "count": "0xEAD",
     "addr": {
@@ -45624,7 +45624,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0817AEA0.bin",
+    "path": "direct_sound_samples/0817aea0.bin",
     "dir": "sound",
     "count": "0x6AD",
     "addr": {
@@ -45637,7 +45637,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0817B550.bin",
+    "path": "direct_sound_samples/0817b550.bin",
     "dir": "sound",
     "count": "0x1A2F",
     "addr": {
@@ -45650,7 +45650,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0817CF80.bin",
+    "path": "direct_sound_samples/0817cf80.bin",
     "dir": "sound",
     "count": "0x2719",
     "addr": {
@@ -45663,7 +45663,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0817F69C.bin",
+    "path": "direct_sound_samples/0817f69c.bin",
     "dir": "sound",
     "count": "0x1784",
     "addr": {
@@ -45676,7 +45676,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08180E20.bin",
+    "path": "direct_sound_samples/08180e20.bin",
     "dir": "sound",
     "count": "0xA35",
     "addr": {
@@ -45702,7 +45702,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081839B8.bin",
+    "path": "direct_sound_samples/081839b8.bin",
     "dir": "sound",
     "count": "0x6A9",
     "addr": {
@@ -45728,7 +45728,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0818516C.bin",
+    "path": "direct_sound_samples/0818516c.bin",
     "dir": "sound",
     "count": "0x14B0",
     "addr": {
@@ -45741,7 +45741,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0818661C.bin",
+    "path": "direct_sound_samples/0818661c.bin",
     "dir": "sound",
     "count": "0x135",
     "addr": {
@@ -45767,7 +45767,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08189C70.bin",
+    "path": "direct_sound_samples/08189c70.bin",
     "dir": "sound",
     "count": "0x2286",
     "addr": {
@@ -45780,7 +45780,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0818BEF8.bin",
+    "path": "direct_sound_samples/0818bef8.bin",
     "dir": "sound",
     "count": "0x10F7",
     "addr": {
@@ -45793,7 +45793,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0818CFF0.bin",
+    "path": "direct_sound_samples/0818cff0.bin",
     "dir": "sound",
     "count": "0x2B16",
     "addr": {
@@ -45806,7 +45806,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0818FB08.bin",
+    "path": "direct_sound_samples/0818fb08.bin",
     "dir": "sound",
     "count": "0x31B9",
     "addr": {
@@ -45819,7 +45819,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08192CC4.bin",
+    "path": "direct_sound_samples/08192cc4.bin",
     "dir": "sound",
     "count": "0xE15",
     "addr": {
@@ -45832,7 +45832,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08193ADC.bin",
+    "path": "direct_sound_samples/08193adc.bin",
     "dir": "sound",
     "count": "0x9B6",
     "addr": {
@@ -45858,7 +45858,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0819478C.bin",
+    "path": "direct_sound_samples/0819478c.bin",
     "dir": "sound",
     "count": "0x5BB",
     "addr": {
@@ -45871,7 +45871,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08194D48.bin",
+    "path": "direct_sound_samples/08194d48.bin",
     "dir": "sound",
     "count": "0x19E5",
     "addr": {
@@ -45910,7 +45910,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/08199E30.bin",
+    "path": "direct_sound_samples/08199e30.bin",
     "dir": "sound",
     "count": "0x11BC",
     "addr": {
@@ -45923,7 +45923,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0819AFEC.bin",
+    "path": "direct_sound_samples/0819afec.bin",
     "dir": "sound",
     "count": "0x28D0",
     "addr": {
@@ -45936,7 +45936,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0819D8BC.bin",
+    "path": "direct_sound_samples/0819d8bc.bin",
     "dir": "sound",
     "count": "0x26E0",
     "addr": {
@@ -45949,7 +45949,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0819FF9C.bin",
+    "path": "direct_sound_samples/0819ff9c.bin",
     "dir": "sound",
     "count": "0x99E",
     "addr": {
@@ -45962,7 +45962,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081A093C.bin",
+    "path": "direct_sound_samples/081a093c.bin",
     "dir": "sound",
     "count": "0x34B",
     "addr": {
@@ -45975,7 +45975,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081A0C88.bin",
+    "path": "direct_sound_samples/081a0c88.bin",
     "dir": "sound",
     "count": "0x1DF8",
     "addr": {
@@ -45988,7 +45988,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081A2A80.bin",
+    "path": "direct_sound_samples/081a2a80.bin",
     "dir": "sound",
     "count": "0x79E",
     "addr": {
@@ -46001,7 +46001,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081A3220.bin",
+    "path": "direct_sound_samples/081a3220.bin",
     "dir": "sound",
     "count": "0x253C",
     "addr": {
@@ -46014,7 +46014,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081A575C.bin",
+    "path": "direct_sound_samples/081a575c.bin",
     "dir": "sound",
     "count": "0x102A",
     "addr": {
@@ -46027,7 +46027,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081A6788.bin",
+    "path": "direct_sound_samples/081a6788.bin",
     "dir": "sound",
     "count": "0x1573",
     "addr": {
@@ -46040,7 +46040,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081A7CFC.bin",
+    "path": "direct_sound_samples/081a7cfc.bin",
     "dir": "sound",
     "count": "0xDD2",
     "addr": {
@@ -46053,7 +46053,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081A8AD0.bin",
+    "path": "direct_sound_samples/081a8ad0.bin",
     "dir": "sound",
     "count": "0x14EE",
     "addr": {
@@ -46066,7 +46066,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081A9FC0.bin",
+    "path": "direct_sound_samples/081a9fc0.bin",
     "dir": "sound",
     "count": "0x180D",
     "addr": {
@@ -46079,7 +46079,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081AB7D0.bin",
+    "path": "direct_sound_samples/081ab7d0.bin",
     "dir": "sound",
     "count": "0x25B0",
     "addr": {
@@ -46092,7 +46092,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081ADD80.bin",
+    "path": "direct_sound_samples/081add80.bin",
     "dir": "sound",
     "count": "0x581",
     "addr": {
@@ -46105,7 +46105,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081AE304.bin",
+    "path": "direct_sound_samples/081ae304.bin",
     "dir": "sound",
     "count": "0x641F",
     "addr": {
@@ -46118,7 +46118,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081B4724.bin",
+    "path": "direct_sound_samples/081b4724.bin",
     "dir": "sound",
     "count": "0x5A2A",
     "addr": {
@@ -46131,7 +46131,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081BA150.bin",
+    "path": "direct_sound_samples/081ba150.bin",
     "dir": "sound",
     "count": "0x5A51",
     "addr": {
@@ -46144,7 +46144,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081BFBA4.bin",
+    "path": "direct_sound_samples/081bfba4.bin",
     "dir": "sound",
     "count": "0x5AA6",
     "addr": {
@@ -46157,7 +46157,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081C564C.bin",
+    "path": "direct_sound_samples/081c564c.bin",
     "dir": "sound",
     "count": "0x88F6",
     "addr": {
@@ -46170,7 +46170,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081CDF44.bin",
+    "path": "direct_sound_samples/081cdf44.bin",
     "dir": "sound",
     "count": "0x1F41",
     "addr": {
@@ -46183,7 +46183,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081CFE88.bin",
+    "path": "direct_sound_samples/081cfe88.bin",
     "dir": "sound",
     "count": "0x13B5",
     "addr": {
@@ -46196,7 +46196,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081D1240.bin",
+    "path": "direct_sound_samples/081d1240.bin",
     "dir": "sound",
     "count": "0x2313",
     "addr": {
@@ -46209,7 +46209,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081D3554.bin",
+    "path": "direct_sound_samples/081d3554.bin",
     "dir": "sound",
     "count": "0x2405",
     "addr": {
@@ -46222,7 +46222,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081D595C.bin",
+    "path": "direct_sound_samples/081d595c.bin",
     "dir": "sound",
     "count": "0x2C18",
     "addr": {
@@ -46235,7 +46235,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081D8574.bin",
+    "path": "direct_sound_samples/081d8574.bin",
     "dir": "sound",
     "count": "0x3968",
     "addr": {
@@ -46248,7 +46248,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081DBEDC.bin",
+    "path": "direct_sound_samples/081dbedc.bin",
     "dir": "sound",
     "count": "0x2BBA",
     "addr": {
@@ -46261,7 +46261,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081DEA98.bin",
+    "path": "direct_sound_samples/081dea98.bin",
     "dir": "sound",
     "count": "0x72A5",
     "addr": {
@@ -46274,7 +46274,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081E5D40.bin",
+    "path": "direct_sound_samples/081e5d40.bin",
     "dir": "sound",
     "count": "0xB843",
     "addr": {
@@ -46287,7 +46287,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081F1584.bin",
+    "path": "direct_sound_samples/081f1584.bin",
     "dir": "sound",
     "count": "0x7E01",
     "addr": {
@@ -46300,7 +46300,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/081F9388.bin",
+    "path": "direct_sound_samples/081f9388.bin",
     "dir": "sound",
     "count": "0x119A0",
     "addr": {
@@ -46313,7 +46313,7 @@
     "size": 1
   },
   {
-    "path": "direct_sound_samples/0820AD28.bin",
+    "path": "direct_sound_samples/0820ad28.bin",
     "dir": "sound",
     "count": "0x365",
     "addr": {

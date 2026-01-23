@@ -1,5 +1,5 @@
 #include "data/sprite_data.h"
-#include "sprites_AI/deorem.h"
+#include "sprites_ai/deorem.h"
 
 #include "constants/sprite.h"
 

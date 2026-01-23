@@ -2,9 +2,9 @@
 #include "gba.h"
 #include "oam.h"
 #include "clipdata.h"
-#include "sprites_AI/parasite.h"
-#include "sprites_AI/ridley.h"
-#include "sprites_AI/acid_worm.h"
+#include "sprites_ai/parasite.h"
+#include "sprites_ai/ridley.h"
+#include "sprites_ai/acid_worm.h"
 #include "data/sprite_data.h"
 
 #include "constants/audio.h"

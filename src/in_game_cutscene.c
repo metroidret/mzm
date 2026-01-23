@@ -1,5 +1,5 @@
 #include "in_game_cutscene.h"
-#include "sprites_AI/ruins_test.h"
+#include "sprites_ai/ruins_test.h"
 #include "dma.h"
 #include "gba.h"
 

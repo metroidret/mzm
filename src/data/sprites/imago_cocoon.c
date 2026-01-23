@@ -1,7 +1,7 @@
 #include "data/sprites/imago_cocoon.h"
 #include "macros.h"
 
-#include "sprites_AI/imago_cocoon.h"
+#include "sprites_ai/imago_cocoon.h"
 
 static const s16 sImagoCocoonMultiSpriteData_Idle_Frame0[IMAGO_COCOON_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
     [IMAGO_COCOON_PART_VINE_LEFT_VINE_DECORATIONS] = { 

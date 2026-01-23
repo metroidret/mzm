@@ -1,5 +1,5 @@
 #include "data/sprites/crocomire.h"
-#include "sprites_AI/crocomire.h"
+#include "sprites_ai/crocomire.h"
 #include "macros.h"
 
 static const s16 sCrocomireMultiSpriteData_Idle_Frame0[CROCOMIRE_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {

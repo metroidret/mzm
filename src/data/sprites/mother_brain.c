@@ -1,7 +1,7 @@
 #include "data/sprites/mother_brain.h"
 #include "macros.h"
 
-#include "sprites_AI/mother_brain.h"
+#include "sprites_ai/mother_brain.h"
 
 static const s16 sMotherBrainMultiSpriteData_Part0[MOTHER_BRAIN_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
     [MOTHER_BRAIN_PART_BEAM_SHOOTER] = {

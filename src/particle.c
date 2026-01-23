@@ -1,5 +1,5 @@
 #include "particle.h"
-#include "sprites_AI/ruins_test.h"
+#include "sprites_ai/ruins_test.h"
 #include "escape.h" // Required
 
 #include "data/projectile_data.h"

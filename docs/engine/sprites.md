@@ -7,7 +7,7 @@ A sprite refers broadly to entities during gameplay that aren't one of the follo
 - Particles
 
 They mostly consist of enemies, gimmicks or triggers placed in a room.\
-Their AI can be found in the `sprites_AI` folders, both in `include` and `src`, with their data being in `include/data/sprites` and `src/data/sprites`.
+Their AI can be found in the `sprites_ai` folders, both in `include` and `src`, with their data being in `include/data/sprites` and `src/data/sprites`.
 
 - [Sprites](#sprites)
   - [Sprite data](#sprite-data)

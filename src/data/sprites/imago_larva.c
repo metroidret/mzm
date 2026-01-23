@@ -1,7 +1,7 @@
 #include "data/sprites/imago_larva.h"
 #include "macros.h"
 
-#include "sprites_AI/imago_larva.h"
+#include "sprites_ai/imago_larva.h"
 
 static const s16 sImagoLarvaMultiSpriteData_Attacking_Frame0[IMAGO_LARVA_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
     [IMAGO_LARVA_PART_CLAWS] = {

@@ -109,7 +109,7 @@ Even though the EU version was released before the JP version, evidence from the
 - Samus's pose is checked before updating the highlighted weapon, which prevents highlighting or toggling missiles while dying (see [bugs_and_glitches.md](bugs_and_glitches.md#missiles-can-be-highlighted-and-toggled-while-dying))
   - `SamusExecutePoseMainLoop` in [samus.c](../src/samus.c)
 - Ziplines update Samus's horizontal movement direction (TODO: investigate the purpose of this)
-  - `ZiplineMoving` in [zipline.c](../src/sprites_AI/zipline.c)
+  - `ZiplineMoving` in [zipline.c](../src/sprites_ai/zipline.c)
 
 ### Data Differences
 
@@ -160,24 +160,24 @@ Even though the EU version was released before the JP version, evidence from the
 
 #### Rooms
 - In Brinstar room 7, a rock on BG2 was removed from above the red door (it was covered by BG1 except for 2 pixels)
-  - `sBrinstar_7_Bg2` in [Brinstar_7.c](../src/data/rooms/brinstar/Brinstar_7.c)
+  - `sBrinstar_7_Bg2` in [Brinstar_7.c](../src/data/rooms/brinstar/brinstar_7.c)
 - Also in Brinstar room 7, many BG1 tiling errors were fixed, mainly rocks that stick out or don't line up
-  - `sBrinstar_7_Bg1` in [Brinstar_7.c](../src/data/rooms/brinstar/Brinstar_7.c)
+  - `sBrinstar_7_Bg1` in [Brinstar_7.c](../src/data/rooms/brinstar/brinstar_7.c)
   - `sTileset_17_Gfx` and `sTileset_17_Tilemap` in [tilesets_set1.c](../src/data/tilesets/tilesets_set1.c)
 - Kraid room 17 doesn't use a room effect for the lava
   - `sKraidRoomEntries` in [rooms_data.c](../src/data/rooms_data.c)
-  - `sKraid_17_Clipdata` and `sKraid_17_Bg0` in [Kraid_17.c](../src/data/rooms/kraid/Kraid_17.c)
+  - `sKraid_17_Clipdata` and `sKraid_17_Bg0` in [Kraid_17.c](../src/data/rooms/kraid/kraid_17.c)
 - In Norfair room 20, a slope in the lava was moved one block to the right
-  - `sNorfair_20_Clipdata` and `sNorfair_20_Bg1` in [Norfair_20.c](../src/data/rooms/norfair/Norfair_20.c)
+  - `sNorfair_20_Clipdata` and `sNorfair_20_Bg1` in [Norfair_20.c](../src/data/rooms/norfair/norfair_20.c)
 - In Norfair rooms 43 and 51, a corner of the tunnel is more rounded
-  - `sNorfair_43_Clipdata` and `sNorfair_43_Bg1` in [Norfair_43.c](../src/data/rooms/norfair/Norfair_43.c)
-  - `sNorfair_51_Bg1` in [Norfair_51.c](../src/data/rooms/norfair/Norfair_51.c)
+  - `sNorfair_43_Clipdata` and `sNorfair_43_Bg1` in [Norfair_43.c](../src/data/rooms/norfair/norfair_43.c)
+  - `sNorfair_51_Bg1` in [Norfair_51.c](../src/data/rooms/norfair/norfair_51.c)
 - Also in Norfair room 43, an extra door transition block to the right of the tunnel was removed (possibly leftover from an earlier door placement)
-  - `sNorfair_43_Clipdata` in [Norfair_43.c](../src/data/rooms/norfair/Norfair_43.c)
+  - `sNorfair_43_Clipdata` in [Norfair_43.c](../src/data/rooms/norfair/norfair_43.c)
 - In Chozodia room 51, the speedboost blocks were changed to not reform
-  - `sChozodia_51_Clipdata` in [Chozodia_51.c](../src/data/rooms/chozodia/Chozodia_51.c)
+  - `sChozodia_51_Clipdata` in [Chozodia_51.c](../src/data/rooms/chozodia/chozodia_51.c)
 - In Chozodia room 77, the missile blocks were changed to never reform (this is what allows 9% completion on hard mode)
-  - `sChozodia_77_Clipdata` in [Chozodia_77.c](../src/data/rooms/chozodia/Chozodia_77.c)
+  - `sChozodia_77_Clipdata` in [Chozodia_77.c](../src/data/rooms/chozodia/chozodia_77.c)
 - In tileset 74 (used in the Chozo Ruins area), there are blocks used above/below gates with a red rectangle on them. These were changed to work like tileset 44 (Mother Ship area), where the rectangle is transparent and a separate block placed on BG2 has a red rectangle that uses the animated palette
   - `sTileset_74_Gfx` and `sTileset_74_Tilemap` in [tilesets_set7.c](../src/data/tilesets/tilesets_set7.c)
 
@@ -241,15 +241,15 @@ The beta ROMs include all of the debug related code (see [debug.md](debug.md)), 
   - `OptionsTimeAttackRecordsMainLoop` and `OptionsTimeAttackLoadBestTimeMessage` in [file_select.c](../src/menus/file_select.c)
   - `OptionsTimeAttackStage` and `OptionsOam` in [file_select.h](../include/menus/file_select.h)
 - The high priority flag is not set on the gadora before Kraid
-  - `GadoraInit` in [gadora.c](../src/sprites_AI/gadora.c)
+  - `GadoraInit` in [gadora.c](../src/sprites_ai/gadora.c)
 - Mecha Ridley's missile attack timer increments while Mecha Ridley is idle or curled up, which results in missiles being fired more often
-  - `MechaRidley` in [mecha_ridley.c](../src/sprites_AI/mecha_ridley.c)
+  - `MechaRidley` in [mecha_ridley.c](../src/sprites_ai/mecha_ridley.c)
 - Unknown item block light sets its top draw distance to 5 blocks instead of the bottom draw distance, which can cause part of the bottom half to not be drawn
-  - `UnknownItemBlock` in [unknown_item_block.c](../src/sprites_AI/unknown_item_block.c)
+  - `UnknownItemBlock` in [unknown_item_block.c](../src/sprites_ai/unknown_item_block.c)
 - Baristutes don't do a collision check before updating its pose, which can cause them to awkwardly walk/jump into walls
-  - `BaristuteIdle` in [baristute.c](../src/sprites_AI/baristute.c)
+  - `BaristuteIdle` in [baristute.c](../src/sprites_ai/baristute.c)
 - Kraid's nails target Samus differently
-  - `KraidNailMovement` and `KraidNail` in [kraid.c](../src/sprites_AI/kraid.c)
+  - `KraidNailMovement` and `KraidNail` in [kraid.c](../src/sprites_ai/kraid.c)
 
 ### Data Differences
 

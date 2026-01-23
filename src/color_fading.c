@@ -2,7 +2,7 @@
 #include "dma.h"
 #include "gba.h"
 #include "color_effects.h"
-#include "sprites_AI/ruins_test.h"
+#include "sprites_ai/ruins_test.h"
 
 #include "data/color_fading_data.h"
 #include "data/common_pals.h"

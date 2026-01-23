@@ -1,7 +1,7 @@
 #include "data/sprites/kraid.h"
 #include "macros.h"
 
-#include "sprites_AI/kraid.h"
+#include "sprites_ai/kraid.h"
 
 static const s16 sKraidMultiSpriteData_Rising_Frame0[KRAID_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
     [KRAID_PART_BELLY] = {
