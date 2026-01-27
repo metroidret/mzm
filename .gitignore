@@ -19,6 +19,7 @@
 linker.ld.pp
 include/**/*.s
 tools/*.txt
+tools/agbcc
 .vscode
 
 err.log

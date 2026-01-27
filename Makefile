@@ -63,6 +63,10 @@ endif
 BASEROM := $(TARGET)_baserom.gba
 TARGET := $(TARGET).gba
 
+# Default target
+.PHONY: all
+all: $(TARGET)
+
 ELF = $(TARGET:.gba=.elf)
 MAP = $(TARGET:.gba=.map)
 SHA1FILE = $(TARGET:.gba=.sha1)
@@ -91,10 +95,11 @@ SHA1SUM = sha1sum
 TAIL = tail
 
 # Tools
-GBAFIX = tools/gbafix/gbafix
+include make_tools.mk
+GBAFIX = $(TOOLS_DIR)/gbafix/gbafix
 PYTHON = python3
-EXTRACTOR = tools/extractor.py
-PREPROC = tools/preproc/preproc
+EXTRACTOR = $(PYTHON) $(TOOLS_DIR)/extractor.py
+PREPROC = $(TOOLS_DIR)/preproc/preproc
 
 # Flags
 ASFLAGS += -mcpu=arm7tdmi
@@ -108,10 +113,17 @@ CSRC = $(wildcard src/**.c) $(wildcard src/**/**.c) $(wildcard src/**/**/**.c) $
 ASMSRC = $(CSRC:.c=.s) $(wildcard asm/*.s) $(wildcard sound/*.s) $(wildcard sound/**/*.s) $(wildcard sound/**/**/*.s)
 OBJ = $(ASMSRC:.s=.o) 
 
-# Dynamically find agbcc path and its lib folder
-AGBCC_BIN := $(shell which agbcc)
-AGBCC_DIR := $(dir $(AGBCC_BIN))/
-AGBCC_LIB := $(abspath $(AGBCC_DIR))
+# Detect if agbcc was installed into the project
+ifneq (,$(wildcard tools/agbcc))
+	AGBCC_BIN := tools/agbcc/bin/agbcc
+	AGBCC_LIB := tools/agbcc/lib
+	CC = $(AGBCC_BIN)
+else
+	# Dynamically find agbcc path and its lib folder
+	AGBCC_BIN := $(shell which agbcc)
+	AGBCC_DIR := $(dir $(AGBCC_BIN))/
+	AGBCC_LIB := $(abspath $(AGBCC_DIR))
+endif
 
 LIBS := $(AGBCC_LIB)/libgcc.a $(AGBCC_LIB)/libc.a
 
@@ -125,8 +137,25 @@ else
 	MSG = @echo " "
 endif
 
-.PHONY: all
-all: $(TARGET)
+# Rules that do not require scanning for dependencies
+RULES_NO_SCAN += dump diff extract clean tidy
+
+# Generate tools before building anything
+SETUP_PREREQS ?= 1
+# Disable generating tools for rules that do not build anything
+ifneq (,$(MAKECMDGOALS))
+  ifeq (,$(filter-out $(RULES_NO_SCAN),$(MAKECMDGOALS)))
+    SETUP_PREREQS := 0
+  endif
+endif
+.SHELLSTATUS ?= 0
+ifeq ($(SETUP_PREREQS),1)
+  $(foreach line, $(shell $(MAKE) -f make_tools.mk | sed "s/ /__SPACE__/g"), $(info $(subst __SPACE__, ,$(line))))
+  ifneq ($(.SHELLSTATUS),0)
+    $(error Errors occurred while building tools. See error messages above for more details)
+  endif
+endif
+
 
 .PHONY: check
 check: all
@@ -144,10 +173,13 @@ diff: $(DUMPS)
 .PHONY: extract
 extract:
 	$(MSG) Extracting
-	$Q python3 tools/extractor.py -r $(REGION)
+	$Q$(EXTRACTOR) -r $(REGION)
 
 .PHONY: clean
-clean:
+clean: clean-tools tidy
+
+.PHONY: tidy
+tidy:
 	$(MSG) RM roms
 # Delete every gba file that doesn't end with baserom
 	$Qfind -type f -name "*.gba" -a ! -name "*baserom.gba" -delete
@@ -190,7 +222,7 @@ help:
 	@echo '  REGION=<region>: selects the region of the ROM, possible values are "us", "eu", "jp", "cn", "us_beta", and "eu_beta"'
 	@echo '  DEBUG=1: enables the debug code'
 
-$(TARGET): $(ELF) $(GBAFIX)
+$(TARGET): $(ELF)
 	$(MSG) OBJCOPY $@
 	$Q$(OBJCOPY) -O binary --gap-fill 0xff --pad-to $(PAD_TO) $< $@
 	$(MSG) GBAFIX $@
@@ -221,10 +253,6 @@ src/dma.s: src/dma.c
 
 src/sram/%.s: CFLAGS = -Werror -O1 -mthumb-interwork -fhex-asm -f2003-patch
 src/sram/%.s: src/sram/%.c
-
-tools/%: tools/%.c
-	$(MSG) HOSTCC $@
-	$Q$(HOSTCC) $< $(HOSTCFLAGS) $(HOSTCPPFLAGS) -o $@
 
 .PHONY: us us_debug us_beta eu eu_debug eu_beta jp jp_debug
 # cn cn_debug

@@ -41,8 +41,9 @@ The default built ROM is mzm_us.gba
 - Install `make` by running this command: `sudo apt-get install make`
 - Clone [agbcc](https://github.com/jiangzhengwenjz/agbcc) by running this command: `git clone https://github.com/jiangzhengwenjz/agbcc`
 - Enter the agbcc folder (run `cd agbcc`) and build it (run `./build.sh`)
-- Add agbcc to your path (`export PATH="<agbcc_path>:$PATH"`, where `<agbcc_path>` is the full path to the agbcc directory)
-- Locate yourself in the decompilation root, and then build preproc (run `cd tools/preproc && make`)
+- Either:
+  - Install agbcc into this project (by using its `./install.sh <path>` script, where `<path>` is the path to the root of this repository), or
+  - Add agbcc to your path (`export PATH="<agbcc_path>:$PATH"`, where `<agbcc_path>` is the full path to the agbcc directory)
 
 ## Build
 

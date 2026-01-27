@@ -1,4 +1,12 @@
 CXX ?= g++
+RM ?= rm -f
+ifeq ($(V),1)
+	Q =
+	MSG = @:
+else
+	Q = @
+	MSG = @echo " "
+endif
 
 CXXFLAGS := -std=c++11 -O2 -Wall -Wno-switch -Werror
 
@@ -20,7 +28,9 @@ all: preproc$(EXE)
 	@:
 
 preproc$(EXE): $(SRCS) $(HEADERS)
-	$(CXX) $(CXXFLAGS) $(SRCS) -o $@ $(LDFLAGS)
+	$(MSG) CXX $@
+	$Q$(CXX) $(CXXFLAGS) $(SRCS) -o $@ $(LDFLAGS)
 
 clean:
-	$(RM) preproc preproc.exe
+	$(MSG) RM preproc$(EXE)
+	$Q$(RM) preproc preproc.exe
