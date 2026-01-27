@@ -3,6 +3,8 @@
 
 #include "types.h"
 
-extern u8 gMonochromeBgFading;
+#include "constants/color_fading.h"
+
+extern MonochromeFading gMonochromeBgFading;
 
 #endif /* VISUAL_EFFECTS_STRUCT_H */

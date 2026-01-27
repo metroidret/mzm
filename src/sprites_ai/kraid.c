@@ -64,14 +64,14 @@
 
 // Kraid nail
 
-enum KraidNailType {
+MAKE_ENUM(u8, KraidNailType) {
     KRAID_NAIL_TYPE_SLOW_ROTATION,
     KRAID_NAIL_TYPE_FAST_ROTATION
 };
 
 #define KRAID_NAIL_POSE_MOVING 0x9
 
-static const struct FrameData* sKraidFrameDataPointers[KRAID_OAM_END] = {
+static const struct FrameData* sKraidFrameDataPointers[KRAID_OAM_COUNT] = {
     [KRAID_OAM_MOUTH_CLOSED] = sKraidOam_MouthClosed,
     [KRAID_OAM_MOUTH_CLOSED_BLINK] = sKraidOam_MouthClosedBlink,
     [KRAID_OAM_OPENING_MOUTH] = sKraidOam_OpeningMouth,

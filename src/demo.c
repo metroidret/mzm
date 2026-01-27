@@ -29,7 +29,7 @@ const struct SaveDemo* sDemoRamDataPointers[MAX_AMOUNT_OF_DEMOS] = {
     [12] = &sDemo12_Ram,
     [13] = &sDemo13_Ram,
     [14] = &sDemo14_Ram,
-    [15] = &sDemo15_Ram,
+    [15] = &sDemo15_Ram
 };
 
 /**

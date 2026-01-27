@@ -32,7 +32,7 @@
  * 
  * @param caa Clipdata Affecting Action
  */
-static void ElevatorStatueChangeTwoGroundCcaa(u8 caa)
+static void ElevatorStatueChangeTwoGroundCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;
@@ -51,7 +51,7 @@ static void ElevatorStatueChangeTwoGroundCcaa(u8 caa)
  * 
  * @param caa Clipdata Affecting Action
  */
-static void KraidElevatorStatueChangeCAA(u8 caa)
+static void KraidElevatorStatueChangeCAA(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;
@@ -223,7 +223,7 @@ static void KraidElevatorStatueFalling(void)
  * 
  * @param caa Clipdata Affecting Action
  */
-static void RidleyElevatorStatueChangeCcaa(u8 caa)
+static void RidleyElevatorStatueChangeCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;

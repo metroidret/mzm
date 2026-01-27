@@ -15,51 +15,51 @@ const u16 sChargeBeamPal[16] = INCBIN_U16("data/sprites/charge_beam.pal");
 
 static const u16 sChargeBeamOam_Visible_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-9, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x212, 8, 0),
+    OAM_ENTRY(-9, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x212, 8, 0)
 };
 
 static const u16 sChargeBeamOam_Visible_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-9, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x214, 8, 0),
+    OAM_ENTRY(-9, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x214, 8, 0)
 };
 
 static const u16 sChargeBeamOam_Visible_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-1, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x216, 8, 0),
-    OAM_ENTRY(-9, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x212, 8, 0),
+    OAM_ENTRY(-9, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x212, 8, 0)
 };
 
 static const u16 sChargeBeamGlowOam_Idle_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-16, -16, OAM_DIMS_32x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x202, 8, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x202, 8, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x202, 8, 0)
 };
 
 static const u16 sChargeBeamGlowOam_Idle_Frame2[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-16, -16, OAM_DIMS_32x16, OAM_NO_FLIP, 0x204, 8, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x206, 8, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sChargeBeamGlowOam_Idle_Frame4[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-16, -16, OAM_DIMS_32x16, OAM_NO_FLIP, 0x208, 8, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x20a, 8, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x20a, 8, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x20a, 8, 0)
 };
 
 static const u16 sChargeBeamGlowOam_Idle_Frame6[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-16, -16, OAM_DIMS_32x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x20e, 8, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x20e, 8, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x20e, 8, 0)
 };
 
 static const u16 sChargeBeamGlowOam_Idle_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x9b, 8, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x9b, 8, 0)
 };
 
 static const u16 sChargeBeamOam_Spawning_Frame0[OAM_DATA_SIZE(4)] = {
@@ -67,7 +67,7 @@ static const u16 sChargeBeamOam_Spawning_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x217, 8, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x217, 8, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x217, 8, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x217, 8, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x217, 8, 0)
 };
 
 static const u16 sChargeBeamOam_Spawning_Frame1[OAM_DATA_SIZE(9)] = {
@@ -80,7 +80,7 @@ static const u16 sChargeBeamOam_Spawning_Frame1[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-5, -5, OAM_DIMS_8x8, OAM_NO_FLIP, 0x238, 8, 0),
     OAM_ENTRY(-5, 1, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-17, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x237, 8, 0),
-    OAM_ENTRY(1, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x237, 8, 0),
+    OAM_ENTRY(1, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x237, 8, 0)
 };
 
 static const u16 sChargeBeamOam_Spawning_Frame2[OAM_DATA_SIZE(9)] = {
@@ -93,7 +93,7 @@ static const u16 sChargeBeamOam_Spawning_Frame2[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-6, 3, OAM_DIMS_8x16, OAM_Y_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-19, -6, OAM_DIMS_16x8, OAM_NO_FLIP, 0x237, 8, 0),
     OAM_ENTRY(3, -6, OAM_DIMS_16x8, OAM_X_FLIP, 0x237, 8, 0),
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x238, 8, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x238, 8, 0)
 };
 
 static const u16 sChargeBeamOam_Spawning_Frame3[OAM_DATA_SIZE(13)] = {
@@ -110,7 +110,7 @@ static const u16 sChargeBeamOam_Spawning_Frame3[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(0, -20, OAM_DIMS_8x16, OAM_X_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-20, 0, OAM_DIMS_16x8, OAM_Y_FLIP, 0x237, 8, 0),
     OAM_ENTRY(4, 0, OAM_DIMS_16x8, OAM_XY_FLIP, 0x237, 8, 0),
-    OAM_ENTRY(0, 4, OAM_DIMS_8x16, OAM_XY_FLIP, 0x218, 8, 0),
+    OAM_ENTRY(0, 4, OAM_DIMS_8x16, OAM_XY_FLIP, 0x218, 8, 0)
 };
 
 static const u16 sChargeBeamOam_Spawning_Frame4[OAM_DATA_SIZE(14)] = {
@@ -128,7 +128,7 @@ static const u16 sChargeBeamOam_Spawning_Frame4[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(5, 0, OAM_DIMS_16x8, OAM_XY_FLIP, 0x237, 8, 0),
     OAM_ENTRY(0, 5, OAM_DIMS_8x16, OAM_XY_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-8, -4, OAM_DIMS_16x8, OAM_NO_FLIP, 0x237, 8, 0),
-    OAM_ENTRY(-4, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
+    OAM_ENTRY(-4, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0)
 };
 
 static const u16 sChargeBeamOam_Spawning_Frame8[OAM_DATA_SIZE(16)] = {
@@ -148,7 +148,7 @@ static const u16 sChargeBeamOam_Spawning_Frame8[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-24, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21d, 8, 0),
     OAM_ENTRY(4, 12, OAM_DIMS_16x8, OAM_XY_FLIP, 0x210, 8, 0),
     OAM_ENTRY(12, 4, OAM_DIMS_8x16, OAM_XY_FLIP, 0x210, 8, 0),
-    OAM_ENTRY(-4, 16, OAM_DIMS_8x8, OAM_XY_FLIP, 0x23b, 8, 0),
+    OAM_ENTRY(-4, 16, OAM_DIMS_8x8, OAM_XY_FLIP, 0x23b, 8, 0)
 };
 
 static const u16 sChargeBeamOam_Spawning_Frame9[OAM_DATA_SIZE(16)] = {
@@ -168,7 +168,7 @@ static const u16 sChargeBeamOam_Spawning_Frame9[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(5, 16, OAM_DIMS_16x8, OAM_XY_FLIP, 0x210, 8, 0),
     OAM_ENTRY(16, 5, OAM_DIMS_8x16, OAM_XY_FLIP, 0x210, 8, 0),
     OAM_ENTRY(-21, 16, OAM_DIMS_16x8, OAM_Y_FLIP, 0x210, 8, 0),
-    OAM_ENTRY(-24, 5, OAM_DIMS_8x16, OAM_Y_FLIP, 0x210, 8, 0),
+    OAM_ENTRY(-24, 5, OAM_DIMS_8x16, OAM_Y_FLIP, 0x210, 8, 0)
 };
 
 static const u16 sChargeBeamOam_Spawning_Frame10[OAM_DATA_SIZE(17)] = {
@@ -189,12 +189,12 @@ static const u16 sChargeBeamOam_Spawning_Frame10[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(-4, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23b, 8, 0),
     OAM_ENTRY(-4, 24, OAM_DIMS_8x8, OAM_Y_FLIP, 0x23b, 8, 0),
     OAM_ENTRY(-32, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21d, 8, 0),
-    OAM_ENTRY(24, -4, OAM_DIMS_8x8, OAM_X_FLIP, 0x21d, 8, 0),
+    OAM_ENTRY(24, -4, OAM_DIMS_8x8, OAM_X_FLIP, 0x21d, 8, 0)
 };
 
 static const u16 sChargeBeamOam_Spawning_Frame11[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x236, 8, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x236, 8, 0)
 };
 
 const struct FrameData sChargeBeamOam_Visible[5] = {

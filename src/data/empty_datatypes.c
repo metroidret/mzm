@@ -23,7 +23,7 @@ const struct HatchData sHatchData_Empty = {
     .animationDurationCounter = 0,
     .xPosition = 0,
     .yPosition = 0,
-    .sourceDoor = UCHAR_MAX,
+    .sourceDoor = UCHAR_MAX
 };
 
 const struct Coordinates sCoordsX_Empty = {
@@ -34,7 +34,7 @@ const struct Coordinates sCoordsX_Empty = {
 const struct LockScreen sLockScreen_Empty = {
     .lock = FALSE,
     .xPositionCenter = USHORT_MAX,
-    .yPositionCenter = USHORT_MAX,
+    .yPositionCenter = USHORT_MAX
 };
 
 const struct BackgroundEffect sBackgroundEffect_Empty = {
@@ -144,7 +144,7 @@ const struct BldyData sBldyData_Empty = {
     .value = 0,
     .delayMax = 0,
     .delay = 0,
-    .intensity = 1,
+    .intensity = 1
 };
 
 const struct DefaultTransparency sDefaultTransparency_Empty = {

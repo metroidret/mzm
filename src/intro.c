@@ -235,7 +235,7 @@ static void IntroTextProcessOam(void)
  * @param indent Indent
  * @return u8 To document
  */
-static u8 IntroProcessText(u8 action, u16 indent)
+static u8 IntroProcessText(IntroTextAction action, u16 indent)
 {
     u8 dontProcess;
     u8 skipCharacter;
@@ -256,7 +256,7 @@ static u8 IntroProcessText(u8 action, u16 indent)
 
     switch (action)
     {
-        case INTRO_TEXT_ACTION_END:
+        case INTRO_TEXT_ACTION_COUNT:
             if (INTRO_DATA.unk_A != 1)
             {
                 if (INTRO_DATA.unk_A > 20)

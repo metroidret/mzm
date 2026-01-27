@@ -22,6 +22,13 @@
 #include "structs/screen_shake.h"
 #include "structs/sprite.h"
 
+MAKE_ENUM(u8, SpriteCollisionFlag) ENUM_FLAG {
+    SPRITE_COLLISION_FLAG_NONE      = 0,
+    SPRITE_COLLISION_FLAG_ON_TOP    = 1 << 0,
+    SPRITE_COLLISION_FLAG_ON_BOTTOM = 1 << 1,
+    SPRITE_COLLISION_FLAG_ON_LEFT   = 1 << 2,
+    SPRITE_COLLISION_FLAG_ON_RIGHT  = 1 << 3
+};
 
 /**
  * @brief e498 | 7c | Initialize the first sprite to be a location text if necessary
@@ -896,7 +903,7 @@ void SpriteUtilSamusAndSpriteCollision(void)
  * 
  * @param yPosition Y Position
  * @param xPosition X Position
- * @return u32 Block Top Edge Y Position
+ * @return CollisionResult Block Top Edge Y Position
  */
 u32 SpriteUtilCheckVerticalCollisionAtPosition(u16 yPosition, u16 xPosition)
 {
@@ -1146,10 +1153,10 @@ void SpriteUtilCheckCollisionAtPosition(u32 yPosition, u32 xPosition)
  * @param xPosition X Position
  * @return u32 Collision check
  */
-u32 SpriteUtilGetCollisionAtPosition(u16 yPosition, u16 xPosition)
+CollisionResult SpriteUtilGetCollisionAtPosition(u16 yPosition, u16 xPosition)
 {
     u32 clipdata;
-    u32 collision;
+    CollisionResult collision;
 
     clipdata = ClipdataProcess(yPosition, xPosition);
 

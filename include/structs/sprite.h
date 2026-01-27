@@ -10,15 +10,15 @@
 
 // Structs
 
-enum MultiSpriteDataElements {
+MAKE_ENUM(u8, MultiSpriteDataElements) {
     MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX,
     MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET,
     MULTI_SPRITE_DATA_ELEMENT_X_OFFSET,
 
-    MULTI_SPRITE_DATA_ELEMENT_END
+    MULTI_SPRITE_DATA_ELEMENT_COUNT
 };
 
-typedef const s16 (*MultiSpriteDataInfo_T)[MULTI_SPRITE_DATA_ELEMENT_END];
+typedef const s16 (*MultiSpriteDataInfo_T)[MULTI_SPRITE_DATA_ELEMENT_COUNT];
 
 struct MultiSpriteData {
     MultiSpriteDataInfo_T pData;

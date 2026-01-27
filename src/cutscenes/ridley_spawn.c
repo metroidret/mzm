@@ -51,7 +51,7 @@ static u8 RidleySpawnRidleyFlyingIn(void)
             SET_BACKDROP_COLOR(COLOR_BLACK);
             CutsceneSetBgcntPageData(sRidleySpawnPageData[3]);
 
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sRidleySpawnPageData[3].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sRidleySpawnPageData[3].bg, NON_GAMEPLAY_START_BG_POS);
             CutsceneReset();
             
             CUTSCENE_DATA.oam[0].xPosition = sRidleySpawnRidleyPositions[1].x;
@@ -282,9 +282,9 @@ static u8 RidleySpawnInit(void)
     CutsceneSetBgcntPageData(sRidleySpawnPageData[2]);
     CutsceneSetBgcntPageData(sRidleySpawnPageData[0]);
 
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sRidleySpawnPageData[1].bg, NON_GAMEPLAY_START_BG_POS);
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sRidleySpawnPageData[2].bg, NON_GAMEPLAY_START_BG_POS);
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sRidleySpawnPageData[0].bg, NON_GAMEPLAY_START_BG_POS);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sRidleySpawnPageData[1].bg, NON_GAMEPLAY_START_BG_POS);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sRidleySpawnPageData[2].bg, NON_GAMEPLAY_START_BG_POS);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sRidleySpawnPageData[0].bg, NON_GAMEPLAY_START_BG_POS);
     
     CutsceneReset();
 

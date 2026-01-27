@@ -58,7 +58,7 @@ MAKE_ENUM(u8, MessageId) {
 
     MESSAGE_COUNT,
 
-    MESSAGE_NONE = -1,
+    MESSAGE_NONE = -1
 };
 
 MAKE_ENUM(u8, FileScreenTextId) {
@@ -100,7 +100,7 @@ MAKE_ENUM(u8, FileScreenTextId) {
     FILE_SCREEN_TEXT_SOUND_TEST_UNLOCK,
     FILE_SCREEN_TEXT_NES_METROID_UNLOCK,
 
-    FILE_SCREEN_TEXT_END
+    FILE_SCREEN_TEXT_COUNT
 };
 
 MAKE_ENUM(u8, FileScreenMessageInfoId) {
@@ -280,7 +280,7 @@ MAKE_ENUM(s32, TextState) {
     TEXT_STATE_NEW_LINE =  1,
     TEXT_STATE_ENDED    =  2,
     TEXT_STATE_UNK_3    =  3,
-    TEXT_STATE_NEW_PAGE =  4,
+    TEXT_STATE_NEW_PAGE =  4
 };
 
 #endif /* TEXT_CONSTANTS_H */

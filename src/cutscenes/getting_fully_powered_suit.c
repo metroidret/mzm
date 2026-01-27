@@ -373,12 +373,12 @@ static u8 GettingFullyPoweredSuitInit(void)
     gWrittenToBldalpha_L = 0;
     gWrittenToBldalpha_H = BLDALPHA_MAX_VALUE;
 
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS, sGettingFullyPoweredSuitPageData[0].bg, NON_GAMEPLAY_START_BG_POS);
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS, sGettingFullyPoweredSuitPageData[1].bg, NON_GAMEPLAY_START_BG_POS);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X, sGettingFullyPoweredSuitPageData[0].bg, NON_GAMEPLAY_START_BG_POS);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X, sGettingFullyPoweredSuitPageData[1].bg, NON_GAMEPLAY_START_BG_POS);
 
     // Set background low for the scrolling
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_VOFS, sGettingFullyPoweredSuitPageData[0].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 10);
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_VOFS, sGettingFullyPoweredSuitPageData[1].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 10);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_Y, sGettingFullyPoweredSuitPageData[0].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 10);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_Y, sGettingFullyPoweredSuitPageData[1].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 10);
 
     // Initialize ring bottom
     CUTSCENE_DATA.oam[OAM_SLOT_RING_BOTTOM].xPosition = BLOCK_SIZE * 8 - QUARTER_BLOCK_SIZE;

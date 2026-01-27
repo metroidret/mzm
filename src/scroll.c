@@ -473,7 +473,7 @@ void ScrollUpdateCurrent(struct Coordinates* pCoords)
     data = src + 1;
 
     // Loop over each scroll in the room
-    for (i = 0; nbrScrolls != 0; data += SCROLL_SUB_DATA_END, nbrScrolls--)
+    for (i = 0; nbrScrolls != 0; data += SCROLL_SUB_DATA_COUNT, nbrScrolls--)
     {
         // Won't need to process if the current scroll is already filled
         if (i == ARRAY_SIZE(gCurrentScrolls))
@@ -943,13 +943,13 @@ void ScrollUpdateEffectAndHazePosition(struct Coordinates* pCoords)
                     gBg0YPosition = 0;
                     break;
 
-                case 0x43:
+                case BG_PROP_43:
                 case BG_PROP_DARK_ROOM:
                     gBg0XPosition = gBg1XPosition - pCoords->x;
                     gBg0YPosition = gBg1YPosition - pCoords->y + BLOCK_SIZE;
                     break;
 
-                case 0x44:
+                case BG_PROP_44:
                     position = FALSE;
 
                     gBg0XPosition = (gBg1XPosition - gWaitingSpacePiratesPosition.x) + BLOCK_SIZE * 32;
@@ -1203,13 +1203,15 @@ void ScrollBg2(struct Coordinates* pCoords)
     gCurrentRoomEntry.bg2Prop = gCurrentRoomEntry.bg2Prop;
     if (gCurrentRoomEntry.bg2Prop & BG_PROP_RLE_COMPRESSED)
     {
-        if (gCurrentRoomEntry.bg2Prop & 0x20)
+        if (gCurrentRoomEntry.bg2Prop & BG_PROP_CAN_SCROLL)
         {
             if (gCurrentRoomEntry.bg2Prop == BG_PROP_MOVING)
             {
                 position = gBg1XPosition + gBg2Movement.xOffset;
                 if (position < 0)
+                {
                     position = 0;
+                }
                 else
                 {
                     size = (gBgPointersAndDimensions.backgrounds[2].width - SCREEN_SIZE_X_BLOCKS) * BLOCK_SIZE;
@@ -1221,7 +1223,9 @@ void ScrollBg2(struct Coordinates* pCoords)
 
                 position = gBg1YPosition + gBg2Movement.yOffset;
                 if (position < 0)
+                {
                     position = 0;
+                }
                 else
                 {
                     size = (gBgPointersAndDimensions.backgrounds[2].height - SCREEN_SIZE_Y_BLOCKS) * BLOCK_SIZE;

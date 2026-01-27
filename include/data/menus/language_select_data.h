@@ -13,7 +13,7 @@ extern const u32 sLanguageSelectTileTable[95];
 
 extern const struct LanguageColorAnimation sInitialLanguageColorAnimation;
 extern const u8 sLanguageSelectGameModeSub1Values[3];
-extern const u16 sLanguageSelectLanguageTileTableOffsets[LANGUAGE_END - LANGUAGE_ENGLISH];
+extern const u16 sLanguageSelectLanguageTileTableOffsets[LANGUAGE_COUNT - LANGUAGE_ENGLISH];
 extern const u8 sLanguageTextAnimationPaletteRows[14];
 
 #endif // REGION_EU

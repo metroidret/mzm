@@ -30,7 +30,7 @@
  * 
  * @param caa Clipdata Affecting Action
  */
-static void BossStatusSetWallBehindSamusCollision(u8 caa)
+static void BossStatusSetWallBehindSamusCollision(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;
@@ -62,7 +62,7 @@ static void BossStatusSetWallBehindSamusCollision(u8 caa)
  * 
  * @param caa Clipdata Affecting Action 
  */
-static void KraidStatueHorizontalLignThreeChangeCcaa(u8 caa)
+static void KraidStatueHorizontalLignThreeChangeCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;
@@ -85,7 +85,7 @@ static void KraidStatueHorizontalLignThreeChangeCcaa(u8 caa)
  * 
  * @param caa Clipdata Affecting Action
  */
-static void KraidStatueInsideChangeCcaa(u8 caa)
+static void KraidStatueInsideChangeCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;
@@ -311,7 +311,7 @@ static void KraidStatueOpening(void)
  * 
  * @param caa Clipdata Affecting Action
  */
-static void RidleyStatueChangeThreeCcaa(u8 caa)
+static void RidleyStatueChangeThreeCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;
@@ -332,7 +332,7 @@ static void RidleyStatueChangeThreeCcaa(u8 caa)
  * 
  * @param caa Clipdata affecting action
  */
-static void RidleyStatueInsideChangeCcaa(u8 caa)
+static void RidleyStatueInsideChangeCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;

@@ -20,7 +20,7 @@ static const u8* sPlayerNumbersStringPointers[4] = {
     [0] = sPlayer1String,
     [1] = sPlayer2String,
     [2] = sPlayer3String,
-    [3] = sPlayer4String,
+    [3] = sPlayer4String
 };
 
 /**

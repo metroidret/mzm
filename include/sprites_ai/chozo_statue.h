@@ -2,12 +2,15 @@
 #define CHOZO_STATUE_AI_H
 
 #include "types.h"
+#include "macros.h"
 
-enum ChozoStatueBehavior {
+#include "constants/sprite.h"
+
+MAKE_ENUM(u8, ChozoStatueBehavior) {
     CHOZO_STATUE_BEHAVIOR_ITEM,
     CHOZO_STATUE_BEHAVIOR_REFILL,
     CHOZO_STATUE_BEHAVIOR_HINT,
-    CHOZO_STATUE_BEHAVIOR_HINT_TAKEN,
+    CHOZO_STATUE_BEHAVIOR_HINT_TAKEN
 };
 
 #define CHOZO_STATUE_POSE_IDLE 0x9
@@ -26,14 +29,14 @@ enum ChozoStatueBehavior {
 
 // Chozo statue part
 
-enum ChozoStatuePart {
+MAKE_ENUM(u8, ChozoStatuePartId) {
     CHOZO_STATUE_PART_ARM,
     CHOZO_STATUE_PART_GLOW,
     CHOZO_STATUE_PART_EYE,
     CHOZO_STATUE_PART_LEG,
     CHOZO_STATUE_PART_HEAD,
 
-    CHOZO_STATUE_PART_END
+    CHOZO_STATUE_PART_COUNT
 };
 
 #define CHOZO_STATUE_PART_POSE_ARM_CHECK_GRAB_SAMUS_HINT 0x9
@@ -59,9 +62,9 @@ enum ChozoStatuePart {
 #define CHOZO_BALL_POSE_REVEALING 0x67
 
 #ifndef CHOZO_STATUE_IGNORE_FUNCTIONS
-void ChozoStatueRegisterItem(u8 spriteId);
+void ChozoStatueRegisterItem(PrimarySprite spriteId);
 void ChozoStatueSetDirection(void);
-u8 ChozoStatueGetBehavior(u8 spriteId);
+ChozoStatueBehavior ChozoStatueGetBehavior(PrimarySprite spriteId);
 void ChozoStatue(void);
 void ChozoStatuePart(void);
 void ChozoStatueRefill(void);

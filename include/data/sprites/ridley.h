@@ -6,7 +6,7 @@
 
 #include "structs/sprite.h"
 
-enum RidleyOam {
+MAKE_ENUM(u8, RidleyOam) {
     RIDLEY_OAM_IDLE,
     RIDLEY_OAM_SPITTING_FIREBALLS,
     RIDLEY_OAM_TURNING_AROUND_FIRST_PART,
@@ -41,7 +41,7 @@ enum RidleyOam {
     RIDLEY_OAM_FIREBALL_SMALL,
     RIDLEY_OAM_FIREBALL_BIG,
 
-    RIDLEY_OAM_END
+    RIDLEY_OAM_COUNT
 };
 
 extern const struct MultiSpriteData sRidleyMultiSpriteData_Idle[6];

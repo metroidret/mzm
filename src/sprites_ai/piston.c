@@ -23,7 +23,7 @@
  * 
  * @param caa Clipdata affecting action
  */
-static void PistonChangeBodyClipdata(u8 caa)
+static void PistonChangeBodyClipdata(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;
@@ -49,7 +49,7 @@ static void PistonChangeBodyClipdata(u8 caa)
  * 
  * @param caa Clipdata affecting action
  */
-static void PistonChangeOneBelowClipdata(u8 caa)
+static void PistonChangeOneBelowClipdata(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;
@@ -66,7 +66,7 @@ static void PistonChangeOneBelowClipdata(u8 caa)
  * 
  * @param caa Clipdata affecting action
  */
-static void PistonChangeOneUpperClipdata(u8 caa)
+static void PistonChangeOneUpperClipdata(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;

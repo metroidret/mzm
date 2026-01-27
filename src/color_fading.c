@@ -31,9 +31,9 @@
 #include "structs/visual_effects.h"
 #include "structs/room.h"
 
-extern u8 sHazeData[EFFECT_HAZE_END][4];
+extern u8 sHazeData[EFFECT_HAZE_COUNT][4];
 
-static ColorFadingFunc_T sColorFadingFunctionPointers[COLOR_FADING_FUNCTION_END] = {
+static ColorFadingFunc_T sColorFadingFunctionPointers[COLOR_FADING_FUNCTION_COUNT] = {
     [COLOR_FADING_FUNCTION_EMPTY] = ColorFadingFunction_Empty,
     [COLOR_FADING_FUNCTION_1] = unk_5bd58,
     [COLOR_FADING_FUNCTION_2] = unk_5bdc8,
@@ -94,7 +94,7 @@ u8 ColorFadingUpdate(void)
  * @param color Color
  * @return u8 bool, ended
  */
-u8 unk_5bd58(u8 stage, u8 color)
+u8 unk_5bd58(ColorFadingStage stage, u8 color)
 {
     switch (stage)
     {
@@ -129,7 +129,7 @@ u8 unk_5bd58(u8 stage, u8 color)
  * @param color Color
  * @return u8 bool, ended
  */
-u8 unk_5bdc8(u8 stage, u8 color)
+u8 unk_5bdc8(ColorFadingStage stage, u8 color)
 {
     switch (stage)
     {
@@ -177,7 +177,7 @@ u8 unk_5bdc8(u8 stage, u8 color)
  * @param color Color
  * @return u8 bool, ended
  */
-u8 unk_5be7c(u8 stage, u8 color)
+u8 unk_5be7c(ColorFadingStage stage, u8 color)
 {
     switch (stage)
     {
@@ -204,7 +204,7 @@ u8 unk_5be7c(u8 stage, u8 color)
  * @param color Color
  * @return u8 bool, ended
  */
-u8 ColorFadingFunction_Empty(u8 stage, u8 color)
+u8 ColorFadingFunction_Empty(ColorFadingStage stage, u8 color)
 {
     return TRUE;
 }
@@ -252,7 +252,7 @@ void ColorFadingTransferPaletteOnTransition(void)
  * 
  * @param request Request
  */
-void StartEffectForCutscene(u8 request)
+void StartEffectForCutscene(EffectCutscene request)
 {
     switch (request)
     {
@@ -309,7 +309,7 @@ void StartEffectForCutscene(u8 request)
  * 
  * @param type Type
  */
-void ColorFadingStart(u8 type)
+void ColorFadingStart(ColorFadingEffect type)
 {
     gColorFading.type = type;
     gColorFading.stage = 0;
@@ -822,8 +822,8 @@ u8 ColorFadingProcess_TourianEscape(void)
             break;
 
         case 1:
-            if (gAnimatedGraphicsEntry.palette != 0)
-                gAnimatedGraphicsEntry.palette = 0;
+            if (gAnimatedGraphicsEntry.palette != ANIMATED_PALETTE_ID_NONE)
+                gAnimatedGraphicsEntry.palette = ANIMATED_PALETTE_ID_NONE;
 
             gColorFading.workTimer = 0;
             gColorFading.stage++;
@@ -861,8 +861,8 @@ u8 ColorFadingProcess_GettingFullyPowered(void)
             break;
 
         case 1:
-            if (gAnimatedGraphicsEntry.palette != 0)
-                gAnimatedGraphicsEntry.palette = 0;
+            if (gAnimatedGraphicsEntry.palette != ANIMATED_PALETTE_ID_NONE)
+                gAnimatedGraphicsEntry.palette = ANIMATED_PALETTE_ID_NONE;
 
             gColorFading.unk_3 = 0;
             gColorFading.stage++;
@@ -913,8 +913,8 @@ u8 ColorFadingProcess_BeforeRidleySpawn(void)
             break;
 
         case 1:
-            if (gAnimatedGraphicsEntry.palette != 0)
-                gAnimatedGraphicsEntry.palette = 0;
+            if (gAnimatedGraphicsEntry.palette != ANIMATED_PALETTE_ID_NONE)
+                gAnimatedGraphicsEntry.palette = ANIMATED_PALETTE_ID_NONE;
 
             gColorFading.unk_3 = 0;
             gColorFading.stage++;
@@ -956,8 +956,8 @@ u8 ColorFadingProcess_StatueOpening(void)
             if (gCurrentArea == AREA_KRAID || gCurrentArea == AREA_RIDLEY)
                 FadeCurrentInsertMusicQueueCurrent(CONVERT_SECONDS(1.f), MUSIC_STATUE_ROOM_OPENED, 0);
 
-            if (gAnimatedGraphicsEntry.palette != 0)
-                gAnimatedGraphicsEntry.palette = 0;
+            if (gAnimatedGraphicsEntry.palette != ANIMATED_PALETTE_ID_NONE)
+                gAnimatedGraphicsEntry.palette = ANIMATED_PALETTE_ID_NONE;
 
             gColorFading.stage++;
             break;
@@ -995,8 +995,8 @@ u8 ColorFadingProcess_BeforeIntroText(void)
             break;
 
         case 1:
-            if (gAnimatedGraphicsEntry.palette != 0)
-                gAnimatedGraphicsEntry.palette = 0;
+            if (gAnimatedGraphicsEntry.palette != ANIMATED_PALETTE_ID_NONE)
+                gAnimatedGraphicsEntry.palette = ANIMATED_PALETTE_ID_NONE;
 
             gColorFading.stage++;
             break;
@@ -1049,8 +1049,8 @@ u8 ColorFadingProcess_BeforeBlueShip(void)
             break;
 
         case 1:
-            if (gAnimatedGraphicsEntry.palette != 0)
-                gAnimatedGraphicsEntry.palette = 0;
+            if (gAnimatedGraphicsEntry.palette != ANIMATED_PALETTE_ID_NONE)
+                gAnimatedGraphicsEntry.palette = ANIMATED_PALETTE_ID_NONE;
 
             gColorFading.stage++;
             break;
@@ -1260,7 +1260,7 @@ u8 ColorFadingUpdate_DoorTransition(void)
  */
 void ColorFadingApplyMonochrome(void)
 {
-    if (gMonochromeBgFading == 0 || gMonochromeBgFading == MONOCHROME_FADING_ENDED)
+    if (gMonochromeBgFading == MONOCHROME_FADING_NONE || gMonochromeBgFading == MONOCHROME_FADING_ENDED)
         return;
 
     gColorFading.useSecondColorSet = TRUE;
@@ -1278,9 +1278,9 @@ void ColorFadingApplyMonochrome(void)
         if (gMonochromeBgFading == MONOCHROME_FADING_BLACK)
         {
             ColorFadingStart(COLOR_FADING_TO_BLACK);
-            if (gCurrentHazeValue != 0)
+            if (gCurrentHazeValue != HAZE_VALUE_NONE)
             {
-                gCurrentHazeValue = 0;
+                gCurrentHazeValue = HAZE_VALUE_NONE;
                 unk_5d09c();
             }
         }
@@ -1290,7 +1290,7 @@ void ColorFadingApplyMonochrome(void)
         }
         else
         {
-            gMonochromeBgFading = 0;
+            gMonochromeBgFading = MONOCHROME_FADING_NONE;
         }
 
         unk_5b340();

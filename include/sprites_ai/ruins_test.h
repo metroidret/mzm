@@ -2,8 +2,9 @@
 #define RUINS_TEST_AI_H
 
 #include "types.h"
+#include "macros.h"
 
-enum RuinsTestFightStage {
+MAKE_ENUM(u8, RuinsTestFightStage) {
     RUINS_TEST_FIGHT_STAGE_ON_GOING,
     RUINS_TEST_FIGHT_STAGE_LAST_SYMBOL_HIT,
     RUINS_TEST_FIGHT_STAGE_GHOST_AT_CENTER,

@@ -3,6 +3,9 @@
 
 #include "types.h"
 
+#include "constants/block.h"
+#include "constants/text.h"
+
 #define MAX_AMOUNT_OF_MAKE_SOLID_BLOCKS 64
 #define MAX_AMOUNT_OF_BROKEN_BLOCKS 48
 #define MAX_AMOUNT_OF_BOMB_CHAINS 4
@@ -10,7 +13,7 @@
 struct BrokenBlock {
     boolu8 broken;
     u8 stage;
-    u8 type;
+    BlockType type;
     u8 xPosition;
     u8 yPosition;
     u16 timer;
@@ -27,7 +30,7 @@ struct BombChain {
     u8 currentOffset;
     u8 srcXPosition; 
     u8 srcYPosition;
-    u8 type:3;
+    BombChainType type:3;
     u8 padding:3;
     u8 flipped:1;
     u8 unk:1;
@@ -41,9 +44,9 @@ struct TankList {
 };
 
 struct BlockBehavior {
-    u8 lifeType;
-    u8 subType;
-    u8 type;
+    BlockLifeType lifeType;
+    BlockSubType subType;
+    BlockType type;
     u8 isSpeedboost:4;
     u8 isBombChain:4;
 };
@@ -54,9 +57,9 @@ struct BombChainReverseData {
 };
 
 struct TankBehavior {
-    u8 itemType;
+    ItemType itemType;
     boolu8 underwater;
-    u8 messageID;
+    MessageId messageId;
     u16 revealedClipdata;
 };
 

@@ -47,8 +47,8 @@ struct SaveFileInfo {
     u8 hasSaved;
     s8 completedGame;
     s8 introPlayed;
-    s8 language;
-    u8 difficulty;
+    Language language;
+    Difficulty difficulty;
     u8 timeAttack;
 };
 

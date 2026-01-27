@@ -11,68 +11,68 @@ const u16 sTitleScreenUnselectedMenuPal[1 * 16] = INCBIN_U16("data/menus/title_s
 
 static const u16 sTitleScreenOam_Comet_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x0, 14, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x0, 14, 0)
 };
 
 static const u16 sTitleScreenOam_Comet_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2, 14, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2, 14, 0)
 };
 
 static const u16 sTitleScreenOam_Comet_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x4, 14, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x4, 14, 0)
 };
 
 static const u16 sTitleScreenOam_CometFlying_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(0, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x8, 14, 0),
-    OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x26, 14, 0),
+    OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x26, 14, 0)
 };
 
 static const u16 sTitleScreenOam_SparkleIdle_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xa, 14, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xa, 14, 0)
 };
 
 static const u16 sTitleScreenOam_SparkleIdle_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xc, 14, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xc, 14, 0)
 };
 
 static const u16 sTitleScreenOam_SparkleIdle_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xe, 14, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xe, 14, 0)
 };
 
 static const u16 sTitleScreenOam_SparkleIdle_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x10, 14, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x10, 14, 0)
 };
 
 static const u16 sTitleScreenOam_SparkleDisappearing_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xa, 14, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xa, 14, 0)
 };
 
 static const u16 sTitleScreenOam_SparkleDisappearing_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xc, 14, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xc, 14, 0)
 };
 
 static const u16 sTitleScreenOam_SparkleDisappearing_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xe, 14, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xe, 14, 0)
 };
 
 static const u16 sTitleScreenOam_SparkleDisappearing_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x12, 14, 0),
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x12, 14, 0)
 };
 
 static const u16 sTitleScreenOam_SparkleDisappearing_Frame4[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x16, 14, 0),
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x16, 14, 0)
 };
 
 static const struct FrameData sTitleScreenOam_Comet[4] = {
@@ -240,8 +240,8 @@ const struct MenuOamData sTitleScreenBottomSparkleBaseOam = {
     .unk_E = 0 
 };
 
-const struct OamArray sTitleScreenOam[TITLE_SCREEN_OAM_ID_END] = {
-    [0] = {
+const struct OamArray sTitleScreenOam[TITLE_SCREEN_OAM_ID_COUNT] = {
+    [TITLE_SCREEN_OAM_ID_NONE] = {
         .pOam = sTitleScreenOam_Comet,
         .preAction = OAM_ARRAY_PRE_ACTION_NONE
     },
@@ -268,5 +268,5 @@ const struct OamArray sTitleScreenOam[TITLE_SCREEN_OAM_ID_END] = {
     [TITLE_SCREEN_OAM_ID_SPARKLE_DISAPPEARING] = {
         .pOam = sTitleScreenOam_SparkleDisappearing,
         .preAction = OAM_ARRAY_PRE_ACTION_KILL_AFTER_END
-    },
+    }
 };

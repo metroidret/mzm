@@ -1,7 +1,10 @@
 #ifndef POWER_BOMB_EXPLOSION_CONSTANTS_H
 #define POWER_BOMB_EXPLOSION_CONSTANTS_H
 
-enum PowerBombState {
+#include "types.h"
+#include "macros.h"
+
+MAKE_ENUM(u8, PowerBombState) {
     PB_STATE_NONE,
     PB_STATE_UNK_1,
     PB_STATE_UNK_2,

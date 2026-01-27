@@ -27,7 +27,7 @@ static void PowerBombExplosionSet0x12To0(void);
 static void PowerBombExplosionBegin(void);
 static void PowerBombExplosionEnd(void);
 
-extern u8 sHazeData[EFFECT_HAZE_END][4];
+extern u8 sHazeData[EFFECT_HAZE_COUNT][4];
 
 /**
  * 5745c | 48 | Main loop for the power bomb explosion

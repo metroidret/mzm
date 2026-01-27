@@ -4,7 +4,7 @@
 #include "constants/connection.h"
 #include "in_game_cutscene.h"
 
-const struct InGameCutsceneData sInGameCutsceneData[IGC_END] = {
+const struct InGameCutsceneData sInGameCutsceneData[IGC_COUNT] = {
     [0] = {
         .unk_0 = 1,
         .area = SCHAR_MAX,

@@ -27,7 +27,7 @@ extern const struct RoomEntryRom* sAreaRoomEntryPointers[AREA_ENTRY_COUNT];
 
 extern const u32* sMinimapDataPointers[AREA_COUNT];
 
-static const u8* sBootDebugCutsceneBTextPointers[CUTSCENE_END] = {
+static const u8* sBootDebugCutsceneBTextPointers[CUTSCENE_COUNT] = {
     [CUTSCENE_NONE] =                    sBootDebug_Cutscene_Blank_Text,
     [CUTSCENE_INTRO_TEXT] =              sBootDebug_CutsceneB_StartMonologue_Text,
     [CUTSCENE_MOTHERSHIP_MONOLOGUE] =    sBootDebug_CutsceneB_ShotDownMonologue1_Text,
@@ -1487,7 +1487,7 @@ void BootDebugModeMainLoop(void)
                 else if (gChangedInput & KEY_UP)
                 {
                     gLanguage++;
-                    if (gLanguage >= LANGUAGE_END)
+                    if (gLanguage >= LANGUAGE_COUNT)
                         gLanguage = 0;
                     updateTextAndEvents = TRUE;
                 }
@@ -1496,7 +1496,7 @@ void BootDebugModeMainLoop(void)
                     if (gLanguage != 0)
                         gLanguage--;
                     else
-                        gLanguage = LANGUAGE_END - 1;
+                        gLanguage = LANGUAGE_COUNT - 1;
                     updateTextAndEvents = TRUE;
                 }
                 break;
@@ -1508,7 +1508,7 @@ void BootDebugModeMainLoop(void)
                 else if (gChangedInput & KEY_UP)
                 {
                     gDifficulty++;
-                    if (gDifficulty >= DIFF_END)
+                    if (gDifficulty >= DIFF_COUNT)
                         gDifficulty = DIFF_EASY;
                     updateTextAndEvents = TRUE;
                 }

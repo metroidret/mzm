@@ -5,7 +5,7 @@
 #include "macros.h"
 
 MAKE_ENUM(u8, ProjectileStatus) ENUM_FLAG {
-    PROJ_STATUS_NONE                   = 0 << 0,
+    PROJ_STATUS_NONE                   = 0,
     PROJ_STATUS_EXISTS                 = 1 << 0,
     PROJ_STATUS_ON_SCREEN              = 1 << 1,
     PROJ_STATUS_NOT_DRAWN              = 1 << 2,
@@ -13,7 +13,7 @@ MAKE_ENUM(u8, ProjectileStatus) ENUM_FLAG {
     PROJ_STATUS_CAN_AFFECT_ENVIRONMENT = 1 << 4,
     PROJ_STATUS_Y_FLIP                 = 1 << 5,
     PROJ_STATUS_X_FLIP                 = 1 << 6,
-    PROJ_STATUS_LOW_OAM_PRIORITY       = 1 << 7,
+    PROJ_STATUS_LOW_OAM_PRIORITY       = 1 << 7
 };
 
 MAKE_ENUM(u8, ProjectileCategory) {
@@ -25,7 +25,7 @@ MAKE_ENUM(u8, ProjectileCategory) {
     PROJECTILE_CATEGORY_POWER_BOMB,
     PROJECTILE_CATEGORY_CHARGED_BEAM,
 
-    PROJECTILE_CATEGORY_COUNT,
+    PROJECTILE_CATEGORY_COUNT
 };
 
 MAKE_ENUM(u8, ProjectileType) {
@@ -117,7 +117,7 @@ MAKE_ENUM(u8, ProjectileType) {
 
 #define BOMB_DAMAGE 8
 
-enum ProjectileBombStage {
+MAKE_ENUM(u8, ProjectileBombStage) {
     BOMB_STAGE_INIT,
     BOMB_STAGE_FIRST_SPIN,
     BOMB_STAGE_FAST_SPIN,
@@ -127,7 +127,7 @@ enum ProjectileBombStage {
     BOMB_STAGE_FAST_SPIN_ON_LAUNCHER,
     BOMB_STAGE_EXPLODING_ON_LAUNCHER,
 
-    BOMB_STAGE_END
+    BOMB_STAGE_COUNT
 };
 
 #define BOMB_EXPLOSION_TIMER (CONVERT_SECONDS(.25f) + 1 * DELTA_TIME)
@@ -136,12 +136,12 @@ enum ProjectileBombStage {
 
 #define POWER_BOMB_DAMAGE 50
 
-enum ProjectilePowerBombStage {
+MAKE_ENUM(u8, ProjectilePowerBombStage) {
     POWER_BOMB_STAGE_INIT,
     POWER_BOMB_STAGE_FIRST_SPIN,
     POWER_BOMB_STAGE_FAST_SPIN,
 
-    POWER_BOMB_STAGE_END
+    POWER_BOMB_STAGE_COUNT
 };
 
 // Charge beam thresholds
@@ -168,7 +168,7 @@ enum ProjectilePowerBombStage {
 
 #define PROJ_SHORT_BEAM_LIFETIME (CONVERT_SECONDS(.2f))
 
-enum ProjectileStage {
+MAKE_ENUM(u8, ProjectileStage) {
     PROJECTILE_STAGE_INIT,
     PROJECTILE_STAGE_SPAWNING,
     PROJECTILE_STAGE_MOVING,

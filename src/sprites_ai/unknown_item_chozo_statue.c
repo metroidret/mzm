@@ -58,7 +58,7 @@
 
 #define UNKNOWN_ITEM_CHOZO_STATUE_REFILL_POSE_IDLE 0x9
 
-static const struct FrameData* sUnknownItemChozoStatueFrameDataPointers[UNKNOWN_ITEM_CHOZO_STATUE_OAM_END] = {
+static const struct FrameData* sUnknownItemChozoStatueFrameDataPointers[UNKNOWN_ITEM_CHOZO_STATUE_OAM_COUNT] = {
     [UNKNOWN_ITEM_CHOZO_STATUE_OAM_LEG_STANDING] = sUnknownItemChozoStatuePartOam_LegStanding,
     [UNKNOWN_ITEM_CHOZO_STATUE_OAM_LEG_SITTING] = sUnknownItemChozoStatuePartOam_LegSitting,
     [UNKNOWN_ITEM_CHOZO_STATUE_OAM_LEG_SEATED] = sUnknownItemChozoStatuePartOam_LegSeated,
@@ -1158,7 +1158,7 @@ void UnknownItemChozoStatueRefill(void)
  * @param bodyCaa Clipdata affecting action (for the body)
  * @param handCaa Clipdata affecting action (for the hand)
  */
-void ChozoStatueStandingChangeClipdata(u8 bodyCaa, u8 handCaa)
+void ChozoStatueStandingChangeClipdata(ClipdataAffectingAction bodyCaa, ClipdataAffectingAction handCaa)
 {
     u16 yPosition;
     u16 xPosition;
@@ -1210,7 +1210,7 @@ void ChozoStatueStandingChangeClipdata(u8 bodyCaa, u8 handCaa)
  * 
  * @param caa Clipdata affecting action
  */
-void ChozoStatueSeatedChangeClipdata(u8 caa)
+void ChozoStatueSeatedChangeClipdata(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;

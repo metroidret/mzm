@@ -15,7 +15,7 @@ static const u16 sZiplineGeneratorPartOam_ConductorDeactivated_Frame0[OAM_DATA_S
     OAM_ENTRY(-24, -32, OAM_DIMS_16x32, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-32, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21f, 8, 0),
     OAM_ENTRY(8, -32, OAM_DIMS_16x32, OAM_NO_FLIP, 0x208, 8, 0),
-    OAM_ENTRY(24, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23f, 8, 0),
+    OAM_ENTRY(24, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23f, 8, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_ConductorActivating_Frame1[OAM_DATA_SIZE(17)] = {
@@ -36,7 +36,7 @@ static const u16 sZiplineGeneratorPartOam_ConductorActivating_Frame1[OAM_DATA_SI
     OAM_ENTRY(-24, -32, OAM_DIMS_16x32, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-32, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21f, 8, 0),
     OAM_ENTRY(8, -32, OAM_DIMS_16x32, OAM_NO_FLIP, 0x208, 8, 0),
-    OAM_ENTRY(24, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23f, 8, 0),
+    OAM_ENTRY(24, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23f, 8, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_ConductorActivating_Frame2[OAM_DATA_SIZE(17)] = {
@@ -57,7 +57,7 @@ static const u16 sZiplineGeneratorPartOam_ConductorActivating_Frame2[OAM_DATA_SI
     OAM_ENTRY(-24, -32, OAM_DIMS_16x32, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-32, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21f, 8, 0),
     OAM_ENTRY(8, -32, OAM_DIMS_16x32, OAM_NO_FLIP, 0x208, 8, 0),
-    OAM_ENTRY(24, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23f, 8, 0),
+    OAM_ENTRY(24, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23f, 8, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_ConductorActivating_Frame3[OAM_DATA_SIZE(17)] = {
@@ -78,7 +78,7 @@ static const u16 sZiplineGeneratorPartOam_ConductorActivating_Frame3[OAM_DATA_SI
     OAM_ENTRY(-24, -32, OAM_DIMS_16x32, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-32, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21f, 8, 0),
     OAM_ENTRY(8, -32, OAM_DIMS_16x32, OAM_NO_FLIP, 0x208, 8, 0),
-    OAM_ENTRY(24, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23f, 8, 0),
+    OAM_ENTRY(24, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23f, 8, 0)
 };
 
 static const u16 sZiplineGeneratorOam_Deactivated_Frame0[OAM_DATA_SIZE(6)] = {
@@ -88,7 +88,7 @@ static const u16 sZiplineGeneratorOam_Deactivated_Frame0[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-8, -32, OAM_DIMS_16x32, OAM_NO_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(-8, -40, OAM_DIMS_16x8, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-16, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x22c, 8, 0),
-    OAM_ENTRY(8, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x22d, 8, 0),
+    OAM_ENTRY(8, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x22d, 8, 0)
 };
 
 static const u16 sZiplineGeneratorOam_Activating_Frame1[OAM_DATA_SIZE(10)] = {
@@ -102,7 +102,7 @@ static const u16 sZiplineGeneratorOam_Activating_Frame1[OAM_DATA_SIZE(10)] = {
     OAM_ENTRY(-8, -32, OAM_DIMS_16x32, OAM_NO_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(-8, -40, OAM_DIMS_16x8, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-16, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x22c, 8, 0),
-    OAM_ENTRY(8, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x22d, 8, 0),
+    OAM_ENTRY(8, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x22d, 8, 0)
 };
 
 static const u16 sZiplineGeneratorOam_Activating_Frame2[OAM_DATA_SIZE(10)] = {
@@ -116,7 +116,7 @@ static const u16 sZiplineGeneratorOam_Activating_Frame2[OAM_DATA_SIZE(10)] = {
     OAM_ENTRY(-8, -32, OAM_DIMS_16x32, OAM_NO_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(-8, -40, OAM_DIMS_16x8, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-16, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x22c, 8, 0),
-    OAM_ENTRY(8, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x22d, 8, 0),
+    OAM_ENTRY(8, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x22d, 8, 0)
 };
 
 static const u16 sZiplineGeneratorOam_Activating_Frame3[OAM_DATA_SIZE(10)] = {
@@ -130,27 +130,27 @@ static const u16 sZiplineGeneratorOam_Activating_Frame3[OAM_DATA_SIZE(10)] = {
     OAM_ENTRY(-8, -32, OAM_DIMS_16x32, OAM_NO_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(-8, -40, OAM_DIMS_16x8, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-16, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x22c, 8, 0),
-    OAM_ENTRY(8, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x22d, 8, 0),
+    OAM_ENTRY(8, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x22d, 8, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_MorphSymbolActivating_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x217, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x217, 8, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_MorphSymbolActivating_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x219, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x219, 8, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_MorphSymbolActivating_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21b, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21b, 8, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_MorphSymbolActivating_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21d, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21d, 8, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_MorphSymbolActivating_Frame4[OAM_DATA_SIZE(5)] = {
@@ -159,7 +159,7 @@ static const u16 sZiplineGeneratorPartOam_MorphSymbolActivating_Frame4[OAM_DATA_
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x24c, 8, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x24c, 8, 0),
     OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x24c, 8, 0),
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21b, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21b, 8, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_MorphSymbolActivating_Frame5[OAM_DATA_SIZE(5)] = {
@@ -168,67 +168,67 @@ static const u16 sZiplineGeneratorPartOam_MorphSymbolActivating_Frame5[OAM_DATA_
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x28c, 8, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x28c, 8, 0),
     OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x28c, 8, 0),
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x219, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x219, 8, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_ElectricityActivating_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x24c, 8, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x24c, 8, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_ElectricityActivating_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -16, OAM_DIMS_8x32, OAM_NO_FLIP, 0x25f, 9, 0),
+    OAM_ENTRY(-8, -16, OAM_DIMS_8x32, OAM_NO_FLIP, 0x25f, 9, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_ElectricityActivating_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -5, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2de, 9, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2de, 9, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_ElectricityActivating_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, 1, OAM_DIMS_32x8, OAM_NO_FLIP, 0x25b, 9, 0),
+    OAM_ENTRY(-16, 1, OAM_DIMS_32x8, OAM_NO_FLIP, 0x25b, 9, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_ElectricityActivating_Frame4[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(0, -16, OAM_DIMS_8x32, OAM_XY_FLIP, 0x25f, 9, 0),
+    OAM_ENTRY(0, -16, OAM_DIMS_8x32, OAM_XY_FLIP, 0x25f, 9, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_ElectricityActivating_Frame5[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x2de, 9, 0),
+    OAM_ENTRY(-8, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x2de, 9, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_ElectricityActivating_Frame7[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -9, OAM_DIMS_32x8, OAM_XY_FLIP, 0x25b, 9, 0),
+    OAM_ENTRY(-16, -9, OAM_DIMS_32x8, OAM_XY_FLIP, 0x25b, 9, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_MorphSymbolActivated_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -16, OAM_DIMS_8x32, OAM_NO_FLIP, 0x277, 9, 0),
+    OAM_ENTRY(-4, -16, OAM_DIMS_8x32, OAM_NO_FLIP, 0x277, 9, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_MorphSymbolActivated_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x278, 9, 0),
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x278, 9, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_MorphSymbolActivated_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x257, 9, 0),
+    OAM_ENTRY(-16, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x257, 9, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_MorphSymbolActivated_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_X_FLIP, 0x278, 9, 0),
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_X_FLIP, 0x278, 9, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_MorphSymbolActivated_Frame4[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2dc, 9, 0),
+    OAM_ENTRY(-4, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2dc, 9, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_MorphSymbolActivated_Frame5[OAM_DATA_SIZE(5)] = {
@@ -237,7 +237,7 @@ static const u16 sZiplineGeneratorPartOam_MorphSymbolActivated_Frame5[OAM_DATA_S
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x24c, 8, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x24c, 8, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x24c, 8, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x24c, 8, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x24c, 8, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_MorphSymbolActivated_Frame6[OAM_DATA_SIZE(5)] = {
@@ -246,12 +246,12 @@ static const u16 sZiplineGeneratorPartOam_MorphSymbolActivated_Frame6[OAM_DATA_S
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x28c, 8, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x28c, 8, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x28c, 8, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x28c, 8, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x28c, 8, 0)
 };
 
 static const u16 sZiplineGeneratorPartOam_MorphSymbolActivated_Frame7[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x2f8, 9, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x2f8, 9, 0)
 };
 
 const struct FrameData sZiplineGeneratorPartOam_ConductorDeactivated[2] = {

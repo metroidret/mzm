@@ -8,42 +8,42 @@ static const u16 sSecurityLaserOam_VerticalSmall_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmall_Frame1[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -26, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmall_Frame2[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -25, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmall_Frame3[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmall_Frame4[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -23, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmall_Frame5[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -22, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMedium_Frame0[OAM_DATA_SIZE(4)] = {
@@ -51,7 +51,7 @@ static const u16 sSecurityLaserOam_VerticalMedium_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-4, -35, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMedium_Frame1[OAM_DATA_SIZE(4)] = {
@@ -59,7 +59,7 @@ static const u16 sSecurityLaserOam_VerticalMedium_Frame1[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-4, -34, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMedium_Frame2[OAM_DATA_SIZE(4)] = {
@@ -67,7 +67,7 @@ static const u16 sSecurityLaserOam_VerticalMedium_Frame2[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-4, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMedium_Frame3[OAM_DATA_SIZE(4)] = {
@@ -75,7 +75,7 @@ static const u16 sSecurityLaserOam_VerticalMedium_Frame3[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMedium_Frame4[OAM_DATA_SIZE(4)] = {
@@ -83,7 +83,7 @@ static const u16 sSecurityLaserOam_VerticalMedium_Frame4[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-4, -31, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMedium_Frame5[OAM_DATA_SIZE(4)] = {
@@ -91,7 +91,7 @@ static const u16 sSecurityLaserOam_VerticalMedium_Frame5[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-4, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLarge_Frame0[OAM_DATA_SIZE(6)] = {
@@ -101,7 +101,7 @@ static const u16 sSecurityLaserOam_VerticalLarge_Frame0[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -59, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLarge_Frame1[OAM_DATA_SIZE(6)] = {
@@ -111,7 +111,7 @@ static const u16 sSecurityLaserOam_VerticalLarge_Frame1[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -58, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLarge_Frame2[OAM_DATA_SIZE(6)] = {
@@ -121,7 +121,7 @@ static const u16 sSecurityLaserOam_VerticalLarge_Frame2[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLarge_Frame3[OAM_DATA_SIZE(6)] = {
@@ -131,7 +131,7 @@ static const u16 sSecurityLaserOam_VerticalLarge_Frame3[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -56, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLarge_Frame4[OAM_DATA_SIZE(6)] = {
@@ -141,7 +141,7 @@ static const u16 sSecurityLaserOam_VerticalLarge_Frame4[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLarge_Frame5[OAM_DATA_SIZE(6)] = {
@@ -151,7 +151,7 @@ static const u16 sSecurityLaserOam_VerticalLarge_Frame5[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -54, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLarge_Frame0[OAM_DATA_SIZE(7)] = {
@@ -162,7 +162,7 @@ static const u16 sSecurityLaserOam_VerticalVeryLarge_Frame0[OAM_DATA_SIZE(7)] = 
     OAM_ENTRY(-4, -67, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLarge_Frame1[OAM_DATA_SIZE(7)] = {
@@ -173,7 +173,7 @@ static const u16 sSecurityLaserOam_VerticalVeryLarge_Frame1[OAM_DATA_SIZE(7)] = 
     OAM_ENTRY(-4, -66, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLarge_Frame2[OAM_DATA_SIZE(7)] = {
@@ -184,7 +184,7 @@ static const u16 sSecurityLaserOam_VerticalVeryLarge_Frame2[OAM_DATA_SIZE(7)] = 
     OAM_ENTRY(-4, -65, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLarge_Frame3[OAM_DATA_SIZE(7)] = {
@@ -195,7 +195,7 @@ static const u16 sSecurityLaserOam_VerticalVeryLarge_Frame3[OAM_DATA_SIZE(7)] = 
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLarge_Frame4[OAM_DATA_SIZE(7)] = {
@@ -206,7 +206,7 @@ static const u16 sSecurityLaserOam_VerticalVeryLarge_Frame4[OAM_DATA_SIZE(7)] = 
     OAM_ENTRY(-4, -63, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLarge_Frame5[OAM_DATA_SIZE(7)] = {
@@ -217,85 +217,85 @@ static const u16 sSecurityLaserOam_VerticalVeryLarge_Frame5[OAM_DATA_SIZE(7)] = 
     OAM_ENTRY(-4, -62, OAM_DIMS_8x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmall_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(3, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
-    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
+    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmall_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(2, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
-    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
+    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmall_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(1, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
-    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
+    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmall_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(0, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
-    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
+    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmall_Frame4[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-1, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
-    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
+    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmall_Frame5[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-2, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
-    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
+    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMedium_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(11, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMedium_Frame1[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(10, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMedium_Frame2[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(9, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMedium_Frame3[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMedium_Frame4[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(7, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMedium_Frame5[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(6, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLarge_Frame0[OAM_DATA_SIZE(4)] = {
@@ -303,7 +303,7 @@ static const u16 sSecurityLaserOam_HorizontalLarge_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(3, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(35, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLarge_Frame1[OAM_DATA_SIZE(4)] = {
@@ -311,7 +311,7 @@ static const u16 sSecurityLaserOam_HorizontalLarge_Frame1[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(2, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(34, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLarge_Frame2[OAM_DATA_SIZE(4)] = {
@@ -319,7 +319,7 @@ static const u16 sSecurityLaserOam_HorizontalLarge_Frame2[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(1, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(33, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLarge_Frame3[OAM_DATA_SIZE(4)] = {
@@ -327,7 +327,7 @@ static const u16 sSecurityLaserOam_HorizontalLarge_Frame3[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(0, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(32, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLarge_Frame4[OAM_DATA_SIZE(4)] = {
@@ -335,7 +335,7 @@ static const u16 sSecurityLaserOam_HorizontalLarge_Frame4[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-1, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(31, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLarge_Frame5[OAM_DATA_SIZE(4)] = {
@@ -343,7 +343,7 @@ static const u16 sSecurityLaserOam_HorizontalLarge_Frame5[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-2, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(30, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLarge_Frame0[OAM_DATA_SIZE(5)] = {
@@ -352,7 +352,7 @@ static const u16 sSecurityLaserOam_HorizontalVeryLarge_Frame0[OAM_DATA_SIZE(5)] 
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(43, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
-    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLarge_Frame1[OAM_DATA_SIZE(5)] = {
@@ -361,7 +361,7 @@ static const u16 sSecurityLaserOam_HorizontalVeryLarge_Frame1[OAM_DATA_SIZE(5)] 
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(42, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
-    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLarge_Frame2[OAM_DATA_SIZE(5)] = {
@@ -370,7 +370,7 @@ static const u16 sSecurityLaserOam_HorizontalVeryLarge_Frame2[OAM_DATA_SIZE(5)] 
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(41, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
-    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLarge_Frame3[OAM_DATA_SIZE(5)] = {
@@ -379,7 +379,7 @@ static const u16 sSecurityLaserOam_HorizontalVeryLarge_Frame3[OAM_DATA_SIZE(5)] 
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(40, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
-    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLarge_Frame4[OAM_DATA_SIZE(5)] = {
@@ -388,7 +388,7 @@ static const u16 sSecurityLaserOam_HorizontalVeryLarge_Frame4[OAM_DATA_SIZE(5)] 
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(39, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
-    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLarge_Frame5[OAM_DATA_SIZE(5)] = {
@@ -397,83 +397,83 @@ static const u16 sSecurityLaserOam_HorizontalVeryLarge_Frame5[OAM_DATA_SIZE(5)] 
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(38, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x222, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x202, 8, 0),
-    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmallDisappearing_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
-    OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmallDisappearing_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0),
-    OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmallDisappearing_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0),
-    OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0),
+    OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmallDisappearing_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0),
-    OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0),
+    OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmallDisappearing_Frame4[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20a, 8, 0),
-    OAM_ENTRY(-4, -28, OAM_DIMS_8x8, OAM_NO_FLIP, 0x20a, 8, 0),
+    OAM_ENTRY(-4, -28, OAM_DIMS_8x8, OAM_NO_FLIP, 0x20a, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmallDisappearing_Frame5[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -22, OAM_DIMS_8x8, OAM_NO_FLIP, 0x20b, 8, 0),
-    OAM_ENTRY(-4, -18, OAM_DIMS_8x8, OAM_NO_FLIP, 0x20b, 8, 0),
+    OAM_ENTRY(-4, -18, OAM_DIMS_8x8, OAM_NO_FLIP, 0x20b, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMediumDisappearing_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMediumDisappearing_Frame1[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMediumDisappearing_Frame2[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMediumDisappearing_Frame3[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMediumDisappearing_Frame4[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20a, 8, 0),
-    OAM_ENTRY(-4, -40, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20a, 8, 0),
+    OAM_ENTRY(-4, -40, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20a, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMediumDisappearing_Frame5[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -34, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20b, 8, 0),
-    OAM_ENTRY(-4, -22, OAM_DIMS_8x8, OAM_NO_FLIP, 0x20b, 8, 0),
+    OAM_ENTRY(-4, -22, OAM_DIMS_8x8, OAM_NO_FLIP, 0x20b, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Frame0[OAM_DATA_SIZE(4)] = {
@@ -481,7 +481,7 @@ static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Frame0[OAM_DATA_SIZ
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
-    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Frame1[OAM_DATA_SIZE(4)] = {
@@ -489,7 +489,7 @@ static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Frame1[OAM_DATA_SIZ
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0),
-    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Frame2[OAM_DATA_SIZE(4)] = {
@@ -497,7 +497,7 @@ static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Frame2[OAM_DATA_SIZ
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0),
-    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0),
+    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Frame3[OAM_DATA_SIZE(4)] = {
@@ -505,20 +505,20 @@ static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Frame3[OAM_DATA_SIZ
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0),
-    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0),
+    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Frame4[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -52, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(-4, -28, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20a, 8, 0),
-    OAM_ENTRY(-4, -36, OAM_DIMS_8x8, OAM_NO_FLIP, 0x20a, 8, 0),
+    OAM_ENTRY(-4, -36, OAM_DIMS_8x8, OAM_NO_FLIP, 0x20a, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Frame5[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -46, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20b, 8, 0),
-    OAM_ENTRY(-4, -34, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20b, 8, 0),
+    OAM_ENTRY(-4, -34, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20b, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Frame0[OAM_DATA_SIZE(5)] = {
@@ -527,7 +527,7 @@ static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Frame0[OAM_DATA
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
-    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Frame1[OAM_DATA_SIZE(5)] = {
@@ -536,7 +536,7 @@ static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Frame1[OAM_DATA
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0),
-    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Frame2[OAM_DATA_SIZE(5)] = {
@@ -545,7 +545,7 @@ static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Frame2[OAM_DATA
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0),
-    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0),
+    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x208, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Frame3[OAM_DATA_SIZE(5)] = {
@@ -554,7 +554,7 @@ static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Frame3[OAM_DATA
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0),
-    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0),
+    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x209, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Frame4[OAM_DATA_SIZE(4)] = {
@@ -562,147 +562,147 @@ static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Frame4[OAM_DATA
     OAM_ENTRY(-4, -28, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(-4, -52, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(-4, -68, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20a, 8, 0),
-    OAM_ENTRY(-4, -36, OAM_DIMS_8x8, OAM_NO_FLIP, 0x20a, 8, 0),
+    OAM_ENTRY(-4, -36, OAM_DIMS_8x8, OAM_NO_FLIP, 0x20a, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Frame5[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -34, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20b, 8, 0),
     OAM_ENTRY(-4, -62, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20b, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20b, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20b, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmallDisappearing_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x20c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmallDisappearing_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x22c, 8, 0),
+    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x22c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmallDisappearing_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x210, 8, 0),
+    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x210, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmallDisappearing_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x230, 8, 0),
+    OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x230, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmallDisappearing_Frame4[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x214, 8, 0),
-    OAM_ENTRY(12, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x216, 8, 0),
+    OAM_ENTRY(12, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x216, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmallDisappearing_Frame5[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(2, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x234, 8, 0),
-    OAM_ENTRY(6, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x234, 8, 0),
+    OAM_ENTRY(6, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x234, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMediumDisappearing_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x20c, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x20c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMediumDisappearing_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x22c, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x22c, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x22c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMediumDisappearing_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x210, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x210, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x210, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMediumDisappearing_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x230, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x230, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x230, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMediumDisappearing_Frame4[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(0, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x215, 8, 0),
-    OAM_ENTRY(16, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x215, 8, 0),
+    OAM_ENTRY(16, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x215, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMediumDisappearing_Frame5[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(6, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x234, 8, 0),
-    OAM_ENTRY(18, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x236, 8, 0),
+    OAM_ENTRY(18, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x236, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x20c, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x20c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x22c, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x22c, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x22c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x210, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x210, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x210, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x230, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x230, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x230, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Frame4[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(4, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x214, 8, 0),
     OAM_ENTRY(20, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x216, 8, 0),
-    OAM_ENTRY(28, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x214, 8, 0),
+    OAM_ENTRY(28, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x214, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Frame5[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(10, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x234, 8, 0),
-    OAM_ENTRY(22, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x234, 8, 0),
+    OAM_ENTRY(22, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x234, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x20c, 8, 0),
-    OAM_ENTRY(40, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(40, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x20c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Frame1[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x22c, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x22c, 8, 0),
-    OAM_ENTRY(40, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x22c, 8, 0),
+    OAM_ENTRY(40, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x22c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Frame2[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x210, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x210, 8, 0),
-    OAM_ENTRY(40, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x210, 8, 0),
+    OAM_ENTRY(40, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x210, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Frame3[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x230, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x230, 8, 0),
-    OAM_ENTRY(40, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x230, 8, 0),
+    OAM_ENTRY(40, -12, OAM_DIMS_32x8, OAM_NO_FLIP, 0x230, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Frame4[OAM_DATA_SIZE(4)] = {
@@ -710,26 +710,26 @@ static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Frame4[OAM_DA
     OAM_ENTRY(4, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x215, 8, 0),
     OAM_ENTRY(20, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x215, 8, 0),
     OAM_ENTRY(36, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x214, 8, 0),
-    OAM_ENTRY(44, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x215, 8, 0),
+    OAM_ENTRY(44, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x215, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Frame5[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(10, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x234, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x234, 8, 0),
-    OAM_ENTRY(38, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x234, 8, 0),
+    OAM_ENTRY(38, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x234, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmallDisappearing_Unused_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21b, 8, 0),
-    OAM_ENTRY(-4, -32, OAM_DIMS_8x8, OAM_Y_FLIP, 0x21b, 8, 0),
+    OAM_ENTRY(-4, -32, OAM_DIMS_8x8, OAM_Y_FLIP, 0x21b, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmallDisappearing_Unused_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x238, 8, 0),
-    OAM_ENTRY(-4, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x238, 8, 0),
+    OAM_ENTRY(-4, -32, OAM_DIMS_8x8, OAM_NO_FLIP, 0x238, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmallDisappearing_Unused_Frame2[OAM_DATA_SIZE(4)] = {
@@ -737,31 +737,31 @@ static const u16 sSecurityLaserOam_VerticalSmallDisappearing_Unused_Frame2[OAM_D
     OAM_ENTRY(-4, -16, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21b, 8, 0),
     OAM_ENTRY(-4, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x238, 8, 0),
     OAM_ENTRY(-4, -24, OAM_DIMS_8x8, OAM_Y_FLIP, 0x21b, 8, 0),
-    OAM_ENTRY(-4, -32, OAM_DIMS_8x8, OAM_Y_FLIP, 0x238, 8, 0),
+    OAM_ENTRY(-4, -32, OAM_DIMS_8x8, OAM_Y_FLIP, 0x238, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmallDisappearing_Unused_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
+    OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmallDisappearing_Unused_Frame4[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0),
-    OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0),
+    OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalSmallDisappearing_Unused_Frame5[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0),
-    OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0),
+    OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMediumDisappearing_Unused_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21b, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x8, OAM_Y_FLIP, 0x21b, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x8, OAM_Y_FLIP, 0x21b, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMediumDisappearing_Unused_Frame1[OAM_DATA_SIZE(4)] = {
@@ -769,7 +769,7 @@ static const u16 sSecurityLaserOam_VerticalMediumDisappearing_Unused_Frame1[OAM_
     OAM_ENTRY(-4, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x238, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x8, OAM_NO_FLIP, 0x238, 8, 0),
     OAM_ENTRY(-4, -16, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21b, 8, 0),
-    OAM_ENTRY(-4, -40, OAM_DIMS_8x8, OAM_Y_FLIP, 0x21b, 8, 0),
+    OAM_ENTRY(-4, -40, OAM_DIMS_8x8, OAM_Y_FLIP, 0x21b, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMediumDisappearing_Unused_Frame2[OAM_DATA_SIZE(4)] = {
@@ -777,40 +777,40 @@ static const u16 sSecurityLaserOam_VerticalMediumDisappearing_Unused_Frame2[OAM_
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-4, -24, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21b, 8, 0),
-    OAM_ENTRY(-4, -32, OAM_DIMS_8x8, OAM_Y_FLIP, 0x21b, 8, 0),
+    OAM_ENTRY(-4, -32, OAM_DIMS_8x8, OAM_Y_FLIP, 0x21b, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMediumDisappearing_Unused_Frame3[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMediumDisappearing_Unused_Frame4[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalMediumDisappearing_Unused_Frame5[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0),
-    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0),
+    OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Unused_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -64, OAM_DIMS_8x8, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-4, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x218, 8, 0),
+    OAM_ENTRY(-4, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x218, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Unused_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
+    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Unused_Frame2[OAM_DATA_SIZE(4)] = {
@@ -818,7 +818,7 @@ static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Unused_Frame2[OAM_D
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x8, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-4, -24, OAM_DIMS_8x8, OAM_NO_FLIP, 0x218, 8, 0),
+    OAM_ENTRY(-4, -24, OAM_DIMS_8x8, OAM_NO_FLIP, 0x218, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Unused_Frame3[OAM_DATA_SIZE(4)] = {
@@ -826,7 +826,7 @@ static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Unused_Frame3[OAM_D
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
+    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Unused_Frame4[OAM_DATA_SIZE(4)] = {
@@ -834,7 +834,7 @@ static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Unused_Frame4[OAM_D
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0),
-    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0),
+    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Unused_Frame5[OAM_DATA_SIZE(4)] = {
@@ -842,19 +842,19 @@ static const u16 sSecurityLaserOam_VerticalLargeDisappearing_Unused_Frame5[OAM_D
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0),
-    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0),
+    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Unused_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -80, OAM_DIMS_8x8, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-4, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x218, 8, 0),
+    OAM_ENTRY(-4, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x218, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Unused_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
+    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Unused_Frame2[OAM_DATA_SIZE(4)] = {
@@ -862,7 +862,7 @@ static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Unused_Frame2[O
     OAM_ENTRY(-4, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
+    OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Unused_Frame3[OAM_DATA_SIZE(5)] = {
@@ -871,7 +871,7 @@ static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Unused_Frame3[O
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0),
+    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x218, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Unused_Frame4[OAM_DATA_SIZE(5)] = {
@@ -880,7 +880,7 @@ static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Unused_Frame4[O
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0),
-    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0),
+    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Unused_Frame5[OAM_DATA_SIZE(5)] = {
@@ -889,19 +889,19 @@ static const u16 sSecurityLaserOam_VerticalVeryLargeDisappearing_Unused_Frame5[O
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0),
     OAM_ENTRY(-4, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0),
     OAM_ENTRY(-4, -64, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0),
-    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0),
+    OAM_ENTRY(-4, -80, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21a, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmallDisappearing_Unused_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23b, 8, 0),
-    OAM_ENTRY(16, -12, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0),
+    OAM_ENTRY(16, -12, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmallDisappearing_Unused_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(16, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(16, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmallDisappearing_Unused_Frame2[OAM_DATA_SIZE(4)] = {
@@ -909,31 +909,31 @@ static const u16 sSecurityLaserOam_HorizontalSmallDisappearing_Unused_Frame2[OAM
     OAM_ENTRY(-8, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(16, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(0, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23b, 8, 0),
-    OAM_ENTRY(8, -12, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0),
+    OAM_ENTRY(8, -12, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmallDisappearing_Unused_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmallDisappearing_Unused_Frame4[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
-    OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
+    OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalSmallDisappearing_Unused_Frame5[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMediumDisappearing_Unused_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23b, 8, 0),
-    OAM_ENTRY(32, -12, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0),
+    OAM_ENTRY(32, -12, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMediumDisappearing_Unused_Frame1[OAM_DATA_SIZE(4)] = {
@@ -941,7 +941,7 @@ static const u16 sSecurityLaserOam_HorizontalMediumDisappearing_Unused_Frame1[OA
     OAM_ENTRY(-8, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(32, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(0, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23b, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMediumDisappearing_Unused_Frame2[OAM_DATA_SIZE(4)] = {
@@ -949,40 +949,40 @@ static const u16 sSecurityLaserOam_HorizontalMediumDisappearing_Unused_Frame2[OA
     OAM_ENTRY(8, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23b, 8, 0),
     OAM_ENTRY(16, -12, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0),
     OAM_ENTRY(-8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMediumDisappearing_Unused_Frame3[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMediumDisappearing_Unused_Frame4[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
     OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalMediumDisappearing_Unused_Frame5[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Unused_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(48, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(48, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Unused_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(40, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(40, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Unused_Frame2[OAM_DATA_SIZE(4)] = {
@@ -990,7 +990,7 @@ static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Unused_Frame2[OAM
     OAM_ENTRY(-8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(40, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(8, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(32, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(32, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Unused_Frame3[OAM_DATA_SIZE(4)] = {
@@ -998,7 +998,7 @@ static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Unused_Frame3[OAM
     OAM_ENTRY(-8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(40, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Unused_Frame4[OAM_DATA_SIZE(4)] = {
@@ -1006,7 +1006,7 @@ static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Unused_Frame4[OAM
     OAM_ENTRY(-8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
     OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
-    OAM_ENTRY(40, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
+    OAM_ENTRY(40, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Unused_Frame5[OAM_DATA_SIZE(4)] = {
@@ -1014,19 +1014,19 @@ static const u16 sSecurityLaserOam_HorizontalLargeDisappearing_Unused_Frame5[OAM
     OAM_ENTRY(-8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(40, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(40, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Unused_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(64, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(64, -12, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Unused_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Unused_Frame2[OAM_DATA_SIZE(4)] = {
@@ -1034,7 +1034,7 @@ static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Unused_Frame2
     OAM_ENTRY(-8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(40, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(40, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Unused_Frame3[OAM_DATA_SIZE(5)] = {
@@ -1043,7 +1043,7 @@ static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Unused_Frame3
     OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(40, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Unused_Frame4[OAM_DATA_SIZE(5)] = {
@@ -1052,7 +1052,7 @@ static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Unused_Frame4
     OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
     OAM_ENTRY(40, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
-    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
+    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0)
 };
 
 static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Unused_Frame5[OAM_DATA_SIZE(5)] = {
@@ -1061,7 +1061,7 @@ static const u16 sSecurityLaserOam_HorizontalVeryLargeDisappearing_Unused_Frame5
     OAM_ENTRY(8, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(24, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(40, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(56, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 const struct FrameData sSecurityLaserOam_VerticalSmall[11] = {

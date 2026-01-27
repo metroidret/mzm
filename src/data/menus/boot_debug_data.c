@@ -12,27 +12,27 @@ const u32 sBootDebugObjGfx[222] = INCBIN_U32("data/menus/boot_debug/objects.gfx.
 
 static const u16 sBootDebugOam_4185D8_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(0, 0, OAM_DIMS_8x8, OAM_NO_FLIP, 0x0, 1, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_8x8, OAM_NO_FLIP, 0x0, 1, 0)
 };
 
 static const u16 sBootDebugOam_4185B0_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-10, 0, OAM_DIMS_8x16, OAM_NO_FLIP, 0x44, 2, 0),
+    OAM_ENTRY(-10, 0, OAM_DIMS_8x16, OAM_NO_FLIP, 0x44, 2, 0)
 };
 
 static const u16 sBootDebugOam_4185B0_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-9, 0, OAM_DIMS_8x16, OAM_NO_FLIP, 0x44, 2, 0),
+    OAM_ENTRY(-9, 0, OAM_DIMS_8x16, OAM_NO_FLIP, 0x44, 2, 0)
 };
 
 static const u16 sBootDebugOam_4185B0_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, 0, OAM_DIMS_8x16, OAM_NO_FLIP, 0x44, 2, 0),
+    OAM_ENTRY(-8, 0, OAM_DIMS_8x16, OAM_NO_FLIP, 0x44, 2, 0)
 };
 
 static const u16 sBootDebugOam_4185D8_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(0, 3, OAM_DIMS_8x8, OAM_NO_FLIP, 0x65, 2, 0),
+    OAM_ENTRY(0, 3, OAM_DIMS_8x8, OAM_NO_FLIP, 0x65, 2, 0)
 };
 
 static const u16 sBootDebugOam_4185F0_Frame0[OAM_DATA_SIZE(4)] = {
@@ -40,7 +40,7 @@ static const u16 sBootDebugOam_4185F0_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-6, 0, OAM_DIMS_8x8, OAM_NO_FLIP, 0x47, 2, 0),
     OAM_ENTRY(-6, 8, OAM_DIMS_8x8, OAM_Y_FLIP, 0x47, 2, 0),
     OAM_ENTRY(52, 0, OAM_DIMS_8x8, OAM_X_FLIP, 0x47, 2, 0),
-    OAM_ENTRY(52, 8, OAM_DIMS_8x8, OAM_XY_FLIP, 0x47, 2, 0),
+    OAM_ENTRY(52, 8, OAM_DIMS_8x8, OAM_XY_FLIP, 0x47, 2, 0)
 };
 
 static const u16 sBootDebugOam_418600_Frame0[OAM_DATA_SIZE(45)] = {
@@ -89,7 +89,7 @@ static const u16 sBootDebugOam_418600_Frame0[OAM_DATA_SIZE(45)] = {
     OAM_ENTRY(56, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0xc, 1, 0),
     OAM_ENTRY(56, 16, OAM_DIMS_16x8, OAM_Y_FLIP, 0xc, 1, 0),
     OAM_ENTRY(-8, 16, OAM_DIMS_16x8, OAM_XY_FLIP, 0xc, 1, 0),
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x8, OAM_X_FLIP, 0xc, 1, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x8, OAM_X_FLIP, 0xc, 1, 0)
 };
 
 static const u16 sBootDebugOam_418610_Frame0[OAM_DATA_SIZE(4)] = {
@@ -97,7 +97,7 @@ static const u16 sBootDebugOam_418610_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x46, 2, 0),
     OAM_ENTRY(4, -4, OAM_DIMS_8x8, OAM_X_FLIP, 0x46, 2, 0),
     OAM_ENTRY(-4, 4, OAM_DIMS_8x8, OAM_Y_FLIP, 0x46, 2, 0),
-    OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x46, 2, 0),
+    OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x46, 2, 0)
 };
 
 static const u16 sBootDebugOam_418610_Frame1[OAM_DATA_SIZE(4)] = {
@@ -105,7 +105,7 @@ static const u16 sBootDebugOam_418610_Frame1[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-5, -5, OAM_DIMS_8x8, OAM_NO_FLIP, 0x46, 2, 0),
     OAM_ENTRY(5, -5, OAM_DIMS_8x8, OAM_X_FLIP, 0x46, 2, 0),
     OAM_ENTRY(-5, 5, OAM_DIMS_8x8, OAM_Y_FLIP, 0x46, 2, 0),
-    OAM_ENTRY(5, 5, OAM_DIMS_8x8, OAM_XY_FLIP, 0x46, 2, 0),
+    OAM_ENTRY(5, 5, OAM_DIMS_8x8, OAM_XY_FLIP, 0x46, 2, 0)
 };
 
 static const u16 sBootDebugOam_418610_Frame2[OAM_DATA_SIZE(4)] = {
@@ -113,7 +113,7 @@ static const u16 sBootDebugOam_418610_Frame2[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-6, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 0x46, 2, 0),
     OAM_ENTRY(6, -6, OAM_DIMS_8x8, OAM_X_FLIP, 0x46, 2, 0),
     OAM_ENTRY(-6, 6, OAM_DIMS_8x8, OAM_Y_FLIP, 0x46, 2, 0),
-    OAM_ENTRY(6, 6, OAM_DIMS_8x8, OAM_XY_FLIP, 0x46, 2, 0),
+    OAM_ENTRY(6, 6, OAM_DIMS_8x8, OAM_XY_FLIP, 0x46, 2, 0)
 };
 
 static const struct FrameData sBootDebugOam_4185B0[5] = {
@@ -507,7 +507,7 @@ const struct BootDebugText sBootDebugModeMenuText[2] = {
     }
 };
 
-const struct BootDebugText sBootDebugLanguageText[LANGUAGE_END] = {
+const struct BootDebugText sBootDebugLanguageText[LANGUAGE_COUNT] = {
     [LANGUAGE_JAPANESE] = {
         .background = 2,
         .xPosition = 9,
@@ -566,7 +566,7 @@ const struct BootDebugText sBootDebugLanguageText[LANGUAGE_END] = {
     }
 };
 
-const struct BootDebugText sBootDebugDifficultyText[DIFF_END] = {
+const struct BootDebugText sBootDebugDifficultyText[DIFF_COUNT] = {
     [DIFF_EASY] = {
         .background = 2,
         .xPosition = 9,
@@ -1019,7 +1019,7 @@ const struct OamArray sBootDebugOam[6] = {
     [5] = {
         .pOam = sBootDebugOam_418610,
         .preAction = OAM_ARRAY_PRE_ACTION_CHANGE_FRAME
-    },
+    }
 };
 
 const u8 sZeroSaveText[8] = "ZEROSAVE";

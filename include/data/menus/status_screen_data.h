@@ -95,18 +95,18 @@ extern const u8 sPauseDebug_Event02_Text[32];
 extern const u8 sPauseDebug_Event01_Text[32];
 extern const u8 sPauseDebug_Event00_Text[29];
 
-extern const u8 sPauseDebug_Language_Text[LANGUAGE_END + 1][3];
+extern const u8 sPauseDebug_Language_Text[LANGUAGE_COUNT + 1][3];
 extern const u8 sPauseDebug_Region_Text[3][2];
 extern const u8 sPauseDebug_Area_Text[AREA_COUNT][3];
-extern const u8 sPauseDebug_Difficulty_Text[DIFF_END + 1][6];
+extern const u8 sPauseDebug_Difficulty_Text[DIFF_COUNT + 1][6];
 extern const u8 sPauseDebug_ShutOpen_Text[2][4];
 
 extern const u8 sPauseDebugAreaRoomDoorPositions[3][2];
 extern const u8 sPauseDebugDifficultyPosition[2];
 extern const u8 sPauseDebugLanguagePosition[2];
 extern const u8 sPauseDebugSaveHightlightPosition[2];
-extern const struct StatusScreenGroupPositions sPauseDebugGroupsPositions[PAUSE_DEBUG_GROUP_END];
-extern const EventAction sEasyHardEventActions[DIFF_END][2];
+extern const struct StatusScreenGroupPositions sPauseDebugGroupsPositions[PAUSE_DEBUG_GROUP_COUNT];
+extern const EventAction sEasyHardEventActions[DIFF_COUNT][2];
 extern const struct PauseDebugEnergyAmmoInfo sPauseDebugEnergyAmmoInfo[8];
 
 #endif // DEBUG

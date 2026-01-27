@@ -16,7 +16,7 @@ const u16 sTourianEscapeOam_375d10_Frame0[OAM_DATA_SIZE(12)] = {
     OAM_ENTRY(-48, 64, OAM_DIMS_64x32, OAM_NO_FLIP, 0x388, 15, 0),
     OAM_ENTRY(16, 64, OAM_DIMS_64x32, OAM_NO_FLIP, 0x390, 15, 0),
     OAM_ENTRY(80, 64, OAM_DIMS_32x32, OAM_NO_FLIP, 0x398, 15, 0),
-    OAM_ENTRY(-112, 0, OAM_DIMS_64x64, OAM_NO_FLIP, 0x280, 15, 0),
+    OAM_ENTRY(-112, 0, OAM_DIMS_64x64, OAM_NO_FLIP, 0x280, 15, 0)
 };
 
 static const struct FrameData sTourianEscapeOam_375d10[2] = {
@@ -71,8 +71,8 @@ const struct CutsceneScreenShakeInfo sMotherBrainCloseUpScreenShakeInfo = {
     .set = 0
 };
 
-const struct OamArray sMotherBrainCloseUpCutsceneOam[MOTHER_BRAIN_CLOSE_UP_OAM_ID_END] = {
-    [0] = {
+const struct OamArray sMotherBrainCloseUpCutsceneOam[MOTHER_BRAIN_CLOSE_UP_OAM_ID_COUNT] = {
+    [MOTHER_BRAIN_CLOSE_UP_OAM_ID_NONE] = {
         .pOam = sMotherBrainCloseUpOam_Bubble,
         .preAction = OAM_ARRAY_PRE_ACTION_NONE
     },
@@ -99,47 +99,47 @@ const struct OamArray sMotherBrainCloseUpCutsceneOam[MOTHER_BRAIN_CLOSE_UP_OAM_I
     [MOTHER_BRAIN_CLOSE_UP_OAM_ID_EYE_FOCUSING] = {
         .pOam = sMotherBrainCloseUpOam_EyeOpened,
         .preAction = OAM_ARRAY_PRE_ACTION_LOOP_ON_LAST_FRAME
-    },
+    }
 };
 
 static const u16 sMotherBrainCloseUpOam_EyeOpening_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x110, 0, 0),
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x110, 0, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_EyeOpening_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x108, 0, 0),
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x108, 0, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_EyeOpening_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x100, 0, 0),
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x100, 0, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_EyeOpening_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x10, 0, 0),
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x10, 0, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_EyeOpening_Frame8[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x8, 0, 0),
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x8, 0, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_EyeOpening_Frame9[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x0, 0, 0),
+    OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x0, 0, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_Unused_375db4[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -16, OAM_DIMS_16x32, OAM_NO_FLIP, 0x240, 1, 0),
+    OAM_ENTRY(-8, -16, OAM_DIMS_16x32, OAM_NO_FLIP, 0x240, 1, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_Unused_375dbc[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -16, OAM_DIMS_16x32, OAM_NO_FLIP, 0x242, 1, 0),
+    OAM_ENTRY(-8, -16, OAM_DIMS_16x32, OAM_NO_FLIP, 0x242, 1, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_Bubble_Frame0[OAM_DATA_SIZE(4)] = {
@@ -147,7 +147,7 @@ static const u16 sMotherBrainCloseUpOam_Bubble_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x200, 1, 0),
     OAM_ENTRY(-4, 7, OAM_DIMS_8x8, OAM_NO_FLIP, 0x202, 1, 0),
     OAM_ENTRY(-1, 17, OAM_DIMS_8x8, OAM_NO_FLIP, 0x203, 1, 0),
-    OAM_ENTRY(-3, 27, OAM_DIMS_8x8, OAM_NO_FLIP, 0x204, 1, 0),
+    OAM_ENTRY(-3, 27, OAM_DIMS_8x8, OAM_NO_FLIP, 0x204, 1, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_Bubble_Frame1[OAM_DATA_SIZE(4)] = {
@@ -155,7 +155,7 @@ static const u16 sMotherBrainCloseUpOam_Bubble_Frame1[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-7, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x200, 1, 0),
     OAM_ENTRY(-8, 7, OAM_DIMS_8x8, OAM_NO_FLIP, 0x202, 1, 0),
     OAM_ENTRY(2, 17, OAM_DIMS_8x8, OAM_NO_FLIP, 0x203, 1, 0),
-    OAM_ENTRY(-4, 27, OAM_DIMS_8x8, OAM_NO_FLIP, 0x204, 1, 0),
+    OAM_ENTRY(-4, 27, OAM_DIMS_8x8, OAM_NO_FLIP, 0x204, 1, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_Bubble_Frame2[OAM_DATA_SIZE(4)] = {
@@ -163,7 +163,7 @@ static const u16 sMotherBrainCloseUpOam_Bubble_Frame2[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-5, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x200, 1, 0),
     OAM_ENTRY(-6, 7, OAM_DIMS_8x8, OAM_NO_FLIP, 0x202, 1, 0),
     OAM_ENTRY(1, 17, OAM_DIMS_8x8, OAM_NO_FLIP, 0x203, 1, 0),
-    OAM_ENTRY(-3, 27, OAM_DIMS_8x8, OAM_NO_FLIP, 0x204, 1, 0),
+    OAM_ENTRY(-3, 27, OAM_DIMS_8x8, OAM_NO_FLIP, 0x204, 1, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_Bubble_Frame3[OAM_DATA_SIZE(4)] = {
@@ -171,7 +171,7 @@ static const u16 sMotherBrainCloseUpOam_Bubble_Frame3[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-9, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x200, 1, 0),
     OAM_ENTRY(-3, 7, OAM_DIMS_8x8, OAM_NO_FLIP, 0x202, 1, 0),
     OAM_ENTRY(-2, 17, OAM_DIMS_8x8, OAM_NO_FLIP, 0x203, 1, 0),
-    OAM_ENTRY(-1, 27, OAM_DIMS_8x8, OAM_NO_FLIP, 0x204, 1, 0),
+    OAM_ENTRY(-1, 27, OAM_DIMS_8x8, OAM_NO_FLIP, 0x204, 1, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_Bubble_Frame4[OAM_DATA_SIZE(4)] = {
@@ -179,7 +179,7 @@ static const u16 sMotherBrainCloseUpOam_Bubble_Frame4[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-12, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x200, 1, 0),
     OAM_ENTRY(0, 7, OAM_DIMS_8x8, OAM_NO_FLIP, 0x202, 1, 0),
     OAM_ENTRY(-4, 17, OAM_DIMS_8x8, OAM_NO_FLIP, 0x203, 1, 0),
-    OAM_ENTRY(-3, 27, OAM_DIMS_8x8, OAM_NO_FLIP, 0x204, 1, 0),
+    OAM_ENTRY(-3, 27, OAM_DIMS_8x8, OAM_NO_FLIP, 0x204, 1, 0)
 };
 
 const struct FrameData sMotherBrainCloseUpOam_EyeOpening[11] = {
@@ -267,7 +267,7 @@ static const u16 sMotherBrainCloseUpOam_EyeOpened_Frame0[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(0, -8, OAM_DIMS_8x32, OAM_X_FLIP, 0x108, 0, 0),
     OAM_ENTRY(0, 24, OAM_DIMS_8x32, OAM_X_FLIP, 0x188, 0, 0),
     OAM_ENTRY(16, 56, OAM_DIMS_32x16, OAM_X_FLIP, 0x203, 0, 0),
-    OAM_ENTRY(0, 56, OAM_DIMS_16x16, OAM_X_FLIP, 0x207, 0, 0),
+    OAM_ENTRY(0, 56, OAM_DIMS_16x16, OAM_X_FLIP, 0x207, 0, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_EyeOpened_Frame1[OAM_DATA_SIZE(16)] = {
@@ -287,7 +287,7 @@ static const u16 sMotherBrainCloseUpOam_EyeOpened_Frame1[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(0, -8, OAM_DIMS_8x32, OAM_X_FLIP, 0x111, 0, 0),
     OAM_ENTRY(0, 24, OAM_DIMS_8x32, OAM_X_FLIP, 0x191, 0, 0),
     OAM_ENTRY(16, 56, OAM_DIMS_32x16, OAM_X_FLIP, 0x20c, 0, 0),
-    OAM_ENTRY(0, 56, OAM_DIMS_16x16, OAM_X_FLIP, 0x210, 0, 0),
+    OAM_ENTRY(0, 56, OAM_DIMS_16x16, OAM_X_FLIP, 0x210, 0, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_EyeOpened_Frame2[OAM_DATA_SIZE(16)] = {
@@ -307,14 +307,14 @@ static const u16 sMotherBrainCloseUpOam_EyeOpened_Frame2[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(0, -72, OAM_DIMS_8x32, OAM_X_FLIP, 0x1a, 0, 0),
     OAM_ENTRY(0, -40, OAM_DIMS_8x32, OAM_X_FLIP, 0x9a, 0, 0),
     OAM_ENTRY(0, -8, OAM_DIMS_8x32, OAM_X_FLIP, 0x11a, 0, 0),
-    OAM_ENTRY(0, 24, OAM_DIMS_8x32, OAM_X_FLIP, 0x19a, 0, 0),
+    OAM_ENTRY(0, 24, OAM_DIMS_8x32, OAM_X_FLIP, 0x19a, 0, 0)
 };
 
 static const u16 sMotherBrainCloseUpOam_ElevatorAnimation_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY_MODE(8, 16, OAM_DIMS_64x32, OAM_XY_FLIP, 0x240, 1, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT),
     OAM_ENTRY_MODE(-8, 32, OAM_DIMS_16x16, OAM_Y_FLIP, 0x248, 1, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT),
-    OAM_ENTRY_MODE(-72, 16, OAM_DIMS_64x32, OAM_Y_FLIP, 0x240, 1, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT),
+    OAM_ENTRY_MODE(-72, 16, OAM_DIMS_64x32, OAM_Y_FLIP, 0x240, 1, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT)
 };
 
 static const u16 sMotherBrainCloseUpOam_ElevatorAnimation_Frame1[OAM_DATA_SIZE(6)] = {
@@ -324,14 +324,14 @@ static const u16 sMotherBrainCloseUpOam_ElevatorAnimation_Frame1[OAM_DATA_SIZE(6
     OAM_ENTRY_MODE(-16, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2c8, 1, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT),
     OAM_ENTRY_MODE(48, -8, OAM_DIMS_32x16, OAM_X_FLIP, 0x2c0, 1, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT),
     OAM_ENTRY_MODE(16, -8, OAM_DIMS_32x16, OAM_X_FLIP, 0x2c4, 1, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT),
-    OAM_ENTRY_MODE(0, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x2c8, 1, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT),
+    OAM_ENTRY_MODE(0, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x2c8, 1, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT)
 };
 
 static const u16 sMotherBrainCloseUpOam_ElevatorAnimation_Frame2[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY_MODE(8, -48, OAM_DIMS_64x32, OAM_X_FLIP, 0x240, 1, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT),
     OAM_ENTRY_MODE(-8, -48, OAM_DIMS_16x16, OAM_NO_FLIP, 0x248, 1, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT),
-    OAM_ENTRY_MODE(-72, -48, OAM_DIMS_64x32, OAM_NO_FLIP, 0x240, 1, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT),
+    OAM_ENTRY_MODE(-72, -48, OAM_DIMS_64x32, OAM_NO_FLIP, 0x240, 1, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT)
 };
 
 const struct FrameData sMotherBrainCloseUpOam_EyeOpened[4] = {

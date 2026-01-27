@@ -5,4 +5,4 @@
 
 u8 MechaRidleySeesSamusMainLoop(void);
 
-#endif
+#endif /* MECHA_SEES_SAMUS_CUTSCENE */

@@ -4,6 +4,7 @@
 #include "types.h"
 #include "oam.h"
 
+#include "constants/color_fading.h"
 #include "constants/cutscene.h"
 #include "constants/event.h"
 #include "constants/text.h"
@@ -17,8 +18,8 @@ MAKE_ENUM(u8, OamArrayPreAction) {
     OAM_ARRAY_PRE_ACTION_INCREMENT_ID_AFTER_END,
 
     OAM_ARRAY_PRE_ACTION_DECREMENT_ID_AFTER_END = 7,
-    OAM_ARRAY_PRE_ACTION_SWITCH_TO_PREVIOUS_FRAME,
-    OAM_ARRAY_PRE_ACTION_DECREMENT_ID_AT_BEGINNING,
+    OAM_ARRAY_PRE_ACTION_PLAY_BACKWARDS,
+    OAM_ARRAY_PRE_ACTION_PLAY_BACKWARDS_DECREMENT_ID
 };
 
 struct OamArray {
@@ -112,7 +113,7 @@ struct CutsceneGraphicsData {
 };
 
 struct CutsceneSpecialEffect {
-    u8 status;
+    CutsceneSpecialEffectStatus status;
     u8 s_WrittenToBLDY;
     u8 bg_WrittenToBldalpha_L;
     u8 bg_WrittenToBldalpha_H;
@@ -193,7 +194,7 @@ struct CutsceneData {
     u8 fadingReady;
     u8 fadingIntensity;
     u8 fadingMaxDelay;
-    u8 fadingType;
+    ColorFadingType fadingType;
     struct CutsceneGraphicsData graphicsData[4];
     struct CutsceneOamData oam[30];
 };

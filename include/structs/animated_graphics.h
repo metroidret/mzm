@@ -3,11 +3,13 @@
 
 #include "types.h"
 
+#include "constants/animated_graphics.h"
+
 struct BackgroundEffect {
     u8 unused;
     u16 timer;
     u8 colorStage;
-    u8 type;
+    BackgroundEffectNum type;
     u8 stage;
     u8 unk_7;
 };
@@ -34,38 +36,38 @@ struct AnimatedPaletteTiming {
 };
 
 struct AnimatedGraphicsInfo {
-    u8 type;
+    AnimatedGfxType type;
     u8 framesPerState;
     u8 animationDurationCounter;
     u8 numberOfStates;
     s8 currentAnimationFrame;
-    u8 graphicsEntry;
+    AnimatedGfxId graphicsEntry;
     const u8* pGraphics;
 };
 
 struct AnimatedGraphicsData {
-    u8 type;
+    AnimatedGfxType type;
     u8 framesPerState;
     u8 numberOfStates;
     const u8* const pGraphics;
 };
 
 struct AnimatedPaletteData {
-    u8 type;
+    AnimatedPaletteType type;
     u8 framesPerState;
     u8 numbersOfStates;
     const u16* pPalette;
 };
 
-enum BackgroundEffectBehaviorField {
+MAKE_ENUM(u8, BackgroundEffectBehaviorField) {
     BACKGROUND_EFFECT_BEHAVIOR_FIELD_CMD_TYPE,
     BACKGROUND_EFFECT_BEHAVIOR_FIELD_CMD_TIMER,
     BACKGROUND_EFFECT_BEHAVIOR_FIELD_CMD_ARG,
 
-    BACKGROUND_EFFECT_BEHAVIOR_FIELD_END
+    BACKGROUND_EFFECT_BEHAVIOR_FIELD_COUNT
 };
 
-typedef const u16 (BackgroundEffectBehaviorEntry_T)[BACKGROUND_EFFECT_BEHAVIOR_FIELD_END];
+typedef const u16 (BackgroundEffectBehaviorEntry_T)[BACKGROUND_EFFECT_BEHAVIOR_FIELD_COUNT];
 
 extern struct BackgroundEffect gBackgroundEffect;
 extern struct AnimatedTiming gTankAnimations[4];

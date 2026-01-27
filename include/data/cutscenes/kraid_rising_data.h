@@ -13,7 +13,7 @@ extern const struct CutsceneScreenShakeInfo sKraidRisingScreenShakeData;
 
 extern const struct CutsceneScrollingInfo sKraidRisingScrollingInfo;
 
-extern const struct OamArray sKraidRisingCutsceneOam[KRAID_RISING_OAM_ID_END];
+extern const struct OamArray sKraidRisingCutsceneOam[KRAID_RISING_OAM_ID_COUNT];
 
 extern const u16 sKraidRisingOam_Samus_Frame0[4];
 

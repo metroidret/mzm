@@ -117,7 +117,7 @@ void DoSoundAction(u32 action)
     if (action & SOUND_ACTION_FREQ_INDEX_FLAG)
     {
         gMusicInfo.freqIndex = (action & SOUND_ACTION_FREQ_INDEX_FLAG) >> SOUND_ACTION_FREQ_INDEX_SHIFT;
-        if (gMusicInfo.freqIndex != 0)
+        if (gMusicInfo.freqIndex != SOUND_MODE_FREQ_NONE)
             SetupSoundTransfer();
     }
 

@@ -202,7 +202,7 @@ static u32 LanguageSelectMainLoop(void)
             LANGUAGE_SELECT_DATA.selectedLanguage = LANGUAGE_ENGLISH;
             LanguageSelectChangeHighlight(TRUE, LANGUAGE_SELECT_DATA.selectedLanguage);
 
-            for (language = LANGUAGE_ENGLISH + 1; language < LANGUAGE_END; language++)
+            for (language = LANGUAGE_ENGLISH + 1; language < LANGUAGE_COUNT; language++)
             {
                 LanguageSelectChangeHighlight(FALSE, language);
             }
@@ -233,19 +233,19 @@ static u32 LanguageSelectMainLoop(void)
         else
         {
             language = LANGUAGE_ENGLISH;
-            LANGUAGE_SELECT_DATA.selectedLanguage = LANGUAGE_END - 1;
+            LANGUAGE_SELECT_DATA.selectedLanguage = LANGUAGE_COUNT - 1;
         }
     }
     else if (gChangedInput & KEY_DOWN)
     {
-        if (LANGUAGE_SELECT_DATA.selectedLanguage < LANGUAGE_END - 1)
+        if (LANGUAGE_SELECT_DATA.selectedLanguage < LANGUAGE_COUNT - 1)
         {
             language = LANGUAGE_SELECT_DATA.selectedLanguage;
             LANGUAGE_SELECT_DATA.selectedLanguage = language + 1;
         }
         else
         {
-            language = LANGUAGE_END - 1;
+            language = LANGUAGE_COUNT - 1;
             LANGUAGE_SELECT_DATA.selectedLanguage = LANGUAGE_ENGLISH;
         }
     }

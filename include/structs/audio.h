@@ -235,7 +235,7 @@ struct MusicInfo {
     u8 reverb; // unused
     u8 maxSoundChannels;
     u8 volume;
-    u8 freqIndex;
+    SoundModeFrequency freqIndex;
 
     u8 unk_8;
     u8 unk_9;

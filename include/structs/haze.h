@@ -3,6 +3,8 @@
 
 #include "types.h"
 
+#include "constants/haze.h"
+
 typedef u32 (*HazeFunc_T)(void);
 
 struct Haze {
@@ -29,7 +31,7 @@ extern u8 gUnk_3005514;
 
 extern HazeFunc_T gHazeProcessCodePointer;
 
-extern u8 gCurrentHazeValue;
+extern HazeValue gCurrentHazeValue;
 
 #ifdef USE_EWRAM_SYMBOLS
 extern u16 gHazeValues[1280];

@@ -26,7 +26,7 @@ static const u16 sKraidElevatorStatueOam_Idle_Frame0[OAM_DATA_SIZE(21)] = {
     OAM_ENTRY(-8, -80, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21a, 8, 0),
     OAM_ENTRY(-24, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21a, 8, 0),
     OAM_ENTRY(-8, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21a, 8, 0),
-    OAM_ENTRY(-8, -48, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21a, 8, 0),
+    OAM_ENTRY(-8, -48, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21a, 8, 0)
 };
 
 static const u16 sKraidElevatorStatueOam_Falling_Frame0[OAM_DATA_SIZE(17)] = {
@@ -47,7 +47,7 @@ static const u16 sKraidElevatorStatueOam_Falling_Frame0[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(-14, -33, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 8, 0),
     OAM_ENTRY(-14, -17, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 8, 0),
     OAM_ENTRY(-8, -41, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 8, 0),
-    OAM_ENTRY(-25, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-25, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 static const u16 sKraidElevatorStatueOam_Falling_Frame1[OAM_DATA_SIZE(17)] = {
@@ -68,7 +68,7 @@ static const u16 sKraidElevatorStatueOam_Falling_Frame1[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(-7, -42, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 8, 0),
     OAM_ENTRY(-14, -30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 8, 0),
     OAM_ENTRY(-14, -14, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 8, 0),
-    OAM_ENTRY(-26, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-26, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 static const u16 sKraidElevatorStatueOam_Falling_Frame2[OAM_DATA_SIZE(17)] = {
@@ -89,7 +89,7 @@ static const u16 sKraidElevatorStatueOam_Falling_Frame2[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(-8, -38, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 8, 0),
     OAM_ENTRY(-14, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 8, 0),
     OAM_ENTRY(-14, -10, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 8, 0),
-    OAM_ENTRY(-26, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-26, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 static const u16 sKraidElevatorStatueOam_Falling_Frame3[OAM_DATA_SIZE(18)] = {
@@ -111,7 +111,7 @@ static const u16 sKraidElevatorStatueOam_Falling_Frame3[OAM_DATA_SIZE(18)] = {
     OAM_ENTRY(-8, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 8, 0),
     OAM_ENTRY(-14, -22, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 8, 0),
     OAM_ENTRY(-14, -6, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 8, 0),
-    OAM_ENTRY(-26, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-26, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 static const u16 sKraidElevatorStatueOam_Falling_Frame4[OAM_DATA_SIZE(15)] = {
@@ -130,7 +130,7 @@ static const u16 sKraidElevatorStatueOam_Falling_Frame4[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-8, -30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 8, 0),
     OAM_ENTRY(-14, -17, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 8, 0),
     OAM_ENTRY(-14, -1, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 8, 0),
-    OAM_ENTRY(-26, -13, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-26, -13, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 static const u16 sKraidElevatorStatueOam_Falling_Frame5[OAM_DATA_SIZE(15)] = {
@@ -149,7 +149,7 @@ static const u16 sKraidElevatorStatueOam_Falling_Frame5[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-8, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 8, 0),
     OAM_ENTRY(-12, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 8, 0),
     OAM_ENTRY(-12, 5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 8, 0),
-    OAM_ENTRY(-28, -7, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-28, -7, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 static const u16 sKraidElevatorStatueOam_Falling_Frame6[OAM_DATA_SIZE(19)] = {
@@ -172,7 +172,7 @@ static const u16 sKraidElevatorStatueOam_Falling_Frame6[OAM_DATA_SIZE(19)] = {
     OAM_ENTRY(-8, -19, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 8, 0),
     OAM_ENTRY(-9, -6, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 8, 0),
     OAM_ENTRY(-9, 10, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 8, 0),
-    OAM_ENTRY(-31, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-31, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 static const u16 sKraidElevatorStatueOam_Falling_Frame7[OAM_DATA_SIZE(21)] = {
@@ -197,7 +197,7 @@ static const u16 sKraidElevatorStatueOam_Falling_Frame7[OAM_DATA_SIZE(21)] = {
     OAM_ENTRY(-6, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 8, 0),
     OAM_ENTRY(-6, 12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 8, 0),
     OAM_ENTRY(-33, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0),
-    OAM_ENTRY(-63, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 8, 0),
+    OAM_ENTRY(-63, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 8, 0)
 };
 
 static const u16 sKraidElevatorStatueOam_Falling_Frame8[OAM_DATA_SIZE(21)] = {
@@ -222,7 +222,7 @@ static const u16 sKraidElevatorStatueOam_Falling_Frame8[OAM_DATA_SIZE(21)] = {
     OAM_ENTRY(-2, 12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 8, 0),
     OAM_ENTRY(-10, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 8, 0),
     OAM_ENTRY(-36, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0),
-    OAM_ENTRY(-66, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 8, 0),
+    OAM_ENTRY(-66, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 8, 0)
 };
 
 static const u16 sKraidElevatorStatueOam_Falling_Frame9[OAM_DATA_SIZE(23)] = {
@@ -249,7 +249,7 @@ static const u16 sKraidElevatorStatueOam_Falling_Frame9[OAM_DATA_SIZE(23)] = {
     OAM_ENTRY(-1, 12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 8, 0),
     OAM_ENTRY(-11, -13, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 8, 0),
     OAM_ENTRY(-39, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0),
-    OAM_ENTRY(-72, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 8, 0),
+    OAM_ENTRY(-72, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 8, 0)
 };
 
 static const u16 sKraidElevatorStatueOam_Falling_Frame10[OAM_DATA_SIZE(23)] = {
@@ -276,7 +276,7 @@ static const u16 sKraidElevatorStatueOam_Falling_Frame10[OAM_DATA_SIZE(23)] = {
     OAM_ENTRY(2, 12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 8, 0),
     OAM_ENTRY(-14, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 8, 0),
     OAM_ENTRY(-41, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0),
-    OAM_ENTRY(-73, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 8, 0),
+    OAM_ENTRY(-73, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 8, 0)
 };
 
 static const u16 sKraidElevatorStatueOam_Falling_Frame11[OAM_DATA_SIZE(23)] = {
@@ -303,7 +303,7 @@ static const u16 sKraidElevatorStatueOam_Falling_Frame11[OAM_DATA_SIZE(23)] = {
     OAM_ENTRY(3, 12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 8, 0),
     OAM_ENTRY(-15, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 8, 0),
     OAM_ENTRY(-42, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0),
-    OAM_ENTRY(-74, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 8, 0),
+    OAM_ENTRY(-74, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 8, 0)
 };
 
 static const u16 sKraidElevatorStatueOam_Fallen_Frame0[OAM_DATA_SIZE(23)] = {
@@ -330,19 +330,19 @@ static const u16 sKraidElevatorStatueOam_Fallen_Frame0[OAM_DATA_SIZE(23)] = {
     OAM_ENTRY(5, 12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 8, 0),
     OAM_ENTRY(-16, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 8, 0),
     OAM_ENTRY(-42, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 8, 0),
-    OAM_ENTRY(-74, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 8, 0),
+    OAM_ENTRY(-74, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 8, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Kraid_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-28, -88, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 8, 0),
-    OAM_ENTRY(-28, -72, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 8, 0),
+    OAM_ENTRY(-28, -72, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 8, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Kraid_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-28, -86, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 8, 0),
-    OAM_ENTRY(-28, -70, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 8, 0),
+    OAM_ENTRY(-28, -70, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 8, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Kraid_Frame2[OAM_DATA_SIZE(4)] = {
@@ -350,7 +350,7 @@ static const u16 sElevatorStatueDebrisOam_Kraid_Frame2[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -84, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 8, 0),
     OAM_ENTRY(-28, -68, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 8, 0),
     OAM_ENTRY(-21, -76, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 8, 0),
-    OAM_ENTRY(-24, -90, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0),
+    OAM_ENTRY(-24, -90, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Kraid_Frame3[OAM_DATA_SIZE(4)] = {
@@ -358,7 +358,7 @@ static const u16 sElevatorStatueDebrisOam_Kraid_Frame3[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -78, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 8, 0),
     OAM_ENTRY(-28, -62, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 8, 0),
     OAM_ENTRY(-21, -74, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 8, 0),
-    OAM_ENTRY(-24, -89, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0),
+    OAM_ENTRY(-24, -89, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Kraid_Frame4[OAM_DATA_SIZE(4)] = {
@@ -366,7 +366,7 @@ static const u16 sElevatorStatueDebrisOam_Kraid_Frame4[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -70, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 8, 0),
     OAM_ENTRY(-28, -54, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 8, 0),
     OAM_ENTRY(-21, -72, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 8, 0),
-    OAM_ENTRY(-24, -88, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0),
+    OAM_ENTRY(-24, -88, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Kraid_Frame5[OAM_DATA_SIZE(4)] = {
@@ -374,7 +374,7 @@ static const u16 sElevatorStatueDebrisOam_Kraid_Frame5[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -61, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 8, 0),
     OAM_ENTRY(-28, -45, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 8, 0),
     OAM_ENTRY(-21, -70, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 8, 0),
-    OAM_ENTRY(-24, -85, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0),
+    OAM_ENTRY(-24, -85, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Kraid_Frame6[OAM_DATA_SIZE(4)] = {
@@ -382,7 +382,7 @@ static const u16 sElevatorStatueDebrisOam_Kraid_Frame6[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -52, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 8, 0),
     OAM_ENTRY(-28, -36, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 8, 0),
     OAM_ENTRY(-21, -62, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 8, 0),
-    OAM_ENTRY(-24, -77, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0),
+    OAM_ENTRY(-24, -77, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Kraid_Frame7[OAM_DATA_SIZE(4)] = {
@@ -390,7 +390,7 @@ static const u16 sElevatorStatueDebrisOam_Kraid_Frame7[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -34, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 8, 0),
     OAM_ENTRY(-28, -18, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 8, 0),
     OAM_ENTRY(-21, -51, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 8, 0),
-    OAM_ENTRY(-24, -70, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0),
+    OAM_ENTRY(-24, -70, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Kraid_Frame8[OAM_DATA_SIZE(4)] = {
@@ -398,7 +398,7 @@ static const u16 sElevatorStatueDebrisOam_Kraid_Frame8[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 8, 0),
     OAM_ENTRY(-28, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 8, 0),
     OAM_ENTRY(-21, -37, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 8, 0),
-    OAM_ENTRY(-24, -60, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0),
+    OAM_ENTRY(-24, -60, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Kraid_Frame9[OAM_DATA_SIZE(4)] = {
@@ -406,7 +406,7 @@ static const u16 sElevatorStatueDebrisOam_Kraid_Frame9[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 8, 0),
     OAM_ENTRY(-28, -2, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 8, 0),
     OAM_ENTRY(-21, -29, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 8, 0),
-    OAM_ENTRY(-24, -46, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0),
+    OAM_ENTRY(-24, -46, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Kraid_Frame10[OAM_DATA_SIZE(4)] = {
@@ -414,7 +414,7 @@ static const u16 sElevatorStatueDebrisOam_Kraid_Frame10[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-29, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 8, 0),
     OAM_ENTRY(-29, -2, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 8, 0),
     OAM_ENTRY(-21, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 8, 0),
-    OAM_ENTRY(-24, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0),
+    OAM_ENTRY(-24, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 8, 0)
 };
 
 static const u16 sRidleyElevatorStatueOam_Idle_Frame0[OAM_DATA_SIZE(19)] = {
@@ -437,7 +437,7 @@ static const u16 sRidleyElevatorStatueOam_Idle_Frame0[OAM_DATA_SIZE(19)] = {
     OAM_ENTRY(-8, -80, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21a, 9, 0),
     OAM_ENTRY(-24, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21a, 9, 0),
     OAM_ENTRY(-8, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21a, 9, 0),
-    OAM_ENTRY(-8, -48, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21a, 9, 0),
+    OAM_ENTRY(-8, -48, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21a, 9, 0)
 };
 
 static const u16 sRidleyElevatorStatueOam_Falling_Frame0[OAM_DATA_SIZE(15)] = {
@@ -456,7 +456,7 @@ static const u16 sRidleyElevatorStatueOam_Falling_Frame0[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-14, -33, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 9, 0),
     OAM_ENTRY(-14, -17, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 9, 0),
     OAM_ENTRY(-8, -41, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 9, 0),
-    OAM_ENTRY(-25, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0),
+    OAM_ENTRY(-25, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0)
 };
 
 static const u16 sRidleyElevatorStatueOam_Falling_Frame1[OAM_DATA_SIZE(15)] = {
@@ -475,7 +475,7 @@ static const u16 sRidleyElevatorStatueOam_Falling_Frame1[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-7, -42, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 9, 0),
     OAM_ENTRY(-14, -30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 9, 0),
     OAM_ENTRY(-14, -14, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 9, 0),
-    OAM_ENTRY(-26, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0),
+    OAM_ENTRY(-26, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0)
 };
 
 static const u16 sRidleyElevatorStatueOam_Falling_Frame2[OAM_DATA_SIZE(15)] = {
@@ -494,7 +494,7 @@ static const u16 sRidleyElevatorStatueOam_Falling_Frame2[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-8, -38, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 9, 0),
     OAM_ENTRY(-14, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 9, 0),
     OAM_ENTRY(-14, -10, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 9, 0),
-    OAM_ENTRY(-26, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0),
+    OAM_ENTRY(-26, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0)
 };
 
 static const u16 sRidleyElevatorStatueOam_Falling_Frame3[OAM_DATA_SIZE(16)] = {
@@ -514,7 +514,7 @@ static const u16 sRidleyElevatorStatueOam_Falling_Frame3[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-8, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 9, 0),
     OAM_ENTRY(-14, -22, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 9, 0),
     OAM_ENTRY(-14, -6, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 9, 0),
-    OAM_ENTRY(-26, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0),
+    OAM_ENTRY(-26, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0)
 };
 
 static const u16 sRidleyElevatorStatueOam_Falling_Frame4[OAM_DATA_SIZE(17)] = {
@@ -535,7 +535,7 @@ static const u16 sRidleyElevatorStatueOam_Falling_Frame4[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(-8, -30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 9, 0),
     OAM_ENTRY(-14, -17, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 9, 0),
     OAM_ENTRY(-14, -1, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 9, 0),
-    OAM_ENTRY(-26, -13, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0),
+    OAM_ENTRY(-26, -13, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0)
 };
 
 static const u16 sRidleyElevatorStatueOam_Falling_Frame5[OAM_DATA_SIZE(17)] = {
@@ -556,7 +556,7 @@ static const u16 sRidleyElevatorStatueOam_Falling_Frame5[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(-8, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 9, 0),
     OAM_ENTRY(-12, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 9, 0),
     OAM_ENTRY(-12, 5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 9, 0),
-    OAM_ENTRY(-28, -7, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0),
+    OAM_ENTRY(-28, -7, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0)
 };
 
 static const u16 sRidleyElevatorStatueOam_Falling_Frame6[OAM_DATA_SIZE(21)] = {
@@ -581,7 +581,7 @@ static const u16 sRidleyElevatorStatueOam_Falling_Frame6[OAM_DATA_SIZE(21)] = {
     OAM_ENTRY(-8, -19, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 9, 0),
     OAM_ENTRY(-9, -6, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 9, 0),
     OAM_ENTRY(-9, 10, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 9, 0),
-    OAM_ENTRY(-31, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0),
+    OAM_ENTRY(-31, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0)
 };
 
 static const u16 sRidleyElevatorStatueOam_Falling_Frame7[OAM_DATA_SIZE(23)] = {
@@ -608,7 +608,7 @@ static const u16 sRidleyElevatorStatueOam_Falling_Frame7[OAM_DATA_SIZE(23)] = {
     OAM_ENTRY(-6, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a8, 9, 0),
     OAM_ENTRY(-6, 12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 9, 0),
     OAM_ENTRY(-33, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0),
-    OAM_ENTRY(-63, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 9, 0),
+    OAM_ENTRY(-63, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 9, 0)
 };
 
 static const u16 sRidleyElevatorStatueOam_Falling_Frame8[OAM_DATA_SIZE(22)] = {
@@ -634,7 +634,7 @@ static const u16 sRidleyElevatorStatueOam_Falling_Frame8[OAM_DATA_SIZE(22)] = {
     OAM_ENTRY(-2, 12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 9, 0),
     OAM_ENTRY(-10, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 9, 0),
     OAM_ENTRY(-36, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0),
-    OAM_ENTRY(-66, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 9, 0),
+    OAM_ENTRY(-66, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 9, 0)
 };
 
 static const u16 sRidleyElevatorStatueOam_Falling_Frame9[OAM_DATA_SIZE(24)] = {
@@ -662,7 +662,7 @@ static const u16 sRidleyElevatorStatueOam_Falling_Frame9[OAM_DATA_SIZE(24)] = {
     OAM_ENTRY(-1, 12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 9, 0),
     OAM_ENTRY(-11, -13, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 9, 0),
     OAM_ENTRY(-39, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0),
-    OAM_ENTRY(-72, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 9, 0),
+    OAM_ENTRY(-72, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 9, 0)
 };
 
 static const u16 sRidleyElevatorStatueOam_Falling_Frame10[OAM_DATA_SIZE(24)] = {
@@ -690,7 +690,7 @@ static const u16 sRidleyElevatorStatueOam_Falling_Frame10[OAM_DATA_SIZE(24)] = {
     OAM_ENTRY(2, 12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 9, 0),
     OAM_ENTRY(-14, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 9, 0),
     OAM_ENTRY(-41, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0),
-    OAM_ENTRY(-73, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 9, 0),
+    OAM_ENTRY(-73, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 9, 0)
 };
 
 static const u16 sRidleyElevatorStatueOam_Falling_Frame11[OAM_DATA_SIZE(24)] = {
@@ -718,7 +718,7 @@ static const u16 sRidleyElevatorStatueOam_Falling_Frame11[OAM_DATA_SIZE(24)] = {
     OAM_ENTRY(3, 12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 9, 0),
     OAM_ENTRY(-15, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 9, 0),
     OAM_ENTRY(-42, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0),
-    OAM_ENTRY(-74, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 9, 0),
+    OAM_ENTRY(-74, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 9, 0)
 };
 
 static const u16 sRidleyElevatorStatueOam_Fallen_Frame0[OAM_DATA_SIZE(24)] = {
@@ -746,19 +746,19 @@ static const u16 sRidleyElevatorStatueOam_Fallen_Frame0[OAM_DATA_SIZE(24)] = {
     OAM_ENTRY(5, 12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e8, 9, 0),
     OAM_ENTRY(-16, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x213, 9, 0),
     OAM_ENTRY(-42, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x253, 9, 0),
-    OAM_ENTRY(-74, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 9, 0),
+    OAM_ENTRY(-74, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 9, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Ridley_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-28, -88, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 9, 0),
-    OAM_ENTRY(-28, -72, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 9, 0),
+    OAM_ENTRY(-28, -72, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 9, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Ridley_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-28, -86, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 9, 0),
-    OAM_ENTRY(-28, -70, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 9, 0),
+    OAM_ENTRY(-28, -70, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 9, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Ridley_Frame2[OAM_DATA_SIZE(4)] = {
@@ -766,7 +766,7 @@ static const u16 sElevatorStatueDebrisOam_Ridley_Frame2[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -84, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 9, 0),
     OAM_ENTRY(-28, -68, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 9, 0),
     OAM_ENTRY(-21, -76, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 9, 0),
-    OAM_ENTRY(-24, -90, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0),
+    OAM_ENTRY(-24, -90, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Ridley_Frame3[OAM_DATA_SIZE(4)] = {
@@ -774,7 +774,7 @@ static const u16 sElevatorStatueDebrisOam_Ridley_Frame3[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -78, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 9, 0),
     OAM_ENTRY(-28, -62, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 9, 0),
     OAM_ENTRY(-21, -74, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 9, 0),
-    OAM_ENTRY(-24, -89, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0),
+    OAM_ENTRY(-24, -89, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Ridley_Frame4[OAM_DATA_SIZE(4)] = {
@@ -782,7 +782,7 @@ static const u16 sElevatorStatueDebrisOam_Ridley_Frame4[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -70, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 9, 0),
     OAM_ENTRY(-28, -54, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 9, 0),
     OAM_ENTRY(-21, -72, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 9, 0),
-    OAM_ENTRY(-24, -88, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0),
+    OAM_ENTRY(-24, -88, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Ridley_Frame5[OAM_DATA_SIZE(4)] = {
@@ -790,7 +790,7 @@ static const u16 sElevatorStatueDebrisOam_Ridley_Frame5[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -61, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 9, 0),
     OAM_ENTRY(-28, -45, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 9, 0),
     OAM_ENTRY(-21, -70, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 9, 0),
-    OAM_ENTRY(-24, -85, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0),
+    OAM_ENTRY(-24, -85, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Ridley_Frame6[OAM_DATA_SIZE(4)] = {
@@ -798,7 +798,7 @@ static const u16 sElevatorStatueDebrisOam_Ridley_Frame6[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -52, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 9, 0),
     OAM_ENTRY(-28, -36, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 9, 0),
     OAM_ENTRY(-21, -62, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 9, 0),
-    OAM_ENTRY(-24, -77, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0),
+    OAM_ENTRY(-24, -77, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Ridley_Frame7[OAM_DATA_SIZE(4)] = {
@@ -806,7 +806,7 @@ static const u16 sElevatorStatueDebrisOam_Ridley_Frame7[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -34, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 9, 0),
     OAM_ENTRY(-28, -18, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 9, 0),
     OAM_ENTRY(-21, -51, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 9, 0),
-    OAM_ENTRY(-24, -70, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0),
+    OAM_ENTRY(-24, -70, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Ridley_Frame8[OAM_DATA_SIZE(4)] = {
@@ -814,7 +814,7 @@ static const u16 sElevatorStatueDebrisOam_Ridley_Frame8[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 9, 0),
     OAM_ENTRY(-28, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 9, 0),
     OAM_ENTRY(-21, -37, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 9, 0),
-    OAM_ENTRY(-24, -60, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0),
+    OAM_ENTRY(-24, -60, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Ridley_Frame9[OAM_DATA_SIZE(4)] = {
@@ -822,7 +822,7 @@ static const u16 sElevatorStatueDebrisOam_Ridley_Frame9[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-28, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 9, 0),
     OAM_ENTRY(-28, -2, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 9, 0),
     OAM_ENTRY(-21, -29, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 9, 0),
-    OAM_ENTRY(-24, -46, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0),
+    OAM_ENTRY(-24, -46, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Ridley_Frame10[OAM_DATA_SIZE(4)] = {
@@ -830,14 +830,14 @@ static const u16 sElevatorStatueDebrisOam_Ridley_Frame10[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-29, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2ac, 9, 0),
     OAM_ENTRY(-29, -2, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ec, 9, 0),
     OAM_ENTRY(-21, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x255, 9, 0),
-    OAM_ENTRY(-24, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0),
+    OAM_ENTRY(-24, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2ca, 9, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Dust_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
     OAM_ENTRY(-48, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
-    OAM_ENTRY(-27, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
+    OAM_ENTRY(-27, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Dust_Frame2[OAM_DATA_SIZE(5)] = {
@@ -846,7 +846,7 @@ static const u16 sElevatorStatueDebrisOam_Dust_Frame2[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x18a, 4, 0),
     OAM_ENTRY(-44, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
     OAM_ENTRY(-48, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x18a, 4, 0),
-    OAM_ENTRY(-28, -4, OAM_DIMS_16x16, OAM_X_FLIP, 0x18a, 4, 0),
+    OAM_ENTRY(-28, -4, OAM_DIMS_16x16, OAM_X_FLIP, 0x18a, 4, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Dust_Frame4[OAM_DATA_SIZE(7)] = {
@@ -857,7 +857,7 @@ static const u16 sElevatorStatueDebrisOam_Dust_Frame4[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(-40, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
     OAM_ENTRY(-42, -14, OAM_DIMS_16x16, OAM_X_FLIP, 0x18a, 4, 0),
     OAM_ENTRY(-45, -9, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 4, 0),
-    OAM_ENTRY(-30, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 4, 0),
+    OAM_ENTRY(-30, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 4, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Dust_Frame6[OAM_DATA_SIZE(11)] = {
@@ -872,7 +872,7 @@ static const u16 sElevatorStatueDebrisOam_Dust_Frame6[OAM_DATA_SIZE(11)] = {
     OAM_ENTRY(-43, -11, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(-65, -14, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 4, 0),
     OAM_ENTRY(-55, -8, OAM_DIMS_16x16, OAM_Y_FLIP, 0x18a, 4, 0),
-    OAM_ENTRY(0, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
+    OAM_ENTRY(0, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Dust_Frame8[OAM_DATA_SIZE(15)] = {
@@ -891,7 +891,7 @@ static const u16 sElevatorStatueDebrisOam_Dust_Frame8[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-70, -15, OAM_DIMS_16x16, OAM_Y_FLIP, 0x18a, 4, 0),
     OAM_ENTRY(-60, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(-48, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 4, 0),
-    OAM_ENTRY(3, -15, OAM_DIMS_16x16, OAM_X_FLIP, 0x18a, 4, 0),
+    OAM_ENTRY(3, -15, OAM_DIMS_16x16, OAM_X_FLIP, 0x18a, 4, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Dust_Frame10[OAM_DATA_SIZE(14)] = {
@@ -909,7 +909,7 @@ static const u16 sElevatorStatueDebrisOam_Dust_Frame10[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-74, -19, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(-62, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(-49, -12, OAM_DIMS_16x16, OAM_X_FLIP, 0x18a, 4, 0),
-    OAM_ENTRY(2, -22, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 4, 0),
+    OAM_ENTRY(2, -22, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 4, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Dust_Frame12[OAM_DATA_SIZE(13)] = {
@@ -926,7 +926,7 @@ static const u16 sElevatorStatueDebrisOam_Dust_Frame12[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-57, -4, OAM_DIMS_8x8, OAM_X_FLIP, 0x18f, 4, 0),
     OAM_ENTRY(-65, 0, OAM_DIMS_8x8, OAM_XY_FLIP, 0x18f, 4, 0),
     OAM_ENTRY(-49, -21, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 4, 0),
-    OAM_ENTRY(0, -29, OAM_DIMS_16x16, OAM_X_FLIP, 0x18e, 4, 0),
+    OAM_ENTRY(0, -29, OAM_DIMS_16x16, OAM_X_FLIP, 0x18e, 4, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Dust_Frame14[OAM_DATA_SIZE(13)] = {
@@ -943,7 +943,7 @@ static const u16 sElevatorStatueDebrisOam_Dust_Frame14[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-48, -24, OAM_DIMS_16x16, OAM_X_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(7, -26, OAM_DIMS_8x8, OAM_XY_FLIP, 0x18f, 4, 0),
     OAM_ENTRY(-1, -30, OAM_DIMS_8x8, OAM_Y_FLIP, 0x18f, 4, 0),
-    OAM_ENTRY(7, -34, OAM_DIMS_8x8, OAM_NO_FLIP, 0x18f, 4, 0),
+    OAM_ENTRY(7, -34, OAM_DIMS_8x8, OAM_NO_FLIP, 0x18f, 4, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Dust_Frame16[OAM_DATA_SIZE(12)] = {
@@ -959,7 +959,7 @@ static const u16 sElevatorStatueDebrisOam_Dust_Frame16[OAM_DATA_SIZE(12)] = {
     OAM_ENTRY(-51, -23, OAM_DIMS_8x8, OAM_Y_FLIP, 0x18f, 4, 0),
     OAM_ENTRY(-43, -27, OAM_DIMS_8x8, OAM_NO_FLIP, 0x18f, 4, 0),
     OAM_ENTRY(2, -36, OAM_DIMS_8x8, OAM_Y_FLIP, 0x1a7, 4, 0),
-    OAM_ENTRY(4, -28, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a7, 4, 0),
+    OAM_ENTRY(4, -28, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a7, 4, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Dust_Frame18[OAM_DATA_SIZE(4)] = {
@@ -967,12 +967,12 @@ static const u16 sElevatorStatueDebrisOam_Dust_Frame18[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-22, -40, OAM_DIMS_8x8, OAM_XY_FLIP, 0x1a7, 4, 0),
     OAM_ENTRY(-24, -32, OAM_DIMS_8x8, OAM_X_FLIP, 0x1a7, 4, 0),
     OAM_ENTRY(-45, -31, OAM_DIMS_8x8, OAM_XY_FLIP, 0x1a7, 4, 0),
-    OAM_ENTRY(-47, -23, OAM_DIMS_8x8, OAM_X_FLIP, 0x1a7, 4, 0),
+    OAM_ENTRY(-47, -23, OAM_DIMS_8x8, OAM_X_FLIP, 0x1a7, 4, 0)
 };
 
 static const u16 sElevatorStatueDebrisOam_Dust_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x140, 4, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x140, 4, 0)
 };
 
 const struct FrameData sKraidElevatorStatueOam_Idle[2] = {

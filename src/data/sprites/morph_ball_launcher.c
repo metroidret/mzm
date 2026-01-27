@@ -17,7 +17,7 @@ static const u16 sMorphBallLauncherOam_Idle_Frame0[OAM_DATA_SIZE(12)] = {
     OAM_ENTRY(4, 15, OAM_DIMS_8x16, OAM_X_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(10, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x200, 8, 0),
     OAM_ENTRY(8, 8, OAM_DIMS_16x8, OAM_X_FLIP, 0x205, 8, 0),
-    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sMorphBallLauncherOam_Idle_Frame1[OAM_DATA_SIZE(15)] = {
@@ -36,7 +36,7 @@ static const u16 sMorphBallLauncherOam_Idle_Frame1[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(4, 15, OAM_DIMS_8x16, OAM_X_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(10, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x200, 8, 0),
     OAM_ENTRY(8, 8, OAM_DIMS_16x8, OAM_X_FLIP, 0x205, 8, 0),
-    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sMorphBallLauncherOam_Idle_Frame2[OAM_DATA_SIZE(15)] = {
@@ -55,7 +55,7 @@ static const u16 sMorphBallLauncherOam_Idle_Frame2[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(4, 15, OAM_DIMS_8x16, OAM_X_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(10, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x200, 8, 0),
     OAM_ENTRY(8, 8, OAM_DIMS_16x8, OAM_X_FLIP, 0x205, 8, 0),
-    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sMorphBallLauncherOam_Launching_Frame0[OAM_DATA_SIZE(13)] = {
@@ -72,7 +72,7 @@ static const u16 sMorphBallLauncherOam_Launching_Frame0[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(4, 15, OAM_DIMS_8x16, OAM_X_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(10, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x200, 8, 0),
     OAM_ENTRY(8, 8, OAM_DIMS_16x8, OAM_X_FLIP, 0x205, 8, 0),
-    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sMorphBallLauncherOam_Launching_Frame1[OAM_DATA_SIZE(15)] = {
@@ -91,7 +91,7 @@ static const u16 sMorphBallLauncherOam_Launching_Frame1[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(4, 15, OAM_DIMS_8x16, OAM_X_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(10, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x200, 8, 0),
     OAM_ENTRY(8, 8, OAM_DIMS_16x8, OAM_X_FLIP, 0x205, 8, 0),
-    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sMorphBallLauncherOam_Launching_Frame2[OAM_DATA_SIZE(15)] = {
@@ -110,7 +110,7 @@ static const u16 sMorphBallLauncherOam_Launching_Frame2[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(4, 15, OAM_DIMS_8x16, OAM_X_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(10, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x200, 8, 0),
     OAM_ENTRY(8, 8, OAM_DIMS_16x8, OAM_X_FLIP, 0x205, 8, 0),
-    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sMorphBallLauncherOam_Launching_Frame3[OAM_DATA_SIZE(15)] = {
@@ -129,7 +129,7 @@ static const u16 sMorphBallLauncherOam_Launching_Frame3[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(4, 15, OAM_DIMS_8x16, OAM_X_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(10, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x200, 8, 0),
     OAM_ENTRY(8, 8, OAM_DIMS_16x8, OAM_X_FLIP, 0x205, 8, 0),
-    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sMorphBallLauncherOam_Launching_Frame4[OAM_DATA_SIZE(15)] = {
@@ -148,7 +148,7 @@ static const u16 sMorphBallLauncherOam_Launching_Frame4[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(4, 15, OAM_DIMS_8x16, OAM_X_FLIP, 0x20a, 8, 0),
     OAM_ENTRY(10, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x200, 8, 0),
     OAM_ENTRY(8, 8, OAM_DIMS_16x8, OAM_X_FLIP, 0x205, 8, 0),
-    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(0, 8, OAM_DIMS_8x16, OAM_X_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sMorphBallLauncherPartOam_Back_Frame0[OAM_DATA_SIZE(4)] = {
@@ -156,18 +156,18 @@ static const u16 sMorphBallLauncherPartOam_Back_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-11, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x204, 8, 0),
     OAM_ENTRY(-19, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x203, 8, 0),
     OAM_ENTRY(3, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x204, 8, 0),
-    OAM_ENTRY(11, -8, OAM_DIMS_8x8, OAM_X_FLIP, 0x203, 8, 0),
+    OAM_ENTRY(11, -8, OAM_DIMS_8x8, OAM_X_FLIP, 0x203, 8, 0)
 };
 
 static const u16 sMorphBallLauncherPartOam_Energy_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-20, -20, OAM_DIMS_8x8, OAM_NO_FLIP, 0x213, 8, 0),
+    OAM_ENTRY(-20, -20, OAM_DIMS_8x8, OAM_NO_FLIP, 0x213, 8, 0)
 };
 
 static const u16 sMorphBallLauncherPartOam_Energy_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-18, -18, OAM_DIMS_8x8, OAM_NO_FLIP, 0x214, 8, 0),
-    OAM_ENTRY(12, -20, OAM_DIMS_8x8, OAM_X_FLIP, 0x213, 8, 0),
+    OAM_ENTRY(12, -20, OAM_DIMS_8x8, OAM_X_FLIP, 0x213, 8, 0)
 };
 
 static const u16 sMorphBallLauncherPartOam_Energy_Frame2[OAM_DATA_SIZE(4)] = {
@@ -175,7 +175,7 @@ static const u16 sMorphBallLauncherPartOam_Energy_Frame2[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x215, 8, 0),
     OAM_ENTRY(10, -18, OAM_DIMS_8x8, OAM_X_FLIP, 0x214, 8, 0),
     OAM_ENTRY(-20, 12, OAM_DIMS_8x8, OAM_Y_FLIP, 0x213, 8, 0),
-    OAM_ENTRY(12, -2, OAM_DIMS_8x8, OAM_X_FLIP, 0x213, 8, 0),
+    OAM_ENTRY(12, -2, OAM_DIMS_8x8, OAM_X_FLIP, 0x213, 8, 0)
 };
 
 static const u16 sMorphBallLauncherPartOam_Energy_Frame3[OAM_DATA_SIZE(7)] = {
@@ -186,7 +186,7 @@ static const u16 sMorphBallLauncherPartOam_Energy_Frame3[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(12, 12, OAM_DIMS_8x8, OAM_XY_FLIP, 0x213, 8, 0),
     OAM_ENTRY(-3, -3, OAM_DIMS_8x8, OAM_NO_FLIP, 0x214, 8, 0),
     OAM_ENTRY(10, -3, OAM_DIMS_8x8, OAM_X_FLIP, 0x214, 8, 0),
-    OAM_ENTRY(-20, -2, OAM_DIMS_8x8, OAM_NO_FLIP, 0x213, 8, 0),
+    OAM_ENTRY(-20, -2, OAM_DIMS_8x8, OAM_NO_FLIP, 0x213, 8, 0)
 };
 
 static const u16 sMorphBallLauncherPartOam_Energy_Frame4[OAM_DATA_SIZE(7)] = {
@@ -197,7 +197,7 @@ static const u16 sMorphBallLauncherPartOam_Energy_Frame4[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(-8, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x217, 8, 0),
     OAM_ENTRY(-8, 0, OAM_DIMS_16x8, OAM_Y_FLIP, 0x217, 8, 0),
     OAM_ENTRY(0, -5, OAM_DIMS_16x8, OAM_X_FLIP, 0x237, 8, 0),
-    OAM_ENTRY(-18, -3, OAM_DIMS_8x8, OAM_NO_FLIP, 0x214, 8, 0),
+    OAM_ENTRY(-18, -3, OAM_DIMS_8x8, OAM_NO_FLIP, 0x214, 8, 0)
 };
 
 static const u16 sMorphBallLauncherPartOam_Energy_Frame5[OAM_DATA_SIZE(9)] = {
@@ -210,7 +210,7 @@ static const u16 sMorphBallLauncherPartOam_Energy_Frame5[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-4, 4, OAM_DIMS_16x8, OAM_XY_FLIP, 0x219, 8, 0),
     OAM_ENTRY(4, -12, OAM_DIMS_8x16, OAM_XY_FLIP, 0x21b, 8, 0),
     OAM_ENTRY(2, -5, OAM_DIMS_8x8, OAM_X_FLIP, 0x237, 8, 0),
-    OAM_ENTRY(-16, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x237, 8, 0),
+    OAM_ENTRY(-16, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x237, 8, 0)
 };
 
 static const u16 sMorphBallLauncherPartOam_Energy_Frame6[OAM_DATA_SIZE(9)] = {
@@ -223,7 +223,7 @@ static const u16 sMorphBallLauncherPartOam_Energy_Frame6[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-8, 8, OAM_DIMS_16x8, OAM_Y_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(8, -16, OAM_DIMS_8x16, OAM_X_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(8, 0, OAM_DIMS_8x16, OAM_XY_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(-10, -5, OAM_DIMS_8x8, OAM_NO_FLIP, 0x237, 8, 0),
+    OAM_ENTRY(-10, -5, OAM_DIMS_8x8, OAM_NO_FLIP, 0x237, 8, 0)
 };
 
 static const u16 sMorphBallLauncherPartOam_Energy_Frame7[OAM_DATA_SIZE(6)] = {
@@ -233,7 +233,7 @@ static const u16 sMorphBallLauncherPartOam_Energy_Frame7[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-8, -16, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23e, 8, 0),
     OAM_ENTRY(-8, 8, OAM_DIMS_16x8, OAM_Y_FLIP, 0x23e, 8, 0),
     OAM_ENTRY(8, -16, OAM_DIMS_8x16, OAM_X_FLIP, 0x21d, 8, 0),
-    OAM_ENTRY(8, 0, OAM_DIMS_8x16, OAM_XY_FLIP, 0x21d, 8, 0),
+    OAM_ENTRY(8, 0, OAM_DIMS_8x16, OAM_XY_FLIP, 0x21d, 8, 0)
 };
 
 const struct FrameData sMorphBallLauncherOam_Idle[5] = {

@@ -1,13 +1,16 @@
 #ifndef BOOT_DEBUG_CONSTANTS_H
 #define BOOT_DEBUG_CONSTANTS_H
 
-enum BootDebugMenuDepth {
+#include "types.h"
+#include "macros.h"
+
+MAKE_ENUM(u8, BootDebugMenuDepth) {
     BOOT_DEBUG_MENU_MAIN,
     BOOT_DEBUG_MENU_SUB,
     BOOT_DEBUG_MENU_OPTION
 };
 
-enum BootDebugSubMenu {
+MAKE_ENUM(u8, BootDebugSubMenu) {
     BOOT_DEBUG_SUB_MENU_HEADER,
     BOOT_DEBUG_SUB_MENU_SECTION,
     BOOT_DEBUG_SUB_MENU_MODE,
@@ -22,14 +25,16 @@ enum BootDebugSubMenu {
     BOOT_DEBUG_SUB_MENU_COUNT
 };
 
-enum BootDebugOam {
+MAKE_ENUM(u8, BootDebugOam) {
     BOOT_DEBUG_OAM_MENU_CURSOR,
     BOOT_DEBUG_OAM_SAVE_BRACKETS,
     BOOT_DEBUG_OAM_R_BUTTON_TITLE,
-    BOOT_DEBUG_OAM_MAP_CURSOR
+    BOOT_DEBUG_OAM_MAP_CURSOR,
+
+    BOOT_DEBUG_OAM_COUNT
 };
 
-enum BootDebugSectionMenu {
+MAKE_ENUM(u8, BootDebugSectionMenu) {
     BOOT_DEBUG_SECTION_BRINSTAR,
     BOOT_DEBUG_SECTION_KRAID,
     BOOT_DEBUG_SECTION_NORFAIR,
@@ -49,14 +54,14 @@ enum BootDebugSectionMenu {
     BOOT_DEBUG_SECTION_COUNT
 };
 
-enum BootDebugModeMenu {
+MAKE_ENUM(u8, BootDebugModeMenu) {
     BOOT_DEBUG_MODE_LANGUAGE,
     BOOT_DEBUG_MODE_DIFFICULTY,
 
     BOOT_DEBUG_MODE_COUNT
 };
 
-enum BootDebugSaveMenu {
+MAKE_ENUM(u8, BootDebugSaveMenu) {
     BOOT_DEBUG_SAVE_GALLERY_IMAGES,
     BOOT_DEBUG_SAVE_DIFFICULTIES_CLEARED,
     BOOT_DEBUG_SAVE_LINKED_WITH_FUSION,
@@ -66,7 +71,7 @@ enum BootDebugSaveMenu {
     BOOT_DEBUG_SAVE_COUNT
 };
 
-enum BootDebugSamusMenu {
+MAKE_ENUM(u8, BootDebugSamusMenu) {
     BOOT_DEBUG_SAMUS_GET_MAP,
     BOOT_DEBUG_SAMUS_ARM_WEAPON,
     BOOT_DEBUG_SAMUS_DIAGONAL_AIM,
@@ -76,7 +81,7 @@ enum BootDebugSamusMenu {
     BOOT_DEBUG_SAMUS_COUNT
 };
 
-enum BootDebugSoundMenu {
+MAKE_ENUM(u8, BootDebugSoundMenu) {
     BOOT_DEBUG_SOUND_BGM,
     BOOT_DEBUG_SOUND_STEREO,
     BOOT_DEBUG_SOUND_TEST,
@@ -84,7 +89,7 @@ enum BootDebugSoundMenu {
     BOOT_DEBUG_SOUND_COUNT
 };
 
-enum BootDebugDemoMenu {
+MAKE_ENUM(u8, BootDebugDemoMenu) {
     BOOT_DEBUG_DEMO_CUTSCENE_SWITCH,
     BOOT_DEBUG_DEMO_CUTSCENE_A,
     BOOT_DEBUG_DEMO_CUTSCENE_B,
@@ -94,7 +99,7 @@ enum BootDebugDemoMenu {
     BOOT_DEBUG_DEMO_COUNT
 };
 
-enum BootDebugEtcMenu {
+MAKE_ENUM(u8, BootDebugEtcMenu) {
     BOOT_DEBUG_ETC_ENDING,
     BOOT_DEBUG_ETC_STAFF_ROLL,
     BOOT_DEBUG_ETC_MAIN_END_OBJ,
@@ -103,7 +108,7 @@ enum BootDebugEtcMenu {
     BOOT_DEBUG_ETC_COUNT
 };
 
-enum BootDebugColor {
+MAKE_ENUM(u8, BootDebugColor) {
     BOOT_DEBUG_COLOR_AZURE_WHITE = 8,
     BOOT_DEBUG_COLOR_RED,
     BOOT_DEBUG_COLOR_GREEN,
@@ -111,7 +116,7 @@ enum BootDebugColor {
     BOOT_DEBUG_COLOR_YELLOW,
     BOOT_DEBUG_COLOR_AZURE_WHITE_SUB_MENU,
     BOOT_DEBUG_COLOR_AZURE_WHITE_3,
-    BOOT_DEBUG_COLOR_BLACK,
+    BOOT_DEBUG_COLOR_BLACK
 };
 
-#endif
+#endif /* BOOT_DEBUG_CONSTANTS_H */

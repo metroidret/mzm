@@ -495,7 +495,7 @@ static void ChozodiaEscapeInit(void)
     ApplyMonochromeToPalette(sChozodiaEscapeMissionAccomplishedPal, CHOZODIA_ESCAPE_DATA.monochromePalette, 0);
 
     // Set ending flags
-    gEndingFlags = 0;
+    gEndingFlags = ENDING_FLAG_NONE;
     if (gFileScreenOptionsUnlocked.galleryImages == 0)
         gEndingFlags |= ENDING_FLAG_FIRST_CLEAR;
 
@@ -1209,7 +1209,7 @@ static ChozodiaEscapeFunc_T sChozodiaEscapeFunctionPointers[5] = {
     [1] = ChozodiaEscapeShipHeatingUp,
     [2] = ChozodiaEscapeShipBlowingUp,
     [3] = ChozodiaEscapeShipLeavingPlanet,
-    [4] = ChozodiaEscapeMissionAccomplished,
+    [4] = ChozodiaEscapeMissionAccomplished
 };
 
 /**

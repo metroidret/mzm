@@ -739,7 +739,7 @@ static void DessgeegaLongBeamSpawning(void)
     u32 topEdge;
     u16 yPosition;
     u16 xPosition;
-    u8 caa;
+    ClipdataAffectingAction caa;
 
     topEdge = SpriteUtilCheckVerticalCollisionAtPositionSlopes(gCurrentSprite.yPosition, gCurrentSprite.xPosition);
 

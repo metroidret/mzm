@@ -11,7 +11,7 @@ extern const struct EnvironmentalEffect sEnvironmentalEffect_Empty;
 
 // Power suit
 
-extern const struct SamusAnimationData* const sSamusAnimPointers_PowerSuit[SPOSE_END][2];
+extern const struct SamusAnimationData* const sSamusAnimPointers_PowerSuit[SPOSE_COUNT][2];
 
 extern const struct SamusAnimationData* const sSamusAnimPointers_PowerSuit_Running[4][2];
 extern const struct SamusAnimationData* const sSamusAnimPointers_PowerSuit_Running_Speedboosting[4][2];
@@ -34,7 +34,7 @@ extern const struct SamusAnimationData* const sSamusAnimPointers_PowerSuit_OnZip
 extern const struct SamusAnimationData* const sSamusAnimPointers_PowerSuit_ShootingOnZipline[5][2];
 extern const struct SamusAnimationData* const sSamusAnimPointers_PowerSuit_TurningOnZipline[5][2];
 
-extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_All[SPOSE_END][2];
+extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_All[SPOSE_COUNT][2];
 extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_Running[4][2];
 extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_Running_Speedboosting[4][2];
 extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_Standing[4][2];
@@ -54,12 +54,12 @@ extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_On
 extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_ShootingOnZipline[5][2];
 extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_TurningOnZipline[5][2];
 
-extern const u8 sSamusCollisionData[SPOSE_END][SCDF_COUNT];
+extern const u8 sSamusCollisionData[SPOSE_COUNT][SCDF_COUNT];
 
 
 // Full suit
 
-extern const struct SamusAnimationData* const sSamusAnimPointers_FullSuit[SPOSE_END][2];
+extern const struct SamusAnimationData* const sSamusAnimPointers_FullSuit[SPOSE_COUNT][2];
 
 extern const struct SamusAnimationData* const sSamusAnimPointers_FullSuit_Running[4][2];
 extern const struct SamusAnimationData* const sSamusAnimPointers_FullSuit_Running_Speedboosting[4][2];
@@ -85,7 +85,7 @@ extern const struct SamusAnimationData* const sSamusAnimPointers_FullSuit_Turnin
 
 // Suitless
 
-extern const struct SamusAnimationData* const sSamusAnimPointers_Suitless[SPOSE_END][2];
+extern const struct SamusAnimationData* const sSamusAnimPointers_Suitless[SPOSE_COUNT][2];
 
 extern const struct SamusAnimationData* const sSamusAnimPointers_Suitless_Running[4][2];
 extern const struct SamusAnimationData* const sSamusAnimPointers_Suitless_Standing[4][2];
@@ -103,7 +103,7 @@ extern const struct SamusAnimationData* const sSamusAnimPointers_Suitless_Uncrou
 extern const struct SamusAnimationData* const sSamusAnimPointers_Suitless_CrouchingSuitless[3][2];
 extern const struct SamusAnimationData* const sSamusAnimPointers_Suitless_CrawlingStopped[3][2];
 
-extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suitless_All[SPOSE_END][2];
+extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suitless_All[SPOSE_COUNT][2];
 extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suitless_Running[4][2];
 extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suitless_Standing[4][2];
 extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suitless_TurningAround[4][2];

@@ -3,15 +3,17 @@
 
 #include "types.h"
 
+#include "constants/color_fading.h"
+
 u8 ColorFadingUpdate(void);
-u8 unk_5bd58(u8 stage, u8 color);
-u8 unk_5bdc8(u8 stage, u8 color);
-u8 unk_5be7c(u8 stage, u8 color);
-u8 ColorFadingFunction_Empty(u8 stage, u8 color);
+u8 unk_5bd58(ColorFadingStage stage, u8 color);
+u8 unk_5bdc8(ColorFadingStage stage, u8 color);
+u8 unk_5be7c(ColorFadingStage stage, u8 color);
+u8 ColorFadingFunction_Empty(ColorFadingStage stage, u8 color);
 
 void ColorFadingTransferPaletteOnTransition(void);
-void StartEffectForCutscene(u8 request);
-void ColorFadingStart(u8 type);
+void StartEffectForCutscene(EffectCutscene request);
+void ColorFadingStart(ColorFadingEffect type);
 void ColorFadingHideScreenDuringLoad(void);
 void ColorFadingSetBg3Position(void);
 void ColorFadingStartDefault(void);

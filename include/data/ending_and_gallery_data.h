@@ -37,26 +37,26 @@ extern const u16 sEndingPosingPal_White4[5 * 16];
 
 extern const u16 sUnlockedOptionsPal[1 * 16];
 
-extern const struct EndingImageOam sEndingImageOam_FullLines_English[ENDING_IMAGE_LINE_END];
+extern const struct EndingImageOam sEndingImageOam_FullLines_English[ENDING_IMAGE_LINE_COUNT];
 extern const struct EndingImageOam sEndingImageOam_ClearTime_English[9];
 extern const struct EndingImageOam sEndingImageOam_YourRate_English[11];
 extern const struct EndingImageOam sEndingImageOam_Collecting_English[17];
 #ifdef REGION_EU
-extern const struct EndingImageOam sEndingImageOam_FullLines_German[ENDING_IMAGE_LINE_END];
+extern const struct EndingImageOam sEndingImageOam_FullLines_German[ENDING_IMAGE_LINE_COUNT];
 extern const struct EndingImageOam sEndingImageOam_ClearTime_German[13];
 extern const struct EndingImageOam sEndingImageOam_Collecting_German[14];
-extern const struct EndingImageOam sEndingImageOam_FullLines_French[ENDING_IMAGE_LINE_END];
+extern const struct EndingImageOam sEndingImageOam_FullLines_French[ENDING_IMAGE_LINE_COUNT];
 extern const struct EndingImageOam sEndingImageOam_ClearTime_French[16];
 extern const struct EndingImageOam sEndingImageOam_Collecting_French[20];
-extern const struct EndingImageOam sEndingImageOam_FullLines_Italian[ENDING_IMAGE_LINE_END];
+extern const struct EndingImageOam sEndingImageOam_FullLines_Italian[ENDING_IMAGE_LINE_COUNT];
 extern const struct EndingImageOam sEndingImageOam_ClearTime_Italian[18];
 extern const struct EndingImageOam sEndingImageOam_YourRate_Italian[11];
 extern const struct EndingImageOam sEndingImageOam_Collecting_Italian[17];
-extern const struct EndingImageOam sEndingImageOam_FullLines_Spanish[ENDING_IMAGE_LINE_END];
+extern const struct EndingImageOam sEndingImageOam_FullLines_Spanish[ENDING_IMAGE_LINE_COUNT];
 extern const struct EndingImageOam sEndingImageOam_ClearTime_Spanish[15];
 extern const struct EndingImageOam sEndingImageOam_Collecting_Spanish[19];
 #endif // REGION_EU
-extern const struct EndingImageOam sEndingImageOam_FullLines_Hiragana[ENDING_IMAGE_LINE_END];
+extern const struct EndingImageOam sEndingImageOam_FullLines_Hiragana[ENDING_IMAGE_LINE_COUNT];
 extern const struct EndingImageOam sEndingImageOam_ClearTime_Hiragana[6];
 extern const struct EndingImageOam sEndingImageOam_Collecting_Hiragana[11];
 
@@ -80,7 +80,7 @@ extern const u8 sEndingImage_54e2dc[8];
 extern const u8 sEndingImageNewRecordPalettes[12];
 
 #ifdef REGION_EU
-extern const u16 * const sEndingImageOamPointers_NewRecord[LANGUAGE_END];
+extern const u16 * const sEndingImageOamPointers_NewRecord[LANGUAGE_COUNT];
 #endif // REGION_EU
 
 extern const u32 sCreditsCharactersGfx[];

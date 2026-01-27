@@ -10,7 +10,7 @@
 extern const struct CutscenePageData sMotherBrainCloseUpPageData[5];
 extern const struct CutsceneScreenShakeInfo sMotherBrainCloseUpScreenShakeInfo;
 
-extern const struct OamArray sMotherBrainCloseUpCutsceneOam[MOTHER_BRAIN_CLOSE_UP_OAM_ID_END];
+extern const struct OamArray sMotherBrainCloseUpCutsceneOam[MOTHER_BRAIN_CLOSE_UP_OAM_ID_COUNT];
 
 extern const struct FrameData sMotherBrainCloseUpOam_Bubble[6];
 extern const struct FrameData sMotherBrainCloseUpOam_EyeOpening[11];

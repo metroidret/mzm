@@ -601,7 +601,7 @@ u32 BlockApplyCcaa(u16 yPosition, u16 xPosition, u16 trueClip)
         case CAA_POWER_BOMB:
             // Check on hatch
             if (gTilemapAndClipPointers.pClipCollisions[trueClip] == CLIPDATA_TYPE_DOOR &&
-                BgClipCheckOpeningHatch(clipBlock.xPosition, clipBlock.yPosition) != 0)
+                BgClipCheckOpeningHatch(clipBlock.xPosition, clipBlock.yPosition) != HATCH_OPENING_ACTION_NOT_OPENING)
             {
                 result = TRUE;
             }
@@ -671,9 +671,9 @@ u32 BlockApplyCcaa(u16 yPosition, u16 xPosition, u16 trueClip)
  * @param makeSolid Make solid flag
  * @param xPosition X Position
  * @param yPosition Y Position
- * @return u32 bool, could store
+ * @return boolu32 could store
  */
-u32 BlockUpdateMakeSolidBlocks(u8 makeSolid, u16 xPosition, u16 yPosition)
+boolu32 BlockUpdateMakeSolidBlocks(boolu8 makeSolid, u16 xPosition, u16 yPosition)
 {
     u32 result;
     s32 i;
@@ -736,9 +736,9 @@ u32 BlockUpdateMakeSolidBlocks(u8 makeSolid, u16 xPosition, u16 yPosition)
  * @param xPosition X Position
  * @param yPosition Y Position
  * @param action Destructing action
- * @return u32 bool, block destroyed
+ * @return boolu32 block destroyed
  */
-u32 BlockSamusApplyScrewSpeedboosterDamageToEnvironment(u16 xPosition, u16 yPosition, DestructingAction action)
+boolu32 BlockSamusApplyScrewSpeedboosterDamageToEnvironment(u16 xPosition, u16 yPosition, DestructingAction action)
 {
     u16 blockY;
     u16 blockX;
@@ -976,7 +976,7 @@ void BlockUpdateBrokenBlockAnimation(struct BrokenBlock* pBlock)
  * @param advanceStage Starts the block at stage 2 if true
  * @return u32 1 if could store, 0 otherwise
  */
-u32 BlockStoreBrokenReformBlock(u8 type, u16 xPosition, u16 yPosition, u8 advanceStage)
+boolu32 BlockStoreBrokenReformBlock(BlockType type, u16 xPosition, u16 yPosition, boolu8 advanceStage)
 {
     u32 result;
     s32 i;
@@ -1050,7 +1050,7 @@ u32 BlockStoreBrokenReformBlock(u8 type, u16 xPosition, u16 yPosition, u8 advanc
  * @param yPosition Y Position
  * @param type Block type
  */
-void BlockStoreBrokenNonReformBlock(u16 xPosition, u16 yPosition, u8 type)
+void BlockStoreBrokenNonReformBlock(u16 xPosition, u16 yPosition, BlockType type)
 {
     struct BrokenBlock* pBlock;
     s32 i;
@@ -1110,7 +1110,7 @@ void BlockStoreBrokenNonReformBlock(u16 xPosition, u16 yPosition, u8 type)
  * @param yPosition Y Position
  * @return u32 1 if was revealed, 0 otherwise
  */
-u32 BlockCheckRevealBombChainBlock(u8 type, u16 xPosition, u16 yPosition)
+boolu32 BlockCheckRevealBombChainBlock(BlockType type, u16 xPosition, u16 yPosition)
 {
     struct BrokenBlock* pBlock;
     s32 i;
@@ -1151,13 +1151,13 @@ u32 BlockCheckRevealBombChainBlock(u8 type, u16 xPosition, u16 yPosition)
  * 
  * @param xPosition X Position
  * @param yPosition Y Position
- * @return u32 bool, in block
+ * @return u32 in block
  */
-u32 BlockCheckSamusInReformingBlock(u8 xPosition, u8 yPosition)
+boolu32 BlockCheckSamusInReformingBlock(u8 xPosition, u8 yPosition)
 {
     u8 inX;
     u8 inY;
-    u8 inBlock;
+    boolu8 inBlock;
 
     // Check in X
     inX = FALSE;
@@ -1188,11 +1188,11 @@ u32 BlockCheckSamusInReformingBlock(u8 xPosition, u8 yPosition)
  * @param type Bomb chain type
  * @param xPosition X Position
  * @param yPosition Y Position
- * @return u32 bool, could start
+ * @return boolu32 could start
  */
-u32 BlockStartBombChain(u8 type, u16 xPosition, u16 yPosition)
+boolu32 BlockStartBombChain(BombChainType type, u16 xPosition, u16 yPosition)
 {
-    u32 couldSpawn;
+    boolu32 couldSpawn;
     s32 i;
     
     couldSpawn = FALSE;
@@ -1382,7 +1382,7 @@ void BlockProcessBombChains(void)
  * @param xPosition X position
  * @param yPosition Y position
  */
-void BlockCheckStartNewSubBombChain(u8 type, u8 xPosition, u8 yPosition)
+void BlockCheckStartNewSubBombChain(SubBombChainRequest type, u8 xPosition, u8 yPosition)
 {
     u16 clipdata;
     s32 i;

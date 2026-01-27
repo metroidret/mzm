@@ -5,17 +5,15 @@
 #include "gba.h"
 #include "structs/cutscene.h"
 
-enum KraidRisingOamId {
-    KRAID_RISING_OAM_ID_SAMUS = 1,
+MAKE_ENUM(u8, KraidRisingOamId) {
+    KRAID_RISING_OAM_ID_NONE,
+    KRAID_RISING_OAM_ID_SAMUS,
     KRAID_RISING_OAM_ID_DEBRIS,
     KRAID_RISING_OAM_ID_SMALL_PUFF,
     KRAID_RISING_OAM_ID_BIG_PUFF,
 
-    KRAID_RISING_OAM_ID_END
+    KRAID_RISING_OAM_ID_COUNT
 };
-
-#define KRAID_RISING_PUFF_AMOUNT 11
-#define KRAID_RISING_DEBRIS_AMOUNT 6
 
 struct KraidRisingEwramData {
     u8 padding_0[BGCNT_VRAM_TILE_SIZE * 2];

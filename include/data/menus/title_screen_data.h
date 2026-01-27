@@ -47,6 +47,6 @@ extern const struct TitleScreenPageData sTitleScreenPageData[2];
 extern const struct MenuOamData sTitleScreenTopSparkleBaseOam;
 extern const struct MenuOamData sTitleScreenBottomSparkleBaseOam;
 
-extern const struct OamArray sTitleScreenOam[TITLE_SCREEN_OAM_ID_END];
+extern const struct OamArray sTitleScreenOam[TITLE_SCREEN_OAM_ID_COUNT];
 
 #endif /* TITLE_SCREEN_DATA_H */

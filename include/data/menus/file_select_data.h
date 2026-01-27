@@ -56,8 +56,8 @@ extern const u32 sFileSelect2Big1SmallPanelsTileTable[230];
 
 extern const struct MenuOamData sFileSelectOamData_Empty[2];
 
-extern const struct OamArray sFileSelectOam[FILE_SELECT_OAM_ID_END];
-extern const struct OamArray sOptionsOam[OPTIONS_OAM_ID_END];
+extern const struct OamArray sFileSelectOam[FILE_SELECT_OAM_ID_COUNT];
+extern const struct OamArray sOptionsOam[OPTIONS_OAM_ID_COUNT];
 
 extern const u8 sFileScreenMessagesInfo[FILE_SCREEN_MESSAGE_INFO_ID_COUNT][3];
 extern const struct Message sFileScreenMessage_Empty;

@@ -143,7 +143,7 @@ void CheckTransferFadedPalette(void)
  */
 void CallApplySpecialBackgroundFadingColor(u8 color)
 {
-    u8 type;
+    ColorFadingType type;
     u16* dst;
     u16* src;
     u16 mask;
@@ -190,7 +190,7 @@ void PowerBombYellowTint(u8 paletteRow)
     u8 g;
     u8 b;
 
-    if (gAnimatedGraphicsEntry.palette == 0)
+    if (gAnimatedGraphicsEntry.palette == ANIMATED_PALETTE_ID_NONE)
     {
         // Affect all of palram
         length = COLORS_IN_PAL;
@@ -550,7 +550,7 @@ void ApplySpecialBackgroundEffectColorOnOBJ(u16 mask, u16 color, u8 stage)
  * @param ppDst Destination address pointer
  * @param mask Palette rows mask
  */
-void ApplySpecialBackgroundFadingColor(u8 type, u8 color, u16** ppSrc, u16** ppDst, u16 mask)
+void ApplySpecialBackgroundFadingColor(ColorFadingType type, u8 color, u16** ppSrc, u16** ppDst, u16 mask)
 {
     s32 i;
     s32 j;
@@ -612,7 +612,7 @@ void ApplySpecialBackgroundFadingColor(u8 type, u8 color, u16** ppSrc, u16** ppD
  * @param color Color
  * @param currentColor Current color
  */
-u16 ApplyFadeOnColor(u8 type, u16 color, u8 currentColor)
+u16 ApplyFadeOnColor(ColorFadingType type, u16 color, u8 currentColor)
 {
     u8 red;
     u8 green;

@@ -4,6 +4,8 @@
 #include "types.h"
 #include "macros.h"
 
+#include "constants/menus/status_screen.h"
+
 struct StatusScreenItemData {
     u8 group;
     u8 abilityOffset;
@@ -15,7 +17,7 @@ struct StatusScreenItemAcquisitionData {
     u8 unk_0; // 0: invalid, 1: expansion (missile, super, pb), 2: bombs, 3: all other items
     u8 group;
     u8 abilityOffset;
-    u8 statusSlot;
+    StatusSlots statusSlot;
 };
 
 struct PACKED StatusScreenGroupPositions {

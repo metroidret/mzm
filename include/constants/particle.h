@@ -67,11 +67,11 @@ MAKE_ENUM(u8, ParticleEffectId) {
     PE_CHARGING_BEAM,
     PE_ESCAPE,
 
-    PE_END
+    PE_COUNT
 };
 
 MAKE_ENUM(u8, ParticleStatus) ENUM_FLAG {
-    PARTICLE_STATUS_NONE              = 0 << 0,
+    PARTICLE_STATUS_NONE              = 0,
     PARTICLE_STATUS_EXISTS            = 1 << 0,
     PARTICLE_STATUS_ONSCREEN          = 1 << 1,
     PARTICLE_STATUS_HIGH_OAM_PRIORITY = 1 << 2,
@@ -79,7 +79,7 @@ MAKE_ENUM(u8, ParticleStatus) ENUM_FLAG {
     PARTICLE_STATUS_LIVE_OFF_SCREEN   = 1 << 4,
     PARTICLE_STATUS_LOW_BG_PRIORITY   = 1 << 5,
     PARTICLE_STATUS_ABSOLUTE_POSITION = 1 << 6,
-    PARTICLE_STATUS_X_FLIP            = 1 << 7,
+    PARTICLE_STATUS_X_FLIP            = 1 << 7
 };
 
 #endif /* PARTICLE_CONSTANTS_H */

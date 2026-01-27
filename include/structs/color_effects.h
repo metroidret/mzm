@@ -3,6 +3,8 @@
 
 #include "types.h"
 
+#include "constants/color_fading.h"
+
 // Typedef
 
 typedef u8 (*ColorFadingFunc_T)(u8, u8);
@@ -11,24 +13,24 @@ typedef u8 (*ColorFadingUnkFunc_T)(void);
 // Structs
 
 struct ColorFading {
-    u8 type;
+    ColorFadingEffect type;
     u8 stage;
     u8 fadeTimer;
     u8 unk_3;
-    u8 status;
-    u8 useSecondColorSet;
+    ColorFadingStatus status;
+    boolu8 useSecondColorSet;
     u16 workTimer;
 };
 
 struct ColorFadingData {
     boolu8 isWhite;
     ColorFadingUnkFunc_T pUpdateFunction;
-    u8 firstColorSet;
+    ColorFadingSpeed firstColorSet;
     ColorFadingUnkFunc_T pProcessFunction;
-    u8 secondColorSet;
+    ColorFadingSpeed secondColorSet;
     u16 bgColorMask;
     u16 objColorMask;
-    u8 fadeFunction;
+    ColorFadingFunction fadeFunction;
 };
 
 struct ColorFadingColorInfo {

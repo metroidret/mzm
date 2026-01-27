@@ -43,17 +43,17 @@
 #define MOTHER_BRAIN_BLOCK_POSE_IDLE 0x9
 #define MOTHER_BRAIN_GLASS_BREAKING_POSE_BREAKING 0x9
 
-enum MotherBrainFightStage {
+MAKE_ENUM(u8, MotherBrainFightStage) {
     MB_FIGHT_STAGE_IN_GLASS,
     MB_FIGHT_STAGE_ACTIVE,
     MB_FIGHT_STAGE_DYING,
-    MB_FIGHT_STAGE_DEAD,
+    MB_FIGHT_STAGE_DEAD
 };
 
 // Damage threshold at which mother closes her eye
 #define MOTHER_BRAIN_DAMAGE_THRESHOLD (SUPER_MISSILE_DAMAGE)
 
-static const struct FrameData* sMotherBrainFrameDataPointers[MOTHER_BRAIN_OAM_END] = {
+static const struct FrameData* sMotherBrainFrameDataPointers[MOTHER_BRAIN_OAM_COUNT] = {
     [MOTHER_BRAIN_OAM_IDLE] = sMotherBrainOam_Idle,
     [MOTHER_BRAIN_OAM_CHARGING_BEAM] = sMotherBrainOam_ChargingBeam,
     [MOTHER_BRAIN_OAM_EYE_CLOSED] = sMotherBrainPartOam_EyeClosed,

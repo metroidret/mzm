@@ -6,7 +6,7 @@
 
 #include "structs/sprite.h"
 
-enum ImagoOam {
+MAKE_ENUM(u8, ImagoOam) {
     IMAGO_OAM_BODY_IDLE,
     IMAGO_OAM_BODY_GROWLING,
     IMAGO_OAM_BROKEN_STINGER,
@@ -25,7 +25,7 @@ enum ImagoOam {
     IMAGO_OAM_DAMAGED_STINGER_UNUSED,
     IMAGO_OAM_EGG_BREAKING,
 
-    IMAGO_OAM_END
+    IMAGO_OAM_COUNT
 };
 
 extern const struct MultiSpriteData sImagoMultiSpriteData_Idle[2];

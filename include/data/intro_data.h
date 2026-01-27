@@ -2,6 +2,9 @@
 #define INTRO_DATA_H
 
 #include "types.h"
+
+#include "constants/intro.h"
+
 #include "structs/in_game_timer.h"
 #include "structs/intro.h"
 
@@ -34,9 +37,9 @@ extern const u32 sTimeAttackAntiCheatTimes[4];
 extern const u8 sSpriteXHalfRadius[3][4];
 extern const u8 sSpriteYHalfRadius[3][4];
 
-extern const u8 sIntroEmergencyOrderActions[16];
-extern const u8 sIntroExterminateAllActions[52];
-extern const u8 sIntroDefeatTheActions[50];
+extern const IntroTextAction sIntroEmergencyOrderActions[16];
+extern const IntroTextAction sIntroExterminateAllActions[52];
+extern const IntroTextAction sIntroDefeatTheActions[50];
 
 extern const u32 sIntroTextAndShipFlyingInGfx[1310];
 extern const u32 sIntroSpaceBackgroundGfx[3181];

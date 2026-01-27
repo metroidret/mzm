@@ -13,7 +13,7 @@
 #include "structs/game_state.h"
 #include "structs/sprite.h"
 
-enum ZoomerTurningDirection {
+MAKE_ENUM(u8, ZoomerTurningDirection) {
     ZOOMER_TURNING_DIRECTION_BOTTOM_LEFT_CORNER,
     ZOOMER_TURNING_DIRECTION_TOP_RIGHT_EDGE,
     ZOOMER_TURNING_DIRECTION_BOTTOM_RIGHT_EDGE,

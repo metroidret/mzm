@@ -98,10 +98,10 @@ extern const u8 sStatusScreenBombFlagsOrder[1];
 extern const u8 sStatusScreenSuitFlagsOrder[2];
 extern const u8 sStatusScreenMiscFlagsOrder[6];
 
-extern const u8 sStatusScreenFlagsSize[ABILITY_GROUP_STATUS_GROUPS_END];
+extern const u8 sStatusScreenFlagsSize[ABILITY_GROUP_STATUS_GROUPS_COUNT];
 extern const u16 sPowersOfTen[5];
 
-extern const struct PauseScreenWireframeData sSamusWireframeData[SAMUS_WIREFRAME_DATA_END];
+extern const struct PauseScreenWireframeData sSamusWireframeData[SAMUS_WIREFRAME_DATA_COUNT];
 
 extern const u16 sChozoHintAreaNamesPosition[2];
 extern const u8 sChozoHintAreaNamesOamIds[MAX_AMOUNT_OF_AREAS];
@@ -112,13 +112,13 @@ extern const u16 sWorldMapTargetPositions[16][2];
 extern const u8 sBossIcons[MAX_AMOUNT_OF_AREAS - 1][5];
 extern const u16 sMapChunksToUpdate[3];
 
-extern const struct OamArray sPauseScreenMiscOam[MISC_OAM_ID_END];
-extern const struct OamArray sPauseScreenOverlayOam[OVERLAY_OAM_ID_END];
-extern const struct OamArray sPauseScreenBorderArrowsOam[BORDER_ARROW_OAM_ID_END];
-extern const struct OamArray sPauseScreenSamusIconOam[SAMUS_ICON_OAM_ID_END];
-extern const struct OamArray sPauseScreenBossIconsOam[BOSS_ICON_OAM_ID_END];
-extern const struct OamArray sPauseScreenTargetsOam[TARGET_OAM_END];
-extern const struct OamArray sPauseScreenWorldMapOam[WORLD_MAP_OAM_ID_END];
+extern const struct OamArray sPauseScreenMiscOam[MISC_OAM_ID_COUNT];
+extern const struct OamArray sPauseScreenOverlayOam[OVERLAY_OAM_ID_COUNT];
+extern const struct OamArray sPauseScreenBorderArrowsOam[BORDER_ARROW_OAM_ID_COUNT];
+extern const struct OamArray sPauseScreenSamusIconOam[SAMUS_ICON_OAM_ID_COUNT];
+extern const struct OamArray sPauseScreenBossIconsOam[BOSS_ICON_OAM_ID_COUNT];
+extern const struct OamArray sPauseScreenTargetsOam[TARGET_OAM_COUNT];
+extern const struct OamArray sPauseScreenWorldMapOam[WORLD_MAP_OAM_ID_COUNT];
 
 extern const u8 sMaintainedInputDelays_Fast[7];
 #ifdef REGION_EU
@@ -134,7 +134,7 @@ extern const struct MinimapAreaName sMinimapAreaNames[10];
 extern const u8 sPauseScreen_40d6fc[80];
 extern const u8 sPauseScreen_40d74c[80];
 
-extern u8* const sPauseScreen_IgtAndTanksVramAddresses[IGT_AND_TANKS_VRAM_ADDRESS_END];
+extern u8* const sPauseScreen_IgtAndTanksVramAddresses[IGT_AND_TANKS_VRAM_ADDRESS_COUNT];
 
 extern const u8 sCharacterWidths[1184];
 

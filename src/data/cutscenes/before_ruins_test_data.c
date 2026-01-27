@@ -65,7 +65,7 @@ const struct CutscenePageData sBeforeRuinsTestPageData[9] = {
         .priority = 2,
         .bg = DCNT_BG2,
         .screenSize = 0
-    },
+    }
 };
 
 const u16 sBeforeRuinsTestChozoWallSidesPal[10 * 16] = INCBIN_U16("data/cutscenes/before_ruins_test/chozo_wall_sides.pal");

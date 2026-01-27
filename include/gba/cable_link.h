@@ -20,7 +20,7 @@
 #define REG_SIO_DATA8 (REG_BASE + 0x12A)
 #define REG_RNCT (REG_BASE + 0x134)
 
-#define SIO_SHIFT_CLOCK_EXTERNAL (0 << 0)
+#define SIO_SHIFT_CLOCK_EXTERNAL 0
 #define SIO_SHIFT_CLOCK_INTERNAL (1 << 0)
 
 #define SIO_INTERNAL_SHIFT_CLOCK_256K (0 << 1)
@@ -38,7 +38,7 @@
 #define SIO_START_BIT_ACTIVE          (1 << 7)
 #define SIO_IRQ_ENABLE                (1 << 14)
 
-#define SIO_BAUD_RATE_9600   (0 << 0)
+#define SIO_BAUD_RATE_9600   0
 #define SIO_BAUD_RATE_38400  (1 << 0)
 #define SIO_BAUD_RATE_57600  (2 << 0)
 #define SIO_BAUD_RATE_115200 (3 << 0)

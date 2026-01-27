@@ -33,78 +33,78 @@ const u16 sMellaPal[16] = INCBIN_U16("data/sprites/mella.pal");
 
 static const u16 sMellaOam_Idle_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sMellaOam_Idle_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sMellaOam_Idle_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x208, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x208, 8, 0)
 };
 
 static const u16 sMellaOam_Idle_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x20c, 8, 0)
 };
 
 static const u16 sMellaOam_Idle_Frame4[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x210, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x210, 8, 0)
 };
 
 static const u16 sMellaOam_Idle_Frame5[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0)
 };
 
 static const u16 sMellaOam_Idle_Frame6[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x218, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x218, 8, 0)
 };
 
 static const u16 sMellaOam_Idle_Frame7[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sMellaOam_Moving_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 0x224, 8, 0),
-    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sMellaOam_Moving_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 0x228, 8, 0),
-    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sMellaOam_Moving_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 0x22c, 8, 0),
-    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sMellaOam_Moving_Frame4[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 0x230, 8, 0),
-    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x208, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x208, 8, 0)
 };
 
 static const u16 sMellaOam_Moving_Frame5[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 0x234, 8, 0),
-    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x208, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x208, 8, 0)
 };
 
 static const u16 sMellaOam_Moving_Frame6[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 0x238, 8, 0),
-    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x20c, 8, 0)
 };
 
 const struct FrameData sMellaOam_Idle[9] = {

@@ -3,14 +3,16 @@
 
 #include "types.h"
 
+#include "constants/cable_link.h"
+
 struct IoTransferInfo {
     Func_T pFunction;
     u8 linkInProgress;
     u16 timer;
-    u8 active;
-    u8 connectStage;
-    u8 linkStage;
-    u8 result;
+    ActiveTransfer active;
+    ConnectStage connectStage;
+    LinkStage linkStage;
+    TransferResult result;
     u8 errorFlag;
     u16 command;
     s8 fusionGalleryImages;

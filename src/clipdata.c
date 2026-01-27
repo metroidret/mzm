@@ -142,9 +142,9 @@ u32 ClipdataProcess(u16 yPosition, u16 xPosition)
  * @param pCollision Pointer to a collision data structure
  * @return u32 Clipdata type (including solid flag)
  */
-u32 ClipdataConvertToCollision(struct CollisionData* pCollision)
+ClipdataType ClipdataConvertToCollision(struct CollisionData* pCollision)
 {
-    u32 result;
+    ClipdataType result;
 
     result = CLIPDATA_TYPE_AIR;
 
@@ -486,7 +486,7 @@ u32 ClipdataUpdateCurrentAffecting(u16 yPosition, u16 tileY, u16 tileX, u8 dontC
     else
     {
         // Check for hazard behavior (effect based)
-        if (gCurrentRoomEntry.bg0Prop != 0 && gCurrentRoomEntry.damageEffect != 0)
+        if (gCurrentRoomEntry.bg0Prop != 0 && gCurrentRoomEntry.damageEffect != EFFECT_NONE)
         {
             if (gCurrentRoomEntry.damageEffect < ARRAY_SIZE(sHazardsDefinitions))
             {

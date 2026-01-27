@@ -33,7 +33,7 @@ gHazeInfo.active = FALSE;   \
  * 2 : BG0 water moving flag
  * 3 : Power bomb related
  */
-u8 sHazeData[EFFECT_HAZE_END][4] = {
+u8 sHazeData[EFFECT_HAZE_COUNT][4] = {
     [EFFECT_NONE] = {
         HAZE_VALUE_NONE, EFFECT_NONE, FALSE, 0
     },
@@ -135,7 +135,7 @@ void unk_5d09c(void)
         HAZE_SET_INACTIVE();
         gHazeInfo.size = 2;
         gHazeInfo.pAffected = gPreviousHazeValues;
-        gCurrentHazeValue = 0;
+        gCurrentHazeValue = HAZE_VALUE_NONE;
     }
 }
 
@@ -144,7 +144,7 @@ void unk_5d09c(void)
  * 
  * @param hazeValue Haze value
  */
-void HazeSetupCode(u8 hazeValue)
+void HazeSetupCode(HazeValue hazeValue)
 {
     gCurrentHazeValue = hazeValue;
     gHazeInfo.enabled = FALSE;
@@ -266,7 +266,7 @@ void HazeSetupCode(u8 hazeValue)
 
         case HAZE_VALUE_AFTER_POWER_BOMB:
         case HAZE_VALUE_COLD:
-            gCurrentHazeValue = 0;
+            gCurrentHazeValue = HAZE_VALUE_NONE;
             break;
     }
 }
@@ -401,7 +401,7 @@ u32 HazeProcess(void)
                 HazeSetupCode(HAZE_VALUE_POWER_BOMB_RETRACTING);
                 gCurrentPowerBomb.animationState = PB_STATE_IMPLODING;
 
-                if (gAnimatedGraphicsEntry.palette == 0)
+                if (gAnimatedGraphicsEntry.palette == ANIMATED_PALETTE_ID_NONE)
                 {
                     DMA_SET(3, EWRAM_BASE + 0x9000, EWRAM_BASE + 0x35000, C_32_2_16(DMA_ENABLE, PALRAM_SIZE / 4));
                 }
@@ -426,7 +426,7 @@ u32 HazeProcess(void)
 
                 HazeSetupCode(HAZE_VALUE_AFTER_POWER_BOMB);
 
-                if (gAnimatedGraphicsEntry.palette == 0)
+                if (gAnimatedGraphicsEntry.palette == ANIMATED_PALETTE_ID_NONE)
                 {
                     DMA_SET(3, EWRAM_BASE + 0x9000, EWRAM_BASE + 0x35000, C_32_2_16(DMA_ENABLE, PALRAM_SIZE / 4));
                 }
@@ -448,7 +448,7 @@ u32 HazeProcess(void)
     if (ended)
     {
         HazeSetBackgroundEffect();
-        if (gCurrentHazeValue == 0)
+        if (gCurrentHazeValue == HAZE_VALUE_NONE)
             ended = FALSE;
     }
 

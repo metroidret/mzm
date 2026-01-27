@@ -6,7 +6,7 @@
 
 #include "structs/sprite.h"
 
-enum TangleVineOam {
+MAKE_ENUM(u8, TangleVineOam) {
     TANGLE_VINE_OAM_TALL_ON_GROUND,
     TANGLE_VINE_OAM_MEDIUM_ON_GROUND,
     TANGLE_VINE_OAM_SHORT_ON_GROUND,
@@ -21,7 +21,7 @@ enum TangleVineOam {
     TANGLE_VINE_OAM_RED_GERUTA_OAM,
     TANGLE_VINE_OAM_GERUTA,
 
-    TANGLE_VINE_OAM_END
+    TANGLE_VINE_OAM_COUNT
 };
 
 extern const struct MultiSpriteData sTangleVineGerutaMultiSpriteData_Idle[5];

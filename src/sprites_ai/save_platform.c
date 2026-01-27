@@ -30,7 +30,7 @@
 
 // Save platform part
 
-enum SavePlatformPart {
+MAKE_ENUM(u8, SavePlatformPartId) {
     SAVE_PLATFORM_PART_TUBE,
     SAVE_PLATFORM_PART_TUBE_SHADOW,
     SAVE_PLATFORM_PART_RAY,
@@ -52,11 +52,11 @@ enum SavePlatformPart {
 /**
  * @brief 1f9b0 | 38 | Checks if Samus is standing on a save platform
  * 
- * @return u8 bool, samus standing on platform
+ * @return boolu8 bool, samus standing on platform
  */
-u8 SavePlatformDetectSamus(void)
+boolu8 SavePlatformDetectSamus(void)
 {
-    u8 colliding;
+    boolu8 colliding;
     s32 samusY;
     s32 samusX;
     s32 spriteY;

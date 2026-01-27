@@ -15,15 +15,15 @@ extern const struct TankList sNumberOfTanksPerArea[MAX_AMOUNT_OF_AREAS];
 
 extern const struct TankList sStartingHealthAmmo;
 
-extern const struct TankList sTankIncreaseAmount[DIFF_END];
+extern const struct TankList sTankIncreaseAmount[DIFF_COUNT];
 
-extern const u16 sClipdataAffectingActionDamageTypes[CAA_COUNT];
+extern const CaaDamageType sClipdataAffectingActionDamageTypes[CAA_COUNT];
 
 extern const struct BlockBehavior sBlockBehaviors[BEHAVIOR_BLOCK_AMOUNT];
 
-extern const u16 sBlockWeaknesses[BLOCK_TYPE_COUNT];
+extern const CaaDamageType sBlockWeaknesses[BLOCK_TYPE_COUNT];
 
-extern const u16 sReformingBlocksTilemapValue[BLOCK_TYPE_COUNT];
+extern const ClipdataTilemap sReformingBlocksTilemapValue[BLOCK_TYPE_COUNT];
 
 extern const u8 sBrokenBlocksTimers[BLOCK_TYPE_COUNT][13];
 

@@ -13,7 +13,7 @@ static const u16 sSearchlightOam_Moving_Frame0[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-32, 16, OAM_DIMS_32x16, OAM_Y_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-32, 0, OAM_DIMS_32x16, OAM_Y_FLIP, 0x204, 8, 0),
     OAM_ENTRY(0, 16, OAM_DIMS_32x16, OAM_XY_FLIP, 0x200, 8, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_32x16, OAM_XY_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_32x16, OAM_XY_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSearchlightOam_Moving_Frame1[OAM_DATA_SIZE(8)] = {
@@ -25,7 +25,7 @@ static const u16 sSearchlightOam_Moving_Frame1[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-32, 16, OAM_DIMS_32x16, OAM_Y_FLIP, 0x208, 8, 0),
     OAM_ENTRY(-32, 0, OAM_DIMS_32x16, OAM_Y_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(0, 16, OAM_DIMS_32x16, OAM_XY_FLIP, 0x208, 8, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_32x16, OAM_XY_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_32x16, OAM_XY_FLIP, 0x20c, 8, 0)
 };
 
 static const u16 sSearchlightOam_Moving_Frame2[OAM_DATA_SIZE(8)] = {
@@ -37,7 +37,7 @@ static const u16 sSearchlightOam_Moving_Frame2[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-32, 16, OAM_DIMS_32x16, OAM_Y_FLIP, 0x210, 8, 0),
     OAM_ENTRY(-32, 0, OAM_DIMS_32x16, OAM_Y_FLIP, 0x214, 8, 0),
     OAM_ENTRY(0, 16, OAM_DIMS_32x16, OAM_XY_FLIP, 0x210, 8, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_32x16, OAM_XY_FLIP, 0x214, 8, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_32x16, OAM_XY_FLIP, 0x214, 8, 0)
 };
 
 static const u16 sSearchlightOam_Moving_Frame3[OAM_DATA_SIZE(8)] = {
@@ -49,7 +49,7 @@ static const u16 sSearchlightOam_Moving_Frame3[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-32, 16, OAM_DIMS_32x16, OAM_Y_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-32, 0, OAM_DIMS_32x16, OAM_Y_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(0, 16, OAM_DIMS_32x16, OAM_XY_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_32x16, OAM_XY_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_32x16, OAM_XY_FLIP, 0x21c, 8, 0)
 };
 
 const struct FrameData sSearchlightOam_Moving[7] = {

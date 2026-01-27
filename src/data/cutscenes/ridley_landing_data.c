@@ -95,8 +95,8 @@ const struct FrameData sRidleyLandingOAM_Ridley[2] = {
     [1] = FRAME_DATA_TERMINATOR
 };
 
-const struct OamArray sRidleyLandingCutsceneOAM[RIDLEY_LANDING_OAM_ID_END] = {
-    [0] = {
+const struct OamArray sRidleyLandingCutsceneOAM[RIDLEY_LANDING_OAM_ID_COUNT] = {
+    [RIDLEY_LANDING_OAM_ID_NONE] = {
         .pOam = sRidleyLandingOAM_ShipInSpace,
         .preAction = OAM_ARRAY_PRE_ACTION_NONE
     },
@@ -124,7 +124,7 @@ const struct OamArray sRidleyLandingCutsceneOAM[RIDLEY_LANDING_OAM_ID_END] = {
         .pOam = sRidleyLandingOAM_SmokeParticles,
         .preAction = OAM_ARRAY_PRE_ACTION_KILL_AFTER_END
     },
-    [7] = {
+    [RIDLEY_LANDING_OAM_ID_7] = {
         .pOam = sRidleyLandingOAM_SmokeParticles,
         .preAction = OAM_ARRAY_PRE_ACTION_KILL_AFTER_END
     },
@@ -139,14 +139,14 @@ const struct OamArray sRidleyLandingCutsceneOAM[RIDLEY_LANDING_OAM_ID_END] = {
     [RIDLEY_LANDING_OAM_ID_ROCKS_AND_RIDLEY_SHADOW] = {
         .pOam = sRidleyLandingOAM_Rocks,
         .preAction = OAM_ARRAY_PRE_ACTION_DECREMENT_ID_AFTER_END
-    },
+    }
 };
 
 const u16 sRidleyLandingOAM_ShipInSpace_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-56, -40, OAM_DIMS_64x64, OAM_NO_FLIP, 0x0, 8, 0),
     OAM_ENTRY(8, -40, OAM_DIMS_32x64, OAM_NO_FLIP, 0x8, 8, 0),
-    OAM_ENTRY(40, 0, OAM_DIMS_16x32, OAM_NO_FLIP, 0xac, 8, 0),
+    OAM_ENTRY(40, 0, OAM_DIMS_16x32, OAM_NO_FLIP, 0xac, 8, 0)
 };
 
 const struct FrameData sRidleyLandingOAM_ShipInSpace[2] = {
@@ -162,7 +162,7 @@ const u16 sRidleyLandingOAM_ShipBottomPart_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-128, 0, OAM_DIMS_64x64, OAM_NO_FLIP, 0x200, 0, 0),
     OAM_ENTRY(-64, 0, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 0),
     OAM_ENTRY(0, 0, OAM_DIMS_64x64, OAM_NO_FLIP, 0x210, 0, 0),
-    OAM_ENTRY(64, 0, OAM_DIMS_64x64, OAM_NO_FLIP, 0x218, 0, 0),
+    OAM_ENTRY(64, 0, OAM_DIMS_64x64, OAM_NO_FLIP, 0x218, 0, 0)
 };
 
 const u16 sRidleyLandingOAM_ShipMiddlePart_Frame0[OAM_DATA_SIZE(4)] = {
@@ -170,13 +170,13 @@ const u16 sRidleyLandingOAM_ShipMiddlePart_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-128, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 0x100, 0, 0),
     OAM_ENTRY(-64, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 0x108, 0, 0),
     OAM_ENTRY(0, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 0x110, 0, 0),
-    OAM_ENTRY(64, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 0x118, 0, 0),
+    OAM_ENTRY(64, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 0x118, 0, 0)
 };
 
 const u16 sRidleyLandingOAM_ShipTopPart_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-64, -128, OAM_DIMS_64x64, OAM_NO_FLIP, 0x8, 0, 0),
-    OAM_ENTRY(0, -128, OAM_DIMS_64x64, OAM_NO_FLIP, 0x10, 0, 0),
+    OAM_ENTRY(0, -128, OAM_DIMS_64x64, OAM_NO_FLIP, 0x10, 0, 0)
 };
 
 const u16 sRidleyLandingOAM_SmokeParticles_Frame0[OAM_DATA_SIZE(20)] = {
@@ -200,7 +200,7 @@ const u16 sRidleyLandingOAM_SmokeParticles_Frame0[OAM_DATA_SIZE(20)] = {
     OAM_ENTRY(-40, 0, OAM_DIMS_8x8, OAM_NO_FLIP, 0x3a5, 1, 0),
     OAM_ENTRY(-88, 0, OAM_DIMS_8x8, OAM_NO_FLIP, 0x340, 1, 0),
     OAM_ENTRY(40, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c6, 1, 0),
-    OAM_ENTRY(-64, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c6, 1, 0),
+    OAM_ENTRY(-64, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c6, 1, 0)
 };
 
 const u16 sRidleyLandingOAM_SmokeParticles_Frame1[OAM_DATA_SIZE(21)] = {
@@ -225,7 +225,7 @@ const u16 sRidleyLandingOAM_SmokeParticles_Frame1[OAM_DATA_SIZE(21)] = {
     OAM_ENTRY(-32, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c0, 1, 0),
     OAM_ENTRY(-88, 0, OAM_DIMS_8x8, OAM_NO_FLIP, 0x341, 1, 0),
     OAM_ENTRY(72, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c0, 1, 0),
-    OAM_ENTRY(-16, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x340, 1, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x340, 1, 0)
 };
 
 const u16 sRidleyLandingOAM_SmokeParticles_Frame2[OAM_DATA_SIZE(27)] = {
@@ -256,7 +256,7 @@ const u16 sRidleyLandingOAM_SmokeParticles_Frame2[OAM_DATA_SIZE(27)] = {
     OAM_ENTRY(-88, 0, OAM_DIMS_8x8, OAM_NO_FLIP, 0x342, 1, 0),
     OAM_ENTRY(72, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c2, 1, 0),
     OAM_ENTRY(32, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c4, 1, 0),
-    OAM_ENTRY(40, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c0, 1, 0),
+    OAM_ENTRY(40, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c0, 1, 0)
 };
 
 const u16 sRidleyLandingOAM_SmokeParticles_Frame3[OAM_DATA_SIZE(19)] = {
@@ -279,7 +279,7 @@ const u16 sRidleyLandingOAM_SmokeParticles_Frame3[OAM_DATA_SIZE(19)] = {
     OAM_ENTRY(16, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x3a5, 1, 0),
     OAM_ENTRY(-88, 0, OAM_DIMS_8x8, OAM_NO_FLIP, 0x343, 1, 0),
     OAM_ENTRY(40, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c2, 1, 0),
-    OAM_ENTRY(72, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c4, 1, 0),
+    OAM_ENTRY(72, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c4, 1, 0)
 };
 
 const u16 sRidleyLandingOAM_SmokeParticles_Frame4[OAM_DATA_SIZE(9)] = {
@@ -292,7 +292,7 @@ const u16 sRidleyLandingOAM_SmokeParticles_Frame4[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-32, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c6, 1, 0),
     OAM_ENTRY(72, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c6, 1, 0),
     OAM_ENTRY(-64, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c4, 1, 0),
-    OAM_ENTRY(40, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c4, 1, 0),
+    OAM_ENTRY(40, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c4, 1, 0)
 };
 
 const u16 sRidleyLandingOAM_SmokeParticles_Frame5[OAM_DATA_SIZE(7)] = {
@@ -303,7 +303,7 @@ const u16 sRidleyLandingOAM_SmokeParticles_Frame5[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(16, 0, OAM_DIMS_16x8, OAM_NO_FLIP, 0x3a0, 1, 0),
     OAM_ENTRY(32, 0, OAM_DIMS_8x8, OAM_NO_FLIP, 0x3a2, 1, 0),
     OAM_ENTRY(40, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c6, 1, 0),
-    OAM_ENTRY(-64, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c6, 1, 0),
+    OAM_ENTRY(-64, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c6, 1, 0)
 };
 
 const struct FrameData sRidleyLandingOAM_SmokeParticles[7] = {
@@ -337,7 +337,7 @@ const struct FrameData sRidleyLandingOAM_SmokeParticles[7] = {
 const u16 sRidleyLandingOAM_Ridley_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-56, -40, OAM_DIMS_64x64, OAM_NO_FLIP, 0x0, 0, 0),
-    OAM_ENTRY(8, -40, OAM_DIMS_64x64, OAM_NO_FLIP, 0x8, 0, 0),
+    OAM_ENTRY(8, -40, OAM_DIMS_64x64, OAM_NO_FLIP, 0x8, 0, 0)
 };
 
 const u16 sRidleyLandingOAM_Rocks_Frame0[OAM_DATA_SIZE(5)] = {
@@ -346,7 +346,7 @@ const u16 sRidleyLandingOAM_Rocks_Frame0[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(0, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x78, 1, 0),
     OAM_ENTRY(32, -56, OAM_DIMS_32x16, OAM_NO_FLIP, 0x1c, 1, 0),
     OAM_ENTRY(32, -40, OAM_DIMS_32x8, OAM_NO_FLIP, 0x5c, 1, 0),
-    OAM_ENTRY(-80, 16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x12e, 1, 0),
+    OAM_ENTRY(-80, 16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x12e, 1, 0)
 };
 
 const u16 sRidleyLandingOAM_Rocks_Frame1[OAM_DATA_SIZE(5)] = {
@@ -355,7 +355,7 @@ const u16 sRidleyLandingOAM_Rocks_Frame1[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-80, 16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2c4, 1, 0),
     OAM_ENTRY(32, -56, OAM_DIMS_32x16, OAM_NO_FLIP, 0x2ac, 1, 0),
     OAM_ENTRY(32, -40, OAM_DIMS_32x8, OAM_NO_FLIP, 0x2ec, 1, 0),
-    OAM_ENTRY(-64, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x300, 1, 0),
+    OAM_ENTRY(-64, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x300, 1, 0)
 };
 
 const u16 sRidleyLandingOAM_Rocks_Frame2[OAM_DATA_SIZE(5)] = {
@@ -364,7 +364,7 @@ const u16 sRidleyLandingOAM_Rocks_Frame2[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-64, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x310, 1, 0),
     OAM_ENTRY(-80, 16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2c0, 1, 0),
     OAM_ENTRY(32, -56, OAM_DIMS_32x16, OAM_NO_FLIP, 0x2bc, 1, 0),
-    OAM_ENTRY(32, -40, OAM_DIMS_32x8, OAM_NO_FLIP, 0x2fc, 1, 0),
+    OAM_ENTRY(32, -40, OAM_DIMS_32x8, OAM_NO_FLIP, 0x2fc, 1, 0)
 };
 
 const u16 sRidleyLandingOAM_Rocks_Frame3[OAM_DATA_SIZE(5)] = {
@@ -373,7 +373,7 @@ const u16 sRidleyLandingOAM_Rocks_Frame3[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-64, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x1b0, 1, 0),
     OAM_ENTRY(-80, 16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x26e, 1, 0),
     OAM_ENTRY(32, -48, OAM_DIMS_32x16, OAM_NO_FLIP, 0x17c, 1, 0),
-    OAM_ENTRY(48, -56, OAM_DIMS_16x8, OAM_NO_FLIP, 0x1e, 1, 0),
+    OAM_ENTRY(48, -56, OAM_DIMS_16x8, OAM_NO_FLIP, 0x1e, 1, 0)
 };
 
 const struct FrameData sRidleyLandingOAM_Rocks[5] = {

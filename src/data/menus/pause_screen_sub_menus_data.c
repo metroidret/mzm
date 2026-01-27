@@ -4,7 +4,7 @@
 #include "constants/connection.h"
 #include "constants/samus.h"
 
-const struct ChozoStatueTarget sChozoStatueTargets[TARGET_END] = {
+const struct ChozoStatueTarget sChozoStatueTargets[TARGET_COUNT] = {
     [TARGET_LONG_BEAM] = {
         .statueArea = AREA_BRINSTAR,
         .statueXStart = 9,
@@ -131,7 +131,7 @@ const struct ChozoStatueTarget sChozoStatueTargets[TARGET_END] = {
         .statueXEnd = 0,
         .statueYStart = 0,
         .statueYEnd = 0,
-        .startIcon = 0,
+        .startIcon = TARGET_OAM_ID_NONE,
         .targetArea = AREA_NONE,
         .targetX = 0,
         .targetY = 0,
@@ -143,7 +143,7 @@ const struct ChozoStatueTarget sChozoStatueTargets[TARGET_END] = {
         .statueXEnd = 0,
         .statueYStart = 0,
         .statueYEnd = 0,
-        .startIcon = 0,
+        .startIcon = TARGET_OAM_ID_NONE,
         .targetArea = AREA_NONE,
         .targetX = 0,
         .targetY = 0,
@@ -155,7 +155,7 @@ const struct ChozoStatueTarget sChozoStatueTargets[TARGET_END] = {
         .statueXEnd = 0,
         .statueYStart = 0,
         .statueYEnd = 0,
-        .startIcon = 0,
+        .startIcon = TARGET_OAM_ID_NONE,
         .targetArea = AREA_NONE,
         .targetX = 0,
         .targetY = 0,
@@ -167,7 +167,7 @@ const struct ChozoStatueTarget sChozoStatueTargets[TARGET_END] = {
         .statueXEnd = 0,
         .statueYStart = 0,
         .statueYEnd = 0,
-        .startIcon = 0,
+        .startIcon = TARGET_OAM_ID_NONE,
         .targetArea = AREA_NONE,
         .targetX = 0,
         .targetY = 0,
@@ -179,7 +179,7 @@ const struct ChozoStatueTarget sChozoStatueTargets[TARGET_END] = {
         .statueXEnd = 0,
         .statueYStart = 0,
         .statueYEnd = 0,
-        .startIcon = 0,
+        .startIcon = TARGET_OAM_ID_NONE,
         .targetArea = AREA_NONE,
         .targetX = 0,
         .targetY = 0,
@@ -191,15 +191,15 @@ const struct ChozoStatueTarget sChozoStatueTargets[TARGET_END] = {
         .statueXEnd = 0,
         .statueYStart = 0,
         .statueYEnd = 0,
-        .startIcon = 0,
+        .startIcon = TARGET_OAM_ID_NONE,
         .targetArea = AREA_NONE,
         .targetX = 0,
         .targetY = 0,
         .endIcon = 0
-    },
+    }
 };
 
-const u8 sChozoStatueTargetConditions[TARGET_END][2] = {
+const u8 sChozoStatueTargetConditions[TARGET_COUNT][2] = {
     [TARGET_LONG_BEAM] = {
         CHOZO_STATUE_HINT_CONDITION_TYPE_BEAM_BOMBS,
         BBF_LONG_BEAM
@@ -266,7 +266,7 @@ const u8 sChozoStatueTargetConditions[TARGET_END][2] = {
     }
 };
 
-const Event sChozoStatueHintEvents[TARGET_END] = {
+const Event sChozoStatueHintEvents[TARGET_COUNT] = {
     [TARGET_LONG_BEAM] = EVENT_STATUE_LONG_BEAM_GRABBED,
     [TARGET_BOMBS] = EVENT_STATUE_BOMBS_GRABBED,
     [TARGET_ICE_BEAM] = EVENT_STATUE_ICE_BEAM_GRABBED,
@@ -312,7 +312,7 @@ const s8 sChozoStatueTargetPathBrinstar[9][2] = {
     },
     [8] = {
         ELEVATOR_ROUTE_NONE, 0x40
-    },
+    }
 };
 
 const s8 sChozoStatueTargetPathKraid[9][2] = {
@@ -342,7 +342,7 @@ const s8 sChozoStatueTargetPathKraid[9][2] = {
     },
     [8] = {
         ELEVATOR_ROUTE_NONE, 0x40
-    },
+    }
 };
 
 const s8 sChozoStatueTargetPathNorfair[9][2] = {
@@ -372,7 +372,7 @@ const s8 sChozoStatueTargetPathNorfair[9][2] = {
     },
     [8] = {
         ELEVATOR_ROUTE_NONE, 0x40
-    },
+    }
 };
 
 const s8 sChozoStatueTargetPathRidley[9][2] = {
@@ -402,7 +402,7 @@ const s8 sChozoStatueTargetPathRidley[9][2] = {
     },
     [8] = {
         ELEVATOR_ROUTE_NONE, 0x40
-    },
+    }
 };
 
 const s8 sChozoStatueTargetPathCrateria[9][2] = {
@@ -432,5 +432,5 @@ const s8 sChozoStatueTargetPathCrateria[9][2] = {
     },
     [8] = {
         ELEVATOR_ROUTE_NONE, 0x40
-    },
+    }
 };

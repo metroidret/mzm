@@ -14,7 +14,7 @@ struct Message {
     u8 continuousDelay;
     u8 delay;
 
-    u8 messageID;
+    u8 messageId;
     u8 gfxSlot;
     u8 stage;
     u8 isMessage;

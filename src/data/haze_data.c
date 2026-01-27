@@ -5894,7 +5894,7 @@ const s16* const sHaze_PowerBomb_WindowValuesPointers[161] = {
 	sHaze_PowerBomb_Values157,
 	sHaze_PowerBomb_Values158,
 	sHaze_PowerBomb_Values159,
-	sHaze_PowerBomb_Values160,
+	sHaze_PowerBomb_Values160
 };
 
 const s8 sHaze_Bg3Bg2Bg1[9][32] = {

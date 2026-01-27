@@ -23,7 +23,7 @@
 #include "structs/samus.h"
 #include "structs/sprite.h"
 
-static ParticleFunc_T sProcessParticleFunctionPointers[PE_END] = {
+static ParticleFunc_T sProcessParticleFunctionPointers[PE_COUNT] = {
     [PE_SPRITE_SPLASH_WATER_SMALL] = ParticleSpriteSplashWaterSmall,
     [PE_SPRITE_SPLASH_WATER_BIG] = ParticleSpriteSplashWaterBig,
     [PE_SPRITE_SPLASH_WATER_HUGE] = ParticleSpriteSplashWaterHuge,
@@ -84,7 +84,7 @@ static ParticleFunc_T sProcessParticleFunctionPointers[PE_END] = {
     [PE_SECOND_TWO_MEDIUM_DUST] = ParticleSecondTwoMediumDust,
     [PE_SAMUS_REFLECTION] = ParticleSamusReflection,
     [PE_CHARGING_BEAM] = ParticleChargingBeam,
-    [PE_ESCAPE] = ParticleEscape,
+    [PE_ESCAPE] = ParticleEscape
 };
 
 /**

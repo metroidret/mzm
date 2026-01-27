@@ -74,7 +74,7 @@
 #define EVENT_TRIGGER_DISCOVERED_IMAGO_PASSAGE_POSE_IDLE 0x8
 #define IMAGO_COCOON_AFTER_FIGHT_POSE_IDLE 0x9
 
-static const struct FrameData* sImagoCocoonFrameDataPointers[IMAGO_COCOON_OAM_END] = {
+static const struct FrameData* sImagoCocoonFrameDataPointers[IMAGO_COCOON_OAM_COUNT] = {
     [IMAGO_COCOON_OAM_CEILING_VINE_MOTIONLESS] = sImagoCocoonOam_CeilingVineMotionless,
     [IMAGO_COCOON_OAM_CEILING_VINE_MOVING] = sImagoCocoonOam_CeilingVineMoving,
     [IMAGO_COCOON_OAM_CEILING_VINE_BROKEN] = sImagoCocoonOam_CeilingVineBroken,
@@ -126,7 +126,7 @@ static void ImagoCocoonSyncSprites(void)
  * 
  * @param caa Clipdata Affecting Action
  */
-static void ImagoCocoonChangeOneCcaa(u8 caa)
+static void ImagoCocoonChangeOneCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;
@@ -144,7 +144,7 @@ static void ImagoCocoonChangeOneCcaa(u8 caa)
  * 
  * @param caa Clipdata Affecting Action
  */
-static void ImagoCocoonChangeTwoMiddleCcaa(u8 caa)
+static void ImagoCocoonChangeTwoMiddleCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;
@@ -169,7 +169,7 @@ static void ImagoCocoonChangeTwoMiddleCcaa(u8 caa)
  * 
  * @param caa Clipdata Affecting Action
  */
-static void ImagoCocoonChangeTwoAroundCcaa(u8 caa)
+static void ImagoCocoonChangeTwoAroundCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;
@@ -194,7 +194,7 @@ static void ImagoCocoonChangeTwoAroundCcaa(u8 caa)
  * 
  * @param caa Clipdata Affecting Action
  */
-static void ImagoCocoonChangeTwoBlockingCcaa(u8 caa)
+static void ImagoCocoonChangeTwoBlockingCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;

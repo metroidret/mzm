@@ -28,7 +28,7 @@
 
 static TourianEscapeFunc_T sTourianEscapeFunctionPointers[2] = {
     CutsceneDummyStage,
-    TourianEscapeUpdateStage,
+    TourianEscapeUpdateStage
 };
 
 static s8 sCutsceneScreenShakeOffsets_Set0[2] = {
@@ -476,7 +476,7 @@ void CutsceneInit(void)
             if (gameplayType == CUTSCENE_TYPE_IN_GAMEPLAY)
                 gPauseScreenFlag = PAUSE_SCREEN_PAUSE_OR_CUTSCENE;
     
-            if (gameplayType < CUTSCENE_TYPE_END)
+            if (gameplayType < CUTSCENE_TYPE_COUNT)
                 DmaTransfer(3, VRAM_OBJ, EWRAM_BASE + 0x1E000, gameplayType * 0x4000, 16);
         }
     }
@@ -565,9 +565,9 @@ void CutsceneSetBgcnt(u16 value, u16 bg)
  * @param bg Background (DISPCNT flags)
  * @param value Value
  */
-void CutsceneSetBackgroundPosition(u8 type, u16 bg, u16 value)
+void CutsceneSetBackgroundPosition(CutsceneBgEdit type, u16 bg, u16 value)
 {
-    if (type & CUTSCENE_BG_EDIT_HOFS)
+    if (type & CUTSCENE_BG_EDIT_X)
     {
         if (bg == DCNT_BG0)
             gBg0HOFS_NonGameplay = value;
@@ -579,7 +579,7 @@ void CutsceneSetBackgroundPosition(u8 type, u16 bg, u16 value)
             gBg3HOFS_NonGameplay = value;
     }
 
-    if (type & CUTSCENE_BG_EDIT_VOFS)
+    if (type & CUTSCENE_BG_EDIT_Y)
     {
         if (bg == DCNT_BG0)
             gBg0VOFS_NonGameplay = value;
@@ -834,12 +834,12 @@ void CutsceneUpdateBackgroundScrolling(struct CutsceneScrolling* pScrolling)
  * @brief 61944 | 80 | Checks if a background scrolling is active
  * 
  * @param bg Background
- * @return u8 Flags
+ * @return CutsceneBgEdit Flags
  */
-u8 CutsceneCheckBackgroundScrollingActive(u16 bg)
+CutsceneBgEdit CutsceneCheckBackgroundScrollingActive(u16 bg)
 {
     s32 offset;    
-    u8 status;
+    CutsceneBgEdit status;
 
     status = 0;
     offset = -1;
@@ -855,11 +855,11 @@ u8 CutsceneCheckBackgroundScrollingActive(u16 bg)
     if (offset >= 0)
     {
         if (CUTSCENE_DATA.bgScrolling[offset].pPosition)
-            status |= CUTSCENE_BG_EDIT_HOFS;
+            status |= CUTSCENE_BG_EDIT_X;
 
         offset = (s8)(offset + 1);
         if (CUTSCENE_DATA.bgScrolling[offset].pPosition)
-            status |= CUTSCENE_BG_EDIT_VOFS;
+            status |= CUTSCENE_BG_EDIT_Y;
     }
 
     return status;
@@ -1259,17 +1259,17 @@ void CutsceneTransferFade(void)
  * @brief 61fa0 | 230 | Starts a cutscene background fading
  * 
  * @param type Type
- * @return u8 bool, couldn't start
+ * @return boolu8 couldn't start
  */
-u8 CutsceneStartBackgroundFading(u8 type)
+boolu8 CutsceneStartBackgroundFading(ColorFadingEffect type)
 {
-    u8 result;
+    boolu8 result;
 
     result = FALSE;
 
     CUTSCENE_DATA.fadingColor = 0;
     CUTSCENE_DATA.fadingReady = FALSE;
-    CUTSCENE_DATA.fadingDelay = 0; COLOR_FADING_END;
+    CUTSCENE_DATA.fadingDelay = 0; COLOR_FADING_COUNT;
 
     DmaTransfer(3, PALRAM_BASE, PAL_TO_FADE, PALRAM_SIZE, 16);
 

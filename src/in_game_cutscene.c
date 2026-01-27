@@ -920,7 +920,7 @@ void UpdateAnimatedPaletteAfterTransitionOrReload(void)
 {
     if (gPauseScreenFlag)
     {
-        if (gAnimatedGraphicsEntry.palette != 0)
+        if (gAnimatedGraphicsEntry.palette != ANIMATED_PALETTE_ID_NONE)
             DMA_SET(3, ANIMATED_PALETTE_EWRAM, ANIMATED_PALETTE_PALRAM, C_32_2_16(DMA_ENABLE, 16));
     }
     else

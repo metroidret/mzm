@@ -17,7 +17,7 @@
 #include "structs/samus.h"
 #include "structs/sprite.h"
 
-enum ImagoMovementStage {
+MAKE_ENUM(u8, ImagoMovementStage) {
     IMAGO_MOVEMENT_STAGE_MOVING_HORIZONTALLY,
     IMAGO_MOVEMENT_STAGE_MOVING_VERTICALLY,
     IMAGO_MOVEMENT_STAGE_GO_UP
@@ -76,7 +76,7 @@ enum ImagoMovementStage {
 #define IMAGO_EGG_PART_NORMAL 0x0
 #define IMAGO_EGG_PART_LAST 0x80
 
-static const struct FrameData* sImagoFrameDataPointers[IMAGO_OAM_END] = {
+static const struct FrameData* sImagoFrameDataPointers[IMAGO_OAM_COUNT] = {
     [IMAGO_OAM_BODY_IDLE] = sImagoPartOam_BodyIdle,
     [IMAGO_OAM_BODY_GROWLING] = sImagoPartOam_BodyGrowling,
     [IMAGO_OAM_BROKEN_STINGER] = sImagoOam_BrokenStinger,
@@ -892,7 +892,7 @@ static void ImagoCheckSamusAtSuperMissile(void)
  */
 static void ImagoChargeThroughWall(void)
 {
-    u8 caa;
+    ClipdataAffectingAction caa;
     u16 yPosition;
     u16 xPosition;
 
@@ -946,7 +946,7 @@ static void ImagoChargeThroughWall(void)
  */
 static void ImagoDestroyWall(void)
 {
-    u8 caa;
+    ClipdataAffectingAction caa;
     u16 yPosition;
     u16 xPosition;
     

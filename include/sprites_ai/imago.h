@@ -2,8 +2,9 @@
 #define IMAGO_AI_H
 
 #include "types.h"
+#include "macros.h"
 
-enum ImagoPart {
+MAKE_ENUM(u8, ImagoPartId) {
     IMAGO_PART_LEFT_WING_INTERNAL,
     IMAGO_PART_LEFT_WING_EXTERNAL,
     IMAGO_PART_BODY,
@@ -12,7 +13,7 @@ enum ImagoPart {
     IMAGO_PART_CORE,
     IMAGO_PART_IMAGO,
 
-    IMAGO_PART_END
+    IMAGO_PART_COUNT
 };
 
 void Imago(void);

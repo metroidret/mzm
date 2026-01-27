@@ -10,7 +10,7 @@ extern const u8 sGettingFullyPoweredSuitRingPaletteRows[7];
 extern const u16 sGettingFullyPoweredSuitRingSparklesPositions[OAM_RING_SPARKLES_AMOUNT][2];
 extern const u16 sGettingFullyPoweredSuitUpSparklesXPositions[6];
 
-extern const struct OamArray sGettingFullyPoweredSuitCutsceneOam[GETTING_FULLY_POWERED_SUIT_OAM_ID_END];
+extern const struct OamArray sGettingFullyPoweredSuitCutsceneOam[GETTING_FULLY_POWERED_SUIT_OAM_ID_COUNT];
 
 extern const struct FrameData sGettingFullyPoweredSuitOam_SparkleGoingUp[7];
 extern const struct FrameData sGettingFullyPoweredSuitOam_SparkleAroundRing1[11];

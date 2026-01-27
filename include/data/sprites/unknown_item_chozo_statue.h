@@ -6,7 +6,7 @@
 
 #include "structs/sprite.h"
 
-enum UnknownItemChozoStatueOam {
+MAKE_ENUM(u8, UnknownItemChozoStatueOam) {
     UNKNOWN_ITEM_CHOZO_STATUE_OAM_LEG_STANDING,
     UNKNOWN_ITEM_CHOZO_STATUE_OAM_LEG_SITTING,
     UNKNOWN_ITEM_CHOZO_STATUE_OAM_LEG_SEATED,
@@ -24,7 +24,7 @@ enum UnknownItemChozoStatueOam {
     UNKNOWN_ITEM_CHOZO_STATUE_OAM_REFILL,
     UNKNOWN_ITEM_CHOZO_STATUE_OAM_REFILL_GLOW_IDLE,
 
-    UNKNOWN_ITEM_CHOZO_STATUE_OAM_END
+    UNKNOWN_ITEM_CHOZO_STATUE_OAM_COUNT
 };
 
 extern const struct MultiSpriteData sUnknownItemChozoStatueMultiSpriteData_Standing[2];

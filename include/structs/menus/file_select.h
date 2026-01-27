@@ -28,7 +28,7 @@ struct FileSelectCursorOamData {
     u16 xPosition;
     u16 yPosition;
     u8 oamFileMarkerId;
-    u8 oamIds[SUIT_END];
+    u8 oamIds[SUIT_COUNT];
 };
 
 struct OptionsSubMenuInfo {
@@ -70,7 +70,7 @@ struct FileSelectData {
     u16 bg2cnt;
     u16 bg3cnt;
 
-    u8 fadingStage;
+    FileSelectFadingStage fadingStage;
     u8 colorToApply;
     u8 paletteUpdated;
     u16 fadingTimer;
@@ -88,12 +88,12 @@ struct FileSelectData {
 
     u8 unk_24; // most recent save file?
     u8 unk_25; // set but never read
-    u8 copySourceFile;
-    u8 currentFile;
-    u8 eraseFile;
+    FileSelectCursorPosition copySourceFile;
+    FileSelectCursorPosition currentFile;
+    FileSelectCursorPosition eraseFile;
 
     struct FileSelectMenuCursors fileSelectCursors;
-    u8 processTextStage;
+    FileScreenProcessTextStage processTextStage;
     FileScreenMessageInfoId messageInfoIdQueue[3];
     u8 difficultyMessage;
     u8 continueNewMessage;
@@ -101,17 +101,17 @@ struct FileSelectData {
     u8 enabledMenus;
     u16 timer;
     u8 currentSubMenu;
-    u8 fileSelectCursorPosition;
+    FileSelectCursorPosition fileSelectCursorPosition;
     u8 subMenuStage;
     u16 subMenuTimer;
     u8 corruptMessageFileA;
     u8 corruptMessageFileB;
     u8 corruptMessageFileC;
-    u8 corruptFile;
+    FileSelectCursorPosition corruptFile;
 
     u8 timeAttackPassword[8];
     u8 timeAttackBestTimes[2][6];
-    u8 optionsUnlocked[7];
+    OptionId optionsUnlocked[7];
     u8 soundTestId;
     u8 timeAttackRecordFlags;
     u8 timeAttack100Only;
@@ -124,11 +124,11 @@ struct FileSelectData {
     u16 timeAttackInputCooldown;
     u8 inputtedTimeAttack;
 
-    struct MenuOamData fileScreenOam[FILE_SELECT_OAM_END];
+    struct MenuOamData fileScreenOam[FILE_SELECT_OAM_COUNT];
 
     u8 padding_164[80];
 
-    struct MenuOamData optionsOam[OPTIONS_OAM_END];
+    struct MenuOamData optionsOam[OPTIONS_OAM_COUNT];
 };
 
 extern s8 gOptionsOptionSelected;

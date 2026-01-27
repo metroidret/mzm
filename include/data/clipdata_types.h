@@ -4,8 +4,8 @@
 #include "types.h"
 #include "constants/clipdata.h"
 
-extern const u8 sClipdataCollisionTypes[CLIPDATA_END];
-extern const u16 sClipdataBehaviorTypes[CLIPDATA_END];
+extern const u8 sClipdataCollisionTypes[CLIPDATA_COUNT];
+extern const u16 sClipdataBehaviorTypes[CLIPDATA_COUNT];
 
 extern const u8 sCommonTilesGfx[4096];
 extern const u8 sCommonTilesMothershipGfx[4096];

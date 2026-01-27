@@ -21,8 +21,10 @@
 #include "structs/game_state.h"
 #include "structs/samus.h"
 
+#define TITLE_SCREEN_SPARKLE_DELAY CONVERT_SECONDS(.35f + 1.f / 60)
+
 #ifdef REGION_EU
-static void TitleScreenSetMenuPalette(u8 param0);
+static void TitleScreenSetMenuPalette(TitleScreenMenuOption param0);
 #endif // REGION_EU
 
 static struct TitleScreenAnimatedPalette sTitleScreenAnimatedPaletteTemplates[4] = {
@@ -49,7 +51,7 @@ static struct TitleScreenAnimatedPalette sTitleScreenAnimatedPaletteTemplates[4]
         .maxTimer = 4,
         .timer = 4,
         .unk_4 = 1
-    },
+    }
 };
 
 #ifdef REGION_EU
@@ -61,12 +63,12 @@ static const u8* sRomInfoStringPointers[4] = {
     sTitleScreenRomInfoTime,
     sTitleScreenRomInfoRegionJPN,
     sTitleScreenRomInfoRegionEUR,
-    sTitleScreenRomInfoRegionUSA,
+    sTitleScreenRomInfoRegionUSA
 };
 #endif // REGION_EU
 
 #ifdef REGION_EU
-static const u32* sTitleScreenMenuGfxPointers[(LANGUAGE_END - LANGUAGE_ENGLISH) * 2] = {
+static const u32* sTitleScreenMenuGfxPointers[(LANGUAGE_COUNT - LANGUAGE_ENGLISH) * 2] = {
     sTitleScreenEnglishMenuGfx_Top,
     sTitleScreenEnglishMenuGfx_Bottom,
     sTitleScreenGermanMenuGfx_Top,
@@ -549,7 +551,7 @@ u32 TitleScreenCometsView(void)
 
     screenOffset = 0;
     ended = FALSE;
-    TITLE_SCREEN_DATA.cometsTimer++;
+    APPLY_DELTA_TIME_INC(TITLE_SCREEN_DATA.cometsTimer);
 
     if (gChangedInput & (KEY_A | KEY_START))
     {
@@ -566,7 +568,7 @@ u32 TitleScreenCometsView(void)
 
         case 1:
             // Wait
-            if (TITLE_SCREEN_DATA.cometsTimer > 60)
+            if (TITLE_SCREEN_DATA.cometsTimer > CONVERT_SECONDS(1.f))
             {
                 // Spawn first comet
                 TITLE_SCREEN_DATA.type |= TITLE_SCREEN_TYPE_FIRST_COMET_ACTIVE;
@@ -580,7 +582,7 @@ u32 TitleScreenCometsView(void)
 
         case 2:
             // Wait
-            if (TITLE_SCREEN_DATA.cometsTimer > 60 * 2)
+            if (TITLE_SCREEN_DATA.cometsTimer > CONVERT_SECONDS(2.f))
             {
                 // Spawn second comet
                 TITLE_SCREEN_DATA.type |= TITLE_SCREEN_TYPE_SECOND_COMET_ACTIVE;
@@ -594,7 +596,7 @@ u32 TitleScreenCometsView(void)
 
         case 3:
             // Wait
-            if (TITLE_SCREEN_DATA.cometsTimer > 60 / 2)
+            if (TITLE_SCREEN_DATA.cometsTimer > CONVERT_SECONDS(.5f))
             {
                 TITLE_SCREEN_DATA.cometsStage++;
                 TITLE_SCREEN_DATA.cometsTimer = 0;
@@ -1429,7 +1431,7 @@ void TitleScreenVBlank_Empty(void)
  * 
  * @param option Which option is selected
  */
-static void TitleScreenSetMenuPalette(u8 option)
+static void TitleScreenSetMenuPalette(TitleScreenMenuOption option)
 {
     s32 temp;
     u16* dst1;
@@ -1485,7 +1487,7 @@ static void TitleScreenSetMenuPalette(u8 option)
  * 
  * @param symbol Which symbol to use
  */
-void TitleScreenSetCopyrightSymbol(u8 symbol)
+void TitleScreenSetCopyrightSymbol(TitleScreenCopyrightSymbol symbol)
 {
     s32 i;
     u32 value;

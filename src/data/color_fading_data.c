@@ -2,8 +2,8 @@
 #include "color_fading.h"
 #include "macros.h"
 
-const struct ColorFadingData sColorFadingData[COLOR_FADING_END] = {
-    [0] = {
+const struct ColorFadingData sColorFadingData[COLOR_FADING_COUNT] = {
+    [COLOR_FADING_NONE] = {
         .isWhite = FALSE,
         .pUpdateFunction = NULL,
         .firstColorSet = 0,
@@ -252,7 +252,7 @@ const struct ColorFadingData sColorFadingData[COLOR_FADING_END] = {
         .bgColorMask = USHORT_MAX,
         .objColorMask = 0xFFFC,
         .fadeFunction = COLOR_FADING_FUNCTION_3
-    },
+    }
 };
 
 static const u8 sColorFading_345f58[8] = {
@@ -279,7 +279,7 @@ static const u8 sColorFading_345fcc[1] = {
     32
 };
 
-const struct ColorFadingColorInfo sColorFadingColorInfo[COLOR_FADING_SPEED_END] = {
+const struct ColorFadingColorInfo sColorFadingColorInfo[COLOR_FADING_SPEED_COUNT] = {
     [COLOR_FADING_SPEED_FASTER] = {
         .colorArray = sColorFading_345f58,
         .size = ARRAY_SIZE(sColorFading_345f58)

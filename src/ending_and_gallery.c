@@ -39,6 +39,12 @@
     ENDING_DATA.oamFramePointers[line] = endingOam[line].pFrame; \
 }
 
+MAKE_ENUM(u32, EndingImageTextSet) {
+    ENDING_IMAGE_OAM_SET_CLEAR_TIME,
+    ENDING_IMAGE_OAM_SET_YOUR_RATE,
+    ENDING_IMAGE_OAM_SET_COLLECTING
+};
+
 /**
  * @brief 84c34 | 48 | Checks if an ending letter should display
  * 
@@ -62,7 +68,7 @@ static void EndingImageUpdateLettersSpawnDelay(u32 offset)
  * 
  * @param set Set to load
  */
-static void EndingImageLoadTextOAM(u32 set)
+static void EndingImageLoadTextOam(EndingImageTextSet set)
 {
     s32 i;
 
@@ -180,7 +186,7 @@ static void EndingImageLoadTextOAM(u32 set)
  * 
  * @param line Line
  */
-static void EndingImageDisplayLinePermanently(u32 line)
+static void EndingImageDisplayLinePermanently(EndingImageLine line)
 {
     s32 i;
 
@@ -625,7 +631,7 @@ static u8 CreditsDisplayLine(u32 line)
             ret_0 = 1;
             break;
 
-        case CREDIT_LINE_TYPE_END:
+        case CREDIT_LINE_TYPE_COUNT:
             ret_0 = 9;
             break;
 
@@ -642,7 +648,7 @@ static u8 CreditsDisplayLine(u32 line)
             ret_0 = 1;
             break;
 
-        case 5:
+        case CREDIT_LINE_TYPE_BLANK:
             ret_0 = 1;
             break;
 
@@ -1641,7 +1647,7 @@ static u8 EndingImageDisplay(void)
             break;
 
         case CONVERT_SECONDS(.5f):
-            EndingImageLoadTextOAM(ENDING_IMAGE_OAM_SET_CLEAR_TIME);
+            EndingImageLoadTextOam(ENDING_IMAGE_OAM_SET_CLEAR_TIME);
             ENDING_DATA.unk_1 = TRUE;
             break;
 
@@ -1656,7 +1662,7 @@ static u8 EndingImageDisplay(void)
             break;
 
         case CONVERT_SECONDS(5.5f):
-            EndingImageLoadTextOAM(ENDING_IMAGE_OAM_SET_YOUR_RATE);
+            EndingImageLoadTextOam(ENDING_IMAGE_OAM_SET_YOUR_RATE);
             break;
 
         case CONVERT_SECONDS(6.25f):
@@ -1668,7 +1674,7 @@ static u8 EndingImageDisplay(void)
         case CONVERT_SECONDS(6.f) + ONE_THIRD_SECOND:
             if (ENDING_DATA.language == LANGUAGE_JAPANESE || ENDING_DATA.language == LANGUAGE_ENGLISH ||
                 ENDING_DATA.language == LANGUAGE_ITALIAN)
-                EndingImageLoadTextOAM(ENDING_IMAGE_OAM_SET_COLLECTING);
+                EndingImageLoadTextOam(ENDING_IMAGE_OAM_SET_COLLECTING);
             break;
 
         case CONVERT_SECONDS(7.f) + TWO_THIRD_SECOND:
@@ -2028,7 +2034,7 @@ u32 CreditsMainLoop(void)
             stageResult = sUnlockedOptionsFunctionPointers[ENDING_DATA.stage]();
             if (stageResult)
             {
-                gEndingFlags = 0;
+                gEndingFlags = ENDING_FLAG_NONE;
                 ENDING_DATA.stage++;
                 ENDING_DATA.unk_1 = 0;
                 ENDING_DATA.endScreenTimer = 0;

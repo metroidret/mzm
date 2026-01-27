@@ -14,7 +14,7 @@ const struct LanguageColorAnimation sInitialLanguageColorAnimation = {
 
 const u8 sLanguageSelectGameModeSub1Values[3] = {0, 7, 8};
 
-const u16 sLanguageSelectLanguageTileTableOffsets[LANGUAGE_END - LANGUAGE_ENGLISH] = {
+const u16 sLanguageSelectLanguageTileTableOffsets[LANGUAGE_COUNT - LANGUAGE_ENGLISH] = {
     [LANGUAGE_ENGLISH - LANGUAGE_ENGLISH] = 0xA8,
     [LANGUAGE_GERMAN - LANGUAGE_ENGLISH] = 0xE8,
     [LANGUAGE_FRENCH - LANGUAGE_ENGLISH] = 0x128,

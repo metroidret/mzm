@@ -39,7 +39,7 @@ static const u16 sSpacePirateOam_Crouched_Frame0[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-25, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-9, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-7, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-7, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Crouched_Frame1[OAM_DATA_SIZE(14)] = {
@@ -57,7 +57,7 @@ static const u16 sSpacePirateOam_Crouched_Frame1[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-25, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-9, -25, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-7, -34, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-7, -34, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Crouched_Frame2[OAM_DATA_SIZE(15)] = {
@@ -76,7 +76,7 @@ static const u16 sSpacePirateOam_Crouched_Frame2[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-25, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-9, -26, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-7, -35, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-7, -35, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Walking_Frame0[OAM_DATA_SIZE(14)] = {
@@ -94,7 +94,7 @@ static const u16 sSpacePirateOam_Walking_Frame0[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-8, -37, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-14, -30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-14, -18, OAM_DIMS_8x16, OAM_NO_FLIP, 0x215, 8, 0),
-    OAM_ENTRY(-22, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
+    OAM_ENTRY(-22, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Walking_Frame1[OAM_DATA_SIZE(14)] = {
@@ -112,7 +112,7 @@ static const u16 sSpacePirateOam_Walking_Frame1[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-8, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-12, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(-7, -18, OAM_DIMS_8x16, OAM_NO_FLIP, 0x216, 8, 0),
-    OAM_ENTRY(-6, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
+    OAM_ENTRY(-6, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Walking_Frame2[OAM_DATA_SIZE(14)] = {
@@ -130,7 +130,7 @@ static const u16 sSpacePirateOam_Walking_Frame2[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-8, -39, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-3, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(0, -18, OAM_DIMS_8x16, OAM_NO_FLIP, 0x217, 8, 0),
-    OAM_ENTRY(-2, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20f, 8, 0),
+    OAM_ENTRY(-2, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20f, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Walking_Frame3[OAM_DATA_SIZE(14)] = {
@@ -148,7 +148,7 @@ static const u16 sSpacePirateOam_Walking_Frame3[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-8, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(4, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(4, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-1, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x210, 8, 0),
+    OAM_ENTRY(-1, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x210, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Walking_Frame4[OAM_DATA_SIZE(14)] = {
@@ -166,7 +166,7 @@ static const u16 sSpacePirateOam_Walking_Frame4[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-8, -37, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(1, -19, OAM_DIMS_16x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-2, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20f, 8, 0),
-    OAM_ENTRY(8, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(8, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Walking_Frame5[OAM_DATA_SIZE(14)] = {
@@ -184,7 +184,7 @@ static const u16 sSpacePirateOam_Walking_Frame5[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-8, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(3, -18, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-3, -22, OAM_DIMS_16x16, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-3, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
+    OAM_ENTRY(-3, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Walking_Frame6[OAM_DATA_SIZE(14)] = {
@@ -202,7 +202,7 @@ static const u16 sSpacePirateOam_Walking_Frame6[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-8, -39, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(0, -17, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-5, -22, OAM_DIMS_8x16, OAM_NO_FLIP, 0x217, 8, 0),
-    OAM_ENTRY(-5, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
+    OAM_ENTRY(-5, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Walking_Frame7[OAM_DATA_SIZE(14)] = {
@@ -220,7 +220,7 @@ static const u16 sSpacePirateOam_Walking_Frame7[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-7, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-13, -10, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-10, -21, OAM_DIMS_8x16, OAM_NO_FLIP, 0x217, 8, 0),
-    OAM_ENTRY(-14, -33, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(-14, -33, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserForward_Frame0[OAM_DATA_SIZE(15)] = {
@@ -239,7 +239,7 @@ static const u16 sSpacePirateOam_ChargingLaserForward_Frame0[OAM_DATA_SIZE(15)] 
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-26, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-10, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-8, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-8, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserForward_Frame1[OAM_DATA_SIZE(15)] = {
@@ -258,7 +258,7 @@ static const u16 sSpacePirateOam_ChargingLaserForward_Frame1[OAM_DATA_SIZE(15)] 
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-27, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-11, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-9, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-9, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserForward_Frame2[OAM_DATA_SIZE(15)] = {
@@ -277,7 +277,7 @@ static const u16 sSpacePirateOam_ChargingLaserForward_Frame2[OAM_DATA_SIZE(15)] 
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-31, -27, OAM_DIMS_16x16, OAM_NO_FLIP, 0x24e, 8, 0),
     OAM_ENTRY(-15, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x250, 8, 0),
-    OAM_ENTRY(-10, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-10, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserForward_Frame3[OAM_DATA_SIZE(15)] = {
@@ -296,7 +296,7 @@ static const u16 sSpacePirateOam_ChargingLaserForward_Frame3[OAM_DATA_SIZE(15)] 
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-30, -33, OAM_DIMS_16x16, OAM_NO_FLIP, 0x251, 8, 0),
     OAM_ENTRY(-14, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0),
-    OAM_ENTRY(-11, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-11, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserForward_Frame4[OAM_DATA_SIZE(15)] = {
@@ -315,7 +315,7 @@ static const u16 sSpacePirateOam_ChargingLaserForward_Frame4[OAM_DATA_SIZE(15)] 
     OAM_ENTRY(-13, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-32, -34, OAM_DIMS_16x16, OAM_NO_FLIP, 0x251, 8, 0),
     OAM_ENTRY(-16, -34, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0),
-    OAM_ENTRY(-13, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-13, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserForward_Frame5[OAM_DATA_SIZE(15)] = {
@@ -334,7 +334,7 @@ static const u16 sSpacePirateOam_ChargingLaserForward_Frame5[OAM_DATA_SIZE(15)] 
     OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-30, -41, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
     OAM_ENTRY(-30, -25, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
-    OAM_ENTRY(-23, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(-23, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserForward_Frame6[OAM_DATA_SIZE(15)] = {
@@ -353,7 +353,7 @@ static const u16 sSpacePirateOam_ChargingLaserForward_Frame6[OAM_DATA_SIZE(15)] 
     OAM_ENTRY(-22, -36, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
     OAM_ENTRY(-12, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(-13, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ShootingForward_Frame1[OAM_DATA_SIZE(15)] = {
@@ -372,7 +372,7 @@ static const u16 sSpacePirateOam_ShootingForward_Frame1[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-21, -36, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
     OAM_ENTRY(-12, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(-13, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ShootingForward_Frame2[OAM_DATA_SIZE(15)] = {
@@ -391,22 +391,22 @@ static const u16 sSpacePirateOam_ShootingForward_Frame2[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-20, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
     OAM_ENTRY(-12, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(-13, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x218, 8, 0),
-    OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0)
 };
 
 static const u16 sSpacePirateLaserOam_Forward_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x258, 8, 0),
+    OAM_ENTRY(-16, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x258, 8, 0)
 };
 
 static const u16 sSpacePirateLaserOam_Forward_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x278, 8, 0),
+    OAM_ENTRY(-16, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x278, 8, 0)
 };
 
 static const u16 sSpacePirateLaserOam_Forward_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x25c, 8, 0),
+    OAM_ENTRY(-16, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x25c, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningAroundFirstPart_Frame0[OAM_DATA_SIZE(14)] = {
@@ -424,7 +424,7 @@ static const u16 sSpacePirateOam_TurningAroundFirstPart_Frame0[OAM_DATA_SIZE(14)
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-25, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-9, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-7, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-7, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningAroundFirstPart_Frame1[OAM_DATA_SIZE(15)] = {
@@ -443,7 +443,7 @@ static const u16 sSpacePirateOam_TurningAroundFirstPart_Frame1[OAM_DATA_SIZE(15)
     OAM_ENTRY(-10, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(-5, -7, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23b, 8, 0),
     OAM_ENTRY(-10, -18, OAM_DIMS_8x16, OAM_NO_FLIP, 0x217, 8, 0),
-    OAM_ENTRY(-13, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(-13, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningAroundFirstPart_Frame2[OAM_DATA_SIZE(15)] = {
@@ -462,7 +462,7 @@ static const u16 sSpacePirateOam_TurningAroundFirstPart_Frame2[OAM_DATA_SIZE(15)
     OAM_ENTRY(6, -10, OAM_DIMS_8x8, OAM_X_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(1, -8, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0),
     OAM_ENTRY(3, -18, OAM_DIMS_8x16, OAM_X_FLIP, 0x216, 8, 0),
-    OAM_ENTRY(3, -26, OAM_DIMS_8x16, OAM_X_FLIP, 0x20f, 8, 0),
+    OAM_ENTRY(3, -26, OAM_DIMS_8x16, OAM_X_FLIP, 0x20f, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningAroundFirstPart_Frame3[OAM_DATA_SIZE(15)] = {
@@ -481,7 +481,7 @@ static const u16 sSpacePirateOam_TurningAroundFirstPart_Frame3[OAM_DATA_SIZE(15)
     OAM_ENTRY(6, -8, OAM_DIMS_8x8, OAM_X_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(1, -7, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0),
     OAM_ENTRY(3, -19, OAM_DIMS_8x16, OAM_X_FLIP, 0x216, 8, 0),
-    OAM_ENTRY(1, -27, OAM_DIMS_8x16, OAM_X_FLIP, 0x20e, 8, 0),
+    OAM_ENTRY(1, -27, OAM_DIMS_8x16, OAM_X_FLIP, 0x20e, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningAroundSecondPart_Frame0[OAM_DATA_SIZE(14)] = {
@@ -499,7 +499,7 @@ static const u16 sSpacePirateOam_TurningAroundSecondPart_Frame0[OAM_DATA_SIZE(14
     OAM_ENTRY(6, -8, OAM_DIMS_8x8, OAM_X_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(1, -7, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0),
     OAM_ENTRY(3, -19, OAM_DIMS_8x16, OAM_X_FLIP, 0x216, 8, 0),
-    OAM_ENTRY(1, -27, OAM_DIMS_8x16, OAM_X_FLIP, 0x20e, 8, 0),
+    OAM_ENTRY(1, -27, OAM_DIMS_8x16, OAM_X_FLIP, 0x20e, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningAroundSecondPart_Frame1[OAM_DATA_SIZE(14)] = {
@@ -517,7 +517,7 @@ static const u16 sSpacePirateOam_TurningAroundSecondPart_Frame1[OAM_DATA_SIZE(14
     OAM_ENTRY(6, -10, OAM_DIMS_8x8, OAM_X_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(1, -8, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0),
     OAM_ENTRY(3, -18, OAM_DIMS_8x16, OAM_X_FLIP, 0x216, 8, 0),
-    OAM_ENTRY(3, -26, OAM_DIMS_8x16, OAM_X_FLIP, 0x20f, 8, 0),
+    OAM_ENTRY(3, -26, OAM_DIMS_8x16, OAM_X_FLIP, 0x20f, 8, 0)
 };
 
 static const u16 sSpacePirateOam_LookingAtCamera_Frame1[OAM_DATA_SIZE(15)] = {
@@ -536,7 +536,7 @@ static const u16 sSpacePirateOam_LookingAtCamera_Frame1[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-25, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-9, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-7, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-7, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningAroundSecondPart_Frame2[OAM_DATA_SIZE(15)] = {
@@ -555,7 +555,7 @@ static const u16 sSpacePirateOam_TurningAroundSecondPart_Frame2[OAM_DATA_SIZE(15
     OAM_ENTRY(-10, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(-5, -7, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23b, 8, 0),
     OAM_ENTRY(-10, -18, OAM_DIMS_8x16, OAM_NO_FLIP, 0x217, 8, 0),
-    OAM_ENTRY(-13, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(-13, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Landing_Frame2[OAM_DATA_SIZE(15)] = {
@@ -574,7 +574,7 @@ static const u16 sSpacePirateOam_Landing_Frame2[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-11, -27, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-21, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-5, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-6, -35, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(-6, -35, OAM_DIMS_8x16, OAM_NO_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Landing_Frame1[OAM_DATA_SIZE(15)] = {
@@ -593,7 +593,7 @@ static const u16 sSpacePirateOam_Landing_Frame1[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-11, -27, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-14, -22, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(2, -22, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-6, -32, OAM_DIMS_16x16, OAM_NO_FLIP, 0x208, 8, 0),
+    OAM_ENTRY(-6, -32, OAM_DIMS_16x16, OAM_NO_FLIP, 0x208, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Landing_Frame0[OAM_DATA_SIZE(15)] = {
@@ -612,7 +612,7 @@ static const u16 sSpacePirateOam_Landing_Frame0[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-13, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-29, -29, OAM_DIMS_16x16, OAM_NO_FLIP, 0x24e, 8, 0),
     OAM_ENTRY(-13, -29, OAM_DIMS_8x16, OAM_NO_FLIP, 0x250, 8, 0),
-    OAM_ENTRY(-8, -36, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-8, -36, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_JumpingFromWall_Frame0[OAM_DATA_SIZE(15)] = {
@@ -631,7 +631,7 @@ static const u16 sSpacePirateOam_JumpingFromWall_Frame0[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-6, -25, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-30, -39, OAM_DIMS_16x16, OAM_NO_FLIP, 0x251, 8, 0),
     OAM_ENTRY(-14, -39, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0),
-    OAM_ENTRY(-15, -38, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(-15, -38, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSpacePirateOam_JumpingFromWall_Frame1[OAM_DATA_SIZE(15)] = {
@@ -650,7 +650,7 @@ static const u16 sSpacePirateOam_JumpingFromWall_Frame1[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-25, -48, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
     OAM_ENTRY(-25, -32, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
-    OAM_ENTRY(-17, -42, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(-17, -42, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSpacePirateOam_JumpingFromWall_Frame2[OAM_DATA_SIZE(15)] = {
@@ -669,7 +669,7 @@ static const u16 sSpacePirateOam_JumpingFromWall_Frame2[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-15, -29, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-23, -49, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
     OAM_ENTRY(-23, -33, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
-    OAM_ENTRY(-15, -43, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(-15, -43, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Falling_Frame0[OAM_DATA_SIZE(14)] = {
@@ -687,7 +687,7 @@ static const u16 sSpacePirateOam_Falling_Frame0[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-11, -27, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-23, -46, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
     OAM_ENTRY(-23, -30, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
-    OAM_ENTRY(-15, -40, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(-15, -40, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSpacePirateOam_LookingUpwards_Frame0[OAM_DATA_SIZE(14)] = {
@@ -705,7 +705,7 @@ static const u16 sSpacePirateOam_LookingUpwards_Frame0[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-25, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-9, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-7, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-7, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_LookingUpwards_Frame1[OAM_DATA_SIZE(14)] = {
@@ -723,7 +723,7 @@ static const u16 sSpacePirateOam_LookingUpwards_Frame1[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-25, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-9, -25, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-7, -34, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-7, -34, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_LookingUpwards_Frame2[OAM_DATA_SIZE(15)] = {
@@ -742,7 +742,7 @@ static const u16 sSpacePirateOam_LookingUpwards_Frame2[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-25, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-9, -26, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-7, -35, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-7, -35, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserDiagonallyUp_Frame0[OAM_DATA_SIZE(15)] = {
@@ -761,7 +761,7 @@ static const u16 sSpacePirateOam_ChargingLaserDiagonallyUp_Frame0[OAM_DATA_SIZE(
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-26, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-10, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-8, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-8, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserDiagonallyUp_Frame1[OAM_DATA_SIZE(15)] = {
@@ -780,7 +780,7 @@ static const u16 sSpacePirateOam_ChargingLaserDiagonallyUp_Frame1[OAM_DATA_SIZE(
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-27, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-11, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-9, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-9, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserDiagonallyUp_Frame2[OAM_DATA_SIZE(15)] = {
@@ -799,7 +799,7 @@ static const u16 sSpacePirateOam_ChargingLaserDiagonallyUp_Frame2[OAM_DATA_SIZE(
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-31, -27, OAM_DIMS_16x16, OAM_NO_FLIP, 0x24e, 8, 0),
     OAM_ENTRY(-15, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x250, 8, 0),
-    OAM_ENTRY(-10, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-10, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserDiagonallyUp_Frame3[OAM_DATA_SIZE(15)] = {
@@ -818,7 +818,7 @@ static const u16 sSpacePirateOam_ChargingLaserDiagonallyUp_Frame3[OAM_DATA_SIZE(
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-30, -33, OAM_DIMS_16x16, OAM_NO_FLIP, 0x251, 8, 0),
     OAM_ENTRY(-14, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0),
-    OAM_ENTRY(-11, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-11, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserDiagonallyUp_Frame4[OAM_DATA_SIZE(15)] = {
@@ -837,7 +837,7 @@ static const u16 sSpacePirateOam_ChargingLaserDiagonallyUp_Frame4[OAM_DATA_SIZE(
     OAM_ENTRY(-13, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-32, -34, OAM_DIMS_16x16, OAM_NO_FLIP, 0x251, 8, 0),
     OAM_ENTRY(-16, -34, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0),
-    OAM_ENTRY(-13, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-13, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserDiagonallyUp_Frame5[OAM_DATA_SIZE(15)] = {
@@ -856,7 +856,7 @@ static const u16 sSpacePirateOam_ChargingLaserDiagonallyUp_Frame5[OAM_DATA_SIZE(
     OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-30, -41, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
     OAM_ENTRY(-30, -25, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
-    OAM_ENTRY(-23, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(-23, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserDiagonallyUp_Frame6[OAM_DATA_SIZE(15)] = {
@@ -875,7 +875,7 @@ static const u16 sSpacePirateOam_ChargingLaserDiagonallyUp_Frame6[OAM_DATA_SIZE(
     OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-22, -47, OAM_DIMS_8x16, OAM_NO_FLIP, 0x280, 8, 0),
     OAM_ENTRY(-30, -31, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2a1, 8, 0),
-    OAM_ENTRY(-23, -37, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(-23, -37, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ShootingDiagonallyUp_Frame1[OAM_DATA_SIZE(15)] = {
@@ -894,7 +894,7 @@ static const u16 sSpacePirateOam_ShootingDiagonallyUp_Frame1[OAM_DATA_SIZE(15)] 
     OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-21, -47, OAM_DIMS_8x16, OAM_NO_FLIP, 0x280, 8, 0),
     OAM_ENTRY(-29, -31, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2a1, 8, 0),
-    OAM_ENTRY(-22, -37, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(-22, -37, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ShootingDiagonallyUp_Frame2[OAM_DATA_SIZE(15)] = {
@@ -913,7 +913,7 @@ static const u16 sSpacePirateOam_ShootingDiagonallyUp_Frame2[OAM_DATA_SIZE(15)] 
     OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-20, -46, OAM_DIMS_8x16, OAM_NO_FLIP, 0x280, 8, 0),
     OAM_ENTRY(-28, -30, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2a1, 8, 0),
-    OAM_ENTRY(-21, -36, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(-21, -36, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ClimbingUp_Frame0[OAM_DATA_SIZE(13)] = {
@@ -930,7 +930,7 @@ static const u16 sSpacePirateOam_ClimbingUp_Frame0[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-5, -19, OAM_DIMS_8x16, OAM_NO_FLIP, 0x215, 8, 0),
     OAM_ENTRY(-1, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-16, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
-    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
+    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ClimbingUp_Frame1[OAM_DATA_SIZE(13)] = {
@@ -947,7 +947,7 @@ static const u16 sSpacePirateOam_ClimbingUp_Frame1[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-7, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x216, 8, 0),
     OAM_ENTRY(-10, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-16, -61, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
-    OAM_ENTRY(-16, -45, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
+    OAM_ENTRY(-16, -45, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ClimbingUp_Frame2[OAM_DATA_SIZE(16)] = {
@@ -967,7 +967,7 @@ static const u16 sSpacePirateOam_ClimbingUp_Frame2[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-12, -39, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-13, -17, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-16, -58, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
-    OAM_ENTRY(-16, -42, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
+    OAM_ENTRY(-16, -42, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ClimbingUp_Frame3[OAM_DATA_SIZE(13)] = {
@@ -984,7 +984,7 @@ static const u16 sSpacePirateOam_ClimbingUp_Frame3[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-10, -34, OAM_DIMS_16x8, OAM_NO_FLIP, 0x276, 8, 0),
     OAM_ENTRY(-13, -19, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-16, -54, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
-    OAM_ENTRY(-16, -38, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
+    OAM_ENTRY(-16, -38, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ClimbingUp_Frame4[OAM_DATA_SIZE(13)] = {
@@ -1001,7 +1001,7 @@ static const u16 sSpacePirateOam_ClimbingUp_Frame4[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-13, -22, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-9, -39, OAM_DIMS_16x16, OAM_NO_FLIP, 0x28a, 8, 0),
     OAM_ENTRY(-16, -51, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
-    OAM_ENTRY(-16, -35, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
+    OAM_ENTRY(-16, -35, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ClimbingUp_Frame5[OAM_DATA_SIZE(13)] = {
@@ -1018,7 +1018,7 @@ static const u16 sSpacePirateOam_ClimbingUp_Frame5[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-7, -56, OAM_DIMS_8x8, OAM_NO_FLIP, 0x280, 8, 0),
     OAM_ENTRY(-11, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x217, 8, 0),
     OAM_ENTRY(-10, -34, OAM_DIMS_16x8, OAM_NO_FLIP, 0x276, 8, 0),
-    OAM_ENTRY(-13, -19, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(-13, -19, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ClimbingUp_Frame6[OAM_DATA_SIZE(16)] = {
@@ -1038,7 +1038,7 @@ static const u16 sSpacePirateOam_ClimbingUp_Frame6[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-11, -27, OAM_DIMS_16x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-4, -37, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20d, 8, 0),
     OAM_ENTRY(-12, -39, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20c, 8, 0),
-    OAM_ENTRY(-13, -17, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(-13, -17, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ClimbingUp_Frame7[OAM_DATA_SIZE(13)] = {
@@ -1055,7 +1055,7 @@ static const u16 sSpacePirateOam_ClimbingUp_Frame7[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-7, -63, OAM_DIMS_8x8, OAM_NO_FLIP, 0x280, 8, 0),
     OAM_ENTRY(-13, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-7, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x216, 8, 0),
-    OAM_ENTRY(-10, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(-10, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningToAimWhileClimbing_Frame1[OAM_DATA_SIZE(12)] = {
@@ -1071,7 +1071,7 @@ static const u16 sSpacePirateOam_TurningToAimWhileClimbing_Frame1[OAM_DATA_SIZE(
     OAM_ENTRY(-5, -19, OAM_DIMS_8x16, OAM_NO_FLIP, 0x215, 8, 0),
     OAM_ENTRY(-1, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-16, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
-    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
+    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningToAimWhileClimbing_Frame2[OAM_DATA_SIZE(12)] = {
@@ -1087,7 +1087,7 @@ static const u16 sSpacePirateOam_TurningToAimWhileClimbing_Frame2[OAM_DATA_SIZE(
     OAM_ENTRY(-5, -19, OAM_DIMS_8x16, OAM_NO_FLIP, 0x215, 8, 0),
     OAM_ENTRY(-1, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-16, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
-    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
+    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0)
 };
 
 static const u16 sSpacePirateOam_AimingWhileClimbing_Frame0[OAM_DATA_SIZE(12)] = {
@@ -1103,7 +1103,7 @@ static const u16 sSpacePirateOam_AimingWhileClimbing_Frame0[OAM_DATA_SIZE(12)] =
     OAM_ENTRY(-5, -19, OAM_DIMS_8x16, OAM_NO_FLIP, 0x215, 8, 0),
     OAM_ENTRY(-1, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-16, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
-    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
+    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0)
 };
 
 static const u16 sSpacePirateOam_AimingWhileClimbing_Frame1[OAM_DATA_SIZE(12)] = {
@@ -1119,7 +1119,7 @@ static const u16 sSpacePirateOam_AimingWhileClimbing_Frame1[OAM_DATA_SIZE(12)] =
     OAM_ENTRY(-5, -19, OAM_DIMS_8x16, OAM_NO_FLIP, 0x215, 8, 0),
     OAM_ENTRY(-1, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-16, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
-    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
+    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0)
 };
 
 static const u16 sSpacePirateOam_AimingWhileClimbing_Frame2[OAM_DATA_SIZE(12)] = {
@@ -1135,7 +1135,7 @@ static const u16 sSpacePirateOam_AimingWhileClimbing_Frame2[OAM_DATA_SIZE(12)] =
     OAM_ENTRY(-5, -19, OAM_DIMS_8x16, OAM_NO_FLIP, 0x215, 8, 0),
     OAM_ENTRY(-1, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-16, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
-    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
+    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ClimbingChargingLaserForward_Frame1[OAM_DATA_SIZE(13)] = {
@@ -1152,7 +1152,7 @@ static const u16 sSpacePirateOam_ClimbingChargingLaserForward_Frame1[OAM_DATA_SI
     OAM_ENTRY(-5, -19, OAM_DIMS_8x16, OAM_NO_FLIP, 0x215, 8, 0),
     OAM_ENTRY(-1, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-16, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
-    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
+    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ClimbingShootingForward_Frame0[OAM_DATA_SIZE(14)] = {
@@ -1170,7 +1170,7 @@ static const u16 sSpacePirateOam_ClimbingShootingForward_Frame0[OAM_DATA_SIZE(14
     OAM_ENTRY(-1, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-16, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
     OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
-    OAM_ENTRY(-7, -51, OAM_DIMS_8x16, OAM_XY_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(-7, -51, OAM_DIMS_8x16, OAM_XY_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ClimbingShootingForward_Frame1[OAM_DATA_SIZE(14)] = {
@@ -1188,7 +1188,7 @@ static const u16 sSpacePirateOam_ClimbingShootingForward_Frame1[OAM_DATA_SIZE(14
     OAM_ENTRY(-1, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-16, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
     OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
-    OAM_ENTRY(-7, -51, OAM_DIMS_8x16, OAM_XY_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(-7, -51, OAM_DIMS_8x16, OAM_XY_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ClimbingShootingForward_Frame2[OAM_DATA_SIZE(14)] = {
@@ -1206,7 +1206,7 @@ static const u16 sSpacePirateOam_ClimbingShootingForward_Frame2[OAM_DATA_SIZE(14
     OAM_ENTRY(-1, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-16, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
     OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
-    OAM_ENTRY(-7, -51, OAM_DIMS_8x16, OAM_XY_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(-7, -51, OAM_DIMS_8x16, OAM_XY_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sSpacePirateOam_LaunchingFromWall_Frame1[OAM_DATA_SIZE(12)] = {
@@ -1222,7 +1222,7 @@ static const u16 sSpacePirateOam_LaunchingFromWall_Frame1[OAM_DATA_SIZE(12)] = {
     OAM_ENTRY(-3, -18, OAM_DIMS_8x16, OAM_NO_FLIP, 0x215, 8, 0),
     OAM_ENTRY(1, -31, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-20, -45, OAM_DIMS_16x16, OAM_NO_FLIP, 0x246, 8, 0),
-    OAM_ENTRY(-11, -43, OAM_DIMS_16x8, OAM_XY_FLIP, 0x20a, 8, 0),
+    OAM_ENTRY(-11, -43, OAM_DIMS_16x8, OAM_XY_FLIP, 0x20a, 8, 0)
 };
 
 static const u16 sSpacePirateOam_LaunchingFromWall_Frame2[OAM_DATA_SIZE(13)] = {
@@ -1239,7 +1239,7 @@ static const u16 sSpacePirateOam_LaunchingFromWall_Frame2[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-6, -39, OAM_DIMS_16x16, OAM_X_FLIP, 0x240, 8, 0),
     OAM_ENTRY(-12, -9, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-9, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x217, 8, 0),
-    OAM_ENTRY(-11, -31, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
+    OAM_ENTRY(-11, -31, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0)
 };
 
 static const u16 sSpacePirateOam_StartingToCrawl_Frame4[OAM_DATA_SIZE(13)] = {
@@ -1256,7 +1256,7 @@ static const u16 sSpacePirateOam_StartingToCrawl_Frame4[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-16, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
     OAM_ENTRY(22, -15, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(11, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27c, 8, 0),
-    OAM_ENTRY(-1, -14, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
+    OAM_ENTRY(-1, -14, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Crawling_Frame1[OAM_DATA_SIZE(13)] = {
@@ -1273,7 +1273,7 @@ static const u16 sSpacePirateOam_Crawling_Frame1[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-12, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
     OAM_ENTRY(19, -15, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(9, -11, OAM_DIMS_16x8, OAM_NO_FLIP, 0x256, 8, 0),
-    OAM_ENTRY(-2, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x211, 8, 0),
+    OAM_ENTRY(-2, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x211, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Crawling_Frame2[OAM_DATA_SIZE(13)] = {
@@ -1290,7 +1290,7 @@ static const u16 sSpacePirateOam_Crawling_Frame2[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-8, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
     OAM_ENTRY(15, -15, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(6, -17, OAM_DIMS_16x16, OAM_XY_FLIP, 0x213, 8, 0),
-    OAM_ENTRY(1, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x210, 8, 0),
+    OAM_ENTRY(1, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x210, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Crawling_Frame3[OAM_DATA_SIZE(13)] = {
@@ -1307,7 +1307,7 @@ static const u16 sSpacePirateOam_Crawling_Frame3[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(2, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x213, 8, 0),
     OAM_ENTRY(1, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-20, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
-    OAM_ENTRY(-4, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
+    OAM_ENTRY(-4, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Crawling_Frame4[OAM_DATA_SIZE(14)] = {
@@ -1325,7 +1325,7 @@ static const u16 sSpacePirateOam_Crawling_Frame4[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-3, -10, OAM_DIMS_16x8, OAM_NO_FLIP, 0x256, 8, 0),
     OAM_ENTRY(-7, -17, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-17, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
-    OAM_ENTRY(-1, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
+    OAM_ENTRY(-1, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Crawling_Frame5[OAM_DATA_SIZE(13)] = {
@@ -1342,7 +1342,7 @@ static const u16 sSpacePirateOam_Crawling_Frame5[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(2, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x213, 8, 0),
     OAM_ENTRY(1, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-16, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x24f, 8, 0),
-    OAM_ENTRY(-24, -14, OAM_DIMS_8x8, OAM_NO_FLIP, 0x24e, 8, 0),
+    OAM_ENTRY(-24, -14, OAM_DIMS_8x8, OAM_NO_FLIP, 0x24e, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Crawling_Frame6[OAM_DATA_SIZE(13)] = {
@@ -1359,7 +1359,7 @@ static const u16 sSpacePirateOam_Crawling_Frame6[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-27, -15, OAM_DIMS_8x8, OAM_NO_FLIP, 0x24e, 8, 0),
     OAM_ENTRY(15, -15, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(6, -17, OAM_DIMS_16x16, OAM_XY_FLIP, 0x213, 8, 0),
-    OAM_ENTRY(1, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x210, 8, 0),
+    OAM_ENTRY(1, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x210, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Crawling_Frame7[OAM_DATA_SIZE(13)] = {
@@ -1376,7 +1376,7 @@ static const u16 sSpacePirateOam_Crawling_Frame7[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(9, -11, OAM_DIMS_16x8, OAM_NO_FLIP, 0x256, 8, 0),
     OAM_ENTRY(-2, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x211, 8, 0),
     OAM_ENTRY(-23, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x24f, 8, 0),
-    OAM_ENTRY(-31, -14, OAM_DIMS_8x8, OAM_NO_FLIP, 0x24e, 8, 0),
+    OAM_ENTRY(-31, -14, OAM_DIMS_8x8, OAM_NO_FLIP, 0x24e, 8, 0)
 };
 
 static const u16 sSpacePirateOam_StartingToCrawl_Frame1[OAM_DATA_SIZE(15)] = {
@@ -1395,7 +1395,7 @@ static const u16 sSpacePirateOam_StartingToCrawl_Frame1[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-26, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-10, -23, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
     OAM_ENTRY(-14, -32, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
-    OAM_ENTRY(-6, -10, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27c, 8, 0),
+    OAM_ENTRY(-6, -10, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27c, 8, 0)
 };
 
 static const u16 sSpacePirateOam_StartingToCrawl_Frame2[OAM_DATA_SIZE(15)] = {
@@ -1414,7 +1414,7 @@ static const u16 sSpacePirateOam_StartingToCrawl_Frame2[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-12, -21, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
     OAM_ENTRY(6, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(3, -11, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27c, 8, 0),
-    OAM_ENTRY(1, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20f, 8, 0),
+    OAM_ENTRY(1, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20f, 8, 0)
 };
 
 static const u16 sSpacePirateOam_StartingToCrawl_Frame3[OAM_DATA_SIZE(13)] = {
@@ -1431,7 +1431,7 @@ static const u16 sSpacePirateOam_StartingToCrawl_Frame3[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-14, -14, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
     OAM_ENTRY(20, -15, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(9, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27c, 8, 0),
-    OAM_ENTRY(-3, -14, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
+    OAM_ENTRY(-3, -14, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningAroundWhileCrawlingFirstPart_Frame1[OAM_DATA_SIZE(11)] = {
@@ -1446,7 +1446,7 @@ static const u16 sSpacePirateOam_TurningAroundWhileCrawlingFirstPart_Frame1[OAM_
     OAM_ENTRY(-30, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-14, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
     OAM_ENTRY(-20, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
-    OAM_ENTRY(9, -17, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(9, -17, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningAroundWhileCrawlingFirstPart_Frame2[OAM_DATA_SIZE(11)] = {
@@ -1461,7 +1461,7 @@ static const u16 sSpacePirateOam_TurningAroundWhileCrawlingFirstPart_Frame2[OAM_
     OAM_ENTRY(-2, -15, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(10, -10, OAM_DIMS_8x8, OAM_X_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(5, -9, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0),
-    OAM_ENTRY(6, -18, OAM_DIMS_8x16, OAM_X_FLIP, 0x216, 8, 0),
+    OAM_ENTRY(6, -18, OAM_DIMS_8x16, OAM_X_FLIP, 0x216, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningAroundWhileCrawlingFirstPart_Frame3[OAM_DATA_SIZE(9)] = {
@@ -1474,7 +1474,7 @@ static const u16 sSpacePirateOam_TurningAroundWhileCrawlingFirstPart_Frame3[OAM_
     OAM_ENTRY(-23, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x246, 8, 0),
     OAM_ENTRY(-11, -14, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-8, -9, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23a, 8, 0),
-    OAM_ENTRY(-3, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23b, 8, 0),
+    OAM_ENTRY(-3, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23b, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningAroundWhileCrawlingFirstPart_Frame4[OAM_DATA_SIZE(11)] = {
@@ -1489,7 +1489,7 @@ static const u16 sSpacePirateOam_TurningAroundWhileCrawlingFirstPart_Frame4[OAM_
     OAM_ENTRY(-10, -9, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(-5, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23b, 8, 0),
     OAM_ENTRY(3, -9, OAM_DIMS_8x8, OAM_X_FLIP, 0x23a, 8, 0),
-    OAM_ENTRY(-2, -8, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0),
+    OAM_ENTRY(-2, -8, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningAroundWhileCrawlingSecondPart_Frame1[OAM_DATA_SIZE(8)] = {
@@ -1501,7 +1501,7 @@ static const u16 sSpacePirateOam_TurningAroundWhileCrawlingSecondPart_Frame1[OAM
     OAM_ENTRY(-23, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x246, 8, 0),
     OAM_ENTRY(-11, -14, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-8, -9, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23a, 8, 0),
-    OAM_ENTRY(-3, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23b, 8, 0),
+    OAM_ENTRY(-3, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23b, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningAroundWhileCrawlingSecondPart_Frame2[OAM_DATA_SIZE(11)] = {
@@ -1516,7 +1516,7 @@ static const u16 sSpacePirateOam_TurningAroundWhileCrawlingSecondPart_Frame2[OAM
     OAM_ENTRY(-2, -15, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(10, -10, OAM_DIMS_8x8, OAM_X_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(5, -9, OAM_DIMS_8x8, OAM_X_FLIP, 0x23b, 8, 0),
-    OAM_ENTRY(6, -18, OAM_DIMS_8x16, OAM_X_FLIP, 0x216, 8, 0),
+    OAM_ENTRY(6, -18, OAM_DIMS_8x16, OAM_X_FLIP, 0x216, 8, 0)
 };
 
 static const u16 sSpacePirateOam_TurningAroundWhileCrawlingSecondPart_Frame3[OAM_DATA_SIZE(11)] = {
@@ -1531,7 +1531,7 @@ static const u16 sSpacePirateOam_TurningAroundWhileCrawlingSecondPart_Frame3[OAM
     OAM_ENTRY(-30, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-14, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
     OAM_ENTRY(-20, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
-    OAM_ENTRY(9, -17, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(9, -17, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sSpacePirateOam_CrawlingStopped_Frame1[OAM_DATA_SIZE(13)] = {
@@ -1548,7 +1548,7 @@ static const u16 sSpacePirateOam_CrawlingStopped_Frame1[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-16, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
     OAM_ENTRY(22, -15, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(11, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27c, 8, 0),
-    OAM_ENTRY(-1, -14, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
+    OAM_ENTRY(-1, -14, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0)
 };
 
 static const u16 sSpacePirateOam_CrawlingStopped_Frame2[OAM_DATA_SIZE(13)] = {
@@ -1565,7 +1565,7 @@ static const u16 sSpacePirateOam_CrawlingStopped_Frame2[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-32, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(22, -15, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(11, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27c, 8, 0),
-    OAM_ENTRY(-1, -14, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
+    OAM_ENTRY(-1, -14, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Jumping_Unused_Frame[OAM_DATA_SIZE(15)] = {
@@ -1584,7 +1584,7 @@ static const u16 sSpacePirateOam_Jumping_Unused_Frame[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-15, -29, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-23, -49, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
     OAM_ENTRY(-23, -33, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
-    OAM_ENTRY(-15, -43, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
+    OAM_ENTRY(-15, -43, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0)
 };
 
 static const u16 sSpacePirateOam_NinjaPose_Frame0[OAM_DATA_SIZE(18)] = {
@@ -1606,7 +1606,7 @@ static const u16 sSpacePirateOam_NinjaPose_Frame0[OAM_DATA_SIZE(18)] = {
     OAM_ENTRY(-5, -21, OAM_DIMS_8x8, OAM_X_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-5, -16, OAM_DIMS_8x8, OAM_X_FLIP, 0x23e, 8, 0),
     OAM_ENTRY(-20, -15, OAM_DIMS_8x16, OAM_NO_FLIP, 0x214, 8, 0),
-    OAM_ENTRY(-28, -14, OAM_DIMS_8x16, OAM_NO_FLIP, 0x213, 8, 0),
+    OAM_ENTRY(-28, -14, OAM_DIMS_8x16, OAM_NO_FLIP, 0x213, 8, 0)
 };
 
 static const u16 sSpacePirateOam_StandingMotionless_Frame0[OAM_DATA_SIZE(14)] = {
@@ -1624,25 +1624,25 @@ static const u16 sSpacePirateOam_StandingMotionless_Frame0[OAM_DATA_SIZE(14)] = 
     OAM_ENTRY(-11, -29, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-25, -27, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-9, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-7, -36, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-7, -36, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateLaserOam_Diagonal_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-12, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x28c, 8, 0),
-    OAM_ENTRY(-4, 3, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ae, 8, 0),
+    OAM_ENTRY(-4, 3, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ae, 8, 0)
 };
 
 static const u16 sSpacePirateLaserOam_Diagonal_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-12, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x290, 8, 0),
-    OAM_ENTRY(-4, 3, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2b2, 8, 0),
+    OAM_ENTRY(-4, 3, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2b2, 8, 0)
 };
 
 static const u16 sSpacePirateLaserOam_Diagonal_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-12, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x294, 8, 0),
-    OAM_ENTRY(-4, 3, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2b6, 8, 0),
+    OAM_ENTRY(-4, 3, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2b6, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Standing_Frame0[OAM_DATA_SIZE(14)] = {
@@ -1660,7 +1660,7 @@ static const u16 sSpacePirateOam_Standing_Frame0[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-6, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-25, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-9, -28, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-7, -37, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-7, -37, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Standing_Frame1[OAM_DATA_SIZE(14)] = {
@@ -1678,7 +1678,7 @@ static const u16 sSpacePirateOam_Standing_Frame1[OAM_DATA_SIZE(14)] = {
     OAM_ENTRY(-6, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-25, -29, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-9, -29, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-7, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-7, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_Standing_Frame2[OAM_DATA_SIZE(15)] = {
@@ -1697,7 +1697,7 @@ static const u16 sSpacePirateOam_Standing_Frame2[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-6, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-25, -30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
     OAM_ENTRY(-9, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(-7, -39, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
+    OAM_ENTRY(-7, -39, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserDiagonallyDown_Frame2[OAM_DATA_SIZE(15)] = {
@@ -1716,7 +1716,7 @@ static const u16 sSpacePirateOam_ChargingLaserDiagonallyDown_Frame2[OAM_DATA_SIZ
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-10, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-28, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
-    OAM_ENTRY(-12, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
+    OAM_ENTRY(-12, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserDiagonallyDown_Frame3[OAM_DATA_SIZE(15)] = {
@@ -1735,7 +1735,7 @@ static const u16 sSpacePirateOam_ChargingLaserDiagonallyDown_Frame3[OAM_DATA_SIZ
     OAM_ENTRY(-11, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-11, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-29, -22, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
-    OAM_ENTRY(-13, -22, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
+    OAM_ENTRY(-13, -22, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserDiagonallyDown_Frame4[OAM_DATA_SIZE(15)] = {
@@ -1754,7 +1754,7 @@ static const u16 sSpacePirateOam_ChargingLaserDiagonallyDown_Frame4[OAM_DATA_SIZ
     OAM_ENTRY(-13, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-13, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x206, 8, 0),
     OAM_ENTRY(-31, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
-    OAM_ENTRY(-15, -21, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
+    OAM_ENTRY(-15, -21, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserDiagonallyDown_Frame5[OAM_DATA_SIZE(15)] = {
@@ -1773,7 +1773,7 @@ static const u16 sSpacePirateOam_ChargingLaserDiagonallyDown_Frame5[OAM_DATA_SIZ
     OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-23, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
     OAM_ENTRY(-35, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x243, 8, 0),
-    OAM_ENTRY(-19, -26, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0),
+    OAM_ENTRY(-19, -26, OAM_DIMS_8x16, OAM_NO_FLIP, 0x245, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ChargingLaserDiagonallyDown_Frame6[OAM_DATA_SIZE(15)] = {
@@ -1792,7 +1792,7 @@ static const u16 sSpacePirateOam_ChargingLaserDiagonallyDown_Frame6[OAM_DATA_SIZ
     OAM_ENTRY(-13, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-39, -31, OAM_DIMS_16x8, OAM_NO_FLIP, 0x24e, 8, 0),
-    OAM_ENTRY(-23, -31, OAM_DIMS_8x16, OAM_NO_FLIP, 0x287, 8, 0),
+    OAM_ENTRY(-23, -31, OAM_DIMS_8x16, OAM_NO_FLIP, 0x287, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ShootingDiagonallyDown_Frame1[OAM_DATA_SIZE(15)] = {
@@ -1811,7 +1811,7 @@ static const u16 sSpacePirateOam_ShootingDiagonallyDown_Frame1[OAM_DATA_SIZE(15)
     OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-21, -36, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
     OAM_ENTRY(-38, -31, OAM_DIMS_16x8, OAM_NO_FLIP, 0x24e, 8, 0),
-    OAM_ENTRY(-22, -31, OAM_DIMS_8x16, OAM_NO_FLIP, 0x287, 8, 0),
+    OAM_ENTRY(-22, -31, OAM_DIMS_8x16, OAM_NO_FLIP, 0x287, 8, 0)
 };
 
 static const u16 sSpacePirateOam_ShootingDiagonallyDown_Frame2[OAM_DATA_SIZE(15)] = {
@@ -1830,7 +1830,7 @@ static const u16 sSpacePirateOam_ShootingDiagonallyDown_Frame2[OAM_DATA_SIZE(15)
     OAM_ENTRY(-14, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-20, -37, OAM_DIMS_16x16, OAM_NO_FLIP, 0x204, 8, 0),
     OAM_ENTRY(-37, -32, OAM_DIMS_16x8, OAM_NO_FLIP, 0x24e, 8, 0),
-    OAM_ENTRY(-21, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x287, 8, 0),
+    OAM_ENTRY(-21, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x287, 8, 0)
 };
 
 static const u16 sSpacePirateOam_OnWallIdle_Frame1[OAM_DATA_SIZE(13)] = {
@@ -1847,7 +1847,7 @@ static const u16 sSpacePirateOam_OnWallIdle_Frame1[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-5, -19, OAM_DIMS_8x16, OAM_NO_FLIP, 0x215, 8, 0),
     OAM_ENTRY(-1, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-16, -64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
-    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
+    OAM_ENTRY(-16, -48, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0)
 };
 
 static const u16 sSpacePirateOam_OnWallIdle_Frame2[OAM_DATA_SIZE(13)] = {
@@ -1864,29 +1864,29 @@ static const u16 sSpacePirateOam_OnWallIdle_Frame2[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-5, -19, OAM_DIMS_8x16, OAM_NO_FLIP, 0x215, 8, 0),
     OAM_ENTRY(-1, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-16, -63, OAM_DIMS_16x16, OAM_NO_FLIP, 0x22a, 8, 0),
-    OAM_ENTRY(-16, -47, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0),
+    OAM_ENTRY(-16, -47, OAM_DIMS_16x8, OAM_NO_FLIP, 0x26a, 8, 0)
 };
 
 static const u16 sSpacePirateLaserOam_Exploding_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x298, 8, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x298, 8, 0)
 };
 
 static const u16 sSpacePirateLaserOam_Exploding_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x2b8, 8, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x2b8, 8, 0)
 };
 
 static const u16 sSpacePirateLaserOam_Exploding_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x299, 8, 0),
-    OAM_ENTRY(0, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x299, 8, 0),
+    OAM_ENTRY(0, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x299, 8, 0)
 };
 
 static const u16 sSpacePirateLaserOam_Exploding_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x29b, 8, 0),
-    OAM_ENTRY(0, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x29b, 8, 0),
+    OAM_ENTRY(0, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x29b, 8, 0)
 };
 
 static const u16 sSpacePirateLaserOam_Exploding_Frame4[OAM_DATA_SIZE(4)] = {
@@ -1894,7 +1894,7 @@ static const u16 sSpacePirateLaserOam_Exploding_Frame4[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-12, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x29e, 8, 0),
     OAM_ENTRY(4, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x29e, 8, 0),
     OAM_ENTRY(-12, 4, OAM_DIMS_16x8, OAM_Y_FLIP, 0x29e, 8, 0),
-    OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x29e, 8, 0),
+    OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x29e, 8, 0)
 };
 
 static const u16 sSpacePirateLaserOam_Exploding_Frame5[OAM_DATA_SIZE(8)] = {
@@ -1906,13 +1906,13 @@ static const u16 sSpacePirateLaserOam_Exploding_Frame5[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-8, -15, OAM_DIMS_16x8, OAM_NO_FLIP, 0x29c, 8, 0),
     OAM_ENTRY(-15, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x288, 8, 0),
     OAM_ENTRY(-8, 7, OAM_DIMS_16x8, OAM_Y_FLIP, 0x29c, 8, 0),
-    OAM_ENTRY(7, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x288, 8, 0),
+    OAM_ENTRY(7, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x288, 8, 0)
 };
 
 static const u16 sSpacePirateLaserOam_Exploding_Frame6[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x29a, 8, 0),
-    OAM_ENTRY(0, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x29a, 8, 0),
+    OAM_ENTRY(0, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x29a, 8, 0)
 };
 
 static const u16 sSpacePirateCarryingPowerBombOam_Frame0[OAM_DATA_SIZE(15)] = {
@@ -1931,7 +1931,7 @@ static const u16 sSpacePirateCarryingPowerBombOam_Frame0[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-14, -18, OAM_DIMS_8x16, OAM_NO_FLIP, 0x215, 8, 0),
     OAM_ENTRY(-22, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x23c, 8, 0),
     OAM_ENTRY(-29, -38, OAM_DIMS_16x16, OAM_NO_FLIP, 0x251, 8, 0),
-    OAM_ENTRY(-13, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-13, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 static const u16 sSpacePirateCarryingPowerBombOam_Frame1[OAM_DATA_SIZE(15)] = {
@@ -1950,7 +1950,7 @@ static const u16 sSpacePirateCarryingPowerBombOam_Frame1[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-7, -18, OAM_DIMS_8x16, OAM_NO_FLIP, 0x216, 8, 0),
     OAM_ENTRY(-6, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-29, -38, OAM_DIMS_16x16, OAM_NO_FLIP, 0x251, 8, 0),
-    OAM_ENTRY(-13, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-13, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 static const u16 sSpacePirateCarryingPowerBombOam_Frame2[OAM_DATA_SIZE(15)] = {
@@ -1969,7 +1969,7 @@ static const u16 sSpacePirateCarryingPowerBombOam_Frame2[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(0, -18, OAM_DIMS_8x16, OAM_NO_FLIP, 0x217, 8, 0),
     OAM_ENTRY(-2, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20f, 8, 0),
     OAM_ENTRY(-29, -39, OAM_DIMS_16x16, OAM_NO_FLIP, 0x251, 8, 0),
-    OAM_ENTRY(-13, -39, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-13, -39, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 static const u16 sSpacePirateCarryingPowerBombOam_Frame3[OAM_DATA_SIZE(15)] = {
@@ -1988,7 +1988,7 @@ static const u16 sSpacePirateCarryingPowerBombOam_Frame3[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(4, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-1, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x210, 8, 0),
     OAM_ENTRY(-29, -39, OAM_DIMS_16x16, OAM_NO_FLIP, 0x251, 8, 0),
-    OAM_ENTRY(-13, -39, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-13, -39, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 static const u16 sSpacePirateCarryingPowerBombOam_Frame4[OAM_DATA_SIZE(15)] = {
@@ -2007,7 +2007,7 @@ static const u16 sSpacePirateCarryingPowerBombOam_Frame4[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-2, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20f, 8, 0),
     OAM_ENTRY(8, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-29, -37, OAM_DIMS_16x16, OAM_NO_FLIP, 0x251, 8, 0),
-    OAM_ENTRY(-13, -37, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-13, -37, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 static const u16 sSpacePirateCarryingPowerBombOam_Frame5[OAM_DATA_SIZE(15)] = {
@@ -2026,7 +2026,7 @@ static const u16 sSpacePirateCarryingPowerBombOam_Frame5[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-3, -22, OAM_DIMS_16x16, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-3, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-29, -38, OAM_DIMS_16x16, OAM_NO_FLIP, 0x251, 8, 0),
-    OAM_ENTRY(-13, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-13, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 static const u16 sSpacePirateCarryingPowerBombOam_Frame6[OAM_DATA_SIZE(15)] = {
@@ -2045,7 +2045,7 @@ static const u16 sSpacePirateCarryingPowerBombOam_Frame6[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-5, -22, OAM_DIMS_8x16, OAM_NO_FLIP, 0x217, 8, 0),
     OAM_ENTRY(-5, -33, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-29, -39, OAM_DIMS_16x16, OAM_NO_FLIP, 0x251, 8, 0),
-    OAM_ENTRY(-13, -39, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-13, -39, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 static const u16 sSpacePirateCarryingPowerBombOam_Frame7[OAM_DATA_SIZE(15)] = {
@@ -2064,7 +2064,7 @@ static const u16 sSpacePirateCarryingPowerBombOam_Frame7[OAM_DATA_SIZE(15)] = {
     OAM_ENTRY(-10, -21, OAM_DIMS_8x16, OAM_NO_FLIP, 0x217, 8, 0),
     OAM_ENTRY(-14, -33, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-29, -38, OAM_DIMS_16x16, OAM_NO_FLIP, 0x251, 8, 0),
-    OAM_ENTRY(-13, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0),
+    OAM_ENTRY(-13, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x253, 8, 0)
 };
 
 const struct FrameData sSpacePirateOam_Crouched[5] = {

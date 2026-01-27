@@ -2,11 +2,12 @@
 #define CHOZO_STATUE_H
 
 #include "types.h"
+#include "macros.h"
 #include "oam.h"
 
 #include "structs/sprite.h"
 
-enum ChozoStatueOam {
+MAKE_ENUM(u8, ChozoStatueOam) {
     CHOZO_STATUE_OAM_LEG_STANDING,
     CHOZO_STATUE_OAM_LEG_SITTING,
     CHOZO_STATUE_OAM_LEG_SEATED,
@@ -24,7 +25,7 @@ enum ChozoStatueOam {
     CHOZO_STATUE_OAM_REFILL,
     CHOZO_STATUE_OAM_REFILL_GLOW_IDLE,
 
-    CHOZO_STATUE_OAM_END
+    CHOZO_STATUE_OAM_COUNT
 };
 
 extern const struct MultiSpriteData sChozoStatueMultiSpriteData_Standing[2];

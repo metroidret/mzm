@@ -3,10 +3,12 @@
 
 #include "types.h"
 
+#include "constants/haze.h"
+
 void HazeSetBackgroundEffect(void);
 void HazeTransferAndDeactivate(void);
 void unk_5d09c(void);
-void HazeSetupCode(u8 hazeValue);
+void HazeSetupCode(HazeValue hazeValue);
 void HazeResetLoops(void);
 void HazeCalculateGradient(void);
 u32 HazeProcess(void);

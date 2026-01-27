@@ -1,12 +1,15 @@
 #ifndef HAZE_CONSTANTS_H
 #define HAZE_CONSTANTS_H
 
+#include "types.h"
+#include "macros.h"
+
 // Flags unused?
 #define HAZE_FLAG_ENABLED_FLAG 0x1
 #define HAZE_FLAG_NO_ACTIVE_FLAG 0x7F
 #define HAZE_FLAG_ACTIVE_FLAG 0x80
 
-enum HazeValue {
+MAKE_ENUM(u8, HazeValue) {
     HAZE_VALUE_NONE,
     HAZE_VALUE_GRADIENT,
     HAZE_VALUE_BG3,
@@ -17,7 +20,7 @@ enum HazeValue {
     HAZE_VALUE_POWER_BOMB_EXPANDING,
     HAZE_VALUE_POWER_BOMB_RETRACTING,
     HAZE_VALUE_AFTER_POWER_BOMB,
-    HAZE_VALUE_COLD,
+    HAZE_VALUE_COLD
 };
 
-#endif
+#endif /* HAZE_CONSTANTS_H */

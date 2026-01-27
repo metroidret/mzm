@@ -25,7 +25,7 @@
 #define RISING_CHOZO_PILLAR_PLATFORM_POSE_SPAWNING 0x8
 #define RISING_CHOZO_PILLAR_PLATFORM_POSE_IDLE 0x9
 
-enum ChozoPillarPlatformPart {
+MAKE_ENUM(u8, ChozoPillarPlatformPartId) {
     CHOZO_PILLAR_PLATFORM_NO_SHADOW,
     CHOZO_PILLAR_PLATFORM_SHADOW
 };
@@ -115,7 +115,7 @@ static void RisingChozoPillarRandomParticles(u16 yPosition, u16 xPosition, u8 rn
  * @param xPosition X Position
  * @param caa Clipdata affecting action
  */
-static void RisingChozoPillarSpawnThreePlatforms(u16 yPosition, u16 xPosition, u8 caa)
+static void RisingChozoPillarSpawnThreePlatforms(u16 yPosition, u16 xPosition, ClipdataAffectingAction caa)
 {
     gCurrentClipdataAffectingAction = caa;
     ClipdataProcess(yPosition - BLOCK_SIZE * 3, xPosition + BLOCK_SIZE * 3);
@@ -153,7 +153,7 @@ static void RisingChozoPillarSpawnThreePlatforms(u16 yPosition, u16 xPosition, u
  * @param xPosition X Position
  * @param caa Clipdata affecting action
  */
-static void RisingChozoPillarSpawnTwoPlatforms(u16 yPosition, u16 xPosition, u8 caa)
+static void RisingChozoPillarSpawnTwoPlatforms(u16 yPosition, u16 xPosition, ClipdataAffectingAction caa)
 {
     gCurrentClipdataAffectingAction = caa;
     ClipdataProcess(yPosition - BLOCK_SIZE * 7, xPosition);
@@ -180,7 +180,7 @@ static void RisingChozoPillarSpawnTwoPlatforms(u16 yPosition, u16 xPosition, u8 
  * @param xPosition X Position
  * @param caa Clipdata affecting action
  */
-static void RisingChozoPillarSpawnOnePlatform(u16 yPosition, u16 xPosition, u8 caa)
+static void RisingChozoPillarSpawnOnePlatform(u16 yPosition, u16 xPosition, ClipdataAffectingAction caa)
 {
     gCurrentClipdataAffectingAction = caa;
     ClipdataProcess(yPosition - BLOCK_SIZE * 15, xPosition + BLOCK_SIZE * 6);
@@ -198,7 +198,7 @@ static void RisingChozoPillarSpawnOnePlatform(u16 yPosition, u16 xPosition, u8 c
  */
 void RisingChozoPillar(void)
 {
-    u8 caa;
+    ClipdataAffectingAction caa;
     u16 yPosition;
     u16 xPosition;
     u16 debrisY;

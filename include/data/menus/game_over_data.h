@@ -23,10 +23,10 @@ extern const u32 sGameOverTextTileTable[116];
 extern const u32 sGameOver_454520[160];
 
 extern const struct GameOverDynamicPalette sGameOverDynamicPalette_Empty;
-extern const u16 sGameOverSamusHeadXPositions[LANGUAGE_END];
+extern const u16 sGameOverSamusHeadXPositions[LANGUAGE_COUNT];
 extern const u16 sGameOverSamusHeadYPositions[2];
 
-extern const GameOverOamId sGameOverSamusHeadOamIds[SUIT_END][SAMUS_CURSOR_ACTION_END];
-extern const struct OamArray sGameOverOam[GAME_OVER_OAM_ID_END];
+extern const GameOverOamId sGameOverSamusHeadOamIds[SUIT_COUNT][SAMUS_CURSOR_ACTION_COUNT];
+extern const struct OamArray sGameOverOam[GAME_OVER_OAM_ID_COUNT];
 
 #endif /* GAME_OVER_DATA_H */

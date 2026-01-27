@@ -13,12 +13,16 @@
 #include "structs/display.h"
 #include "structs/sprite.h"
 
+#define UNKNOWN_ITEM_BLOCK_POSE_CHECK_ACTIVATE 0x9
+#define UNKNOWN_ITEM_BLOCK_POSE_WAIT_FOR_PROJECITLE 0xB
+#define UNKNOWN_ITEM_BLOCK_POSE_EXPLODING 0x67
+
 /**
  * @brief 4a930 | 70 | Updates the clipdata of the 4 blocks of the unknown item block
  * 
  * @param caa Clipdata affecting action
  */
-static void UnknownItemBlockChangeClipdata(u8 caa)
+static void UnknownItemBlockChangeClipdata(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;

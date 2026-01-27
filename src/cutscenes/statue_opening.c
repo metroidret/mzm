@@ -159,14 +159,14 @@ static u8 StatueOpeningInit(void)
     CUTSCENE_DATA.bldcnt = BLDCNT_SCREEN_FIRST_TARGET | BLDCNT_BRIGHTNESS_DECREASE_EFFECT;
     gWrittenToBldy_NonGameplay = BLDY_MAX_VALUE;
 
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS, sStatueOpeningPageData[0].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE);
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS, sStatueOpeningPageData[1].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X, sStatueOpeningPageData[0].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X, sStatueOpeningPageData[1].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE);
 
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_VOFS, sStatueOpeningPageData[0].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 6);
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_VOFS, sStatueOpeningPageData[1].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 6);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_Y, sStatueOpeningPageData[0].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 6);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_Y, sStatueOpeningPageData[1].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 6);
 
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS, sStatueOpeningPageData[2].bg, NON_GAMEPLAY_START_BG_POS / 2 + HALF_BLOCK_SIZE);
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_VOFS, sStatueOpeningPageData[2].bg, NON_GAMEPLAY_START_BG_POS / 2);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X, sStatueOpeningPageData[2].bg, NON_GAMEPLAY_START_BG_POS / 2 + HALF_BLOCK_SIZE);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_Y, sStatueOpeningPageData[2].bg, NON_GAMEPLAY_START_BG_POS / 2);
 
     CUTSCENE_DATA.oam[0].xPosition = BLOCK_SIZE * 8;
     CUTSCENE_DATA.oam[0].yPosition = BLOCK_SIZE * 7;

@@ -40,7 +40,7 @@ const s16 sSpritesFallingSpeed[16] = {
 
 const s16 sSpritesFallingSpeed_Unused[8] = {
     4, 6, 8, 10, 12,
-    14, 16, SHORT_MAX,
+    14, 16, SHORT_MAX
 };
 
 const s16 sSpritesFallingSpeed_Unused2[16] = {
@@ -2342,7 +2342,7 @@ const u16 sPrimarySpriteStats[PSPRITE_COUNT][SPRITE_STATS_COUNT] = {
         [SPRITE_STATS_MISSILE_PROB] = SPRITE_DROP_PROB(0.586f),
         [SPRITE_STATS_SUPER_MISSILE_PROB] = SPRITE_DROP_PROB(0.0098f),
         [SPRITE_STATS_POWER_BOMB_PROB] = SPRITE_DROP_PROB(0.0f)
-    },
+    }
 };
 
 /**
@@ -3204,5 +3204,5 @@ const u16 sSecondarySpriteStats[SSPRITE_COUNT][SPRITE_STATS_COUNT] = {
         [SPRITE_STATS_MISSILE_PROB] = SPRITE_DROP_PROB(0.0f),
         [SPRITE_STATS_SUPER_MISSILE_PROB] = SPRITE_DROP_PROB(0.0f),
         [SPRITE_STATS_POWER_BOMB_PROB] = SPRITE_DROP_PROB(0.0f)
-    },
+    }
 };

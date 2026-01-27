@@ -88,7 +88,7 @@ const u8 sPauseDebug_Event02_Text[32] = SHIFT_JIS("HARD        ハードモー�
 const u8 sPauseDebug_Event01_Text[32] = SHIFT_JIS("EASY        イージーモードオン     ");
 const u8 sPauseDebug_Event00_Text[29] = SHIFT_JIS("0           ダミーダコリャ       ");
 
-const u8 sPauseDebug_Language_Text[LANGUAGE_END + 1][3] = {
+const u8 sPauseDebug_Language_Text[LANGUAGE_COUNT + 1][3] = {
     [LANGUAGE_JAPANESE] = "JPN",
     [LANGUAGE_HIRAGANA] = "HIR",
     [LANGUAGE_ENGLISH] = "ENG",
@@ -96,10 +96,10 @@ const u8 sPauseDebug_Language_Text[LANGUAGE_END + 1][3] = {
     [LANGUAGE_FRENCH] = "FRA",
     [LANGUAGE_ITALIAN] = "ITA",
     [LANGUAGE_SPANISH] = "ESP",
-    [LANGUAGE_END] = "@NG"
+    [LANGUAGE_COUNT] = "@NG"
 };
 
-const u8 sPauseDebug_Region_Text[GAME_REGION_END][2] = {
+const u8 sPauseDebug_Region_Text[GAME_REGION_COUNT][2] = {
     [GAME_REGION_JPN] = "JP",
     [GAME_REGION_EUR] = "EU",
     [GAME_REGION_USA] = "US"
@@ -119,11 +119,11 @@ const u8 sPauseDebug_Area_Text[AREA_COUNT][3] = {
     [AREA_TEST_3] = "TN3"
 };
 
-const u8 sPauseDebug_Difficulty_Text[DIFF_END + 1][6] = {
+const u8 sPauseDebug_Difficulty_Text[DIFF_COUNT + 1][6] = {
     [DIFF_EASY] = "EASY@@",
     [DIFF_NORMAL] = "NORMAL",
     [DIFF_HARD] = "HARD@@",
-    [DIFF_END] = "@NG@@@"
+    [DIFF_COUNT] = "@NG@@@"
 };
 
 const u8 sPauseDebug_ShutOpen_Text[2][4] = {
@@ -155,7 +155,7 @@ const u8 sPauseDebugSaveHightlightPosition[2] = {
     13, 21
 };
 
-const struct StatusScreenGroupPositions sPauseDebugGroupsPositions[PAUSE_DEBUG_GROUP_END] = {
+const struct StatusScreenGroupPositions sPauseDebugGroupsPositions[PAUSE_DEBUG_GROUP_COUNT] = {
     [PAUSE_DEBUG_GROUP_BEAM] = {
         .top = 3,
         .bottom = 7,
@@ -312,7 +312,7 @@ const struct StatusScreenGroupPositions sPauseDebugGroupsPositions[PAUSE_DEBUG_G
     }
 };
 
-const EventAction sEasyHardEventActions[DIFF_END][2] = {
+const EventAction sEasyHardEventActions[DIFF_COUNT][2] = {
     [DIFF_EASY] = { EVENT_ACTION_SETTING, EVENT_ACTION_CLEARING },
     [DIFF_NORMAL] = { EVENT_ACTION_CLEARING, EVENT_ACTION_CLEARING },
     [DIFF_HARD] = { EVENT_ACTION_CLEARING, EVENT_ACTION_SETTING }
@@ -374,7 +374,7 @@ const struct PauseDebugEnergyAmmoInfo sPauseDebugEnergyAmmoInfo[8] = {
 const u16 sStatusScreenUnknownItemsWhiteFlashingPal[6 * 16] = INCBIN_U16("data/menus/pause_screen/map_screen_unknown_items_flashing.pal");
 const u16 sStatusScreenUnknownItemsNamesFlashingPal[4 * 16] = INCBIN_U16("data/menus/pause_screen/map_screen_unknown_items_names_flashing.pal");
 
-const struct StatusScreenGroupPositions sStatusScreenGroupsPositions[ABILITY_GROUP_END] = {
+const struct StatusScreenGroupPositions sStatusScreenGroupsPositions[ABILITY_GROUP_COUNT] = {
     [ABILITY_GROUP_BEAMS] = {
         .top = 4,
         .bottom = 10,
@@ -541,7 +541,7 @@ const struct StatusScreenGroupPositions sStatusScreenUnknownItemsPositions[10] =
     }
 };
 
-const struct StatusScreenItemData sStatusScreenItemsData[STATUS_SLOT_END] = {
+const struct StatusScreenItemData sStatusScreenItemsData[STATUS_SLOT_COUNT] = {
     [STATUS_SLOT_0] = {
         .group = ABILITY_GROUP_CURRENT_ENERGY,
         .abilityOffset = 0,
@@ -652,7 +652,7 @@ const struct StatusScreenItemData sStatusScreenItemsData[STATUS_SLOT_END] = {
     }
 };
 
-const struct StatusScreenItemAcquisitionData sStatusScreenItemsAcquisitionData[ITEM_ACQUISITION_END] = {
+const struct StatusScreenItemAcquisitionData sStatusScreenItemsAcquisitionData[ITEM_ACQUISITION_COUNT] = {
     [0] = {
         .unk_0 = 0,
         .group = ABILITY_GROUP_BEAMS,
@@ -784,7 +784,7 @@ const struct StatusScreenItemAcquisitionData sStatusScreenItemsAcquisitionData[I
         .group = ABILITY_GROUP_MISC,
         .abilityOffset = STATUS_SCREEN_MISC_OFFSET_POWER_GRIP,
         .statusSlot = STATUS_SLOT_MISC
-    },
+    }
 };
 
 const u8 sStatusScreenUnknownItemsPartialFlash[8] = {

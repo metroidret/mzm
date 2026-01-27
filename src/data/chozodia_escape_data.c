@@ -20,20 +20,20 @@ const u16 sChozodiaEscapeOam_ShipExterior_Frame0[OAM_DATA_SIZE(10)] = {
     OAM_ENTRY(64, -80, OAM_DIMS_64x64, OAM_NO_FLIP, 0x118, 0, 1),
     OAM_ENTRY(64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x218, 0, 1),
     OAM_ENTRY(-64, -112, OAM_DIMS_64x32, OAM_NO_FLIP, 0x88, 0, 1),
-    OAM_ENTRY(0, -112, OAM_DIMS_64x32, OAM_NO_FLIP, 0x90, 0, 1),
+    OAM_ENTRY(0, -112, OAM_DIMS_64x32, OAM_NO_FLIP, 0x90, 0, 1)
 };
 
 const u16 sChozodiaEscapeOam_BlueShipAngledDown_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-16, -24, OAM_DIMS_32x32, OAM_NO_FLIP, 0x30c, 3, 0),
-    OAM_ENTRY(-16, 8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x38c, 3, 0),
+    OAM_ENTRY(-16, 8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x38c, 3, 0)
 };
 
 const u16 sChozodiaEscapeOam_BlueShipAngledUp_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-32, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x318, 2, 0),
     OAM_ENTRY(-32, 32, OAM_DIMS_32x16, OAM_NO_FLIP, 0x310, 2, 0),
-    OAM_ENTRY(0, 32, OAM_DIMS_32x16, OAM_NO_FLIP, 0x314, 2, 0),
+    OAM_ENTRY(0, 32, OAM_DIMS_32x16, OAM_NO_FLIP, 0x314, 2, 0)
 };
 
 const u16 sChozodiaEscapeOam_MotherShipDoorClosed_Frame0[OAM_DATA_SIZE(6)] = {
@@ -43,7 +43,7 @@ const u16 sChozodiaEscapeOam_MotherShipDoorClosed_Frame0[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
-    OAM_ENTRY(0, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x210, 0, 1),
+    OAM_ENTRY(0, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x210, 0, 1)
 };
 
 static const u16 sChozodiaEscapeOam_MotherShipDoorOpening_Frame1[OAM_DATA_SIZE(6)] = {
@@ -53,7 +53,7 @@ static const u16 sChozodiaEscapeOam_MotherShipDoorOpening_Frame1[OAM_DATA_SIZE(6
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
     OAM_ENTRY(0, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x210, 0, 1),
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
-    OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
+    OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1)
 };
 
 static const u16 sChozodiaEscapeOam_MotherShipDoorOpening_Frame2[OAM_DATA_SIZE(20)] = {
@@ -77,7 +77,7 @@ static const u16 sChozodiaEscapeOam_MotherShipDoorOpening_Frame2[OAM_DATA_SIZE(2
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
     OAM_ENTRY(0, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x210, 0, 1),
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
-    OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
+    OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1)
 };
 
 static const u16 sChozodiaEscapeOam_MotherShipDoorOpening_Frame3[OAM_DATA_SIZE(20)] = {
@@ -101,7 +101,7 @@ static const u16 sChozodiaEscapeOam_MotherShipDoorOpening_Frame3[OAM_DATA_SIZE(2
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
     OAM_ENTRY(0, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x210, 0, 1),
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
-    OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
+    OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1)
 };
 
 static const u16 sChozodiaEscapeOam_MotherShipDoorOpening_Frame4[OAM_DATA_SIZE(22)] = {
@@ -127,7 +127,7 @@ static const u16 sChozodiaEscapeOam_MotherShipDoorOpening_Frame4[OAM_DATA_SIZE(2
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
     OAM_ENTRY(0, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x210, 0, 1),
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
-    OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
+    OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1)
 };
 
 static const u16 sChozodiaEscapeOam_MotherShipDoorOpening_Frame5[OAM_DATA_SIZE(16)] = {
@@ -147,7 +147,7 @@ static const u16 sChozodiaEscapeOam_MotherShipDoorOpening_Frame5[OAM_DATA_SIZE(1
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
     OAM_ENTRY(0, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x210, 0, 1),
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
-    OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
+    OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1)
 };
 
 static const u16 sChozodiaEscapeOam_MotherShipDoorOpening_Frame6[OAM_DATA_SIZE(20)] = {
@@ -171,7 +171,7 @@ static const u16 sChozodiaEscapeOam_MotherShipDoorOpening_Frame6[OAM_DATA_SIZE(2
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
     OAM_ENTRY(0, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x210, 0, 1),
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
-    OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
+    OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1)
 };
 
 static const u16 sChozodiaEscapeOam_MotherShipDoorOpening_Frame7[OAM_DATA_SIZE(20)] = {
@@ -195,7 +195,7 @@ static const u16 sChozodiaEscapeOam_MotherShipDoorOpening_Frame7[OAM_DATA_SIZE(2
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
     OAM_ENTRY(0, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x210, 0, 1),
     OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
-    OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1),
+    OAM_ENTRY(-64, -16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x208, 0, 1)
 };
 
 const struct FrameData sChozodiaEscapeOam_MotherShipDoorOpening[9] = {
@@ -225,7 +225,7 @@ static const u16 sChozodiaEscapeOam_Unused_5c9f3c[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-8, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x362, 5, 0),
     OAM_ENTRY(-24, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x3a0, 5, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x3a2, 5, 0),
-    OAM_ENTRY(0, -32, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c2, 5, 0),
+    OAM_ENTRY(0, -32, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c2, 5, 0)
 };
 
 static const u16 sChozodiaEscapeOam_Unused_5c9f5c[OAM_DATA_SIZE(6)] = {
@@ -235,7 +235,7 @@ static const u16 sChozodiaEscapeOam_Unused_5c9f5c[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-24, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x3a3, 5, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x3a5, 5, 0),
     OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c0, 5, 0),
-    OAM_ENTRY(0, -32, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c4, 5, 0),
+    OAM_ENTRY(0, -32, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c4, 5, 0)
 };
 
 static const u16 sChozodiaEscapeOam_Unused_5c9f82[OAM_DATA_SIZE(6)] = {
@@ -245,7 +245,7 @@ static const u16 sChozodiaEscapeOam_Unused_5c9f82[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-24, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x3a6, 5, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x3a8, 5, 0),
     OAM_ENTRY(0, -32, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c6, 5, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c2, 5, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c2, 5, 0)
 };
 
 static const u16 sChozodiaEscapeOam_Unused_5c9fa8[OAM_DATA_SIZE(5)] = {
@@ -254,7 +254,7 @@ static const u16 sChozodiaEscapeOam_Unused_5c9fa8[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-8, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x36b, 5, 0),
     OAM_ENTRY(-24, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x3a9, 5, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x3ab, 5, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c4, 5, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c4, 5, 0)
 };
 
 static const u16 sChozodiaEscapeOam_Unused_5c9fc8[OAM_DATA_SIZE(5)] = {
@@ -263,12 +263,12 @@ static const u16 sChozodiaEscapeOam_Unused_5c9fc8[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-8, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x36b, 5, 0),
     OAM_ENTRY(-24, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x3a9, 5, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x3ab, 5, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c6, 5, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c6, 5, 0)
 };
 
 const u16 sChozodiaEscapeOam_BlueShipFarAway_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x200, 15, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x200, 15, 0)
 };
 
 const u16 sChozodiaEscapeOam_BlueShipVeryClose_Frame0[OAM_DATA_SIZE(4)] = {
@@ -276,7 +276,7 @@ const u16 sChozodiaEscapeOam_BlueShipVeryClose_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-64, -56, OAM_DIMS_64x64, OAM_NO_FLIP, 0x0, 15, 0),
     OAM_ENTRY(0, -56, OAM_DIMS_64x64, OAM_NO_FLIP, 0x8, 15, 0),
     OAM_ENTRY(-64, 8, OAM_DIMS_64x64, OAM_NO_FLIP, 0x100, 15, 0),
-    OAM_ENTRY(0, 8, OAM_DIMS_64x64, OAM_NO_FLIP, 0x108, 15, 0),
+    OAM_ENTRY(0, 8, OAM_DIMS_64x64, OAM_NO_FLIP, 0x108, 15, 0)
 };
 
 const u16 sChozodiaEscapeOam_MissionAccomplishedEnglish_Frame0[OAM_DATA_SIZE(20)] = {
@@ -300,7 +300,7 @@ const u16 sChozodiaEscapeOam_MissionAccomplishedEnglish_Frame0[OAM_DATA_SIZE(20)
     OAM_ENTRY(34, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x8, 0, 0),
     OAM_ENTRY(46, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x6, 0, 0),
     OAM_ENTRY(58, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x4, 0, 0),
-    OAM_ENTRY(69, 0, OAM_DIMS_8x16, OAM_NO_FLIP, 0xb, 0, 0),
+    OAM_ENTRY(69, 0, OAM_DIMS_8x16, OAM_NO_FLIP, 0xb, 0, 0)
 };
 
 const u16 sChozodiaEscapeOam_MissionAccomplishedHiragana_Frame0[OAM_DATA_SIZE(9)] = {
@@ -313,7 +313,7 @@ const u16 sChozodiaEscapeOam_MissionAccomplishedHiragana_Frame0[OAM_DATA_SIZE(9)
     OAM_ENTRY(14, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xaa, 0, 0),
     OAM_ENTRY(27, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xac, 0, 0),
     OAM_ENTRY(41, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xae, 0, 0),
-    OAM_ENTRY(55, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0xb0, 0, 0),
+    OAM_ENTRY(55, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0xb0, 0, 0)
 };
 
 #ifdef REGION_EU
@@ -340,7 +340,7 @@ const u16 sChozodiaEscapeOam_MissionAccomplishedGerman_Frame0[OAM_DATA_SIZE(21)]
     OAM_ENTRY(59, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0x146, 0, 0),
     OAM_ENTRY(68, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0x108, 0, 0),
     OAM_ENTRY(77, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0x118, 0, 0),
-    OAM_ENTRY(88, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0xb0, 0, 0),
+    OAM_ENTRY(88, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0xb0, 0, 0)
 };
 
 const u16 sChozodiaEscapeOam_MissionAccomplishedFrench_Frame0[OAM_DATA_SIZE(15)] = {
@@ -359,7 +359,7 @@ const u16 sChozodiaEscapeOam_MissionAccomplishedFrench_Frame0[OAM_DATA_SIZE(15)]
     OAM_ENTRY(35, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0x146, 0, 0),
     OAM_ENTRY(44, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0x110, 0, 0),
     OAM_ENTRY(49, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0x108, 0, 0),
-    OAM_ENTRY(59, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0xb0, 0, 0),
+    OAM_ENTRY(59, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0xb0, 0, 0)
 };
 
 const u16 sChozodiaEscapeOam_MissionAccomplishedItalian_Frame0[OAM_DATA_SIZE(17)] = {
@@ -380,7 +380,7 @@ const u16 sChozodiaEscapeOam_MissionAccomplishedItalian_Frame0[OAM_DATA_SIZE(17)
     OAM_ENTRY(42, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0x14a, 0, 0),
     OAM_ENTRY(51, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0x148, 0, 0),
     OAM_ENTRY(60, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x100, 0, 0),
-    OAM_ENTRY(71, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0xb0, 0, 0),
+    OAM_ENTRY(71, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0xb0, 0, 0)
 };
 
 const u16 sChozodiaEscapeOam_MissionAccomplishedSpanish_Frame0[OAM_DATA_SIZE(16)] = {
@@ -400,14 +400,14 @@ const u16 sChozodiaEscapeOam_MissionAccomplishedSpanish_Frame0[OAM_DATA_SIZE(16)
     OAM_ENTRY(37, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0x110, 0, 0),
     OAM_ENTRY(42, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0x106, 0, 0),
     OAM_ENTRY(51, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x100, 0, 0),
-    OAM_ENTRY(64, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0xb0, 0, 0),
+    OAM_ENTRY(64, -11, OAM_DIMS_8x16, OAM_NO_FLIP, 0xb0, 0, 0)
 };
 
 #endif // REGION_EU
 
 const u8 sChozodiaEscapeHeatingUpPalOffsets[8] = {
     0 * 16, 1 * 16, 2 * 16, 3 * 16,
-    4 * 16, 5 * 16, 6 * 16, 7 * 16,
+    4 * 16, 5 * 16, 6 * 16, 7 * 16
 };
 
 const struct FrameData* const sChozodiaEscape_5ca0c4[5] = {
@@ -415,7 +415,7 @@ const struct FrameData* const sChozodiaEscape_5ca0c4[5] = {
     sChozodiaEscapeOam_SmallExplosion,
     sChozodiaEscapeOam_MediumExplosion,
     sChozodiaEscapeOam_MotherShipDecaying,
-    sChozodiaEscapeOam_ShipSmokeExplosion,
+    sChozodiaEscapeOam_ShipSmokeExplosion
 };
 
 const u16 sChozodiaEscape_5ca0d8[8][2] = {
@@ -426,7 +426,7 @@ const u16 sChozodiaEscape_5ca0d8[8][2] = {
     [4] = { BLOCK_SIZE + HALF_BLOCK_SIZE, BLOCK_SIZE + HALF_BLOCK_SIZE },
     [5] = { BLOCK_SIZE * 2 + QUARTER_BLOCK_SIZE, BLOCK_SIZE + QUARTER_BLOCK_SIZE + 8 },
     [6] = { BLOCK_SIZE + HALF_BLOCK_SIZE + 8, BLOCK_SIZE + HALF_BLOCK_SIZE + 8 },
-    [7] = { BLOCK_SIZE * 2 + 8, BLOCK_SIZE + 8 },
+    [7] = { BLOCK_SIZE * 2 + 8, BLOCK_SIZE + 8 }
 };
 
 const u16 sChozodiaEscape_5ca0f8[8][2] = {
@@ -437,11 +437,11 @@ const u16 sChozodiaEscape_5ca0f8[8][2] = {
     [4] = { BLOCK_SIZE * 2 - 8, BLOCK_SIZE * 2 - QUARTER_BLOCK_SIZE },
     [5] = { BLOCK_SIZE + QUARTER_BLOCK_SIZE, BLOCK_SIZE + QUARTER_BLOCK_SIZE },
     [6] = { BLOCK_SIZE * 2 + 8, BLOCK_SIZE + 8 },
-    [7] = { BLOCK_SIZE + HALF_BLOCK_SIZE + 8, BLOCK_SIZE + HALF_BLOCK_SIZE + 8 },
+    [7] = { BLOCK_SIZE + HALF_BLOCK_SIZE + 8, BLOCK_SIZE + HALF_BLOCK_SIZE + 8 }
 };
 
 #ifdef REGION_EU
-const u16 * const sChozodiaEscapeOamPointers_MissionAccomplished[LANGUAGE_END] = {
+const u16 * const sChozodiaEscapeOamPointers_MissionAccomplished[LANGUAGE_COUNT] = {
     [LANGUAGE_JAPANESE] = sChozodiaEscapeOam_MissionAccomplishedEnglish_Frame0,
     [LANGUAGE_HIRAGANA] = sChozodiaEscapeOam_MissionAccomplishedHiragana_Frame0,
     [LANGUAGE_ENGLISH] = sChozodiaEscapeOam_MissionAccomplishedEnglish_Frame0,

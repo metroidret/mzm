@@ -7,7 +7,7 @@
 MAKE_ENUM(u32, NearLeftRight) {
     NSLR_OUT_OF_RANGE,
     NSLR_LEFT = 4,
-    NSLR_RIGHT = 8,
+    NSLR_RIGHT = 8
 };
 
 MAKE_ENUM(u32, NearAboveBelow) {
@@ -40,13 +40,7 @@ MAKE_ENUM(u8, SplashSize) {
     SPLASH_NONE,
     SPLASH_SMALL,
     SPLASH_BIG,
-    SPLASH_HUGE,
+    SPLASH_HUGE
 };
 
-#define SPRITE_COLLISION_FLAG_NONE      0
-#define SPRITE_COLLISION_FLAG_ON_TOP    (1 << 0)
-#define SPRITE_COLLISION_FLAG_ON_BOTTOM (1 << 1)
-#define SPRITE_COLLISION_FLAG_ON_LEFT   (1 << 2)
-#define SPRITE_COLLISION_FLAG_ON_RIGHT  (1 << 3)
-
-#endif
+#endif /* SPRITE_UTIL_CONSTANTS_H */

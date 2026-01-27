@@ -47,7 +47,7 @@ static struct SaveFileInfo sSaveFileInfo_Empty = {
     .introPlayed = FALSE,
     .language = LANGUAGE_JAPANESE,
     .difficulty = DIFF_NORMAL,
-    .timeAttack = FALSE,
+    .timeAttack = FALSE
 };
 
 /**
@@ -1456,7 +1456,7 @@ void SramWrite_Language(void)
     pSave->notChecksum = ~0;
     
     i = gLanguage;
-    if ((u32)i >= LANGUAGE_END)
+    if ((u32)i >= LANGUAGE_COUNT)
     {
         #ifdef REGION_EU
         i = 0;
@@ -1956,7 +1956,7 @@ void SramWrite_FileInfo(void)
             gSaveFilesInfo[i].language = pFile->gameCompletion.language;
             gSaveFilesInfo[i].timeAttack = pFile->timeAttack;
 
-            if (pFile->difficulty >= DIFF_END)
+            if (pFile->difficulty >= DIFF_COUNT)
                 gSaveFilesInfo[i].difficulty = DIFF_NORMAL;
             else
                 gSaveFilesInfo[i].difficulty = pFile->difficulty;
@@ -2111,7 +2111,7 @@ void unk_7584c(u8 param_1)
     }
 
     gSubGameMode3 = 0;
-    gMonochromeBgFading = 0;
+    gMonochromeBgFading = MONOCHROME_FADING_NONE;
     gDisableSoftReset = FALSE;
     gSubGameModeStage = 0;
     gPauseScreenFlag = PAUSE_SCREEN_NONE;

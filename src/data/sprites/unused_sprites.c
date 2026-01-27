@@ -3,12 +3,12 @@
 
 static const u16 sUnusedSpritesOam_Idle_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x151, 3, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x151, 3, 0)
 };
 
 static const u16 sUnusedSpritesOam_Idle_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x150, 3, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x150, 3, 0)
 };
 
 const struct FrameData sUnusedSpritesOam_Idle[3] = {

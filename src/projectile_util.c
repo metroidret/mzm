@@ -928,12 +928,12 @@ boolu32 ProjectileCheckHittingSolidBlock(u32 yPosition, u32 xPosition)
  * @param pProj Projectile data pointer
  * @return u32 Collision result
  */
-u32 ProjectileCheckVerticalCollisionAtPosition(struct ProjectileData* pProj)
+CollisionResult ProjectileCheckVerticalCollisionAtPosition(struct ProjectileData* pProj)
 {
     u16 yPosition;
     u16 xPosition;
     u32 clipdata;
-    u32 result;
+    CollisionResult result;
     u16 collisionY;
     u16 collisionX;
     
@@ -1158,7 +1158,7 @@ void ProjectileMoveTumbling(struct ProjectileData* pProj)
  * @param caa Clipdata Affecting Action
  * @param effect Particle effect
  */
-void ProjectileCheckHitBlock(struct ProjectileData* pProj, u8 caa, ParticleEffectId effect)
+void ProjectileCheckHitBlock(struct ProjectileData* pProj, ClipdataAffectingAction caa, ParticleEffectId effect)
 {
     u16 yPosition;
     u16 xPosition;

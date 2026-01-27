@@ -19,7 +19,7 @@
 #include "constants/color_fading.h"
 #include "constants/text.h"
 
-const struct CutsceneInfo sCutsceneData[CUTSCENE_END] = {
+const struct CutsceneInfo sCutsceneData[CUTSCENE_COUNT] = {
     [CUTSCENE_NONE] = {
         .gameplayType = CUTSCENE_TYPE_NON_GAMEPLAY,
         .playRoomMusic = TRUE,

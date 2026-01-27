@@ -1049,39 +1049,39 @@ extern const u16 sSpanishText_Story_Defeat[];
 
 #endif
 
-extern const u16** sLocationTextPointers[LANGUAGE_END];
-extern const u16** sMessageTextPointers[LANGUAGE_END];
-extern const u16** sFileScreenTextPointers[LANGUAGE_END];
+extern const u16** sLocationTextPointers[LANGUAGE_COUNT];
+extern const u16** sMessageTextPointers[LANGUAGE_COUNT];
+extern const u16** sFileScreenTextPointers[LANGUAGE_COUNT];
 
 extern const u16* sJapaneseTextPointers_Description[DESCRIPTION_TEXT_COUNT];
 extern const u16* sJapaneseTextPointers_Story[STORY_TEXT_COUNT];
-extern const u16* sJapaneseTextPointers_FileScreen[FILE_SCREEN_TEXT_END];
+extern const u16* sJapaneseTextPointers_FileScreen[FILE_SCREEN_TEXT_COUNT];
 
 extern const u16* sHiraganaTextPointers_Description[DESCRIPTION_TEXT_COUNT];
 extern const u16* sHiraganaTextPointers_Story[STORY_TEXT_COUNT];
-extern const u16* sHiraganaTextPointers_FileScreen[FILE_SCREEN_TEXT_END];
+extern const u16* sHiraganaTextPointers_FileScreen[FILE_SCREEN_TEXT_COUNT];
 
 extern const u16* sEnglishTextPointers_Description[DESCRIPTION_TEXT_COUNT];
 extern const u16* sEnglishTextPointers_Story[STORY_TEXT_COUNT];
-extern const u16* sEnglishTextPointers_FileScreen[FILE_SCREEN_TEXT_END];
+extern const u16* sEnglishTextPointers_FileScreen[FILE_SCREEN_TEXT_COUNT];
 
 #if defined(REGION_EU)
 
 extern const u16* sGermanTextPointers_Description[DESCRIPTION_TEXT_COUNT];
 extern const u16* sGermanTextPointers_Story[STORY_TEXT_COUNT];
-extern const u16* sGermanTextPointers_FileScreen[FILE_SCREEN_TEXT_END];
+extern const u16* sGermanTextPointers_FileScreen[FILE_SCREEN_TEXT_COUNT];
 
 extern const u16* sFrenchTextPointers_Description[DESCRIPTION_TEXT_COUNT];
 extern const u16* sFrenchTextPointers_Story[STORY_TEXT_COUNT];
-extern const u16* sFrenchTextPointers_FileScreen[FILE_SCREEN_TEXT_END];
+extern const u16* sFrenchTextPointers_FileScreen[FILE_SCREEN_TEXT_COUNT];
 
 extern const u16* sItalianTextPointers_Description[DESCRIPTION_TEXT_COUNT];
 extern const u16* sItalianTextPointers_Story[STORY_TEXT_COUNT];
-extern const u16* sItalianTextPointers_FileScreen[FILE_SCREEN_TEXT_END];
+extern const u16* sItalianTextPointers_FileScreen[FILE_SCREEN_TEXT_COUNT];
 
 extern const u16* sSpanishTextPointers_Description[DESCRIPTION_TEXT_COUNT];
 extern const u16* sSpanishTextPointers_Story[STORY_TEXT_COUNT];
-extern const u16* sSpanishTextPointers_FileScreen[FILE_SCREEN_TEXT_END];
+extern const u16* sSpanishTextPointers_FileScreen[FILE_SCREEN_TEXT_COUNT];
 
 #elif defined(REGION_US_BETA)
 

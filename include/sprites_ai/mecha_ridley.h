@@ -2,8 +2,9 @@
 #define MECHA_RIDLEY_AI_H
 
 #include "types.h"
+#include "macros.h"
 
-enum MechaRidleyPart {
+MAKE_ENUM(u8, MechaRidleyPartId) {
     MECHA_RIDLEY_PART_RIGHT_ARM,
     MECHA_RIDLEY_PART_EYE,
     MECHA_RIDLEY_PART_HEAD,
@@ -16,7 +17,7 @@ enum MechaRidleyPart {
     MECHA_RIDLEY_PART_TAIL,
     MECHA_RIDLEY_PART_MISSILE_LAUNCHER,
 
-    MECHA_RIDLEY_PART_END
+    MECHA_RIDLEY_PART_COUNT
 };
 
 void MechaRidley(void);

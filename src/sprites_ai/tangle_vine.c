@@ -15,7 +15,7 @@
 #define TANGLE_VINE_GERUTA_POSE_IDLE 0x9
 #define TANGLE_VINE_GERUTA_POSE_NO_GERUTA 0x23
 
-enum TangleVineGerutaStatus {
+MAKE_ENUM(u8, TangleVineGerutaStatus) {
     TANGLE_VINE_GERUTA_STATUS_VINE_DEAD,
     TANGLE_VINE_GERUTA_STATUS_GERUTA_DEAD,
     TANGLE_VINE_GERUTA_STATUS_FULL
@@ -25,7 +25,7 @@ enum TangleVineGerutaStatus {
 
 #define TANGLE_VINE_POSE_IDLE 0x9
 
-static const struct FrameData* sTangleVineFrameDataPointers[TANGLE_VINE_OAM_END] = {
+static const struct FrameData* sTangleVineFrameDataPointers[TANGLE_VINE_OAM_COUNT] = {
     [TANGLE_VINE_OAM_TALL_ON_GROUND] = sTangleVineTallOam_OnGround,
     [TANGLE_VINE_OAM_MEDIUM_ON_GROUND] = sTangleVineMediumOam_OnGround,
     [TANGLE_VINE_OAM_SHORT_ON_GROUND] = sTangleVineShortOam_OnGround,

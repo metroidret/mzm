@@ -3,7 +3,7 @@
 
 #include "types.h"
 
-u8 SavePlatformDetectSamus(void);
+boolu8 SavePlatformDetectSamus(void);
 void SavePlatform(void);
 void SavePlatformPart(void);
 

@@ -2,13 +2,13 @@
 #define ERASE_SRAM_MENU_DATA_H
 
 #include "types.h"
-#include "structs/cutscene.h"
+
 #include "constants/menus/erase_sram.h"
+
+#include "structs/cutscene.h"
 
 extern const u16 sEraseSramMenuObjectsPal[7 * 16];
 extern const u16 sEraseSramMenuBackgroundPal[15 * 16 - 1];
-
-// ...
 
 extern const u32 sEraseSramMenuObjectsGfx[477];
 extern const u32 sEraseSramMenuFirstBoxGfx[118];
@@ -30,13 +30,13 @@ extern const u32 sEraseSramMenuQuestionSpanishGfx[208];
 extern const u32 sEraseSramMenuBoxTileTable[137];
 extern const u32 sEraseSramMenuBackgroundTileTable[368];
 
-extern const u8 sEraseSramQuestionWindowNoSelectedOamId;
-extern const u8 sEraseSramQuestionWindowYesSelectedOamId;
-extern const u8 sEraseSramConfirmWindowNoSelectedOamId;
-extern const u8 sEraseSramConfirmWindowYesSelectedOamId;
-extern const u16 sEraseSramMenuSoundsID[ERASE_SRAM_SOUND_END];
+extern const EraseSramOamId sEraseSramQuestionWindowNoSelectedOamId;
+extern const EraseSramOamId sEraseSramQuestionWindowYesSelectedOamId;
+extern const EraseSramOamId sEraseSramConfirmWindowNoSelectedOamId;
+extern const EraseSramOamId sEraseSramConfirmWindowYesSelectedOamId;
+extern const u16 sEraseSramMenuSoundsID[ERASE_SRAM_SOUND_COUNT];
 extern const u16 sEraseSramMenuCursorPosition[2][2];
-extern const u16 sEraseSramMenuCursorPositionOffset[ERASE_SRAM_OPTION_END][2];
-extern const struct OamArray sEraseSramMenuOam[ERASE_SRAM_OAM_ID_END];
+extern const u16 sEraseSramMenuCursorPositionOffset[ERASE_SRAM_OPTION_COUNT][2];
+extern const struct OamArray sEraseSramMenuOam[ERASE_SRAM_OAM_ID_COUNT];
 
 #endif /* ERASE_SRAM_MENU_DATA_H */

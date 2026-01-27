@@ -2,6 +2,9 @@
 #define TITLE_SCREEN_STRUCT_H
 
 #include "types.h"
+
+#include "constants/menus/title_screen.h"
+
 #include "structs/menu.h"
 
 #define TITLE_SCREEN_DATA sNonGameplayRamPointer->titleScreen
@@ -36,7 +39,7 @@ struct TitleScreenData {
     u16 effectsTimer;
     u8 cometsStage;
     u16 cometsTimer;
-    u8 activeAnimatedPalettes;
+    TitleScreenAnimatedPalette activeAnimatedPalettes;
     u16 type;
     u8 unk_E;
     u8 unk_F;

@@ -111,7 +111,7 @@ static u8 MechaRidleySeesSamusInit(void)
 
     CutsceneSetBgcntPageData(sMechaRidleySeesSamusPagesData[0]);
 
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sMechaRidleySeesSamusPagesData[0].bg, NON_GAMEPLAY_START_BG_POS);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sMechaRidleySeesSamusPagesData[0].bg, NON_GAMEPLAY_START_BG_POS);
     CutsceneReset();
 
     CUTSCENE_DATA.oam[0].xPosition = SCREEN_SIZE_X_SUB_PIXEL / 2;

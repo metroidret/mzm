@@ -29,7 +29,7 @@ void EraseSram(void)
  * @param operation Operation to perform
  * @return u8* Pointer to difference
  */
-u8* DoSramOperation(u8 operation)
+u8* DoSramOperation(SramOperation operation)
 {
     u8* diff;
 

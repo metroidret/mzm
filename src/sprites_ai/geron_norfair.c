@@ -17,7 +17,7 @@
  */
 void GeronNorfair(void)
 {
-    u8 caa;
+    ClipdataAffectingAction caa;
     u16 yPosition;
     u16 xPosition;
 

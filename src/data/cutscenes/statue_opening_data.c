@@ -33,8 +33,8 @@ const u8 sStatueOpening_Padding3ed4b0[4] = {
     1, 4, 0, 0
 };
 
-const struct OamArray sStatueOpeningOam[STATUE_OPENING_OAM_ID_END] = {
-    [0] = {
+const struct OamArray sStatueOpeningOam[STATUE_OPENING_OAM_ID_COUNT] = {
+    [STATUE_OPENING_OAM_ID_NONE] = {
         .pOam = sKraidStatueOam_Idle,
         .preAction = OAM_ARRAY_PRE_ACTION_NONE
     },
@@ -69,7 +69,7 @@ const struct OamArray sStatueOpeningOam[STATUE_OPENING_OAM_ID_END] = {
     [STATUE_OPENING_OAM_ID_RIDLEY_OPENED] = {
         .pOam = sRidleyStatueOam_Opened,
         .preAction = OAM_ARRAY_PRE_ACTION_RESET_FRAME
-    },
+    }
 };
 
 const u16 sStatueOpeningPal[8 * 16] = INCBIN_U16("data/cutscenes/statue_opening/palette.pal");

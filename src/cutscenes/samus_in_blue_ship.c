@@ -186,7 +186,7 @@ static u8 SamusInBlueShipInit(void)
     gWrittenToBldalpha_L = BLDALPHA_MAX_VALUE;
     gWrittenToBldalpha_H = 0;
 
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sSamusInBlueShipPageData[0].bg, NON_GAMEPLAY_START_BG_POS);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sSamusInBlueShipPageData[0].bg, NON_GAMEPLAY_START_BG_POS);
 
     UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[0], 1);
 

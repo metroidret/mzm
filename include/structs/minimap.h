@@ -2,6 +2,9 @@
 #define MINIMAP_STRUCT_H
 
 #include "types.h"
+
+#include "constants/minimap.h"
+
 #include "structs/connection.h"
 
 #define MINIMAP_SIZE 32
@@ -19,7 +22,7 @@ struct LastAreaName {
 extern struct LastAreaName gLastAreaNameVisited;
 extern u8 gMinimapX;
 extern u8 gMinimapY;
-extern u8 gUpdateMinimapFlag;
+extern MinimapUpdateFlag gUpdateMinimapFlag;
 
 #ifdef USE_EWRAM_SYMBOLS
 extern u32 gMinimapTilesWithObtainedItems[MAX_AMOUNT_OF_AREAS * MINIMAP_SIZE];

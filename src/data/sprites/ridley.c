@@ -3,7 +3,7 @@
 
 #include "sprites_ai/ridley.h"
 
-static const s16 sRidleyMultiSpriteData_Idle_Frame0[RIDLEY_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyMultiSpriteData_Idle_Frame0[RIDLEY_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_PART_LEFT_WING] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_LEFT_WING_IDLE,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = -(BLOCK_SIZE + QUARTER_BLOCK_SIZE - PIXEL_SIZE),
@@ -36,7 +36,7 @@ static const s16 sRidleyMultiSpriteData_Idle_Frame0[RIDLEY_PART_END][MULTI_SPRIT
     }
 };
 
-static const s16 sRidleyMultiSpriteData_Idle_Frame1[RIDLEY_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyMultiSpriteData_Idle_Frame1[RIDLEY_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_PART_LEFT_WING] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_LEFT_WING_IDLE,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = -(BLOCK_SIZE + EIGHTH_BLOCK_SIZE),
@@ -69,7 +69,7 @@ static const s16 sRidleyMultiSpriteData_Idle_Frame1[RIDLEY_PART_END][MULTI_SPRIT
     }
 };
 
-static const s16 sRidleyMultiSpriteData_Idle_Frame2[RIDLEY_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyMultiSpriteData_Idle_Frame2[RIDLEY_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_PART_LEFT_WING] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_LEFT_WING_IDLE,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = -(BLOCK_SIZE + PIXEL_SIZE),
@@ -102,7 +102,7 @@ static const s16 sRidleyMultiSpriteData_Idle_Frame2[RIDLEY_PART_END][MULTI_SPRIT
     }
 };
 
-static const s16 sRidleyMultiSpriteData_SpittingFireballs_Frame0[RIDLEY_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyMultiSpriteData_SpittingFireballs_Frame0[RIDLEY_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_PART_LEFT_WING] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_LEFT_WING_SPITTING_FIREBALLS,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = -(BLOCK_SIZE + PIXEL_SIZE),
@@ -135,7 +135,7 @@ static const s16 sRidleyMultiSpriteData_SpittingFireballs_Frame0[RIDLEY_PART_END
     }
 };
 
-static const s16 sRidleyMultiSpriteData_SpittingFireballs_Frame1[RIDLEY_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyMultiSpriteData_SpittingFireballs_Frame1[RIDLEY_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_PART_LEFT_WING] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_LEFT_WING_SPITTING_FIREBALLS,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = -BLOCK_SIZE,
@@ -168,7 +168,7 @@ static const s16 sRidleyMultiSpriteData_SpittingFireballs_Frame1[RIDLEY_PART_END
     }
 };
 
-static const s16 sRidleyMultiSpriteData_TurningAroundFirstPart_Frame0[RIDLEY_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyMultiSpriteData_TurningAroundFirstPart_Frame0[RIDLEY_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_PART_LEFT_WING] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_LEFT_WING_IDLE,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = -(BLOCK_SIZE + QUARTER_BLOCK_SIZE - PIXEL_SIZE),
@@ -201,7 +201,7 @@ static const s16 sRidleyMultiSpriteData_TurningAroundFirstPart_Frame0[RIDLEY_PAR
     }
 };
 
-static const s16 sRidleyMultiSpriteData_TurningAroundFirstPart_Frame1[RIDLEY_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyMultiSpriteData_TurningAroundFirstPart_Frame1[RIDLEY_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_PART_LEFT_WING] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_LEFT_WING_IDLE,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = -(BLOCK_SIZE + QUARTER_BLOCK_SIZE - PIXEL_SIZE),
@@ -234,7 +234,7 @@ static const s16 sRidleyMultiSpriteData_TurningAroundFirstPart_Frame1[RIDLEY_PAR
     }
 };
 
-static const s16 sRidleyMultiSpriteData_TurningAroundSecondPart_Frame0[RIDLEY_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyMultiSpriteData_TurningAroundSecondPart_Frame0[RIDLEY_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_PART_LEFT_WING] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_LEFT_WING_IDLE,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = -(BLOCK_SIZE + QUARTER_BLOCK_SIZE - PIXEL_SIZE),
@@ -267,7 +267,7 @@ static const s16 sRidleyMultiSpriteData_TurningAroundSecondPart_Frame0[RIDLEY_PA
     }
 };
 
-static const s16 sRidleyMultiSpriteData_TurningAroundSecondPart_Frame1[RIDLEY_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyMultiSpriteData_TurningAroundSecondPart_Frame1[RIDLEY_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_PART_LEFT_WING] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_LEFT_WING_IDLE,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = -(BLOCK_SIZE + QUARTER_BLOCK_SIZE - PIXEL_SIZE),
@@ -300,7 +300,7 @@ static const s16 sRidleyMultiSpriteData_TurningAroundSecondPart_Frame1[RIDLEY_PA
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame0[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame0[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = 0,
@@ -343,7 +343,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame0[RIDLEY_TAIL_PART_END][MU
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame1[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame1[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = -PIXEL_SIZE,
@@ -386,7 +386,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame1[RIDLEY_TAIL_PART_END][MU
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame2[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame2[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = -EIGHTH_BLOCK_SIZE,
@@ -429,7 +429,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame2[RIDLEY_TAIL_PART_END][MU
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame3[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame3[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = -(QUARTER_BLOCK_SIZE - PIXEL_SIZE),
@@ -472,7 +472,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame3[RIDLEY_TAIL_PART_END][MU
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame4[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame4[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = -EIGHTH_BLOCK_SIZE,
@@ -515,7 +515,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame4[RIDLEY_TAIL_PART_END][MU
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame5[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame5[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = 0,
@@ -558,7 +558,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame5[RIDLEY_TAIL_PART_END][MU
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame6[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame6[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = PIXEL_SIZE,
@@ -601,7 +601,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame6[RIDLEY_TAIL_PART_END][MU
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame7[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame7[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = EIGHTH_BLOCK_SIZE,
@@ -644,7 +644,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame7[RIDLEY_TAIL_PART_END][MU
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame8[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame8[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = QUARTER_BLOCK_SIZE,
@@ -687,7 +687,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame8[RIDLEY_TAIL_PART_END][MU
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame9[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame9[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + EIGHTH_BLOCK_SIZE),
@@ -730,7 +730,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame9[RIDLEY_TAIL_PART_END][MU
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame10[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame10[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + PIXEL_SIZE),
@@ -773,7 +773,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame10[RIDLEY_TAIL_PART_END][M
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame11[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame11[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = QUARTER_BLOCK_SIZE,
@@ -816,7 +816,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame11[RIDLEY_TAIL_PART_END][M
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame12[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame12[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE - PIXEL_SIZE),
@@ -859,7 +859,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame12[RIDLEY_TAIL_PART_END][M
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame13[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame13[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = EIGHTH_BLOCK_SIZE,
@@ -902,7 +902,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame13[RIDLEY_TAIL_PART_END][M
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_Idle_Frame14[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_Idle_Frame14[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = PIXEL_SIZE,
@@ -945,7 +945,7 @@ static const s16 sRidleyTailMultiSpriteData_Idle_Frame14[RIDLEY_TAIL_PART_END][M
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame0[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame0[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = QUARTER_BLOCK_SIZE,
@@ -988,7 +988,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame0[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame1[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame1[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + PIXEL_SIZE),
@@ -1031,7 +1031,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame1[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame2[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame2[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + PIXEL_SIZE),
@@ -1074,7 +1074,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame2[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame3[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame3[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + PIXEL_SIZE),
@@ -1117,7 +1117,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame3[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame4[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame4[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + PIXEL_SIZE),
@@ -1160,7 +1160,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame4[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame5[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame5[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = QUARTER_BLOCK_SIZE,
@@ -1203,7 +1203,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame5[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame6[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame6[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE - PIXEL_SIZE),
@@ -1246,7 +1246,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame6[RI
     }
     };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame7[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame7[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = EIGHTH_BLOCK_SIZE,
@@ -1289,7 +1289,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame7[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame8[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame8[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = PIXEL_SIZE,
@@ -1332,7 +1332,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame8[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame9[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame9[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = PIXEL_SIZE,
@@ -1375,7 +1375,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame9[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame10[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame10[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = EIGHTH_BLOCK_SIZE,
@@ -1418,7 +1418,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingDiagonalTailAttack_Frame10[R
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame3[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame3[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + EIGHTH_BLOCK_SIZE),
@@ -1461,7 +1461,7 @@ static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame3[RIDLEY_TAI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame4[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame4[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (HALF_BLOCK_SIZE - PIXEL_SIZE),
@@ -1504,7 +1504,7 @@ static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame4[RIDLEY_TAI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame5[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame5[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (HALF_BLOCK_SIZE - PIXEL_SIZE),
@@ -1547,7 +1547,7 @@ static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame5[RIDLEY_TAI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame6[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame6[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + EIGHTH_BLOCK_SIZE),
@@ -1590,7 +1590,7 @@ static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame6[RIDLEY_TAI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame7[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame7[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + EIGHTH_BLOCK_SIZE),
@@ -1633,7 +1633,7 @@ static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame7[RIDLEY_TAI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame11[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame11[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + EIGHTH_BLOCK_SIZE),
@@ -1676,7 +1676,7 @@ static const s16 sRidleyTailMultiSpriteData_DiagonalTailAttack_Frame11[RIDLEY_TA
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame3[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame3[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + PIXEL_SIZE),
@@ -1719,7 +1719,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame3[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame4[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame4[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + PIXEL_SIZE),
@@ -1762,7 +1762,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame4[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame5[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame5[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + EIGHTH_BLOCK_SIZE),
@@ -1805,7 +1805,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame5[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame6[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame6[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (HALF_BLOCK_SIZE - PIXEL_SIZE),
@@ -1848,7 +1848,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame6[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame8[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame8[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + EIGHTH_BLOCK_SIZE),
@@ -1891,7 +1891,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame8[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame9[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame9[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE + PIXEL_SIZE),
@@ -1934,7 +1934,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame9[RI
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame10[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame10[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = QUARTER_BLOCK_SIZE,
@@ -1977,7 +1977,7 @@ static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame10[R
     }
 };
 
-static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame11[RIDLEY_TAIL_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sRidleyTailMultiSpriteData_ChargingVerticalTailAttack_Frame11[RIDLEY_TAIL_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [RIDLEY_TAIL_PART_BODY_ATTACHMENT] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = RIDLEY_OAM_TAIL_PART,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = (QUARTER_BLOCK_SIZE - PIXEL_SIZE),
@@ -2653,7 +2653,7 @@ static const u16 sRidleyOam_Idle_Frame0[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-13, 15, OAM_DIMS_32x16, OAM_NO_FLIP, 0x254, 8, 0),
     OAM_ENTRY(-22, 30, OAM_DIMS_32x32, OAM_NO_FLIP, 0x28e, 8, 0),
     OAM_ENTRY(10, 30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x292, 8, 0),
-    OAM_ENTRY(-14, 5, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0),
+    OAM_ENTRY(-14, 5, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0)
 };
 
 static const u16 sRidleyOam_Idle_Frame1[OAM_DATA_SIZE(16)] = {
@@ -2673,7 +2673,7 @@ static const u16 sRidleyOam_Idle_Frame1[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-13, 14, OAM_DIMS_32x16, OAM_NO_FLIP, 0x254, 8, 0),
     OAM_ENTRY(-22, 29, OAM_DIMS_32x32, OAM_NO_FLIP, 0x28e, 8, 0),
     OAM_ENTRY(10, 29, OAM_DIMS_16x16, OAM_NO_FLIP, 0x292, 8, 0),
-    OAM_ENTRY(-14, 4, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0),
+    OAM_ENTRY(-14, 4, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0)
 };
 
 static const u16 sRidleyOam_Idle_Frame2[OAM_DATA_SIZE(16)] = {
@@ -2693,7 +2693,7 @@ static const u16 sRidleyOam_Idle_Frame2[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-13, 14, OAM_DIMS_32x16, OAM_NO_FLIP, 0x254, 8, 0),
     OAM_ENTRY(-22, 28, OAM_DIMS_32x32, OAM_NO_FLIP, 0x28e, 8, 0),
     OAM_ENTRY(10, 28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x292, 8, 0),
-    OAM_ENTRY(-14, 4, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0),
+    OAM_ENTRY(-14, 4, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0)
 };
 
 static const u16 sRidleyOam_Idle_Frame3[OAM_DATA_SIZE(18)] = {
@@ -2715,7 +2715,7 @@ static const u16 sRidleyOam_Idle_Frame3[OAM_DATA_SIZE(18)] = {
     OAM_ENTRY(-13, 13, OAM_DIMS_32x16, OAM_NO_FLIP, 0x254, 8, 0),
     OAM_ENTRY(-22, 27, OAM_DIMS_32x32, OAM_NO_FLIP, 0x28e, 8, 0),
     OAM_ENTRY(10, 27, OAM_DIMS_16x16, OAM_NO_FLIP, 0x292, 8, 0),
-    OAM_ENTRY(-14, 4, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0),
+    OAM_ENTRY(-14, 4, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0)
 };
 
 static const u16 sRidleyOam_SpittingFireballs_Frame1[OAM_DATA_SIZE(16)] = {
@@ -2735,7 +2735,7 @@ static const u16 sRidleyOam_SpittingFireballs_Frame1[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-13, 14, OAM_DIMS_32x16, OAM_NO_FLIP, 0x254, 8, 0),
     OAM_ENTRY(-22, 29, OAM_DIMS_32x32, OAM_NO_FLIP, 0x28e, 8, 0),
     OAM_ENTRY(10, 29, OAM_DIMS_16x16, OAM_NO_FLIP, 0x292, 8, 0),
-    OAM_ENTRY(-14, 4, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0),
+    OAM_ENTRY(-14, 4, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0)
 };
 
 static const u16 sRidleyOam_SpittingFireballs_Frame2[OAM_DATA_SIZE(16)] = {
@@ -2755,7 +2755,7 @@ static const u16 sRidleyOam_SpittingFireballs_Frame2[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-13, 15, OAM_DIMS_32x16, OAM_NO_FLIP, 0x254, 8, 0),
     OAM_ENTRY(-22, 30, OAM_DIMS_32x32, OAM_NO_FLIP, 0x28e, 8, 0),
     OAM_ENTRY(10, 30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x292, 8, 0),
-    OAM_ENTRY(-14, 5, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0),
+    OAM_ENTRY(-14, 5, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0)
 };
 
 static const u16 sRidleyOam_TurningAround_Frame0[OAM_DATA_SIZE(16)] = {
@@ -2775,7 +2775,7 @@ static const u16 sRidleyOam_TurningAround_Frame0[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-22, 15, OAM_DIMS_32x16, OAM_NO_FLIP, 0x254, 8, 0),
     OAM_ENTRY(-31, 30, OAM_DIMS_32x32, OAM_NO_FLIP, 0x28e, 8, 0),
     OAM_ENTRY(1, 30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x292, 8, 0),
-    OAM_ENTRY(-23, 5, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0),
+    OAM_ENTRY(-23, 5, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0)
 };
 
 static const u16 sRidleyOam_TurningAround_Frame1[OAM_DATA_SIZE(16)] = {
@@ -2795,7 +2795,7 @@ static const u16 sRidleyOam_TurningAround_Frame1[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-26, 15, OAM_DIMS_32x16, OAM_NO_FLIP, 0x254, 8, 0),
     OAM_ENTRY(-35, 30, OAM_DIMS_32x32, OAM_NO_FLIP, 0x28e, 8, 0),
     OAM_ENTRY(-3, 30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x292, 8, 0),
-    OAM_ENTRY(-27, 5, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0),
+    OAM_ENTRY(-27, 5, OAM_DIMS_32x16, OAM_NO_FLIP, 0x214, 8, 0)
 };
 
 static const u16 sRidleyPartOam_HeadIdle_Frame0[OAM_DATA_SIZE(4)] = {
@@ -2803,7 +2803,7 @@ static const u16 sRidleyPartOam_HeadIdle_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-12, -24, OAM_DIMS_32x32, OAM_NO_FLIP, 0x281, 8, 0),
     OAM_ENTRY(-20, 8, OAM_DIMS_16x32, OAM_NO_FLIP, 0x300, 8, 0),
     OAM_ENTRY(-4, 8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x302, 8, 0),
-    OAM_ENTRY(-17, -1, OAM_DIMS_32x32, OAM_NO_FLIP, 0x20b, 8, 0),
+    OAM_ENTRY(-17, -1, OAM_DIMS_32x32, OAM_NO_FLIP, 0x20b, 8, 0)
 };
 
 static const u16 sRidleyPartOam_HeadIdle_Frame1[OAM_DATA_SIZE(4)] = {
@@ -2811,7 +2811,7 @@ static const u16 sRidleyPartOam_HeadIdle_Frame1[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-12, -23, OAM_DIMS_32x32, OAM_NO_FLIP, 0x281, 8, 0),
     OAM_ENTRY(-20, 9, OAM_DIMS_16x32, OAM_NO_FLIP, 0x300, 8, 0),
     OAM_ENTRY(-4, 9, OAM_DIMS_8x8, OAM_NO_FLIP, 0x302, 8, 0),
-    OAM_ENTRY(-16, -1, OAM_DIMS_32x32, OAM_NO_FLIP, 0x20b, 8, 0),
+    OAM_ENTRY(-16, -1, OAM_DIMS_32x32, OAM_NO_FLIP, 0x20b, 8, 0)
 };
 
 static const u16 sRidleyPartOam_OpeningMouth_Frame0[OAM_DATA_SIZE(4)] = {
@@ -2819,7 +2819,7 @@ static const u16 sRidleyPartOam_OpeningMouth_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-4, -16, OAM_DIMS_32x32, OAM_XY_FLIP, 0x2ee, 8, 0),
     OAM_ENTRY(-20, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x312, 8, 0),
     OAM_ENTRY(-36, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x2d2, 8, 0),
-    OAM_ENTRY(-17, -1, OAM_DIMS_32x32, OAM_NO_FLIP, 0x20b, 8, 0),
+    OAM_ENTRY(-17, -1, OAM_DIMS_32x32, OAM_NO_FLIP, 0x20b, 8, 0)
 };
 
 static const u16 sRidleyPartOam_MouthOpened_Frame0[OAM_DATA_SIZE(4)] = {
@@ -2827,7 +2827,7 @@ static const u16 sRidleyPartOam_MouthOpened_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-37, -31, OAM_DIMS_16x16, OAM_NO_FLIP, 0x294, 8, 0),
     OAM_ENTRY(-21, -31, OAM_DIMS_16x32, OAM_NO_FLIP, 0x296, 8, 0),
     OAM_ENTRY(-5, -23, OAM_DIMS_32x32, OAM_NO_FLIP, 0x314, 8, 0),
-    OAM_ENTRY(-17, 0, OAM_DIMS_32x32, OAM_NO_FLIP, 0x20b, 8, 0),
+    OAM_ENTRY(-17, 0, OAM_DIMS_32x32, OAM_NO_FLIP, 0x20b, 8, 0)
 };
 
 static const u16 sRidleyPartOam_MouthOpened_Frame1[OAM_DATA_SIZE(4)] = {
@@ -2835,7 +2835,7 @@ static const u16 sRidleyPartOam_MouthOpened_Frame1[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-37, -30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x294, 8, 0),
     OAM_ENTRY(-21, -30, OAM_DIMS_16x32, OAM_NO_FLIP, 0x296, 8, 0),
     OAM_ENTRY(-5, -22, OAM_DIMS_32x32, OAM_NO_FLIP, 0x314, 8, 0),
-    OAM_ENTRY(-17, -1, OAM_DIMS_32x32, OAM_NO_FLIP, 0x20b, 8, 0),
+    OAM_ENTRY(-17, -1, OAM_DIMS_32x32, OAM_NO_FLIP, 0x20b, 8, 0)
 };
 
 static const u16 sRidleyPartOam_HeadDying_Frame0[OAM_DATA_SIZE(5)] = {
@@ -2844,7 +2844,7 @@ static const u16 sRidleyPartOam_HeadDying_Frame0[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-21, -29, OAM_DIMS_16x32, OAM_NO_FLIP, 0x296, 8, 0),
     OAM_ENTRY(-5, -22, OAM_DIMS_32x32, OAM_NO_FLIP, 0x314, 8, 0),
     OAM_ENTRY(-17, -2, OAM_DIMS_16x32, OAM_NO_FLIP, 0x20b, 8, 0),
-    OAM_ENTRY(-1, -1, OAM_DIMS_16x32, OAM_NO_FLIP, 0x20d, 8, 0),
+    OAM_ENTRY(-1, -1, OAM_DIMS_16x32, OAM_NO_FLIP, 0x20d, 8, 0)
 };
 
 static const u16 sRidleyPartOam_HeadDying_Frame1[OAM_DATA_SIZE(5)] = {
@@ -2853,7 +2853,7 @@ static const u16 sRidleyPartOam_HeadDying_Frame1[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-37, -31, OAM_DIMS_16x16, OAM_NO_FLIP, 0x294, 8, 0),
     OAM_ENTRY(-21, -31, OAM_DIMS_16x32, OAM_NO_FLIP, 0x296, 8, 0),
     OAM_ENTRY(-5, -23, OAM_DIMS_32x32, OAM_NO_FLIP, 0x314, 8, 0),
-    OAM_ENTRY(-17, 0, OAM_DIMS_32x32, OAM_NO_FLIP, 0x20b, 8, 0),
+    OAM_ENTRY(-17, 0, OAM_DIMS_32x32, OAM_NO_FLIP, 0x20b, 8, 0)
 };
 
 static const u16 sRidleyPartOam_HeadDying_Frame2[OAM_DATA_SIZE(6)] = {
@@ -2863,7 +2863,7 @@ static const u16 sRidleyPartOam_HeadDying_Frame2[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-21, -29, OAM_DIMS_16x32, OAM_NO_FLIP, 0x296, 8, 0),
     OAM_ENTRY(-5, -22, OAM_DIMS_32x32, OAM_NO_FLIP, 0x314, 8, 0),
     OAM_ENTRY(-17, -2, OAM_DIMS_16x32, OAM_NO_FLIP, 0x20b, 8, 0),
-    OAM_ENTRY(-1, -1, OAM_DIMS_16x32, OAM_NO_FLIP, 0x20d, 8, 0),
+    OAM_ENTRY(-1, -1, OAM_DIMS_16x32, OAM_NO_FLIP, 0x20d, 8, 0)
 };
 
 static const u16 sRidleyPartOam_HeadDying_Frame3[OAM_DATA_SIZE(5)] = {
@@ -2872,14 +2872,14 @@ static const u16 sRidleyPartOam_HeadDying_Frame3[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-37, -31, OAM_DIMS_16x16, OAM_NO_FLIP, 0x294, 8, 0),
     OAM_ENTRY(-21, -31, OAM_DIMS_16x32, OAM_NO_FLIP, 0x296, 8, 0),
     OAM_ENTRY(-5, -23, OAM_DIMS_32x32, OAM_NO_FLIP, 0x314, 8, 0),
-    OAM_ENTRY(-17, 0, OAM_DIMS_32x32, OAM_NO_FLIP, 0x20b, 8, 0),
+    OAM_ENTRY(-17, 0, OAM_DIMS_32x32, OAM_NO_FLIP, 0x20b, 8, 0)
 };
 
 static const u16 sRidleyPartOam_HeadTurningAround_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-11, -24, OAM_DIMS_16x32, OAM_NO_FLIP, 0x393, 8, 0),
     OAM_ENTRY(5, -24, OAM_DIMS_8x32, OAM_NO_FLIP, 0x395, 8, 0),
-    OAM_ENTRY(-7, 8, OAM_DIMS_16x32, OAM_NO_FLIP, 0x396, 8, 0),
+    OAM_ENTRY(-7, 8, OAM_DIMS_16x32, OAM_NO_FLIP, 0x396, 8, 0)
 };
 
 static const u16 sRidleyPartOam_ClawIdle_Frame0[OAM_DATA_SIZE(4)] = {
@@ -2887,7 +2887,7 @@ static const u16 sRidleyPartOam_ClawIdle_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-63, 12, OAM_DIMS_32x32, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-29, 6, OAM_DIMS_16x16, OAM_NO_FLIP, 0x250, 8, 0),
     OAM_ENTRY(-37, 14, OAM_DIMS_8x8, OAM_NO_FLIP, 0x26f, 8, 0),
-    OAM_ENTRY(-20, -17, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0),
+    OAM_ENTRY(-20, -17, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0)
 };
 
 static const u16 sRidleyPartOam_ClawIdle_Frame1[OAM_DATA_SIZE(4)] = {
@@ -2895,7 +2895,7 @@ static const u16 sRidleyPartOam_ClawIdle_Frame1[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-63, 13, OAM_DIMS_32x32, OAM_NO_FLIP, 0x29c, 8, 0),
     OAM_ENTRY(-29, 7, OAM_DIMS_16x16, OAM_NO_FLIP, 0x250, 8, 0),
     OAM_ENTRY(-37, 15, OAM_DIMS_8x8, OAM_NO_FLIP, 0x26f, 8, 0),
-    OAM_ENTRY(-20, -16, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0),
+    OAM_ENTRY(-20, -16, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0)
 };
 
 static const u16 sRidleyPartOam_ClawIdle_Frame2[OAM_DATA_SIZE(4)] = {
@@ -2903,7 +2903,7 @@ static const u16 sRidleyPartOam_ClawIdle_Frame2[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-63, 14, OAM_DIMS_32x32, OAM_NO_FLIP, 0x31c, 8, 0),
     OAM_ENTRY(-30, 8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x250, 8, 0),
     OAM_ENTRY(-38, 16, OAM_DIMS_8x8, OAM_NO_FLIP, 0x26f, 8, 0),
-    OAM_ENTRY(-20, -15, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0),
+    OAM_ENTRY(-20, -15, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0)
 };
 
 static const u16 sRidleyPartOam_ClawIdle_Frame3[OAM_DATA_SIZE(7)] = {
@@ -2914,7 +2914,7 @@ static const u16 sRidleyPartOam_ClawIdle_Frame3[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(-39, 21, OAM_DIMS_8x16, OAM_NO_FLIP, 0x33f, 8, 0),
     OAM_ENTRY(-30, 9, OAM_DIMS_16x16, OAM_NO_FLIP, 0x250, 8, 0),
     OAM_ENTRY(-38, 17, OAM_DIMS_8x8, OAM_NO_FLIP, 0x26f, 8, 0),
-    OAM_ENTRY(-20, -15, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0),
+    OAM_ENTRY(-20, -15, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0)
 };
 
 static const u16 sRidleyPartOam_ClawSpittingFireballs_Frame1[OAM_DATA_SIZE(4)] = {
@@ -2922,7 +2922,7 @@ static const u16 sRidleyPartOam_ClawSpittingFireballs_Frame1[OAM_DATA_SIZE(4)] =
     OAM_ENTRY(-63, 11, OAM_DIMS_32x32, OAM_NO_FLIP, 0x29c, 8, 0),
     OAM_ENTRY(-29, 5, OAM_DIMS_16x16, OAM_NO_FLIP, 0x250, 8, 0),
     OAM_ENTRY(-37, 13, OAM_DIMS_8x8, OAM_NO_FLIP, 0x26f, 8, 0),
-    OAM_ENTRY(-20, -18, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0),
+    OAM_ENTRY(-20, -18, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0)
 };
 
 static const u16 sRidleyPartOam_ClawSpittingFireballs_Frame2[OAM_DATA_SIZE(4)] = {
@@ -2930,7 +2930,7 @@ static const u16 sRidleyPartOam_ClawSpittingFireballs_Frame2[OAM_DATA_SIZE(4)] =
     OAM_ENTRY(-63, 12, OAM_DIMS_32x32, OAM_NO_FLIP, 0x31c, 8, 0),
     OAM_ENTRY(-29, 6, OAM_DIMS_16x16, OAM_NO_FLIP, 0x250, 8, 0),
     OAM_ENTRY(-37, 14, OAM_DIMS_8x8, OAM_NO_FLIP, 0x26f, 8, 0),
-    OAM_ENTRY(-20, -17, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0),
+    OAM_ENTRY(-20, -17, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0)
 };
 
 static const u16 sRidleyPartOam_ClawTurningAround_Frame0[OAM_DATA_SIZE(4)] = {
@@ -2938,7 +2938,7 @@ static const u16 sRidleyPartOam_ClawTurningAround_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-65, 11, OAM_DIMS_32x32, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-33, 6, OAM_DIMS_16x16, OAM_NO_FLIP, 0x250, 8, 0),
     OAM_ENTRY(-41, 14, OAM_DIMS_8x8, OAM_NO_FLIP, 0x26f, 8, 0),
-    OAM_ENTRY(-24, -17, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0),
+    OAM_ENTRY(-24, -17, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0)
 };
 
 static const u16 sRidleyPartOam_ClawTurningAround_Frame1[OAM_DATA_SIZE(4)] = {
@@ -2946,7 +2946,7 @@ static const u16 sRidleyPartOam_ClawTurningAround_Frame1[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-54, 14, OAM_DIMS_32x32, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-25, 6, OAM_DIMS_16x16, OAM_NO_FLIP, 0x250, 8, 0),
     OAM_ENTRY(-33, 14, OAM_DIMS_8x8, OAM_NO_FLIP, 0x26f, 8, 0),
-    OAM_ENTRY(-16, -17, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0),
+    OAM_ENTRY(-16, -17, OAM_DIMS_16x32, OAM_NO_FLIP, 0x38f, 8, 0)
 };
 
 static const u16 sRidleyPartOam_ClawLiftingSamus_Frame0[OAM_DATA_SIZE(5)] = {
@@ -2955,7 +2955,7 @@ static const u16 sRidleyPartOam_ClawLiftingSamus_Frame0[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-32, 2, OAM_DIMS_16x16, OAM_NO_FLIP, 0x250, 8, 0),
     OAM_ENTRY(-40, 10, OAM_DIMS_8x8, OAM_NO_FLIP, 0x26f, 8, 0),
     OAM_ENTRY(-21, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x38f, 8, 0),
-    OAM_ENTRY(-22, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3cf, 8, 0),
+    OAM_ENTRY(-22, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3cf, 8, 0)
 };
 
 static const u16 sRidleyPartOam_ClawLiftingSamus_Frame1[OAM_DATA_SIZE(5)] = {
@@ -2964,7 +2964,7 @@ static const u16 sRidleyPartOam_ClawLiftingSamus_Frame1[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-36, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x250, 8, 0),
     OAM_ENTRY(-44, 4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x26f, 8, 0),
     OAM_ENTRY(-21, -19, OAM_DIMS_16x16, OAM_NO_FLIP, 0x38f, 8, 0),
-    OAM_ENTRY(-26, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3cf, 8, 0),
+    OAM_ENTRY(-26, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3cf, 8, 0)
 };
 
 static const u16 sRidleyPartOam_ClawLiftingSamus_Frame2[OAM_DATA_SIZE(5)] = {
@@ -2973,7 +2973,7 @@ static const u16 sRidleyPartOam_ClawLiftingSamus_Frame2[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-43, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x250, 8, 0),
     OAM_ENTRY(-51, -3, OAM_DIMS_8x8, OAM_NO_FLIP, 0x26f, 8, 0),
     OAM_ENTRY(-47, -11, OAM_DIMS_32x16, OAM_NO_FLIP, 0x20f, 8, 0),
-    OAM_ENTRY(-20, -19, OAM_DIMS_16x16, OAM_NO_FLIP, 0x38f, 8, 0),
+    OAM_ENTRY(-20, -19, OAM_DIMS_16x16, OAM_NO_FLIP, 0x38f, 8, 0)
 };
 
 static const u16 sRidleyPartOam_ClawLiftingSamus_Frame3[OAM_DATA_SIZE(4)] = {
@@ -2981,7 +2981,7 @@ static const u16 sRidleyPartOam_ClawLiftingSamus_Frame3[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-80, -15, OAM_DIMS_32x32, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-45, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x250, 8, 0),
     OAM_ENTRY(-53, -13, OAM_DIMS_8x8, OAM_NO_FLIP, 0x26f, 8, 0),
-    OAM_ENTRY(-20, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x38f, 8, 0),
+    OAM_ENTRY(-20, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x38f, 8, 0)
 };
 
 static const u16 sRidleyPartOam_ClawLiftingSamus_Frame4[OAM_DATA_SIZE(4)] = {
@@ -2989,7 +2989,7 @@ static const u16 sRidleyPartOam_ClawLiftingSamus_Frame4[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-81, -21, OAM_DIMS_32x32, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-46, -27, OAM_DIMS_16x16, OAM_NO_FLIP, 0x250, 8, 0),
     OAM_ENTRY(-54, -19, OAM_DIMS_8x8, OAM_NO_FLIP, 0x26f, 8, 0),
-    OAM_ENTRY(-20, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x38f, 8, 0),
+    OAM_ENTRY(-20, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x38f, 8, 0)
 };
 
 static const u16 sRidleyPartOam_SamusLifted_Frame0[OAM_DATA_SIZE(4)] = {
@@ -2997,7 +2997,7 @@ static const u16 sRidleyPartOam_SamusLifted_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-83, -30, OAM_DIMS_32x32, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-48, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x250, 8, 0),
     OAM_ENTRY(-56, -27, OAM_DIMS_8x8, OAM_NO_FLIP, 0x26f, 8, 0),
-    OAM_ENTRY(-20, -22, OAM_DIMS_16x16, OAM_NO_FLIP, 0x38f, 8, 0),
+    OAM_ENTRY(-20, -22, OAM_DIMS_16x16, OAM_NO_FLIP, 0x38f, 8, 0)
 };
 
 static const u16 sRidleyPartOam_LeftWingIdle_Frame0[OAM_DATA_SIZE(4)] = {
@@ -3005,7 +3005,7 @@ static const u16 sRidleyPartOam_LeftWingIdle_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(0, -32, OAM_DIMS_32x32, OAM_NO_FLIP, 0x385, 8, 0),
     OAM_ENTRY(0, -48, OAM_DIMS_32x16, OAM_NO_FLIP, 0x345, 8, 0),
     OAM_ENTRY(32, -40, OAM_DIMS_16x32, OAM_NO_FLIP, 0x369, 8, 0),
-    OAM_ENTRY(8, -56, OAM_DIMS_16x8, OAM_NO_FLIP, 0x326, 8, 0),
+    OAM_ENTRY(8, -56, OAM_DIMS_16x8, OAM_NO_FLIP, 0x326, 8, 0)
 };
 
 static const u16 sRidleyPartOam_LeftWingIdle_Frame1[OAM_DATA_SIZE(6)] = {
@@ -3015,33 +3015,33 @@ static const u16 sRidleyPartOam_LeftWingIdle_Frame1[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(0, -8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x3e5, 8, 0),
     OAM_ENTRY(1, -46, OAM_DIMS_32x16, OAM_NO_FLIP, 0x345, 8, 0),
     OAM_ENTRY(32, -38, OAM_DIMS_16x32, OAM_NO_FLIP, 0x369, 8, 0),
-    OAM_ENTRY(9, -54, OAM_DIMS_16x8, OAM_NO_FLIP, 0x326, 8, 0),
+    OAM_ENTRY(9, -54, OAM_DIMS_16x8, OAM_NO_FLIP, 0x326, 8, 0)
 };
 
 static const u16 sRidleyPartOam_LeftWingIdle_Frame2[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(0, -31, OAM_DIMS_32x32, OAM_NO_FLIP, 0x2a5, 8, 0),
     OAM_ENTRY(0, -39, OAM_DIMS_32x8, OAM_NO_FLIP, 0x285, 8, 0),
-    OAM_ENTRY(32, -39, OAM_DIMS_16x32, OAM_NO_FLIP, 0x289, 8, 0),
+    OAM_ENTRY(32, -39, OAM_DIMS_16x32, OAM_NO_FLIP, 0x289, 8, 0)
 };
 
 static const u16 sRidleyPartOam_LeftWingIdle_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(1, -16, OAM_DIMS_32x16, OAM_NO_FLIP, 0x245, 8, 0),
-    OAM_ENTRY(33, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x249, 8, 0),
+    OAM_ENTRY(33, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x249, 8, 0)
 };
 
 static const u16 sRidleyPartOam_LeftWingIdle_Frame4[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(1, -1, OAM_DIMS_32x16, OAM_Y_FLIP, 0x245, 9, 0),
-    OAM_ENTRY(33, -1, OAM_DIMS_16x16, OAM_Y_FLIP, 0x249, 9, 0),
+    OAM_ENTRY(33, -1, OAM_DIMS_16x16, OAM_Y_FLIP, 0x249, 9, 0)
 };
 
 static const u16 sRidleyPartOam_LeftWingIdle_Frame5[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(0, -2, OAM_DIMS_32x32, OAM_Y_FLIP, 0x2a5, 9, 0),
     OAM_ENTRY(0, 30, OAM_DIMS_32x8, OAM_Y_FLIP, 0x285, 9, 0),
-    OAM_ENTRY(32, 6, OAM_DIMS_16x32, OAM_Y_FLIP, 0x289, 9, 0),
+    OAM_ENTRY(32, 6, OAM_DIMS_16x32, OAM_Y_FLIP, 0x289, 9, 0)
 };
 
 static const u16 sRidleyPartOam_RightWingIdle_Frame0[OAM_DATA_SIZE(5)] = {
@@ -3050,7 +3050,7 @@ static const u16 sRidleyPartOam_RightWingIdle_Frame0[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-14, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c5, 9, 0),
     OAM_ENTRY(-10, -44, OAM_DIMS_16x32, OAM_NO_FLIP, 0x347, 9, 0),
     OAM_ENTRY(-10, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c7, 9, 0),
-    OAM_ENTRY(2, -46, OAM_DIMS_16x32, OAM_NO_FLIP, 0x369, 9, 0),
+    OAM_ENTRY(2, -46, OAM_DIMS_16x32, OAM_NO_FLIP, 0x369, 9, 0)
 };
 
 static const u16 sRidleyPartOam_RightWingIdle_Frame1[OAM_DATA_SIZE(5)] = {
@@ -3059,7 +3059,7 @@ static const u16 sRidleyPartOam_RightWingIdle_Frame1[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-14, -17, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c5, 9, 0),
     OAM_ENTRY(-10, -43, OAM_DIMS_16x32, OAM_NO_FLIP, 0x347, 9, 0),
     OAM_ENTRY(-10, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3c7, 9, 0),
-    OAM_ENTRY(2, -45, OAM_DIMS_16x32, OAM_NO_FLIP, 0x369, 9, 0),
+    OAM_ENTRY(2, -45, OAM_DIMS_16x32, OAM_NO_FLIP, 0x369, 9, 0)
 };
 
 static const u16 sRidleyPartOam_RightWingIdle_Frame2[OAM_DATA_SIZE(8)] = {
@@ -3071,19 +3071,19 @@ static const u16 sRidleyPartOam_RightWingIdle_Frame2[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-3, -31, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2a7, 9, 0),
     OAM_ENTRY(-3, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2e7, 9, 0),
     OAM_ENTRY(8, -39, OAM_DIMS_16x16, OAM_NO_FLIP, 0x289, 9, 0),
-    OAM_ENTRY(9, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2c9, 9, 0),
+    OAM_ENTRY(9, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2c9, 9, 0)
 };
 
 static const u16 sRidleyPartOam_RightWingIdle_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-17, -15, OAM_DIMS_32x16, OAM_NO_FLIP, 0x245, 9, 0),
-    OAM_ENTRY(15, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x249, 9, 0),
+    OAM_ENTRY(15, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x249, 9, 0)
 };
 
 static const u16 sRidleyPartOam_RightWingIdle_Frame4[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-20, -3, OAM_DIMS_32x16, OAM_Y_FLIP, 0x245, 9, 0),
-    OAM_ENTRY(12, -3, OAM_DIMS_16x16, OAM_Y_FLIP, 0x249, 9, 0),
+    OAM_ENTRY(12, -3, OAM_DIMS_16x16, OAM_Y_FLIP, 0x249, 9, 0)
 };
 
 static const u16 sRidleyPartOam_RightWingIdle_Frame5[OAM_DATA_SIZE(8)] = {
@@ -3095,57 +3095,57 @@ static const u16 sRidleyPartOam_RightWingIdle_Frame5[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-3, 16, OAM_DIMS_16x16, OAM_Y_FLIP, 0x2a7, 8, 0),
     OAM_ENTRY(-3, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x2e7, 8, 0),
     OAM_ENTRY(8, 24, OAM_DIMS_16x16, OAM_Y_FLIP, 0x289, 8, 0),
-    OAM_ENTRY(9, 8, OAM_DIMS_16x16, OAM_Y_FLIP, 0x2c9, 8, 0),
+    OAM_ENTRY(9, 8, OAM_DIMS_16x16, OAM_Y_FLIP, 0x2c9, 8, 0)
 };
 
 static const u16 sRidleyTailOam_Part_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x207, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x207, 8, 0)
 };
 
 static const u16 sRidleyTailOam_TipPointingDown_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x380, 8, 0),
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x380, 8, 0)
 };
 
 static const u16 sRidleyTailOam_TipPointingUp_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_Y_FLIP, 0x380, 8, 0),
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_Y_FLIP, 0x380, 8, 0)
 };
 
 static const u16 sRidleyTailOam_TipPointingDiagonallyDownRight_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x398, 8, 0),
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x398, 8, 0)
 };
 
 static const u16 sRidleyTailOam_TipPointingDiagonallyUpRight_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_Y_FLIP, 0x398, 8, 0),
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_Y_FLIP, 0x398, 8, 0)
 };
 
 static const u16 sRidleyTailOam_TipPointingDiagonallyDownLeft_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_X_FLIP, 0x398, 8, 0),
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_X_FLIP, 0x398, 8, 0)
 };
 
 static const u16 sRidleyTailOam_TipPointingDiagonallyUpLeft_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_XY_FLIP, 0x398, 8, 0),
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_XY_FLIP, 0x398, 8, 0)
 };
 
 static const u16 sRidleyOam_Square_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x303, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x303, 8, 0)
 };
 
 static const u16 sRidleyFireballOam_Small_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x209, 10, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x209, 10, 0)
 };
 
 static const u16 sRidleyFireballOam_Big_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x39c, 10, 0),
+    OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x39c, 10, 0)
 };
 
 const struct FrameData sRidleyOam_Idle[7] = {

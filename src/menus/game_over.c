@@ -260,7 +260,7 @@ static void GameOverUpdateTextGfx(void)
         *dst = (*dst & 0xFFF) | palette << 12;
 }
 
-static const u32* sGameOverTextPromptGfxPointers[LANGUAGE_END] = {
+static const u32* sGameOverTextPromptGfxPointers[LANGUAGE_COUNT] = {
     [LANGUAGE_JAPANESE] = sGameOverTextPromptEnglishGfx,
     [LANGUAGE_HIRAGANA] = sGameOverTextPromptHiraganaGfx,
     [LANGUAGE_ENGLISH] = sGameOverTextPromptEnglishGfx,

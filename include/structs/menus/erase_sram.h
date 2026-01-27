@@ -2,13 +2,16 @@
 #define ERASE_SRAM_MENU_STRUCT_H
 
 #include "types.h"
+
+#include "constants/menus/erase_sram.h"
+
 #include "structs/menu.h"
 
 #define ERASE_SRAM_DATA sNonGameplayRamPointer->eraseSram
 
 struct EraseSramData {
-    u8 currentOption;
-    u8 nextOption;
+    EraseSramOption currentOption;
+    EraseSramOption nextOption;
     u8 language;
     u16 timer;
     u8 bldyTarget;

@@ -23,7 +23,7 @@ static struct CutsceneGraphicsData sBeforeRuinsTestCutsceneGraphicsData = {
     .paletteStage = 0,
     .maxTimer = 4,
     .maxPaletteStage = 0,
-    .timer = 0,
+    .timer = 0
 };
 
 /**
@@ -52,10 +52,10 @@ static u8 BeforeRuinsTestSamusCloseUp(void)
             CutsceneSetBgcntPageData(sBeforeRuinsTestPageData[7]);
             CutsceneSetBgcntPageData(sBeforeRuinsTestPageData[6]);
 
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sBeforeRuinsTestPageData[5].bg, NON_GAMEPLAY_START_BG_POS);
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sBeforeRuinsTestPageData[8].bg, NON_GAMEPLAY_START_BG_POS);
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sBeforeRuinsTestPageData[7].bg, NON_GAMEPLAY_START_BG_POS);
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sBeforeRuinsTestPageData[6].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sBeforeRuinsTestPageData[5].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sBeforeRuinsTestPageData[8].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sBeforeRuinsTestPageData[7].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sBeforeRuinsTestPageData[6].bg, NON_GAMEPLAY_START_BG_POS);
             CutsceneReset();
 
             // TODO: Fix enum instead of using ifdef here
@@ -179,15 +179,15 @@ static u8 BeforeRuinsTestWallAndGreyVoice(void)
             CutsceneSetBgcntPageData(sBeforeRuinsTestPageData[2]);
             CutsceneSetBgcntPageData(sBeforeRuinsTestPageData[3]);
 
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sBeforeRuinsTestPageData[2].bg, NON_GAMEPLAY_START_BG_POS);
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sBeforeRuinsTestPageData[3].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sBeforeRuinsTestPageData[2].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sBeforeRuinsTestPageData[3].bg, NON_GAMEPLAY_START_BG_POS);
 
             CallLZ77UncompVram(sBeforeRuinsTestYoungSamusAndGreyVoiceCloseUpGfx, BGCNT_TO_VRAM_CHAR_BASE(sBeforeRuinsTestPageData[4].graphicsPage));
             CallLZ77UncompVram(sBeforeRuinsTestYoungSamusAndGreyVoiceCloseUpTileTable, BGCNT_TO_VRAM_TILE_BASE(sBeforeRuinsTestPageData[4].tiletablePage));
 
             CutsceneSetBgcntPageData(sBeforeRuinsTestPageData[4]);
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS, sBeforeRuinsTestPageData[4].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 5);
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_VOFS, sBeforeRuinsTestPageData[4].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X, sBeforeRuinsTestPageData[4].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 5);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_Y, sBeforeRuinsTestPageData[4].bg, NON_GAMEPLAY_START_BG_POS);
             CutsceneReset();
 
             gWrittenToBldalpha_L = 0;
@@ -409,9 +409,9 @@ static u8 BeforeRuinsTestInit(void)
     CutsceneSetBgcntPageData(sBeforeRuinsTestPageData[1]);
     CutsceneReset();
 
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sBeforeRuinsTestPageData[0].bg, NON_GAMEPLAY_START_BG_POS);
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_VOFS, sBeforeRuinsTestPageData[1].bg, NON_GAMEPLAY_START_BG_POS);
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS, sBeforeRuinsTestPageData[1].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 16);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sBeforeRuinsTestPageData[0].bg, NON_GAMEPLAY_START_BG_POS);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_Y, sBeforeRuinsTestPageData[1].bg, NON_GAMEPLAY_START_BG_POS);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X, sBeforeRuinsTestPageData[1].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 16);
 
     PlayMusic(MUSIC_CHOZO_STATUE_HINT_DELAY, 0);
 
@@ -444,7 +444,7 @@ static struct CutsceneStageData sBeforeRuinsTestStageData[5] = {
     [4] = {
         .pFunction = CutsceneEndFunction,
         .oamLength = 0
-    },
+    }
 };
 
 /**

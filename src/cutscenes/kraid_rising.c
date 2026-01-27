@@ -18,6 +18,9 @@
 #include "structs/display.h"
 #include "structs/samus.h"
 
+#define KRAID_RISING_PUFF_AMOUNT 11
+#define KRAID_RISING_DEBRIS_AMOUNT 6
+
 static struct CutsceneOamData* KraidRisingUpdatePuff(struct CutsceneOamData* pOam, u8 puffID);
 static struct CutsceneOamData* KraidRisingUpdateDebris(struct CutsceneOamData* pOam, u8 debrisID);
 static void KraidRisingProcessOam(void);
@@ -445,13 +448,13 @@ static u8 KraidRisingInit(void)
 
     // Setup for the eyes closed tile table
     CutsceneSetBgcntPageData(sKraidRisingPagesData[0]);
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sKraidRisingPagesData[0].bg, NON_GAMEPLAY_START_BG_POS);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sKraidRisingPagesData[0].bg, NON_GAMEPLAY_START_BG_POS);
     CutsceneReset();
 
     gWrittenToBldy_NonGameplay = BLDY_MAX_VALUE;
     CUTSCENE_DATA.bldcnt = BLDCNT_SCREEN_FIRST_TARGET | BLDCNT_BRIGHTNESS_DECREASE_EFFECT;
 
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_VOFS, sKraidRisingPagesData[2].bg, NON_GAMEPLAY_START_BG_POS - HALF_BLOCK_SIZE);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_Y, sKraidRisingPagesData[2].bg, NON_GAMEPLAY_START_BG_POS - HALF_BLOCK_SIZE);
 
     // Only display the background of the eyes closed
     CUTSCENE_DATA.dispcnt = sKraidRisingPagesData[0].bg;

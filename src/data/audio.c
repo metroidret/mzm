@@ -42,11 +42,11 @@ const u8 sCgb3Vol[16] = {
 const u8 sUnk_808cc4d[19] = {
     0x0, 0x20, 0x16, 0x10, 0xd, 0xb, 0xa, 0x8,
     0x8, 0xa, 0xb, 0xd, 0x10, 0x16, 0x20, 0x0,
-    0x0, 0x0, 0x0,
+    0x0, 0x0, 0x0
 };
 
 
-const u32 sNativeSampleRate[SOUND_MODE_FREQ_END] = {
+const u32 sNativeSampleRate[SOUND_MODE_FREQ_COUNT] = {
     0,
     SAMPLES_PER_SECOND(96), SAMPLES_PER_SECOND(132), SAMPLES_PER_SECOND(176),
     SAMPLES_PER_SECOND(224), SAMPLES_PER_SECOND(264), SAMPLES_PER_SECOND(304),
@@ -54,7 +54,7 @@ const u32 sNativeSampleRate[SOUND_MODE_FREQ_END] = {
     SAMPLES_PER_SECOND(608), SAMPLES_PER_SECOND(672), SAMPLES_PER_SECOND(704)
 };
 
-const u32 sMusicPitchData[SOUND_MODE_FREQ_END] = {
+const u32 sMusicPitchData[SOUND_MODE_FREQ_COUNT] = {
     0x0,
     0xB6DEB, 0x85002, 0x63C01,
     0x4E5FF, 0x42801, 0x39C02,
@@ -62,7 +62,7 @@ const u32 sMusicPitchData[SOUND_MODE_FREQ_END] = {
     0x1CE01, 0x1A1FF, 0x18F00
 };
 
-const u16 sPcmSamplesPerVBlankTable[SOUND_MODE_FREQ_END] = {
+const u16 sPcmSamplesPerVBlankTable[SOUND_MODE_FREQ_COUNT] = {
     0,             // unk1          // unk2
     96, 132, 176,  // 6, 8.25, 11   // 16.00, 11.6363, 8.7272
     224, 264, 304, // 14, 16.5, 19  // 6.8571, 5.8181, 5.0526

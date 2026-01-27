@@ -43,7 +43,7 @@
 #define MECHA_RIDLEY_POSE_FIRST_EYE_GLOW 0x69
 #define MECHA_RIDLEY_POSE_SECOND_EYE_GLOW 0x6A
 
-enum MechaRidleySamusPosition {
+MAKE_ENUM(u8, MechaRidleySamusPosition) {
     MECHA_RIDLEY_SAMUS_POSITION_LOW,
     MECHA_RIDLEY_SAMUS_POSITION_MIDDLE,
     MECHA_RIDLEY_SAMUS_POSITION_HIGH
@@ -64,7 +64,7 @@ enum MechaRidleySamusPosition {
 
 // Eye part
 
-enum EyeState {
+MAKE_ENUM(u8, EyeState) {
     EYE_STATE_IDLE,
     EYE_STATE_BLINKING_INIT,
     EYE_STATE_LASER_ATTACK_INIT,
@@ -76,7 +76,7 @@ enum EyeState {
 
 // Missile launcher part
 
-enum MissileLauncherState {
+MAKE_ENUM(u8, MissileLauncherState) {
     MISSILE_LAUNCHER_STATE_IDLE,
     MISSILE_LAUNCHER_STATE_MISSILE_ATTACK_INIT,
     MISSILE_LAUNCHER_STATE_OPENING,
@@ -86,14 +86,14 @@ enum MissileLauncherState {
 
 // Fireballs
 
-enum FireballType {
+MAKE_ENUM(u8, FireballType) {
     FIREBALL_LOW,
     FIREBALL_HIGH
 };
 
 // Laser
 
-enum LaserDirection {
+MAKE_ENUM(u8, LaserDirection) {
     LASER_DIRECTION_FORWARD,
     LASER_DIRECTION_SLIGHTLY_DOWN,
     LASER_DIRECTION_DOWN,
@@ -105,7 +105,7 @@ enum LaserDirection {
 
 #define MECHA_RIDLEY_LASER_SPEED (QUARTER_BLOCK_SIZE + PIXEL_SIZE)
 
-enum HealthThreshold {
+MAKE_ENUM(u8, HealthThreshold) {
     HEALTH_THRESHOLD_FULL,
     HEALTH_THRESHOLD_COVER_DAMAGED,
     HEALTH_THRESHOLD_COVER_BROKEN,
@@ -149,7 +149,7 @@ if (gSubSpriteData1.health < maxHealth * 3 / 4)                     \
  */
 
 
-static const struct FrameData* sMechaRidleyFrameDataPointers[MECHA_RIDLEY_OAM_END] = {
+static const struct FrameData* sMechaRidleyFrameDataPointers[MECHA_RIDLEY_OAM_COUNT] = {
     [MECHA_RIDLEY_OAM_TAIL] = sMechaRidleyPartOam_Tail,
     [MECHA_RIDLEY_OAM_RING] = sMechaRidleyPartOam_Ring,
     [MECHA_RIDLEY_OAM_COVER] = sMechaRidleyPartOam_Cover,

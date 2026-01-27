@@ -7,7 +7,7 @@
 MAKE_ENUM(u8, Escape) {
     ESCAPE_NONE,
     ESCAPE_MOTHER_BRAIN,
-    ESCAPE_MECHA_RIDLEY,
+    ESCAPE_MECHA_RIDLEY
 };
 
 MAKE_ENUM(u8, EscapeStatus) {

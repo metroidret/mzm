@@ -107,7 +107,7 @@ static const u16 sDemo0_Inputs[] = {
 	KEY_START | KEY_LEFT,
 	KEY_NONE,
 	KEY_NONE,
-	KEY_NONE,
+	KEY_NONE
 };
 
 static const u16 sDemo0_Durations[ARRAY_SIZE(sDemo0_Inputs)] = {
@@ -214,7 +214,7 @@ static const u16 sDemo0_Durations[ARRAY_SIZE(sDemo0_Inputs)] = {
 	1,
 	0,
 	0,
-	0,
+	0
 };
 
 static const u16 sDemo1_Inputs[] = {
@@ -305,7 +305,7 @@ static const u16 sDemo1_Inputs[] = {
 	KEY_NONE,
 	KEY_LEFT,
 	KEY_START | KEY_LEFT,
-	KEY_NONE,
+	KEY_NONE
 };
 
 static const u16 sDemo1_Durations[ARRAY_SIZE(sDemo1_Inputs)] = {
@@ -396,7 +396,7 @@ static const u16 sDemo1_Durations[ARRAY_SIZE(sDemo1_Inputs)] = {
 	8,
 	15,
 	1,
-	0,
+	0
 };
 
 static const u16 sDemo2_Inputs[] = {
@@ -479,7 +479,7 @@ static const u16 sDemo2_Inputs[] = {
 	KEY_NONE,
 	KEY_NONE,
 	KEY_NONE,
-	KEY_NONE,
+	KEY_NONE
 };
 
 static const u16 sDemo2_Durations[ARRAY_SIZE(sDemo2_Inputs)] = {
@@ -562,7 +562,7 @@ static const u16 sDemo2_Durations[ARRAY_SIZE(sDemo2_Inputs)] = {
 	0,
 	0,
 	0,
-	0,
+	0
 };
 
 static const u16 sDemo3_Inputs[] = {
@@ -629,7 +629,7 @@ static const u16 sDemo3_Inputs[] = {
 	KEY_A | KEY_RIGHT,
 	KEY_RIGHT,
 	KEY_START | KEY_RIGHT,
-	KEY_NONE,
+	KEY_NONE
 };
 
 static const u16 sDemo3_Durations[ARRAY_SIZE(sDemo3_Inputs)] = {
@@ -696,7 +696,7 @@ static const u16 sDemo3_Durations[ARRAY_SIZE(sDemo3_Inputs)] = {
 	12,
 	43,
 	1,
-	0,
+	0
 };
 
 static const u16 sDemo4_Inputs[] = {
@@ -763,7 +763,7 @@ static const u16 sDemo4_Inputs[] = {
 	KEY_NONE,
 	KEY_NONE,
 	KEY_NONE,
-	KEY_NONE,
+	KEY_NONE
 };
 
 static const u16 sDemo4_Durations[ARRAY_SIZE(sDemo4_Inputs)] = {
@@ -830,7 +830,7 @@ static const u16 sDemo4_Durations[ARRAY_SIZE(sDemo4_Inputs)] = {
 	0,
 	0,
 	0,
-	0,
+	0
 };
 
 static const u16 sDemo5_Inputs[] = {
@@ -873,7 +873,7 @@ static const u16 sDemo5_Inputs[] = {
 	KEY_NONE,
 	KEY_NONE,
 	KEY_NONE,
-	KEY_NONE,
+	KEY_NONE
 };
 
 static const u16 sDemo5_Durations[ARRAY_SIZE(sDemo5_Inputs)] = {
@@ -916,7 +916,7 @@ static const u16 sDemo5_Durations[ARRAY_SIZE(sDemo5_Inputs)] = {
 	0,
 	0,
 	0,
-	0,
+	0
 };
 
 static const u16 sDemo6_Inputs[] = {
@@ -951,7 +951,7 @@ static const u16 sDemo6_Inputs[] = {
 	KEY_B | KEY_R,
 	KEY_R,
 	KEY_NONE,
-	KEY_START,
+	KEY_START
 };
 
 static const u16 sDemo6_Durations[ARRAY_SIZE(sDemo6_Inputs)] = {
@@ -986,7 +986,7 @@ static const u16 sDemo6_Durations[ARRAY_SIZE(sDemo6_Inputs)] = {
 	8,
 	17,
 	51,
-	1,
+	1
 };
 
 static const u16 sDemo7_Inputs[] = {
@@ -1029,7 +1029,7 @@ static const u16 sDemo7_Inputs[] = {
 	KEY_RIGHT,
 	KEY_START | KEY_RIGHT,
 	KEY_NONE,
-	KEY_NONE,
+	KEY_NONE
 };
 
 static const u16 sDemo7_Durations[ARRAY_SIZE(sDemo7_Inputs)] = {
@@ -1072,7 +1072,7 @@ static const u16 sDemo7_Durations[ARRAY_SIZE(sDemo7_Inputs)] = {
 	229,
 	1,
 	0,
-	0,
+	0
 };
 
 static const u16 sDemo8_Inputs[] = {
@@ -1211,7 +1211,7 @@ static const u16 sDemo8_Inputs[] = {
 	KEY_RIGHT,
 	KEY_NONE,
 	KEY_LEFT,
-	KEY_START | KEY_LEFT,
+	KEY_START | KEY_LEFT
 };
 
 static const u16 sDemo8_Durations[ARRAY_SIZE(sDemo8_Inputs)] = {
@@ -1350,7 +1350,7 @@ static const u16 sDemo8_Durations[ARRAY_SIZE(sDemo8_Inputs)] = {
 	81,
 	10,
 	47,
-	1,
+	1
 };
 
 static const u16 sDemo9_Inputs[] = {
@@ -1401,7 +1401,7 @@ static const u16 sDemo9_Inputs[] = {
 	KEY_NONE,
 	KEY_NONE,
 	KEY_NONE,
-	KEY_NONE,
+	KEY_NONE
 };
 
 static const u16 sDemo9_Durations[ARRAY_SIZE(sDemo9_Inputs)] = {
@@ -1452,7 +1452,7 @@ static const u16 sDemo9_Durations[ARRAY_SIZE(sDemo9_Inputs)] = {
 	0,
 	0,
 	0,
-	0,
+	0
 };
 
 static const u16 sDemo10_Inputs[] = {
@@ -1543,7 +1543,7 @@ static const u16 sDemo10_Inputs[] = {
 	KEY_NONE,
 	KEY_B,
 	KEY_NONE,
-	KEY_START,
+	KEY_START
 };
 
 static const u16 sDemo10_Durations[ARRAY_SIZE(sDemo10_Inputs)] = {
@@ -1634,7 +1634,7 @@ static const u16 sDemo10_Durations[ARRAY_SIZE(sDemo10_Inputs)] = {
 	4,
 	6,
 	72,
-	1,
+	1
 };
 
 static const u16 sDemo11_Inputs[] = {
@@ -1669,7 +1669,7 @@ static const u16 sDemo11_Inputs[] = {
 	KEY_A | KEY_RIGHT,
 	KEY_RIGHT,
 	KEY_START | KEY_RIGHT,
-	KEY_NONE,
+	KEY_NONE
 };
 
 static const u16 sDemo11_Durations[ARRAY_SIZE(sDemo11_Inputs)] = {
@@ -1704,7 +1704,7 @@ static const u16 sDemo11_Durations[ARRAY_SIZE(sDemo11_Inputs)] = {
 	9,
 	40,
 	1,
-	0,
+	0
 };
 
 static const u16 sDemo12_Inputs[] = {
@@ -1755,7 +1755,7 @@ static const u16 sDemo12_Inputs[] = {
 	KEY_START | KEY_LEFT,
 	KEY_NONE,
 	KEY_NONE,
-	KEY_NONE,
+	KEY_NONE
 };
 
 static const u16 sDemo12_Durations[ARRAY_SIZE(sDemo12_Inputs)] = {
@@ -1806,7 +1806,7 @@ static const u16 sDemo12_Durations[ARRAY_SIZE(sDemo12_Inputs)] = {
 	1,
 	0,
 	0,
-	0,
+	0
 };
 
 static const u16 sDemo13_Inputs[] = {
@@ -1849,7 +1849,7 @@ static const u16 sDemo13_Inputs[] = {
 	KEY_NONE,
 	KEY_NONE,
 	KEY_NONE,
-	KEY_NONE,
+	KEY_NONE
 };
 
 static const u16 sDemo13_Durations[ARRAY_SIZE(sDemo13_Inputs)] = {
@@ -1892,7 +1892,7 @@ static const u16 sDemo13_Durations[ARRAY_SIZE(sDemo13_Inputs)] = {
 	0,
 	0,
 	0,
-	0,
+	0
 };
 
 static const u16 sDemo14_Inputs[] = {
@@ -1919,7 +1919,7 @@ static const u16 sDemo14_Inputs[] = {
 	KEY_NONE,
 	KEY_B,
 	KEY_NONE,
-	KEY_START,
+	KEY_START
 };
 
 static const u16 sDemo14_Durations[ARRAY_SIZE(sDemo14_Inputs)] = {
@@ -1946,7 +1946,7 @@ static const u16 sDemo14_Durations[ARRAY_SIZE(sDemo14_Inputs)] = {
 	10,
 	10,
 	56,
-	1,
+	1
 };
 
 #ifdef REGION_US_BETA
@@ -2263,7 +2263,7 @@ static const u16 sDemo15_Inputs[] = {
 	KEY_NONE,
 	KEY_NONE,
 	KEY_NONE,
-	KEY_NONE,
+	KEY_NONE
 };
 
 static const u16 sDemo15_Durations[ARRAY_SIZE(sDemo15_Inputs)] = {
@@ -2362,7 +2362,7 @@ static const u16 sDemo15_Durations[ARRAY_SIZE(sDemo15_Inputs)] = {
 	0,
 	0,
 	0,
-	0,
+	0
 };
 
 #endif // REGION_US_BETA
@@ -2548,7 +2548,7 @@ const struct SaveDemo sDemo0_Ram = {
         UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX,
         UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX,
         UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX
-    },
+    }
 };
 
 const struct SaveDemo sDemo1_Ram = {
@@ -2732,7 +2732,7 @@ const struct SaveDemo sDemo1_Ram = {
         UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX,
         UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX,
         UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX
-    },
+    }
 };
 
 const struct SaveDemo sDemo2_Ram = {

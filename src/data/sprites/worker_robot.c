@@ -11,7 +11,7 @@ static const u16 sWorkerRobotOam_Walking_Frame2[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-4, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x25e, 8, 0),
     OAM_ENTRY(-5, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-5, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(-9, -11, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
+    OAM_ENTRY(-9, -11, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0)
 };
 
 static const u16 sWorkerRobotOam_Walking_Frame3[OAM_DATA_SIZE(6)] = {
@@ -21,7 +21,7 @@ static const u16 sWorkerRobotOam_Walking_Frame3[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-3, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x25e, 8, 0),
     OAM_ENTRY(-5, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-4, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(-14, -11, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
+    OAM_ENTRY(-14, -11, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0)
 };
 
 static const u16 sWorkerRobotOam_Walking_Frame4[OAM_DATA_SIZE(8)] = {
@@ -33,7 +33,7 @@ static const u16 sWorkerRobotOam_Walking_Frame4[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-4, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-3, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-13, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(-14, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-14, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sWorkerRobotOam_Walking_Frame5[OAM_DATA_SIZE(8)] = {
@@ -45,7 +45,7 @@ static const u16 sWorkerRobotOam_Walking_Frame5[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-4, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-12, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
     OAM_ENTRY(-13, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(-12, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-12, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sWorkerRobotOam_Walking_Frame6[OAM_DATA_SIZE(6)] = {
@@ -55,7 +55,7 @@ static const u16 sWorkerRobotOam_Walking_Frame6[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(4, -38, OAM_DIMS_8x32, OAM_NO_FLIP, 0x208, 8, 0),
     OAM_ENTRY(-9, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
     OAM_ENTRY(-10, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(-10, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-10, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sWorkerRobotOam_Walking_Frame7[OAM_DATA_SIZE(4)] = {
@@ -63,7 +63,7 @@ static const u16 sWorkerRobotOam_Walking_Frame7[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-8, -11, OAM_DIMS_16x8, OAM_NO_FLIP, 0x25e, 8, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
     OAM_ENTRY(-12, -38, OAM_DIMS_16x32, OAM_NO_FLIP, 0x203, 8, 0),
-    OAM_ENTRY(4, -38, OAM_DIMS_8x32, OAM_NO_FLIP, 0x205, 8, 0),
+    OAM_ENTRY(4, -38, OAM_DIMS_8x32, OAM_NO_FLIP, 0x205, 8, 0)
 };
 
 static const u16 sWorkerRobotOam_Walking_Frame0[OAM_DATA_SIZE(8)] = {
@@ -75,7 +75,7 @@ static const u16 sWorkerRobotOam_Walking_Frame0[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-9, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-6, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
     OAM_ENTRY(-9, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sWorkerRobotOam_Walking_Frame1[OAM_DATA_SIZE(6)] = {
@@ -85,7 +85,7 @@ static const u16 sWorkerRobotOam_Walking_Frame1[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(4, -38, OAM_DIMS_8x32, OAM_NO_FLIP, 0x214, 8, 0),
     OAM_ENTRY(-8, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-7, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(-7, -10, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
+    OAM_ENTRY(-7, -10, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0)
 };
 
 static const u16 sWorkerRobotOam_BackToSleep_Frame0[OAM_DATA_SIZE(8)] = {
@@ -97,7 +97,7 @@ static const u16 sWorkerRobotOam_BackToSleep_Frame0[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-9, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-6, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
     OAM_ENTRY(-9, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sWorkerRobotOam_BackToSleep_Frame1[OAM_DATA_SIZE(9)] = {
@@ -110,7 +110,7 @@ static const u16 sWorkerRobotOam_BackToSleep_Frame1[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-9, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-6, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
     OAM_ENTRY(-9, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sWorkerRobotOam_BackToSleep_Frame2[OAM_DATA_SIZE(9)] = {
@@ -123,7 +123,7 @@ static const u16 sWorkerRobotOam_BackToSleep_Frame2[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-9, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-6, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
     OAM_ENTRY(-9, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sWorkerRobotOam_BackToSleep_Frame3[OAM_DATA_SIZE(9)] = {
@@ -136,7 +136,7 @@ static const u16 sWorkerRobotOam_BackToSleep_Frame3[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-9, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-6, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
     OAM_ENTRY(-9, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sWorkerRobotOam_BackToSleep_Frame4[OAM_DATA_SIZE(9)] = {
@@ -149,7 +149,7 @@ static const u16 sWorkerRobotOam_BackToSleep_Frame4[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-9, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-6, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 8, 0),
     OAM_ENTRY(-9, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
-    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sWorkerRobotOam_BackToSleep_Frame5[OAM_DATA_SIZE(9)] = {
@@ -162,7 +162,7 @@ static const u16 sWorkerRobotOam_BackToSleep_Frame5[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-9, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
     OAM_ENTRY(-6, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 9, 0),
     OAM_ENTRY(-9, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
-    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0)
 };
 
 static const u16 sWorkerRobotOam_BackToSleep_Frame6[OAM_DATA_SIZE(9)] = {
@@ -175,7 +175,7 @@ static const u16 sWorkerRobotOam_BackToSleep_Frame6[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
     OAM_ENTRY(-7, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 9, 0),
     OAM_ENTRY(-9, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
-    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0)
 };
 
 static const u16 sWorkerRobotOam_Sleeping_Frame0[OAM_DATA_SIZE(9)] = {
@@ -188,7 +188,7 @@ static const u16 sWorkerRobotOam_Sleeping_Frame0[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
     OAM_ENTRY(-7, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 9, 0),
     OAM_ENTRY(-9, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
-    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0)
 };
 
 static const u16 sWorkerRobotOam_UnusedFrame[OAM_DATA_SIZE(9)] = {
@@ -201,7 +201,7 @@ static const u16 sWorkerRobotOam_UnusedFrame[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-9, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
     OAM_ENTRY(-6, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 9, 0),
     OAM_ENTRY(-9, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
-    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0)
 };
 
 static const u16 sWorkerRobotOam_WakingUp_Frame2[OAM_DATA_SIZE(9)] = {
@@ -214,7 +214,7 @@ static const u16 sWorkerRobotOam_WakingUp_Frame2[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
     OAM_ENTRY(-7, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 9, 0),
     OAM_ENTRY(-9, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
-    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0)
 };
 
 static const u16 sWorkerRobotOam_Standing_Frame1[OAM_DATA_SIZE(9)] = {
@@ -227,7 +227,7 @@ static const u16 sWorkerRobotOam_Standing_Frame1[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
     OAM_ENTRY(-7, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 9, 0),
     OAM_ENTRY(-9, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
-    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0)
 };
 
 static const u16 sWorkerRobotOam_GoingToSleep_Frame1[OAM_DATA_SIZE(8)] = {
@@ -239,7 +239,7 @@ static const u16 sWorkerRobotOam_GoingToSleep_Frame1[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
     OAM_ENTRY(-7, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27e, 9, 0),
     OAM_ENTRY(-9, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
-    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0),
+    OAM_ENTRY(-8, -5, OAM_DIMS_16x8, OAM_NO_FLIP, 0x21e, 9, 0)
 };
 
 const struct FrameData sWorkerRobotOam_Walking[9] = {

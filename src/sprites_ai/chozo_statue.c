@@ -29,7 +29,7 @@
 
 #define DELAY_BEFORE_HINT (CONVERT_SECONDS(2.f))
 
-static const struct FrameData* sChozoStatueFrameDataPointers[CHOZO_STATUE_OAM_END] = {
+static const struct FrameData* sChozoStatueFrameDataPointers[CHOZO_STATUE_OAM_COUNT] = {
     [CHOZO_STATUE_OAM_LEG_STANDING] = sChozoStatuePartOam_LegStanding,
     [CHOZO_STATUE_OAM_LEG_SITTING] = sChozoStatuePartOam_LegSitting,
     [CHOZO_STATUE_OAM_LEG_SEATED] = sChozoStatuePartOam_LegSeated,
@@ -45,7 +45,7 @@ static const struct FrameData* sChozoStatueFrameDataPointers[CHOZO_STATUE_OAM_EN
     [CHOZO_STATUE_OAM_BALL_NORMAL_REVEALING] = sChozoBallOam_NormalRevealing,
     [CHOZO_STATUE_OAM_BALL_NORMAL_REVEALED] = sChozoBallOam_NormalRevealed,
     [CHOZO_STATUE_OAM_REFILL] = sChozoStatueRefillOam,
-    [CHOZO_STATUE_OAM_REFILL_GLOW_IDLE] = sChozoStatuePartOam_GlowIdle,
+    [CHOZO_STATUE_OAM_REFILL_GLOW_IDLE] = sChozoStatuePartOam_GlowIdle
 };
 
 /**
@@ -80,7 +80,7 @@ static void ChozoStatueSyncSubSprites(void)
  * 
  * @param spriteId Chozo statue sprite ID
  */
-void ChozoStatueRegisterItem(u8 spriteId)
+void ChozoStatueRegisterItem(PrimarySprite spriteId)
 {
     switch (spriteId)
     {
@@ -198,11 +198,11 @@ void ChozoStatueSetDirection(void)
  * @brief 13de0 | 2bc | Gets the behavior of the chozo statue with the ID in parameter
  * 
  * @param spriteId Chozo statue sprite ID
- * @return u8 Behavior
+ * @return ChozoStatueBehavior Behavior
  */
-u8 ChozoStatueGetBehavior(u8 spriteId)
+ChozoStatueBehavior ChozoStatueGetBehavior(PrimarySprite spriteId)
 {
-    u8 behavior;
+    ChozoStatueBehavior behavior;
 
     behavior = CHOZO_STATUE_BEHAVIOR_ITEM;
 
@@ -329,7 +329,7 @@ u8 ChozoStatueGetBehavior(u8 spriteId)
  */
 static void ChozoStatueInit(void)
 {
-    u8 behavior;
+    ChozoStatueBehavior behavior;
     u8 gfxSlot;
     u8 ramSlot;
     u16 yPosition;
@@ -695,7 +695,7 @@ static void ChozoStatueSleeping(void)
 static void ChozoStatuePartInit(void)
 {
     u8 ramSlot;
-    u8 behavior;
+    ChozoStatueBehavior behavior;
 
     ramSlot = gCurrentSprite.primarySpriteRamSlot;
 

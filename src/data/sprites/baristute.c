@@ -30,7 +30,7 @@ static const u16 sBaristuteOam_Idle_Frame0[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-17, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(-32, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-35, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(-23, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-23, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sBaristuteOam_Walking_Frame1[OAM_DATA_SIZE(17)] = {
@@ -51,7 +51,7 @@ static const u16 sBaristuteOam_Walking_Frame1[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(0, -36, OAM_DIMS_16x16, OAM_X_FLIP, 0x202, 8, 0),
     OAM_ENTRY(-35, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-38, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21a, 8, 0),
-    OAM_ENTRY(-27, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-27, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sBaristuteOam_Walking_Frame2[OAM_DATA_SIZE(17)] = {
@@ -72,7 +72,7 @@ static const u16 sBaristuteOam_Walking_Frame2[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(-16, -40, OAM_DIMS_16x16, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(-37, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-41, -22, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21a, 8, 0),
-    OAM_ENTRY(-27, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-27, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sBaristuteOam_Walking_Frame3[OAM_DATA_SIZE(17)] = {
@@ -93,7 +93,7 @@ static const u16 sBaristuteOam_Walking_Frame3[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(9, -11, OAM_DIMS_16x16, OAM_X_FLIP, 0x21e, 8, 0),
     OAM_ENTRY(-33, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-37, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(-24, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-24, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sBaristuteOam_Walking_Frame4[OAM_DATA_SIZE(17)] = {
@@ -114,7 +114,7 @@ static const u16 sBaristuteOam_Walking_Frame4[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(-16, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(-32, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-36, -13, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(-24, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-24, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sBaristuteOam_Walking_Frame5[OAM_DATA_SIZE(16)] = {
@@ -134,7 +134,7 @@ static const u16 sBaristuteOam_Walking_Frame5[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-16, -36, OAM_DIMS_16x16, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(-30, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-33, -13, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(-21, -13, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-21, -13, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sBaristuteOam_Warning_Frame1[OAM_DATA_SIZE(18)] = {
@@ -156,7 +156,7 @@ static const u16 sBaristuteOam_Warning_Frame1[OAM_DATA_SIZE(18)] = {
     OAM_ENTRY(-17, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(-32, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-36, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21a, 8, 0),
-    OAM_ENTRY(-23, -13, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-23, -13, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sBaristuteOam_Warning_Frame2[OAM_DATA_SIZE(18)] = {
@@ -178,7 +178,7 @@ static const u16 sBaristuteOam_Warning_Frame2[OAM_DATA_SIZE(18)] = {
     OAM_ENTRY(-17, -31, OAM_DIMS_16x16, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(-32, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-37, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21a, 8, 0),
-    OAM_ENTRY(-22, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-22, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sBaristuteOam_Jumping_Frame0[OAM_DATA_SIZE(16)] = {
@@ -198,7 +198,7 @@ static const u16 sBaristuteOam_Jumping_Frame0[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-15, -38, OAM_DIMS_16x16, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(-1, -38, OAM_DIMS_16x16, OAM_X_FLIP, 0x202, 8, 0),
     OAM_ENTRY(-16, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x292, 8, 0),
-    OAM_ENTRY(0, -28, OAM_DIMS_16x16, OAM_X_FLIP, 0x292, 8, 0),
+    OAM_ENTRY(0, -28, OAM_DIMS_16x16, OAM_X_FLIP, 0x292, 8, 0)
 };
 
 static const u16 sBaristuteOam_Jumping_Frame1[OAM_DATA_SIZE(16)] = {
@@ -218,7 +218,7 @@ static const u16 sBaristuteOam_Jumping_Frame1[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-15, -40, OAM_DIMS_16x16, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(-1, -40, OAM_DIMS_16x16, OAM_X_FLIP, 0x202, 8, 0),
     OAM_ENTRY(-16, -29, OAM_DIMS_16x16, OAM_NO_FLIP, 0x292, 8, 0),
-    OAM_ENTRY(0, -29, OAM_DIMS_16x16, OAM_X_FLIP, 0x292, 8, 0),
+    OAM_ENTRY(0, -29, OAM_DIMS_16x16, OAM_X_FLIP, 0x292, 8, 0)
 };
 
 static const u16 sBaristuteOam_Idle_Frame2[OAM_DATA_SIZE(20)] = {
@@ -242,7 +242,7 @@ static const u16 sBaristuteOam_Idle_Frame2[OAM_DATA_SIZE(20)] = {
     OAM_ENTRY(-2, -31, OAM_DIMS_16x16, OAM_X_FLIP, 0x202, 8, 0),
     OAM_ENTRY(-31, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-34, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(-22, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-22, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sBaristuteOam_Idle_Frame1[OAM_DATA_SIZE(18)] = {
@@ -264,7 +264,7 @@ static const u16 sBaristuteOam_Idle_Frame1[OAM_DATA_SIZE(18)] = {
     OAM_ENTRY(-15, -33, OAM_DIMS_16x16, OAM_NO_FLIP, 0x202, 8, 0),
     OAM_ENTRY(-32, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-35, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0),
-    OAM_ENTRY(-23, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-23, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 const struct FrameData sBaristuteOam_Idle[5] = {

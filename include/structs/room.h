@@ -3,12 +3,15 @@
 
 #include "types.h"
 
+#include "constants/animated_graphics.h"
+#include "constants/audio.h"
 #include "constants/event.h"
+#include "constants/room.h"
 
 #define ROOM_SPRITE_DATA_TERMINATOR UCHAR_MAX, UCHAR_MAX, UCHAR_MAX
 
 struct AnimatedGraphicsEntry {
-    u8 palette;
+    AnimatedPaletteId palette;
     u8 tileset;
 };
 
@@ -29,7 +32,7 @@ struct RoomEntry {
     u8 bg1Prop;
     u8 bg2Prop;
     u8 bg3Prop;
-    u8 scrollsFlag;
+    RoomScrollFlags scrollsFlag;
     u8 bg3Scrolling;
     u8 transparency;
     const u8* pEnemyRoomData;
@@ -39,8 +42,8 @@ struct RoomEntry {
     u8 mapY;
     u8 visualEffect;
     u16 effectY;
-    u8 damageEffect;
-    u16 musicTrack;
+    RoomEffect damageEffect;
+    Sound musicTrack;
     u8 bg0Size;
     u8 bg3Size;
     u8 bg3FromBottomFlag;
@@ -71,9 +74,9 @@ struct RoomEntryRom {
     u8 secondSpriteset;
     u8 mapX;
     u8 mapY;
-    u8 effect;
+    RoomEffect effect;
     u8 effectY;
-    u16 musicTrack;
+    Sound musicTrack;
 };
 
 struct TilesetEntry {

@@ -6,7 +6,7 @@
 
 #include "structs/sprite.h"
 
-enum MotherBrainOam {
+MAKE_ENUM(u8, MotherBrainOam) {
     MOTHER_BRAIN_OAM_IDLE,
     MOTHER_BRAIN_OAM_CHARGING_BEAM,
     MOTHER_BRAIN_OAM_EYE_CLOSED,
@@ -18,7 +18,7 @@ enum MotherBrainOam {
     MOTHER_BRAIN_OAM_BEAM_SPAWNING,
     MOTHER_BRAIN_OAM_BEAM_MOVING,
 
-    MOTHER_BRAIN_OAM_END
+    MOTHER_BRAIN_OAM_COUNT
 };
 
 extern const struct MultiSpriteData sMotherBrainMultiSpriteData[7];

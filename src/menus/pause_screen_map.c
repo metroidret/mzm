@@ -33,7 +33,7 @@ static u32 sPauseScreen_7602b0[9] = {
     0xFFFFFFFF ^ 0xFFFFF,
     0xFFFFFFFF ^ 0xFFFFFF,
     0xFFFFFFFF ^ 0xFFFFFFF,
-    0xFFFFFFFF ^ 0xFFFFFFFF,
+    0xFFFFFFFF ^ 0xFFFFFFFF
 };
 
 /**
@@ -254,7 +254,7 @@ void PauseScreenDrawIgtAndTanks(u8 param_1, u8 drawTanks)
             sPauseScreen_IgtAndTanksVramAddresses[IGT_AND_TANKS_VRAM_ADDRESS_POWER_BOMB_TANKS] + HALF_BLOCK_SIZE * 2, HALF_BLOCK_SIZE, 32);
 
         // Draw checkmarks when you have all of the tanks
-        for (i = IGT_AND_TANKS_VRAM_ADDRESS_TANKS_END - 1; i >= IGT_AND_TANKS_VRAM_ADDRESS_ENERGY_TANKS; i--)
+        for (i = IGT_AND_TANKS_VRAM_ADDRESS_TANKS_COUNT - 1; i >= IGT_AND_TANKS_VRAM_ADDRESS_ENERGY_TANKS; i--)
         {
             if ((PAUSE_SCREEN_DATA.tankStatus >> i) & 1)
             {
@@ -612,7 +612,7 @@ u32 PauseScreenMapDownload(void)
 
         case 4:
             // Redraw minimap, so that the download also applies to in game
-            for (i = MINIMAP_UPDATE_FLAG_END - 1; i > MINIMAP_UPDATE_FLAG_NONE; i--)
+            for (i = MINIMAP_UPDATE_FLAG_COUNT - 1; i > MINIMAP_UPDATE_FLAG_NONE; i--)
             {
                 gUpdateMinimapFlag = i;
                 MinimapDraw();

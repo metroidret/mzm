@@ -29,7 +29,7 @@ MAKE_ENUM(u8, Difficulty) {
     DIFF_NORMAL,
     DIFF_HARD,
 
-    DIFF_END
+    DIFF_COUNT
 };
 
 MAKE_ENUM(s8, Language) {
@@ -41,7 +41,7 @@ MAKE_ENUM(s8, Language) {
     LANGUAGE_ITALIAN,
     LANGUAGE_SPANISH,
 
-    LANGUAGE_END
+    LANGUAGE_COUNT
 };
 
 #ifdef REGION_JP
@@ -54,7 +54,7 @@ MAKE_ENUM(s8, Language) {
 /**
  * @brief Condition to check if the language is not a valid European language
  */
-#define INVALID_EU_LANGUAGE(lang) ((lang) < LANGUAGE_ENGLISH || (lang) >= LANGUAGE_END)
+#define INVALID_EU_LANGUAGE(lang) ((lang) < LANGUAGE_ENGLISH || (lang) >= LANGUAGE_COUNT)
 
 MAKE_ENUM(s8, PauseScreenFlag) {
     PAUSE_SCREEN_NONE,
@@ -66,17 +66,17 @@ MAKE_ENUM(s8, PauseScreenFlag) {
     PAUSE_SCREEN_ITEM_ACQUISITION,
     PAUSE_SCREEN_SUITLESS_ITEMS,
     PAUSE_SCREEN_FULLY_POWERED_SUIT_ITEMS,
-    PAUSE_SCREEN_UNKNOWN_9,
+    PAUSE_SCREEN_UNKNOWN_9
 };
 
 // For in game
-enum SubGameMode {
+MAKE_ENUM(u8, SubGameMode) {
     SUB_GAME_MODE_DOOR_TRANSITION = 1,
     SUB_GAME_MODE_PLAYING,
     SUB_GAME_MODE_LOADING_ROOM,
 
     SUB_GAME_MODE_DYING = 5,
-    SUB_GAME_MODE_NO_CLIP,
+    SUB_GAME_MODE_NO_CLIP
 };
 
 #endif /* GAME_STATE_CONSTANTS_H */

@@ -7,7 +7,7 @@
 // Temp
 extern const u8 sDoorTransitionTilemap[184];
 
-extern const struct ColorFadingData sColorFadingData[COLOR_FADING_END];
+extern const struct ColorFadingData sColorFadingData[COLOR_FADING_COUNT];
 
 extern const struct ColorFadingColorInfo sColorFadingColorInfo[5];
 

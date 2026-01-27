@@ -27,7 +27,7 @@ extern const struct FrameData sRidleyInSpaceOAM_39d7e8[2];
 extern const struct FrameData sRidleyInSpaceOAM_ShipLeavingParticle[5];
 extern const struct FrameData sRidleyInSpaceOAM_ShipLeavingParticleSecond[5];
 
-extern const struct OamArray sRidleyInSpaceCutsceneOAM[RIDLEY_IN_SPACE_OAM_ID_END];
+extern const struct OamArray sRidleyInSpaceCutsceneOAM[RIDLEY_IN_SPACE_OAM_ID_COUNT];
 
 extern const u32 sRidleyInSpaceShipsGfx[1565];
 extern const u32 sRidleyInSpaceRidleySittingGfx[3848];

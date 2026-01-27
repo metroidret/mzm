@@ -72,7 +72,7 @@ static const u16 sSamusInBlueShipOam_Controls_Frame0[OAM_DATA_SIZE(38)] = {
     OAM_ENTRY(38, -72, OAM_DIMS_32x32, OAM_X_FLIP, 0x80, 8, 0),
     OAM_ENTRY(22, -72, OAM_DIMS_16x32, OAM_X_FLIP, 0x84, 8, 0),
     OAM_ENTRY(22, -40, OAM_DIMS_16x16, OAM_X_FLIP, 0x104, 8, 0),
-    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 8, 0),
+    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 8, 0)
 };
 
 static const u16 sSamusInBlueShipOam_Controls_Frame1[OAM_DATA_SIZE(38)] = {
@@ -114,7 +114,7 @@ static const u16 sSamusInBlueShipOam_Controls_Frame1[OAM_DATA_SIZE(38)] = {
     OAM_ENTRY(38, -72, OAM_DIMS_32x32, OAM_X_FLIP, 0x80, 8, 0),
     OAM_ENTRY(22, -72, OAM_DIMS_16x32, OAM_X_FLIP, 0x84, 8, 0),
     OAM_ENTRY(22, -40, OAM_DIMS_16x16, OAM_X_FLIP, 0x104, 8, 0),
-    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 8, 0),
+    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 8, 0)
 };
 
 static const u16 sSamusInBlueShipOam_Controls_Frame2[OAM_DATA_SIZE(38)] = {
@@ -156,7 +156,7 @@ static const u16 sSamusInBlueShipOam_Controls_Frame2[OAM_DATA_SIZE(38)] = {
     OAM_ENTRY(38, -72, OAM_DIMS_32x32, OAM_X_FLIP, 0x80, 8, 0),
     OAM_ENTRY(22, -72, OAM_DIMS_16x32, OAM_X_FLIP, 0x84, 8, 0),
     OAM_ENTRY(22, -40, OAM_DIMS_16x16, OAM_X_FLIP, 0x104, 8, 0),
-    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0),
+    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0)
 };
 
 static const u16 sSamusInBlueShipOam_Controls_Frame3[OAM_DATA_SIZE(38)] = {
@@ -198,7 +198,7 @@ static const u16 sSamusInBlueShipOam_Controls_Frame3[OAM_DATA_SIZE(38)] = {
     OAM_ENTRY(38, -72, OAM_DIMS_32x32, OAM_X_FLIP, 0x80, 8, 0),
     OAM_ENTRY(22, -72, OAM_DIMS_16x32, OAM_X_FLIP, 0x84, 8, 0),
     OAM_ENTRY(22, -40, OAM_DIMS_16x16, OAM_X_FLIP, 0x104, 8, 0),
-    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0),
+    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0)
 };
 
 static const u16 sSamusInBlueShipOam_Controls_Frame4[OAM_DATA_SIZE(38)] = {
@@ -240,7 +240,7 @@ static const u16 sSamusInBlueShipOam_Controls_Frame4[OAM_DATA_SIZE(38)] = {
     OAM_ENTRY(38, -72, OAM_DIMS_32x32, OAM_X_FLIP, 0x80, 7, 0),
     OAM_ENTRY(22, -72, OAM_DIMS_16x32, OAM_X_FLIP, 0x84, 7, 0),
     OAM_ENTRY(22, -40, OAM_DIMS_16x16, OAM_X_FLIP, 0x104, 7, 0),
-    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0),
+    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0)
 };
 
 static const u16 sSamusInBlueShipOam_Controls_Frame5[OAM_DATA_SIZE(38)] = {
@@ -282,7 +282,7 @@ static const u16 sSamusInBlueShipOam_Controls_Frame5[OAM_DATA_SIZE(38)] = {
     OAM_ENTRY(38, -72, OAM_DIMS_32x32, OAM_X_FLIP, 0x80, 7, 0),
     OAM_ENTRY(22, -72, OAM_DIMS_16x32, OAM_X_FLIP, 0x84, 7, 0),
     OAM_ENTRY(22, -40, OAM_DIMS_16x16, OAM_X_FLIP, 0x104, 7, 0),
-    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0),
+    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0)
 };
 
 static const u16 sSamusInBlueShipOam_Controls_Frame6[OAM_DATA_SIZE(38)] = {
@@ -324,7 +324,7 @@ static const u16 sSamusInBlueShipOam_Controls_Frame6[OAM_DATA_SIZE(38)] = {
     OAM_ENTRY(38, -72, OAM_DIMS_32x32, OAM_X_FLIP, 0x80, 7, 0),
     OAM_ENTRY(22, -72, OAM_DIMS_16x32, OAM_X_FLIP, 0x84, 7, 0),
     OAM_ENTRY(22, -40, OAM_DIMS_16x16, OAM_X_FLIP, 0x104, 7, 0),
-    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0),
+    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0)
 };
 
 static const u16 sSamusInBlueShipOam_Controls_Frame7[OAM_DATA_SIZE(38)] = {
@@ -366,7 +366,7 @@ static const u16 sSamusInBlueShipOam_Controls_Frame7[OAM_DATA_SIZE(38)] = {
     OAM_ENTRY(38, -72, OAM_DIMS_32x32, OAM_X_FLIP, 0x80, 7, 0),
     OAM_ENTRY(22, -72, OAM_DIMS_16x32, OAM_X_FLIP, 0x84, 7, 0),
     OAM_ENTRY(22, -40, OAM_DIMS_16x16, OAM_X_FLIP, 0x104, 7, 0),
-    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0),
+    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0)
 };
 
 static const u16 sSamusInBlueShipOam_Controls_Frame8[OAM_DATA_SIZE(38)] = {
@@ -408,7 +408,7 @@ static const u16 sSamusInBlueShipOam_Controls_Frame8[OAM_DATA_SIZE(38)] = {
     OAM_ENTRY(38, -72, OAM_DIMS_32x32, OAM_X_FLIP, 0x80, 7, 0),
     OAM_ENTRY(22, -72, OAM_DIMS_16x32, OAM_X_FLIP, 0x84, 7, 0),
     OAM_ENTRY(22, -40, OAM_DIMS_16x16, OAM_X_FLIP, 0x104, 7, 0),
-    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0),
+    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0)
 };
 
 static const u16 sSamusInBlueShipOam_Controls_Frame9[OAM_DATA_SIZE(38)] = {
@@ -450,7 +450,7 @@ static const u16 sSamusInBlueShipOam_Controls_Frame9[OAM_DATA_SIZE(38)] = {
     OAM_ENTRY(38, -72, OAM_DIMS_32x32, OAM_X_FLIP, 0x80, 7, 0),
     OAM_ENTRY(22, -72, OAM_DIMS_16x32, OAM_X_FLIP, 0x84, 7, 0),
     OAM_ENTRY(22, -40, OAM_DIMS_16x16, OAM_X_FLIP, 0x104, 7, 0),
-    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0),
+    OAM_ENTRY(0, -80, OAM_DIMS_32x32, OAM_X_FLIP, 0x46, 7, 0)
 };
 
 static const struct FrameData sSamusInBlueShipOam_Controls[11] = {

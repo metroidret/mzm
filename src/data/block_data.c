@@ -61,10 +61,10 @@ const struct TankList sStartingHealthAmmo = {
     .energy = 99,
     .missile = 0,
     .superMissile = 0,
-    .powerBomb = 0,
+    .powerBomb = 0
 };
 
-const struct TankList sTankIncreaseAmount[DIFF_END] = {
+const struct TankList sTankIncreaseAmount[DIFF_COUNT] = {
     [DIFF_EASY] = {
         .energy = 100,
         .missile = 5,
@@ -85,7 +85,7 @@ const struct TankList sTankIncreaseAmount[DIFF_END] = {
     }
 };
 
-const u16 sClipdataAffectingActionDamageTypes[CAA_COUNT] = {
+const CaaDamageType sClipdataAffectingActionDamageTypes[CAA_COUNT] = {
     [CAA_NONE] =                   CAA_DAMAGE_TYPE_NONE,
     [CAA_REMOVE_SOLID] =           CAA_DAMAGE_TYPE_NONE,
     [CAA_MAKE_SOLID_GRIPPABLE] =   CAA_DAMAGE_TYPE_NONE,
@@ -100,7 +100,7 @@ const u16 sClipdataAffectingActionDamageTypes[CAA_COUNT] = {
     [CAA_SPEEDBOOSTER] =           CAA_DAMAGE_TYPE_SPEEDBOOST,
     [CAA_SPEEDBOOSTER_ON_GROUND] = CAA_DAMAGE_TYPE_SPEEDBOOST_ON_GROUND,
     [CAA_SCREW_ATTACK] =           CAA_DAMAGE_TYPE_SCREW_ATTACK,
-    [CAA_BOMB_CHAIN] =             CAA_DAMAGE_TYPE_BOMB_CHAIN,
+    [CAA_BOMB_CHAIN] =             CAA_DAMAGE_TYPE_BOMB_CHAIN
 };
 
 const struct BlockBehavior sBlockBehaviors[BEHAVIOR_BLOCK_AMOUNT] = {
@@ -439,7 +439,7 @@ const struct BlockBehavior sBlockBehaviors[BEHAVIOR_BLOCK_AMOUNT] = {
         .type = BLOCK_TYPE_NONE,
         .isSpeedboost = FALSE,
         .isBombChain = FALSE
-    },
+    }
 };
 
 const u16 sBlockWeaknesses[BLOCK_TYPE_COUNT] = {
@@ -467,7 +467,7 @@ const u16 sBlockWeaknesses[BLOCK_TYPE_COUNT] = {
     [BLOCK_TYPE_HORIZONTAL_BOMB_CHAIN4] = CAA_DAMAGE_TYPE_BOMB_CHAIN | CAA_DAMAGE_TYPE_POWER_BOMB | CAA_DAMAGE_TYPE_BOMB_PISTOL
 };
 
-const u16 sReformingBlocksTilemapValue[BLOCK_TYPE_COUNT] = {
+const ClipdataTilemap sReformingBlocksTilemapValue[BLOCK_TYPE_COUNT] = {
     [BLOCK_TYPE_NONE] =                         CLIPDATA_TILEMAP_FLAG | CLIPDATA_TILEMAP_AIR,
     [BLOCK_TYPE_SHOT_BLOCK_REFORM] =            CLIPDATA_TILEMAP_FLAG | CLIPDATA_TILEMAP_SHOT_BLOCK_REFORM,
     [BLOCK_TYPE_BOMB_BLOCK_REFORM] =            CLIPDATA_TILEMAP_FLAG | CLIPDATA_TILEMAP_BOMB_BLOCK_REFORM,
@@ -825,7 +825,7 @@ const u8 sBrokenBlocksTimers[BLOCK_TYPE_COUNT][13] = {
     }
 };
 
-const struct BombChainReverseData sBombChainReverseData[BOMB_CHAIN_TYPE_END] = {
+const struct BombChainReverseData sBombChainReverseData[BOMB_CHAIN_TYPE_COUNT] = {
     [BOMB_CHAIN_TYPE_VERTICAL1] = {
         .typeFlag = 1 << BOMB_CHAIN_TYPE_VERTICAL1,
         .behavior = CLIP_BEHAVIOR_VERTICAL_BOMB_CHAIN1
@@ -857,82 +857,82 @@ const struct BombChainReverseData sBombChainReverseData[BOMB_CHAIN_TYPE_END] = {
     [BOMB_CHAIN_TYPE_HORIZONTAL4] = {
         .typeFlag = 1 << BOMB_CHAIN_TYPE_HORIZONTAL4,
         .behavior = CLIP_BEHAVIOR_HORIZONTAL_BOMB_CHAIN4
-    },
+    }
 };
 
 const struct TankBehavior sTankBehaviors[BEHAVIOR_TANK_AMOUNT] = {
     [BEHAVIOR_TO_TANK(CLIP_BEHAVIOR_HIDDEN_ENERGY_TANK)] = {
         .itemType = ITEM_TYPE_NONE,
         .underwater = FALSE,
-        .messageID = MESSAGE_NONE,
+        .messageId = MESSAGE_NONE,
         .revealedClipdata = CLIPDATA_TILEMAP_FLAG | CLIPDATA_TILEMAP_ENERGY_TANK
     },
     [BEHAVIOR_TO_TANK(CLIP_BEHAVIOR_HIDDEN_MISSILE_TANK)] = {
         .itemType = ITEM_TYPE_NONE,
         .underwater = FALSE,
-        .messageID = MESSAGE_NONE,
+        .messageId = MESSAGE_NONE,
         .revealedClipdata = CLIPDATA_TILEMAP_FLAG | CLIPDATA_TILEMAP_MISSILE_TANK
     },
     [BEHAVIOR_TO_TANK(CLIP_BEHAVIOR_HIDDEN_SUPER_MISSILE_TANK)] = {
         .itemType = ITEM_TYPE_NONE,
         .underwater = FALSE,
-        .messageID = MESSAGE_NONE,
+        .messageId = MESSAGE_NONE,
         .revealedClipdata = CLIPDATA_TILEMAP_FLAG | CLIPDATA_TILEMAP_SUPER_MISSILE_TANK
     },
     [BEHAVIOR_TO_TANK(CLIP_BEHAVIOR_HIDDEN_POWER_BOMB_TANK)] = {
         .itemType = ITEM_TYPE_NONE,
         .underwater = FALSE,
-        .messageID = MESSAGE_NONE,
+        .messageId = MESSAGE_NONE,
         .revealedClipdata = CLIPDATA_TILEMAP_FLAG | CLIPDATA_TILEMAP_POWER_BOMB_TANK
     },
     [BEHAVIOR_TO_TANK(CLIP_BEHAVIOR_ENERGY_TANK)] = {
         .itemType = ITEM_TYPE_ENERGY,
         .underwater = FALSE,
-        .messageID = MESSAGE_ENERGY_TANK_ACQUIRED,
+        .messageId = MESSAGE_ENERGY_TANK_ACQUIRED,
         .revealedClipdata = CLIPDATA_TILEMAP_AIR
     },
     [BEHAVIOR_TO_TANK(CLIP_BEHAVIOR_MISSILE_TANK)] = {
         .itemType = ITEM_TYPE_MISSILE,
         .underwater = FALSE,
-        .messageID = MESSAGE_MISSILE_TANK_ACQUIRED,
+        .messageId = MESSAGE_MISSILE_TANK_ACQUIRED,
         .revealedClipdata = CLIPDATA_TILEMAP_AIR
     },
     [BEHAVIOR_TO_TANK(CLIP_BEHAVIOR_SUPER_MISSILE_TANK)] = {
         .itemType = ITEM_TYPE_SUPER_MISSILE,
         .underwater = FALSE,
-        .messageID = MESSAGE_SUPER_MISSILE_TANK_ACQUIRED,
+        .messageId = MESSAGE_SUPER_MISSILE_TANK_ACQUIRED,
         .revealedClipdata = CLIPDATA_TILEMAP_AIR
     },
     [BEHAVIOR_TO_TANK(CLIP_BEHAVIOR_POWER_BOMB_TANK)] = {
         .itemType = ITEM_TYPE_POWER_BOMB,
         .underwater = FALSE,
-        .messageID = MESSAGE_POWER_BOMB_TANK_ACQUIRED,
+        .messageId = MESSAGE_POWER_BOMB_TANK_ACQUIRED,
         .revealedClipdata = CLIPDATA_TILEMAP_AIR
     },
     [BEHAVIOR_TO_TANK(CLIP_BEHAVIOR_UNDERWATER_ENERGY_TANK)] = {
         .itemType = ITEM_TYPE_ENERGY,
         .underwater = TRUE,
-        .messageID = MESSAGE_ENERGY_TANK_ACQUIRED,
+        .messageId = MESSAGE_ENERGY_TANK_ACQUIRED,
         .revealedClipdata = CLIPDATA_TILEMAP_AIR
     },
     [BEHAVIOR_TO_TANK(CLIP_BEHAVIOR_UNDERWATER_MISSILE_TANK)] = {
         .itemType = ITEM_TYPE_MISSILE,
         .underwater = TRUE,
-        .messageID = MESSAGE_MISSILE_TANK_ACQUIRED,
+        .messageId = MESSAGE_MISSILE_TANK_ACQUIRED,
         .revealedClipdata = CLIPDATA_TILEMAP_AIR
     },
     [BEHAVIOR_TO_TANK(CLIP_BEHAVIOR_UNDERWATER_SUPER_MISSILE_TANK)] = {
         .itemType = ITEM_TYPE_SUPER_MISSILE,
         .underwater = TRUE,
-        .messageID = MESSAGE_SUPER_MISSILE_TANK_ACQUIRED,
+        .messageId = MESSAGE_SUPER_MISSILE_TANK_ACQUIRED,
         .revealedClipdata = CLIPDATA_TILEMAP_AIR
     },
     [BEHAVIOR_TO_TANK(CLIP_BEHAVIOR_UNDERWATER_POWER_BOMB_TANK)] = {
         .itemType = ITEM_TYPE_POWER_BOMB,
         .underwater = TRUE,
-        .messageID = MESSAGE_POWER_BOMB_TANK_ACQUIRED,
+        .messageId = MESSAGE_POWER_BOMB_TANK_ACQUIRED,
         .revealedClipdata = CLIPDATA_TILEMAP_AIR
-    },
+    }
 };
 
 // 0 : Weakness
@@ -969,7 +969,7 @@ const u16 sHatchBehaviors[HATCH_COUNT][2] = {
     [HATCH_LOCKED_NAVIGATION] = {
         CAA_DAMAGE_TYPE_BEAM | CAA_DAMAGE_TYPE_BOMB_PISTOL | CAA_DAMAGE_TYPE_MISSILE | CAA_DAMAGE_TYPE_SUPER_MISSILE | CAA_DAMAGE_TYPE_POWER_BOMB,
         0
-    },
+    }
 };
 
 const u16 sBldalphaValuesForClipdata[BEHAVIOR_BLDALPHA_AMOUNT] = {
@@ -983,11 +983,11 @@ const u16 sBldalphaValuesForClipdata[BEHAVIOR_BLDALPHA_AMOUNT] = {
     [BEHAVIOR_TO_BLDALPHA(CLIP_BEHAVIOR_BG0_TRIGGER_BRIGHTER_LEVEL1)] =     C_16_2_8(0x10, 0x07),
     [BEHAVIOR_TO_BLDALPHA(CLIP_BEHAVIOR_BG0_TRIGGER_BRIGHTER_LEVEL2)] =     C_16_2_8(0x10, 0x0A),
     [BEHAVIOR_TO_BLDALPHA(CLIP_BEHAVIOR_BG0_TRIGGER_BRIGHTER_LEVEL3)] =     C_16_2_8(0x10, 0x0D),
-    [BEHAVIOR_TO_BLDALPHA(CLIP_BEHAVIOR_BG0_TRIGGER_BRIGHTER_LEVEL4)] =     C_16_2_8(0x10, 0x10),
+    [BEHAVIOR_TO_BLDALPHA(CLIP_BEHAVIOR_BG0_TRIGGER_BRIGHTER_LEVEL4)] =     C_16_2_8(0x10, 0x10)
 };
 
 // Pairs of (x, y) coordinates
-const s8 sSubBombChainPositionOffset[SUB_BOMB_CHAIN_REQUEST_END][4] = {
+const s8 sSubBombChainPositionOffset[SUB_BOMB_CHAIN_REQUEST_COUNT][4] = {
     [SUB_BOMB_CHAIN_REQUEST_HORIZONTAL_WHEN_GOING_UP] = {
         1, 1, -1, 1
     },

@@ -19,7 +19,7 @@ extern const struct FrameData sRidleyLandingOAM_ShipInSpace[2];
 extern const struct FrameData sRidleyLandingOAM_SmokeParticles[7];
 extern const struct FrameData sRidleyLandingOAM_Rocks[5];
 
-extern const struct OamArray sRidleyLandingCutsceneOAM[RIDLEY_LANDING_OAM_ID_END];
+extern const struct OamArray sRidleyLandingCutsceneOAM[RIDLEY_LANDING_OAM_ID_COUNT];
 
 extern const u16 sCutscene_3a09d4_Pal[9 * 16];
 extern const u16 sCutsceneZebesPal[13 * 16];

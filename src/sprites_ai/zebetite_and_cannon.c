@@ -24,7 +24,7 @@
 #define CANNON_POSE_IDLE 0x9
 #define CANNON_BULLET_POSE_IDLE 0x9
 
-enum CannonAim {
+MAKE_ENUM(u8, CannonAim) {
     CANNON_AIM_LEFT,
     CANNON_AIM_LEFT_TO_DOWN_LEFT_TRANSITION,
     CANNON_AIM_DOWN_LEFT,
@@ -36,7 +36,7 @@ enum CannonAim {
     CANNON_AIM_RIGHT
 };
 
-enum CannonView {
+MAKE_ENUM(u8, CannonView) {
     CANNON_VIEW_EVERWHERE,
     CANNON_VIEW_RIGHT,
     CANNON_VIEW_LEFT

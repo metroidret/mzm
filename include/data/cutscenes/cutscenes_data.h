@@ -8,6 +8,6 @@
 
 #include "structs/cutscene.h"
 
-extern const struct CutsceneInfo sCutsceneData[CUTSCENE_END];
+extern const struct CutsceneInfo sCutsceneData[CUTSCENE_COUNT];
 
 #endif /* CUTSCENES_DATA_H */

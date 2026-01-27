@@ -2,8 +2,9 @@
 #define IMAGO_COCOON_AI_H
 
 #include "types.h"
+#include "macros.h"
 
-enum ImagoCocoonPart {
+MAKE_ENUM(u8, ImagoCocoonPartId) {
     IMAGO_COCOON_PART_VINE_LEFT_VINE_DECORATIONS,
     IMAGO_COCOON_PART_VINE_LEFT_MIDDLE,
     IMAGO_COCOON_PART_VINE_RIGHT_MIDDLE,
@@ -15,7 +16,7 @@ enum ImagoCocoonPart {
     IMAGO_COCOON_PART_VINE_RIGHT_LEFT,
     IMAGO_COCOON_PART_VINE_LEFT_RIGHT,
 
-    IMAGO_COCOON_PART_END
+    IMAGO_COCOON_PART_COUNT
 };
 
 void ImagoCocoon(void);

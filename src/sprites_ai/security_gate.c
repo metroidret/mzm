@@ -22,7 +22,7 @@
  * 
  * @param caa Clipdata affecting action
  */
-static void SecurityGateChangeClipdata(u8 caa)
+static void SecurityGateChangeClipdata(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;

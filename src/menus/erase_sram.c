@@ -15,9 +15,9 @@
 #include "structs/game_state.h"
 #include "structs/menus/erase_sram.h"
 
-static u32 EraseSramProcessInput(void);
+static EraseSramInputAction EraseSramProcessInput(void);
 static void EraseSramApplyInput(void);
-static u32 EraseSramCheckForInput(void);
+static EraseSramInputAction EraseSramCheckForInput(void);
 static void EraseSramInit(void);
 static void EraseSramResetOam(void);
 static void EraseSramUpdateCursorPosition(void);
@@ -25,7 +25,7 @@ static void EraseSramVBlank(void);
 static void EraseSramVBlank_Empty(void);
 static void EraseSramProcessOAM(void);
 
-static const u32* sEraseSramTextGfxPointers[LANGUAGE_END][2] = {
+static const u32* sEraseSramTextGfxPointers[LANGUAGE_COUNT][2] = {
     [LANGUAGE_JAPANESE] = {
         sEraseSramMenuQuestionJapaneseGfx,
         sEraseSramMenuConfirmJapaneseGfx
@@ -110,7 +110,7 @@ u32 EraseSramMainLoop(void)
 
         case 2:
             gSubGameMode2 = EraseSramProcessInput();
-            if (gSubGameMode2 == 0)
+            if (gSubGameMode2 == ERASE_SRAM_INPUT_ACTION_NONE)
                 break;
 
             ERASE_SRAM_DATA.timer = 0;
@@ -179,9 +179,9 @@ u32 EraseSramMainLoop(void)
  * 
  * @return u32 action
  */
-static u32 EraseSramProcessInput(void)
+static EraseSramInputAction EraseSramProcessInput(void)
 {
-    u32 result;
+    EraseSramInputAction result;
 
     result = ERASE_SRAM_INPUT_ACTION_NONE;
 
@@ -247,16 +247,16 @@ static void EraseSramApplyInput(void)
 /**
  * @brief 75e7c | 10c | Checks for input
  * 
- * @return u32 action
+ * @return EraseSramInputAction action
  */
-static u32 EraseSramCheckForInput(void)
+static EraseSramInputAction EraseSramCheckForInput(void)
 {
-    u32 sound;
-    u32 result;
-    u32 exiting;
+    EraseSramSound sound;
+    EraseSramInputAction result;
+    boolu32 exiting;
 
     result = ERASE_SRAM_INPUT_ACTION_NONE;
-    sound = 0;
+    sound = ERASE_SRAM_SOUND_NONE;
     exiting = FALSE;
 
     switch (ERASE_SRAM_DATA.currentOption)
@@ -373,7 +373,7 @@ static void EraseSramInit(void)
     // This code sets the language to the region's default if the language is invalid for that region.
     // Debug allows any language, US allows any European language, and JP allows Japanese or hiragana.
     #if defined(DEBUG)
-    if (ERASE_SRAM_DATA.language >= LANGUAGE_END)
+    if (ERASE_SRAM_DATA.language >= LANGUAGE_COUNT)
     #elif defined(REGION_JP)
     if (ERASE_SRAM_DATA.language > LANGUAGE_HIRAGANA)
     #else // !(DEBUG || REGION_JP)

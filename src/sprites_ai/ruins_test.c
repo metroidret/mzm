@@ -42,7 +42,7 @@
 
 // Ruins test ghost
 
-enum RuinsTestGhostPart {
+MAKE_ENUM(u8, RuinsTestGhostPartId) {
     RUINS_TEST_GHOST_PART_GHOST,
     RUINS_TEST_GHOST_PART_FIRST_SYMBOL,
     RUINS_TEST_GHOST_PART_SECOND_SYMBOL,
@@ -80,7 +80,7 @@ enum RuinsTestGhostPart {
 
 // Ruins test ghost outline
 
-enum RuinsTestGhostOutlinePart {
+MAKE_ENUM(u8, RuinsTestGhostOutlinePartId) {
     RUINS_TEST_GHOST_OUTLINE_PART_OUTLINE,
     RUINS_TEST_GHOST_OUTLINE_PART_SHOOTING_GROUND_LIGHTNING,
     RUINS_TEST_GHOST_OUTLINE_PART_SHOOTING_LIGHTNING
@@ -102,7 +102,7 @@ enum RuinsTestGhostOutlinePart {
 
 // Ruins test lightning
 
-enum RuinsTestLightningPart {
+MAKE_ENUM(u8, RuinsTestLightningPartId) {
     RUINS_TEST_LIGHTNING_PART_GROUND_RIGHT,
     RUINS_TEST_LIGHTNING_PART_GROUND,
     RUINS_TEST_LIGHTNING_PART_STATIC
@@ -133,7 +133,7 @@ static void RuinsTestCalculateDelay(u8 delay)
  * 
  * @param caa Clipdata Affecting Action
  */
-static void RuinsTestChangeCcaa(u8 caa)
+static void RuinsTestChangeCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;

@@ -143,7 +143,7 @@ static u8 sStatusScreenGroupsDimensions[6][3] = {
         [0] = ABILITY_GROUP_MISSILES,
         [1] = 6,
         [2] = 9
-    },
+    }
 };
 
 // bomb column offset?
@@ -426,7 +426,7 @@ void PauseDebugStatusScreen(void)
     yPos = PAUSE_SCREEN_DATA.miscOam[0].yPosition / 32;
     xPos = PAUSE_SCREEN_DATA.miscOam[0].xPosition / 32;
 
-    for (i = 0; i < PAUSE_DEBUG_GROUP_END; i++)
+    for (i = 0; i < PAUSE_DEBUG_GROUP_COUNT; i++)
     {
         if (sPauseDebugGroupsPositions[i].top <= yPos && sPauseDebugGroupsPositions[i].bottom >= yPos &&
             sPauseDebugGroupsPositions[i].left <= xPos && sPauseDebugGroupsPositions[i].right >= xPos)
@@ -708,7 +708,7 @@ void PauseDebugStatusScreen(void)
                     else if (gChangedInput & KEY_DOWN)
                         work3 = 1;
                 }
-                if (gLanguage + work3 < 0 || gLanguage + work3 >= LANGUAGE_END)
+                if (gLanguage + work3 < 0 || gLanguage + work3 >= LANGUAGE_COUNT)
                     work3 = 0;
                 if (work3 != 0)
                 {
@@ -738,7 +738,7 @@ void PauseDebugStatusScreen(void)
                     else if (gChangedInput & KEY_DOWN)
                         work3 = 1;
                 }
-                if (gDifficulty + work3 < 0 || gDifficulty + work3 >= DIFF_END)
+                if (gDifficulty + work3 < 0 || gDifficulty + work3 >= DIFF_COUNT)
                     work3 = 0;
                 if (work3 != 0)
                 {
@@ -752,7 +752,7 @@ void PauseDebugStatusScreen(void)
             break;
 
         case PAUSE_DEBUG_GROUP_SUIT_TYPE:
-            if (gChangedInput & KEY_A && gEquipment.suitType != yPos && yPos < SUIT_END)
+            if (gChangedInput & KEY_A && gEquipment.suitType != yPos && yPos < SUIT_COUNT)
             {
                 work1 = 1 << PAUSE_DEBUG_GROUP_SUIT_TYPE;
                 work2 = FALSE;
@@ -1011,10 +1011,10 @@ void PauseDebugDrawAffectedGroups(u32 groups)
     
     if (groups & (1 << PAUSE_DEBUG_GROUP_LANGUAGE))
     {
-        if (gLanguage < LANGUAGE_END)
+        if (gLanguage < LANGUAGE_COUNT)
             i = gLanguage;
         else
-            i = LANGUAGE_END;
+            i = LANGUAGE_COUNT;
 
         dst = VRAM_BASE + 0xB000;
         dst += sPauseDebugLanguagePosition[0] * 32 + sPauseDebugLanguagePosition[1];
@@ -1024,10 +1024,10 @@ void PauseDebugDrawAffectedGroups(u32 groups)
     
     if (groups & (1 << PAUSE_DEBUG_GROUP_DIFFICULTY))
     {
-        if (gDifficulty < DIFF_END)
+        if (gDifficulty < DIFF_COUNT)
             i = gDifficulty;
         else
-            i = DIFF_END;
+            i = DIFF_COUNT;
 
         dst = VRAM_BASE + 0xB000;
         dst += sPauseDebugDifficultyPosition[0] * 32 + sPauseDebugDifficultyPosition[1];
@@ -1037,9 +1037,9 @@ void PauseDebugDrawAffectedGroups(u32 groups)
     
     if (groups & (1 << PAUSE_DEBUG_GROUP_SUIT_TYPE))
     {
-        if (gEquipment.suitType < SUIT_END)
+        if (gEquipment.suitType < SUIT_COUNT)
         {
-            for (i = 0; i < SUIT_END; i++)
+            for (i = 0; i < SUIT_COUNT; i++)
             {
                 dst = VRAM_BASE + 0xB000 + (sPauseDebugGroupsPositions[PAUSE_DEBUG_GROUP_SUIT_TYPE].top + i) * 64 +
                     sPauseDebugGroupsPositions[PAUSE_DEBUG_GROUP_SUIT_TYPE].left * 2;
@@ -1833,11 +1833,11 @@ u32 StatusScreenDrawItems(u8 row)
  * @param item Item
  * @return u8 Status slot
  */
-u8 StatusScreenGetSlotForNewItem(u8 param_1, u8 item)
+StatusSlots StatusScreenGetSlotForNewItem(u8 param_1, u8 item)
 {
     u8* pActivation;
     u8* pStatusActivation;
-    u8 slot;
+    StatusSlots slot;
     u8 flag;
     s32 i;
 
@@ -2044,7 +2044,7 @@ void StatusScreenSetPistolVisibility(u16* pTilemap)
  * @param palette Palette
  * @param isMax Is the max
  */
-void StatusScreenDrawSingleTankAmount(u8 group, u16 amount, u8 palette, u8 isMax)
+void StatusScreenDrawSingleTankAmount(AbilityGroup group, u16 amount, u8 palette, u8 isMax)
 {
     u16 baseTile;
     u16* pTilemap;
@@ -2591,7 +2591,7 @@ void StatusScreenSetMissilesVisibility(u16* pTilemap)
  * @param isActivated Is the row activated
  * @param drawUpdate Bool, draw the updated row
  */
-void StatusScreenUpdateRow(u8 group, u8 row, u8 isActivated, u8 drawUpdate)
+void StatusScreenUpdateRow(AbilityGroup group, u8 row, u8 isActivated, u8 drawUpdate)
 {
     s32 position;
     s32 size;
@@ -2632,7 +2632,7 @@ void StatusScreenUpdateRow(u8 group, u8 row, u8 isActivated, u8 drawUpdate)
  * @param group Group
  * @param row Row
  */
-void StatusScreenEnableUnknownItem(u8 group, u8 row)
+void StatusScreenEnableUnknownItem(AbilityGroup group, u8 row)
 {
     u32 position;
     s32 size;
@@ -2840,7 +2840,7 @@ u32 StatusScreenFindUnknownItemSlot(u8 wantUnknownItem)
 
     for ( ; ; PAUSE_SCREEN_DATA.statusScreenData.currentStatusSlot++)
     {
-        if (PAUSE_SCREEN_DATA.statusScreenData.currentStatusSlot >= STATUS_SLOT_END)
+        if (PAUSE_SCREEN_DATA.statusScreenData.currentStatusSlot >= STATUS_SLOT_COUNT)
             return 2;
         
         switch (sStatusScreenItemsData[PAUSE_SCREEN_DATA.statusScreenData.currentStatusSlot].group)
@@ -3206,7 +3206,7 @@ u32 StatusScreenFullyPoweredItems(void)
             PAUSE_SCREEN_DATA.stateInfo.timer = 0;
             break;
 
-        case FULLY_POWERED_ITEMS_END:
+        case FULLY_POWERED_ITEMS_COUNT:
         default:
             return TRUE;
     }
@@ -3506,9 +3506,9 @@ u32 StatusScreenIsStatusSlotEnabled(u8 statusSlot)
  * 
  * @param statusSlot Status slot
  * @param action Toggling action
- * @return u32 bool, is on (0xFF if can't toggle)
+ * @return boolu32 bool, is on (0xFF if can't toggle)
  */
-u32 StatusScreenToggleItem(u8 statusSlot, u8 action)
+u32 StatusScreenToggleItem(u8 statusSlot, ItemToggleAction action)
 {
     u32 flag;
     u8* pActivation;

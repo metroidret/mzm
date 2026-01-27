@@ -19,7 +19,7 @@
 void Geron(void)
 {
     u32 destroyed;
-    u8 caa;
+    ClipdataAffectingAction caa;
     u16 yPosition;
     u16 xPosition;
     u16 spriteTop;

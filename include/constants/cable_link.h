@@ -1,13 +1,16 @@
 #ifndef CABLE_LINK_CONSTANTS_H
 #define CABLE_LINK_CONSTANTS_H
 
-enum ActiveTransfer {
+#include "types.h"
+#include "macros.h"
+
+MAKE_ENUM(u8, ActiveTransfer) {
     ACTIVE_TRANSFER_NONE,
     ACTIVE_TRANSFER_CONNECT,
     ACTIVE_TRANSFER_LINK
 };
 
-enum ConnectStage {
+MAKE_ENUM(u8, ConnectStage) {
     CONNECT_STAGE_FADE_MUSIC,
     CONNECT_STAGE_WAIT_CLEAR_SOUND,
     CONNECT_STAGE_MULTIBOOT_INIT,
@@ -23,7 +26,7 @@ enum ConnectStage {
     CONNECT_STAGE_FINISH
 };
 
-enum TransferResult {
+MAKE_ENUM(u8, TransferResult) {
     TRANSFER_RESULT_NONE,
     TRANSFER_RESULT_SUCCESS,
     TRANSFER_RESULT_BACKED_OUT,
@@ -32,4 +35,33 @@ enum TransferResult {
     TRANSFER_RESULT_SUCCESS2 // Related to number of received images
 };
 
-#endif
+MAKE_ENUM(u8, LinkStage) {
+    LINK_STAGE_INIT,
+    LINK_STAGE_PROCESS_CONNECTION,
+    LINK_STAGE_RECEIVED_GALLERY,
+    LINK_STAGE_ERROR0,
+    LINK_STAGE_ERROR1,
+    LINK_STAGE_UNK5
+};
+
+MAKE_ENUM(u8, LinkState) {
+    LINK_STATE_START0,
+    LINK_STATE_START1,
+    LINK_STATE_HANDSHAKE,
+    LINK_STATE_INIT_TIMER,
+    LINK_STATE_CONN_ESTABLISHED
+};
+
+MAKE_ENUM(u8, QueueFull) {
+    QUEUE_FULL_NONE,
+    QUEUE_FULL_SEND,
+    QUEUE_FULL_RECV
+};
+
+MAKE_ENUM(u8, LagStatus) {
+    LAG_NONE,
+    LAG_PARENT,
+    LAG_CHILD
+};
+
+#endif /* CABLE_LINK_CONSTANTS_H */

@@ -4,7 +4,7 @@
 #include "types.h"
 #include "macros.h"
 
-enum ScrollSubData {
+MAKE_ENUM(u8, ScrollSubData) {
     // Left bound
     SCROLL_SUB_DATA_X_START,
     // Right bound
@@ -21,12 +21,12 @@ enum ScrollSubData {
     SCROLL_SUB_DATA_EXTENDED_DIRECTION,
     SCROLL_SUB_DATA_EXTENDED_VALUE,
 
-    SCROLL_SUB_DATA_END
+    SCROLL_SUB_DATA_COUNT
 };
 
-#define SCROLL_DATA_SIZE(nbrScrolls) (2 + SCROLL_SUB_DATA_END * nbrScrolls)
+#define SCROLL_DATA_SIZE(nbrScrolls) (2 + SCROLL_SUB_DATA_COUNT * nbrScrolls)
 
-enum LockScreenType {
+MAKE_ENUM(u8, LockScreenType) {
     LOCK_SCREEN_TYPE_NONE,
     LOCK_SCREEN_TYPE_POSITION,
     LOCK_SCREEN_TYPE_MIDDLE
@@ -35,19 +35,19 @@ enum LockScreenType {
 #define SCROLL_NOT_WITHIN_FLAG 0
 #define SCROLL_WITHIN_FLAG 2
 
-enum ScrollVelocityCap {
+MAKE_ENUM(u8, ScrollVelocityCap) {
     SCROLL_VELOCITY_CAP_SET_DEFAULT,
     SCROLL_VELOCITY_CAP_SET_SLOW,
     SCROLL_VELOCITY_CAP_SET_FAST,
 
-    SCROLL_VELOCITY_CAP_END
+    SCROLL_VELOCITY_CAP_COUNT
 };
 
-enum bg3ScrollingType {
+MAKE_ENUM(u8, bg3ScrollingType) {
     BG3_SCROLLING_TYPE_NONE,
     BG3_SCROLLING_TYPE_NORMAL,
     BG3_SCROLLING_TYPE_HALVED,
-    BG3_SCROLLING_TYPE_QUARTERED,
+    BG3_SCROLLING_TYPE_QUARTERED
 };
 
 #define SCROLL_X_ANCHOR (SCREEN_SIZE_X_SUB_PIXEL / 2)
@@ -69,7 +69,7 @@ struct Camera {
 };
 
 struct LockScreen {
-    u8 lock;
+    LockScreenType lock;
     u16 xPositionCenter;
     u16 yPositionCenter;
 };

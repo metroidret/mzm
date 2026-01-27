@@ -19,7 +19,7 @@ const struct EnvironmentalEffect sEnvironmentalEffect_Empty = {
 
 // Power suit
 
-const struct SamusAnimationData* const sSamusAnimPointers_PowerSuit[SPOSE_END][2] = {
+const struct SamusAnimationData* const sSamusAnimPointers_PowerSuit[SPOSE_COUNT][2] = {
     [SPOSE_RUNNING] = {
         sSamusAnim_PowerSuit_Right_Running,
         sSamusAnim_PowerSuit_Left_Running
@@ -660,7 +660,7 @@ const struct SamusAnimationData* const sSamusAnimPointers_PowerSuit_TurningOnZip
 };
 
 
-const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_All[SPOSE_END][2] = {
+const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_All[SPOSE_COUNT][2] = {
     [SPOSE_RUNNING] = {
         sArmCannonAnim_Suit_Right_None_Running,
         sArmCannonAnim_Suit_Left_None_Running
@@ -1289,7 +1289,7 @@ const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_TurningOn
 };
 
 
-const u8 sSamusCollisionData[SPOSE_END][SCDF_COUNT] = {
+const u8 sSamusCollisionData[SPOSE_COUNT][SCDF_COUNT] = {
     [SPOSE_RUNNING] = {
         [SCDF_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
         [SCDF_BLOCK_HITBOX] = SAMUS_HITBOX_TYPE_STANDING,
@@ -1631,7 +1631,7 @@ const u8 sSamusCollisionData[SPOSE_END][SCDF_COUNT] = {
 
 // Full suit
 
-const struct SamusAnimationData* const sSamusAnimPointers_FullSuit[SPOSE_END][2] = {
+const struct SamusAnimationData* const sSamusAnimPointers_FullSuit[SPOSE_COUNT][2] = {
     [SPOSE_RUNNING] = {
         sSamusAnim_FullSuit_Right_Running,
         sSamusAnim_FullSuit_Left_Running
@@ -2277,7 +2277,7 @@ const struct SamusAnimationData* const sSamusAnimPointers_FullSuit_TurningOnZipl
 
 // Suitless
 
-const struct SamusAnimationData* const sSamusAnimPointers_Suitless[SPOSE_END][2] = {
+const struct SamusAnimationData* const sSamusAnimPointers_Suitless[SPOSE_COUNT][2] = {
     [SPOSE_RUNNING] = {
         sSamusAnim_Suitless_Right_Running,
         sSamusAnim_Suitless_Left_Running
@@ -2831,7 +2831,7 @@ const struct SamusAnimationData* const sSamusAnimPointers_Suitless_CrawlingStopp
 };
 
 
-const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suitless_All[SPOSE_END][2] = {
+const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suitless_All[SPOSE_COUNT][2] = {
     [SPOSE_RUNNING] = {
         sArmCannonAnim_Suitless_Right_None_Running,
         sArmCannonAnim_Suitless_Left_None_Running

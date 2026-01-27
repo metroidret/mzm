@@ -16,7 +16,7 @@
 #define CROCOMIRE_PART_POSE_IDLE 0x9
 #define CROCOMIRE_PART_POSE_DYING 0x67
 
-static const struct FrameData* sCrocomireFrameDataPointers[CROCOMIRE_OAM_END] = {
+static const struct FrameData* sCrocomireFrameDataPointers[CROCOMIRE_OAM_COUNT] = {
     [CROCOMIRE_OAM_PART_BODY_IDLE] = sCrocomirePartOam_BodyIdle,
     [CROCOMIRE_OAM_PART_BODY_ANGRY] = sCrocomirePartOam_BodyAngry,
     [CROCOMIRE_OAM_IDLE] = sCrocomireOam_Idle,
@@ -41,7 +41,7 @@ static const struct FrameData* sCrocomireFrameDataPointers[CROCOMIRE_OAM_END] = 
     [CROCOMIRE_OAM_PART_307028] = sCrocomirePartOam_307028,
     [CROCOMIRE_OAM_PART_307058] = sCrocomirePartOam_307058,
     [CROCOMIRE_OAM_PART_307088] = sCrocomirePartOam_307088,
-    [CROCOMIRE_OAM_PART_3070b8] = sCrocomirePartOam_3070b8,
+    [CROCOMIRE_OAM_PART_3070b8] = sCrocomirePartOam_3070b8
 };
 
 /**

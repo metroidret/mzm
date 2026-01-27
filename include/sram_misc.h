@@ -2,8 +2,9 @@
 #define SRAM_MISC
 
 #include "types.h"
+#include "macros.h"
 
-enum SramOperation {
+MAKE_ENUM(u8, SramOperation) {
     SRAM_OPERATION_WRITE_FILE_SCREEN_OPTIONS,
 
     SRAM_OPERATION_SAVE_MOST_RECENT_FILE = 5,
@@ -17,11 +18,11 @@ enum SramOperation {
     SRAM_OPERATION_SAVE_DEMO_RAM,
     SRAM_OPERATION_READ_ALL_FLASH,
     SRAM_OPERATION_READ_RECENT_FILE_UNCHECKED,
-    SRAM_OPERATION_CHECK_ALL,
+    SRAM_OPERATION_CHECK_ALL
 };
 
 void EraseSram(void);
-u8* DoSramOperation(u8 operation);
+u8* DoSramOperation(SramOperation operation);
 u32 unk_fbc(u8 param_1);
 
 #endif /* SRAM_MISC */

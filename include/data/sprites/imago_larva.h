@@ -6,7 +6,7 @@
 
 #include "structs/sprite.h"
 
-enum ImagoLarvaOam {
+MAKE_ENUM(u8, ImagoLarvaOam) {
     IMAGO_LARVA_OAM_SHELL_ATTACKING,
     IMAGO_LARVA_OAM_SHELL_IDLE,
     IMAGO_LARVA_OAM_SHELL_RETREATING,
@@ -31,7 +31,7 @@ enum ImagoLarvaOam {
     IMAGO_LARVA_OAM_WARNING,
     IMAGO_LARVA_OAM_SHELL_TAKING_DAMAGE,
 
-    IMAGO_LARVA_OAM_END
+    IMAGO_LARVA_OAM_COUNT
 };
 
 extern const struct MultiSpriteData sImagoLarvaMultiSpriteData_Attacking[12];

@@ -46,7 +46,7 @@ static u8 StoryTextCutsceneInit(void)
     BitFill(3, 0, &gCurrentMessage, sizeof(gCurrentMessage), 32);
 
     // Set message ID
-    gCurrentMessage.messageID = sCutsceneData[gCurrentCutscene].storyText - 1;
+    gCurrentMessage.messageId = sCutsceneData[gCurrentCutscene].storyText - 1;
     CutsceneFadeScreenToBlack();
 
     // Load palette
@@ -64,7 +64,7 @@ static u8 StoryTextCutsceneInit(void)
     gWrittenToBldalpha_H = 0;
 
     // Check is "fullscreen" text ID
-    switch (gCurrentMessage.messageID)
+    switch (gCurrentMessage.messageId)
     {
         case STORY_TEXT_PLANET_ZEBES:
         case STORY_TEXT_THE_TIMING:
@@ -75,7 +75,7 @@ static u8 StoryTextCutsceneInit(void)
             gWrittenToBldalpha_L = 0;
             gWrittenToBldalpha_H = BLDALPHA_MAX_VALUE;
 
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sStoryTextCutscenePagesData[0].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sStoryTextCutscenePagesData[0].bg, NON_GAMEPLAY_START_BG_POS);
             break;
     }
 
@@ -122,7 +122,7 @@ static u8 StoryTextCutsceneProcessText(void)
         case 2:
             for (line = 8; line != 0; line--)
             {
-                result = TextProcessCurrentMessage(&gCurrentMessage, sStoryTextPointers[gLanguage][gCurrentMessage.messageID],
+                result = TextProcessCurrentMessage(&gCurrentMessage, sStoryTextPointers[gLanguage][gCurrentMessage.messageId],
                     dst + gCurrentMessage.line * 0x200);
                 
                 switch (result)
@@ -180,7 +180,7 @@ static u8 StoryTextCutsceneSetVerticalOffset(void)
     if (MOD_AND(gCurrentMessage.line,2))
         bgPosition -= HALF_BLOCK_SIZE;
 
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_VOFS, sStoryTextCutscenePagesData[0].bg, bgPosition);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_Y, sStoryTextCutscenePagesData[0].bg, bgPosition);
 
     CUTSCENE_DATA.timeInfo.timer = 0;
     CUTSCENE_DATA.timeInfo.subStage = 0;
@@ -369,7 +369,7 @@ static struct CutsceneStageData sStoryTextCutsceneStageData[7] = {
     [6] = {
         .pFunction = StoryTextCutsceneEnd,
         .oamLength = 0
-    },
+    }
 };
 
 /**

@@ -374,7 +374,7 @@ static MinimapFunc_T sMinimapTilesCopyGfxFunctionPointers[4] = {
     MinimapCopyTileGfx,
     MinimapCopyTileXFlippedGfx,
     MinimapCopyTileYFlippedGfx,
-    MinimapCopyTileXYFlippedGfx,
+    MinimapCopyTileXYFlippedGfx
 };
 
 /**

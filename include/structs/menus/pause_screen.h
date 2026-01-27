@@ -4,6 +4,7 @@
 #include "types.h"
 
 #include "constants/menus/status_screen.h"
+#include "constants/menus/pause_screen.h"
 #include "constants/samus.h"
 #include "constants/text.h"
 
@@ -28,9 +29,9 @@ struct ChozoStatueTarget {
 };
 
 struct PauseScreenAreaIconData {
-    u8 nameOamId;
-    u8 nameSpawningOamId;
-    u8 outlineOamId;
+    OverlayOamId nameOamId;
+    OverlayOamId nameSpawningOamId;
+    OverlayOamId outlineOamId;
     u16 xPosition;
     u16 yPosition;
 };
@@ -71,7 +72,7 @@ struct MinimapAreaName {
 };
 
 struct PauseScreenStateData {
-    u8 state;
+    PauseScreenState state;
     u8 padding_1[3];
     u8 stage;
     u16 timer;
@@ -90,7 +91,7 @@ struct ChozoHintTarget {
     u8 unk_41; // target path index?
     s8 unk_42; // target area?
     u16 activatedTargets;
-    u8 activeMovementScrollingFlag;
+    TargetMovementType activeMovementScrollingFlag;
     u8 movementStage;
     u8 movementDelayTimer;
     u8 scrollingStage;
@@ -113,7 +114,7 @@ struct ChozoHintMapData {
 };
 
 struct MapScreenFading {
-    u8 stage;
+    PauseScreenFading stage;
     u8 colorToApply;
     u8 paletteUpdated;
 };
@@ -124,11 +125,11 @@ struct StatusScreenData {
     u8 previousLeftStatusSlot;
     u8 previousRightStatusSlot;
 
-    BeamBombFlags beamActivation[STATUS_SCREEN_BEAM_OFFSET_END];
-    SuitMiscFlags suitActivation[STATUS_SCREEN_SUIT_OFFSET_END];
-    SuitMiscFlags miscActivation[STATUS_SCREEN_MISC_OFFSET_END];
-    BeamBombFlags bombActivation[STATUS_SCREEN_BOMB_OFFSET_END];
-    u8 missilesActivation[STATUS_SCREEN_MISSILE_OFFSET_END];
+    BeamBombFlags beamActivation[STATUS_SCREEN_BEAM_OFFSET_COUNT];
+    SuitMiscFlags suitActivation[STATUS_SCREEN_SUIT_OFFSET_COUNT];
+    SuitMiscFlags miscActivation[STATUS_SCREEN_MISC_OFFSET_COUNT];
+    BombActivation bombActivation[STATUS_SCREEN_BOMB_OFFSET_COUNT];
+    MissileActivation missilesActivation[STATUS_SCREEN_MISSILE_OFFSET_COUNT];
 
     u8 padding_15[3];
 };
@@ -170,7 +171,7 @@ struct PauseScreenEwramData {
 };
 
 struct PauseScreenData {
-    u16 typeFlags;
+    PauseScreenType typeFlags;
     struct PauseScreenStateData stateInfo;
     u8 unk_10; // unused
 

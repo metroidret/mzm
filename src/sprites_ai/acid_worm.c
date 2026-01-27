@@ -27,7 +27,7 @@
 
 // Acid worm body
 
-enum AcidWormPartPart {
+MAKE_ENUM(u8, AcidWormPartPartId) {
     ACID_WORM_PART_MAIN,
     ACID_WORM_PART_AROUND_MOUTH,
     ACID_WORM_PART_WEAK_POINT,
@@ -52,10 +52,10 @@ enum AcidWormPartPart {
 #define ACID_WORM_SPIT_POSE_EXPLODING 0x43
 #define ACID_WORM_SPIT_POSE_EXPLODING_ON_ACID 0x45
 
-enum AcidWormSpitBehavior {
+MAKE_ENUM(u8, AcidWormSpitBehavior) {
     ACID_WORM_SPIT_BEHAVIOR_MIDDLE,
     ACID_WORM_SPIT_BEHAVIOR_FAR,
-    ACID_WORM_SPIT_BEHAVIOR_CLOSE,
+    ACID_WORM_SPIT_BEHAVIOR_CLOSE
 };
 
 #define ACID_WORM_SPAWN_RANGE (BLOCK_SIZE * 2 + QUARTER_BLOCK_SIZE - PIXEL_SIZE)
@@ -160,7 +160,7 @@ static void AcidWormWiggleHorizontally(void)
  * @param yPosition Y Position
  * @param xPosition X Position
  */
-static void AcidWormChangeTwoGroundCcaa(u8 caa, u16 yPosition, u16 xPosition)
+static void AcidWormChangeTwoGroundCcaa(ClipdataAffectingAction caa, u16 yPosition, u16 xPosition)
 {
     // Left block
     gCurrentClipdataAffectingAction = caa;
@@ -176,7 +176,7 @@ static void AcidWormChangeTwoGroundCcaa(u8 caa, u16 yPosition, u16 xPosition)
  * 
  * @param caa Clipdata affecting action
  */
-static void AcidWormChangeBigBlockDownCcaa(u8 caa)
+static void AcidWormChangeBigBlockDownCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;
@@ -203,7 +203,7 @@ static void AcidWormChangeBigBlockDownCcaa(u8 caa)
  * 
  * @param caa Clipdata affecting action
  */
-static void AcidWormChangeBigBlockMiddleCcaa(u8 caa)
+static void AcidWormChangeBigBlockMiddleCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;
@@ -229,7 +229,7 @@ static void AcidWormChangeBigBlockMiddleCcaa(u8 caa)
  * 
  * @param caa Clipdata affecting action
  */
-static void AcidWormChangeBigBlockTopCcaa(u8 caa)
+static void AcidWormChangeBigBlockTopCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;

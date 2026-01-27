@@ -2,9 +2,9 @@
 #define IMAGO_LARVA_AI_H
 
 #include "types.h"
-#include "structs/sprite.h"
+#include "macros.h"
 
-enum ImagoLarvaPart {
+MAKE_ENUM(u8, ImagoLarvaPartId) {
     IMAGO_LARVA_PART_CLAWS,
     IMAGO_LARVA_PART_RIGHT_DOT,
     IMAGO_LARVA_PART_MIDDLE_DOT,
@@ -12,7 +12,7 @@ enum ImagoLarvaPart {
     IMAGO_LARVA_PART_SHELL,
     IMAGO_LARVA_PART_LARVA,
 
-    IMAGO_LARVA_PART_END
+    IMAGO_LARVA_PART_COUNT
 };
 
 void ImagoLarva(void);

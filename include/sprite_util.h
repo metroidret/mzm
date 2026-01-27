@@ -3,6 +3,7 @@
 
 #include "types.h"
 
+#include "constants/clipdata.h"
 #include "constants/sprite.h"
 #include "constants/sprite_util.h"
 #include "constants/particle.h"
@@ -21,7 +22,7 @@ u32 SpriteUtilCheckVerticalCollisionAtPositionSlopes(u16 yPosition, u16 xPositio
 void SpriteUtilAlignYPositionOnSlopeAtOrigin(void);
 void SpriteUtilAlignYPositionOnSlopeAtHitboxBottom(void);
 void SpriteUtilCheckCollisionAtPosition(u32 yPosition, u32 xPosition);
-u32 SpriteUtilGetCollisionAtPosition(u16 yPosition, u16 xPosition);
+CollisionResult SpriteUtilGetCollisionAtPosition(u16 yPosition, u16 xPosition);
 void SpriteUtilCurrentSpriteFall(void);
 void SpriteUtilChooseRandomXFlip(void);
 void SpriteUtilChooseRandomXDirection(void);

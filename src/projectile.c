@@ -263,7 +263,7 @@ u32 ProjectileCheckWaveBeamHittingBlocks(struct ProjectileData* pProj)
     u16 yPosition;
     u16 xPosition;
     u8 nbrBlocks;
-    u8 caa;
+    ClipdataAffectingAction caa;
     const u32 hitboxOffset = BLOCK_SIZE;
     const u32 hitboxDiagOffset = hitboxOffset * .7f + ONE_SUB_PIXEL;
 

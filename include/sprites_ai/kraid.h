@@ -2,8 +2,9 @@
 #define KRAID_AI_H
 
 #include "types.h"
+#include "macros.h"
 
-enum KraidPart {
+MAKE_ENUM(u8, KraidPartId) {
     KRAID_PART_BELLY,
     KRAID_PART_LEFT_ARM,
     KRAID_PART_TOP_HOLE_LEFT,
@@ -17,7 +18,7 @@ enum KraidPart {
     KRAID_PART_RIGHT_ARM,
     KRAID_PART_RIGHT_FEET,
 
-    KRAID_PART_END
+    KRAID_PART_COUNT
 };
 
 void Kraid(void);

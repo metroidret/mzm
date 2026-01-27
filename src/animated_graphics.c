@@ -22,7 +22,7 @@
 #include "structs/power_bomb_explosion.h"
 #include "structs/room.h"
 
-static const BackgroundEffectBehaviorEntry_T* sBackgroundEffectBehaviorPointers[BACKGROUND_EFFECT_END] = {
+static const BackgroundEffectBehaviorEntry_T* sBackgroundEffectBehaviorPointers[BACKGROUND_EFFECT_COUNT] = {
     [BACKGROUND_EFFECT_NONE] = sBackgroundEffectBehavior_Lightning,
     [BACKGROUND_EFFECT_LIGHTNING] = sBackgroundEffectBehavior_Lightning,
     [BACKGROUND_EFFECT_SLIGHT_YELLOW] = sBackgroundEffectBehavior_SlightYellow,
@@ -31,7 +31,7 @@ static const BackgroundEffectBehaviorEntry_T* sBackgroundEffectBehaviorPointers[
     [BACKGROUND_EFFECT_INTRO_TEXT_FADE] = sBackgroundEffectBehavior_IntroText,
     [BACKGROUND_EFFECT_QUICK_FLASH] = sBackgroundEffectBehavior_QuickFlash,
     [BACKGROUND_EFFECT_ALL_BLACK] = sBackgroundEffectBehavior_AllBlackWhite,
-    [BACKGROUND_EFFECT_ALL_WHITE] = sBackgroundEffectBehavior_AllBlackWhite,
+    [BACKGROUND_EFFECT_ALL_WHITE] = sBackgroundEffectBehavior_AllBlackWhite
 };
 
 static u16 BackgroundEffectProcess(void);
@@ -377,7 +377,7 @@ void AnimatedPaletteUpdate(void)
     s32 newRow;
 
     // Check has animated palette
-    if (gAnimatedGraphicsEntry.palette == 0)
+    if (gAnimatedGraphicsEntry.palette == ANIMATED_PALETTE_ID_NONE)
         return;
 
     // Don't update if a power bomb explosion is occuring
@@ -484,7 +484,7 @@ void AnimatedPaletteCheckDisableOnTransition(void)
 
     gDisableAnimatedPalette = FALSE;
 
-    if (gAnimatedGraphicsEntry.palette == 0)
+    if (gAnimatedGraphicsEntry.palette == ANIMATED_PALETTE_ID_NONE)
         return;
 
     // Transfer palette

@@ -4,19 +4,20 @@
 #include "types.h"
 
 #include "constants/connection.h"
+#include "constants/menus/pause_screen.h"
 
 #include "structs/menu.h"
 #include "structs/cutscene.h"
 
 u32 PauseScreenInitFading(u16 targetBldAlpha, u8 bldAlphaStepLevel, s8 bldAlphaStepDelayThreshold);
 u8 PauseScreenApplyFading(void);
-u32 PauseScreenUpdateOrStartFading(u8 stage);
+u32 PauseScreenUpdateOrStartFading(PauseScreenFading stage);
 void PauseScreenCopyPalramToEwram_Unused(u8 param_1);
 void PauseScreenCopyBackgroundPalette_Unused(void);
 void PauseScreenUpdateMapArrows(void);
 void PauseScreenUpdateBossIcons(void);
 void PauseScreenDrawCompletionInfo(u8 dontDraw);
-u8 PauseScreenStatusScreenShouldDrawHeader(u8 samusWireframeDataIndex);
+u8 PauseScreenStatusScreenShouldDrawHeader(SamusWireframeDataId samusWireframeDataIndex);
 u32 PauseScreenUpdateStatusScreenOam(u8 param_1);
 void PauseScreenUpdateWireframeSamus(u8 updateWireframeOption);
 void PauseScreenFadeWireframeSamus(void);
@@ -45,7 +46,7 @@ s32 PauseScreenQuitStatusScreen(void);
 s32 PauseScreenEasySleepInit(void);
 s32 PauseScreenQuitEasySleep(void);
 #ifdef REGION_EU
-void CheckForMaintainedInput(u8 speed);
+void CheckForMaintainedInput(MaintainedInputSpeed speed);
 #else // !REGION_EU
 void CheckForMaintainedInput(void);
 #endif // REGION_EU

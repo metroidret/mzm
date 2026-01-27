@@ -3,10 +3,13 @@
 
 #include "types.h"
 
+#include "constants/ending_and_gallery.h"
+#include "constants/game_state.h"
+
 #define ENDING_DATA sNonGameplayRamPointer->ending
 
 struct EndingImageOam {
-    u8 type;
+    EndingOamType type;
     u8 spawnDelay;
     u8 unk_2;
     u16 xPosition;
@@ -15,7 +18,7 @@ struct EndingImageOam {
 };
 
 struct CreditsEntry {
-    u8 type;
+    CreditLineType type;
     u8 text[35];
 };
 
@@ -33,7 +36,7 @@ struct EndingData {
     u16 creditLineTilemap_2[32];
     u32 creditLineOffset_1;
     u32 creditLineOffset_2;
-    u8 endingNumber;
+    EndingImage endingNumber;
     u8 completionPercentage;
     u8 language;
     u8 oamLength;

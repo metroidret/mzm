@@ -216,10 +216,10 @@ void BgClipApplyClipdataChangingTransparency(void)
  * @param unused Unused parameter
  * @return u16 Bldalpha value (eva on first 8 bits, then evb on next 8 bits)
  */
-u16 BgClipGetNewBldalphaValue(u16 clip, u16 unused)
+u16 BgClipGetNewBldalphaValue(ClipBehavior clip, u16 unused)
 {
     u16 bldalpha;
-    u16 clipdata;
+    ClipBehavior clipdata;
 
     clipdata = BEHAVIOR_TO_BLDALPHA(clip);
 
@@ -560,7 +560,7 @@ void BgClipCheckTouchingTransitionOrTank(void)
                 }
 
                 // Spawn the message banner
-                i = sTankBehaviors[BEHAVIOR_TO_TANK(behaviors[j])].messageID + isFirstTank;
+                i = sTankBehaviors[BEHAVIOR_TO_TANK(behaviors[j])].messageId + isFirstTank;
                 if (i != MESSAGE_NONE)
                 {
                     SpriteSpawnPrimary(PSPRITE_MESSAGE_BANNER, i, SPRITE_GFX_SLOT_SPECIAL,
@@ -694,10 +694,10 @@ void BgClipCheckGrabbingCrumbleBlock(u8 dontDestroy)
  * @param yPosition Y Position
  * @return u32 Hatch opening action
  */
-u32 BgClipCheckOpeningHatch(u16 xPosition, u16 yPosition)
+HatchOpeningAction BgClipCheckOpeningHatch(u16 xPosition, u16 yPosition)
 {
     s32 i;
-    u32 action;
+    HatchOpeningAction action;
 
     #ifdef BUGFIX
     action = HATCH_OPENING_ACTION_NOT_OPENING;

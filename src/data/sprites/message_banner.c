@@ -6,28 +6,28 @@ const u16 sMessageBannerPal[32] = INCBIN_U16("data/sprites/message_banner.pal");
 
 static const u16 sSaveYesNoCursorOam_Idle_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sSaveYesNoCursorOam_Idle_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-3, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-3, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sSaveYesNoCursorOam_Idle_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-2, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21e, 8, 0),
+    OAM_ENTRY(-2, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21e, 8, 0)
 };
 
 static const u16 sMessageBannerOam_TwoLinesSpawn_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -4, OAM_DIMS_16x8, OAM_NO_FLIP, 0x25c, 8, 0),
+    OAM_ENTRY(-8, -4, OAM_DIMS_16x8, OAM_NO_FLIP, 0x25c, 8, 0)
 };
 
 static const u16 sMessageBannerOam_TwoLinesSpawn_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-24, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x25c, 8, 0),
-    OAM_ENTRY(8, -4, OAM_DIMS_16x8, OAM_NO_FLIP, 0x25c, 8, 0),
+    OAM_ENTRY(8, -4, OAM_DIMS_16x8, OAM_NO_FLIP, 0x25c, 8, 0)
 };
 
 static const u16 sMessageBannerOam_TwoLinesSpawn_Frame2[OAM_DATA_SIZE(4)] = {
@@ -35,7 +35,7 @@ static const u16 sMessageBannerOam_TwoLinesSpawn_Frame2[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-56, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x25c, 8, 0),
     OAM_ENTRY(-24, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x25c, 8, 0),
     OAM_ENTRY(8, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x25c, 8, 0),
-    OAM_ENTRY(40, -4, OAM_DIMS_16x8, OAM_NO_FLIP, 0x25c, 8, 0),
+    OAM_ENTRY(40, -4, OAM_DIMS_16x8, OAM_NO_FLIP, 0x25c, 8, 0)
 };
 
 static const u16 sMessageBannerOam_TwoLinesSpawn_Frame3[OAM_DATA_SIZE(6)] = {
@@ -45,7 +45,7 @@ static const u16 sMessageBannerOam_TwoLinesSpawn_Frame3[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-24, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x25c, 8, 0),
     OAM_ENTRY(8, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x25c, 8, 0),
     OAM_ENTRY(40, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x25c, 8, 0),
-    OAM_ENTRY(72, -4, OAM_DIMS_16x8, OAM_NO_FLIP, 0x25c, 8, 0),
+    OAM_ENTRY(72, -4, OAM_DIMS_16x8, OAM_NO_FLIP, 0x25c, 8, 0)
 };
 
 static const u16 sMessageBannerOam_TwoLinesSpawn_Frame4[OAM_DATA_SIZE(8)] = {
@@ -57,7 +57,7 @@ static const u16 sMessageBannerOam_TwoLinesSpawn_Frame4[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(8, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x25c, 8, 0),
     OAM_ENTRY(40, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x25c, 8, 0),
     OAM_ENTRY(72, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x25c, 8, 0),
-    OAM_ENTRY(104, -4, OAM_DIMS_16x8, OAM_NO_FLIP, 0x25c, 8, 0),
+    OAM_ENTRY(104, -4, OAM_DIMS_16x8, OAM_NO_FLIP, 0x25c, 8, 0)
 };
 
 static const u16 sMessageBannerOam_TwoLinesSpawn_Frame5[OAM_DATA_SIZE(16)] = {
@@ -77,7 +77,7 @@ static const u16 sMessageBannerOam_TwoLinesSpawn_Frame5[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(16, -2, OAM_DIMS_32x8, OAM_NO_FLIP, 0x270, 8, 0),
     OAM_ENTRY(48, -2, OAM_DIMS_32x8, OAM_NO_FLIP, 0x274, 8, 0),
     OAM_ENTRY(80, -2, OAM_DIMS_32x8, OAM_NO_FLIP, 0x278, 8, 0),
-    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21f, 8, 0),
+    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21f, 8, 0)
 };
 
 static const u16 sMessageBannerOam_TwoLinesSpawn_Frame6[OAM_DATA_SIZE(16)] = {
@@ -97,7 +97,7 @@ static const u16 sMessageBannerOam_TwoLinesSpawn_Frame6[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 0x270, 8, 0),
     OAM_ENTRY(48, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 0x274, 8, 0),
     OAM_ENTRY(80, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 0x278, 8, 0),
-    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21c, 8, 0)
 };
 
 static const u16 sMessageBannerOam_TwoLinesSpawn_Frame7[OAM_DATA_SIZE(20)] = {
@@ -121,7 +121,7 @@ static const u16 sMessageBannerOam_TwoLinesSpawn_Frame7[OAM_DATA_SIZE(20)] = {
     OAM_ENTRY(80, -6, OAM_DIMS_32x16, OAM_NO_FLIP, 0x258, 8, 0),
     OAM_ENTRY(112, -10, OAM_DIMS_8x8, OAM_X_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(112, 2, OAM_DIMS_8x8, OAM_X_FLIP, 0x23c, 8, 0),
-    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21d, 8, 0),
+    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21d, 8, 0)
 };
 
 static const u16 sMessageBannerOam_TwoLinesSpawn_Frame8[OAM_DATA_SIZE(20)] = {
@@ -145,7 +145,7 @@ static const u16 sMessageBannerOam_TwoLinesSpawn_Frame8[OAM_DATA_SIZE(20)] = {
     OAM_ENTRY(80, -4, OAM_DIMS_32x16, OAM_NO_FLIP, 0x258, 8, 0),
     OAM_ENTRY(112, -12, OAM_DIMS_8x8, OAM_X_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(112, 4, OAM_DIMS_8x8, OAM_X_FLIP, 0x23c, 8, 0),
-    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21d, 8, 0),
+    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21d, 8, 0)
 };
 
 static const u16 sMessageBannerOam_TwoLinesSpawn_Frame9[OAM_DATA_SIZE(20)] = {
@@ -169,7 +169,7 @@ static const u16 sMessageBannerOam_TwoLinesSpawn_Frame9[OAM_DATA_SIZE(20)] = {
     OAM_ENTRY(80, -2, OAM_DIMS_32x16, OAM_NO_FLIP, 0x258, 8, 0),
     OAM_ENTRY(112, -14, OAM_DIMS_8x8, OAM_X_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(112, 6, OAM_DIMS_8x8, OAM_X_FLIP, 0x23c, 8, 0),
-    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21d, 8, 0),
+    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21d, 8, 0)
 };
 
 static const u16 sMessageBannerOam_TwoLinesStatic_Frame0[OAM_DATA_SIZE(10)] = {
@@ -183,7 +183,7 @@ static const u16 sMessageBannerOam_TwoLinesStatic_Frame0[OAM_DATA_SIZE(10)] = {
     OAM_ENTRY(80, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(112, -16, OAM_DIMS_8x8, OAM_X_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(112, 8, OAM_DIMS_8x8, OAM_X_FLIP, 0x23c, 8, 0),
-    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21d, 8, 0),
+    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21d, 8, 0)
 };
 
 static const u16 sMessageBannerOam_OneLineSpawn_Frame5[OAM_DATA_SIZE(8)] = {
@@ -195,7 +195,7 @@ static const u16 sMessageBannerOam_OneLineSpawn_Frame5[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(8, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x27c, 8, 0),
     OAM_ENTRY(40, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x27c, 8, 0),
     OAM_ENTRY(72, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x27c, 8, 0),
-    OAM_ENTRY(104, -4, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27c, 8, 0),
+    OAM_ENTRY(104, -4, OAM_DIMS_16x8, OAM_NO_FLIP, 0x27c, 8, 0)
 };
 
 static const u16 sMessageBannerOam_OneLineSpawn_Frame6[OAM_DATA_SIZE(18)] = {
@@ -217,7 +217,7 @@ static const u16 sMessageBannerOam_OneLineSpawn_Frame6[OAM_DATA_SIZE(18)] = {
     OAM_ENTRY(48, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x274, 8, 0),
     OAM_ENTRY(80, -4, OAM_DIMS_32x8, OAM_NO_FLIP, 0x278, 8, 0),
     OAM_ENTRY(-120, -2, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23f, 8, 0),
-    OAM_ENTRY(112, -2, OAM_DIMS_8x8, OAM_X_FLIP, 0x23f, 8, 0),
+    OAM_ENTRY(112, -2, OAM_DIMS_8x8, OAM_X_FLIP, 0x23f, 8, 0)
 };
 
 static const u16 sMessageBannerOam_OneLineSpawn_Frame7[OAM_DATA_SIZE(16)] = {
@@ -237,7 +237,7 @@ static const u16 sMessageBannerOam_OneLineSpawn_Frame7[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(16, -2, OAM_DIMS_32x8, OAM_NO_FLIP, 0x230, 8, 0),
     OAM_ENTRY(48, -2, OAM_DIMS_32x8, OAM_NO_FLIP, 0x234, 8, 0),
     OAM_ENTRY(80, -2, OAM_DIMS_32x8, OAM_NO_FLIP, 0x238, 8, 0),
-    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21f, 8, 0),
+    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21f, 8, 0)
 };
 
 static const u16 sMessageBannerOam_OneLineStatic_Frame0[OAM_DATA_SIZE(16)] = {
@@ -257,7 +257,7 @@ static const u16 sMessageBannerOam_OneLineStatic_Frame0[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(16, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 0x230, 8, 0),
     OAM_ENTRY(48, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 0x234, 8, 0),
     OAM_ENTRY(80, 0, OAM_DIMS_32x8, OAM_NO_FLIP, 0x238, 8, 0),
-    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21c, 8, 0),
+    OAM_ENTRY(112, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x21c, 8, 0)
 };
 
 const struct FrameData sSaveYesNoCursorOam_Idle[5] = {

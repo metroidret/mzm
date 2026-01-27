@@ -38,7 +38,7 @@ void (*sUnk_03002378[0x18])(u8) = {
     sub_03000404,
     sub_03001C10,
     sub_03000404,
-    sub_03001C58,
+    sub_03001C58
 };
 
 u32 sUnk_030023D8 = DMA_32BIT | DMA_DEST_FIXED;

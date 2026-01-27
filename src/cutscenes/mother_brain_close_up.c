@@ -218,7 +218,7 @@ static u8 MotherBrainCloseUpEyeOpening(void)
 
             // Initialize eye
             MotherBrainCloseUpUpdateEye(FALSE);
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sMotherBrainCloseUpPageData[2].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sMotherBrainCloseUpPageData[2].bg, NON_GAMEPLAY_START_BG_POS);
 
             // Setup transparency for the flicker effect
             gWrittenToBldalpha_L = 6;
@@ -393,7 +393,7 @@ static u8 MotherBrainCloseUpInit(void)
     CUTSCENE_DATA.bldcnt = BLDCNT_SCREEN_FIRST_TARGET | BLDCNT_BRIGHTNESS_DECREASE_EFFECT;
     gWrittenToBldy_NonGameplay = BLDY_MAX_VALUE;
 
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sMotherBrainCloseUpPageData[0].bg, NON_GAMEPLAY_START_BG_POS);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sMotherBrainCloseUpPageData[0].bg, NON_GAMEPLAY_START_BG_POS);
 
     PlayMusic(MUSIC_ENTERING_NORFAIR_CUTSCENE, 0);
     CUTSCENE_DATA.dispcnt = sMotherBrainCloseUpPageData[0].bg;

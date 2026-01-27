@@ -3,6 +3,7 @@
 
 #include "types.h"
 
+#include "constants/clipdata.h"
 #include "constants/connection.h"
 
 // Structs
@@ -19,15 +20,15 @@ struct ElevatorPair {
 };
 
 struct CurrentAffectingClip {
-    u16 movement;
-    u16 hazard;
+    ClipdataMovement movement;
+    HazardType hazard;
 };
 
 struct CollisionData {
     s32 clipdataType;
     s32 subPixelX;
     s32 subPixelY;
-    s32 actorType;
+    ClipdataActor actorType;
     u16 tileX;
     u16 tileY;
 };
@@ -46,7 +47,7 @@ typedef u32 (*ClipFunc_T)(struct CollisionData*);
 // Globals
 
 extern ClipFunc_T gClipdataCodePointer;
-extern u8 gCurrentClipdataAffectingAction;
+extern ClipdataAffectingAction gCurrentClipdataAffectingAction;
 extern struct CurrentAffectingClip gCurrentAffectingClipdata;
 extern struct TilemapAndClipPointers gTilemapAndClipPointers;
 

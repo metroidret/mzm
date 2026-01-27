@@ -184,7 +184,7 @@ const struct FusionGalleryImageEntry sFusionGalleryData[NUMBER_OF_FUSION_GALLERY
         .pTopTileTable = sFusionGallery_TopTileTable_12,
         .pBottomTileTable = sFusionGallery_BottomTileTable_12,
         .pPalette = sFusionGallery_Palette_12
-    },
+    }
 };
 
 static const u32 sFusionGallery_TopGfx_0[5628] = INCBIN_U32("data/fusion_gallery/image_0_top.gfx.lz");

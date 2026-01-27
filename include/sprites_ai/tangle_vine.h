@@ -1,12 +1,15 @@
 #ifndef TANGLE_VINE_AI_H
 #define TANGLE_VINE_AI_H
 
-enum TangleVineGerutaPart {
+#include "types.h"
+#include "macros.h"
+
+MAKE_ENUM(u8, TangleVineGerutaPartId) {
     TANGLE_VINE_GERUTA_PART_GRIP,
     TANGLE_VINE_GERUTA_PART_GERUTA,
     TANGLE_VINE_GERUTA_PART_ROOT,
 
-    TANGLE_VINE_GERUTA_PART_END
+    TANGLE_VINE_GERUTA_PART_COUNT
 };
 
 void TangleVineSyncSprites(void);

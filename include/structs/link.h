@@ -53,38 +53,9 @@
 #define LINKCMD_8800 0x8800 // unused?
 #define LINKCMD_NONE 0xEFFF
 
-enum LinkStage {
-    LINK_STAGE_INIT,
-    LINK_STAGE_PROCESS_CONNECTION,
-    LINK_STAGE_RECEIVED_GALLERY,
-    LINK_STAGE_ERROR0,
-    LINK_STAGE_ERROR1,
-    LINK_STAGE_UNK5
-};
-
-enum LinkState {
-    LINK_STATE_START0,
-    LINK_STATE_START1,
-    LINK_STATE_HANDSHAKE,
-    LINK_STATE_INIT_TIMER,
-    LINK_STATE_CONN_ESTABLISHED
-};
-
-enum QueueFull {
-    QUEUE_FULL_NONE,
-    QUEUE_FULL_SEND,
-    QUEUE_FULL_RECV
-};
-
-enum LagStatus {
-    LAG_NONE,
-    LAG_PARENT,
-    LAG_CHILD
-};
-
 struct LinkSession {
     u8 isParent;
-    u8 state;
+    LinkState state;
     u8 localId;
     u8 playerCount;
     u16 handshakeBuffer[4];

@@ -40,7 +40,7 @@ extern const u16 sChozodiaEscape_5ca0d8[8][2];
 extern const u16 sChozodiaEscape_5ca0f8[8][2];
 
 #ifdef REGION_EU
-extern const u16 * const sChozodiaEscapeOamPointers_MissionAccomplished[LANGUAGE_END];
+extern const u16 * const sChozodiaEscapeOamPointers_MissionAccomplished[LANGUAGE_COUNT];
 #endif // REGION_EU
 
 extern const u32 sChozodiaEscapeCraterBackgroundGfx[5227];

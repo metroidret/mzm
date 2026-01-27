@@ -10,42 +10,42 @@ static const u16 sGametOam_Idle_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x201, 8, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x207, 8, 0),
-    OAM_ENTRY(-16, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sGametOam_Idle_Frame1[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x203, 8, 0),
     OAM_ENTRY(-8, -7, OAM_DIMS_16x16, OAM_NO_FLIP, 0x207, 8, 0),
-    OAM_ENTRY(-16, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sGametOam_Idle_Frame2[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x205, 8, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x207, 8, 0),
-    OAM_ENTRY(-16, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 static const u16 sGametOam_Moving_Frame2[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-16, -9, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-8, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 0x201, 8, 0),
-    OAM_ENTRY(-8, -7, OAM_DIMS_16x16, OAM_NO_FLIP, 0x209, 8, 0),
+    OAM_ENTRY(-8, -7, OAM_DIMS_16x16, OAM_NO_FLIP, 0x209, 8, 0)
 };
 
 static const u16 sGametOam_Moving_Frame1[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-16, -9, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
     OAM_ENTRY(-8, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 0x203, 8, 0),
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x209, 8, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x209, 8, 0)
 };
 
 static const u16 sGametOam_Moving_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x205, 8, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x209, 8, 0),
-    OAM_ENTRY(-16, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0),
+    OAM_ENTRY(-16, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
 const struct FrameData sGametOam_Idle[5] = {

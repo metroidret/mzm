@@ -15,6 +15,10 @@
 #include "structs/display.h"
 #include "structs/game_state.h"
 
+#define RIDLEY_IN_SPACE_LEAVING_PARTICLE_AMOUNT 12
+#define RIDLEY_IN_SPACE_VIEW_PARTICLE_AMOUNT 26
+#define RIDLEY_IN_SPACE_SHIP_AMOUNT 3
+
 #define SHIP_ACTION_MOVE_HORIZONTALLY 1
 #define SHIP_ACTION_MOVE_VERTICALLY 2
 
@@ -46,7 +50,7 @@ static struct Coordinates sRidleyInSpaceShipLeavingPosition = {
     .y = BLOCK_SIZE * 6 + HALF_BLOCK_SIZE
 };
 
-static struct Coordinates sRidleyInSpaceShipsStartPosition[RIDLEY_INSPACE_SHIP_SLOT_END] = {
+static struct Coordinates sRidleyInSpaceShipsStartPosition[RIDLEY_INSPACE_SHIP_SLOT_COUNT] = {
     [RIDLEY_IN_SPACE_LEFT_SHIP_SLOT] = {
         .x = -(BLOCK_SIZE + HALF_BLOCK_SIZE),
         .y = BLOCK_SIZE * 10 - EIGHTH_BLOCK_SIZE
@@ -313,9 +317,9 @@ static u8 RidleyInSpaceRidleySuspicious(void)
             CutsceneSetBgcntPageData(sRidleyInSpacePageData[4]);
             CutsceneSetBgcntPageData(sRidleyInSpacePageData[5]);
 
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sRidleyInSpacePageData[3].bg, NON_GAMEPLAY_START_BG_POS);
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sRidleyInSpacePageData[4].bg, NON_GAMEPLAY_START_BG_POS);
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sRidleyInSpacePageData[5].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sRidleyInSpacePageData[3].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sRidleyInSpacePageData[4].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sRidleyInSpacePageData[5].bg, NON_GAMEPLAY_START_BG_POS);
             CutsceneReset();
 
             CUTSCENE_DATA.bldcnt = BLDCNT_BG1_FIRST_TARGET_PIXEL | BLDCNT_ALPHA_BLENDING_EFFECT |
@@ -395,11 +399,11 @@ static u8 RidleyInSpaceRedAlert(void)
             CutsceneSetBgcntPageData(sRidleyInSpacePageData[2]);
 
             // Set backgrounds position low vertically for the scrolling
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS, sRidleyInSpacePageData[1].bg, NON_GAMEPLAY_START_BG_POS);
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_VOFS, sRidleyInSpacePageData[1].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 10);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X, sRidleyInSpacePageData[1].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_Y, sRidleyInSpacePageData[1].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 10);
 
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS, sRidleyInSpacePageData[2].bg, NON_GAMEPLAY_START_BG_POS);
-            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_VOFS, sRidleyInSpacePageData[2].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 10);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X, sRidleyInSpacePageData[2].bg, NON_GAMEPLAY_START_BG_POS);
+            CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_Y, sRidleyInSpacePageData[2].bg, NON_GAMEPLAY_START_BG_POS + BLOCK_SIZE * 10);
 
             CutsceneReset();
 
@@ -717,7 +721,7 @@ static u8 RidleyInSpaceInit(void)
 
     // Setup background for the space background
     CutsceneSetBgcntPageData(sRidleyInSpacePageData[0]);
-    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_HOFS | CUTSCENE_BG_EDIT_VOFS, sRidleyInSpacePageData[0].bg, NON_GAMEPLAY_START_BG_POS);
+    CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X | CUTSCENE_BG_EDIT_Y, sRidleyInSpacePageData[0].bg, NON_GAMEPLAY_START_BG_POS);
 
     CutsceneReset();
 
@@ -870,7 +874,7 @@ static void RidleyInSpaceViewOfShipParticles(void)
         if (CUTSCENE_DATA.oam[i].exists == 0)
         {
             // Destroy if no longer exists
-            UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[i], 0);
+            UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[i], RIDLEY_IN_SPACE_OAM_ID_NONE);
         }
     }
 }
@@ -889,7 +893,7 @@ static u32 RidleyInSpaceViewOfShipUpdateParticle(struct CutsceneOamData* pOam)
     u32 yOffset;
     u16 xPosition;
 
-    oamId = 0;
+    oamId = RIDLEY_IN_SPACE_OAM_ID_NONE;
     pOam->unk_12 = pOam->timer;
 
     if (pOam->actions == CUTSCENE_OAM_ACTION_NONE)
@@ -1015,7 +1019,7 @@ static void RidleyInSpaceShipLeavingParticles(void)
         if (CUTSCENE_DATA.oam[i].exists == 0)
         {
             // Destroy if no longer exists
-            UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[i], 0);
+            UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[i], RIDLEY_IN_SPACE_OAM_ID_NONE);
         }
     }
 }

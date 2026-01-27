@@ -34,7 +34,7 @@
 
 // Save platform chozodia part
 
-enum SavePlatformChozodiaPart {
+MAKE_ENUM(u8, SavePlatformChozodiaPartId) {
     SAVE_PLATFORM_CHOZODIA_PART_TUBE,
     SAVE_PLATFORM_CHOZODIA_PART_TUBE_SHADOW,
     SAVE_PLATFORM_CHOZODIA_PART_RAY,

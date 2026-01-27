@@ -6,7 +6,7 @@
 
 #include "structs/sprite.h"
 
-enum CrocomireOam {
+MAKE_ENUM(u8, CrocomireOam) {
     CROCOMIRE_OAM_PART_BODY_IDLE,
     CROCOMIRE_OAM_PART_BODY_ANGRY,
     CROCOMIRE_OAM_IDLE,
@@ -33,7 +33,7 @@ enum CrocomireOam {
     CROCOMIRE_OAM_PART_307088,
     CROCOMIRE_OAM_PART_3070b8,
 
-    CROCOMIRE_OAM_END
+    CROCOMIRE_OAM_COUNT
 };
 
 extern const struct MultiSpriteData sCrocomireMultiSpriteData_Idle[3];

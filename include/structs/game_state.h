@@ -4,6 +4,7 @@
 #include "types.h"
 #include "input.h"
 
+#include "constants/ending_and_gallery.h"
 #include "constants/game_state.h"
 
 struct GameCompletion {
@@ -49,7 +50,7 @@ extern Difficulty gDifficulty;
 extern Language gLanguage;
 extern boolu8 gResetGame;
 extern u8 gNotPressingUp;
-extern u8 gEndingFlags;
+extern EndingFlags gEndingFlags;
 
 extern GameMode gMainGameMode;
 extern s16 gSubGameMode1;

@@ -22,7 +22,7 @@
 #define MORPH_BALL_LAUNCHER_PART_POSE_ENERGY 0xB
 #define MORPH_BALL_LAUNCHER_PART_POSE_IDLE 0x61
 
-enum MorphBallLauncherPart {
+MAKE_ENUM(u8, MorphBallLauncherPartId) {
     MORPH_BALL_LAUNCHER_PART_BACK,
     MORPH_BALL_LAUNCHER_PART_ENERGY
 };
@@ -32,7 +32,7 @@ enum MorphBallLauncherPart {
  * 
  * @param caa Clipdata Affecting Action
  */
-static void MorphBallLauncherChangeCcaa(u8 caa)
+static void MorphBallLauncherChangeCcaa(ClipdataAffectingAction caa)
 {
     u16 yPosition;
     u16 xPosition;

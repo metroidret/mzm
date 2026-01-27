@@ -2,6 +2,9 @@
 #define TITLE_SCREEN_MENU_H
 
 #include "types.h"
+
+#include "constants/menus/title_screen.h"
+
 #include "structs/menus/title_screen.h"
 
 void TitleScreenSetBGCNTPageData(const struct TitleScreenPageData* const pPageData);
@@ -30,7 +33,7 @@ void TitleScreenSetIdleStage(u8 stage);
 void TitleScreenInit(void);
 void TitleScreenVBlank(void);
 void TitleScreenVBlank_Empty(void);
-void TitleScreenSetCopyrightSymbol(u8 symbol);
+void TitleScreenSetCopyrightSymbol(TitleScreenCopyrightSymbol symbol);
 void TitleScreenDrawString(const u8* pString, u16* dst, u8 palette);
 #ifdef DEBUG
 void TitleScreenDrawDebugText(void);

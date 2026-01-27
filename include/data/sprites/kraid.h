@@ -6,7 +6,7 @@
 
 #include "structs/sprite.h"
 
-enum KraidOam {
+MAKE_ENUM(u8, KraidOam) {
     KRAID_OAM_MOUTH_CLOSED,
     KRAID_OAM_MOUTH_CLOSED_BLINK,
     KRAID_OAM_OPENING_MOUTH,
@@ -46,7 +46,7 @@ enum KraidOam {
     KRAID_OAM_2cb2ac,
     KRAID_OAM_SPIKE,
 
-    KRAID_OAM_END
+    KRAID_OAM_COUNT
 };
 
 extern const struct MultiSpriteData sKraidMultiSpriteData_Rising[2];

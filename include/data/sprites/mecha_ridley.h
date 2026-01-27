@@ -6,7 +6,7 @@
 
 #include "structs/sprite.h"
 
-enum MechaRidleyOam {
+MAKE_ENUM(u8, MechaRidleyOam) {
     MECHA_RIDLEY_OAM_TAIL,
     MECHA_RIDLEY_OAM_RING,
     MECHA_RIDLEY_OAM_COVER,
@@ -71,7 +71,7 @@ enum MechaRidleyOam {
     MECHA_RIDLEY_OAM_LEFT_ARM_SWINGING_AT_GROUND,
     MECHA_RIDLEY_OAM_LEFT_ARM_SWINGING_AT_CLOSE_GROUND,
 
-    MECHA_RIDLEY_OAM_END
+    MECHA_RIDLEY_OAM_COUNT
 };
 
 extern const struct MultiSpriteData sMechaRidleyMultiSpriteData_CrawlingForwardLow[7];

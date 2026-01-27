@@ -6,7 +6,7 @@
 
 #include "structs/sprite.h"
 
-enum ImagoCocoonOam {
+MAKE_ENUM(u8, ImagoCocoonOam) {
     IMAGO_COCOON_OAM_CEILING_VINE_MOTIONLESS,
     IMAGO_COCOON_OAM_CEILING_VINE_MOVING,
     IMAGO_COCOON_OAM_CEILING_VINE_BROKEN,
@@ -29,7 +29,7 @@ enum ImagoCocoonOam {
     IMAGO_COCOON_OAM_WINGED_RIPPER_TURNING_AROUND,
     IMAGO_COCOON_OAM_DEFEATED_COCOON,
 
-    IMAGO_COCOON_OAM_END
+    IMAGO_COCOON_OAM_COUNT
 };
 
 extern const struct MultiSpriteData sImagoCocoonMultiSpriteData_Idle[5];

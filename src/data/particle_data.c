@@ -3,117 +3,117 @@
 
 const u16 sParticleShootingBeamHorizontalOam_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0)
 };
 
 const u16 sParticleShootingBeamHorizontalOam_Frame1[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-1, -5, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0),
     OAM_ENTRY(-7, -9, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0),
-    OAM_ENTRY(-7, 1, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0),
+    OAM_ENTRY(-7, 1, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0)
 };
 
 const u16 sParticleShootingBeamHorizontalOam_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-6, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0),
+    OAM_ENTRY(-6, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0)
 };
 
 const u16 sParticleShootingBeamHorizontalOam_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-2, -10, OAM_DIMS_8x8, OAM_XY_FLIP, 0x182, 2, 0),
-    OAM_ENTRY(-1, 3, OAM_DIMS_8x8, OAM_XY_FLIP, 0x182, 2, 0),
+    OAM_ENTRY(-1, 3, OAM_DIMS_8x8, OAM_XY_FLIP, 0x182, 2, 0)
 };
 
 const u16 sParticleShootingBeamDiagonallyUpOam_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0)
 };
 
 const u16 sParticleShootingBeamDiagonallyUpOam_Frame1[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-1, 1, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0),
     OAM_ENTRY(-2, -9, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0),
-    OAM_ENTRY(-10, -2, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0),
+    OAM_ENTRY(-10, -2, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0)
 };
 
 const u16 sParticleShootingBeamDiagonallyUpOam_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-6, -6, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0),
+    OAM_ENTRY(-6, -6, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0)
 };
 
 const u16 sParticleShootingBeamDiagonallyUpOam_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(1, -5, OAM_DIMS_8x8, OAM_XY_FLIP, 0x182, 2, 0),
-    OAM_ENTRY(-5, 3, OAM_DIMS_8x8, OAM_XY_FLIP, 0x182, 2, 0),
+    OAM_ENTRY(-5, 3, OAM_DIMS_8x8, OAM_XY_FLIP, 0x182, 2, 0)
 };
 
 const u16 sParticleShootingBeamDiagonallyDownOam_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0)
 };
 
 const u16 sParticleShootingBeamDiagonallyDownOam_Frame1[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-1, -5, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0),
     OAM_ENTRY(-8, -7, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0),
-    OAM_ENTRY(0, 1, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0),
+    OAM_ENTRY(0, 1, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0)
 };
 
 const u16 sParticleShootingBeamDiagonallyDownOam_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-6, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0),
+    OAM_ENTRY(-6, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0)
 };
 
 const u16 sParticleShootingBeamDiagonallyDownOam_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-6, -10, OAM_DIMS_8x8, OAM_XY_FLIP, 0x182, 2, 0),
-    OAM_ENTRY(2, -2, OAM_DIMS_8x8, OAM_XY_FLIP, 0x182, 2, 0),
+    OAM_ENTRY(2, -2, OAM_DIMS_8x8, OAM_XY_FLIP, 0x182, 2, 0)
 };
 
 const u16 sParticleShootingBeamUpOam_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0)
 };
 
 const u16 sParticleShootingBeamUpOam_Frame1[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, 0, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0),
     OAM_ENTRY(0, -7, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0),
-    OAM_ENTRY(-10, -7, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0),
+    OAM_ENTRY(-10, -7, OAM_DIMS_8x8, OAM_NO_FLIP, 0x182, 2, 0)
 };
 
 const u16 sParticleShootingBeamUpOam_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -6, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0),
+    OAM_ENTRY(-8, -6, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0)
 };
 
 const u16 sParticleShootingBeamUpOam_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(3, 0, OAM_DIMS_8x8, OAM_XY_FLIP, 0x182, 2, 0),
-    OAM_ENTRY(-10, 0, OAM_DIMS_8x8, OAM_XY_FLIP, 0x182, 2, 0),
+    OAM_ENTRY(-10, 0, OAM_DIMS_8x8, OAM_XY_FLIP, 0x182, 2, 0)
 };
 
 const u16 sParticleShootingBeamDownOam_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x180, 2, 0)
 };
 
 const u16 sParticleShootingBeamDownOam_Frame1[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -8, OAM_DIMS_8x8, OAM_Y_FLIP, 0x182, 2, 0),
     OAM_ENTRY(0, -1, OAM_DIMS_8x8, OAM_Y_FLIP, 0x182, 2, 0),
-    OAM_ENTRY(-10, -1, OAM_DIMS_8x8, OAM_Y_FLIP, 0x182, 2, 0),
+    OAM_ENTRY(-10, -1, OAM_DIMS_8x8, OAM_Y_FLIP, 0x182, 2, 0)
 };
 
 const u16 sParticleShootingBeamDownOam_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -10, OAM_DIMS_16x16, OAM_Y_FLIP, 0x180, 2, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_16x16, OAM_Y_FLIP, 0x180, 2, 0)
 };
 
 const u16 sParticleShootingBeamDownOam_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(3, -8, OAM_DIMS_8x8, OAM_X_FLIP, 0x182, 2, 0),
-    OAM_ENTRY(-10, -8, OAM_DIMS_8x8, OAM_X_FLIP, 0x182, 2, 0),
+    OAM_ENTRY(-10, -8, OAM_DIMS_8x8, OAM_X_FLIP, 0x182, 2, 0)
 };
 
 const u16 sParticleBombOam_Frame0[OAM_DATA_SIZE(4)] = {
@@ -121,7 +121,7 @@ const u16 sParticleBombOam_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x141, 3, 0),
     OAM_ENTRY(0, -8, OAM_DIMS_8x8, OAM_X_FLIP, 0x141, 3, 0),
     OAM_ENTRY(-8, 0, OAM_DIMS_8x8, OAM_Y_FLIP, 0x141, 3, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_8x8, OAM_XY_FLIP, 0x141, 3, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_8x8, OAM_XY_FLIP, 0x141, 3, 0)
 };
 
 const u16 sParticleBombOam_Frame1[OAM_DATA_SIZE(4)] = {
@@ -129,7 +129,7 @@ const u16 sParticleBombOam_Frame1[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x142, 3, 0),
     OAM_ENTRY(0, -8, OAM_DIMS_8x8, OAM_X_FLIP, 0x142, 3, 0),
     OAM_ENTRY(-8, 0, OAM_DIMS_8x8, OAM_Y_FLIP, 0x142, 3, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_8x8, OAM_XY_FLIP, 0x142, 3, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_8x8, OAM_XY_FLIP, 0x142, 3, 0)
 };
 
 const u16 sParticleBombOam_Frame2[OAM_DATA_SIZE(4)] = {
@@ -137,7 +137,7 @@ const u16 sParticleBombOam_Frame2[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x100, 3, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x100, 3, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x100, 3, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x100, 3, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x100, 3, 0)
 };
 
 const u16 sParticleBombOam_Frame3[OAM_DATA_SIZE(4)] = {
@@ -145,7 +145,7 @@ const u16 sParticleBombOam_Frame3[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x102, 3, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x102, 3, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x102, 3, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x102, 3, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x102, 3, 0)
 };
 
 const u16 sParticleBombOam_Frame4[OAM_DATA_SIZE(4)] = {
@@ -153,7 +153,7 @@ const u16 sParticleBombOam_Frame4[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x104, 3, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x104, 3, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x104, 3, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x104, 3, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x104, 3, 0)
 };
 
 const u16 sParticleBombOam_Frame5[OAM_DATA_SIZE(4)] = {
@@ -161,64 +161,64 @@ const u16 sParticleBombOam_Frame5[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x106, 3, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x106, 3, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x106, 3, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x106, 3, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x106, 3, 0)
 };
 
 const u16 sParticleBeamTrailingOam_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xd7, 2, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xd7, 2, 0)
 };
 
 const u16 sParticleBeamTrailingOam_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xd9, 2, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xd9, 2, 0)
 };
 
 const u16 sParticleBeamTrailingOam_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0xdb, 2, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0xdb, 2, 0)
 };
 
 const u16 sParticleBeamTrailingOam_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0xfb, 2, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0xfb, 2, 0)
 };
 
 const u16 sParticleBeamTrailingOam_Frame4[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a2, 2, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a2, 2, 0)
 };
 
 const u16 sParticleChargingBeamBeginOAM_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x97, 2, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x97, 2, 0)
 };
 
 const u16 sParticleChargingBeamBeginOAM_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x95, 2, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x95, 2, 0)
 };
 
 const u16 sParticleChargingBeamBeginOAM_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x166, 2, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x166, 2, 0)
 };
 
 const u16 sParticleChargingBeamBeginOAM_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1c8, 2, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1c8, 2, 0)
 };
 
 const u16 sParticleChargingBeamBeginOAM_Frame6[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x95, 2, 0),
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x90, 2, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x90, 2, 0)
 };
 
 const u16 sParticleChargingBeamBeginOAM_Frame10[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x97, 2, 0),
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0xb0, 2, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0xb0, 2, 0)
 };
 
 const u16 sParticleChargingBeamBeginOAM_Frame16[OAM_DATA_SIZE(5)] = {
@@ -227,7 +227,7 @@ const u16 sParticleChargingBeamBeginOAM_Frame16[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(4, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x99, 2, 0),
     OAM_ENTRY(-12, 4, OAM_DIMS_16x8, OAM_Y_FLIP, 0x99, 2, 0),
     OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x99, 2, 0),
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x91, 2, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x91, 2, 0)
 };
 
 const u16 sParticleChargingBeamChargedOAM_Frame1[OAM_DATA_SIZE(5)] = {
@@ -236,7 +236,7 @@ const u16 sParticleChargingBeamChargedOAM_Frame1[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(4, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x9b, 2, 0),
     OAM_ENTRY(-12, 4, OAM_DIMS_16x8, OAM_Y_FLIP, 0x9b, 2, 0),
     OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x9b, 2, 0),
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x93, 2, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x93, 2, 0)
 };
 
 const struct FrameData sParticleShootingBeamHorizontalOam[5] = {
@@ -497,40 +497,40 @@ const struct FrameData sParticleChargingBeamChargedOAM[3] = {
 
 const u16 sParticleHittingSomethingWithNormalBeamOam_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1c8, 2, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1c8, 2, 0)
 };
 
 const u16 sParticleHittingSomethingWithNormalBeamOam_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1e8, 2, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1e8, 2, 0)
 };
 
 const u16 sParticleHittingSomethingWithNormalBeamOam_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1c9, 2, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1c9, 2, 0)
 };
 
 const u16 sParticleHittingSomethingWithNormalBeamOam_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1e9, 2, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1e9, 2, 0)
 };
 
 const u16 sParticleHittingSomethingWithLongBeamOam_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x108, 2, 0),
-    OAM_ENTRY(0, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x108, 2, 0),
+    OAM_ENTRY(0, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x108, 2, 0)
 };
 
 const u16 sParticleHittingSomethingWithLongBeamOam_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x109, 2, 0),
-    OAM_ENTRY(0, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x109, 2, 0),
+    OAM_ENTRY(0, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x109, 2, 0)
 };
 
 const u16 sParticleHittingSomethingWithIceBeamOam_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x10a, 2, 0),
-    OAM_ENTRY(0, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x10a, 2, 0),
+    OAM_ENTRY(0, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x10a, 2, 0)
 };
 
 const u16 sParticleHittingSomethingWithIceBeamOam_Frame4[OAM_DATA_SIZE(4)] = {
@@ -538,7 +538,7 @@ const u16 sParticleHittingSomethingWithIceBeamOam_Frame4[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-12, -12, OAM_DIMS_16x8, OAM_NO_FLIP, 0x145, 2, 0),
     OAM_ENTRY(-4, 4, OAM_DIMS_16x8, OAM_XY_FLIP, 0x145, 2, 0),
     OAM_ENTRY(-12, -4, OAM_DIMS_8x16, OAM_Y_FLIP, 0x145, 2, 0),
-    OAM_ENTRY(4, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x145, 2, 0),
+    OAM_ENTRY(4, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x145, 2, 0)
 };
 
 const u16 sParticleHittingSomethingWithWaveBeamOam_Frame4[OAM_DATA_SIZE(4)] = {
@@ -546,7 +546,7 @@ const u16 sParticleHittingSomethingWithWaveBeamOam_Frame4[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-12, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x143, 2, 0),
     OAM_ENTRY(4, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x143, 2, 0),
     OAM_ENTRY(-12, 4, OAM_DIMS_16x8, OAM_Y_FLIP, 0x143, 2, 0),
-    OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x143, 2, 0),
+    OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x143, 2, 0)
 };
 
 const u16 sParticleHittingSomethingWithWaveBeamOam_Frame5[OAM_DATA_SIZE(4)] = {
@@ -554,7 +554,7 @@ const u16 sParticleHittingSomethingWithWaveBeamOam_Frame5[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x149, 2, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x149, 2, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x149, 2, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x149, 2, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x149, 2, 0)
 };
 
 const u16 sParticleHittingSomethingWithPlasmaBeamOam_Frame5[OAM_DATA_SIZE(4)] = {
@@ -562,43 +562,43 @@ const u16 sParticleHittingSomethingWithPlasmaBeamOam_Frame5[OAM_DATA_SIZE(4)] = 
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x147, 2, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x147, 2, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x147, 2, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x147, 2, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x147, 2, 0)
 };
 
 const u16 sParticleHittingSomethingInvincible_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x115, 2, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x115, 2, 0)
 };
 
 const u16 sParticleHittingSomethingInvincible_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x135, 2, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x135, 2, 0)
 };
 
 const u16 sParticleHittingSomethingInvincible_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x116, 2, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x116, 2, 0)
 };
 
 const u16 sParticleHittingSomethingInvincible_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x118, 2, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x118, 2, 0)
 };
 
 const u16 sParticleHittingSomethingInvincible_Frame4[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x11a, 2, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x11a, 2, 0)
 };
 
 const u16 sParticleHittingSomethingWithMissileOam_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(0, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0xd2, 3, 0),
-    OAM_ENTRY(-8, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0xd2, 3, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0xd2, 3, 0)
 };
 
 const u16 sParticleHittingSomethingWithMissileOam_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xd3, 3, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xd3, 3, 0)
 };
 
 const u16 sParticleHittingSomethingWithMissileOam_Frame2[OAM_DATA_SIZE(4)] = {
@@ -606,7 +606,7 @@ const u16 sParticleHittingSomethingWithMissileOam_Frame2[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x10b, 3, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x10b, 3, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x10b, 3, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x10b, 3, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x10b, 3, 0)
 };
 
 const u16 sParticleHittingSomethingWithMissileOam_Frame3[OAM_DATA_SIZE(4)] = {
@@ -614,7 +614,7 @@ const u16 sParticleHittingSomethingWithMissileOam_Frame3[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x10d, 3, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x10d, 3, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x10d, 3, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x10d, 3, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x10d, 3, 0)
 };
 
 const u16 sParticleHittingSomethingWithMissileOam_Frame4[OAM_DATA_SIZE(4)] = {
@@ -622,7 +622,7 @@ const u16 sParticleHittingSomethingWithMissileOam_Frame4[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x10f, 3, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x10f, 3, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x10f, 3, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x10f, 3, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x10f, 3, 0)
 };
 
 const u16 sParticleHittingSomethingWithMissileOam_Frame5[OAM_DATA_SIZE(4)] = {
@@ -630,7 +630,7 @@ const u16 sParticleHittingSomethingWithMissileOam_Frame5[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x111, 3, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x111, 3, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x111, 3, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x111, 3, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x111, 3, 0)
 };
 
 const u16 sParticleHittingSomethingWithMissileOam_Frame6[OAM_DATA_SIZE(4)] = {
@@ -638,7 +638,7 @@ const u16 sParticleHittingSomethingWithMissileOam_Frame6[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x113, 3, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x113, 3, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x113, 3, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x113, 3, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x113, 3, 0)
 };
 
 const u16 sParticleHittingSomethingWithSuperMissileOam_Frame4[OAM_DATA_SIZE(6)] = {
@@ -648,7 +648,7 @@ const u16 sParticleHittingSomethingWithSuperMissileOam_Frame4[OAM_DATA_SIZE(6)] 
     OAM_ENTRY(-12, 4, OAM_DIMS_32x16, OAM_XY_FLIP, 0x1ca, 3, 0),
     OAM_ENTRY(4, -20, OAM_DIMS_16x32, OAM_XY_FLIP, 0x19a, 3, 0),
     OAM_ENTRY(-1, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0xd2, 3, 0),
-    OAM_ENTRY(-7, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0xd2, 3, 0),
+    OAM_ENTRY(-7, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0xd2, 3, 0)
 };
 
 const u16 sParticleHittingSomethingWithSuperMissileOam_Frame5[OAM_DATA_SIZE(4)] = {
@@ -656,7 +656,7 @@ const u16 sParticleHittingSomethingWithSuperMissileOam_Frame5[OAM_DATA_SIZE(4)] 
     OAM_ENTRY(-24, -24, OAM_DIMS_32x16, OAM_NO_FLIP, 0x1ce, 3, 0),
     OAM_ENTRY(-24, -8, OAM_DIMS_16x32, OAM_NO_FLIP, 0x19c, 3, 0),
     OAM_ENTRY(-8, 8, OAM_DIMS_32x16, OAM_XY_FLIP, 0x1ce, 3, 0),
-    OAM_ENTRY(8, -24, OAM_DIMS_16x32, OAM_XY_FLIP, 0x19c, 3, 0),
+    OAM_ENTRY(8, -24, OAM_DIMS_16x32, OAM_XY_FLIP, 0x19c, 3, 0)
 };
 
 const u16 sParticleHittingSomethingWithSuperMissileOam_Frame6[OAM_DATA_SIZE(4)] = {
@@ -664,7 +664,7 @@ const u16 sParticleHittingSomethingWithSuperMissileOam_Frame6[OAM_DATA_SIZE(4)] 
     OAM_ENTRY(-24, -24, OAM_DIMS_32x16, OAM_NO_FLIP, 0x1d6, 3, 0),
     OAM_ENTRY(-24, -8, OAM_DIMS_16x32, OAM_NO_FLIP, 0x19e, 3, 0),
     OAM_ENTRY(-8, 8, OAM_DIMS_32x16, OAM_XY_FLIP, 0x1d6, 3, 0),
-    OAM_ENTRY(8, -24, OAM_DIMS_16x32, OAM_XY_FLIP, 0x19e, 3, 0),
+    OAM_ENTRY(8, -24, OAM_DIMS_16x32, OAM_XY_FLIP, 0x19e, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionHugeOam_Frame0[OAM_DATA_SIZE(4)] = {
@@ -672,7 +672,7 @@ const u16 sParticleSpriteExplosionHugeOam_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-12, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 3, 0),
     OAM_ENTRY(3, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-12, 4, OAM_DIMS_8x8, OAM_Y_FLIP, 0x155, 3, 0),
-    OAM_ENTRY(-4, 3, OAM_DIMS_16x8, OAM_XY_FLIP, 0x155, 3, 0),
+    OAM_ENTRY(-4, 3, OAM_DIMS_16x8, OAM_XY_FLIP, 0x155, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionHugeOam_Frame1[OAM_DATA_SIZE(4)] = {
@@ -680,7 +680,7 @@ const u16 sParticleSpriteExplosionHugeOam_Frame1[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-13, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-2, -13, OAM_DIMS_16x16, OAM_X_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-14, -3, OAM_DIMS_16x16, OAM_Y_FLIP, 0x155, 3, 0),
-    OAM_ENTRY(-3, -2, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0),
+    OAM_ENTRY(-3, -2, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionHugeOam_Frame2[OAM_DATA_SIZE(4)] = {
@@ -688,7 +688,7 @@ const u16 sParticleSpriteExplosionHugeOam_Frame2[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-15, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 3, 0),
     OAM_ENTRY(0, -15, OAM_DIMS_16x16, OAM_X_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-16, -1, OAM_DIMS_16x16, OAM_Y_FLIP, 0x155, 3, 0),
-    OAM_ENTRY(-1, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0),
+    OAM_ENTRY(-1, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionHugeOam_Frame4[OAM_DATA_SIZE(4)] = {
@@ -696,7 +696,7 @@ const u16 sParticleSpriteExplosionHugeOam_Frame4[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-12, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x157, 3, 0),
     OAM_ENTRY(4, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x157, 3, 0),
     OAM_ENTRY(-12, 4, OAM_DIMS_16x8, OAM_Y_FLIP, 0x157, 3, 0),
-    OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x157, 3, 0),
+    OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x157, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionHugeOam_Frame5[OAM_DATA_SIZE(4)] = {
@@ -704,7 +704,7 @@ const u16 sParticleSpriteExplosionHugeOam_Frame5[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-15, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x157, 3, 0),
     OAM_ENTRY(0, -15, OAM_DIMS_16x16, OAM_X_FLIP, 0x157, 3, 0),
     OAM_ENTRY(-15, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x157, 3, 0),
-    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x157, 3, 0),
+    OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x157, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionHugeOam_Frame6[OAM_DATA_SIZE(7)] = {
@@ -715,7 +715,7 @@ const u16 sParticleSpriteExplosionHugeOam_Frame6[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(-3, -32, OAM_DIMS_8x8, OAM_Y_FLIP, 0xd6, 3, 0),
     OAM_ENTRY(-8, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 0x196, 3, 0),
     OAM_ENTRY(0, -5, OAM_DIMS_16x16, OAM_NO_FLIP, 0x196, 3, 0),
-    OAM_ENTRY(-16, 2, OAM_DIMS_16x16, OAM_X_FLIP, 0x196, 3, 0),
+    OAM_ENTRY(-16, 2, OAM_DIMS_16x16, OAM_X_FLIP, 0x196, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionHugeOam_Frame7[OAM_DATA_SIZE(7)] = {
@@ -726,7 +726,7 @@ const u16 sParticleSpriteExplosionHugeOam_Frame7[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(-2, -41, OAM_DIMS_8x8, OAM_NO_FLIP, 0xd6, 3, 0),
     OAM_ENTRY(-8, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x196, 3, 0),
     OAM_ENTRY(-14, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x198, 3, 0),
-    OAM_ENTRY(3, -10, OAM_DIMS_16x16, OAM_XY_FLIP, 0x198, 3, 0),
+    OAM_ENTRY(3, -10, OAM_DIMS_16x16, OAM_XY_FLIP, 0x198, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionHugeOam_Frame8[OAM_DATA_SIZE(7)] = {
@@ -737,7 +737,7 @@ const u16 sParticleSpriteExplosionHugeOam_Frame8[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(0, -33, OAM_DIMS_16x16, OAM_X_FLIP, 0x198, 3, 0),
     OAM_ENTRY(-13, -29, OAM_DIMS_16x16, OAM_X_FLIP, 0x198, 3, 0),
     OAM_ENTRY(-8, -40, OAM_DIMS_8x8, OAM_XY_FLIP, 0x1a7, 3, 0),
-    OAM_ENTRY(1, -48, OAM_DIMS_8x8, OAM_Y_FLIP, 0x1a7, 3, 0),
+    OAM_ENTRY(1, -48, OAM_DIMS_8x8, OAM_Y_FLIP, 0x1a7, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionHugeOam_Frame9[OAM_DATA_SIZE(4)] = {
@@ -745,7 +745,7 @@ const u16 sParticleSpriteExplosionHugeOam_Frame9[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-8, -39, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a7, 3, 0),
     OAM_ENTRY(-3, -13, OAM_DIMS_8x8, OAM_NO_FLIP, 0xd6, 3, 0),
     OAM_ENTRY(2, -36, OAM_DIMS_8x8, OAM_NO_FLIP, 0xd6, 3, 0),
-    OAM_ENTRY(-7, -33, OAM_DIMS_16x16, OAM_X_FLIP, 0x198, 3, 0),
+    OAM_ENTRY(-7, -33, OAM_DIMS_16x16, OAM_X_FLIP, 0x198, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionHugeOam_Frame10[OAM_DATA_SIZE(4)] = {
@@ -753,134 +753,134 @@ const u16 sParticleSpriteExplosionHugeOam_Frame10[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-8, -43, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a7, 3, 0),
     OAM_ENTRY(4, -44, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a7, 3, 0),
     OAM_ENTRY(-7, -41, OAM_DIMS_16x16, OAM_XY_FLIP, 0x198, 3, 0),
-    OAM_ENTRY(-4, -16, OAM_DIMS_8x8, OAM_Y_FLIP, 0x1a7, 3, 0),
+    OAM_ENTRY(-4, -16, OAM_DIMS_8x8, OAM_Y_FLIP, 0x1a7, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionHugeOam_Frame11[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -42, OAM_DIMS_8x8, OAM_Y_FLIP, 0x1a7, 3, 0),
     OAM_ENTRY(0, -38, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a7, 3, 0),
-    OAM_ENTRY(-4, -23, OAM_DIMS_8x8, OAM_X_FLIP, 0x1a7, 3, 0),
+    OAM_ENTRY(-4, -23, OAM_DIMS_8x8, OAM_X_FLIP, 0x1a7, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionHugeOam_Frame12[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -47, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a7, 3, 0),
+    OAM_ENTRY(-4, -47, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a7, 3, 0)
 };
 
 const u16 sParticleSmallDustOam_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0)
 };
 
 const u16 sParticleSmallDustOam_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0)
 };
 
 const u16 sParticleSmallDustOam_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0)
 };
 
 const u16 sParticleSmallDustOam_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0)
 };
 
 const u16 sParticleSmallDustOam_Frame4[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0)
 };
 
 const u16 sParticleSmallDustOam_Frame5[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0),
+    OAM_ENTRY(-4, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0)
 };
 
 const u16 sParticleMediumDustOam_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
-    OAM_ENTRY(-13, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
+    OAM_ENTRY(-13, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0)
 };
 
 const u16 sParticleMediumDustOam_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 4, 0),
-    OAM_ENTRY(-16, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
+    OAM_ENTRY(-16, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0)
 };
 
 const u16 sParticleMediumDustOam_Frame2[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-5, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
     OAM_ENTRY(-17, -14, OAM_DIMS_16x16, OAM_X_FLIP, 0x188, 4, 0),
-    OAM_ENTRY(2, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 4, 0),
+    OAM_ENTRY(2, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 4, 0)
 };
 
 const u16 sParticleMediumDustOam_Frame3[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(-20, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
-    OAM_ENTRY(6, -13, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 4, 0),
+    OAM_ENTRY(6, -13, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 4, 0)
 };
 
 const u16 sParticleMediumDustOam_Frame4[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-3, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(-19, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
-    OAM_ENTRY(8, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
+    OAM_ENTRY(8, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0)
 };
 
 const u16 sParticleMediumDustOam_Frame5[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-18, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(8, -17, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
-    OAM_ENTRY(-3, -19, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
+    OAM_ENTRY(-3, -19, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0)
 };
 
 const u16 sParticleMediumDustOam_Frame6[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(6, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(-3, -24, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0),
-    OAM_ENTRY(-14, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
+    OAM_ENTRY(-14, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0)
 };
 
 const u16 sParticleMediumDustOam_Frame7[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-10, -28, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0),
-    OAM_ENTRY(5, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
+    OAM_ENTRY(5, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0)
 };
 
 const u16 sParticleMediumDustOam_Frame8[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(4, -29, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0),
+    OAM_ENTRY(4, -29, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0)
 };
 
 const u16 sParticleTwoMediumDustOam_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
-    OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
+    OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0)
 };
 
 const u16 sParticleTwoMediumDustOam_Frame1[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
     OAM_ENTRY(-20, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
-    OAM_ENTRY(1, -12, OAM_DIMS_16x16, OAM_X_FLIP, 0x18a, 4, 0),
+    OAM_ENTRY(1, -12, OAM_DIMS_16x16, OAM_X_FLIP, 0x18a, 4, 0)
 };
 
 const u16 sParticleTwoMediumDustOam_Frame2[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(-22, -22, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
-    OAM_ENTRY(2, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
+    OAM_ENTRY(2, -15, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0)
 };
 
 const u16 sParticleTwoMediumDustOam_Frame3[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(-21, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
-    OAM_ENTRY(4, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
+    OAM_ENTRY(4, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0)
 };
 
 const u16 sParticleTwoMediumDustOam_Frame4[OAM_DATA_SIZE(4)] = {
@@ -888,7 +888,7 @@ const u16 sParticleTwoMediumDustOam_Frame4[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-20, -32, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(3, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
     OAM_ENTRY(-16, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
-    OAM_ENTRY(-8, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
+    OAM_ENTRY(-8, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0)
 };
 
 const u16 sParticleTwoMediumDustOam_Frame5[OAM_DATA_SIZE(4)] = {
@@ -896,110 +896,110 @@ const u16 sParticleTwoMediumDustOam_Frame5[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(1, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(-18, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
     OAM_ENTRY(-19, -38, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
-    OAM_ENTRY(-4, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0),
+    OAM_ENTRY(-4, -30, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0)
 };
 
 const u16 sParticleTwoMediumDustOam_Frame6[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(0, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(-19, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
-    OAM_ENTRY(-15, -43, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0),
+    OAM_ENTRY(-15, -43, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0)
 };
 
 const u16 sParticleTwoMediumDustOam_Frame7[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-18, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
-    OAM_ENTRY(-1, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
+    OAM_ENTRY(-1, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0)
 };
 
 const u16 sParticleTwoMediumDustOam_Frame8[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(2, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0),
-    OAM_ENTRY(-17, -30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
+    OAM_ENTRY(-17, -30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0)
 };
 
 const u16 sParticleTwoMediumDustOam_Frame9[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-10, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0),
+    OAM_ENTRY(-10, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionSmallOam_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionSmallOam_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionSmallOam_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 3, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionSmallOam_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0),
+    OAM_ENTRY(-8, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionSmallOam_Frame4[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 3, 0),
+    OAM_ENTRY(-8, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionSmallOam_Frame5[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 3, 0),
-    OAM_ENTRY(-8, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
+    OAM_ENTRY(-8, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionSmallOam_Frame6[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 3, 0),
-    OAM_ENTRY(-8, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
+    OAM_ENTRY(-8, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionSmallOam_Frame7[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 3, 0),
-    OAM_ENTRY(-8, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
+    OAM_ENTRY(-8, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionSmallOam_Frame8[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 3, 0),
-    OAM_ENTRY(-8, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
+    OAM_ENTRY(-8, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionSmallOam_Frame9[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -22, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 3, 0),
-    OAM_ENTRY(-8, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
+    OAM_ENTRY(-8, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionSmallOam_Frame10[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0),
+    OAM_ENTRY(-4, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionMediumOam_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0),
-    OAM_ENTRY(0, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(0, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionMediumOam_Frame4[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 3, 0),
-    OAM_ENTRY(0, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(0, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionMediumOam_Frame5[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 3, 0),
     OAM_ENTRY(-8, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
-    OAM_ENTRY(0, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 3, 0),
+    OAM_ENTRY(0, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionMediumOam_Frame6[OAM_DATA_SIZE(4)] = {
@@ -1007,7 +1007,7 @@ const u16 sParticleSpriteExplosionMediumOam_Frame6[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-8, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 3, 0),
     OAM_ENTRY(-8, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
     OAM_ENTRY(0, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0),
-    OAM_ENTRY(-14, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(-14, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionMediumOam_Frame7[OAM_DATA_SIZE(4)] = {
@@ -1015,7 +1015,7 @@ const u16 sParticleSpriteExplosionMediumOam_Frame7[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-8, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 3, 0),
     OAM_ENTRY(-8, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(0, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 3, 0),
-    OAM_ENTRY(-14, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(-14, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionMediumOam_Frame8[OAM_DATA_SIZE(5)] = {
@@ -1024,7 +1024,7 @@ const u16 sParticleSpriteExplosionMediumOam_Frame8[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-8, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(0, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 3, 0),
     OAM_ENTRY(0, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
-    OAM_ENTRY(-14, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 3, 0),
+    OAM_ENTRY(-14, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionMediumOam_Frame9[OAM_DATA_SIZE(5)] = {
@@ -1033,7 +1033,7 @@ const u16 sParticleSpriteExplosionMediumOam_Frame9[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-8, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 3, 0),
     OAM_ENTRY(0, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
-    OAM_ENTRY(-14, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0),
+    OAM_ENTRY(-14, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionMediumOam_Frame10[OAM_DATA_SIZE(4)] = {
@@ -1041,7 +1041,7 @@ const u16 sParticleSpriteExplosionMediumOam_Frame10[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-4, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 3, 0),
     OAM_ENTRY(0, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
-    OAM_ENTRY(-14, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 3, 0),
+    OAM_ENTRY(-14, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionMediumOam_Frame11[OAM_DATA_SIZE(4)] = {
@@ -1049,7 +1049,7 @@ const u16 sParticleSpriteExplosionMediumOam_Frame11[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(4, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 3, 0),
     OAM_ENTRY(0, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(-14, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 3, 0),
-    OAM_ENTRY(-14, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
+    OAM_ENTRY(-14, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionMediumOam_Frame12[OAM_DATA_SIZE(4)] = {
@@ -1057,31 +1057,31 @@ const u16 sParticleSpriteExplosionMediumOam_Frame12[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(4, -22, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 3, 0),
     OAM_ENTRY(0, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
     OAM_ENTRY(-14, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 3, 0),
-    OAM_ENTRY(-14, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
+    OAM_ENTRY(-14, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionMediumOam_Frame13[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(4, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0),
     OAM_ENTRY(-14, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 3, 0),
-    OAM_ENTRY(-14, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
+    OAM_ENTRY(-14, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionMediumOam_Frame14[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-10, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 3, 0),
-    OAM_ENTRY(-14, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
+    OAM_ENTRY(-14, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionMediumOam_Frame15[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-10, -22, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 3, 0),
-    OAM_ENTRY(-14, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
+    OAM_ENTRY(-14, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionMediumOam_Frame16[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-10, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0),
+    OAM_ENTRY(-10, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionBigOam_Frame6[OAM_DATA_SIZE(5)] = {
@@ -1090,7 +1090,7 @@ const u16 sParticleSpriteExplosionBigOam_Frame6[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-10, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
     OAM_ENTRY(3, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0),
     OAM_ENTRY(-16, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
-    OAM_ENTRY(-7, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(-7, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionBigOam_Frame7[OAM_DATA_SIZE(5)] = {
@@ -1099,7 +1099,7 @@ const u16 sParticleSpriteExplosionBigOam_Frame7[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-10, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(3, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 3, 0),
     OAM_ENTRY(-16, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 3, 0),
-    OAM_ENTRY(-7, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(-7, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionBigOam_Frame8[OAM_DATA_SIZE(6)] = {
@@ -1109,7 +1109,7 @@ const u16 sParticleSpriteExplosionBigOam_Frame8[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(3, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 3, 0),
     OAM_ENTRY(3, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
     OAM_ENTRY(-16, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 3, 0),
-    OAM_ENTRY(-7, -2, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 3, 0),
+    OAM_ENTRY(-7, -2, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionBigOam_Frame9[OAM_DATA_SIZE(6)] = {
@@ -1119,7 +1119,7 @@ const u16 sParticleSpriteExplosionBigOam_Frame9[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(3, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 3, 0),
     OAM_ENTRY(3, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
     OAM_ENTRY(-16, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0),
-    OAM_ENTRY(-7, -3, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0),
+    OAM_ENTRY(-7, -3, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionBigOam_Frame10[OAM_DATA_SIZE(5)] = {
@@ -1128,7 +1128,7 @@ const u16 sParticleSpriteExplosionBigOam_Frame10[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(3, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 3, 0),
     OAM_ENTRY(3, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(-16, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 3, 0),
-    OAM_ENTRY(-7, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 3, 0),
+    OAM_ENTRY(-7, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionBigOam_Frame11[OAM_DATA_SIZE(6)] = {
@@ -1138,7 +1138,7 @@ const u16 sParticleSpriteExplosionBigOam_Frame11[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-16, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 3, 0),
     OAM_ENTRY(-16, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
     OAM_ENTRY(-7, -6, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 3, 0),
-    OAM_ENTRY(-7, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
+    OAM_ENTRY(-7, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionBigOam_Frame12[OAM_DATA_SIZE(5)] = {
@@ -1147,7 +1147,7 @@ const u16 sParticleSpriteExplosionBigOam_Frame12[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(3, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 3, 0),
     OAM_ENTRY(-16, -21, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
-    OAM_ENTRY(-7, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
+    OAM_ENTRY(-7, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionBigOam_Frame13[OAM_DATA_SIZE(5)] = {
@@ -1156,25 +1156,25 @@ const u16 sParticleSpriteExplosionBigOam_Frame13[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 3, 0),
     OAM_ENTRY(-16, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(1, -10, OAM_DIMS_8x8, OAM_X_FLIP, 0x18f, 4, 0),
-    OAM_ENTRY(-7, -6, OAM_DIMS_8x8, OAM_XY_FLIP, 0x18f, 4, 0),
+    OAM_ENTRY(-7, -6, OAM_DIMS_8x8, OAM_XY_FLIP, 0x18f, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionBigOam_Frame14[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-12, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 3, 0),
     OAM_ENTRY(-16, -23, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
-    OAM_ENTRY(-3, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 3, 0),
+    OAM_ENTRY(-3, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 3, 0)
 };
 
 const u16 sParticleSpriteExplosionBigOam_Frame15[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-12, -22, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 3, 0),
-    OAM_ENTRY(-16, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
+    OAM_ENTRY(-16, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionBigOam_Frame16[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-12, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0),
+    OAM_ENTRY(-12, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0)
 };
 
 const u16 sParticleSpriteExplosionSingleThenBigOam_Frame3[OAM_DATA_SIZE(9)] = {
@@ -1187,12 +1187,12 @@ const u16 sParticleSpriteExplosionSingleThenBigOam_Frame3[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(5, -10, OAM_DIMS_16x16, OAM_X_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-22, -7, OAM_DIMS_16x16, OAM_Y_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-8, 2, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0),
-    OAM_ENTRY(-9, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(-9, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticleScrewAttackDestroyedOam_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0xd0, 3, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0xd0, 3, 0)
 };
 
 const u16 sParticleScrewAttackDestroyedOam_Frame1[OAM_DATA_SIZE(8)] = {
@@ -1204,7 +1204,7 @@ const u16 sParticleScrewAttackDestroyedOam_Frame1[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-20, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
     OAM_ENTRY(4, -20, OAM_DIMS_16x16, OAM_X_FLIP, 0x188, 3, 0),
     OAM_ENTRY(-20, 4, OAM_DIMS_16x16, OAM_Y_FLIP, 0x188, 3, 0),
-    OAM_ENTRY(4, 4, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(4, 4, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticleScrewAttackDestroyedOam_Frame2[OAM_DATA_SIZE(12)] = {
@@ -1220,7 +1220,7 @@ const u16 sParticleScrewAttackDestroyedOam_Frame2[OAM_DATA_SIZE(12)] = {
     OAM_ENTRY(-24, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 3, 0),
     OAM_ENTRY(8, -24, OAM_DIMS_16x16, OAM_X_FLIP, 0x18a, 3, 0),
     OAM_ENTRY(-24, 8, OAM_DIMS_16x16, OAM_Y_FLIP, 0x18a, 3, 0),
-    OAM_ENTRY(8, 8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0),
+    OAM_ENTRY(8, 8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0)
 };
 
 const u16 sParticleScrewAttackDestroyedOam_Frame3[OAM_DATA_SIZE(16)] = {
@@ -1240,7 +1240,7 @@ const u16 sParticleScrewAttackDestroyedOam_Frame3[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-24, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(8, -24, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(-24, 8, OAM_DIMS_16x16, OAM_Y_FLIP, 0x18c, 4, 0),
-    OAM_ENTRY(8, 8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18c, 4, 0),
+    OAM_ENTRY(8, 8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18c, 4, 0)
 };
 
 const u16 sParticleScrewAttackDestroyedOam_Frame4[OAM_DATA_SIZE(16)] = {
@@ -1260,7 +1260,7 @@ const u16 sParticleScrewAttackDestroyedOam_Frame4[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-12, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x157, 3, 0),
     OAM_ENTRY(4, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x157, 3, 0),
     OAM_ENTRY(-12, 4, OAM_DIMS_16x8, OAM_Y_FLIP, 0x157, 3, 0),
-    OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x157, 3, 0),
+    OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x157, 3, 0)
 };
 
 const u16 sParticleScrewAttackDestroyedOam_Frame5[OAM_DATA_SIZE(9)] = {
@@ -1273,7 +1273,7 @@ const u16 sParticleScrewAttackDestroyedOam_Frame5[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(16, -32, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(-32, 16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(16, 16, OAM_DIMS_16x16, OAM_Y_FLIP, 0x18e, 4, 0),
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x196, 3, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x196, 3, 0)
 };
 
 const u16 sParticleScrewAttackDestroyedOam_Frame6[OAM_DATA_SIZE(5)] = {
@@ -1282,7 +1282,7 @@ const u16 sParticleScrewAttackDestroyedOam_Frame6[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(28, -44, OAM_DIMS_16x16, OAM_Y_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(-44, 28, OAM_DIMS_16x16, OAM_X_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(28, 28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x198, 3, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x198, 3, 0)
 };
 
 const u16 sParticleScrewAttackDestroyedOam_Frame7[OAM_DATA_SIZE(7)] = {
@@ -1293,14 +1293,14 @@ const u16 sParticleScrewAttackDestroyedOam_Frame7[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(30, 30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
     OAM_ENTRY(-10, -10, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a7, 4, 0),
     OAM_ENTRY(-4, 5, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a7, 4, 0),
-    OAM_ENTRY(5, -7, OAM_DIMS_8x8, OAM_X_FLIP, 0x1a7, 4, 0),
+    OAM_ENTRY(5, -7, OAM_DIMS_8x8, OAM_X_FLIP, 0x1a7, 4, 0)
 };
 
 const u16 sParticleShinesparkDestroyedOam_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-12, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
     OAM_ENTRY(-4, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
-    OAM_ENTRY(-11, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(-11, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticleShinesparkDestroyedOam_Frame1[OAM_DATA_SIZE(4)] = {
@@ -1308,7 +1308,7 @@ const u16 sParticleShinesparkDestroyedOam_Frame1[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-15, -19, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
     OAM_ENTRY(4, -7, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
     OAM_ENTRY(-13, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
-    OAM_ENTRY(-7, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(-7, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticleShinesparkDestroyedOam_Frame2[OAM_DATA_SIZE(6)] = {
@@ -1318,7 +1318,7 @@ const u16 sParticleShinesparkDestroyedOam_Frame2[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-19, 12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
     OAM_ENTRY(-12, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
     OAM_ENTRY(1, -7, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
-    OAM_ENTRY(-14, 2, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(-14, 2, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticleShinesparkDestroyedOam_Frame3[OAM_DATA_SIZE(9)] = {
@@ -1331,7 +1331,7 @@ const u16 sParticleShinesparkDestroyedOam_Frame3[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-18, 11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
     OAM_ENTRY(-12, -12, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 3, 0),
     OAM_ENTRY(0, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 3, 0),
-    OAM_ENTRY(-12, 3, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 3, 0),
+    OAM_ENTRY(-12, 3, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 3, 0)
 };
 
 const u16 sParticleShinesparkDestroyedOam_Frame4[OAM_DATA_SIZE(10)] = {
@@ -1345,7 +1345,7 @@ const u16 sParticleShinesparkDestroyedOam_Frame4[OAM_DATA_SIZE(10)] = {
     OAM_ENTRY(-13, -18, OAM_DIMS_16x16, OAM_X_FLIP, 0x18e, 3, 0),
     OAM_ENTRY(2, -7, OAM_DIMS_16x16, OAM_X_FLIP, 0x18e, 3, 0),
     OAM_ENTRY(-14, 6, OAM_DIMS_16x16, OAM_X_FLIP, 0x18e, 3, 0),
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x196, 3, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x196, 3, 0)
 };
 
 const u16 sParticleShinesparkDestroyedOam_Frame5[OAM_DATA_SIZE(10)] = {
@@ -1359,7 +1359,7 @@ const u16 sParticleShinesparkDestroyedOam_Frame5[OAM_DATA_SIZE(10)] = {
     OAM_ENTRY(-15, -20, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 4, 0),
     OAM_ENTRY(4, -6, OAM_DIMS_16x16, OAM_Y_FLIP, 0x1d4, 4, 0),
     OAM_ENTRY(-15, 8, OAM_DIMS_16x16, OAM_X_FLIP, 0x1d4, 4, 0),
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x198, 3, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x198, 3, 0)
 };
 
 const u16 sParticleShinesparkDestroyedOam_Frame6[OAM_DATA_SIZE(7)] = {
@@ -1370,7 +1370,7 @@ const u16 sParticleShinesparkDestroyedOam_Frame6[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(-22, -27, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 4, 0),
     OAM_ENTRY(14, -5, OAM_DIMS_16x16, OAM_Y_FLIP, 0x1d4, 4, 0),
     OAM_ENTRY(-18, 15, OAM_DIMS_16x16, OAM_X_FLIP, 0x1d4, 4, 0),
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_Y_FLIP, 0x198, 3, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_Y_FLIP, 0x198, 3, 0)
 };
 
 const u16 sParticleShinesparkDestroyedOam_Frame7[OAM_DATA_SIZE(6)] = {
@@ -1380,27 +1380,27 @@ const u16 sParticleShinesparkDestroyedOam_Frame7[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-29, 27, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
     OAM_ENTRY(-10, -10, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a7, 4, 0),
     OAM_ENTRY(-4, 5, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a7, 4, 0),
-    OAM_ENTRY(5, -7, OAM_DIMS_8x8, OAM_X_FLIP, 0x1a7, 4, 0),
+    OAM_ENTRY(5, -7, OAM_DIMS_8x8, OAM_X_FLIP, 0x1a7, 4, 0)
 };
 
 const u16 sParticleShinesparkDestroyedOam_Frame8[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-31, -38, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(30, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
-    OAM_ENTRY(-30, 28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
+    OAM_ENTRY(-30, 28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0)
 };
 
 const u16 sParticleShinesparkDestroyedOam_Frame9[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-32, -39, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(31, -3, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
-    OAM_ENTRY(-31, 29, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
+    OAM_ENTRY(-31, 29, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0)
 };
 
 const u16 sParticlePseudoScrewDestroyedOam_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-13, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
-    OAM_ENTRY(-3, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(-3, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticlePseudoScrewDestroyedOam_Frame1[OAM_DATA_SIZE(7)] = {
@@ -1411,7 +1411,7 @@ const u16 sParticlePseudoScrewDestroyedOam_Frame1[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(-12, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 3, 0),
     OAM_ENTRY(3, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-12, 4, OAM_DIMS_8x8, OAM_Y_FLIP, 0x155, 3, 0),
-    OAM_ENTRY(-4, 3, OAM_DIMS_16x8, OAM_XY_FLIP, 0x155, 3, 0),
+    OAM_ENTRY(-4, 3, OAM_DIMS_16x8, OAM_XY_FLIP, 0x155, 3, 0)
 };
 
 const u16 sParticlePseudoScrewDestroyedOam_Frame2[OAM_DATA_SIZE(9)] = {
@@ -1424,7 +1424,7 @@ const u16 sParticlePseudoScrewDestroyedOam_Frame2[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-13, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-2, -13, OAM_DIMS_16x16, OAM_X_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-14, -3, OAM_DIMS_16x16, OAM_Y_FLIP, 0x155, 3, 0),
-    OAM_ENTRY(-3, -2, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0),
+    OAM_ENTRY(-3, -2, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0)
 };
 
 const u16 sParticlePseudoScrewDestroyedOam_Frame3[OAM_DATA_SIZE(8)] = {
@@ -1436,7 +1436,7 @@ const u16 sParticlePseudoScrewDestroyedOam_Frame3[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-15, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 3, 0),
     OAM_ENTRY(0, -15, OAM_DIMS_16x16, OAM_X_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-16, -1, OAM_DIMS_16x16, OAM_Y_FLIP, 0x155, 3, 0),
-    OAM_ENTRY(-1, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0),
+    OAM_ENTRY(-1, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0)
 };
 
 const u16 sParticlePseudoScrewDestroyedOam_Frame4[OAM_DATA_SIZE(8)] = {
@@ -1448,21 +1448,21 @@ const u16 sParticlePseudoScrewDestroyedOam_Frame4[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-12, 4, OAM_DIMS_16x8, OAM_Y_FLIP, 0x157, 3, 0),
     OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x157, 3, 0),
     OAM_ENTRY(-24, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
-    OAM_ENTRY(8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
+    OAM_ENTRY(8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0)
 };
 
 const u16 sParticlePseudoScrewDestroyedOam_Frame5[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-42, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
     OAM_ENTRY(26, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x196, 3, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x196, 3, 0)
 };
 
 const u16 sParticlePseudoScrewDestroyedOam_Frame6[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-44, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(28, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x198, 3, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x198, 3, 0)
 };
 
 const u16 sParticlePseudoScrewDestroyedOam_Frame7[OAM_DATA_SIZE(5)] = {
@@ -1471,7 +1471,7 @@ const u16 sParticlePseudoScrewDestroyedOam_Frame7[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(30, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
     OAM_ENTRY(-10, 2, OAM_DIMS_8x8, OAM_Y_FLIP, 0x1a7, 4, 0),
     OAM_ENTRY(-4, -10, OAM_DIMS_8x8, OAM_Y_FLIP, 0x1a7, 4, 0),
-    OAM_ENTRY(2, 2, OAM_DIMS_8x8, OAM_XY_FLIP, 0x1a7, 4, 0),
+    OAM_ENTRY(2, 2, OAM_DIMS_8x8, OAM_XY_FLIP, 0x1a7, 4, 0)
 };
 
 const u16 sParticleSpeedboosterDestroyedOam_Frame0[OAM_DATA_SIZE(4)] = {
@@ -1479,7 +1479,7 @@ const u16 sParticleSpeedboosterDestroyedOam_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-13, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
     OAM_ENTRY(-3, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
     OAM_ENTRY(-3, -4, OAM_DIMS_16x16, OAM_X_FLIP, 0x188, 3, 0),
-    OAM_ENTRY(-13, -12, OAM_DIMS_16x16, OAM_X_FLIP, 0x188, 3, 0),
+    OAM_ENTRY(-13, -12, OAM_DIMS_16x16, OAM_X_FLIP, 0x188, 3, 0)
 };
 
 const u16 sParticleSpeedboosterDestroyedOam_Frame1[OAM_DATA_SIZE(9)] = {
@@ -1492,7 +1492,7 @@ const u16 sParticleSpeedboosterDestroyedOam_Frame1[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-12, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 3, 0),
     OAM_ENTRY(3, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-12, 4, OAM_DIMS_8x8, OAM_Y_FLIP, 0x155, 3, 0),
-    OAM_ENTRY(-4, 3, OAM_DIMS_16x8, OAM_XY_FLIP, 0x155, 3, 0),
+    OAM_ENTRY(-4, 3, OAM_DIMS_16x8, OAM_XY_FLIP, 0x155, 3, 0)
 };
 
 const u16 sParticleSpeedboosterDestroyedOam_Frame2[OAM_DATA_SIZE(13)] = {
@@ -1509,7 +1509,7 @@ const u16 sParticleSpeedboosterDestroyedOam_Frame2[OAM_DATA_SIZE(13)] = {
     OAM_ENTRY(-13, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-2, -13, OAM_DIMS_16x16, OAM_X_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-14, -3, OAM_DIMS_16x16, OAM_Y_FLIP, 0x155, 3, 0),
-    OAM_ENTRY(-3, -2, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0),
+    OAM_ENTRY(-3, -2, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0)
 };
 
 const u16 sParticleSpeedboosterDestroyedOam_Frame3[OAM_DATA_SIZE(12)] = {
@@ -1525,7 +1525,7 @@ const u16 sParticleSpeedboosterDestroyedOam_Frame3[OAM_DATA_SIZE(12)] = {
     OAM_ENTRY(-15, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 3, 0),
     OAM_ENTRY(0, -15, OAM_DIMS_16x16, OAM_X_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-16, -1, OAM_DIMS_16x16, OAM_Y_FLIP, 0x155, 3, 0),
-    OAM_ENTRY(-1, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0),
+    OAM_ENTRY(-1, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0)
 };
 
 const u16 sParticleSpeedboosterDestroyedOam_Frame4[OAM_DATA_SIZE(12)] = {
@@ -1541,7 +1541,7 @@ const u16 sParticleSpeedboosterDestroyedOam_Frame4[OAM_DATA_SIZE(12)] = {
     OAM_ENTRY(-12, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x157, 3, 0),
     OAM_ENTRY(4, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x157, 3, 0),
     OAM_ENTRY(-12, 4, OAM_DIMS_16x8, OAM_Y_FLIP, 0x157, 3, 0),
-    OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x157, 3, 0),
+    OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x157, 3, 0)
 };
 
 const u16 sParticleSpeedboosterDestroyedOam_Frame5[OAM_DATA_SIZE(5)] = {
@@ -1550,7 +1550,7 @@ const u16 sParticleSpeedboosterDestroyedOam_Frame5[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(11, -27, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x196, 3, 0),
     OAM_ENTRY(11, 11, OAM_DIMS_16x16, OAM_X_FLIP, 0x18a, 4, 0),
-    OAM_ENTRY(-27, -27, OAM_DIMS_16x16, OAM_X_FLIP, 0x18a, 4, 0),
+    OAM_ENTRY(-27, -27, OAM_DIMS_16x16, OAM_X_FLIP, 0x18a, 4, 0)
 };
 
 const u16 sParticleSpeedboosterDestroyedOam_Frame6[OAM_DATA_SIZE(5)] = {
@@ -1559,7 +1559,7 @@ const u16 sParticleSpeedboosterDestroyedOam_Frame6[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(12, -28, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x198, 3, 0),
     OAM_ENTRY(12, 12, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 4, 0),
-    OAM_ENTRY(-28, -28, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 4, 0),
+    OAM_ENTRY(-28, -28, OAM_DIMS_16x16, OAM_X_FLIP, 0x18c, 4, 0)
 };
 
 const u16 sParticleSpeedboosterDestroyedOam_Frame7[OAM_DATA_SIZE(7)] = {
@@ -1570,102 +1570,102 @@ const u16 sParticleSpeedboosterDestroyedOam_Frame7[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(-4, -10, OAM_DIMS_8x8, OAM_Y_FLIP, 0x1a7, 4, 0),
     OAM_ENTRY(2, 2, OAM_DIMS_8x8, OAM_XY_FLIP, 0x1a7, 4, 0),
     OAM_ENTRY(13, 13, OAM_DIMS_16x16, OAM_X_FLIP, 0x18e, 4, 0),
-    OAM_ENTRY(-29, -29, OAM_DIMS_16x16, OAM_X_FLIP, 0x18e, 4, 0),
+    OAM_ENTRY(-29, -29, OAM_DIMS_16x16, OAM_X_FLIP, 0x18e, 4, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 7, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 7, 0),
+    OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-8, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 7, 0),
+    OAM_ENTRY(-8, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 7, 0),
-    OAM_ENTRY(0, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 7, 0),
+    OAM_ENTRY(0, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame4[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 7, 0),
-    OAM_ENTRY(0, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 7, 0),
+    OAM_ENTRY(0, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame5[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 7, 0),
-    OAM_ENTRY(0, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 7, 0),
+    OAM_ENTRY(0, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame6[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 7, 0),
     OAM_ENTRY(0, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 7, 0),
-    OAM_ENTRY(-14, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 7, 0),
+    OAM_ENTRY(-14, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame7[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 7, 0),
     OAM_ENTRY(0, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 7, 0),
-    OAM_ENTRY(-14, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 7, 0),
+    OAM_ENTRY(-14, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame8[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 7, 0),
     OAM_ENTRY(0, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 7, 0),
-    OAM_ENTRY(-14, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 7, 0),
+    OAM_ENTRY(-14, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame9[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -22, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 7, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 7, 0),
-    OAM_ENTRY(-14, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 7, 0),
+    OAM_ENTRY(-14, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame10[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-4, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 7, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 7, 0),
-    OAM_ENTRY(-14, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 7, 0),
+    OAM_ENTRY(-14, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame11[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(4, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 7, 0),
-    OAM_ENTRY(-14, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 7, 0),
+    OAM_ENTRY(-14, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame12[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(4, -22, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 7, 0),
-    OAM_ENTRY(-14, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 7, 0),
+    OAM_ENTRY(-14, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame13[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-14, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 7, 0),
+    OAM_ENTRY(-14, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame14[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-10, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 7, 0),
+    OAM_ENTRY(-10, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithIceOam_Frame15[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-10, -22, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 7, 0),
+    OAM_ENTRY(-10, -22, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame0[OAM_DATA_SIZE(4)] = {
@@ -1673,7 +1673,7 @@ const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame0[OAM_DATA_SIZE(4)] 
     OAM_ENTRY(-12, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 7, 0),
     OAM_ENTRY(3, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x155, 7, 0),
     OAM_ENTRY(-12, 4, OAM_DIMS_8x8, OAM_Y_FLIP, 0x155, 7, 0),
-    OAM_ENTRY(-4, 3, OAM_DIMS_16x8, OAM_XY_FLIP, 0x155, 7, 0),
+    OAM_ENTRY(-4, 3, OAM_DIMS_16x8, OAM_XY_FLIP, 0x155, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame1[OAM_DATA_SIZE(4)] = {
@@ -1681,7 +1681,7 @@ const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame1[OAM_DATA_SIZE(4)] 
     OAM_ENTRY(-13, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 7, 0),
     OAM_ENTRY(-2, -13, OAM_DIMS_16x16, OAM_X_FLIP, 0x155, 7, 0),
     OAM_ENTRY(-14, -3, OAM_DIMS_16x16, OAM_Y_FLIP, 0x155, 7, 0),
-    OAM_ENTRY(-3, -2, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 7, 0),
+    OAM_ENTRY(-3, -2, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame2[OAM_DATA_SIZE(4)] = {
@@ -1689,7 +1689,7 @@ const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame2[OAM_DATA_SIZE(4)] 
     OAM_ENTRY(-15, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 7, 0),
     OAM_ENTRY(0, -15, OAM_DIMS_16x16, OAM_X_FLIP, 0x155, 7, 0),
     OAM_ENTRY(-16, -1, OAM_DIMS_16x16, OAM_Y_FLIP, 0x155, 7, 0),
-    OAM_ENTRY(-1, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 7, 0),
+    OAM_ENTRY(-1, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame3[OAM_DATA_SIZE(9)] = {
@@ -1702,7 +1702,7 @@ const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame3[OAM_DATA_SIZE(9)] 
     OAM_ENTRY(5, -10, OAM_DIMS_16x16, OAM_X_FLIP, 0x155, 7, 0),
     OAM_ENTRY(-22, -7, OAM_DIMS_16x16, OAM_Y_FLIP, 0x155, 7, 0),
     OAM_ENTRY(-8, 2, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 7, 0),
-    OAM_ENTRY(-9, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 7, 0),
+    OAM_ENTRY(-9, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame4[OAM_DATA_SIZE(4)] = {
@@ -1710,7 +1710,7 @@ const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame4[OAM_DATA_SIZE(4)] 
     OAM_ENTRY(-15, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 7, 0),
     OAM_ENTRY(0, -15, OAM_DIMS_16x16, OAM_X_FLIP, 0x155, 7, 0),
     OAM_ENTRY(-16, -1, OAM_DIMS_16x16, OAM_Y_FLIP, 0x155, 7, 0),
-    OAM_ENTRY(-1, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 7, 0),
+    OAM_ENTRY(-1, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame5[OAM_DATA_SIZE(4)] = {
@@ -1718,7 +1718,7 @@ const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame5[OAM_DATA_SIZE(4)] 
     OAM_ENTRY(-10, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 7, 0),
     OAM_ENTRY(3, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 7, 0),
     OAM_ENTRY(-16, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 7, 0),
-    OAM_ENTRY(-7, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 7, 0),
+    OAM_ENTRY(-7, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame6[OAM_DATA_SIZE(4)] = {
@@ -1726,7 +1726,7 @@ const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame6[OAM_DATA_SIZE(4)] 
     OAM_ENTRY(-10, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 7, 0),
     OAM_ENTRY(3, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 7, 0),
     OAM_ENTRY(-16, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 7, 0),
-    OAM_ENTRY(-7, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 7, 0),
+    OAM_ENTRY(-7, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame7[OAM_DATA_SIZE(4)] = {
@@ -1734,7 +1734,7 @@ const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame7[OAM_DATA_SIZE(4)] 
     OAM_ENTRY(-6, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 7, 0),
     OAM_ENTRY(3, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 7, 0),
     OAM_ENTRY(-16, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 7, 0),
-    OAM_ENTRY(-7, -2, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 7, 0),
+    OAM_ENTRY(-7, -2, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame8[OAM_DATA_SIZE(4)] = {
@@ -1742,43 +1742,43 @@ const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame8[OAM_DATA_SIZE(4)] 
     OAM_ENTRY(-6, -22, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 7, 0),
     OAM_ENTRY(3, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 7, 0),
     OAM_ENTRY(-16, -11, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 7, 0),
-    OAM_ENTRY(-7, -3, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 7, 0),
+    OAM_ENTRY(-7, -3, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame9[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(3, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 7, 0),
     OAM_ENTRY(-16, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 7, 0),
-    OAM_ENTRY(-7, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 7, 0),
+    OAM_ENTRY(-7, -4, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame10[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(7, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 7, 0),
     OAM_ENTRY(-16, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 7, 0),
-    OAM_ENTRY(-7, -6, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 7, 0),
+    OAM_ENTRY(-7, -6, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame11[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(7, -22, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 7, 0),
-    OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 7, 0),
+    OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame12[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 7, 0),
+    OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame13[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-12, -20, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 7, 0),
-    OAM_ENTRY(-3, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 7, 0),
+    OAM_ENTRY(-3, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 7, 0)
 };
 
 const u16 sParticleFreezingSpriteWithChargedIceBeamOam_Frame14[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-12, -22, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 7, 0),
+    OAM_ENTRY(-12, -22, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 7, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame2[OAM_DATA_SIZE(6)] = {
@@ -1788,7 +1788,7 @@ const u16 sParticleMainBossDeathOam_Frame2[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x10b, 3, 0),
     OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x10b, 3, 0),
     OAM_ENTRY(16, -16, OAM_DIMS_8x16, OAM_NO_FLIP, 0xd2, 3, 0),
-    OAM_ENTRY(8, -16, OAM_DIMS_8x16, OAM_X_FLIP, 0xd2, 3, 0),
+    OAM_ENTRY(8, -16, OAM_DIMS_8x16, OAM_X_FLIP, 0xd2, 3, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame3[OAM_DATA_SIZE(5)] = {
@@ -1797,7 +1797,7 @@ const u16 sParticleMainBossDeathOam_Frame3[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x10d, 3, 0),
     OAM_ENTRY(-16, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x10d, 3, 0),
     OAM_ENTRY(0, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x10d, 3, 0),
-    OAM_ENTRY(8, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0xd3, 3, 0),
+    OAM_ENTRY(8, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0xd3, 3, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame4[OAM_DATA_SIZE(10)] = {
@@ -1811,7 +1811,7 @@ const u16 sParticleMainBossDeathOam_Frame4[OAM_DATA_SIZE(10)] = {
     OAM_ENTRY(0, -8, OAM_DIMS_16x16, OAM_Y_FLIP, 0x10b, 3, 0),
     OAM_ENTRY(16, -8, OAM_DIMS_16x16, OAM_XY_FLIP, 0x10b, 3, 0),
     OAM_ENTRY(-10, 4, OAM_DIMS_8x16, OAM_NO_FLIP, 0xd2, 3, 0),
-    OAM_ENTRY(-18, 4, OAM_DIMS_8x16, OAM_X_FLIP, 0xd2, 3, 0),
+    OAM_ENTRY(-18, 4, OAM_DIMS_8x16, OAM_X_FLIP, 0xd2, 3, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame5[OAM_DATA_SIZE(16)] = {
@@ -1831,7 +1831,7 @@ const u16 sParticleMainBossDeathOam_Frame5[OAM_DATA_SIZE(16)] = {
     OAM_ENTRY(-18, 4, OAM_DIMS_16x16, OAM_NO_FLIP, 0xd3, 3, 0),
     OAM_ENTRY(8, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 3, 0),
     OAM_ENTRY(-4, -32, OAM_DIMS_8x16, OAM_NO_FLIP, 0xd2, 3, 0),
-    OAM_ENTRY(-12, -32, OAM_DIMS_8x16, OAM_X_FLIP, 0xd2, 3, 0),
+    OAM_ENTRY(-12, -32, OAM_DIMS_8x16, OAM_X_FLIP, 0xd2, 3, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame6[OAM_DATA_SIZE(17)] = {
@@ -1852,7 +1852,7 @@ const u16 sParticleMainBossDeathOam_Frame6[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(-26, 12, OAM_DIMS_16x16, OAM_Y_FLIP, 0x10b, 3, 0),
     OAM_ENTRY(-10, 12, OAM_DIMS_16x16, OAM_XY_FLIP, 0x10b, 3, 0),
     OAM_ENTRY(8, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x188, 3, 0),
-    OAM_ENTRY(-12, -32, OAM_DIMS_16x16, OAM_NO_FLIP, 0xd3, 3, 0),
+    OAM_ENTRY(-12, -32, OAM_DIMS_16x16, OAM_NO_FLIP, 0xd3, 3, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame7[OAM_DATA_SIZE(18)] = {
@@ -1874,7 +1874,7 @@ const u16 sParticleMainBossDeathOam_Frame7[OAM_DATA_SIZE(18)] = {
     OAM_ENTRY(-20, -40, OAM_DIMS_16x16, OAM_NO_FLIP, 0x10b, 3, 0),
     OAM_ENTRY(-4, -40, OAM_DIMS_16x16, OAM_X_FLIP, 0x10b, 3, 0),
     OAM_ENTRY(-20, -24, OAM_DIMS_16x16, OAM_Y_FLIP, 0x10b, 3, 0),
-    OAM_ENTRY(-4, -24, OAM_DIMS_16x16, OAM_XY_FLIP, 0x10b, 3, 0),
+    OAM_ENTRY(-4, -24, OAM_DIMS_16x16, OAM_XY_FLIP, 0x10b, 3, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame8[OAM_DATA_SIZE(21)] = {
@@ -1899,7 +1899,7 @@ const u16 sParticleMainBossDeathOam_Frame8[OAM_DATA_SIZE(21)] = {
     OAM_ENTRY(5, -7, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 3, 0),
     OAM_ENTRY(20, -8, OAM_DIMS_8x16, OAM_X_FLIP, 0x155, 3, 0),
     OAM_ENTRY(5, 8, OAM_DIMS_8x8, OAM_Y_FLIP, 0x155, 3, 0),
-    OAM_ENTRY(13, 7, OAM_DIMS_16x8, OAM_XY_FLIP, 0x155, 3, 0),
+    OAM_ENTRY(13, 7, OAM_DIMS_16x8, OAM_XY_FLIP, 0x155, 3, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame9[OAM_DATA_SIZE(20)] = {
@@ -1923,7 +1923,7 @@ const u16 sParticleMainBossDeathOam_Frame9[OAM_DATA_SIZE(20)] = {
     OAM_ENTRY(2, -14, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 3, 0),
     OAM_ENTRY(13, -13, OAM_DIMS_16x16, OAM_X_FLIP, 0x155, 3, 0),
     OAM_ENTRY(1, -3, OAM_DIMS_16x16, OAM_Y_FLIP, 0x155, 3, 0),
-    OAM_ENTRY(12, -2, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0),
+    OAM_ENTRY(12, -2, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame10[OAM_DATA_SIZE(19)] = {
@@ -1946,7 +1946,7 @@ const u16 sParticleMainBossDeathOam_Frame10[OAM_DATA_SIZE(19)] = {
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x155, 3, 0),
     OAM_ENTRY(15, -15, OAM_DIMS_16x16, OAM_X_FLIP, 0x155, 3, 0),
     OAM_ENTRY(-1, -1, OAM_DIMS_16x16, OAM_Y_FLIP, 0x155, 3, 0),
-    OAM_ENTRY(14, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0),
+    OAM_ENTRY(14, 0, OAM_DIMS_16x16, OAM_XY_FLIP, 0x155, 3, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame11[OAM_DATA_SIZE(18)] = {
@@ -1968,7 +1968,7 @@ const u16 sParticleMainBossDeathOam_Frame11[OAM_DATA_SIZE(18)] = {
     OAM_ENTRY(-20, -40, OAM_DIMS_16x16, OAM_NO_FLIP, 0x113, 3, 0),
     OAM_ENTRY(-4, -40, OAM_DIMS_16x16, OAM_X_FLIP, 0x113, 3, 0),
     OAM_ENTRY(-20, -24, OAM_DIMS_16x16, OAM_Y_FLIP, 0x113, 3, 0),
-    OAM_ENTRY(-4, -24, OAM_DIMS_16x16, OAM_XY_FLIP, 0x113, 3, 0),
+    OAM_ENTRY(-4, -24, OAM_DIMS_16x16, OAM_XY_FLIP, 0x113, 3, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame12[OAM_DATA_SIZE(12)] = {
@@ -1984,7 +1984,7 @@ const u16 sParticleMainBossDeathOam_Frame12[OAM_DATA_SIZE(12)] = {
     OAM_ENTRY(15, -20, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 3, 0),
     OAM_ENTRY(15, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18a, 4, 0),
     OAM_ENTRY(-4, -15, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0),
-    OAM_ENTRY(5, -7, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0),
+    OAM_ENTRY(5, -7, OAM_DIMS_16x16, OAM_XY_FLIP, 0x18a, 3, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame13[OAM_DATA_SIZE(12)] = {
@@ -2000,7 +2000,7 @@ const u16 sParticleMainBossDeathOam_Frame13[OAM_DATA_SIZE(12)] = {
     OAM_ENTRY(-4, -18, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 3, 0),
     OAM_ENTRY(-4, -24, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
     OAM_ENTRY(5, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 3, 0),
-    OAM_ENTRY(5, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0),
+    OAM_ENTRY(5, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x188, 4, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame14[OAM_DATA_SIZE(10)] = {
@@ -2014,7 +2014,7 @@ const u16 sParticleMainBossDeathOam_Frame14[OAM_DATA_SIZE(10)] = {
     OAM_ENTRY(-4, -20, OAM_DIMS_16x16, OAM_XY_FLIP, 0x1d4, 3, 0),
     OAM_ENTRY(-4, -27, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18c, 4, 0),
     OAM_ENTRY(13, -14, OAM_DIMS_8x8, OAM_X_FLIP, 0x18f, 4, 0),
-    OAM_ENTRY(5, -10, OAM_DIMS_8x8, OAM_XY_FLIP, 0x18f, 4, 0),
+    OAM_ENTRY(5, -10, OAM_DIMS_8x8, OAM_XY_FLIP, 0x18f, 4, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame15[OAM_DATA_SIZE(6)] = {
@@ -2024,89 +2024,89 @@ const u16 sParticleMainBossDeathOam_Frame15[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-24, -26, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
     OAM_ENTRY(-1, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 3, 0),
     OAM_ENTRY(-5, -30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18e, 4, 0),
-    OAM_ENTRY(8, -19, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 3, 0),
+    OAM_ENTRY(8, -19, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 3, 0)
 };
 
 const u16 sParticleMainBossDeathOam_Frame16[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-20, -27, OAM_DIMS_8x16, OAM_NO_FLIP, 0x187, 4, 0),
     OAM_ENTRY(-4, -35, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1d4, 4, 0),
-    OAM_ENTRY(0, -31, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 3, 0),
+    OAM_ENTRY(0, -31, OAM_DIMS_8x16, OAM_X_FLIP, 0x187, 3, 0)
 };
 
 static const u16 sWaterDropOam_Spawning_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -2, OAM_DIMS_8x8, OAM_NO_FLIP, 0x161, 2, 0),
+    OAM_ENTRY(-4, -2, OAM_DIMS_8x8, OAM_NO_FLIP, 0x161, 2, 0)
 };
 
 static const u16 sWaterDropOam_Spawning_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -1, OAM_DIMS_8x8, OAM_NO_FLIP, 0x161, 2, 0),
+    OAM_ENTRY(-4, -1, OAM_DIMS_8x8, OAM_NO_FLIP, 0x161, 2, 0)
 };
 
 static const u16 sWaterDropOam_Spawning_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, 0, OAM_DIMS_8x8, OAM_NO_FLIP, 0x161, 2, 0),
+    OAM_ENTRY(-4, 0, OAM_DIMS_8x8, OAM_NO_FLIP, 0x161, 2, 0)
 };
 
 static const u16 sWaterDropOam_Spawning_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, 0, OAM_DIMS_8x8, OAM_NO_FLIP, 0x162, 2, 0),
+    OAM_ENTRY(-4, 0, OAM_DIMS_8x8, OAM_NO_FLIP, 0x162, 2, 0)
 };
 
 static const u16 sWaterDropOam_Falling_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x160, 2, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x160, 2, 0)
 };
 
 static const u16 sWaterDropOam_Splashing_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-2, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x9d, 4, 0),
-    OAM_ENTRY(-6, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x9d, 4, 0),
+    OAM_ENTRY(-6, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x9d, 4, 0)
 };
 
 static const u16 sWaterDropOam_Splashing_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-2, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x9e, 4, 0),
-    OAM_ENTRY(-6, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x9e, 4, 0),
+    OAM_ENTRY(-6, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x9e, 4, 0)
 };
 
 static const u16 sWaterDropOam_Splashing_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-2, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x9f, 4, 0),
-    OAM_ENTRY(-6, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x9f, 4, 0),
+    OAM_ENTRY(-6, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x9f, 4, 0)
 };
 
 static const u16 sWaterDropOam_Splashing_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-2, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0xbd, 4, 0),
-    OAM_ENTRY(-6, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0xbd, 4, 0),
+    OAM_ENTRY(-6, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0xbd, 4, 0)
 };
 
 static const u16 sWaterDropOam_Splashing_Frame4[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-2, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0xbe, 4, 0),
-    OAM_ENTRY(-6, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0xbe, 4, 0),
+    OAM_ENTRY(-6, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0xbe, 4, 0)
 };
 
 const u16 sSpriteDebrisOAM_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x170, 3, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x170, 3, 0)
 };
 
 const u16 sSpriteDebrisOAM_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x16f, 3, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x16f, 3, 0)
 };
 
 const u16 sSpriteDebrisOAM_Frame2[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x16e, 3, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x16e, 3, 0)
 };
 
 const u16 sSpriteDebrisOAM_Frame3[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x16d, 3, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x16d, 3, 0)
 };
 
 const u16 sParticleHittingSomethingWithPlasmaBeamOam_Frame6[OAM_DATA_SIZE(4)] = {
@@ -2114,7 +2114,7 @@ const u16 sParticleHittingSomethingWithPlasmaBeamOam_Frame6[OAM_DATA_SIZE(4)] = 
     OAM_ENTRY(-20, -20, OAM_DIMS_32x16, OAM_NO_FLIP, 0x192, 2, 0),
     OAM_ENTRY(-20, -12, OAM_DIMS_16x32, OAM_Y_FLIP, 0x192, 2, 0),
     OAM_ENTRY(4, -20, OAM_DIMS_16x32, OAM_X_FLIP, 0x192, 2, 0),
-    OAM_ENTRY(-12, 4, OAM_DIMS_32x16, OAM_XY_FLIP, 0x192, 2, 0),
+    OAM_ENTRY(-12, 4, OAM_DIMS_32x16, OAM_XY_FLIP, 0x192, 2, 0)
 };
 
 const u16 sSpriteDebrisOAM_Unused_Frame4[OAM_DATA_SIZE(8)] = {
@@ -2126,7 +2126,7 @@ const u16 sSpriteDebrisOAM_Unused_Frame4[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(-12, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x143, 2, 0),
     OAM_ENTRY(4, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x143, 2, 0),
     OAM_ENTRY(-12, 4, OAM_DIMS_16x8, OAM_Y_FLIP, 0x143, 2, 0),
-    OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x143, 2, 0),
+    OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x143, 2, 0)
 };
 
 const u16 sSpriteDebrisOAM_Unused_Frame5[OAM_DATA_SIZE(8)] = {
@@ -2138,7 +2138,7 @@ const u16 sSpriteDebrisOAM_Unused_Frame5[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(8, -8, OAM_DIMS_16x16, OAM_X_FLIP, 0x151, 2, 0),
     OAM_ENTRY(-22, 6, OAM_DIMS_16x16, OAM_Y_FLIP, 0x192, 2, 0),
     OAM_ENTRY(-8, 8, OAM_DIMS_16x16, OAM_Y_FLIP, 0x153, 2, 0),
-    OAM_ENTRY(6, 6, OAM_DIMS_16x16, OAM_XY_FLIP, 0x192, 2, 0),
+    OAM_ENTRY(6, 6, OAM_DIMS_16x16, OAM_XY_FLIP, 0x192, 2, 0)
 };
 
 const struct FrameData sParticleHittingSomethingWithNormalBeamOam[5] = {

@@ -13,7 +13,7 @@
 #include "structs/game_state.h"
 #include "structs/sprite.h"
 
-enum SovaTurningDirection {
+MAKE_ENUM(u8, SovaTurningDirection) {
     SOVA_TURNING_DIRECTION_BOTTOM_LEFT_CORNER,
     SOVA_TURNING_DIRECTION_TOP_RIGHT_EDGE,
     SOVA_TURNING_DIRECTION_BOTTOM_RIGHT_EDGE,

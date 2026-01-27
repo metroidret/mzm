@@ -19,17 +19,17 @@ void BlockShiftNeverReformBlocks(void);
 u32 BlockCheckRevealOrDestroyNonBombBlock(struct ClipdataBlockData* pClipBlock);
 u32 BlockCheckRevealOrDestroyBombBlock(struct ClipdataBlockData* pClipBlock);
 u32 BlockApplyCcaa(u16 yPosition, u16 xPosition, u16 trueClip);
-u32 BlockUpdateMakeSolidBlocks(u8 makeSolid, u16 xPosition, u16 yPosition);
-u32 BlockSamusApplyScrewSpeedboosterDamageToEnvironment(u16 xPosition, u16 yPosition, DestructingAction action);
+boolu32 BlockUpdateMakeSolidBlocks(boolu8 makeSolid, u16 xPosition, u16 yPosition);
+boolu32 BlockSamusApplyScrewSpeedboosterDamageToEnvironment(u16 xPosition, u16 yPosition, DestructingAction action);
 void BlockUpdateBrokenBlocks(void);
 void BlockUpdateBrokenBlockAnimation(struct BrokenBlock* pBlock);
-u32 BlockStoreBrokenReformBlock(u8 type, u16 xPosition, u16 yPosition, u8 advanceStage);
-void BlockStoreBrokenNonReformBlock(u16 xPosition, u16 yPosition, u8 type);
-u32 BlockCheckRevealBombChainBlock(u8 type, u16 xPosition, u16 yPosition);
-u32 BlockCheckSamusInReformingBlock(u8 xPosition, u8 yPosition);
-u32 BlockStartBombChain(u8 type, u16 xPosition, u16 yPosition);
+boolu32 BlockStoreBrokenReformBlock(BlockType type, u16 xPosition, u16 yPosition, boolu8 advanceStage);
+void BlockStoreBrokenNonReformBlock(u16 xPosition, u16 yPosition, BlockType type);
+boolu32 BlockCheckRevealBombChainBlock(BlockType type, u16 xPosition, u16 yPosition);
+boolu32 BlockCheckSamusInReformingBlock(u8 xPosition, u8 yPosition);
+boolu32 BlockStartBombChain(BombChainType type, u16 xPosition, u16 yPosition);
 void BlockProcessBombChains(void);
-void BlockCheckStartNewSubBombChain(u8 type, u8 xPosition, u8 yPosition);
+void BlockCheckStartNewSubBombChain(SubBombChainRequest type, u8 xPosition, u8 yPosition);
 void BlockBrokenBlockRemoveCollision(u16 yPosition, u16 xPosition);
 
 #endif /* BLOCK_H */

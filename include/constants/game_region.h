@@ -1,12 +1,12 @@
 #ifndef GAME_REGION_CONSTANTS_H
 #define GAME_REGION_CONSTANTS_H
 
-enum GameRegion {
+MAKE_ENUM(u8, GameRegion) {
     GAME_REGION_JPN,
     GAME_REGION_EUR,
     GAME_REGION_USA,
 
-    GAME_REGION_END
+    GAME_REGION_COUNT
 };
 
 #if defined(REGION_JP) || defined(REGION_CN)

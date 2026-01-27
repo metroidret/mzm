@@ -30,7 +30,7 @@ static void GlassTubeChangeCcaa(void)
 {
     u16 yPosition;
     u16 xPosition;
-    u8 caa;
+    ClipdataAffectingAction caa;
 
     yPosition = gCurrentSprite.yPosition - (HALF_BLOCK_SIZE);
     xPosition = gCurrentSprite.xPosition;

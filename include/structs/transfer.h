@@ -3,13 +3,15 @@
 
 #include "types.h"
 
+#include "constants/transfer.h"
+
 struct TransferStatus {
     u8 isParent;
-    u8 stage;
+    TransferStage stage;
     u8 unk_2; // set but never read, cursor * 100 / sizeInt
-    u8 dataTransferStage;
-    u8 verifyTransferResult; // 0 if transfer not verified yet, 1 if correct number of GBA's, 2 if more than 2 GBA's detected
-    u8 errorDuringTransfer;
+    TransferDataStage dataTransferStage;
+    TransferVerify verifyTransferResult; // 0 if transfer not verified yet, 1 if correct number of GBA's, 2 if more than 2 GBA's detected
+    TransferError errorDuringTransfer;
 };
 
 struct TransferData {

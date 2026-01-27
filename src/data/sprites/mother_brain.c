@@ -3,7 +3,7 @@
 
 #include "sprites_ai/mother_brain.h"
 
-static const s16 sMotherBrainMultiSpriteData_Part0[MOTHER_BRAIN_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sMotherBrainMultiSpriteData_Part0[MOTHER_BRAIN_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [MOTHER_BRAIN_PART_BEAM_SHOOTER] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = MOTHER_BRAIN_OAM_BEAM_SPAWNING,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = QUARTER_BLOCK_SIZE + EIGHTH_BLOCK_SIZE,
@@ -26,7 +26,7 @@ static const s16 sMotherBrainMultiSpriteData_Part0[MOTHER_BRAIN_PART_END][MULTI_
     }
 };
 
-static const s16 sMotherBrainMultiSpriteData_Part1[MOTHER_BRAIN_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sMotherBrainMultiSpriteData_Part1[MOTHER_BRAIN_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [MOTHER_BRAIN_PART_BEAM_SHOOTER] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = MOTHER_BRAIN_OAM_BEAM_SPAWNING,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = HALF_BLOCK_SIZE - PIXEL_SIZE,
@@ -49,7 +49,7 @@ static const s16 sMotherBrainMultiSpriteData_Part1[MOTHER_BRAIN_PART_END][MULTI_
     }
 };
 
-static const s16 sMotherBrainMultiSpriteData_Part2[MOTHER_BRAIN_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sMotherBrainMultiSpriteData_Part2[MOTHER_BRAIN_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [MOTHER_BRAIN_PART_BEAM_SHOOTER] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = MOTHER_BRAIN_OAM_BEAM_SPAWNING,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = HALF_BLOCK_SIZE,
@@ -72,7 +72,7 @@ static const s16 sMotherBrainMultiSpriteData_Part2[MOTHER_BRAIN_PART_END][MULTI_
     }
 };
 
-static const s16 sMotherBrainMultiSpriteData_Part3[MOTHER_BRAIN_PART_END][MULTI_SPRITE_DATA_ELEMENT_END] = {
+static const s16 sMotherBrainMultiSpriteData_Part3[MOTHER_BRAIN_PART_COUNT][MULTI_SPRITE_DATA_ELEMENT_COUNT] = {
     [MOTHER_BRAIN_PART_BEAM_SHOOTER] = {
         [MULTI_SPRITE_DATA_ELEMENT_OAM_INDEX] = MOTHER_BRAIN_OAM_BEAM_SPAWNING,
         [MULTI_SPRITE_DATA_ELEMENT_Y_OFFSET]  = HALF_BLOCK_SIZE + PIXEL_SIZE,
@@ -168,7 +168,7 @@ static const u16 sMotherBrainOam_Idle_Frame0[OAM_DATA_SIZE(19)] = {
     OAM_ENTRY(22, -32, OAM_DIMS_16x16, OAM_NO_FLIP, 0x34e, 8, 1),
     OAM_ENTRY(10, -40, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21b, 8, 1),
     OAM_ENTRY(-19, -38, OAM_DIMS_8x16, OAM_X_FLIP, 0x21b, 8, 1),
-    OAM_ENTRY(-43, -23, OAM_DIMS_16x16, OAM_X_FLIP, 0x34c, 8, 1),
+    OAM_ENTRY(-43, -23, OAM_DIMS_16x16, OAM_X_FLIP, 0x34c, 8, 1)
 };
 
 static const u16 sMotherBrainOam_Idle_Frame1[OAM_DATA_SIZE(19)] = {
@@ -191,7 +191,7 @@ static const u16 sMotherBrainOam_Idle_Frame1[OAM_DATA_SIZE(19)] = {
     OAM_ENTRY(24, -31, OAM_DIMS_16x16, OAM_NO_FLIP, 0x34c, 8, 1),
     OAM_ENTRY(11, -39, OAM_DIMS_8x16, OAM_NO_FLIP, 0x21b, 8, 1),
     OAM_ENTRY(-18, -38, OAM_DIMS_8x16, OAM_X_FLIP, 0x21a, 8, 1),
-    OAM_ENTRY(-42, -24, OAM_DIMS_16x16, OAM_X_FLIP, 0x34c, 8, 1),
+    OAM_ENTRY(-42, -24, OAM_DIMS_16x16, OAM_X_FLIP, 0x34c, 8, 1)
 };
 
 static const u16 sMotherBrainOam_Idle_Frame2[OAM_DATA_SIZE(19)] = {
@@ -214,43 +214,43 @@ static const u16 sMotherBrainOam_Idle_Frame2[OAM_DATA_SIZE(19)] = {
     OAM_ENTRY(24, -30, OAM_DIMS_16x16, OAM_NO_FLIP, 0x34c, 8, 1),
     OAM_ENTRY(9, -39, OAM_DIMS_16x16, OAM_NO_FLIP, 0x34e, 8, 1),
     OAM_ENTRY(-18, -38, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 1),
-    OAM_ENTRY(-42, -26, OAM_DIMS_16x16, OAM_X_FLIP, 0x34e, 8, 1),
+    OAM_ENTRY(-42, -26, OAM_DIMS_16x16, OAM_X_FLIP, 0x34e, 8, 1)
 };
 
 static const u16 sMotherBrainPartOam_EyeClosed_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-14, -14, OAM_DIMS_16x8, OAM_X_FLIP, 0x2c1, 8, 1),
-    OAM_ENTRY(-30, -6, OAM_DIMS_32x16, OAM_X_FLIP, 0x2c3, 8, 1),
+    OAM_ENTRY(-30, -6, OAM_DIMS_32x16, OAM_X_FLIP, 0x2c3, 8, 1)
 };
 
 static const u16 sMotherBrainPartOam_EyeClosed_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-14, -14, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2e1, 8, 1),
-    OAM_ENTRY(-30, -6, OAM_DIMS_32x16, OAM_NO_FLIP, 0x2c6, 8, 1),
+    OAM_ENTRY(-30, -6, OAM_DIMS_32x16, OAM_NO_FLIP, 0x2c6, 8, 1)
 };
 
 static const u16 sMotherBrainPartOam_EyeClosed_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-14, -14, OAM_DIMS_16x8, OAM_X_FLIP, 0x301, 8, 1),
-    OAM_ENTRY(-30, -6, OAM_DIMS_32x16, OAM_X_FLIP, 0x303, 8, 1),
+    OAM_ENTRY(-30, -6, OAM_DIMS_32x16, OAM_X_FLIP, 0x303, 8, 1)
 };
 
 static const u16 sMotherBrainPartOam_EyeOpening_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-14, -14, OAM_DIMS_16x8, OAM_NO_FLIP, 0x321, 8, 1),
-    OAM_ENTRY(-30, -6, OAM_DIMS_32x16, OAM_NO_FLIP, 0x306, 8, 1),
+    OAM_ENTRY(-30, -6, OAM_DIMS_32x16, OAM_NO_FLIP, 0x306, 8, 1)
 };
 
 static const u16 sMotherBrainPartOam_EyeOpening_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-14, -14, OAM_DIMS_16x8, OAM_X_FLIP, 0x341, 8, 1),
-    OAM_ENTRY(-30, -6, OAM_DIMS_32x16, OAM_X_FLIP, 0x343, 8, 1),
+    OAM_ENTRY(-30, -6, OAM_DIMS_32x16, OAM_X_FLIP, 0x343, 8, 1)
 };
 
 static const u16 sMotherBrainPartOam_EyeOpening_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-14, -14, OAM_DIMS_16x8, OAM_NO_FLIP, 0x361, 8, 1),
-    OAM_ENTRY(-30, -6, OAM_DIMS_32x16, OAM_NO_FLIP, 0x346, 8, 1),
+    OAM_ENTRY(-30, -6, OAM_DIMS_32x16, OAM_NO_FLIP, 0x346, 8, 1)
 };
 
 static const u16 sMotherBrainPartOam_Bottom_Frame0[OAM_DATA_SIZE(5)] = {
@@ -259,7 +259,7 @@ static const u16 sMotherBrainPartOam_Bottom_Frame0[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-2, -16, OAM_DIMS_16x32, OAM_NO_FLIP, 0x21e, 8, 1),
     OAM_ENTRY(4, -15, OAM_DIMS_16x32, OAM_NO_FLIP, 0x21c, 8, 1),
     OAM_ENTRY(14, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x34a, 8, 1),
-    OAM_ENTRY(-32, -16, OAM_DIMS_64x32, OAM_NO_FLIP, 0x2ca, 8, 1),
+    OAM_ENTRY(-32, -16, OAM_DIMS_64x32, OAM_NO_FLIP, 0x2ca, 8, 1)
 };
 
 static const u16 sMotherBrainPartOam_Bottom_Frame1[OAM_DATA_SIZE(5)] = {
@@ -268,7 +268,7 @@ static const u16 sMotherBrainPartOam_Bottom_Frame1[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-2, -16, OAM_DIMS_16x32, OAM_NO_FLIP, 0x21e, 8, 1),
     OAM_ENTRY(4, -14, OAM_DIMS_16x32, OAM_NO_FLIP, 0x21c, 8, 1),
     OAM_ENTRY(14, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x34a, 8, 1),
-    OAM_ENTRY(-32, -16, OAM_DIMS_64x32, OAM_NO_FLIP, 0x2ca, 8, 1),
+    OAM_ENTRY(-32, -16, OAM_DIMS_64x32, OAM_NO_FLIP, 0x2ca, 8, 1)
 };
 
 static const u16 sMotherBrainPartOam_Bottom_Frame2[OAM_DATA_SIZE(5)] = {
@@ -277,7 +277,7 @@ static const u16 sMotherBrainPartOam_Bottom_Frame2[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-2, -15, OAM_DIMS_16x32, OAM_NO_FLIP, 0x21e, 8, 1),
     OAM_ENTRY(4, -13, OAM_DIMS_16x32, OAM_NO_FLIP, 0x21c, 8, 1),
     OAM_ENTRY(14, -10, OAM_DIMS_16x16, OAM_NO_FLIP, 0x34a, 8, 1),
-    OAM_ENTRY(-32, -15, OAM_DIMS_64x32, OAM_NO_FLIP, 0x2ca, 8, 1),
+    OAM_ENTRY(-32, -15, OAM_DIMS_64x32, OAM_NO_FLIP, 0x2ca, 8, 1)
 };
 
 static const u16 sMotherBrainPartOam_Bottom_Frame3[OAM_DATA_SIZE(5)] = {
@@ -286,13 +286,13 @@ static const u16 sMotherBrainPartOam_Bottom_Frame3[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-2, -14, OAM_DIMS_16x32, OAM_NO_FLIP, 0x21e, 8, 1),
     OAM_ENTRY(4, -13, OAM_DIMS_16x32, OAM_NO_FLIP, 0x21c, 8, 1),
     OAM_ENTRY(14, -9, OAM_DIMS_16x16, OAM_NO_FLIP, 0x34a, 8, 1),
-    OAM_ENTRY(-32, -14, OAM_DIMS_64x32, OAM_NO_FLIP, 0x2ca, 8, 1),
+    OAM_ENTRY(-32, -14, OAM_DIMS_64x32, OAM_NO_FLIP, 0x2ca, 8, 1)
 };
 
 static const u16 sMotherBrainPartOam_BeamSpawning_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-4, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x29e, 9, 0),
-    OAM_ENTRY(-4, 0, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2fe, 9, 0),
+    OAM_ENTRY(-4, 0, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2fe, 9, 0)
 };
 
 static const u16 sMotherBrainPartOam_BeamSpawning_Frame1[OAM_DATA_SIZE(5)] = {
@@ -301,31 +301,31 @@ static const u16 sMotherBrainPartOam_BeamSpawning_Frame1[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(20, 0, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2fe, 9, 0),
     OAM_ENTRY(4, -7, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2ba, 9, 0),
     OAM_ENTRY(4, -2, OAM_DIMS_16x8, OAM_NO_FLIP, 0x2da, 9, 0),
-    OAM_ENTRY(-4, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2b8, 9, 0),
+    OAM_ENTRY(-4, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2b8, 9, 0)
 };
 
 static const u16 sMotherBrainPartOam_BeamSpawning_Frame2[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x31c, 9, 0),
     OAM_ENTRY(0, -11, OAM_DIMS_16x16, OAM_NO_FLIP, 0x338, 9, 0),
-    OAM_ENTRY(0, -5, OAM_DIMS_16x16, OAM_NO_FLIP, 0x338, 9, 0),
+    OAM_ENTRY(0, -5, OAM_DIMS_16x16, OAM_NO_FLIP, 0x338, 9, 0)
 };
 
 static const u16 sMotherBrainPartOam_BeamSpawning_Frame3[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(32, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x29c, 9, 0),
     OAM_ENTRY(20, -16, OAM_DIMS_16x32, OAM_NO_FLIP, 0x29a, 9, 0),
-    OAM_ENTRY(8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2b8, 9, 0),
+    OAM_ENTRY(8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2b8, 9, 0)
 };
 
 static const u16 sMotherBrainBeamOam_Moving_Frame0[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-48, -16, OAM_DIMS_64x32, OAM_NO_FLIP, 0x298, 9, 0),
+    OAM_ENTRY(-48, -16, OAM_DIMS_64x32, OAM_NO_FLIP, 0x298, 9, 0)
 };
 
 static const u16 sMotherBrainBeamOam_Moving_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-52, -16, OAM_DIMS_64x32, OAM_NO_FLIP, 0x318, 9, 0),
+    OAM_ENTRY(-52, -16, OAM_DIMS_64x32, OAM_NO_FLIP, 0x318, 9, 0)
 };
 
 static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame0[OAM_DATA_SIZE(23)] = {
@@ -352,7 +352,7 @@ static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame0[OAM_DATA_SIZE(23)]
     OAM_ENTRY(0, -29, OAM_DIMS_16x16, OAM_XY_FLIP, 0x2d5, 9, 0),
     OAM_ENTRY(16, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x312, 9, 0),
     OAM_ENTRY(19, -32, OAM_DIMS_16x16, OAM_Y_FLIP, 0x312, 9, 0),
-    OAM_ENTRY(-38, -64, OAM_DIMS_32x32, OAM_X_FLIP, 0x315, 9, 0),
+    OAM_ENTRY(-38, -64, OAM_DIMS_32x32, OAM_X_FLIP, 0x315, 9, 0)
 };
 
 static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame2[OAM_DATA_SIZE(23)] = {
@@ -379,7 +379,7 @@ static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame2[OAM_DATA_SIZE(23)]
     OAM_ENTRY(0, -30, OAM_DIMS_16x16, OAM_XY_FLIP, 0x2d5, 9, 0),
     OAM_ENTRY(18, -18, OAM_DIMS_16x16, OAM_X_FLIP, 0x312, 9, 0),
     OAM_ENTRY(21, -34, OAM_DIMS_16x16, OAM_Y_FLIP, 0x312, 9, 0),
-    OAM_ENTRY(-40, -66, OAM_DIMS_32x32, OAM_X_FLIP, 0x315, 9, 0),
+    OAM_ENTRY(-40, -66, OAM_DIMS_32x32, OAM_X_FLIP, 0x315, 9, 0)
 };
 
 static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame4[OAM_DATA_SIZE(23)] = {
@@ -406,7 +406,7 @@ static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame4[OAM_DATA_SIZE(23)]
     OAM_ENTRY(0, -27, OAM_DIMS_16x16, OAM_XY_FLIP, 0x2d5, 9, 0),
     OAM_ENTRY(19, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x312, 9, 0),
     OAM_ENTRY(22, -32, OAM_DIMS_16x16, OAM_Y_FLIP, 0x312, 9, 0),
-    OAM_ENTRY(-47, -64, OAM_DIMS_32x32, OAM_X_FLIP, 0x315, 9, 0),
+    OAM_ENTRY(-47, -64, OAM_DIMS_32x32, OAM_X_FLIP, 0x315, 9, 0)
 };
 
 static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame6[OAM_DATA_SIZE(23)] = {
@@ -433,7 +433,7 @@ static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame6[OAM_DATA_SIZE(23)]
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x2d5, 9, 0),
     OAM_ENTRY(21, -6, OAM_DIMS_16x16, OAM_NO_FLIP, 0x312, 9, 0),
     OAM_ENTRY(18, -22, OAM_DIMS_16x16, OAM_XY_FLIP, 0x312, 9, 0),
-    OAM_ENTRY(-51, -56, OAM_DIMS_32x32, OAM_XY_FLIP, 0x315, 9, 0),
+    OAM_ENTRY(-51, -56, OAM_DIMS_32x32, OAM_XY_FLIP, 0x315, 9, 0)
 };
 
 static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame8[OAM_DATA_SIZE(23)] = {
@@ -460,7 +460,7 @@ static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame8[OAM_DATA_SIZE(23)]
     OAM_ENTRY(0, 3, OAM_DIMS_16x16, OAM_XY_FLIP, 0x2d5, 9, 0),
     OAM_ENTRY(20, 16, OAM_DIMS_16x16, OAM_X_FLIP, 0x312, 9, 0),
     OAM_ENTRY(23, 0, OAM_DIMS_16x16, OAM_Y_FLIP, 0x312, 9, 0),
-    OAM_ENTRY(-56, -40, OAM_DIMS_32x32, OAM_X_FLIP, 0x315, 9, 0),
+    OAM_ENTRY(-56, -40, OAM_DIMS_32x32, OAM_X_FLIP, 0x315, 9, 0)
 };
 
 static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame10[OAM_DATA_SIZE(15)] = {
@@ -479,7 +479,7 @@ static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame10[OAM_DATA_SIZE(15)
     OAM_ENTRY(0, 25, OAM_DIMS_16x16, OAM_X_FLIP, 0x2d5, 9, 0),
     OAM_ENTRY(24, 33, OAM_DIMS_16x16, OAM_NO_FLIP, 0x312, 9, 0),
     OAM_ENTRY(21, 17, OAM_DIMS_16x16, OAM_XY_FLIP, 0x312, 9, 0),
-    OAM_ENTRY(-56, -20, OAM_DIMS_32x32, OAM_XY_FLIP, 0x315, 9, 0),
+    OAM_ENTRY(-56, -20, OAM_DIMS_32x32, OAM_XY_FLIP, 0x315, 9, 0)
 };
 
 static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame12[OAM_DATA_SIZE(12)] = {
@@ -495,7 +495,7 @@ static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame12[OAM_DATA_SIZE(12)
     OAM_ENTRY(24, 56, OAM_DIMS_16x16, OAM_X_FLIP, 0x312, 9, 0),
     OAM_ENTRY(27, 40, OAM_DIMS_16x16, OAM_Y_FLIP, 0x312, 9, 0),
     OAM_ENTRY(-56, 5, OAM_DIMS_32x32, OAM_X_FLIP, 0x315, 9, 0),
-    OAM_ENTRY(72, 48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2d4, 9, 0),
+    OAM_ENTRY(72, 48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x2d4, 9, 0)
 };
 
 static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame14[OAM_DATA_SIZE(6)] = {
@@ -505,7 +505,7 @@ static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame14[OAM_DATA_SIZE(6)]
     OAM_ENTRY(-20, 42, OAM_DIMS_16x16, OAM_Y_FLIP, 0x312, 9, 0),
     OAM_ENTRY(44, 40, OAM_DIMS_16x16, OAM_XY_FLIP, 0x2d5, 9, 0),
     OAM_ENTRY(0, 65, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2d5, 9, 0),
-    OAM_ENTRY(-57, 32, OAM_DIMS_32x32, OAM_XY_FLIP, 0x315, 9, 0),
+    OAM_ENTRY(-57, 32, OAM_DIMS_32x32, OAM_XY_FLIP, 0x315, 9, 0)
 };
 
 static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame16[OAM_DATA_SIZE(6)] = {
@@ -515,12 +515,12 @@ static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame16[OAM_DATA_SIZE(6)]
     OAM_ENTRY(-21, 80, OAM_DIMS_16x16, OAM_NO_FLIP, 0x312, 9, 0),
     OAM_ENTRY(45, 64, OAM_DIMS_16x16, OAM_NO_FLIP, 0x2d5, 9, 0),
     OAM_ENTRY(0, 80, OAM_DIMS_16x16, OAM_XY_FLIP, 0x2d5, 9, 0),
-    OAM_ENTRY(-48, 56, OAM_DIMS_32x32, OAM_Y_FLIP, 0x315, 9, 0),
+    OAM_ENTRY(-48, 56, OAM_DIMS_32x32, OAM_Y_FLIP, 0x315, 9, 0)
 };
 
 static const u16 sMotherBrainGlassBreakingOam_Breaking_Frame1[OAM_DATA_SIZE(1)] = {
     1,
-    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x298, 9, 0),
+    OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x298, 9, 0)
 };
 
 const struct FrameData sMotherBrainOam_Idle[12] = {
@@ -567,7 +567,7 @@ const struct FrameData sMotherBrainOam_Idle[12] = {
     [10] = {
         .pFrame = sMotherBrainOam_Idle_Frame1,
         .timer = CONVERT_SECONDS(1.f / 30)
-    },
+    }
 };
 
 const struct FrameData sMotherBrainOam_ChargingBeam[5] = {

@@ -22,7 +22,7 @@ const u16 sIntroEmergencyOrderTextOAM[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(32, -56, OAM_DIMS_8x16, OAM_NO_FLIP, 0x7, 1, 0),
     OAM_ENTRY(40, -56, OAM_DIMS_8x16, OAM_NO_FLIP, 0x8, 1, 0),
     OAM_ENTRY(48, -56, OAM_DIMS_8x16, OAM_NO_FLIP, 0x12, 1, 0),
-    OAM_ENTRY(56, -56, OAM_DIMS_8x16, OAM_NO_FLIP, 0x1c, 1, 0),
+    OAM_ENTRY(56, -56, OAM_DIMS_8x16, OAM_NO_FLIP, 0x1c, 1, 0)
 };
 
 const u16 sIntroExterminateAllTextOAM[OAM_DATA_SIZE(54)] = {
@@ -80,7 +80,7 @@ const u16 sIntroExterminateAllTextOAM[OAM_DATA_SIZE(54)] = {
     OAM_ENTRY(80, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x13, 1, 0),
     OAM_ENTRY(88, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x1e, 1, 0),
     OAM_ENTRY(96, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x1f, 1, 0),
-    OAM_ENTRY(104, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x1f, 1, 0),
+    OAM_ENTRY(104, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x1f, 1, 0)
 };
 
 const u16 sIntroDefeatTheTextOAM[OAM_DATA_SIZE(52)] = {
@@ -136,14 +136,14 @@ const u16 sIntroDefeatTheTextOAM[OAM_DATA_SIZE(52)] = {
     OAM_ENTRY(72, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x4, 1, 0),
     OAM_ENTRY(80, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0xc, 1, 0),
     OAM_ENTRY(88, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0xf, 1, 0),
-    OAM_ENTRY(96, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x5f, 1, 0),
+    OAM_ENTRY(96, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x5f, 1, 0)
 };
 
 const u16 sIntroTextMarkerOAM[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x20, 1, 0),
     OAM_ENTRY(0, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21, 1, 0),
-    OAM_ENTRY(8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x22, 1, 0),
+    OAM_ENTRY(8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x22, 1, 0)
 };
 
 const u16 sIntroShipFlyingTowardsCameraOam_1[OAM_DATA_SIZE(6)] = {
@@ -153,7 +153,7 @@ const u16 sIntroShipFlyingTowardsCameraOam_1[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(-72, 8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x100, 3, 0),
     OAM_ENTRY(64, 8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x111, 3, 0),
     OAM_ENTRY_MODE(-56, -40, OAM_DIMS_64x64, OAM_NO_FLIP, 0x52, 4, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT),
-    OAM_ENTRY_MODE(-8, -40, OAM_DIMS_64x64, OAM_X_FLIP, 0x52, 4, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT),
+    OAM_ENTRY_MODE(-8, -40, OAM_DIMS_64x64, OAM_X_FLIP, 0x52, 4, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT)
 };
 
 const u16 sIntroShipFlyingTowardsCameraOam_2[OAM_DATA_SIZE(9)] = {
@@ -166,7 +166,7 @@ const u16 sIntroShipFlyingTowardsCameraOam_2[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY(-72, 8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x100, 3, 0),
     OAM_ENTRY(64, 8, OAM_DIMS_8x16, OAM_NO_FLIP, 0x111, 3, 0),
     OAM_ENTRY_MODE(-56, -40, OAM_DIMS_64x64, OAM_NO_FLIP, 0x160, 4, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT),
-    OAM_ENTRY_MODE(-8, -40, OAM_DIMS_64x64, OAM_X_FLIP, 0x160, 4, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT),
+    OAM_ENTRY_MODE(-8, -40, OAM_DIMS_64x64, OAM_X_FLIP, 0x160, 4, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT)
 };
 
 const u16 sIntroViewOfZebesShipOAM[OAM_DATA_SIZE(4)] = {
@@ -174,7 +174,7 @@ const u16 sIntroViewOfZebesShipOAM[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(-16, -40, OAM_DIMS_64x32, OAM_NO_FLIP, 0x40, 3, 0),
     OAM_ENTRY(48, -40, OAM_DIMS_8x32, OAM_NO_FLIP, 0x48, 3, 0),
     OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0xc0, 3, 0),
-    OAM_ENTRY(16, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0xc4, 3, 0),
+    OAM_ENTRY(16, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0xc4, 3, 0)
 };
 
 const u16 sIntroViewOfZebesHeatOAM_2[OAM_DATA_SIZE(12)] = {
@@ -190,7 +190,7 @@ const u16 sIntroViewOfZebesHeatOAM_2[OAM_DATA_SIZE(12)] = {
     OAM_ENTRY(0, 0, OAM_DIMS_32x16, OAM_NO_FLIP, 0x1d0, 4, 0),
     OAM_ENTRY(32, 0, OAM_DIMS_32x16, OAM_NO_FLIP, 0x1d4, 4, 0),
     OAM_ENTRY(64, 0, OAM_DIMS_32x16, OAM_NO_FLIP, 0x1d8, 4, 0),
-    OAM_ENTRY(96, 0, OAM_DIMS_32x16, OAM_NO_FLIP, 0x1dc, 4, 0),
+    OAM_ENTRY(96, 0, OAM_DIMS_32x16, OAM_NO_FLIP, 0x1dc, 4, 0)
 };
 
 const u16 sIntroViewOfZebesHeatOAM_1[OAM_DATA_SIZE(24)] = {
@@ -218,7 +218,7 @@ const u16 sIntroViewOfZebesHeatOAM_1[OAM_DATA_SIZE(24)] = {
     OAM_ENTRY(0, 8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x3b0, 4, 0),
     OAM_ENTRY(32, 8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x3b4, 4, 0),
     OAM_ENTRY(64, 8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x3b8, 4, 0),
-    OAM_ENTRY(96, 8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x3bc, 4, 0),
+    OAM_ENTRY(96, 8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x3bc, 4, 0)
 };
 
 const u16 sIntroFuzzOAM[OAM_DATA_SIZE(17)] = {
@@ -239,7 +239,7 @@ const u16 sIntroFuzzOAM[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(-64, 0, OAM_DIMS_64x32, OAM_NO_FLIP, 0x208, 0, 0),
     OAM_ENTRY(0, 0, OAM_DIMS_64x32, OAM_NO_FLIP, 0x210, 0, 0),
     OAM_ENTRY(64, 0, OAM_DIMS_32x32, OAM_NO_FLIP, 0x218, 0, 0),
-    OAM_ENTRY(96, 0, OAM_DIMS_16x32, OAM_NO_FLIP, 0x21c, 0, 0),
+    OAM_ENTRY(96, 0, OAM_DIMS_16x32, OAM_NO_FLIP, 0x21c, 0, 0)
 };
 
 const u16 sIntroTextAndShipPal[16 * 6] = INCBIN_U16("data/intro/text_and_ship.pal");
@@ -318,7 +318,7 @@ const u8 sSpriteYHalfRadius[3][4] = {
     }
 };
 
-const u8 sIntroEmergencyOrderActions[16] = {
+const IntroTextAction sIntroEmergencyOrderActions[16] = {
     INTRO_TEXT_ACTION_START,
     INTRO_TEXT_ACTION_NONE,            // E
     INTRO_TEXT_ACTION_NONE,            // M
@@ -334,10 +334,10 @@ const u8 sIntroEmergencyOrderActions[16] = {
     INTRO_TEXT_ACTION_NONE,            // R
     INTRO_TEXT_ACTION_NONE,            // D
     INTRO_TEXT_ACTION_SKIP_CHARACTER,  // E
-    INTRO_TEXT_ACTION_END,             // R
+    INTRO_TEXT_ACTION_COUNT,             // R
 };
 
-const u8 sIntroExterminateAllActions[52] = {
+const IntroTextAction sIntroExterminateAllActions[52] = {
     INTRO_TEXT_ACTION_START,
     INTRO_TEXT_ACTION_NONE,             // E
     INTRO_TEXT_ACTION_NONE,             // X
@@ -389,10 +389,10 @@ const u8 sIntroExterminateAllActions[52] = {
     INTRO_TEXT_ACTION_NONE,             // S
     INTRO_TEXT_ACTION_NONE,             // .
     INTRO_TEXT_ACTION_SKIP_CHARACTER,   // .
-    INTRO_TEXT_ACTION_END,              // .
+    INTRO_TEXT_ACTION_COUNT,              // .
 };
 
-const u8 sIntroDefeatTheActions[50] = {
+const IntroTextAction sIntroDefeatTheActions[50] = {
     INTRO_TEXT_ACTION_START,
     INTRO_TEXT_ACTION_NONE,             // A
     INTRO_TEXT_ACTION_NONE,             // N
@@ -442,7 +442,7 @@ const u8 sIntroDefeatTheActions[50] = {
     INTRO_TEXT_ACTION_NONE,             // A
     INTRO_TEXT_ACTION_NONE,             // I
     INTRO_TEXT_ACTION_SKIP_CHARACTER,   // N
-    INTRO_TEXT_ACTION_END,              // .
+    INTRO_TEXT_ACTION_COUNT,              // .
 };
 
 
