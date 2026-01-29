@@ -160,15 +160,15 @@ void SramRead_FileScreenOptionsUnlocked(void)
     // even though only the one for file A actually matters
     if (fileASanityCheck)
     {
-        dma_fill16(3, USHORT_MAX, &sSramEwramPointer->fileScreenOptions_fileA, sizeof(sSramEwramPointer->fileScreenOptions_fileA));
+        DMA3_FILL_16(USHORT_MAX, &sSramEwramPointer->fileScreenOptions_fileA, sizeof(sSramEwramPointer->fileScreenOptions_fileA));
 
         if (fileCSanityCheck)
         {
-            dma_fill16(3, USHORT_MAX, &sSramEwramPointer->fileScreenOptions_fileC, sizeof(sSramEwramPointer->fileScreenOptions_fileC));
+            DMA3_FILL_16(USHORT_MAX, &sSramEwramPointer->fileScreenOptions_fileC, sizeof(sSramEwramPointer->fileScreenOptions_fileC));
 
             if (fileBSanityCheck)
             {
-                dma_fill16(3, USHORT_MAX, &sSramEwramPointer->fileScreenOptions_fileB, sizeof(sSramEwramPointer->fileScreenOptions_fileB));
+                DMA3_FILL_16(USHORT_MAX, &sSramEwramPointer->fileScreenOptions_fileB, sizeof(sSramEwramPointer->fileScreenOptions_fileB));
             }
             else
             {
@@ -1322,7 +1322,7 @@ void SramRead_MostRecentSaveFile(void)
         return;
     }
 
-    dma_fill16(3, USHORT_MAX, &sSramEwramPointer->mostRecentFileSave, sizeof(sSramEwramPointer->mostRecentFileSave));
+    DMA3_FILL_16(USHORT_MAX, &sSramEwramPointer->mostRecentFileSave, sizeof(sSramEwramPointer->mostRecentFileSave));
 
     gMostRecentSaveFile = 0;
 }
@@ -1430,7 +1430,7 @@ void SramRead_SoundMode(void)
         return;
     }
 
-    dma_fill16(3, USHORT_MAX, &sSramEwramPointer->soundModeSave, sizeof(sSramEwramPointer->soundModeSave));
+    DMA3_FILL_16(USHORT_MAX, &sSramEwramPointer->soundModeSave, sizeof(sSramEwramPointer->soundModeSave));
 
     gStereoFlag = FALSE;
 }
@@ -1551,8 +1551,8 @@ u32 SramRead_Language(void)
         {
             if (error == 0)
             {
-                DMA_SET(3, &sSramEwramPointer->languagesSave[0], &sSramEwramPointer->languagesSave[1],
-                    DMA_ENABLE << 16 | sizeof(sSramEwramPointer->languagesSave[1]) / 2);
+                DMA3_COPY_16(&sSramEwramPointer->languagesSave[0], &sSramEwramPointer->languagesSave[1],
+                    sizeof(sSramEwramPointer->languagesSave[1]) / sizeof(u16));
 
                 DoSramOperation(SRAM_OPERATION_SAVE_LANGUAGE2);
                 break;
@@ -1560,19 +1560,19 @@ u32 SramRead_Language(void)
         }
         else if (error == 0)
         {
-            DMA_SET(3, &sSramEwramPointer->languagesSave[1], &sSramEwramPointer->languagesSave[0],
-                DMA_ENABLE << 16 | sizeof(sSramEwramPointer->languagesSave[0]) / 2);
+            DMA3_COPY_16(&sSramEwramPointer->languagesSave[1], &sSramEwramPointer->languagesSave[0],
+                sizeof(sSramEwramPointer->languagesSave[0]) / sizeof(u16));
 
             DoSramOperation(SRAM_OPERATION_SAVE_LANGUAGE);
             break;
         }
         else
         {
-            dma_fill16(3, 0, &sSramEwramPointer->languagesSave[0], sizeof(sSramEwramPointer->languagesSave[0]));
+            DMA3_FILL_16(0, &sSramEwramPointer->languagesSave[0], sizeof(sSramEwramPointer->languagesSave[0]));
 
             DoSramOperation(SRAM_OPERATION_SAVE_LANGUAGE);
 
-            dma_fill16(3, 0, &sSramEwramPointer->languagesSave[1], sizeof(sSramEwramPointer->languagesSave[1]));
+            DMA3_FILL_16(0, &sSramEwramPointer->languagesSave[1], sizeof(sSramEwramPointer->languagesSave[1]));
 
             DoSramOperation(SRAM_OPERATION_SAVE_LANGUAGE2);
         }
@@ -1692,8 +1692,8 @@ void SramRead_TimeAttack(void)
         {
             if (error == 0)
             {
-                DMA_SET(3, &sSramEwramPointer->timeAttackSaves[0], &sSramEwramPointer->timeAttackSaves[1],
-                    DMA_ENABLE << 16 | sizeof(sSramEwramPointer->timeAttackSaves[1]) / 2);
+                DMA3_COPY_16(&sSramEwramPointer->timeAttackSaves[0], &sSramEwramPointer->timeAttackSaves[1],
+                    sizeof(sSramEwramPointer->timeAttackSaves[1]) / sizeof(u16));
 
                 DoSramOperation(SRAM_OPERATION_SAVE_TIME_ATTACK2);
                 break;
@@ -1701,8 +1701,8 @@ void SramRead_TimeAttack(void)
         }
         else if (error == 0)
         {
-            DMA_SET(3, &sSramEwramPointer->timeAttackSaves[1], &sSramEwramPointer->timeAttackSaves[0],
-                DMA_ENABLE << 16 | sizeof(sSramEwramPointer->timeAttackSaves[0]) / 2);
+            DMA3_COPY_16(&sSramEwramPointer->timeAttackSaves[1], &sSramEwramPointer->timeAttackSaves[0],
+                sizeof(sSramEwramPointer->timeAttackSaves[0]) / sizeof(u16));
 
             DoSramOperation(SRAM_OPERATION_SAVE_TIME_ATTACK);
             break;

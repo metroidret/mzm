@@ -5,40 +5,45 @@
 
 #include "structs/part2.h"
 
-extern u8 sUnk_030023DC[];
+extern u8 sEmulatorAudio_LengthCounterTable[];
 extern u8 sUnk_03002845;
 
 void sub_03001318(void)
 {
-    if (gUnk_03005FB0 == 0)
+    if (gEmuAudio_Triangle_Enable == 0)
     {
         gUnk_03005AD0 = 0;
     }
 }
 
-void sub_03001334(u32 arg0)
+/**
+ * @brief 03001334 | Set Triangle length counter
+ * 
+ * @param lengthCounter Length counter
+ */
+void EmulatorAudio_Triangle_SetLengthCounter(u32 lengthCounter)
 {
-    gUnk_03005AD4 = arg0;
+    gEmuAudio_Triangle_LengthCounter = lengthCounter;
 }
 
 void sub_03001340(void)
 {
-    sub_03001334(sUnk_030023DC[gUnk_03005AE2 >> 3] * 4);
-    if ((gUnk_03005ADE & 0x7F) && (gUnk_03005A7A & 4))
+    EmulatorAudio_Triangle_SetLengthCounter(sEmulatorAudio_LengthCounterTable[gEmuAudio_Triangle_Hi >> 3] * 4);
+    if ((gEmuAudio_Triangle_Linear & 0x7F) && (gEmuAudio_SndChn & 4))
     {
-        if (gUnk_03005FB0 == 0) {
+        if (gEmuAudio_Triangle_Enable == 0) {
             sub_03001318();
         }
-        gUnk_03005FB0 = 1;
+        gEmuAudio_Triangle_Enable = 1;
         gUnk_03005AD8 = 0;
     }
-    gUnk_03005AD6 = (gUnk_03005ADE & 0x7F) + 1;
+    gUnk_03005AD6 = (gEmuAudio_Triangle_Linear & 0x7F) + 1;
     gUnk_03005ADA = (gUnk_03005ADC + gUnk_03005ADA) >> 1;
 }
 
 void sub_030013C8(void)
 {
-    if ((gUnk_03005FB0 != 0) && (gUnk_03005AD8 == 0))
+    if ((gEmuAudio_Triangle_Enable != 0) && (gUnk_03005AD8 == 0))
     {
         gUnk_03005AD8 = gUnk_03005ADA;
     }
@@ -72,16 +77,21 @@ void sub_030013F0(u16 arg0)
     }
 }
 
-void sub_03001458(u8 arg0)
+/**
+ * @brief 03001458 | Write to TRI_LINEAR
+ * 
+ * @param value Value to write
+ */
+void EmulatorAudio_Triangle_WriteLinear(u8 value)
 {
     u32 tmp;
     u32 tmp2;
 
     tmp2 = gUnk_03005AD6;
-    gUnk_03005ADE = arg0;
+    gEmuAudio_Triangle_Linear = value;
 
-    tmp = arg0 & 0x7F;
-    if ((arg0 & 0x7F) == 0)
+    tmp = value & 0x7F;
+    if ((value & 0x7F) == 0)
     {
         tmp = tmp2 & 0x80;
         if (((tmp2 & 0x80) == 0) && (gUnk_03005AE4 != 0))
@@ -95,16 +105,21 @@ void sub_03001458(u8 arg0)
             gUnk_03005AE4 = 0;
         }
     }
-    else if ((gUnk_03005FB0 == 0) || (gUnk_03005AE4 != 0))
+    else if ((gEmuAudio_Triangle_Enable == 0) || (gUnk_03005AE4 != 0))
     {
-        gUnk_03005AD6 = (arg0 & 0x7F) + 1;
+        gUnk_03005AD6 = (value & 0x7F) + 1;
         gUnk_03005AE4 = 0;
     }
 }
 
-void sub_030014C8(u8 arg0)
+/**
+ * @brief 030014C8 | Write to TRI_LO
+ * 
+ * @param value Value to write
+ */
+void EmulatorAudio_Triangle_WriteLo(u8 value)
 {
-    gUnk_03005AE0 = arg0;
+    gEmuAudio_Triangle_Lo = value;
     sUnk_03002845 = 1;
 }
 
@@ -115,41 +130,50 @@ void sub_030014E0(void)
         sUnk_03002845 -= 1;
         if (sUnk_03002845 == 0)
         {
-            sub_030013F0(((gUnk_03005AE2 & 7) << 8) | gUnk_03005AE0);
+            sub_030013F0(((gEmuAudio_Triangle_Hi & 7) << 8) | gEmuAudio_Triangle_Lo);
         }
     }
 }
 
-void sub_03001518(u8 arg0)
+/**
+ * @brief 03001518 | Write to TRI_HI
+ * 
+ * @param value Value to write
+ */
+void EmulatorAudio_Triangle_WriteHi(u8 value)
 {
-    gUnk_03005AE2 = arg0;
+    gEmuAudio_Triangle_Hi = value;
     gUnk_03005AE4 = 1;
 
-    sub_030013F0(((arg0 & 7) << 8) | gUnk_03005AE0);
-    if (gUnk_03005FB0 == 0)
+    sub_030013F0(((value & 7) << 8) | gEmuAudio_Triangle_Lo);
+    if (gEmuAudio_Triangle_Enable == 0)
     {
         sub_03001340();
         return;
     }
 
-    sub_03001334(sUnk_030023DC[gUnk_03005AE2 >> 3] * 4);
-    gUnk_03005AD6 = (gUnk_03005ADE & 0x7F) + 1;
+    EmulatorAudio_Triangle_SetLengthCounter(sEmulatorAudio_LengthCounterTable[gEmuAudio_Triangle_Hi >> 3] * 4);
+    gUnk_03005AD6 = (gEmuAudio_Triangle_Linear & 0x7F) + 1;
     gUnk_03005AD8 = 0;
 }
 
-void sub_03001594(void)
+/**
+ * @brief 03001594 | Clear Triangle variables
+ * 
+ */
+void EmulatorAudio_Triangle_ClearVariables(void)
 {
     gUnk_03005AD0 = 0;
     gUnk_03005FDC = 0;
-    gUnk_03005AD4 = 0;
+    gEmuAudio_Triangle_LengthCounter = 0;
     gUnk_03005AD6 = 0;
-    gUnk_03005FB0 = 0;
+    gEmuAudio_Triangle_Enable = 0;
     gUnk_03005AD8 = 0;
     gUnk_03005ADA = 0;
     gUnk_03005ADC = 0;
-    gUnk_03005ADE = 0;
-    gUnk_03005AE0 = 0;
-    gUnk_03005AE2 = 0;
+    gEmuAudio_Triangle_Linear = 0;
+    gEmuAudio_Triangle_Lo = 0;
+    gEmuAudio_Triangle_Hi = 0;
     gUnk_03005AE4 = 0;
     gUnk_03005FD4 = 0;
     sUnk_03002845 = 0;

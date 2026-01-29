@@ -22,7 +22,7 @@
  */
 static void FusionGalleryVBlank(void)
 {
-    DMA_SET(3, gOamData, OAM_BASE, C_32_2_16(DMA_ENABLE | DMA_32BIT, OAM_SIZE / sizeof(u32)));
+    DMA3_COPY_32(gOamData, OAM_BASE, OAM_SIZE / sizeof(u32));
 
     WRITE_16(REG_DISPCNT, FUSION_GALLERY_DATA.dispcnt);
     WRITE_16(REG_BLDCNT, FUSION_GALLERY_DATA.bldcnt);
@@ -52,7 +52,7 @@ static void FusionGalleryInit(void)
     if (gSubGameMode1 == 0)
     {
         ClearGfxRam();
-        DMA_FILL_32(3, 0, &gNonGameplayRam, sizeof(gNonGameplayRam));
+        DMA3_FILL_32(0, &gNonGameplayRam, sizeof(gNonGameplayRam));
     }
 
     image = FUSION_GALLERY_DATA.currentImage;
@@ -65,7 +65,7 @@ static void FusionGalleryInit(void)
     #ifdef REGION_EU
     DmaTransfer(3, sFusionGalleryData[image].pPalette, PALRAM_BASE, PAL_SIZE, 16);
     #else // !REGION_EU
-    DMA_SET(3, sFusionGalleryData[image].pPalette, PALRAM_BASE, C_32_2_16(DMA_ENABLE, 16 * PAL_ROW));
+    DMA3_COPY_16(sFusionGalleryData[image].pPalette, PALRAM_BASE, 16 * PAL_ROW);
     #endif // REGION_EU
 
     WRITE_16(REG_BG0CNT, CREATE_BGCNT(0, 28, BGCNT_HIGH_PRIORITY, BGCNT_SIZE_256x512));

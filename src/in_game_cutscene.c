@@ -322,7 +322,7 @@ u32 InGameCutsceneUpgradingSuit(InGameCutsceneScene cutsceneNumber, InGameCutsce
             #ifdef REGION_EU
             DmaTransfer(3, VRAM_BASE + (1 * BGCNT_VRAM_TILE_SIZE), EWRAM_BASE + 0x1E000, BGCNT_VRAM_TILE_SIZE, 16);
             #else // !REGION_EU
-            DMA_SET(3, VRAM_BASE + (1 * BGCNT_VRAM_TILE_SIZE), EWRAM_BASE + 0x1E000, C_32_2_16(DMA_ENABLE, BGCNT_VRAM_TILE_SIZE / 2));
+            DMA3_COPY_16(VRAM_BASE + (1 * BGCNT_VRAM_TILE_SIZE), EWRAM_BASE + 0x1E000, BGCNT_VRAM_TILE_SIZE / 2);
             #endif // REGION_EU
 
             changeStage = TRUE;
@@ -511,7 +511,7 @@ u32 InGameCutsceneUpgradingSuit(InGameCutsceneScene cutsceneNumber, InGameCutsce
             #ifdef REGION_EU
             DmaTransfer(3, EWRAM_BASE + 0x1E000, VRAM_BASE + (1 * BGCNT_VRAM_TILE_SIZE), BGCNT_VRAM_TILE_SIZE, 16);
             #else // !REGION_EU
-            DMA_SET(3, EWRAM_BASE + 0x1E000, VRAM_BASE + (1 * BGCNT_VRAM_TILE_SIZE), C_32_2_16(DMA_ENABLE, BGCNT_VRAM_TILE_SIZE / 2));
+            DMA3_COPY_16(EWRAM_BASE + 0x1E000, VRAM_BASE + (1 * BGCNT_VRAM_TILE_SIZE), BGCNT_VRAM_TILE_SIZE / 2);
             #endif // REGION_EU
             WRITE_16(REG_BG0CNT, gIoRegistersBackup.BG0CNT);
 
@@ -815,7 +815,7 @@ void InGameCutsceneCheckPlayOnTransition(void)
             CallLZ77UncompVram(sSamusCloseUpGfx, VRAM_BASE + 0x9000);
             CallLZ77UncompWram(sSamusCloseUpBackgroundMap, gDecompBg0Map);
             CallLZ77UncompWram(sSamusCloseUpEyesTiletable, EWRAM_BASE + 0x2B000);
-            DMA_SET(3, sSamusCloseUpPal, PALRAM_BASE + 7 * PAL_ROW_SIZE, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sSamusCloseUpPal)));
+            DMA3_COPY_16(sSamusCloseUpPal, PALRAM_BASE + 7 * PAL_ROW_SIZE, ARRAY_SIZE(sSamusCloseUpPal));
 
             unk_5fd58();
 
@@ -921,7 +921,7 @@ void UpdateAnimatedPaletteAfterTransitionOrReload(void)
     if (gPauseScreenFlag)
     {
         if (gAnimatedGraphicsEntry.palette != ANIMATED_PALETTE_ID_NONE)
-            DMA_SET(3, ANIMATED_PALETTE_EWRAM, ANIMATED_PALETTE_PALRAM, C_32_2_16(DMA_ENABLE, 16));
+            DMA3_COPY_16(ANIMATED_PALETTE_EWRAM, ANIMATED_PALETTE_PALRAM, 16);
     }
     else
     {

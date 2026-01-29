@@ -47,8 +47,8 @@ TransferResult FusionGalleryLinkProcess(void)
     switch (gIoTransferInfo.linkStage)
     {
         case LINK_STAGE_INIT:
-            dma_fill16(3, 0, gSendCmd, sizeof(gSendCmd));
-            dma_fill16(3, 0, gRecvCmds, sizeof(gRecvCmds));
+            DMA3_FILL_16(0, gSendCmd, sizeof(gSendCmd));
+            DMA3_FILL_16(0, gRecvCmds, sizeof(gRecvCmds));
 
             gLinkStatus = 0;
             gShouldAdvanceLinkState = 0;

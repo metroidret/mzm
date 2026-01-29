@@ -907,7 +907,7 @@ static void FileScreenProcessText(void)
                 #ifdef REGION_EU
                 BitFill(3, (u16)var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]], 0x1000, 16);
                 #else // !REGION_EU
-                dma_fill16(3, var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]], 0x1000);
+                DMA3_FILL_16(var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]], 0x1000);
                 #endif // REGION_EU
             }
             else if (sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1] == 2)
@@ -917,9 +917,9 @@ static void FileScreenProcessText(void)
                 BitFill(3, (u16)var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x100, 0x200, 16);
                 BitFill(3, (u16)var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x180, 0x800, 16);
                 #else // !REGION_EU
-                dma_fill16(3, var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]], 0x200);
-                dma_fill16(3, var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x400, 0x200);
-                dma_fill16(3, var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x600, 0x800);
+                DMA3_FILL_16(var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]], 0x200);
+                DMA3_FILL_16(var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x400, 0x200);
+                DMA3_FILL_16(var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x600, 0x800);
                 #endif // REGION_EU
             }
             else
@@ -927,7 +927,7 @@ static void FileScreenProcessText(void)
                 #ifdef REGION_EU
                 BitFill(3, (u16)var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]], 0x800, 16);
                 #else // !REGION_EU
-                dma_fill16(3, var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]], 0x800);
+                DMA3_FILL_16(var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]], 0x800);
                 #endif // REGION_EU
 
                 if (sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][2] == 3)
@@ -936,8 +936,8 @@ static void FileScreenProcessText(void)
                     BitFill(3, (u16)var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x200, 0x200, 16);
                     BitFill(3, (u16)var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x300, 0x200, 16);
                     #else // !REGION_EU
-                    dma_fill16(3, var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x800, 0x200);
-                    dma_fill16(3, var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0xC00, 0x200);
+                    DMA3_FILL_16(var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0x800, 0x200);
+                    DMA3_FILL_16(var_0, sFileSelect_760bdc[sFileScreenMessagesInfo[FILE_SELECT_DATA.messageInfoIdQueue[0]][1]] + 0xC00, 0x200);
                     #endif // REGION_EU
                 }
             }
@@ -4846,7 +4846,7 @@ static void FileSelectVBlank(void)
     if (gIoTransferInfo.linkInProgress)
         LinkVSync();
 
-    DMA_SET(3, gOamData, OAM_BASE, C_32_2_16(DMA_ENABLE | DMA_32BIT, OAM_SIZE / sizeof(u32)))
+    DMA3_COPY_32(gOamData, OAM_BASE, OAM_SIZE / sizeof(u32))
 
     WRITE_16(REG_BG0HOFS, gBg0HOFS_NonGameplay / PIXEL_SIZE);
     WRITE_16(REG_BG0VOFS, gBg0VOFS_NonGameplay / PIXEL_SIZE);

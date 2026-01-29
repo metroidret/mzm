@@ -25,7 +25,7 @@
  */
 static void ChozodiaEscapeVBlank(void)
 {
-    DMA_SET(3, gOamData, OAM_BASE, C_32_2_16(DMA_ENABLE | DMA_32BIT, OAM_SIZE / sizeof(u32)));
+    DMA3_COPY_32(gOamData, OAM_BASE, OAM_SIZE / sizeof(u32));
 
     WRITE_16(REG_DISPCNT, CHOZODIA_ESCAPE_DATA.dispcnt);
     WRITE_16(REG_BLDCNT, CHOZODIA_ESCAPE_DATA.bldcnt);
@@ -67,7 +67,7 @@ static void ChozodiaEscapeHBlank(void)
 static void ChozodiaEscapeSetHBlank(void)
 {
     // Transfer code to RAM
-    DMA_SET(3, ChozodiaEscapeHBlank, CHOZODIA_ESCAPE_DATA.hblankCode, C_32_2_16(DMA_ENABLE, 0x20));
+    DMA3_COPY_16(ChozodiaEscapeHBlank, CHOZODIA_ESCAPE_DATA.hblankCode, 0x20);
     
     // Set pointer
     CallbackSetHblank((Func_T)(CHOZODIA_ESCAPE_DATA.hblankCode + 1));
@@ -441,8 +441,8 @@ static void ChozodiaEscapeInit(void)
     DmaTransfer(3, sCutsceneZebesPal, PALRAM_BASE, sizeof(sCutsceneZebesPal), 16);
     DmaTransfer(3, sCutsceneMotherShipPal, PALRAM_OBJ, sizeof(sCutsceneMotherShipPal), 16);
     #else // !REGION_EU
-    DMA_SET(3, sCutsceneZebesPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sCutsceneZebesPal)));
-    DMA_SET(3, sCutsceneMotherShipPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sCutsceneMotherShipPal)));
+    DMA3_COPY_16(sCutsceneZebesPal, PALRAM_BASE, ARRAY_SIZE(sCutsceneZebesPal));
+    DMA3_COPY_16(sCutsceneMotherShipPal, PALRAM_OBJ, ARRAY_SIZE(sCutsceneMotherShipPal));
     #endif // REGION_EU
 
     WRITE_16(REG_BG0CNT, CREATE_BGCNT(2, 20, BGCNT_HIGH_PRIORITY, BGCNT_SIZE_256x256));
@@ -467,7 +467,7 @@ static void ChozodiaEscapeInit(void)
     WRITE_16(REG_BG3HOFS, 0);
     WRITE_16(REG_BG3VOFS, 0);
 
-    DMA_FILL_32(3, 0, &gNonGameplayRam, sizeof(gNonGameplayRam));
+    DMA3_FILL_32(0, &gNonGameplayRam, sizeof(gNonGameplayRam));
 
     gNextOamSlot = 0;
 
@@ -708,8 +708,8 @@ static u8 ChozodiaEscapeShipHeatingUp(void)
         DmaTransfer(3, src1, PALRAM_OBJ, PAL_ROW_SIZE, 16);
         DmaTransfer(3, src2, PALRAM_OBJ + 0x80, PAL_ROW_SIZE, 16);
         #else // !REGION_EU
-        DMA_SET(3, src1, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, PAL_ROW));
-        DMA_SET(3, src2, PALRAM_OBJ + 0x80, C_32_2_16(DMA_ENABLE, PAL_ROW));
+        DMA3_COPY_16(src1, PALRAM_OBJ, PAL_ROW);
+        DMA3_COPY_16(src2, PALRAM_OBJ + 0x80, PAL_ROW);
         #endif // REGION_EU
     }
 
@@ -804,8 +804,8 @@ static u8 ChozodiaEscapeShipBlowingUp(void)
             DmaTransfer(3, sChozodiaEscapeShipExplodingPal, PALRAM_BASE, sizeof(sChozodiaEscapeShipExplodingPal) - PAL_ROW_SIZE * 2, 16);
             DmaTransfer(3, sMotherShipBlowingUpExplosionsPal, PALRAM_OBJ, sizeof(sMotherShipBlowingUpExplosionsPal), 16);
             #else // !REGION_EU
-            DMA_SET(3, sChozodiaEscapeShipExplodingPal, PALRAM_BASE, DMA_ENABLE << 16 | ARRAY_SIZE(sChozodiaEscapeShipExplodingPal) - PAL_ROW * 2);
-            DMA_SET(3, sMotherShipBlowingUpExplosionsPal, PALRAM_OBJ, DMA_ENABLE << 16 | ARRAY_SIZE(sMotherShipBlowingUpExplosionsPal));
+            DMA3_COPY_16(sChozodiaEscapeShipExplodingPal, PALRAM_BASE, ARRAY_SIZE(sChozodiaEscapeShipExplodingPal) - PAL_ROW * 2);
+            DMA3_COPY_16(sMotherShipBlowingUpExplosionsPal, PALRAM_OBJ, ARRAY_SIZE(sMotherShipBlowingUpExplosionsPal));
             #endif // REGION_EU
 
             WRITE_16(REG_BG0CNT, CREATE_BGCNT(2, 30, BGCNT_HIGH_PRIORITY, BGCNT_SIZE_256x256));
@@ -989,10 +989,10 @@ static u8 ChozodiaEscapeShipLeavingPlanet(void)
             DmaTransfer(3, sChozodiaEscapeMissionAccomplishedPal, PALRAM_OBJ,
                 sizeof(sChozodiaEscapeMissionAccomplishedPal), 16);
             #else // !REGION_EU
-            DMA_SET(3, sChozodiaEscapeMissionAccomplishedPal, PALRAM_BASE,
-                DMA_ENABLE << 16 | ARRAY_SIZE(sChozodiaEscapeMissionAccomplishedPal));
-            DMA_SET(3, sChozodiaEscapeMissionAccomplishedPal, PALRAM_OBJ,
-                DMA_ENABLE << 16 | ARRAY_SIZE(sChozodiaEscapeMissionAccomplishedPal));
+            DMA3_COPY_16(sChozodiaEscapeMissionAccomplishedPal, PALRAM_BASE,
+                ARRAY_SIZE(sChozodiaEscapeMissionAccomplishedPal));
+            DMA3_COPY_16(sChozodiaEscapeMissionAccomplishedPal, PALRAM_OBJ,
+                ARRAY_SIZE(sChozodiaEscapeMissionAccomplishedPal));
             #endif // REGION_EU
 
             // Setup ship object
@@ -1134,7 +1134,7 @@ static u8 ChozodiaEscapeMissionAccomplished(void)
             #ifdef REGION_EU
             DmaTransfer(3, sChozodiaEscapeSamusInBlueShipPal, PALRAM_OBJ, sizeof(sChozodiaEscapeSamusInBlueShipPal), 16);
             #else // !REGION_EU
-            DMA_SET(3, sChozodiaEscapeSamusInBlueShipPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sChozodiaEscapeSamusInBlueShipPal)));
+            DMA3_COPY_16(sChozodiaEscapeSamusInBlueShipPal, PALRAM_OBJ, ARRAY_SIZE(sChozodiaEscapeSamusInBlueShipPal));
             #endif // REGION_EU
 
             CHOZODIA_ESCAPE_DATA.dispcnt = DCNT_BG0 | DCNT_BG1 | DCNT_BG2 | DCNT_OBJ;

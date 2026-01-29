@@ -8071,10 +8071,10 @@ void SamusInit(void)
         if (!gIsLoadingFile)
         {
             // Zero out most of samus's data
-            DMA_FILL_32(3, 0, &gSamusData, sizeof(gSamusData));
-            DMA_FILL_32(3, 0, &gEquipment, sizeof(gEquipment));
-            DMA_FILL_32(3, 0, &gSamusWeaponInfo, sizeof(gSamusWeaponInfo));
-            DMA_FILL_32(3, 0, &gScrewSpeedAnimation, sizeof(gScrewSpeedAnimation));
+            DMA3_FILL_32(0, &gSamusData, sizeof(gSamusData));
+            DMA3_FILL_32(0, &gEquipment, sizeof(gEquipment));
+            DMA3_FILL_32(0, &gSamusWeaponInfo, sizeof(gSamusWeaponInfo));
+            DMA3_FILL_32(0, &gScrewSpeedAnimation, sizeof(gScrewSpeedAnimation));
 
             // Clear env effects
             for (i = 0; i < ARRAY_SIZE(gSamusEnvironmentalEffects); i++)
@@ -8090,7 +8090,7 @@ void SamusInit(void)
         else
         {
             // Clear physics
-            DMA_FILL_32(3, 0, &gSamusPhysics, sizeof(gSamusPhysics));
+            DMA3_FILL_32(0, &gSamusPhysics, sizeof(gSamusPhysics));
         }
     }
 }

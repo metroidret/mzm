@@ -265,9 +265,7 @@ static void MechaRidleyPartGreenGlow(void)
 
     gCurrentSprite.work0 = sMechaRidleyGreenGlowPaletteData[stage][1];
 
-    DMA_SET(3, &sMechaRidleyGreenGlowPal[palRow * PAL_ROW],
-        PALRAM_OBJ + PAL_ROW_SIZE * 8 + 13 * 2 + gCurrentSprite.absolutePaletteRow * PAL_ROW_SIZE,
-        C_32_2_16(DMA_ENABLE, 3));
+    DMA3_COPY_16(&sMechaRidleyGreenGlowPal[palRow * PAL_ROW], PALRAM_OBJ + PAL_ROW_SIZE * 8 + 13 * 2 + gCurrentSprite.absolutePaletteRow * PAL_ROW_SIZE, 3);
 }
 
 /**
@@ -290,10 +288,10 @@ static void MechaRidleyLoadFireballsGfx(void)
         stage = gCurrentSprite.work3;
 
         // Load graphics
-        DMA_SET(3, &sMechaRidleyWeaponsGfx[(3 + 8 * 0) * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 0, C_32_2_16(DMA_ENABLE, 64));
-        DMA_SET(3, &sMechaRidleyWeaponsGfx[(3 + 8 * 1) * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 1, C_32_2_16(DMA_ENABLE, 64));
-        DMA_SET(3, &sMechaRidleyWeaponsGfx[(3 + 8 * 2) * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 2, C_32_2_16(DMA_ENABLE, 64));
-        DMA_SET(3, &sMechaRidleyWeaponsGfx[(3 + 8 * 3) * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 3, C_32_2_16(DMA_ENABLE, 64));
+        DMA3_COPY_16(&sMechaRidleyWeaponsGfx[(3 + 8 * 0) * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 0, 64);
+        DMA3_COPY_16(&sMechaRidleyWeaponsGfx[(3 + 8 * 1) * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 1, 64);
+        DMA3_COPY_16(&sMechaRidleyWeaponsGfx[(3 + 8 * 2) * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 2, 64);
+        DMA3_COPY_16(&sMechaRidleyWeaponsGfx[(3 + 8 * 3) * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 3, 64);
     }
 }
 
@@ -317,10 +315,10 @@ static void MechaRidleyLoadMissilesGfx(void)
         stage = gCurrentSprite.work3;
 
         // Load graphics
-        DMA_SET(3, &sMechaRidleyWeaponsGfx[8 * 0 * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 0, C_32_2_16(DMA_ENABLE, 64));
-        DMA_SET(3, &sMechaRidleyWeaponsGfx[8 * 1 * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 1, C_32_2_16(DMA_ENABLE, 64));
-        DMA_SET(3, &sMechaRidleyWeaponsGfx[8 * 2 * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 2, C_32_2_16(DMA_ENABLE, 64));
-        DMA_SET(3, &sMechaRidleyWeaponsGfx[8 * 3 * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 3, C_32_2_16(DMA_ENABLE, 64));
+        DMA3_COPY_16(&sMechaRidleyWeaponsGfx[8 * 0 * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 0, 64);
+        DMA3_COPY_16(&sMechaRidleyWeaponsGfx[8 * 1 * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 1, 64);
+        DMA3_COPY_16(&sMechaRidleyWeaponsGfx[8 * 2 * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 2, 64);
+        DMA3_COPY_16(&sMechaRidleyWeaponsGfx[8 * 3 * 32 + stage * 32], VRAM_OBJ + 0x4280 + 1024 * 3, 64);
     }
 }
 
@@ -641,7 +639,7 @@ static void MechaRidleyStartWalking(void)
     gCurrentSprite.pose = MECHA_RIDLEY_POSE_DELAY_BEFORE_CRAWLING;
     SoundPlay(SOUND_MECHA_RIDLEY_ENTRANCE_CRAWL);
 
-    DMA_SET(3, sMechaRidleyFadingPal, PALRAM_OBJ + PAL_ROW_SIZE * 8, C_32_2_16(DMA_ENABLE, 13));
+    DMA3_COPY_16(sMechaRidleyFadingPal, PALRAM_OBJ + PAL_ROW_SIZE * 8, 13);
 
     TransparencyUpdateBldcnt(1,
         BLDCNT_BG2_FIRST_TARGET_PIXEL | BLDCNT_BG3_FIRST_TARGET_PIXEL |
@@ -748,8 +746,7 @@ static void MechaRidleyStartBattle(void)
                 SoundPlay(SOUND_2AD);
 
             // Palette fading
-            DMA_SET(3, &sMechaRidleyFadingPal[palRow * 16],
-                PALRAM_OBJ + PAL_ROW_SIZE * 8, C_32_2_16(DMA_ENABLE, 13));
+            DMA3_COPY_16(&sMechaRidleyFadingPal[palRow * 16], PALRAM_OBJ + PAL_ROW_SIZE * 8, 13);
 
             TransparencySpriteUpdateBldalpha(palRow + 10, 0, 0, BLDALPHA_MAX_VALUE);
         }
@@ -1258,39 +1255,39 @@ static void MechaRidleyGlowFading(void)
     switch (gCurrentSprite.work0++)
     {
         case 0:
-            DMA_SET(3, &sMechaRidleyDestroyedGfx[0x30 * 0], VRAM_OBJ + 0x5580 + 1024 * 0, C_32_2_16(DMA_ENABLE, 0x40));
+            DMA3_COPY_16(&sMechaRidleyDestroyedGfx[0x30 * 0], VRAM_OBJ + 0x5580 + 1024 * 0, 0x40);
             break;
 
         case 1:
-            DMA_SET(3, &sMechaRidleyDestroyedGfx[0x30 * 1], VRAM_OBJ + 0x5580 + 1024 * 1, C_32_2_16(DMA_ENABLE, 0x60));
+            DMA3_COPY_16(&sMechaRidleyDestroyedGfx[0x30 * 1], VRAM_OBJ + 0x5580 + 1024 * 1, 0x60);
             break;
 
         case 2:
-            DMA_SET(3, &sMechaRidleyDestroyedGfx[0x30 * 2], VRAM_OBJ + 0x5580 + 1024 * 2, C_32_2_16(DMA_ENABLE, 0x60));
+            DMA3_COPY_16(&sMechaRidleyDestroyedGfx[0x30 * 2], VRAM_OBJ + 0x5580 + 1024 * 2, 0x60);
             break;
 
         case 3:
-            DMA_SET(3, &sMechaRidleyDestroyedGfx[0x30 * 3], VRAM_OBJ + 0x5580 + 1024 * 3, C_32_2_16(DMA_ENABLE, 0x60));
+            DMA3_COPY_16(&sMechaRidleyDestroyedGfx[0x30 * 3], VRAM_OBJ + 0x5580 + 1024 * 3, 0x60);
             break;
 
         case 4:
-            DMA_SET(3, &sMechaRidleyDestroyedGfx[0x30 * 4], VRAM_OBJ + 0x5580 + 1024 * 4, C_32_2_16(DMA_ENABLE, 0x60));
+            DMA3_COPY_16(&sMechaRidleyDestroyedGfx[0x30 * 4], VRAM_OBJ + 0x5580 + 1024 * 4, 0x60);
             break;
 
         case 5:
-            DMA_SET(3, &sMechaRidleyDestroyedGfx[256], VRAM_OBJ + 0x5580 + 1024 * 5 + 64, C_32_2_16(DMA_ENABLE, 0x40));
+            DMA3_COPY_16(&sMechaRidleyDestroyedGfx[256], VRAM_OBJ + 0x5580 + 1024 * 5 + 64, 0x40);
             break;
 
         case 6:
-            DMA_SET(3, &sMechaRidleyDestroyedGfx[304], VRAM_OBJ + 0x5580 + 1024 * 6 + 64, C_32_2_16(DMA_ENABLE, 0x40));
+            DMA3_COPY_16(&sMechaRidleyDestroyedGfx[304], VRAM_OBJ + 0x5580 + 1024 * 6 + 64, 0x40);
             break;
 
         case 8:
-            DMA_SET(3, sMechaRidley_8323b42_Pal, PALRAM_OBJ + PAL_ROW_SIZE * 12 + PAL_ROW_SIZE - 6, C_32_2_16(DMA_ENABLE, 3));
+            DMA3_COPY_16(sMechaRidley_8323b42_Pal, PALRAM_OBJ + PAL_ROW_SIZE * 12 + PAL_ROW_SIZE - 6, 3);
             break;
 
         case 16:
-            DMA_SET(3, sMechaRidley_8323b62_Pal, PALRAM_OBJ + PAL_ROW_SIZE * 12 + PAL_ROW_SIZE - 6, C_32_2_16(DMA_ENABLE, 3));
+            DMA3_COPY_16(sMechaRidley_8323b62_Pal, PALRAM_OBJ + PAL_ROW_SIZE * 12 + PAL_ROW_SIZE - 6, 3);
             break;
     }
 
@@ -1331,15 +1328,15 @@ static void MechaRidleySpawnDrops(void)
     switch (gCurrentSprite.yPositionSpawn++)
     {
         case 1:
-            DMA_SET(3, &sMechaRidley_8323aaa_Pal[0], PALRAM_BASE + 0x322, (DMA_ENABLE << 16) | 6);
+            DMA3_COPY_16(&sMechaRidley_8323aaa_Pal[0], PALRAM_BASE + 0x322, 6);
             break;
 
         case 6:
-            DMA_SET(3, &sMechaRidleyGreenGlowPal[4], PALRAM_BASE + 0x322, (DMA_ENABLE << 16) | 6);
+            DMA3_COPY_16(&sMechaRidleyGreenGlowPal[4], PALRAM_BASE + 0x322, 6);
             break;
 
         case 12:
-            DMA_SET(3, &sMechaRidleyGreenGlowPal[20], PALRAM_BASE + 0x322, (DMA_ENABLE << 16) | 6);
+            DMA3_COPY_16(&sMechaRidleyGreenGlowPal[20], PALRAM_BASE + 0x322, 6);
             break;
 
         case 30:
@@ -1405,12 +1402,12 @@ static void MechaRidleyFirstEyeGlow(void)
         if (gCurrentSprite.work1)
         {
             gCurrentSprite.work1 = FALSE;
-            DMA_SET(3, &sMechaRidleyGreenGlowPal[2 * 16 + 4], PALRAM_OBJ + PAL_ROW_SIZE * 9 + 2, C_32_2_16(DMA_ENABLE, 6));
+            DMA3_COPY_16(&sMechaRidleyGreenGlowPal[2 * 16 + 4], PALRAM_OBJ + PAL_ROW_SIZE * 9 + 2, 6);
         }
         else
         {
             gCurrentSprite.work1 = TRUE;
-            DMA_SET(3, &sMechaRidleyGreenGlowPal[3 * 16 + 4], PALRAM_OBJ + PAL_ROW_SIZE * 9 + 2, C_32_2_16(DMA_ENABLE, 6));
+            DMA3_COPY_16(&sMechaRidleyGreenGlowPal[3 * 16 + 4], PALRAM_OBJ + PAL_ROW_SIZE * 9 + 2, 6);
         }
     }
 
@@ -1440,12 +1437,12 @@ static void MechaRidleySecondEyeGlow(void)
         if (gCurrentSprite.work1)
         {
             gCurrentSprite.work1 = FALSE;
-            DMA_SET(3, &sMechaRidleyGreenGlowPal[3 * 16 + 4], PALRAM_OBJ + PAL_ROW_SIZE * 9 + 2, C_32_2_16(DMA_ENABLE, 6));
+            DMA3_COPY_16(&sMechaRidleyGreenGlowPal[3 * 16 + 4], PALRAM_OBJ + PAL_ROW_SIZE * 9 + 2, 6);
         }
         else
         {
             gCurrentSprite.work1 = TRUE;
-            DMA_SET(3, sMechaRidley_8323b4a_Pal, PALRAM_OBJ + PAL_ROW_SIZE * 9 + 2, C_32_2_16(DMA_ENABLE, 6));
+            DMA3_COPY_16(sMechaRidley_8323b4a_Pal, PALRAM_OBJ + PAL_ROW_SIZE * 9 + 2, 6);
         }
     }
 

@@ -371,8 +371,8 @@ _0600666C:
 	str r0, [sp, #SP_890] @ SP_890 = 0x030073FF
 	mov r0, #0x820000
 	str r0, [sp, #SP_8AC] @ SP_8AC = 0x00820000
-	ldr r0, _060069D0 @ =sub_03000408
-	str r0, [sp, #SP_9B4] @ SP_9B4 = sub_03000408
+	ldr r0, _060069D0 @ =EmulatorAudio_WriteToApu
+	str r0, [sp, #SP_9B4] @ SP_9B4 = EmulatorAudio_WriteToApu
 	mov r0, #0xef
 	str r0, [sp, #SP_8B4] @ SP_8B4 = 0x000000EF
 	ldr r0, _060069D4 @ =0x03020100
@@ -525,7 +525,7 @@ _060069C0: .4byte 0x0203C000
 _060069C4: .4byte _03002E68
 _060069C8: .4byte 0x44444444
 _060069CC: .4byte sub_06006000
-_060069D0: .4byte sub_03000408
+_060069D0: .4byte EmulatorAudio_WriteToApu
 _060069D4: .4byte 0x03020100
 _060069D8: .4byte 0x07060504
 _060069DC: .4byte sub_03005568

@@ -401,7 +401,7 @@ u8 CutsceneEndFunction(void)
  */
 void CutsceneVBlank(void)
 {
-    DMA_SET(3, gOamData, OAM_BASE, C_32_2_16(DMA_ENABLE | DMA_32BIT, 0x100));
+    DMA3_COPY_32(gOamData, OAM_BASE, 0x100);
 
     WRITE_16(REG_BG0HOFS, CUTSCENE_DATA.bg0hofs);
     WRITE_16(REG_BG0VOFS, CUTSCENE_DATA.bg0vofs);

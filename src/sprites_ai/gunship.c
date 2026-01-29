@@ -107,7 +107,7 @@ static void GunshipFlickerFlames(void)
 
         // Transfer palette
         offset = MOD_AND(gCurrentSprite.scaling, 128);
-        DMA_SET(3, &sGunshipFlashingPal[offset * PAL_ROW], PALRAM_OBJ + 10 * PAL_ROW_SIZE, C_32_2_16(DMA_ENABLE, PAL_ROW));
+        DMA3_COPY_16(&sGunshipFlashingPal[offset * PAL_ROW], PALRAM_OBJ + 10 * PAL_ROW_SIZE, PAL_ROW);
     }
 }
 
@@ -152,8 +152,8 @@ static void GunshipEntranceFlashingAnim(void)
 
         // Transfer palette
         offset = MOD_AND(gCurrentSprite.work1, 128);
-        DMA_SET(3, &sGunshipFlashingPal[0x38 + offset * PAL_ROW], // Not sure
-            PALRAM_OBJ + 9 * PAL_ROW_SIZE + PAL_ROW_SIZE / 2, C_32_2_16(DMA_ENABLE, PAL_ROW / 2));
+        DMA3_COPY_16(&sGunshipFlashingPal[0x38 + offset * PAL_ROW], // Not sure
+            PALRAM_OBJ + 9 * PAL_ROW_SIZE + PAL_ROW_SIZE / 2, PAL_ROW / 2);
     }
 }
 

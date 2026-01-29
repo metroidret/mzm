@@ -2159,7 +2159,7 @@ u32 PauseScreenMainLoop(void)
  */
 void PauseScreenVBlank(void)
 {
-    DMA_SET(3, gOamData, OAM_BASE, C_32_2_16(DMA_ENABLE | DMA_32BIT, OAM_SIZE / sizeof(u32)));
+    DMA3_COPY_32(gOamData, OAM_BASE, OAM_SIZE / sizeof(u32));
 
     WRITE_16(REG_DISPCNT, PAUSE_SCREEN_DATA.dispcnt);
     WRITE_16(REG_BLDY, gWrittenToBldy_NonGameplay);
@@ -2209,7 +2209,7 @@ void PauseScreenInit(void)
     BitFill(3, 0, &gNonGameplayRam, sizeof(union NonGameplayRam), 32);
     ResetFreeOam();
     
-    DMA_SET(3, gOamData, OAM_BASE, C_32_2_16(DMA_ENABLE | DMA_32BIT, OAM_SIZE / sizeof(u32)));
+    DMA3_COPY_32(gOamData, OAM_BASE, OAM_SIZE / sizeof(u32));
 
     PAUSE_SCREEN_DATA.bldcnt = BLDCNT_SCREEN_FIRST_TARGET | BLDCNT_BRIGHTNESS_DECREASE_EFFECT;
     PAUSE_SCREEN_DATA.dispcnt = 0;
@@ -2573,7 +2573,7 @@ void PauseScreenInit(void)
     }
 
     PauseScreenProcessOam();
-    DMA_SET(3, gOamData, OAM_BASE, C_32_2_16(DMA_ENABLE | DMA_32BIT, OAM_SIZE / sizeof(u32)));
+    DMA3_COPY_32(gOamData, OAM_BASE, OAM_SIZE / sizeof(u32));
 
     PauseScreenUpdateOrStartFading(PAUSE_SCREEN_FADING_IN_INIT);
     
@@ -3537,10 +3537,10 @@ s32 PauseScreenEasySleepInit(void)
             DmaTransfer(3, &PAUSE_SCREEN_EWRAM.unk_6000[0xE0], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_2[0x1C0],  0x40 * sizeof(u16), 16);
             DmaTransfer(3, &PAUSE_SCREEN_EWRAM.unk_6000[0x2E0], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_2[0x3C0], 0x40 * sizeof(u16), 16);
             #else // !REGION_EU
-            DMA_SET(3, &PAUSE_SCREEN_EWRAM.unk_6000[0], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_1[0x1C0], C_32_2_16(DMA_ENABLE, 0x40));
-            DMA_SET(3, &PAUSE_SCREEN_EWRAM.unk_6000[0x200], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_1[0x3C0], C_32_2_16(DMA_ENABLE, 0x40));
-            DMA_SET(3, &PAUSE_SCREEN_EWRAM.unk_6000[0xE0], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_2[0x1C0],  C_32_2_16(DMA_ENABLE, 0x40));
-            DMA_SET(3, &PAUSE_SCREEN_EWRAM.unk_6000[0x2E0], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_2[0x3C0], C_32_2_16(DMA_ENABLE, 0x40));
+            DMA3_COPY_16(&PAUSE_SCREEN_EWRAM.unk_6000[0], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_1[0x1C0], 0x40);
+            DMA3_COPY_16(&PAUSE_SCREEN_EWRAM.unk_6000[0x200], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_1[0x3C0], 0x40);
+            DMA3_COPY_16(&PAUSE_SCREEN_EWRAM.unk_6000[0xE0], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_2[0x1C0], 0x40);
+            DMA3_COPY_16(&PAUSE_SCREEN_EWRAM.unk_6000[0x2E0], &PAUSE_SCREEN_EWRAM.easySleepTextFormatted_2[0x3C0], 0x40);
             #endif // REGION_EU
             break;
 
@@ -3633,8 +3633,7 @@ s32 PauseScreenQuitEasySleep(void)
             break;
 
         case 3:
-            DMA_SET(3, PAUSE_SCREEN_EWRAM.mapScreenOverlayTilemap, VRAM_BASE + 0xD000,
-                C_32_2_16(DMA_ENABLE, ARRAY_SIZE(PAUSE_SCREEN_EWRAM.mapScreenOverlayTilemap)));
+            DMA3_COPY_16(PAUSE_SCREEN_EWRAM.mapScreenOverlayTilemap, VRAM_BASE + 0xD000, ARRAY_SIZE(PAUSE_SCREEN_EWRAM.mapScreenOverlayTilemap));
             break;
 
         case 4:

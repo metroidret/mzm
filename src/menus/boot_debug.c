@@ -608,7 +608,7 @@ void VBlankCodeDuringBootDebug(void)
     if (gIoTransferInfo.linkInProgress)
         LinkVSync();
 
-    DMA_SET(3, gOamData, OAM_BASE, C_32_2_16(DMA_ENABLE | DMA_32BIT, OAM_SIZE / sizeof(u32)));
+    DMA3_COPY_32(gOamData, OAM_BASE, OAM_SIZE / sizeof(u32));
 
     WRITE_16(REG_BLDY, gWrittenToBldy_NonGameplay);
 
@@ -668,10 +668,10 @@ void BootDebugSetupMenu(void)
     DmaTransfer(3, sBootDebugBgPal, PALRAM_BASE + 8 * PAL_ROW_SIZE, 8 * PAL_ROW_SIZE, 16);
     DmaTransfer(3, sBootDebugObjPal, PALRAM_OBJ, 3 * PAL_ROW_SIZE, 16);
     #else // !REGION_EU
-    DMA_SET(3, sMinimapTilesGfx, BGCNT_TO_VRAM_CHAR_BASE(1), C_32_2_16(DMA_ENABLE, 0x3000 / sizeof(u16)));
-    DMA_SET(3, sMinimapTilesPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, 5 * PAL_ROW));
-    DMA_SET(3, sBootDebugBgPal, PALRAM_BASE + 8 * PAL_ROW_SIZE, C_32_2_16(DMA_ENABLE, 8 * PAL_ROW));
-    DMA_SET(3, sBootDebugObjPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, 3 * PAL_ROW));
+    DMA3_COPY_16(sMinimapTilesGfx, BGCNT_TO_VRAM_CHAR_BASE(1), 0x3000 / sizeof(u16));
+    DMA3_COPY_16(sMinimapTilesPal, PALRAM_BASE, 5 * PAL_ROW);
+    DMA3_COPY_16(sBootDebugBgPal, PALRAM_BASE + 8 * PAL_ROW_SIZE, 8 * PAL_ROW);
+    DMA3_COPY_16(sBootDebugObjPal, PALRAM_OBJ, 3 * PAL_ROW);
     #endif // REGION_EU
 
     BitFill(3, 0xD040, BGCNT_TO_VRAM_TILE_BASE(30), BGCNT_VRAM_TILE_SIZE * 2, 16);

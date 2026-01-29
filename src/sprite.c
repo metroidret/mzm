@@ -929,7 +929,7 @@ void SpriteUpdate(void)
                     continue;
 
                 // Transfer sprite to current
-                DMA_SET(3, &gSpriteData[count], &gCurrentSprite, C_32_2_16(DMA_ENABLE, sizeof(struct SpriteData) / 2));
+                DMA3_COPY_16(&gSpriteData[count], &gCurrentSprite, sizeof(struct SpriteData) / 2);
 
                 // Update random number
                 gSpriteRng = ARRAY_ACCESS(sSpriteRandomNumberTable, rngParam1 + count + rngParam2 + pCurrent->xPosition + pCurrent->yPosition);
@@ -952,7 +952,7 @@ void SpriteUpdate(void)
                 }
 
                 // Transfer current back to array
-                DMA_SET(3, &gCurrentSprite, &gSpriteData[count], C_32_2_16(DMA_ENABLE, sizeof(struct SpriteData) / 2));
+                DMA3_COPY_16(&gCurrentSprite, &gSpriteData[count], sizeof(struct SpriteData) / 2);
             }
 
             // Update alarm
@@ -975,7 +975,7 @@ void SpriteUpdate(void)
                     // Only update sprites to initialize them or if they have the always active flag
 
                     // Transfer sprite to current
-                    DMA_SET(3, &gSpriteData[count], &gCurrentSprite, C_32_2_16(DMA_ENABLE, sizeof(struct SpriteData) / 2));
+                    DMA3_COPY_16(&gSpriteData[count], &gCurrentSprite, sizeof(struct SpriteData) / 2);
                     
                     // Update random number
                     gSpriteRng = ARRAY_ACCESS(sSpriteRandomNumberTable, rngParam1 + count + rngParam2 + pCurrent->xPosition + pCurrent->yPosition);
@@ -998,19 +998,19 @@ void SpriteUpdate(void)
                     }
 
                     // Transfer current back to array
-                    DMA_SET(3, &gCurrentSprite, &gSpriteData[count], C_32_2_16(DMA_ENABLE, sizeof(struct SpriteData) / 2));
+                    DMA3_COPY_16(&gCurrentSprite, &gSpriteData[count], sizeof(struct SpriteData) / 2);
                 }
                 else
                 {
                     // Only check if on screen
 
                     // Transfer sprite to current
-                    DMA_SET(3, &gSpriteData[count], &gCurrentSprite, C_32_2_16(DMA_ENABLE, sizeof(struct SpriteData) / 2));
+                    DMA3_COPY_16(&gSpriteData[count], &gCurrentSprite, sizeof(struct SpriteData) / 2);
 
                     SpriteCheckOnScreen(pCurrent);
 
                     // Transfer current back to array
-                    DMA_SET(3, &gCurrentSprite, &gSpriteData[count], C_32_2_16(DMA_ENABLE, sizeof(struct SpriteData) / 2));
+                    DMA3_COPY_16(&gCurrentSprite, &gSpriteData[count], sizeof(struct SpriteData) / 2);
                 }
             }
         }
@@ -1024,7 +1024,7 @@ void SpriteUpdate(void)
                 continue;
 
             // Transfer sprite to current
-            DMA_SET(3, &gSpriteData[count], &gCurrentSprite, C_32_2_16(DMA_ENABLE, sizeof(struct SpriteData) / 2));
+            DMA3_COPY_16(&gSpriteData[count], &gCurrentSprite, sizeof(struct SpriteData) / 2);
 
             // Update random number
             gSpriteRng = ARRAY_ACCESS(sSpriteRandomNumberTable, rngParam1 + count + rngParam2 + pCurrent->xPosition + pCurrent->yPosition);
@@ -1047,7 +1047,7 @@ void SpriteUpdate(void)
             }
 
             // Transfer current back to array
-            DMA_SET(3, &gCurrentSprite, &gSpriteData[count], C_32_2_16(DMA_ENABLE, sizeof(struct SpriteData) / 2));
+            DMA3_COPY_16(&gCurrentSprite, &gSpriteData[count], sizeof(struct SpriteData) / 2);
         }
 
         // Update alarm
@@ -1065,7 +1065,7 @@ void SpriteUpdate(void)
                 continue;
 
             // Transfer sprite to current
-            DMA_SET(3, &gSpriteData[count], &gCurrentSprite, C_32_2_16(DMA_ENABLE, sizeof(struct SpriteData) / 2));
+            DMA3_COPY_16(&gSpriteData[count], &gCurrentSprite, sizeof(struct SpriteData) / 2);
 
             // Update random number
             gSpriteRng = ARRAY_ACCESS(sSpriteRandomNumberTable, rngParam1 + count + rngParam2 + pCurrent->xPosition + pCurrent->yPosition);
@@ -1085,7 +1085,7 @@ void SpriteUpdate(void)
                 SpriteCheckOnScreen(pCurrent);
 
             // Transfer current back to array
-            DMA_SET(3, &gCurrentSprite, &gSpriteData[count], C_32_2_16(DMA_ENABLE, sizeof(struct SpriteData) / 2));
+            DMA3_COPY_16(&gCurrentSprite, &gSpriteData[count], sizeof(struct SpriteData) / 2);
         }
     }
 }
@@ -1798,7 +1798,7 @@ void SpriteLoadSpriteset(void)
 
         ctrl_1 = ((u8*)sSpritesGraphicsPointers[spriteId])[1];
         ctrl_2 = ((u8*)sSpritesGraphicsPointers[spriteId])[2] << 8;
-        DMA_SET(3, sSpritesPalettePointers[spriteId], PALRAM_OBJ + 8 * PAL_ROW_SIZE + gfxSlot * 32, C_32_2_16(DMA_ENABLE, (ctrl_1 | ctrl_2) / 2048 << 4));
+        DMA3_COPY_16(sSpritesPalettePointers[spriteId], PALRAM_OBJ + 8 * PAL_ROW_SIZE + gfxSlot * 32, (ctrl_1 | ctrl_2) / 2048 << 4);
     }
 }
 
@@ -1826,7 +1826,7 @@ void SpriteLoadPal(u8 spriteId, u8 row, u8 len)
 {
     spriteId = PSPRITE_OFFSET_FOR_GRAPHICS(spriteId);
 
-    DMA_SET(3, sSpritesPalettePointers[spriteId], PALRAM_OBJ + 8 * PAL_ROW_SIZE + (row * 16 * sizeof(u16)), C_32_2_16(DMA_ENABLE, len * 16));
+    DMA3_COPY_16(sSpritesPalettePointers[spriteId], PALRAM_OBJ + 8 * PAL_ROW_SIZE + (row * 16 * sizeof(u16)), len * 16);
 }
 
 /**

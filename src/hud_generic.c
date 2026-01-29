@@ -21,7 +21,7 @@
  */
 void HudGenericLoadCommonSpriteGfx(void)
 {
-    DMA_SET(3, sCommonSpritesGfx, VRAM_OBJ + 0x800, C_32_2_16(DMA_ENABLE, sizeof(sCommonSpritesGfx) / sizeof(u16)));
+    DMA3_COPY_16(sCommonSpritesGfx, VRAM_OBJ + 0x800, sizeof(sCommonSpritesGfx) / sizeof(u16));
 }
 
 /**

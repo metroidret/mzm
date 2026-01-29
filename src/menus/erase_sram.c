@@ -363,7 +363,7 @@ static void EraseSramInit(void)
 
     WRITE_16(REG_BLDY, gWrittenToBldy_NonGameplay = BLDY_MAX_VALUE);
 
-    DMA_FILL_32(3, 0, &gNonGameplayRam, sizeof(gNonGameplayRam));
+    DMA3_FILL_32(0, &gNonGameplayRam, sizeof(gNonGameplayRam));
 
     ClearGfxRam();
     gNextOamSlot = 0;
@@ -389,8 +389,8 @@ static void EraseSramInit(void)
     DmaTransfer(3, sEraseSramMenuBackgroundPal, PALRAM_BASE, 13 * PAL_ROW_SIZE, 16);
     DmaTransfer(3, sEraseSramMenuObjectsPal, PALRAM_OBJ, sizeof(sEraseSramMenuObjectsPal), 16);
     #else // !REGION_EU
-    DMA_SET(3, sEraseSramMenuBackgroundPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, (13 * PAL_ROW_SIZE) / sizeof(u16)));
-    DMA_SET(3, sEraseSramMenuObjectsPal, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, sizeof(sEraseSramMenuObjectsPal) / sizeof(u16)));
+    DMA3_COPY_16(sEraseSramMenuBackgroundPal, PALRAM_BASE, (13 * PAL_ROW_SIZE) / sizeof(u16));
+    DMA3_COPY_16(sEraseSramMenuObjectsPal, PALRAM_OBJ, sizeof(sEraseSramMenuObjectsPal) / sizeof(u16));
     #endif // REGION_EU
     
     SET_BACKDROP_COLOR(COLOR_BLACK);
@@ -486,7 +486,7 @@ static void EraseSramUpdateCursorPosition(void)
  */
 static void EraseSramVBlank(void)
 {
-    DMA_SET(3, gOamData, OAM_BASE, C_32_2_16(DMA_ENABLE | DMA_32BIT, OAM_SIZE / sizeof(u32)));
+    DMA3_COPY_32(gOamData, OAM_BASE, OAM_SIZE / sizeof(u32));
 
     WRITE_16(REG_BLDY, gWrittenToBldy_NonGameplay);
 

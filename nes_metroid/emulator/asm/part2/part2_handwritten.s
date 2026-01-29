@@ -6,11 +6,40 @@
 
 	.section .data
 
-    .global sUnk_030023DC
-sUnk_030023DC:
-    .byte 0x05, 0x7F, 0x0A, 0x01
-	.byte 0x13, 0x02, 0x28, 0x03, 0x50, 0x04, 0x1E, 0x05, 0x07, 0x06, 0x0D, 0x07, 0x06, 0x08, 0x0C, 0x09
-	.byte 0x18, 0x0A, 0x30, 0x0B, 0x60, 0x0C, 0x24, 0x0D, 0x08, 0x0E, 0x10, 0x0F
+    .global sEmulatorAudio_LengthCounterTable
+sEmulatorAudio_LengthCounterTable: @ 0x030023DC
+    .byte 10/2
+	.byte 254/2
+	.byte 20/2
+	.byte 2/2
+	.byte 40/2 - 1
+	.byte 4/2
+	.byte 80/2
+	.byte 6/2
+	.byte 160/2
+	.byte 8/2
+	.byte 60/2
+	.byte 10/2
+	.byte 14/2
+	.byte 12/2
+	.byte 26/2
+	.byte 14/2
+	.byte 12/2
+	.byte 16/2
+	.byte 24/2
+	.byte 18/2
+	.byte 48/2
+	.byte 20/2
+	.byte 96/2
+	.byte 22/2
+	.byte 192/2
+	.byte 24/2
+	.byte 72/2
+	.byte 26/2
+	.byte 16/2
+	.byte 28/2
+	.byte 32/2
+	.byte 30/2
 
 _030023FC:
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -204,7 +233,7 @@ sUnk_03002948:
 sUnk_03002988:
 	.4byte 0x00000000
 
-	@ Loads
+	@ Reads
 _0300298C: .4byte sub_03005250 @ Addresses $1XXXX-$11XXX (Is this possible?)
 _03002990: .4byte sub_03002E38 @ Addresses $EXXX-$FXXX (ROM)
 _03002994: .4byte sub_03002E38 @ Addresses $CXXX-$DXXX (ROM)
@@ -598,18 +627,19 @@ _03002EE4:
 	b _03002EC8
 
 	@ Reads from APU/2A03 registers
+	@ r0 = APU register address
 	arm_func_start sub_03002EFC
 sub_03002EFC: @ 0x03002EFC
-	tst r0, #0x1f00
+	tst r0, #0x1f00 @ TODO: is this checking for outside APU space?
 	bne _03002F2C
-	and r2, r0, #0xff
+	and r2, r0, #0xff @ r2 = low byte of APU register address
 	cmp r2, #0x15
-	beq _03002F58
-	blo _03002F2C
+	beq _03002F58 @ if r2 == SND_CHN: goto _03002F58
+	blo _03002F2C @ if r2 < SND_CHN: goto _03002F2C
 	cmp r2, #0x17
-	blo _03002F68
-	beq _03003010
-	cmp r2, #0x30
+	blo _03002F68 @ if r2 < JOY2: goto _03002F68
+	beq _03003010 @ if r2 == JOY2: goto _03003010
+	cmp r2, #0x30 @ NOTE: this code should be unreachable
 	blo _03002F2C
 	bhs _03002F34
 _03002F2C:
@@ -619,7 +649,7 @@ _03002F34:
 	str r0, [sp, #SP_93C]
 	str lr, [sp, #SP_938]
 	add lr, pc, #0x4 @ =_03002F48
-	ldr r2, _030031C8 @ =sub_03000380
+	ldr r2, _030031C8 @ =EmulatorAudio_GetActiveChannels
 	bx r2
 _03002F48:
 	add r12, r11, #0x44
@@ -804,7 +834,7 @@ _03003100:
 	stm r11, {r1, r2, r3, r4, r5, r6, r7, r8}
 	bx lr
 	.align 2, 0
-_030031C8: .4byte sub_03000380
+_030031C8: .4byte EmulatorAudio_GetActiveChannels
 _030031CC: .4byte 0x06015400
 _030031D0: .4byte 0x06015540
 
@@ -939,19 +969,19 @@ _03003380:
 	arm_func_start sub_030033A4
 sub_030033A4: @ 0x030033A4
 	tst r0, #0x1fc0
-	bne _030034A8
+	bne sub_030034A8
 	and r2, r0, #0x3f
 	cmp r2, #0x20
-	bge _030034A8
+	bge sub_030034A8
 	subs r2, r2, #0x14
-	blt _030034A8
+	blt sub_030034A8
 	@ goto _030033C8[r2]
 	ldr pc, [pc, r2, lsl #2]
 _030033C4:
 	.4byte 0x000000
 _030033C8:
 	.4byte sub_030033F8 @ OAMDMA
-	.4byte _030034A8 @ SND_CHN
+	.4byte sub_030034A8 @ SND_CHN
 	.4byte sub_03003444 @ JOY1
 	.4byte sub_03003494 @ JOY2
 	.4byte sub_03003034 @ Invalid/Unused/Dontcare registers
@@ -1016,14 +1046,19 @@ _03003484:
 sub_03003494: @ 0x03003494
 	ands r2, r1, #0xc0
 	strb r2, [sp, #SP_A3C]
-	bne _030034A8
+	bne sub_030034A8
 	mov r2, #0x40
 	str r2, [sp, #SP_9D0]
-_030034A8:
+
+	@ Writes to APU
+	arm_func_start sub_030034A8
+sub_030034A8: @ 0x030034A8
 	str r3, [sp, #SP_884]
+	@ Call SP_9B4 (EmulatorAudio_WriteToApu(apuRegister=r0, value=r1))
 	ldr r3, [sp, #SP_9B4]
-	add lr, pc, #0x0 @ =0x030034B8
+	add lr, pc, #0x0 @ =_030034B8
 	bx r3
+_030034B8:
 	ldr r3, [sp, #SP_884]
 	add r12, r11, #0x44
 	cmp r4, #0
@@ -3511,7 +3546,7 @@ _030057E4:
 	ldr r12, [pc, r2]
 	bx r12
 _030057F8:
-	.4byte sub_030004E0 @ Timer 1 Interrupt
+	.4byte EmulatorAudio_Timer1Callback @ Timer 1 Interrupt
 	.4byte sub_0300525C @ V-Blank Interrupt
 	.4byte sub_0300582C @ Timer 3 Interrupt
 	.4byte sub_0300583C @ All other interrupts

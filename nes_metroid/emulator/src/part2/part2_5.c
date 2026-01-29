@@ -5,10 +5,10 @@
 
 #include "structs/part2.h"
 
-extern u8 sUnk_030023DC[];
+extern u8 sEmulatorAudio_LengthCounterTable[];
 extern u16 sUnk_03002846;
 extern u32 sUnk_03002988;
-extern u32 sUnk_0600E008[];
+extern u32 sEmulatorAudio_NoiseSampleRateTable[];
 
 void sub_03001730(void)
 {
@@ -26,7 +26,7 @@ void sub_0300173C(void)
 
     for (var_r3 = 3; var_r3 < 0x10; var_r3++)
     {
-        gUnk_03005B10[var_r3] = sUnk_0600E008[var_r3];
+        gUnk_03005B10[var_r3] = sEmulatorAudio_NoiseSampleRateTable[var_r3];
         if (gUnk_03005B10[var_r3] > 0xFFFF)
         {
             gUnk_03005B10[var_r3] = 0x10000;
@@ -34,9 +34,14 @@ void sub_0300173C(void)
     }
 }
 
-void sub_03001788(u32 arg0)
+/**
+ * @brief 03001788 | Set Noise length counter
+ * 
+ * @param lengthCounter Length counter
+ */
+void EmulatorAudio_Noise_SetLengthCounter(u32 lengthCounter)
 {
-    gUnk_03005AFA = arg0;
+    gEmuAudio_Noise_LengthCounter = lengthCounter;
 }
 
 void sub_03001794(void)
@@ -44,22 +49,22 @@ void sub_03001794(void)
     u32 var_r4;
     u32 var_r5;
 
-    if (gUnk_03005A7A & 8)
+    if (gEmuAudio_SndChn & 8)
     {
-        gUnk_03005FC0 = 1;
+        gEmuAudio_Noise_Enable = 1;
     }
 
-    if (gUnk_03005B00 & 0x10)
+    if (gEmuAudio_Noise_Vol & 0x10)
     {
-        gUnk_03005AF4 = gUnk_03005B00 & 0xF;
+        gUnk_03005AF4 = gEmuAudio_Noise_Vol & 0xF;
     }
     else
     {
         gUnk_03005AF4 = 0xF;
     }
 
-    gUnk_03005AF8 = gUnk_03005B00 & 0xF;
-    var_r4 = sUnk_030023DC[gUnk_03005B06 >> 3];
+    gUnk_03005AF8 = gEmuAudio_Noise_Vol & 0xF;
+    var_r4 = sEmulatorAudio_LengthCounterTable[gEmuAudio_Noise_Hi >> 3];
     if ((sUnk_03002988 == 0x7F) && (var_r4 == 1))
     {
         var_r4 = 2;
@@ -73,14 +78,14 @@ void sub_03001794(void)
     {
         var_r5 = 0;
     }
-    sub_03001788((sUnk_030023DC[gUnk_03005B06 >> 3] * 4) + var_r5);
+    EmulatorAudio_Noise_SetLengthCounter((sEmulatorAudio_LengthCounterTable[gEmuAudio_Noise_Hi >> 3] * 4) + var_r5);
     sUnk_03002988 = var_r4;
-    sub_03001788((var_r4 * 4) + var_r5);
+    EmulatorAudio_Noise_SetLengthCounter((var_r4 * 4) + var_r5);
 }
 
 void sub_03001840(void)
 {
-    if ((gUnk_03005FC0 != 0) && (gUnk_03005AFE == 0))
+    if ((gEmuAudio_Noise_Enable != 0) && (gUnk_03005AFE == 0))
     {
         gUnk_03005AFE = 2;
     }
@@ -92,35 +97,45 @@ void sub_03001864(u8 arg0)
     gUnk_03005AF8 = 1;
 }
 
-void sub_0300187C(u8 arg0)
+/**
+ * @brief 0300187C | Write to NOISE_VOL
+ * 
+ * @param value Value to write
+ */
+void EmulatorAudio_Noise_WriteVolume(u8 value)
 {
-    u8 var_0;
-    u8 var_1;
+    u8 oldNoise_ConstantVolumeFlag;
+    u8 newNoise_ConstantVolumeFlag;
 
-    var_0 = gUnk_03005B00 & 0x10;
-    var_1 = arg0 & 0x10;
+    oldNoise_ConstantVolumeFlag = gEmuAudio_Noise_Vol & 0x10;
+    newNoise_ConstantVolumeFlag = value & 0x10;
 
-    gUnk_03005B00 = arg0;
+    gEmuAudio_Noise_Vol = value;
     gUnk_03005B08 = 0;
 
-    if (var_1 == 1)
+    if (newNoise_ConstantVolumeFlag == 1)
     {
-        gUnk_03005AF4 = arg0 & 0xF;
+        gUnk_03005AF4 = value & 0xF;
     }
-    else if ((var_0 != 0) && (gUnk_03005FC0 != 0))
+    else if ((oldNoise_ConstantVolumeFlag != 0) && (gEmuAudio_Noise_Enable != 0))
     {
         gUnk_03005B08 = 4;
-        gUnk_03005AF8 = arg0 & 0xF;
+        gUnk_03005AF8 = value & 0xF;
     }
 }
 
-void sub_030018E0(u8 arg0)
+/**
+ * @brief 030018E0 | Write to NOISE_LO
+ * 
+ * @param value Value to write
+ */
+void EmulatorAudio_Noise_WriteLo(u8 value)
 {
-    gUnk_03005B04 = arg0;
-    gUnk_03005AF6 = arg0 & 0xF;
+    gEmuAudio_Noise_Lo = value;
+    gUnk_03005AF6 = value & 0xF;
     gUnk_03005AF0 = gUnk_03005B10[gUnk_03005AF6];
 
-    if (arg0 & 0x80)
+    if (value & 0x80)
     {
         sUnk_03002846 = 0x40;
         gUnk_03005AE8 = 1;
@@ -131,9 +146,14 @@ void sub_030018E0(u8 arg0)
     }
 }
 
-void sub_03001944(u8 arg0)
+/**
+ * @brief 03001944 | Write to NOISE_HI
+ * 
+ * @param value Value to write
+ */
+void EmulatorAudio_Noise_WriteHi(u8 value)
 {
-    if (gUnk_03005B04 & 0x80)
+    if (gEmuAudio_Noise_Lo & 0x80)
     {
         sUnk_03002846 = 0x40;
         gUnk_03005AE8 = 1;
@@ -143,11 +163,15 @@ void sub_03001944(u8 arg0)
         sUnk_03002846 = 0x4000;
     }
 
-    gUnk_03005B06 = arg0;
+    gEmuAudio_Noise_Hi = value;
     sub_03001794();
 }
 
-void sub_03001990(void)
+/**
+ * @brief 03001990 | Clear Noise variables
+ * 
+ */
+void EmulatorAudio_Noise_ClearVariables(void)
 {
     gUnk_03005AE8 = 1;
     gUnk_03005AEC = 0;
@@ -155,53 +179,63 @@ void sub_03001990(void)
     gUnk_03005AF4 = 0;
     gUnk_03005AF6 = 0;
     gUnk_03005AF8 = 0;
-    gUnk_03005AFA = 0;
+    gEmuAudio_Noise_LengthCounter = 0;
     gUnk_03005AFC = 0;
     sUnk_03002846 = 0x8000;
-    gUnk_03005FC0 = 0;
+    gEmuAudio_Noise_Enable = 0;
     gUnk_03005AFE = 0;
-    gUnk_03005B00 = 0;
+    gEmuAudio_Noise_Vol = 0;
     gUnk_03005B02 = 0;
-    gUnk_03005B04 = 0;
-    gUnk_03005B06 = 0;
+    gEmuAudio_Noise_Lo = 0;
+    gEmuAudio_Noise_Hi = 0;
     gUnk_03005B08 = 0;
 }
 
 // File split?
 
-void sub_03001C10(u8 arg0)
+/**
+ * @brief 03001C10 | Write to SND_CHN
+ * 
+ * @param value Value to write
+ */
+void EmulatorAudio_SoundChannel_Write(u8 value)
 {
-    gUnk_03005A7A = arg0;
+    gEmuAudio_SndChn = value;
 
-    if (!(arg0 & 1))
+    if (!(value & 1))
     {
         sub_03000824();
     }
-    if (!(arg0 & 2))
+    if (!(value & 2))
     {
         sub_03000DEC();
     }
-    if (!(arg0 & 4))
+    if (!(value & 4))
     {
         sub_030013C8();
     }
-    if (!(arg0 & 8))
+    if (!(value & 8))
     {
         sub_03001840();
     }
 }
 
-void sub_03001C58(u8 arg0)
+/**
+ * @brief 03001C58 | Write to FRAME_CTR
+ * 
+ * @param value Value to write
+ */
+void EmulatorAudio_FrameCounter_Write(u8 value)
 {
-    gUnk_03005A7C = arg0;
+    gEmuAudio_FrameCtr = value;
 
-    if (arg0 & 0x80)
+    if (value & 0x80)
     {
-        sub_03000000(0xA0);
+        EmulatorAudio_SetTimer1Reload(0xA0);
     }
     else
     {
-        sub_03000000(0x80);
+        EmulatorAudio_SetTimer1Reload(0x80);
     }
 
     if (gUnk_03005AA2 > 1)
@@ -229,21 +263,21 @@ void sub_03001C58(u8 arg0)
         gUnk_03005ACA -= 1;
     }
 
-    if (gUnk_03005AA8 != 0)
+    if (gEmuAudio_Pulse1_LengthCounter != 0)
     {
-        gUnk_03005AA8 -= 1;
+        gEmuAudio_Pulse1_LengthCounter -= 1;
     }
-    if (gUnk_03005AC8 != 0)
+    if (gEmuAudio_Pulse2_LengthCounter != 0)
     {
-        gUnk_03005AC8 -= 1;
+        gEmuAudio_Pulse2_LengthCounter -= 1;
     }
-    if (gUnk_03005AD4 != 0)
+    if (gEmuAudio_Triangle_LengthCounter != 0)
     {
-        gUnk_03005AD4 -= 1;
+        gEmuAudio_Triangle_LengthCounter -= 1;
     }
-    if (gUnk_03005AFA != 0)
+    if (gEmuAudio_Noise_LengthCounter != 0)
     {
-        gUnk_03005AFA -= 1;
+        gEmuAudio_Noise_LengthCounter -= 1;
     }
 }
 
@@ -252,46 +286,52 @@ void sub_03001D24(u32 arg0)
     gUnk_03005FB8 = arg0;
 }
 
-void sub_03001D30(void* arg0, u32 arg1)
+/**
+ * @brief 03001D30 | Handle processing APU and mixing APU and output buffers
+ * 
+ * @param outputBuffer Pointer to output buffer
+ * @param timer1Reload Value from timer 1 reload
+ */
+void EmulatorAudio_ProcessApuAndMixBuffers(void* outputBuffer, u32 timer1Reload)
 {
     u32 var_r5;
-    void* var_0;
-    void* var_1;
-    void* var_2;
-    void* var_3;
+    void* pulse1_Buffer;
+    void* pulse2_Buffer;
+    void* triangle_Buffer;
+    void* noise_Buffer;
 
-    var_0 = gUnk_03005B50;
-    var_1 = gUnk_03005BF0;
-    var_2 = gUnk_03005C90;
-    var_3 = gUnk_03005D30;
+    pulse1_Buffer = gEmuAudio_Pulse1_Buffer;
+    pulse2_Buffer = gEmuAudio_Pulse2_Buffer;
+    triangle_Buffer = gEmuAudio_Triangle_Buffer;
+    noise_Buffer = gEmuAudio_Noise_Buffer;
 
     var_r5 = 0;
 
     if (gUnk_03005FB8 != 0)
     {
-        sub_03000634(0xF0000000, arg1);
-        sub_03000704(arg0, arg1);
+        sub_03000634(0xF0000000, timer1Reload);
+        sub_03000704(outputBuffer, timer1Reload);
         return;
     }
 
-    if (gUnk_03005FCC != 0)
+    if (gEmuAudio_Pulse1_Enable != 0)
     {
         sub_03000948();
-        sub_03000A6C(var_0, arg1);
+        sub_03000A6C(pulse1_Buffer, timer1Reload);
         if (gUnk_03005AAD != 0)
         {
             gUnk_03005A94 = 0xF;
             gUnk_03005AAD = 0;
         }
-        if (gUnk_03005A9A & 0x80)
+        if (gEmuAudio_Pulse1_Sweep & 0x80)
         {
-            sub_03000848(gUnk_03005AA0);
+            sub_03000848(gEmuAudio_Pulse1_Timer);
         }
-        if (gUnk_03005AA8 != 0)
+        if (gEmuAudio_Pulse1_LengthCounter != 0)
         {
-            gUnk_03005AA8 -= 1;
+            gEmuAudio_Pulse1_LengthCounter -= 1;
         }
-        if (!(gUnk_03005A98 & 0x20) && (gUnk_03005AA8 == 0))
+        if (!(gEmuAudio_Pulse1_Vol & 0x20) && (gEmuAudio_Pulse1_LengthCounter == 0))
         {
             sub_03000824();
         }
@@ -303,7 +343,7 @@ void sub_03001D30(void* arg0, u32 arg1)
         if (gUnk_03005AA4 == 0)
         {
             var_r5 |= 0x80000000;
-            gUnk_03005FCC = 0;
+            gEmuAudio_Pulse1_Enable = 0;
             if (gUnk_03005AA6 != 0)
             {
                 sub_03000790();
@@ -311,24 +351,24 @@ void sub_03001D30(void* arg0, u32 arg1)
         }
     }
 
-    if (gUnk_03005FD8 != 0)
+    if (gEmuAudio_Pulse2_Enable != 0)
     {
         sub_03000E10();
-        sub_0300100C(var_1, arg1);
+        sub_0300100C(pulse2_Buffer, timer1Reload);
         if (gUnk_03005ACD != 0)
         {
             gUnk_03005AB4 = 0xF;
             gUnk_03005ACD = 0;
         }
-        if (gUnk_03005ABA & 0x80)
+        if (gEmuAudio_Pulse2_Sweep & 0x80)
         {
-            sub_03000E40(gUnk_03005AC0);
+            sub_03000E40(gEmuAudio_Pulse2_Timer);
         }
-        if (gUnk_03005AC8 != 0)
+        if (gEmuAudio_Pulse2_LengthCounter != 0)
         {
-            gUnk_03005AC8 -= 1;
+            gEmuAudio_Pulse2_LengthCounter -= 1;
         }
-        if (!(gUnk_03005AB8 & 0x20) && (gUnk_03005AC8 == 0))
+        if (!(gEmuAudio_Pulse2_Vol & 0x20) && (gEmuAudio_Pulse2_LengthCounter == 0))
         {
             sub_03000DEC();
         }
@@ -340,7 +380,7 @@ void sub_03001D30(void* arg0, u32 arg1)
         if (gUnk_03005AC4 == 0)
         {
             var_r5 |= 0x40000000;
-            gUnk_03005FD8 = 0;
+            gEmuAudio_Pulse2_Enable = 0;
             if (gUnk_03005AC6 != 0)
             {
                 sub_03000D38();
@@ -348,7 +388,7 @@ void sub_03001D30(void* arg0, u32 arg1)
         }
     }
 
-    if (gUnk_03005FB0 != 0)
+    if (gEmuAudio_Triangle_Enable != 0)
     {
         sub_030014E0();
         if ((gUnk_03005FD4 == 0) && (gUnk_03005ADA == 0))
@@ -357,11 +397,11 @@ void sub_03001D30(void* arg0, u32 arg1)
         }
         else
         {
-            sub_0300160C(var_2, arg1);
+            sub_0300160C(triangle_Buffer, timer1Reload);
         }
-        if (gUnk_03005AD4 != 0)
+        if (gEmuAudio_Triangle_LengthCounter != 0)
         {
-            gUnk_03005AD4 -= 1;
+            gEmuAudio_Triangle_LengthCounter -= 1;
         }
         if (gUnk_03005AD8 == 0)
         {
@@ -374,7 +414,7 @@ void sub_03001D30(void* arg0, u32 arg1)
                 gUnk_03005ADA -= 1;
             }
         }
-        if (!(gUnk_03005ADE & 0x80) && (gUnk_03005AD4 == 0))
+        if (!(gEmuAudio_Triangle_Linear & 0x80) && (gEmuAudio_Triangle_LengthCounter == 0))
         {
             sub_030013C8();
         }
@@ -382,28 +422,28 @@ void sub_03001D30(void* arg0, u32 arg1)
 
     if (gUnk_03005AD8 != 0)
     {
-        gUnk_03005AD8 >>= 0x1;
+        gUnk_03005AD8 >>= 1;
         gUnk_03005ADA = gUnk_03005AD8;
         if (gUnk_03005ADA == 0)
         {
             var_r5 |= 0x20000000;
-            gUnk_03005FB0 = 0;
+            gEmuAudio_Triangle_Enable = 0;
         }
     }
 
-    if (gUnk_03005FC0 != 0)
+    if (gEmuAudio_Noise_Enable != 0)
     {
-        sub_03001A24(var_3, arg1);
+        sub_03001A24(noise_Buffer, timer1Reload);
         if (gUnk_03005B08 != 0)
         {
             gUnk_03005AF4 = 0xF;
             gUnk_03005B08 = 0;
         }
-        if (gUnk_03005AFA != 0)
+        if (gEmuAudio_Noise_LengthCounter != 0)
         {
-            gUnk_03005AFA -= 1;
+            gEmuAudio_Noise_LengthCounter -= 1;
         }
-        if (!(gUnk_03005B00 & 0x20) && (gUnk_03005AFA == 0))
+        if (!(gEmuAudio_Noise_Vol & 0x20) && (gEmuAudio_Noise_LengthCounter == 0))
         {
             sub_03001840();
         }
@@ -415,45 +455,49 @@ void sub_03001D30(void* arg0, u32 arg1)
         if (gUnk_03005AFE == 0)
         {
             var_r5 |= 0x10000000;
-            gUnk_03005FC0 = 0;
+            gEmuAudio_Noise_Enable = 0;
         }
         else
         {
-            sub_0300059C(var_3, arg1, arg1 >> 4);
+            sub_0300059C(noise_Buffer, timer1Reload, timer1Reload >> 4);
         }
     }
 
-    sub_03000634(var_r5, arg1);
-    sub_03000704(arg0, arg1);
-    sub_030006CC(arg0, arg1);
+    sub_03000634(var_r5, timer1Reload);
+    sub_03000704(outputBuffer, timer1Reload);
+    sub_030006CC(outputBuffer, timer1Reload);
 }
 
-void sub_0300203C(void)
+/**
+ * @brief 0300203C | Initialize engine buffers and variables
+ * 
+ */
+void EmulatorAudio_SetupEngine(void)
 {
-    u32 var_r3;
-    u32* var_0;
+    u32 i;
+    u32* pulse1_Buffer;
 
-    var_0 = gUnk_03005B50; // fake
+    pulse1_Buffer = gEmuAudio_Pulse1_Buffer; // fake
     sub_0300173C();
 
-    for (var_r3 = 0; var_r3 < 0x28; var_r3++)
+    for (i = 0; i < EMULATOR_AUDIO_BUFFER_SIZE; i++)
     {
-        gUnk_03005B50[var_r3] = 0;
-        gUnk_03005BF0[var_r3] = 0;
-        gUnk_03005C90[var_r3] = 0;
-        gUnk_03005D30[var_r3] = 0;
-        gUnk_03005DD0[var_r3] = 0;
-        gUnk_03005E70[var_r3] = 0;
-        gUnk_03005F10[var_r3] = 0;
+        gEmuAudio_Pulse1_Buffer[i] = 0;
+        gEmuAudio_Pulse2_Buffer[i] = 0;
+        gEmuAudio_Triangle_Buffer[i] = 0;
+        gEmuAudio_Noise_Buffer[i] = 0;
+        gEmuAudio_OutputBuffer0[i] = 0;
+        gEmuAudio_OutputBuffer1[i] = 0;
+        gEmuAudio_OutputBuffer2[i] = 0;
     }
 
-    gUnk_03005A80 = gUnk_03005B50;
-    gUnk_03005A84 = gUnk_03005BF0;
-    gUnk_03005A88 = gUnk_03005C90;
-    gUnk_03005A8C = gUnk_03005D30;
+    gEmuAudio_Pulse1_BufferPtr = gEmuAudio_Pulse1_Buffer;
+    gEmuAudio_Pulse2_BufferPtr = gEmuAudio_Pulse2_Buffer;
+    gEmuAudio_Triangle_BufferPtr = gEmuAudio_Triangle_Buffer;
+    gEmuAudio_Noise_BufferPtr = gEmuAudio_Noise_Buffer;
 
     gUnk_03005A90 = 0;
-    gUnk_03005FD0 = 0;
+    gEmuAudio_Pulse1_Frequency = 0;
     gUnk_03005AD0 = 0;
     gUnk_03005FDC = 0;
     gUnk_03005AE8 = 0x4400;
@@ -464,18 +508,20 @@ void sub_0300203C(void)
     sub_03000DEC();
     sub_030013C8();
     sub_03001840();
+
     sub_03000634(0xF0000000, 0xA0);
-    sub_03000618(var_0, 0xA0);
+    sub_03000618(pulse1_Buffer, 0xA0);
 
-    sub_03000704(gUnk_03005DD0, 0xA0);
-    sub_03000704(gUnk_03005E70, 0xA0);
-    sub_03000704(gUnk_03005F10, 0xA0);
+    sub_03000704(gEmuAudio_OutputBuffer0, sizeof(gEmuAudio_OutputBuffer0));
+    sub_03000704(gEmuAudio_OutputBuffer1, sizeof(gEmuAudio_OutputBuffer1));
+    sub_03000704(gEmuAudio_OutputBuffer2, sizeof(gEmuAudio_OutputBuffer2));
 
-    sub_03000618(gUnk_03005DD0, 0xA0);
-    sub_03000618(gUnk_03005E70, 0xA0);
-    sub_03000618(gUnk_03005F10, 0xA0);
+    sub_03000618(gEmuAudio_OutputBuffer0, sizeof(gEmuAudio_OutputBuffer0));
+    sub_03000618(gEmuAudio_OutputBuffer1, sizeof(gEmuAudio_OutputBuffer1));
+    sub_03000618(gEmuAudio_OutputBuffer2, sizeof(gEmuAudio_OutputBuffer2));
 
-    gUnk_03005A7A = 0;
-    gUnk_03005A7C = 0;
-    sub_030002A4(gUnk_03005DD0, gUnk_03005E70, gUnk_03005F10, sub_03000050(0x8000), 0xA0, &sub_03001D30);
+    gEmuAudio_SndChn = 0;
+    gEmuAudio_FrameCtr = 0;
+    EmulatorAudio_SetupOutput(gEmuAudio_OutputBuffer0, gEmuAudio_OutputBuffer1, gEmuAudio_OutputBuffer2,
+                            sub_03000050(0x8000), 0xA0, &EmulatorAudio_ProcessApuAndMixBuffers);
 }

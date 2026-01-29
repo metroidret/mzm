@@ -403,11 +403,11 @@ u32 HazeProcess(void)
 
                 if (gAnimatedGraphicsEntry.palette == ANIMATED_PALETTE_ID_NONE)
                 {
-                    DMA_SET(3, EWRAM_BASE + 0x9000, EWRAM_BASE + 0x35000, C_32_2_16(DMA_ENABLE, PALRAM_SIZE / 4));
+                    DMA3_COPY_16(EWRAM_BASE + 0x9000, EWRAM_BASE + 0x35000, PALRAM_SIZE / 4);
                 }
                 else
                 {
-                    DMA_SET(3, EWRAM_BASE + 0x9000, EWRAM_BASE + 0x35000, C_32_2_16(DMA_ENABLE, PALRAM_SIZE / 4 - 16));
+                    DMA3_COPY_16(EWRAM_BASE + 0x9000, EWRAM_BASE + 0x35000, PALRAM_SIZE / 4 - 16);
                 }
 
                 gColorFading.status |= COLOR_FADING_STATUS_ON_BG;
@@ -428,11 +428,11 @@ u32 HazeProcess(void)
 
                 if (gAnimatedGraphicsEntry.palette == ANIMATED_PALETTE_ID_NONE)
                 {
-                    DMA_SET(3, EWRAM_BASE + 0x9000, EWRAM_BASE + 0x35000, C_32_2_16(DMA_ENABLE, PALRAM_SIZE / 4));
+                    DMA3_COPY_16(EWRAM_BASE + 0x9000, EWRAM_BASE + 0x35000, PALRAM_SIZE / 4);
                 }
                 else
                 {
-                    DMA_SET(3, EWRAM_BASE + 0x9000, EWRAM_BASE + 0x35000, C_32_2_16(DMA_ENABLE, PALRAM_SIZE / 4 - 16));
+                    DMA3_COPY_16(EWRAM_BASE + 0x9000, EWRAM_BASE + 0x35000, PALRAM_SIZE / 4 - 16);
                 }
 
                 gColorFading.status |= COLOR_FADING_STATUS_ON_BG;

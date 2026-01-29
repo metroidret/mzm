@@ -1256,7 +1256,7 @@ void TitleScreenInit(void)
     #ifdef REGION_EU
     BitFill(3, 0, &gNonGameplayRam, sizeof(gNonGameplayRam), 32);
     #else // !REGION_EU
-    DMA_FILL_32(3, 0, &gNonGameplayRam, sizeof(gNonGameplayRam))
+    DMA3_FILL_32(0, &gNonGameplayRam, sizeof(gNonGameplayRam))
     #endif // REGION_EU
 
     TITLE_SCREEN_DATA.bldcnt = BLDCNT_SCREEN_FIRST_TARGET | BLDCNT_BRIGHTNESS_DECREASE_EFFECT;
@@ -1277,7 +1277,7 @@ void TitleScreenInit(void)
     #ifdef REGION_EU
     BitFill(3, 0, &gSamusPhysics, sizeof(gSamusPhysics), 32);
     #else // !REGION_EU
-    DMA_FILL_32(3, 0, &gSamusPhysics, sizeof(gSamusPhysics));
+    DMA3_FILL_32(0, &gSamusPhysics, sizeof(gSamusPhysics));
     #endif // REGION_EU
 
     gBootDebugActive = FALSE;
@@ -1396,7 +1396,7 @@ void TitleScreenInit(void)
  */
 void TitleScreenVBlank(void)
 {
-    DMA_SET(3, gOamData, OAM_BASE, C_32_2_16(DMA_ENABLE | DMA_32BIT, OAM_SIZE / sizeof(u32)));
+    DMA3_COPY_32(gOamData, OAM_BASE, OAM_SIZE / sizeof(u32));
 
     WRITE_16(REG_BG0HOFS, SUB_PIXEL_TO_PIXEL(gBg0HOFS_NonGameplay));
     WRITE_16(REG_BG0VOFS, SUB_PIXEL_TO_PIXEL(gBg0VOFS_NonGameplay));

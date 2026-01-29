@@ -90,7 +90,7 @@ void EscapeCheckReloadGraphics(void)
 {
     if (EscapeDetermineTimer() != ESCAPE_NONE)
     {
-        DMA_SET(3, sEscapeTimerDigitsGfx, VRAM_OBJ + 0x7800, C_32_2_16(DMA_ENABLE, sizeof(sEscapeTimerDigitsGfx) / 2));
+        DMA3_COPY_16(sEscapeTimerDigitsGfx, VRAM_OBJ + 0x7800, sizeof(sEscapeTimerDigitsGfx) / 2);
     }
 }
 
@@ -100,11 +100,11 @@ void EscapeCheckReloadGraphics(void)
  */
 void EscapeStart(void)
 {
-    DMA_SET(3, sEscapeTimerDigitsGfx, VRAM_OBJ + 0x7800, C_32_2_16(DMA_ENABLE, 0xB0));
-    DMA_SET(3, sEscapeTimerDigitsGfx + 1024, VRAM_OBJ + 0x7C00, C_32_2_16(DMA_ENABLE, 0xB0));
+    DMA3_COPY_16(sEscapeTimerDigitsGfx, VRAM_OBJ + 0x7800, 0xB0);
+    DMA3_COPY_16(sEscapeTimerDigitsGfx + 1024, VRAM_OBJ + 0x7C00, 0xB0);
 
     // Setup oam
-    DMA_SET(3, sParticleEscapeOam_Frame0, gParticleEscapeOamFrames, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(gParticleEscapeOamFrames)));
+    DMA3_COPY_16(sParticleEscapeOam_Frame0, gParticleEscapeOamFrames, ARRAY_SIZE(gParticleEscapeOamFrames));
 
     // Escape timer uses absolute position, which isn't converted to pixel coordinates when drawing,
     // hence pixel coordinates are used when creating it

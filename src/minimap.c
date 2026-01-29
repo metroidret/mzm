@@ -302,7 +302,7 @@ void MinimapCheckOnTransition(void)
         #ifdef REGION_EU
         DmaTransfer(3, gDecompressedMinimapData, gDecompressedMinimapVisitedTiles, sizeof(gDecompressedMinimapData), 16);
         #else // !REGION_EU
-        DMA_SET(3, gDecompressedMinimapData, gDecompressedMinimapVisitedTiles, C_32_2_16(DMA_ENABLE, sizeof(gDecompressedMinimapData) / 2));
+        DMA3_COPY_16(gDecompressedMinimapData, gDecompressedMinimapVisitedTiles, sizeof(gDecompressedMinimapData) / 2);
         #endif // REGION_EU
 
         MinimapCheckSetAreaNameAsExplored(TRUE);

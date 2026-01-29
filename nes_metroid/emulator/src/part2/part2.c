@@ -12,43 +12,53 @@ u32 sUnk_03002330[] = {
 
 u32 sUnk_03002370 = DMA_32BIT | DMA_DEST_FIXED;
 
-u8 sUnk_03002374 = 0;
+boolu8 sEmulatorAudio_Disabled = FALSE;
 
-void (*sUnk_03002378[0x18])(u8) = {
-    sub_030008B4,
-    sub_03000918,
-    sub_03000930,
-    sub_030009A0,
-    sub_03000EAC,
-    sub_03000F10,
-    sub_03000F28,
-    sub_03000F40,
-    sub_03001458,
-    sub_03000404,
-    sub_030014C8,
-    sub_03001518,
-    sub_0300187C,
-    sub_03000404,
-    sub_030018E0,
-    sub_03001944,
-    sub_03000404,
-    sub_03000404,
-    sub_03000404,
-    sub_03000404,
-    sub_03000404,
-    sub_03001C10,
-    sub_03000404,
-    sub_03001C58
+void (*sEmulatorAudio_ApuWriteFuncs[0x18])(u8) = {
+    [NES_APU_REG_SQ1_VOL]    = EmulatorAudio_Pulse1_WriteVolume,
+    [NES_APU_REG_SQ1_SWEEP]  = EmulatorAudio_Pulse1_WriteSweep,
+    [NES_APU_REG_SQ1_LO]     = EmulatorAudio_Pulse1_WriteLo,
+    [NES_APU_REG_SQ1_HI]     = EmulatorAudio_Pulse1_WriteHi,
+
+    [NES_APU_REG_SQ2_VOL]    = EmulatorAudio_Pulse2_WriteVolume,
+    [NES_APU_REG_SQ2_SWEEP]  = EmulatorAudio_Pulse2_WriteSweep,
+    [NES_APU_REG_SQ2_LO]     = EmulatorAudio_Pulse2_WriteLo,
+    [NES_APU_REG_SQ2_HI]     = EmulatorAudio_Pulse2_WriteHi,
+
+    [NES_APU_REG_TRI_LINEAR] = EmulatorAudio_Triangle_WriteLinear,
+    [NES_APU_REG_4009]       = EmulatorAudio_Stub,
+    [NES_APU_REG_TRI_LO]     = EmulatorAudio_Triangle_WriteLo,
+    [NES_APU_REG_TRI_HI]     = EmulatorAudio_Triangle_WriteHi,
+
+    [NES_APU_REG_NOISE_VOL]  = EmulatorAudio_Noise_WriteVolume,
+    [NES_APU_REG_400D]       = EmulatorAudio_Stub,
+    [NES_APU_REG_NOISE_LO]   = EmulatorAudio_Noise_WriteLo,
+    [NES_APU_REG_NOISE_HI]   = EmulatorAudio_Noise_WriteHi,
+
+    [NES_APU_REG_DMC_FREQ]   = EmulatorAudio_Stub,
+    [NES_APU_REG_DMC_RAW]    = EmulatorAudio_Stub,
+    [NES_APU_REG_DMC_START]  = EmulatorAudio_Stub,
+    [NES_APU_REG_DMC_LEN]    = EmulatorAudio_Stub,
+
+    [NES_APU_REG_OAM_DMA]    = EmulatorAudio_Stub,
+    [NES_APU_REG_SND_CHN]    = EmulatorAudio_SoundChannel_Write,
+    [NES_APU_REG_JOY_1]      = EmulatorAudio_Stub,
+    [NES_APU_REG_FRAME_CTR]  = EmulatorAudio_FrameCounter_Write
 };
 
 u32 sUnk_030023D8 = DMA_32BIT | DMA_DEST_FIXED;
 
-void sub_03000000(u16 arg0)
+/**
+ * @brief 03000000 | Set new timer 1 reload value
+ * 
+ * @param timer1Reload Value for timer 1 reload
+ */
+void EmulatorAudio_SetTimer1Reload(u16 timer1Reload)
 {
-    if (gUnk_03005FBC != arg0)
+    if (gEmuAudio_Timer1Reload != timer1Reload)
     {
-        gUnk_03005FBC = arg0;
-        WRITE_16(REG_TM1CNT_L, -arg0);
+        gEmuAudio_Timer1Reload = timer1Reload;
+        WRITE_16(REG_TM1CNT_L, -timer1Reload);
     }
 }
 
@@ -73,51 +83,58 @@ u16 sub_03000050(u16 arg0)
     return var_r1;
 }
 
-void sub_03000080(void)
+/**
+ * @brief 03000080 | Update the APU and audio output buffers
+ * 
+ */
+void EmulatorAudio_UpdateApuAndOutput(void)
 {
     WRITE_32(REG_DMA1_CNT, C_32_2_16(DMA_ENABLE | DMA_32BIT | DMA_DEST_FIXED, 1 * sizeof(u32)));
     WRITE_16(REG_DMA1_CNT_H, sUnk_03002370);
 
-    if (gUnk_03005A5C != 0)
+    if (gEmuAudio_EnableOutput)
     {
-        if (gUnk_03005A5D != 0)
+        if (gEmuAudio_NumExtraOutputBuffers != 0)
         {
-            switch (gUnk_03005A5D)
+            switch (gEmuAudio_NumExtraOutputBuffers)
             {
                 case 1:
-                    if (gUnk_03005A5E == 0)
+                    if (gEmuAudio_CurrentOutputBuffer == 0)
                     {
-                        gUnk_03005A5E = 1;
-                        sub_030001C4(gUnk_03005A54);
-                        gUnk_03005A64(gUnk_03005A50, gUnk_03005FBC);
+                        gEmuAudio_CurrentOutputBuffer = 1;
+                        EmulatorAudio_SetNewSource(gEmuAudio_OutputBuffer1Ptr);
+                        gEmuAudio_ProcessApuAndMixBuffersFunc(gEmuAudio_OutputBuffer0Ptr, gEmuAudio_Timer1Reload);
                     }
                     else
                     {
-                        gUnk_03005A5E = 0;
-                        sub_030001C4(gUnk_03005A50);
-                        gUnk_03005A64(gUnk_03005A54, gUnk_03005FBC);
+                        gEmuAudio_CurrentOutputBuffer = 0;
+                        EmulatorAudio_SetNewSource(gEmuAudio_OutputBuffer0Ptr);
+                        gEmuAudio_ProcessApuAndMixBuffersFunc(gEmuAudio_OutputBuffer1Ptr, gEmuAudio_Timer1Reload);
                     }
                     break;
-    
+
                 case 2:
-                    switch (gUnk_03005A5E)
+                    switch (gEmuAudio_CurrentOutputBuffer)
                     {
+                        // Output buffer 1 and start mixing buffer 2
                         case 0:
-                            gUnk_03005A5E = 1;
-                            sub_030001C4(gUnk_03005A54);
-                            gUnk_03005A64(gUnk_03005A58, gUnk_03005FBC);
+                            gEmuAudio_CurrentOutputBuffer = 1;
+                            EmulatorAudio_SetNewSource(gEmuAudio_OutputBuffer1Ptr);
+                            gEmuAudio_ProcessApuAndMixBuffersFunc(gEmuAudio_OutputBuffer2Ptr, gEmuAudio_Timer1Reload);
                             break;
-        
+
+                        // Output buffer 2 and start mixing buffer 0
                         case 1:
-                            gUnk_03005A5E = 2;
-                            sub_030001C4(gUnk_03005A58);
-                            gUnk_03005A64(gUnk_03005A50, gUnk_03005FBC);
+                            gEmuAudio_CurrentOutputBuffer = 2;
+                            EmulatorAudio_SetNewSource(gEmuAudio_OutputBuffer2Ptr);
+                            gEmuAudio_ProcessApuAndMixBuffersFunc(gEmuAudio_OutputBuffer0Ptr, gEmuAudio_Timer1Reload);
                             break;
-        
+
+                        // Output buffer 0 and start mixing buffer 1
                         case 2:
-                            gUnk_03005A5E = 0;
-                            sub_030001C4(gUnk_03005A50);
-                            gUnk_03005A64(gUnk_03005A54, gUnk_03005FBC);
+                            gEmuAudio_CurrentOutputBuffer = 0;
+                            EmulatorAudio_SetNewSource(gEmuAudio_OutputBuffer0Ptr);
+                            gEmuAudio_ProcessApuAndMixBuffersFunc(gEmuAudio_OutputBuffer1Ptr, gEmuAudio_Timer1Reload);
                             break;
                     }
                     break;
@@ -125,38 +142,50 @@ void sub_03000080(void)
         }
         else
         {
-            sub_030001C4(gUnk_03005A50);
+            EmulatorAudio_SetNewSource(gEmuAudio_OutputBuffer0Ptr);
         }
     }
     else
     {
-        sub_030001B4();
+        EmulatorAudio_DisableTimers();
     }
 }
 
-void sub_03000188(u16 arg0)
+/**
+ * @brief 03000188 | Start timer 0 and timer 1
+ * 
+ */
+void EmulatorAudio_StartTimers(u16 timer0Reload)
 {
-    WRITE_16(REG_TM1CNT_L, -gUnk_03005FBC);
-    WRITE_16(REG_TM1CNT_H, 0xC4);
+    WRITE_16(REG_TM1CNT_L, -gEmuAudio_Timer1Reload);
+    WRITE_16(REG_TM1CNT_H, 0xC4); // Count up, IRQ enable, Start
 
-    WRITE_16(REG_TM0CNT_L, arg0);
-    WRITE_16(REG_TM0CNT_H, 0x80);
+    WRITE_16(REG_TM0CNT_L, timer0Reload);
+    WRITE_16(REG_TM0CNT_H, 0x80); // Start
 }
 
-void sub_030001B4(void)
+/**
+ * @brief 030001B4 | Stop timer 0 and timer 1
+ * 
+ */
+void EmulatorAudio_DisableTimers(void)
 {
     WRITE_32(REG_TM0CNT_H, 0);
     WRITE_32(REG_TM1CNT_H, 0);
 }
 
-void sub_030001C4(void* arg0)
+/**
+ * @brief 030001C4 | Set new audio source
+ * 
+ * @param src Source
+ */
+void EmulatorAudio_SetNewSource(void* src)
 {
-    WRITE_16(REG_DMA1_SRC, (u32)arg0);
-    WRITE_16(REG_DMA1_SRC + 2, (u32)arg0 >> 0x10);
+    WRITE_16(REG_DMA1_SRC, LOW_SHORT((u32)src));
+    WRITE_16(REG_DMA1_SRC + 2, HIGH_SHORT((u32)src));
 
-    // REG_FIFO_A
-    WRITE_16(REG_DMA1_DST, 0xA0); 
-    WRITE_16(REG_DMA1_DST + 2, 0x400); 
+    WRITE_16(REG_DMA1_DST, LOW_SHORT((u32)REG_FIFO_A));
+    WRITE_16(REG_DMA1_DST + 2, HIGH_SHORT((u32)REG_FIFO_A));
 
     WRITE_16(REG_DMA1_CNT_H, DMA_ENABLE | DMA_START_SPECIAL | DMA_REPEAT);
 }
@@ -165,55 +194,69 @@ void sub_030001F0(void* arg0, u16 arg1, u32 arg2, u8 arg3)
 {
     WRITE_16(REG_SOUNDCNT_H, 0xB06); // DMA Sound A Enable Left/Right, Timer 0, Reset FIFO, 100% Vol, Sound 100% Vol
 
-    gUnk_03005FBC = arg2;
-    gUnk_03005A5C = arg3;
-    gUnk_03005A50 = arg0;
-    gUnk_03005A5D = 0;
+    gEmuAudio_Timer1Reload = arg2;
+    gEmuAudio_EnableOutput = arg3;
+    gEmuAudio_OutputBuffer0Ptr = arg0;
+    gEmuAudio_NumExtraOutputBuffers = 0;
 
-    sub_030001C4(arg0);
-    sub_03000188(arg1);
+    EmulatorAudio_SetNewSource(arg0);
+    EmulatorAudio_StartTimers(arg1);
 }
 
 void sub_0300023C(void* arg0, void* arg1, u16 arg2, s32 arg3, void* arg4)
 {
     WRITE_16(REG_SOUNDCNT_H, 0xB06); // DMA Sound A Enable Left/Right, Timer 0, Reset FIFO, 100% Vol, Sound 100% Vol
 
-    gUnk_03005FBC = arg3;
-    gUnk_03005A5C = 1;
-    gUnk_03005A50 = arg0;
-    gUnk_03005A54 = arg1;
-    gUnk_03005A5D = 1;
-    gUnk_03005A5E = 0;
-    gUnk_03005A64 = arg4;
+    gEmuAudio_Timer1Reload = arg3;
+    gEmuAudio_EnableOutput = TRUE;
+    gEmuAudio_OutputBuffer0Ptr = arg0;
+    gEmuAudio_OutputBuffer1Ptr = arg1;
+    gEmuAudio_NumExtraOutputBuffers = 1;
+    gEmuAudio_CurrentOutputBuffer = 0;
+    gEmuAudio_ProcessApuAndMixBuffersFunc = arg4;
 
-    sub_030001C4(arg0);
-    sub_03000188(arg2);
+    EmulatorAudio_SetNewSource(arg0);
+    EmulatorAudio_StartTimers(arg2);
 }
 
-void sub_030002A4(void* arg0, void* arg1, void* arg2, u16 arg3, s32 arg4, void* arg5)
+/**
+ * @brief 030002A4 | Set up the variables for audio output and update
+ * 
+ * @param outputBuffer0 Pointer to output buffer 0
+ * @param outputBuffer1 Pointer to output buffer 1
+ * @param outputBuffer2 Pointer to output buffer 2
+ * @param timer0Reload Timer 0 reload value
+ * @param timer1Reload Timer 1 reload value
+ * @param func Pointer to APU/Buffer update function
+ */
+void EmulatorAudio_SetupOutput(void* outputBuffer0, void* outputBuffer1, void* outputBuffer2, u16 timer0Reload, u32 timer1Reload, void* func)
 {
     WRITE_16(REG_SOUNDCNT_X, 0x80); // FIFO enable
     WRITE_16(REG_SOUNDCNT_L, 0);
     WRITE_16(REG_SOUNDCNT_H, 0xB00); // DMA Sound A Enable Left/Right, Timer 0, Reset FIFO, 50% Vol, Sound 25% Vol
     WRITE_16(REG_SOUNDCNT_H, 0xB04); // DMA Sound A Enable Left/Right, Timer 0, Reset FIFO, 100% Vol, Sound 25% Vol
 
-    gUnk_03005FBC = arg4;
-    gUnk_03005A5C = 1;
-    gUnk_03005A50 = arg0;
-    gUnk_03005A54 = arg1;
-    gUnk_03005A58 = arg2;
-    gUnk_03005A5D = 2;
-    gUnk_03005A5E = 0;
-    gUnk_03005A60 = arg3;
-    gUnk_03005A64 = arg5;
+    gEmuAudio_Timer1Reload = timer1Reload;
+    gEmuAudio_EnableOutput = TRUE;
+    gEmuAudio_OutputBuffer0Ptr = outputBuffer0;
+    gEmuAudio_OutputBuffer1Ptr = outputBuffer1;
+    gEmuAudio_OutputBuffer2Ptr = outputBuffer2;
+    gEmuAudio_NumExtraOutputBuffers = 2;
+    gEmuAudio_CurrentOutputBuffer = 0;
+    gEmuAudio_Timer0Reload = timer0Reload;
+    gEmuAudio_ProcessApuAndMixBuffersFunc = func;
 
-    sub_030001C4(arg0);
-    sub_03000188(arg3);
+    EmulatorAudio_SetNewSource(outputBuffer0);
+    EmulatorAudio_StartTimers(timer0Reload);
 }
 
-void sub_03000330(void)
+/**
+ * @brief 03000330 | Stop timer 0 and timer 1
+ * 
+ */
+void EmulatorAudio_CallDisableTimers(void)
 {
-    sub_030001B4();
+    EmulatorAudio_DisableTimers();
 }
 
 void sub_0300033C(u32 arg0)
@@ -238,140 +281,194 @@ void sub_03000368(u32 arg0)
     gUnk_03005FC8 = arg0 + 0x2000;
 }
 
-u8 sub_03000380(u16 arg0) 
+/**
+ * @brief 03000380 | Get the active channels
+ * 
+ * @param apuRegister APU register to write to (NES address)
+ * @return u8 Active channels bitflags
+ */
+u8 EmulatorAudio_GetActiveChannels(EmulatorAudioApuRegisters apuRegister) 
 {
-    u8 var_r3;
-    u8 var_r4;
-    u16 subroutine_arg0[5];
+    u8 activeChannels;
+    u8 i;
+    u16 enabledChannels[5];
 
-    var_r3 = 0;
+    activeChannels = 0;
 
-    if (arg0 == 0x4015)
+    if (apuRegister == (NES_APU_REG_BASE | NES_APU_REG_SND_CHN))
     {
-        subroutine_arg0[0] = (u8)gUnk_03005FCC;
-        subroutine_arg0[1] = (u8)gUnk_03005FD8;
-        subroutine_arg0[2] = gUnk_03005FB0;
-        subroutine_arg0[3] = (u8)gUnk_03005FC0;
+        enabledChannels[0] = (u8)gEmuAudio_Pulse1_Enable;
+        enabledChannels[1] = (u8)gEmuAudio_Pulse2_Enable;
+        enabledChannels[2] = gEmuAudio_Triangle_Enable;
+        enabledChannels[3] = (u8)gEmuAudio_Noise_Enable;
 
-        for (var_r4 = 0; var_r4 < 4; var_r4++)
+        for (i = 0; i < 4; i++)
         {
-            if (gUnk_03005A68[var_r4] != 0)
+            if (gEmuAudio_ActiveChannels[i] != 0)
             {
-                var_r3 |= (gUnk_03005A68[var_r4] - 1) << var_r4;
+                activeChannels |= (gEmuAudio_ActiveChannels[i] - 1) << i;
             }
             else
             {
-                var_r3 |= subroutine_arg0[var_r4] << var_r4;
+                activeChannels |= enabledChannels[i] << i;
             }
         }
 
-        do { var_r3 |= (u8)subroutine_arg0[4] * 0x10; } while(0); // what?
+        do { activeChannels |= (u8)enabledChannels[4] << 4; } while(0); // what?
     }
 
-    return var_r3;
+    return activeChannels;
 }
 
-void sub_03000404(u8 arg0)
+/**
+ * @brief 03000404 | Stub for invalid/unhandled register writes
+ * 
+ * @param value (Unused) Value
+ */
+void EmulatorAudio_Stub(u8 value)
 {
     return;
 }
 
-void sub_03000408(u16 arg0, u8 arg1)
+/**
+ * @brief 03000408 | Write to APU register
+ * 
+ * @param apuRegister APU register to write to (NES address)
+ * @param value Value to write to APU register
+ */
+void EmulatorAudio_WriteToApu(EmulatorAudioApuRegisters apuRegister, u8 value)
 {
-    u32 var_r2;
+    u32 i;
 
-    if (sUnk_03002374 != 0)
+    if (sEmulatorAudio_Disabled)
         return;
 
-    arg0 -= 0x4000;
-    if (arg0 < 0x18)
+    apuRegister -= NES_APU_REG_BASE;
+    if (apuRegister < NES_APU_REG_COUNT)
     {
-        sUnk_03002378[arg0](arg1);
-        if ((arg0 & 3) == 3)
+        sEmulatorAudio_ApuWriteFuncs[apuRegister](value);
+        // If writing to a length counter register
+        // Write 2 to gEmuAudio_ActiveChannels
+        if ((apuRegister & 3) == 3)
         {
-            gUnk_03005A68[arg0 >> 2] = 2;
+            gEmuAudio_ActiveChannels[apuRegister >> 2] = 2;
         }
     }
 
-    if (arg0 == 0x15)
+    // SND_CHN register
+    if (apuRegister == NES_APU_REG_SND_CHN)
     {
-        for (var_r2 = 0; var_r2 < 4; var_r2++)
+        // If sound channel enabled
+        // Write 1 to gEmuAudio_ActiveChannels
+        for (i = 0; i < 4; i++)
         {
-            if (arg1 & 1)
+            if (value & 1)
             {
-                gUnk_03005A68[var_r2] = 1;
+                gEmuAudio_ActiveChannels[i] = 1;
             }
-            arg1 >>= 1;
+            value >>= 1;
         }
     }
 }
 
-void sub_0300047C(u8* arg0, u8 arg1)
+/**
+ * @brief 0300047C | Write byte
+ * 
+ * @param dst Destination
+ * @param val Value to write
+ */
+void EmulatorAudio_Write8(u8* dst, u8 val)
 {
-    WRITE_8(arg0, arg1);
+    WRITE_8(dst, val);
 }
 
-u8 sub_03000484(u8* arg0)
+/**
+ * @brief 03000484 | (Unused) Read byte
+ * 
+ * @param src Source
+ * @return u8 Value from source
+ */
+u8 EmulatorAudio_Read8(u8* src)
 {
-    return READ_8(arg0);
+    return READ_8(src);
 }
 
-void sub_03000488(void)
+/**
+ * @brief 03000488 | Initialize audio engine
+ * 
+ */
+void EmulatorAudio_Initialize(void)
 {
-    sUnk_03002374 = 0;
-    sub_03000564();
+    sEmulatorAudio_Disabled = FALSE;
+    EmulatorAudio_ClearChannels();
 
-    sub_0300047C(REG_SOUNDCNT_X, 0xFF); // FIFO enable
-    sub_0300047C(REG_SOUNDCNT_L, 0x77); // Sound 1-4 Master Volume Left/Right Enable
-    sub_0300047C(REG_SOUNDCNT_L + 1, 0xFF); // Sound 1-4 Flags Left/Right Enable
+    EmulatorAudio_Write8(REG_SOUNDCNT_X, 0xFF); // FIFO enable
+    EmulatorAudio_Write8(REG_SOUNDCNT_L, 0x77); // Sound 1-4 Master Volume Left/Right Enable
+    EmulatorAudio_Write8(REG_SOUNDCNT_L + 1, 0xFF); // Sound 1-4 Flags Left/Right Enable
     WRITE_16(REG_SOUNDBIAS, (READ_16(REG_SOUNDBIAS) & 0x3FF) | 0x4000); // Set Resolution / Sampling to 8bit / 65.536kHz
 
-    sub_0300203C();
+    EmulatorAudio_SetupEngine();
 }
 
-void sub_030004E0(void)
+/**
+ * @brief 030004E0 | Timer 1 interrupt
+ * 
+ */
+void EmulatorAudio_Timer1Callback(void)
 {
-    u32 var_r1;
+    u32 i;
 
-    sub_03000080();
+    EmulatorAudio_UpdateApuAndOutput();
 
-    for (var_r1 = 0; var_r1 < 5; var_r1++)
+    for (i = 0; i < 5; i++)
     {
-        gUnk_03005A68[var_r1] = 0;
+        gEmuAudio_ActiveChannels[i] = 0;
     }
 }
 
-void sub_03000500(void)
+/**
+ * @brief 03000500 | Disable audio upon reset
+ * 
+ */
+void EmulatorAudio_Disable(void)
 {
-    sub_03000408(0x4015, 0);
-    sUnk_03002374 = 1;
-    sub_03000330();
+    EmulatorAudio_WriteToApu(NES_APU_REG_BASE | NES_APU_REG_SND_CHN, 0);
+    sEmulatorAudio_Disabled = TRUE;
+    EmulatorAudio_CallDisableTimers();
 
     WRITE_32(REG_DMA1_CNT, C_32_2_16(DMA_ENABLE | DMA_32BIT | DMA_DEST_FIXED, 1 * sizeof(u32)));
     WRITE_16(REG_DMA1_CNT_H, sUnk_030023D8);
 }
 
-void sub_0300053C(void)
+/**
+ * @brief 0300053C | Reset audio
+ * 
+ */
+void EmulatorAudio_Reset(void)
 {
     WRITE_32(REG_FIFO_A, 0);
     WRITE_32(REG_FIFO_B, 0);
 
-    sub_0300203C();
-    sub_03000564();
-    sUnk_03002374 = 0;
+    EmulatorAudio_SetupEngine();
+    EmulatorAudio_ClearChannels();
+    sEmulatorAudio_Disabled = FALSE;
 }
 
-void sub_03000564(void)
+/**
+ * @brief 03000564 | Clear channel variables
+ * 
+ */
+void EmulatorAudio_ClearChannels(void)
 {
-    u32 var_r1;
+    u32 i;
 
-    for (var_r1 = 0; var_r1 < 5; var_r1++)
+    for (i = 0; i < 5; i++)
     {
-        gUnk_03005A68[var_r1] = 0;
+        gEmuAudio_ActiveChannels[i] = 0;
     }
 
-    sub_030009DC();
-    sub_03000F7C();
-    sub_03001594();
-    sub_03001990();
+    EmulatorAudio_Pulse1_ClearVariables();
+    EmulatorAudio_Pulse2_ClearVariables();
+    EmulatorAudio_Triangle_ClearVariables();
+    EmulatorAudio_Noise_ClearVariables();
 }

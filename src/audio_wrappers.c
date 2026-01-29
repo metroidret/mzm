@@ -34,26 +34,26 @@ void InitializeAudio(void)
     WRITE_8(REG_SOUNDCNT_L, 0x77); // Sound 1-4 master volume left/right 100%
 
     gSoundCodeAPointer = (SoundCodeAFunc_T)(gSoundCodeA + 1);
-    DMA_SET(3, CallSoundCodeA, gSoundCodeA, C_32_2_16(DMA_ENABLE, sizeof(gSoundCodeA) / 2));
+    DMA3_COPY_16(CallSoundCodeA, gSoundCodeA, sizeof(gSoundCodeA) / 2);
 
     gSoundCodeBPointer = (SoundCodeBFunc_T)(gSoundCodeB + 1);
-    DMA_SET(3, CallSoundCodeB, gSoundCodeB, C_32_2_16(DMA_ENABLE, sizeof(gSoundCodeB) / 2));
+    DMA3_COPY_16(CallSoundCodeB, gSoundCodeB, sizeof(gSoundCodeB) / 2);
 
     gSoundCodeCPointer = (SoundCodeCFunc_T)(gSoundCodeC + 1);
-    DMA_SET(3, CallSoundCodeC, gSoundCodeC, C_32_2_16(DMA_ENABLE, sizeof(gSoundCodeC) / 2));
+    DMA3_COPY_16(CallSoundCodeC, gSoundCodeC, sizeof(gSoundCodeC) / 2);
 
-    dma_fill16(3, 0, &gMusicInfo, 28);
+    DMA3_FILL_16(0, &gMusicInfo, 28);
 
     gMusicInfo.unk_9 = (u8)gUnk_Audio0x64;
 
     for (i = 0; i < ARRAY_SIZE(gPsgSounds); i++)
     {
-        dma_fill16(3, 0, &gPsgSounds[i], sizeof(gPsgSounds[i]));
+        DMA3_FILL_16(0, &gPsgSounds[i], sizeof(gPsgSounds[i]));
     }
 
     for (i = 0; i < (u16)gNumMusicPlayers; i++)
     {
-        dma_fill16(3, 0, sMusicTrackDataRom[i].pTrack, 44);
+        DMA3_FILL_16(0, sMusicTrackDataRom[i].pTrack, 44);
     }
 
     for (i = 0; i < (u16)gNumMusicPlayers; i++)
@@ -68,17 +68,17 @@ void InitializeAudio(void)
 
     for (i = 0; i < gMusicInfo.maxSoundChannels; i++)
     {
-        dma_fill16(3, 0, &gMusicInfo.soundChannels[i], sizeof(gMusicInfo.soundChannels[i]));
+        DMA3_FILL_16(0, &gMusicInfo.soundChannels[i], sizeof(gMusicInfo.soundChannels[i]));
     }
 
     for (i = 0; i < ARRAY_SIZE(gSoundChannelBackup); i++)
     {
-        dma_fill16(3, 0, &gSoundChannelBackup[i], sizeof(gSoundChannelBackup[i]));
+        DMA3_FILL_16(0, &gSoundChannelBackup[i], sizeof(gSoundChannelBackup[i]));
     }
 
     for (i = 0; i < (u16)gNumMusicPlayers; i++)
     {
-        dma_fill16(3, 0, &gSoundQueue[i], sizeof(gSoundQueue[i]));
+        DMA3_FILL_16(0, &gSoundQueue[i], sizeof(gSoundQueue[i]));
     }
 
     gMusicInfo.occupied = FALSE;

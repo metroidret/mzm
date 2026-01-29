@@ -751,10 +751,10 @@ void ProjectileLoadGraphics(void)
     if (gEquipment.suitType == SUIT_SUITLESS)
     {
         // Only transfer beam section (ignore CHARGE GAUGE)
-        DMA_SET(3, sPistolGfx_Top, VRAM_BASE + 0x11000, C_32_2_16(DMA_ENABLE, sizeof(sPistolGfx_Top) / 2 / 2));
-        DMA_SET(3, sPistolGfx_Bottom, VRAM_BASE + 0x11400, C_32_2_16(DMA_ENABLE, sizeof(sPistolGfx_Bottom) / 2));
-        DMA_SET(3, sPistolGfx_Charged_Top, VRAM_BASE + 0x11800, C_32_2_16(DMA_ENABLE, sizeof(sPistolGfx_Charged_Top) / 2));
-        DMA_SET(3, sPistolGfx_Charged_Bottom, VRAM_BASE + 0x11C00, C_32_2_16(DMA_ENABLE, sizeof(sPistolGfx_Charged_Bottom) / 2));
+        DMA3_COPY_16(sPistolGfx_Top, VRAM_BASE + 0x11000, sizeof(sPistolGfx_Top) / 2 / 2);
+        DMA3_COPY_16(sPistolGfx_Bottom, VRAM_BASE + 0x11400, sizeof(sPistolGfx_Bottom) / 2);
+        DMA3_COPY_16(sPistolGfx_Charged_Top, VRAM_BASE + 0x11800, sizeof(sPistolGfx_Charged_Top) / 2);
+        DMA3_COPY_16(sPistolGfx_Charged_Bottom, VRAM_BASE + 0x11C00, sizeof(sPistolGfx_Charged_Bottom) / 2);
 
         HudDrawSuitless();
         palOffset = 5 * PAL_ROW;
@@ -764,10 +764,10 @@ void ProjectileLoadGraphics(void)
         bba = gEquipment.beamBombsActivation;
         if (bba & BBF_PLASMA_BEAM)
         {
-            DMA_SET(3, sPlasmaBeamGfx_Top, VRAM_BASE + 0x11000, C_32_2_16(DMA_ENABLE, sizeof(sPlasmaBeamGfx_Top) / 2));
-            DMA_SET(3, sPlasmaBeamGfx_Bottom, VRAM_BASE + 0x11400, C_32_2_16(DMA_ENABLE, sizeof(sPlasmaBeamGfx_Bottom) / 2));
-            DMA_SET(3, sPlasmaBeamGfx_Charged_Top, VRAM_BASE + 0x11800, C_32_2_16(DMA_ENABLE, sizeof(sPlasmaBeamGfx_Charged_Top) / 2));
-            DMA_SET(3, sPlasmaBeamGfx_Charged_Bottom, VRAM_BASE + 0x11C00, C_32_2_16(DMA_ENABLE, sizeof(sPlasmaBeamGfx_Charged_Bottom) / 2));
+            DMA3_COPY_16(sPlasmaBeamGfx_Top, VRAM_BASE + 0x11000, sizeof(sPlasmaBeamGfx_Top) / 2);
+            DMA3_COPY_16(sPlasmaBeamGfx_Bottom, VRAM_BASE + 0x11400, sizeof(sPlasmaBeamGfx_Bottom) / 2);
+            DMA3_COPY_16(sPlasmaBeamGfx_Charged_Top, VRAM_BASE + 0x11800, sizeof(sPlasmaBeamGfx_Charged_Top) / 2);
+            DMA3_COPY_16(sPlasmaBeamGfx_Charged_Bottom, VRAM_BASE + 0x11C00, sizeof(sPlasmaBeamGfx_Charged_Bottom) / 2);
 
             if (bba & BBF_ICE_BEAM)
                 palOffset = 2 * PAL_ROW;
@@ -776,10 +776,10 @@ void ProjectileLoadGraphics(void)
         }
         else if (bba & BBF_WAVE_BEAM)
         {
-            DMA_SET(3, sWaveBeamGfx_Top, VRAM_BASE + 0x11000, C_32_2_16(DMA_ENABLE, sizeof(sWaveBeamGfx_Top) / 2));
-            DMA_SET(3, sWaveBeamGfx_Bottom, VRAM_BASE + 0x11400, C_32_2_16(DMA_ENABLE, sizeof(sWaveBeamGfx_Bottom) / 2));
-            DMA_SET(3, sWaveBeamGfx_Charged_Top, VRAM_BASE + 0x11800, C_32_2_16(DMA_ENABLE, sizeof(sWaveBeamGfx_Charged_Top) / 2));
-            DMA_SET(3, sWaveBeamGfx_Charged_Bottom, VRAM_BASE + 0x11C00, C_32_2_16(DMA_ENABLE, sizeof(sWaveBeamGfx_Charged_Bottom) / 2));
+            DMA3_COPY_16(sWaveBeamGfx_Top, VRAM_BASE + 0x11000, sizeof(sWaveBeamGfx_Top) / 2);
+            DMA3_COPY_16(sWaveBeamGfx_Bottom, VRAM_BASE + 0x11400, sizeof(sWaveBeamGfx_Bottom) / 2);
+            DMA3_COPY_16(sWaveBeamGfx_Charged_Top, VRAM_BASE + 0x11800, sizeof(sWaveBeamGfx_Charged_Top) / 2);
+            DMA3_COPY_16(sWaveBeamGfx_Charged_Bottom, VRAM_BASE + 0x11C00, sizeof(sWaveBeamGfx_Charged_Bottom) / 2);
 
             if (bba & BBF_ICE_BEAM)
                 palOffset = 2 * PAL_ROW;
@@ -788,34 +788,34 @@ void ProjectileLoadGraphics(void)
         }
         else if (bba & BBF_ICE_BEAM)
         {
-            DMA_SET(3, sIceBeamGfx_Top, VRAM_BASE + 0x11000, C_32_2_16(DMA_ENABLE, sizeof(sIceBeamGfx_Top) / 2));
-            DMA_SET(3, sIceBeamGfx_Bottom, VRAM_BASE + 0x11400, C_32_2_16(DMA_ENABLE, sizeof(sIceBeamGfx_Bottom) / 2));
-            DMA_SET(3, sIceBeamGfx_Charged_Top, VRAM_BASE + 0x11800, C_32_2_16(DMA_ENABLE, sizeof(sIceBeamGfx_Charged_Top) / 2));
-            DMA_SET(3, sIceBeamGfx_Charged_Bottom, VRAM_BASE + 0x11C00, C_32_2_16(DMA_ENABLE, sizeof(sIceBeamGfx_Charged_Bottom) / 2));
+            DMA3_COPY_16(sIceBeamGfx_Top, VRAM_BASE + 0x11000, sizeof(sIceBeamGfx_Top) / 2);
+            DMA3_COPY_16(sIceBeamGfx_Bottom, VRAM_BASE + 0x11400, sizeof(sIceBeamGfx_Bottom) / 2);
+            DMA3_COPY_16(sIceBeamGfx_Charged_Top, VRAM_BASE + 0x11800, sizeof(sIceBeamGfx_Charged_Top) / 2);
+            DMA3_COPY_16(sIceBeamGfx_Charged_Bottom, VRAM_BASE + 0x11C00, sizeof(sIceBeamGfx_Charged_Bottom) / 2);
 
             palOffset = 2 * PAL_ROW;
         }
         else if (bba & BBF_LONG_BEAM)
         {
-            DMA_SET(3, sLongBeamGfx_Top, VRAM_BASE + 0x11000, C_32_2_16(DMA_ENABLE, sizeof(sLongBeamGfx_Top) / 2));
-            DMA_SET(3, sLongBeamGfx_Bottom, VRAM_BASE + 0x11400, C_32_2_16(DMA_ENABLE, sizeof(sLongBeamGfx_Bottom) / 2));
-            DMA_SET(3, sLongBeamGfx_Charged_Top, VRAM_BASE + 0x11800, C_32_2_16(DMA_ENABLE, sizeof(sLongBeamGfx_Charged_Top) / 2));
-            DMA_SET(3, sLongBeamGfx_Charged_Bottom, VRAM_BASE + 0x11C00, C_32_2_16(DMA_ENABLE, sizeof(sLongBeamGfx_Charged_Bottom) / 2));
+            DMA3_COPY_16(sLongBeamGfx_Top, VRAM_BASE + 0x11000, sizeof(sLongBeamGfx_Top) / 2);
+            DMA3_COPY_16(sLongBeamGfx_Bottom, VRAM_BASE + 0x11400, sizeof(sLongBeamGfx_Bottom) / 2);
+            DMA3_COPY_16(sLongBeamGfx_Charged_Top, VRAM_BASE + 0x11800, sizeof(sLongBeamGfx_Charged_Top) / 2);
+            DMA3_COPY_16(sLongBeamGfx_Charged_Bottom, VRAM_BASE + 0x11C00, sizeof(sLongBeamGfx_Charged_Bottom) / 2);
 
             palOffset = 1 * PAL_ROW;
         }
         else
         {
-            DMA_SET(3, sNormalBeamGfx_Top, VRAM_BASE + 0x11000, C_32_2_16(DMA_ENABLE, sizeof(sNormalBeamGfx_Top) / 2));
-            DMA_SET(3, sNormalBeamGfx_Bottom, VRAM_BASE + 0x11400, C_32_2_16(DMA_ENABLE, sizeof(sNormalBeamGfx_Bottom) / 2));
-            DMA_SET(3, sNormalBeamGfx_Charged_Top, VRAM_BASE + 0x11800, C_32_2_16(DMA_ENABLE, sizeof(sNormalBeamGfx_Charged_Top) / 2));
-            DMA_SET(3, sNormalBeamGfx_Charged_Bottom, VRAM_BASE + 0x11C00, C_32_2_16(DMA_ENABLE, sizeof(sNormalBeamGfx_Charged_Bottom) / 2));
+            DMA3_COPY_16(sNormalBeamGfx_Top, VRAM_BASE + 0x11000, sizeof(sNormalBeamGfx_Top) / 2);
+            DMA3_COPY_16(sNormalBeamGfx_Bottom, VRAM_BASE + 0x11400, sizeof(sNormalBeamGfx_Bottom) / 2);
+            DMA3_COPY_16(sNormalBeamGfx_Charged_Top, VRAM_BASE + 0x11800, sizeof(sNormalBeamGfx_Charged_Top) / 2);
+            DMA3_COPY_16(sNormalBeamGfx_Charged_Bottom, VRAM_BASE + 0x11C00, sizeof(sNormalBeamGfx_Charged_Bottom) / 2);
 
             palOffset = 0 * PAL_ROW;
         }
     }
     
-    DMA_SET(3, (sBeamPal + palOffset), PALRAM_OBJ + 2 * PAL_ROW_SIZE, C_32_2_16(DMA_ENABLE, 6));
+    DMA3_COPY_16((sBeamPal + palOffset), PALRAM_OBJ + 2 * PAL_ROW_SIZE, 6);
 }
 
 /**

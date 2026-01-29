@@ -188,8 +188,8 @@ void DemoEnd(void)
         DmaTransfer(3, gDemoInputData, gSramDemoInputData, sizeof(gSramDemoInputData), 16);
         DmaTransfer(3, gDemoInputDuration, gSramDemoInputDuration, sizeof(gSramDemoInputDuration), 16);
         #else // !REGION_EU
-        DMA_SET(3, gDemoInputData, gSramDemoInputData, C_32_2_16(DMA_ENABLE, sizeof(gSramDemoInputData) / 2));
-        DMA_SET(3, gDemoInputDuration, gSramDemoInputDuration, C_32_2_16(DMA_ENABLE, sizeof(gSramDemoInputDuration) / 2));
+        DMA3_COPY_16(gDemoInputData, gSramDemoInputData, sizeof(gSramDemoInputData) / 2);
+        DMA3_COPY_16(gDemoInputDuration, gSramDemoInputDuration, sizeof(gSramDemoInputDuration) / 2);
         #endif // REGION_EU
     
         DoSramOperation(SRAM_OPERATION_SAVE_RECORDED_DEMO);

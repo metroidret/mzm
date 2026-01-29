@@ -1516,7 +1516,7 @@ void PauseDebugEventList(void)
             DmaTransfer(3, VRAM_BASE + 0xB000, (void*)sEwramPointer + 0xC800, 0x800, 16);
             DmaTransfer(3, (void*)sEwramPointer + 0xD000, VRAM_BASE + 0xB000, 0x800, 16);
             CallLZ77UncompVram(sPauseDebugEventListTextGfx, VRAM_BASE + 0x8000);
-            DMA_SET(3, sPauseDebugEventListBgPalette, PALRAM_BASE + 0x1C0, C_32_2_16(DMA_ENABLE, 0x20));
+            DMA3_COPY_16(sPauseDebugEventListBgPalette, PALRAM_BASE + 0x1C0, 0x20);
             PAUSE_SCREEN_DATA.bg2cnt = PAUSE_SCREEN_DATA.unk_7A;
             PauseDebugEventListInput();
             PAUSE_SCREEN_DATA.debugEventListStage++;

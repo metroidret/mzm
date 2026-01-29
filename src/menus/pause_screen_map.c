@@ -320,8 +320,7 @@ void PauseScreenInitMapDownload(void)
         DmaTransfer(3, gDecompressedMinimapVisitedTiles, VRAM_BASE + 0xE000,
             sizeof(gDecompressedMinimapVisitedTiles), 16);
         #else // !REGION_EU
-        DMA_SET(3, gDecompressedMinimapVisitedTiles, VRAM_BASE + 0xE000,
-            C_32_2_16(DMA_ENABLE, sizeof(gDecompressedMinimapVisitedTiles) / 2));
+        DMA3_COPY_16(gDecompressedMinimapVisitedTiles, VRAM_BASE + 0xE000, sizeof(gDecompressedMinimapVisitedTiles) / 2);
         #endif // REGION_EU
     }
 }
@@ -550,8 +549,8 @@ u32 PauseScreenMapDownload(void)
                     if (PAUSE_SCREEN_DATA.currentDownloadedLine < MINIMAP_SIZE)
                     {
                         // "Draw" current line
-                        DMA_SET(3, &gDecompressedMinimapVisitedTiles[PAUSE_SCREEN_DATA.currentDownloadedLine * MINIMAP_SIZE],
-                            VRAM_BASE + 0xE000 + PAUSE_SCREEN_DATA.currentDownloadedLine * MINIMAP_SIZE * 2, DMA_ENABLE << 16 | MINIMAP_SIZE);   
+                        DMA3_COPY_16(&gDecompressedMinimapVisitedTiles[PAUSE_SCREEN_DATA.currentDownloadedLine * MINIMAP_SIZE],
+                            VRAM_BASE + 0xE000 + PAUSE_SCREEN_DATA.currentDownloadedLine * MINIMAP_SIZE * 2, MINIMAP_SIZE);   
                     }
 
                     PAUSE_SCREEN_DATA.unk_4F++;
@@ -602,8 +601,7 @@ u32 PauseScreenMapDownload(void)
             DmaTransfer(3, gDecompressedMinimapVisitedTiles, VRAM_BASE + 0xE000,
                 sizeof(gDecompressedMinimapVisitedTiles), 16);
             #else // !REGION_EU
-            DMA_SET(3, gDecompressedMinimapVisitedTiles, VRAM_BASE + 0xE000,
-                C_32_2_16(DMA_ENABLE, ARRAY_SIZE(gDecompressedMinimapVisitedTiles)));
+            DMA3_COPY_16(gDecompressedMinimapVisitedTiles, VRAM_BASE + 0xE000, ARRAY_SIZE(gDecompressedMinimapVisitedTiles));
             #endif // REGION_EU
 
             PAUSE_SCREEN_DATA.downloadStage++;

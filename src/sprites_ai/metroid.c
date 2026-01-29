@@ -806,7 +806,7 @@ static void MetroidSamusGrabbed(void)
         if (gCurrentSprite.work1 >= ARRAY_SIZE(sMetroidPal_SamusGrabbed) / PAL_ROW)
             gCurrentSprite.work1 = 0;
 
-        DMA_SET(3, &sMetroidPal_SamusGrabbed[gCurrentSprite.work1 * PAL_ROW], PALRAM_OBJ + PAL_ROW_SIZE * 12, C_32_2_16(DMA_ENABLE, 8));
+        DMA3_COPY_16(&sMetroidPal_SamusGrabbed[gCurrentSprite.work1 * PAL_ROW], PALRAM_OBJ + PAL_ROW_SIZE * 12, 8);
     }
 
     // Synchronises position

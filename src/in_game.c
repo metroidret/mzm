@@ -269,31 +269,31 @@ void TransferSamusGraphics(u32 updatePalette, struct SamusPhysics* pPhysics)
         return;
 
     if (pPhysics->shoulderGfxSize != 0)
-        DMA_SET(3, pPhysics->pShouldersGfx, VRAM_OBJ, C_32_2_16(DMA_ENABLE, pPhysics->shoulderGfxSize / sizeof(u16)));
+        DMA3_COPY_16(pPhysics->pShouldersGfx, VRAM_OBJ, pPhysics->shoulderGfxSize / sizeof(u16));
 
     if (pPhysics->torsoGfxSize != 0)
-        DMA_SET(3, pPhysics->pTorsoGfx, VRAM_BASE + 0x10400, C_32_2_16(DMA_ENABLE, pPhysics->torsoGfxSize / sizeof(u16)));
+        DMA3_COPY_16(pPhysics->pTorsoGfx, VRAM_BASE + 0x10400, pPhysics->torsoGfxSize / sizeof(u16));
 
     if (pPhysics->legsGfxSize != 0)
-        DMA_SET(3, pPhysics->pLegsGfx, VRAM_BASE + 0x10280, C_32_2_16(DMA_ENABLE, pPhysics->legsGfxSize / sizeof(u16)));
+        DMA3_COPY_16(pPhysics->pLegsGfx, VRAM_BASE + 0x10280, pPhysics->legsGfxSize / sizeof(u16));
 
     if (pPhysics->bodyLowerHalfGfxSize != 0)
-        DMA_SET(3, pPhysics->pBodyLowerHalfGfx, VRAM_BASE + 0x10680, C_32_2_16(DMA_ENABLE, pPhysics->bodyLowerHalfGfxSize / sizeof(u16)));
+        DMA3_COPY_16(pPhysics->pBodyLowerHalfGfx, VRAM_BASE + 0x10680, pPhysics->bodyLowerHalfGfxSize / sizeof(u16));
 
     if (pPhysics->armCannonGfxUpperSize != 0)
-        DMA_SET(3, pPhysics->pArmCannonGfxUpper, VRAM_BASE + 0x10800, C_32_2_16(DMA_ENABLE, pPhysics->armCannonGfxUpperSize / sizeof(u16)));
+        DMA3_COPY_16(pPhysics->pArmCannonGfxUpper, VRAM_BASE + 0x10800, pPhysics->armCannonGfxUpperSize / sizeof(u16));
 
     if (pPhysics->armCannonGfxLowerSize != 0)
-        DMA_SET(3, pPhysics->pArmCannonGfxLower, VRAM_BASE + 0x10C00, C_32_2_16(DMA_ENABLE, pPhysics->armCannonGfxLowerSize / sizeof(u16)));
+        DMA3_COPY_16(pPhysics->pArmCannonGfxLower, VRAM_BASE + 0x10C00, pPhysics->armCannonGfxLowerSize / sizeof(u16));
 
     if (pPhysics->screwSpeedGfxSize != 0)
-        DMA_SET(3, pPhysics->pScrewSpeedGfx, VRAM_BASE + 0x10840, C_32_2_16(DMA_ENABLE, pPhysics->screwSpeedGfxSize / sizeof(u16)));
+        DMA3_COPY_16(pPhysics->pScrewSpeedGfx, VRAM_BASE + 0x10840, pPhysics->screwSpeedGfxSize / sizeof(u16));
 
     if (pPhysics->screwShinesparkGfxSize != 0)
-        DMA_SET(3, pPhysics->pScrewShinesparkGfx, VRAM_BASE + 0x10C40, C_32_2_16(DMA_ENABLE, pPhysics->screwShinesparkGfxSize / sizeof(u16)));
+        DMA3_COPY_16(pPhysics->pScrewShinesparkGfx, VRAM_BASE + 0x10C40, pPhysics->screwShinesparkGfxSize / sizeof(u16));
 
     if (updatePalette)
-        DMA_SET(3, gSamusPalette, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, gSamusPaletteSize / 2));
+        DMA3_COPY_16(gSamusPalette, PALRAM_OBJ, gSamusPaletteSize / 2);
 }
 
 /**
@@ -304,7 +304,7 @@ void VBlankCodeInGameLoad(void)
 {
     vu8 buffer;
 
-    DMA_SET(3, gOamData, OAM_BASE, C_32_2_16((DMA_ENABLE | DMA_32BIT), OAM_SIZE / sizeof(u32)));
+    DMA3_COPY_32(gOamData, OAM_BASE, OAM_SIZE / sizeof(u32));
 
     if (gHazeInfo.active)
     {
@@ -322,7 +322,7 @@ void VBlankCodeInGameLoad(void)
         if (!(gVBlankRequestFlag & 1))
         {
             buffer = 0;
-            DMA_SET(3, gPreviousHazeValues, gHazeValues, C_32_2_16(DMA_ENABLE, gHazeInfo.unk_4 / sizeof(u16)));
+            DMA3_COPY_16(gPreviousHazeValues, gHazeValues, gHazeInfo.unk_4 / sizeof(u16));
             SET_BACKDROP_COLOR(gBackdropColor);
         }
 
@@ -363,7 +363,7 @@ void VBlankCodeInGameLoad(void)
  */
 void TransferSamusAndBgGraphics(void)
 {
-    DMA_SET(3, gOamData, OAM_BASE, C_32_2_16((DMA_ENABLE | DMA_32BIT), OAM_SIZE / sizeof(u32)));
+    DMA3_COPY_32(gOamData, OAM_BASE, OAM_SIZE / sizeof(u32));
     TransferSamusGraphics(FALSE, &gSamusPhysics);
 
     WRITE_16(REG_BG0HOFS, gBackgroundPositions.bg[0].x);
@@ -387,7 +387,7 @@ void VBlankCodeInGame(void)
 {
     vu8 buffer;
 
-    DMA_SET(3, gOamData, OAM_BASE, C_32_2_16((DMA_ENABLE | DMA_32BIT), OAM_SIZE / sizeof(u32)));
+    DMA3_COPY_32(gOamData, OAM_BASE, OAM_SIZE / sizeof(u32));
 
     if (gHazeInfo.active)
     {
@@ -405,7 +405,7 @@ void VBlankCodeInGame(void)
         if (!(gVBlankRequestFlag & 1))
         {
             buffer = 0;
-            DMA_SET(3, gPreviousHazeValues, gHazeValues, C_32_2_16(DMA_ENABLE, gHazeInfo.unk_4 / sizeof(u16)));
+            DMA3_COPY_16(gPreviousHazeValues, gHazeValues, gHazeInfo.unk_4 / sizeof(u16));
             SET_BACKDROP_COLOR(gBackdropColor);
         }
 
@@ -473,7 +473,7 @@ void InitAndLoadGenerics(void)
     #ifndef DEBUG
     gDebugMode = FALSE;
     #endif // !DEBUG
-    DMA_SET(3, sCommonSpritesPal, PALRAM_BASE + 0x240, C_32_2_16(DMA_ENABLE, sizeof(sCommonSpritesPal) / 2));
+    DMA3_COPY_16(sCommonSpritesPal, PALRAM_BASE + 0x240, sizeof(sCommonSpritesPal) / 2);
     SamusInit();
 
     do {
@@ -491,7 +491,7 @@ void InitAndLoadGenerics(void)
     }
 
     SamusCallGfxFunctions();
-    DMA_SET(3, gSamusPalette, PALRAM_OBJ, C_32_2_16(DMA_ENABLE, gSamusPaletteSize / sizeof(u16)));
+    DMA3_COPY_16(gSamusPalette, PALRAM_OBJ, gSamusPaletteSize / sizeof(u16));
 
     TransferSamusAndBgGraphics();
 

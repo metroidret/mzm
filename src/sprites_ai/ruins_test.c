@@ -115,7 +115,7 @@ MAKE_ENUM(u8, RuinsTestLightningPartId) {
 
 
 #define RUINS_TEST_DYNAMIC_PAL_ADDR (PALRAM_BASE + (PALRAM_SIZE - 16 * 4))
-#define RUINS_TEST_TRANSFER_DYNAMIC_PAL(pal, size) DMA_SET(3, pal, RUINS_TEST_DYNAMIC_PAL_ADDR, C_32_2_16(DMA_ENABLE, size))
+#define RUINS_TEST_TRANSFER_DYNAMIC_PAL(pal, size) DMA3_COPY_16(pal, RUINS_TEST_DYNAMIC_PAL_ADDR, size)
 
 
 /**
@@ -1491,7 +1491,7 @@ static void RuinsTestGhostSymbolPlacing(void)
             
             case 0:
             case 12:
-                DMA_SET(3, (&sRuinsTestPal[16 * 6]), RUINS_TEST_DYNAMIC_PAL_ADDR, C_32_2_16(DMA_ENABLE, 8));
+                DMA3_COPY_16((&sRuinsTestPal[16 * 6]), RUINS_TEST_DYNAMIC_PAL_ADDR, 8);
                 break;
         }
     }
@@ -1850,7 +1850,7 @@ void RuinsTestSamusReflectionStart(void)
             gCurrentSprite.samusCollision = SSC_NONE;
             gCurrentSprite.drawOrder = 3;
 
-            DMA_SET(3, sRuinsTestPal_SamusReflection, PALRAM_OBJ + PAL_ROW_SIZE * 15, C_32_2_16(DMA_ENABLE, 16));
+            DMA3_COPY_16(sRuinsTestPal_SamusReflection, PALRAM_OBJ + PAL_ROW_SIZE * 15, 16);
             gCurrentSprite.work0 = 1;
             break;
 
@@ -1861,11 +1861,11 @@ void RuinsTestSamusReflectionStart(void)
                 timer = gCurrentSprite.work0++;
                 if (timer > 14)
                 {
-                    DMA_SET(3, &sRuinsTestPal[16 * 7], PALRAM_OBJ + PAL_ROW_SIZE * 15, C_32_2_16(DMA_ENABLE, 16));
+                    DMA3_COPY_16(&sRuinsTestPal[16 * 7], PALRAM_OBJ + PAL_ROW_SIZE * 15, 16);
                 }
                 else
                 {
-                    DMA_SET(3, &sRuinsTestPal_SamusReflection[timer * 16], PALRAM_OBJ + PAL_ROW_SIZE * 15, C_32_2_16(DMA_ENABLE, 16));
+                    DMA3_COPY_16(&sRuinsTestPal_SamusReflection[timer * 16], PALRAM_OBJ + PAL_ROW_SIZE * 15, 16);
                 }
 
             }
@@ -1879,13 +1879,13 @@ void RuinsTestSamusReflectionStart(void)
                 // Transfer turning graphics
                 if (gSamusData.direction & KEY_RIGHT)
                 {
-                    DMA_SET(3, sRuinsTestGfx_SamusReflectionTurningRightTop, VRAM_OBJ + 0x4280, C_32_2_16(DMA_ENABLE, sizeof(sRuinsTestGfx_SamusReflectionTurningRightTop) / 2));
-                    DMA_SET(3, sRuinsTestGfx_SamusReflectionTurningRightBottom, VRAM_OBJ + 0x4680, C_32_2_16(DMA_ENABLE, sizeof(sRuinsTestGfx_SamusReflectionTurningRightBottom) / 2));
+                    DMA3_COPY_16(sRuinsTestGfx_SamusReflectionTurningRightTop, VRAM_OBJ + 0x4280, sizeof(sRuinsTestGfx_SamusReflectionTurningRightTop) / 2);
+                    DMA3_COPY_16(sRuinsTestGfx_SamusReflectionTurningRightBottom, VRAM_OBJ + 0x4680, sizeof(sRuinsTestGfx_SamusReflectionTurningRightBottom) / 2);
                 }
                 else
                 {
-                    DMA_SET(3, sRuinsTestGfx_SamusReflectionTurningLeftTop, VRAM_OBJ + 0x4280, C_32_2_16(DMA_ENABLE, sizeof(sRuinsTestGfx_SamusReflectionTurningLeftTop) / 2));
-                    DMA_SET(3, sRuinsTestGfx_SamusReflectionTurningLeftBottom, VRAM_OBJ + 0x4680, C_32_2_16(DMA_ENABLE, sizeof(sRuinsTestGfx_SamusReflectionTurningLeftBottom) / 2));
+                    DMA3_COPY_16(sRuinsTestGfx_SamusReflectionTurningLeftTop, VRAM_OBJ + 0x4280, sizeof(sRuinsTestGfx_SamusReflectionTurningLeftTop) / 2);
+                    DMA3_COPY_16(sRuinsTestGfx_SamusReflectionTurningLeftBottom, VRAM_OBJ + 0x4680, sizeof(sRuinsTestGfx_SamusReflectionTurningLeftBottom) / 2);
                 }
             }
             break;
@@ -2229,9 +2229,9 @@ void RuinsTestSamusReflectionEnd(void)
             gCurrentSprite.samusCollision = SSC_NONE;
             gCurrentSprite.drawOrder = 11;
 
-            DMA_SET(3, sRuinsTestGfx_SamusReflectionSuitlessTop, VRAM_OBJ + 0x4280, C_32_2_16(DMA_ENABLE, 192));
-            DMA_SET(3, sRuinsTestGfx_SamusReflectionSuitlessBottom, VRAM_OBJ + 0x4680, C_32_2_16(DMA_ENABLE, 128));
-            DMA_SET(3, sRuinsTestPal_SamusReflection, PALRAM_OBJ + PAL_ROW_SIZE * 15, C_32_2_16(DMA_ENABLE, 16));
+            DMA3_COPY_16(sRuinsTestGfx_SamusReflectionSuitlessTop, VRAM_OBJ + 0x4280, 192);
+            DMA3_COPY_16(sRuinsTestGfx_SamusReflectionSuitlessBottom, VRAM_OBJ + 0x4680, 128);
+            DMA3_COPY_16(sRuinsTestPal_SamusReflection, PALRAM_OBJ + PAL_ROW_SIZE * 15, 16);
 
             gCurrentSprite.work0 = 0;
             gCurrentSprite.work1 = 0;
@@ -2260,7 +2260,7 @@ void RuinsTestSamusReflectionEnd(void)
                 }
 
                 offset = gCurrentSprite.work0;
-                DMA_SET(3, (sRuinsTestPal_SamusReflection + offset * 16), PALRAM_OBJ + PAL_ROW_SIZE * 15, C_32_2_16(DMA_ENABLE, 16));
+                DMA3_COPY_16((sRuinsTestPal_SamusReflection + offset * 16), PALRAM_OBJ + PAL_ROW_SIZE * 15, 16);
             }
 
             if (gCurrentSprite.pose == RUINS_TEST_SAMUS_REFLECTION_END_POSE_FULLSUIT)
@@ -2289,7 +2289,7 @@ void RuinsTestSamusReflectionEnd(void)
             if (APPLY_DELTA_TIME_DEC(gCurrentSprite.work0) == 0)
             {
                 gCurrentSprite.status &= ~SPRITE_STATUS_NOT_DRAWN;
-                DMA_SET(3, sRuinsTestPal_SamusReflectionFullSuit, PALRAM_OBJ + PAL_ROW_SIZE * 15, C_32_2_16(DMA_ENABLE, 16));
+                DMA3_COPY_16(sRuinsTestPal_SamusReflectionFullSuit, PALRAM_OBJ + PAL_ROW_SIZE * 15, 16);
                 gCurrentSprite.pose = RUINS_TEST_SAMUS_REFLECTION_END_POSE_UPDATE_PALETTE;
                 gCurrentSprite.work0 = 1;
                 gCurrentSprite.work1 = CONVERT_SECONDS(.2f);
@@ -2299,8 +2299,8 @@ void RuinsTestSamusReflectionEnd(void)
             {
                 // Transfer fullsuit Gfx
                 gCurrentSprite.status |= SPRITE_STATUS_NOT_DRAWN;
-                DMA_SET(3, sRuinsTestGfx_SamusReflectionFullSuitTop, VRAM_OBJ + 0x4280, C_32_2_16(DMA_ENABLE, sizeof(sRuinsTestGfx_SamusReflectionFullSuitTop) / 2));
-                DMA_SET(3, sRuinsTestGfx_SamusReflectionFullSuitBottom, VRAM_OBJ + 0x4680, C_32_2_16(DMA_ENABLE, sizeof(sRuinsTestGfx_SamusReflectionFullSuitBottom) / 2));
+                DMA3_COPY_16(sRuinsTestGfx_SamusReflectionFullSuitTop, VRAM_OBJ + 0x4280, sizeof(sRuinsTestGfx_SamusReflectionFullSuitTop) / 2);
+                DMA3_COPY_16(sRuinsTestGfx_SamusReflectionFullSuitBottom, VRAM_OBJ + 0x4680, sizeof(sRuinsTestGfx_SamusReflectionFullSuitBottom) / 2);
             }
             break;
 
@@ -2311,7 +2311,7 @@ void RuinsTestSamusReflectionEnd(void)
             {
                 gCurrentSprite.work1 = CONVERT_SECONDS(.2f);
                 offset = gCurrentSprite.work0++;
-                DMA_SET(3, &sRuinsTestPal_SamusReflectionFullSuit[offset * 16], PALRAM_OBJ + PAL_ROW_SIZE * 15, C_32_2_16(DMA_ENABLE, 16));
+                DMA3_COPY_16(&sRuinsTestPal_SamusReflectionFullSuit[offset * 16], PALRAM_OBJ + PAL_ROW_SIZE * 15, 16);
                 if (offset > 8)
                 {
                     gCurrentSprite.pose = RUINS_TEST_SAMUS_REFLECTION_END_POSE_SET_FADING_STARTED;

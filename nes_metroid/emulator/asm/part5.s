@@ -6,28 +6,28 @@
 
 	.section .rodata
 
-	.4byte 0x006D3D34
-	.4byte 0x001B4F4D
+	.4byte 7159092
+	.4byte 1789773
 
-	.global sUnk_0600E008
-sUnk_0600E008:
-	.4byte 0x0006D3D3
-	.4byte 0x000369EA
-	.4byte 0x0001B4F5
-	.4byte 0x0000DA7A
-	.4byte 0x00006D3D
-	.4byte 0x000048D3
-	.4byte 0x0000369F
-	.4byte 0x00002BB2
-	.4byte 0x0000229C
-	.4byte 0x00001B86
-	.4byte 0x00001266
-	.4byte 0x00000DC3
-	.4byte 0x0000092D
+	.global sEmulatorAudio_NoiseSampleRateTable
+sEmulatorAudio_NoiseSampleRateTable:
+	.4byte 447443
+	.4byte 223722
+	.4byte 111861
+	.4byte 55930
+	.4byte 27965
+	.4byte 18643
+	.4byte 13983
+	.4byte 11186
+	.4byte 8860
+	.4byte 7046
+	.4byte 4710
+	.4byte 3523
+	.4byte 2349
 
-	.4byte 0x000006E2
-	.4byte 0x00000370
-	.4byte 0x0000036B
+	.4byte 1762
+	.4byte 880
+	.4byte 875
 
 	.section .text
 
@@ -248,13 +248,13 @@ sub_0600E1C4: @ 0x0600E1C4
 	strh r1, [r4, #4] @ REG_DISPSTAT = 8 (V-Blank IRQ Enable) (why does debugger say 0xA?)
 	mov r1, #0x31
 	orr r1, r1, #0x2000
-	strh r1, [r5, #-8] @ REG_IE = 0x2031 (Game Pak, Timer 1 Overflow, Timer 0 Overflow, LCD V-Blank)
+	strh r1, [r5, #-8] @ REG_IE = 0x2031 (Game Pak, Timer 2 Overflow, Timer 1 Overflow, LCD V-Blank)
 	mvn r1, #0
 	strh r1, [r5, #-6] @ REG_IF = 0xFFFF (acknowledge all interrupt requests)
 	mov r1, #1
 	strh r1, [r5] @ REG_IME = 1 (enable interrupts)
-	@ sub_03000488()
-	ldr r4, _0600E234 @ =sub_03000488
+	@ EmulatorAudio_Initialize()
+	ldr r4, _0600E234 @ =EmulatorAudio_Initialize
 	add lr, pc, #0x0 @ =_0600E224
 	bx r4
 _0600E224:
@@ -265,7 +265,7 @@ _0600E224:
 	add lr, pc, #0x8 @ =_0600E23C
 	bx r4
 	.align 2, 0
-_0600E234: .4byte sub_03000488
+_0600E234: .4byte EmulatorAudio_Initialize
 _0600E238: .4byte sub_03000368
 _0600E23C:
 	bl sub_0600EBF8
@@ -400,7 +400,7 @@ sub_0600E38C: @ 0x0600E38C
 	add lr, pc, #0xC @ =sub_0600E3A0
 	mov r0, #0x4000
 	orr r0, r0, #0x15
-	ldr r1, _0600E574 @ =sub_03000380
+	ldr r1, _0600E574 @ =EmulatorAudio_GetActiveChannels
 	bx r1
 
 	arm_func_start sub_0600E3A0
@@ -463,7 +463,7 @@ sub_0600E440: @ 0x0600E440
 	strb r0, [sp, #SP_A2D]
 	bne _0600E3D8
 	add lr, pc, #0x4 @ =_0600E468
-	ldr r2, _0600E578 @ =sub_0300053C
+	ldr r2, _0600E578 @ =EmulatorAudio_Reset
 	bx r2
 _0600E468:
 	bl sub_0600EB04
@@ -559,8 +559,8 @@ _0600E548:
 	ldrb r0, [r2, #0xd]
 	bx r7 @ return r0 = [SP_854 + 0xD]
 	.align 2, 0
-_0600E574: .4byte sub_03000380
-_0600E578: .4byte sub_0300053C
+_0600E574: .4byte EmulatorAudio_GetActiveChannels
+_0600E578: .4byte EmulatorAudio_Reset
 _0600E57C: .4byte EmulatorLoadFromSram
 _0600E580: .4byte sub_03002DF0
 _0600E584: .4byte 0x0000C399
@@ -1028,13 +1028,13 @@ _0600EB7C:
 	strb r1, [sp, #SP_A32]
 	mov r1, #0xa
 	strb r1, [sp, #SP_A2D]
-	ldr r2, _0600EBF0 @ =sub_03000500
+	ldr r2, _0600EBF0 @ =EmulatorAudio_Disable
 	bx r2
 	.align 2, 0
 _0600EBE4: .4byte sub_03001D24
 _0600EBE8: .4byte sub_0600E440
 _0600EBEC: .4byte _0600E3D8
-_0600EBF0: .4byte sub_03000500
+_0600EBF0: .4byte EmulatorAudio_Disable
 _0600EBF4: .4byte 0x0600A000
 
 	arm_func_start sub_0600EBF8

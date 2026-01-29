@@ -3,6 +3,7 @@
 
 #include "gba/memory.h"
 #include "types.h"
+#include "macros.h"
 
 #define REG_DMA0 (REG_BASE + 0x0b0)
 #define REG_DMA1 (REG_BASE + 0x0bc)
@@ -42,33 +43,36 @@
         dma_[2];                                                               \
     }
 
-#define dma_fill(channel, val, dst, size, bit)                                 \
+#define DMA3_COPY_16(src, dst, count)                                          \
+    DMA_SET(3, src, dst, C_32_2_16(DMA_ENABLE, count))
+#define DMA3_COPY_32(src, dst, count)                                          \
+    DMA_SET(3, src, dst, C_32_2_16(DMA_ENABLE | DMA_32BIT, count))
+
+#define DMA_FILL(channel, val, dst, size, bit)                                 \
     {                                                                          \
         vu##bit dma_tmp_ = (vu##bit)val;                                       \
         DMA_SET(                                                               \
             channel,                                                           \
             &dma_tmp_,                                                         \
             dst,                                                               \
-            (DMA_ENABLE | DMA_START_NOW | DMA_##bit##BIT | DMA_SRC_FIXED       \
-             | DMA_DEST_INC)                                                   \
-                    << 16                                                      \
-                | ((size) / (bit / 8)));                                       \
+            C_32_2_16(DMA_ENABLE | DMA_START_NOW | DMA_##bit##BIT              \
+                | DMA_SRC_FIXED | DMA_DEST_INC, (size) / (bit / 8)))           \
     }
 
-#define dma_fill16(channel, value, dest, size)                                 \
-    dma_fill(channel, value, dest, size, 16)
-#define DMA_FILL_32(channel, value, dest, size)                                \
-    dma_fill(channel, value, dest, size, 32)
+#define DMA3_FILL_16(value, dest, size)                                        \
+    DMA_FILL(3, value, dest, size, 16)
+#define DMA3_FILL_32(value, dest, size)                                        \
+    DMA_FILL(3, value, dest, size, 32)
 
-#define dma_clear(channel, dest, size, bit)                                    \
+#define DMA_CLEAR(channel, dest, size, bit)                                    \
     {                                                                          \
         vu##bit *dma_dest_ = (vu##bit *)(dest);                                \
         u32 dma_size_      = size;                                             \
-        dma_fill##bit(channel, 0, dma_dest_, dma_size_);                       \
+        DMA_FILL_##bit(channel, 0, dma_dest_, dma_size_)                       \
     }
 
-#define dma_clear16(channel, dest, size) dma_clear(channel, dest, size, 16)
-#define dma_clear32(channel, dest, size) dma_clear(channel, dest, size, 32)
+#define DMA3_CLEAR_16(dest, size) DMA_CLEAR(3, dest, size, 16)
+#define DMA3_CLEAR_32(dest, size) DMA_CLEAR(3, dest, size, 32)
 
 #define DMA_DEST_INC 0x0000
 #define DMA_DEST_DEC (1 << 5)
@@ -95,9 +99,8 @@
         CpuSet(                                                                \
             (void*)&cpu_tmp_,                                                  \
             dst,                                                               \
-            (CPU_SET_##bit##BIT | CPU_SET_SRC_FIXED)                           \
-                    << 16                                                      \
-                | ((size) / (bit / 8)));                                       \
+            C_32_2_16(CPU_SET_##bit##BIT | CPU_SET_SRC_FIXED,                  \
+                (size) / (bit / 8)));                                          \
     }
 
 #define CPU_FILL_16(value, dest, size)                                         \

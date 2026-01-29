@@ -18,8 +18,8 @@ void InitializeGame(void)
     WRITE_16(REG_IME, FALSE);
     WRITE_16(REG_DISPSTAT, 0);
 
-    DMA_FILL_32(3, 0, EWRAM_BASE, EWRAM_SIZE);
-    DMA_FILL_32(3, 0, IWRAM_BASE, IWRAM_SIZE - 0x200);
+    DMA3_FILL_32(0, EWRAM_BASE, EWRAM_SIZE);
+    DMA3_FILL_32(0, IWRAM_BASE, IWRAM_SIZE - 0x200);
 
     ClearGfxRam();
     LoadInterruptCode();

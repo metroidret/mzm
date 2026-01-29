@@ -117,7 +117,7 @@ static u8 KraidRisingRising(void)
     {
         case 0:
             // Load kraid rising palette
-            DMA_SET(3, sKraidRisingRisingPal, PALRAM_BASE, C_32_2_16(DMA_ENABLE, ARRAY_SIZE(sKraidRisingRisingPal)));
+            DMA3_COPY_16(sKraidRisingRisingPal, PALRAM_BASE, ARRAY_SIZE(sKraidRisingRisingPal));
             WRITE_16(PALRAM_BASE, COLOR_BLACK);
 
             // Load kraid rising graphics

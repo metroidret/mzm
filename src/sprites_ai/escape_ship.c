@@ -73,7 +73,7 @@ static void EscapeShipPartUpdatePalette(u8 delay)
         }
 
         offset = MOD_AND(gCurrentSprite.work1, 128);
-        DMA_SET(3, &sEscapeShipFlashingPal[offset * 16], (PALRAM_OBJ + 9 * PAL_ROW_SIZE + (gCurrentSprite.spritesetGfxSlot * PAL_ROW_SIZE)), C_32_2_16(DMA_ENABLE, 0x10));
+        DMA3_COPY_16(&sEscapeShipFlashingPal[offset * 16], (PALRAM_OBJ + 9 * PAL_ROW_SIZE + (gCurrentSprite.spritesetGfxSlot * PAL_ROW_SIZE)), 0x10);
     }
 }
 
