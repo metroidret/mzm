@@ -8,9 +8,9 @@ const u8 sKraid_9_Scrolls[SCROLL_DATA_SIZE(1)] = {
 	// Scroll 0
 	2, 31, // X bounds
 	23, 40, // Y bounds
-	UCHAR_MAX, UCHAR_MAX, // Breakeable block position
-	UCHAR_MAX, // Breakeable block direction
-	UCHAR_MAX, // Breakeable block Y bound extension
+	UCHAR_MAX, UCHAR_MAX, // Breakable block position
+	UCHAR_MAX, // Breakable block direction
+	UCHAR_MAX, // Breakable block Y bound extension
 };
 
 const u8 sKraid_30_Clipdata[127] = INCBIN_U8("data/rooms/kraid/kraid_30_clipdata.gfx");

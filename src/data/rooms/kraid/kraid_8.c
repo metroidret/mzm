@@ -8,23 +8,23 @@ const u8 sKraid_4_Scrolls[SCROLL_DATA_SIZE(3)] = {
 	// Scroll 0
 	2, 76, // X bounds
 	2, 11, // Y bounds
-	UCHAR_MAX, UCHAR_MAX, // Breakeable block position
-	UCHAR_MAX, // Breakeable block direction
-	UCHAR_MAX, // Breakeable block Y bound extension
+	UCHAR_MAX, UCHAR_MAX, // Breakable block position
+	UCHAR_MAX, // Breakable block direction
+	UCHAR_MAX, // Breakable block Y bound extension
 
 	// Scroll 1
 	2, 30, // X bounds
 	10, 19, // Y bounds
-	UCHAR_MAX, UCHAR_MAX, // Breakeable block position
-	UCHAR_MAX, // Breakeable block direction
-	UCHAR_MAX, // Breakeable block Y bound extension
+	UCHAR_MAX, UCHAR_MAX, // Breakable block position
+	UCHAR_MAX, // Breakable block direction
+	UCHAR_MAX, // Breakable block Y bound extension
 
 	// Scroll 2
 	31, 76, // X bounds
 	11, 21, // Y bounds
-	UCHAR_MAX, UCHAR_MAX, // Breakeable block position
-	UCHAR_MAX, // Breakeable block direction
-	UCHAR_MAX, // Breakeable block Y bound extension
+	UCHAR_MAX, UCHAR_MAX, // Breakable block position
+	UCHAR_MAX, // Breakable block direction
+	UCHAR_MAX, // Breakable block Y bound extension
 };
 
 const u8 sKraid_8_Clipdata[395] = INCBIN_U8("data/rooms/kraid/kraid_8_clipdata.gfx");

@@ -8,9 +8,9 @@ const u8 sChozodia_46_Scrolls[SCROLL_DATA_SIZE(1)] = {
 	// Scroll 0
 	17, 31, // X bounds
 	1, 12, // Y bounds
-	UCHAR_MAX, UCHAR_MAX, // Breakeable block position
-	UCHAR_MAX, // Breakeable block direction
-	UCHAR_MAX, // Breakeable block Y bound extension
+	UCHAR_MAX, UCHAR_MAX, // Breakable block position
+	UCHAR_MAX, // Breakable block direction
+	UCHAR_MAX, // Breakable block Y bound extension
 };
 
 const u8 sChozodia_80_Clipdata[155] = INCBIN_U8("data/rooms/chozodia/chozodia_80_clipdata.gfx");

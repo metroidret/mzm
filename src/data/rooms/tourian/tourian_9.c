@@ -8,9 +8,9 @@ const u8 sTourian_4_Scrolls[SCROLL_DATA_SIZE(1)] = {
 	// Scroll 0
 	2, 61, // X bounds
 	8, 21, // Y bounds
-	UCHAR_MAX, UCHAR_MAX, // Breakeable block position
-	UCHAR_MAX, // Breakeable block direction
-	UCHAR_MAX, // Breakeable block Y bound extension
+	UCHAR_MAX, UCHAR_MAX, // Breakable block position
+	UCHAR_MAX, // Breakable block direction
+	UCHAR_MAX, // Breakable block Y bound extension
 };
 
 const u8 sTourian_9_Clipdata[271] = INCBIN_U8("data/rooms/tourian/tourian_9_clipdata.gfx");

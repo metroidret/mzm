@@ -8,9 +8,9 @@ const u8 sRidley_0_Scrolls[SCROLL_DATA_SIZE(1)] = {
 	// Scroll 0
 	2, 16, // X bounds
 	12, 31, // Y bounds
-	UCHAR_MAX, UCHAR_MAX, // Breakeable block position
-	2, // Breakeable block direction
-	2, // Breakeable block Y bound extension
+	UCHAR_MAX, UCHAR_MAX, // Breakable block position
+	2, // Breakable block direction
+	2, // Breakable block Y bound extension
 };
 
 const u8 sRidley_0_Clipdata[188] = INCBIN_U8("data/rooms/ridley/ridley_0_clipdata.gfx");
