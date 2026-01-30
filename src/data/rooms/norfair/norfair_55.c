@@ -8,9 +8,9 @@ const u8 sNorfair_16_Scrolls[SCROLL_DATA_SIZE(1)] = {
 	// Scroll 0
 	16, 31, // X bounds
 	2, 41, // Y bounds
-	16, 32, // Breakeable block position
-	0, // Breakeable block direction
-	2, // Breakeable block Y bound extension
+	16, 32, // Breakable block position
+	0, // Breakable block direction
+	2, // Breakable block Y bound extension
 };
 
 const u8 sNorfair_55_Clipdata[406] = INCBIN_U8("data/rooms/norfair/norfair_55_clipdata.gfx");

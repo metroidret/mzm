@@ -8,16 +8,16 @@ const u8 sBrinstar_2_Scrolls[SCROLL_DATA_SIZE(2)] = {
 	// Scroll 0
 	2, 36, // X bounds
 	2, 11, // Y bounds
-	UCHAR_MAX, UCHAR_MAX, // Breakeable block position
-	UCHAR_MAX, // Breakeable block direction
-	UCHAR_MAX, // Breakeable block Y bound extension
+	UCHAR_MAX, UCHAR_MAX, // Breakable block position
+	UCHAR_MAX, // Breakable block direction
+	UCHAR_MAX, // Breakable block Y bound extension
 
 	// Scroll 1
 	36, 61, // X bounds
 	2, 11, // Y bounds
-	UCHAR_MAX, UCHAR_MAX, // Breakeable block position
-	UCHAR_MAX, // Breakeable block direction
-	UCHAR_MAX, // Breakeable block Y bound extension
+	UCHAR_MAX, UCHAR_MAX, // Breakable block position
+	UCHAR_MAX, // Breakable block direction
+	UCHAR_MAX, // Breakable block Y bound extension
 };
 
 const u8 sBrinstar_2_Clipdata[122] = INCBIN_U8("data/rooms/brinstar/brinstar_2_clipdata.gfx");

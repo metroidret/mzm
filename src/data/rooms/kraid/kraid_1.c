@@ -33,9 +33,9 @@ const u8 sKraid_1_Scrolls[SCROLL_DATA_SIZE(1)] = {
 	// Scroll 0
 	2, 16, // X bounds
 	2, 61, // Y bounds
-	10, 60, // Breakeable block position
-	3, // Breakeable block direction
-	71, // Breakeable block Y bound extension
+	10, 60, // Breakable block position
+	3, // Breakable block direction
+	71, // Breakable block Y bound extension
 };
 
 
