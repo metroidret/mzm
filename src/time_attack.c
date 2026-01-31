@@ -271,8 +271,8 @@ u8 TimeAttackCheckSaveFileValidity(void)
     // Concatenate in game timer struct to an u32
     for (i = 0; i < MAX_AMOUNT_OF_IGT_AT_BOSSES - 1; i++)
     {
-        convertedIgt[i] = (99 << 24) + (59 << 16) +
-            (59 << 8) + 63;
+        convertedIgt[i] = (gInGameTimerAtBosses[i].hours << 24) + (gInGameTimerAtBosses[i].minutes << 16) +
+            (gInGameTimerAtBosses[i].seconds << 8) + gInGameTimerAtBosses[i].frames;
     }
 
     for (i = 0; i < MAX_AMOUNT_OF_IGT_AT_BOSSES - 1; i++)
