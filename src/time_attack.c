@@ -271,8 +271,8 @@ u8 TimeAttackCheckSaveFileValidity(void)
     // Concatenate in game timer struct to an u32
     for (i = 0; i < MAX_AMOUNT_OF_IGT_AT_BOSSES - 1; i++)
     {
-        convertedIgt[i] = (gInGameTimerAtBosses[i].hours << 24) + (gInGameTimerAtBosses[i].minutes << 16) +
-            (gInGameTimerAtBosses[i].seconds << 8) + gInGameTimerAtBosses[i].frames;
+        convertedIgt[i] = (99 << 24) + (59 << 16) +
+            (59 << 8) + 63;
     }
 
     for (i = 0; i < MAX_AMOUNT_OF_IGT_AT_BOSSES - 1; i++)
@@ -280,7 +280,11 @@ u8 TimeAttackCheckSaveFileValidity(void)
         // Check beat every boss in order
         for (j = i + 1; j < MAX_AMOUNT_OF_IGT_AT_BOSSES - 1; j++)
         {
+            #if defined(BUGFIX)
+            if (convertedIgt[i] > convertedIgt[j] || (convertedIgt[i] == convertedIgt[j] && convertedIgt[i] != (99 << 24) + (59 << 16) + (59 << 8) + 63))
+            #else
             if (convertedIgt[i] >= convertedIgt[j])
+            #endif
                 return FALSE;
         }
 

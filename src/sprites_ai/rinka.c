@@ -94,6 +94,10 @@ static void RinkaRespawn(void)
     gCurrentSprite.ignoreSamusCollisionTimer = DELTA_TIME;
     gCurrentSprite.freezeTimer = 0;
 
+    #if defined(BUGFIX)
+    gCurrentSprite.standingOnSprite = SAMUS_STANDING_ON_SPRITE_OFF;
+    #endif
+
     // Set spawn delay
     if (gCurrentSprite.status & SPRITE_STATUS_MOSAIC)
         gCurrentSprite.work1 = ONE_THIRD_SECOND; // Green rinka
@@ -419,6 +423,10 @@ static void RinkaMotherBrainRespawn(void)
     gCurrentSprite.work1 = CONVERT_SECONDS(1.f);
     gCurrentSprite.status |= SPRITE_STATUS_NOT_DRAWN | SPRITE_STATUS_IGNORE_PROJECTILES;
     gCurrentSprite.ignoreSamusCollisionTimer = DELTA_TIME;
+
+    #if defined(BUGFIX)
+    gCurrentSprite.standingOnSprite = SAMUS_STANDING_ON_SPRITE_OFF;
+    #endif
 }
 
 /**
