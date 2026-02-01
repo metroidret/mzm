@@ -22,13 +22,13 @@ These are known bugs and glitches in the game: code that clearly does not work a
   - [Ridley updates sub sprite data even if he's dead](#ridley-updates-sub-sprite-data-even-if-hes-dead)
   - [The first frame of power bomb explosions has a visual bug](#the-first-frame-of-power-bomb-explosions-has-a-visual-bug)
   - [The fully powered suit cutscene fades to black after fading to white](#the-fully-powered-suit-cutscene-fades-to-black-after-fading-to-white)
+  - [Reaching the maximum in-game time causes the time attack password to be invalid](#reaching-the-maximum-in-game-time-causes-the-time-attack-password-to-be-invalid)
+  - [Samus can warp when standing on multiple enemies and one is killed](#samus-can-warp-when-standing-on-multiple-enemies-and-one-is-killed)
 - [Oversights and Design Flaws](#oversights-and-design-flaws)
   - [Floating point math is used when fixed point could have been used](#floating-point-math-is-used-when-fixed-point-could-have-been-used)
   - [`ClipdataConvertToCollision` is copied to RAM but still runs in ROM](#clipdataconverttocollision-is-copied-to-ram-but-still-runs-in-rom)
   - [Upgrading suit cutscene code is still called after the cutscene ends](#upgrading-suit-cutscene-code-is-still-called-after-the-cutscene-ends)
   - [Game always boots in mono even if stereo is enabled in settings](#game-always-boots-in-mono-even-if-stereo-is-enabled-in-settings)
-  - [It is possible to get an invalid time attack password without cheating, because the time attack anti-cheat check doesn't check whether maximum ingame time was reached](#it-is-possible-to-get-an-invalid-time-attack-password-without-cheating-because-the-time-attack-anti-cheat-check-doesnt-check-whether-maximum-ingame-time-was-reached)
-  - [Warping when Samus stands on multiple respawning enemies and kills one ([video](https://youtu.be/WfxkYSPTjWw))](#warping-when-samus-stands-on-multiple-respawning-enemies-and-kills-one-([video](https://youtu.be/WfxkYSPTjWw)))
 - [Uninitialized Variables](#uninitialized-variables)
 - [TODO](#todo)
   - [Bugs](#bugs-1)
@@ -327,18 +327,26 @@ At the start of the fully powered suit cutscene (after Samus is locked in place)
   SET_BACKDROP_COLOR(COLOR_BLACK);
 ```
 
-### It is possible to get an invalid time attack password without cheating, because the time attack anti-cheat check doesn't check whether maximum ingame time was reached
+### Reaching the maximum in-game time causes the time attack password to be invalid
 
-**Fix:** Edit the if statement in line 283 in `TimeAttackCheckSaveFileValidity` in [time_attack.c](../src/time_attack.c) to check if max ingame time was reached if the times are equal.
+When checking if a time attack safe file is valid, the game makes sure the bosses were beat in order. However, the time each boss was beat can be the same if the max in-game time was reached.
+
+**Fix:** Edit `TimeAttackCheckSaveFileValidity` in [time_attack.c](../src/time_attack.c) to check if the max in-game time was reached if the times are equal.
 
 ```diff
--            if (convertedIgt[i] >= convertedIgt[j])
-+            if (convertedIgt[i] > convertedIgt[j] || (convertedIgt[i] == convertedIgt[j] && convertedIgt[i] != (99 << 24) + (59 << 16) + (59 << 8) + 63))
+- if (convertedIgt[i] >= convertedIgt[j])
++ if (convertedIgt[i] > convertedIgt[j] ||
++     (convertedIgt[i] == convertedIgt[j] && convertedIgt[i] != (99 << 24) + (59 << 16) + (59 << 8) + 63))
+  {
+      return FALSE;
+  }
 ```
 
-### Warping when Samus stands on multiple respawning enemies and kills one ([video](https://youtu.be/WfxkYSPTjWw))
+### Samus can warp when standing on multiple enemies and one is killed
 
-**Fix:** Edit `GametRespawn(void)` in [gamet.c](../src/sprite_ai/gamet.c), `GeegaRespawn(void)` in [geega.c](../src/sprite_ai/geega.c), `RinkaRespawn(void)` and `RinkaMotherBrainRespawn(void)` in [rinka.c](../src/sprite_ai/rinka.c), `ZebRespawn(void)` in [zeb.c](../src/sprite_ai/zeb.c) and `ZebboRespawn(void)` in [zebbo.c](../src/sprite_ai/zebbo.c) to clear the standing on sprite flag when the enemy respawns.
+When Samus stands on two enemies and kills one that respawns, the enemy's standing status isn't updated, so Samus is still considered to be standing on the enemy. This warps Samus to the enemy's Y position.
+
+**Fix:** Edit `GametRespawn` in [gamet.c](../src/sprites_ai/gamet.c), `GeegaRespawn` in [geega.c](../src/sprites_ai/geega.c), `RinkaRespawn` and `RinkaMotherBrainRespawn` in [rinka.c](../src/sprites_ai/rinka.c), `ZebRespawn` in [zeb.c](../src/sprites_ai/zeb.c), and `ZebboRespawn` in [zebbo.c](../src/sprites_ai/zebbo.c) to clear the standing on sprite flag when the enemy respawns.
 
 ```diff
 + gCurrentSprite.standingOnSprite = SAMUS_STANDING_ON_SPRITE_OFF;

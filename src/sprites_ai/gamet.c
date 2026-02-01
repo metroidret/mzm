@@ -217,9 +217,9 @@ static void GametRespawn(void)
     gCurrentSprite.ignoreSamusCollisionTimer = DELTA_TIME;
     gCurrentSprite.freezeTimer = 0;
 
-    #if defined(BUGFIX)
+    #ifdef BUGFIX
     gCurrentSprite.standingOnSprite = SAMUS_STANDING_ON_SPRITE_OFF;
-    #endif
+    #endif // BUGFIX
 }
 
 /**
