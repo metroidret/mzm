@@ -325,6 +325,23 @@ At the start of the fully powered suit cutscene (after Samus is locked in place)
   SET_BACKDROP_COLOR(COLOR_BLACK);
 ```
 
+### It is possible to get an invalid time attack password without cheating, because the time attack anti-cheat check doesn't check wheather maximum ingame time was reached
+
+**Fix:** Edit the if statement in line 283 in `TimeAttackCheckSaveFileValidity` in [time_attack.c](../src/time_attack.c) to check if max ingame time was reached if the times are equal.
+
+```diff
+-            if (convertedIgt[i] >= convertedIgt[j])
++            if (convertedIgt[i] > convertedIgt[j] || (convertedIgt[i] == convertedIgt[j] && convertedIgt[i] != (99 << 24) + (59 << 16) + (59 << 8) + 63))
+```
+
+### Warping when Samus stands on multiple respawning enemies and kills one ([video](https://youtu.be/WfxkYSPTjWw))
+
+**Fix:** Edit `GametRespawn(void)` in [gamet.c](../src/sprite_ai/gamet.c), `GeegaRespawn(void)` in [geega.c](../src/sprite_ai/geega.c), `RinkaRespawn(void)` and `RinkaMotherBrainRespawn(void)` in [rinka.c](../src/sprite_ai/rinka.c), `ZebRespawn(void)` in [zeb.c](../src/sprite_ai/zeb.c) and `ZebboRespawn(void)` in [zebbo.c](../src/sprite_ai/zebbo.c) to clear the standing on sprite flag when the enemy respawns.
+
+```diff
++ gCurrentSprite.standingOnSprite = SAMUS_STANDING_ON_SPRITE_OFF;
+```
+
 
 ## Oversights and Design Flaws
 
@@ -409,22 +426,6 @@ The last cutscene stage for upgrading your suit (obtaining Varia or the fully po
 + FileSelectApplyStereo();
 ```
 
-### It is possible to get an invalid time attack password without cheating, because the time attack anti-cheat check doesn't check wheather maximum ingame time was reached
-
-**Fix:** Edit the if statement in line 283 in `TimeAttackCheckSaveFileValidity` in [time_attack.c](../src/time_attack.c) to check if max ingame time was reached if the times are equal.
-
-```diff
--            if (convertedIgt[i] >= convertedIgt[j])
-+            if (convertedIgt[i] > convertedIgt[j] || (convertedIgt[i] == convertedIgt[j] && convertedIgt[i] != (99 << 24) + (59 << 16) + (59 << 8) + 63))
-```
-
-### Warping when Samus stands on multiple respawning enemies and kills one ([video](https://youtu.be/WfxkYSPTjWw))
-
-**Fix:** Edit `GametRespawn(void)` in [gamet.c](../src/sprite_ai/gamet.c), `GeegaRespawn(void)` in [geega.c](../src/sprite_ai/geega.c), `RinkaRespawn(void)` and `RinkaMotherBrainRespawn(void)` in [rinka.c](../src/sprite_ai/rinka.c), `ZebRespawn(void)` in [zeb.c](../src/sprite_ai/zeb.c) and `ZebboRespawn(void)` in [zebbo.c](../src/sprite_ai/zebbo.c) to clear the standing on sprite flag when the enemy respawns.
-
-```diff
-+ gCurrentSprite.standingOnSprite = SAMUS_STANDING_ON_SPRITE_OFF;
-```
 
 ## Uninitialized Variables
 
