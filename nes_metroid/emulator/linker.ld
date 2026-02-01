@@ -10,7 +10,7 @@ SECTIONS {
     __rom_cursor = .;
 
     .rom_text 0x08000000 : AT(__rom_cursor) {
-        asm/asm.o(.text);
+        asm/part0.o(.text);
     } > rom
     __rom_cursor += SIZEOF(.rom_text);
 
