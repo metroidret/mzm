@@ -239,20 +239,20 @@ _03002990: .4byte sub_03002E38 @ Addresses $EXXX-$FXXX (ROM)
 _03002994: .4byte sub_03002E38 @ Addresses $CXXX-$DXXX (ROM)
 _03002998: .4byte sub_03002E38 @ Addresses $AXXX-$BXXX (ROM)
 _0300299C: .4byte sub_03002E38 @ Addresses $8XXX-$9XXX (ROM)
-_030029A0: .4byte sub_03002E2C @ Addresses $6XXX-$7XXX (RAM)
+_030029A0: .4byte sub_03002E2C @ Addresses $6XXX-$7XXX (WRAM)
 _030029A4: .4byte sub_03002EFC @ Addresses $4XXX-$5XXX (APU/2A03)
 _030029A8: .4byte sub_03002E44 @ Addresses $2XXX-$3XXX (PPU)
 
 	.global _030029AC
-_030029AC: .4byte 0x00000000
-_030029B0: .4byte 0x00000000
-_030029B4: .4byte 0x00000000
-_030029B8: .4byte 0x00000000
-_030029BC: .4byte 0x00000000
-_030029C0: .4byte 0x00000000
-_030029C4: .4byte 0x00000000
-_030029C8: .4byte 0x00000000
-_030029CC: .4byte 0x00000000
+_030029AC: .4byte 0x00000000 @ Addresses $0XXX-$1XXX (RAM) (usually 0x06030072)
+_030029B0: .4byte 0x00000000 @ Addresses $2XXX-$3XXX (PPU) (usually 0x00000000)
+_030029B4: .4byte 0x00000000 @ Addresses $4XXX-$5XXX (APU/2A03) (usually 0x00000000)
+_030029B8: .4byte 0x00000000 @ Addresses $6XXX-$7XXX (WRAM) (usually 0x06020360)
+_030029BC: .4byte 0x00000000 @ Addresses $8XXX-$9XXX (ROM) (usually 0x06020140 or 0x06020180)
+_030029C0: .4byte 0x00000000 @ Addresses $AXXX-$BXXX (ROM) (usually 0x06020140 or 0x06020180)
+_030029C4: .4byte 0x00000000 @ Addresses $CXXX-$DXXX (ROM) (usually 0x060202C0)
+_030029C8: .4byte 0x00000000 @ Addresses $EXXX-$FXXX (ROM) (usually 0x060202C0)
+_030029CC: .4byte 0x00000000 @ Addresses $1XXXX-$11XXX (usually 0x0602FF72)
 
 	@ Writes
 _030029D0: .4byte sub_0600B000 @ Addresses $1XXXX-$11XXX (Is this possible?)
@@ -260,7 +260,7 @@ _030029D4: .4byte sub_03005844 @ Addresses $EXXX-$FXXX (ROM)
 _030029D8: .4byte sub_03005844 @ Addresses $CXXX-$DXXX (ROM)
 _030029DC: .4byte sub_03005844 @ Addresses $AXXX-$BXXX (ROM)
 _030029E0: .4byte sub_03005844 @ Addresses $8XXX-$9XXX (ROM)
-_030029E4: .4byte sub_03003044 @ Addresses $6XXX-$7XXX (RAM)
+_030029E4: .4byte sub_03003044 @ Addresses $6XXX-$7XXX (WRAM)
 _030029E8: .4byte sub_030033A4 @ Addresses $4XXX-$5XXX (APU/2A03)
 _030029EC: .4byte sub_0300305C @ Addresses $2XXX-$3XXX (PPU)
 
@@ -554,7 +554,7 @@ sub_03002E0C: @ 0x03002E0C
 	@ Goto r12[r1]
 	ldr pc, [r12, r1, lsl #2]
 
-	@ Reads from RAM
+	@ Reads from WRAM
 	arm_func_start sub_03002E2C
 sub_03002E2C: @ 0x03002E2C
 	ldr r1, [sp, #SP_858]
@@ -718,7 +718,7 @@ sub_03003034: @ 0x03003034
 	ldrlt pc, [r12, r1, lsl #2]
 	b _03005398
 
-	@ Writes to RAM
+	@ Writes to WRAM
 	arm_func_start sub_03003044
 sub_03003044: @ 0x03003044
 	ldr r2, [sp, #SP_858]
@@ -776,62 +776,64 @@ sub_03003088: @ 0x03003088
 
 	arm_func_start sub_030030E8
 sub_030030E8: @ 0x030030E8
+	@ if r1 is between 0x06015400 and 0x06015540, return
 	ldr r3, _030031CC @ =0x06015400
 	cmp r1, r3
 	blo _03003100
 	ldr r3, _030031D0 @ =0x06015540
 	cmp r1, r3
 	bxlo lr
+
 _03003100:
-	ldm r1, {r3, r4, r5, r6, r7, r8, r9, r10}
-	sub r11, r1, #0x4000
+	ldm r1, {r3, r4, r5, r6, r7, r8, r9, r10} @ load r3-r10 from r1
+	sub r11, r1, #0x4000 @ r11 = r1 - 0x4000
 	mov r12, #0x7c00
-	orr r12, r12, #0x6000000
+	orr r12, r12, #0x6000000 @ r12 = 0x06007C00
 	and r0, r3, #0xff
 	ldr r0, [r12, r0, lsl #2]
 	and r1, r7, #0xff
 	ldr r1, [r12, r1, lsl #2]
-	orr r1, r0, r1, lsl #1
+	orr r1, r0, r1, lsl #1 @ r1 = r12[r3 & 0xFF] | (r12[r7 & 0xFF] << 1)
 	and r3, r3, #0xff0000
 	ldr r3, [r12, r3, lsr #14]
 	and r7, r7, #0xff0000
 	ldr r7, [r12, r7, lsr #14]
-	orr r2, r3, r7, lsl #1
+	orr r2, r3, r7, lsl #1 @ r2 = r12[(r3 & 0xFF0000) >> 14] | (r12[(r7 & 0xFF0000) >> 14] << 1)
 	and r0, r4, #0xff
 	ldr r0, [r12, r0, lsl #2]
 	and r7, r8, #0xff
 	ldr r7, [r12, r7, lsl #2]
-	orr r3, r0, r7, lsl #1
+	orr r3, r0, r7, lsl #1 @ r3 = r12[r4 & 0xFF] | (r12[r8 & 0xFF] << 1)
 	and r4, r4, #0xff0000
 	ldr r4, [r12, r4, lsr #14]
 	and r8, r8, #0xff0000
 	ldr r8, [r12, r8, lsr #14]
-	orr r4, r4, r8, lsl #1
+	orr r4, r4, r8, lsl #1 @ r4 = r12[(r4 & 0xFF0000) >> 14] | (r12[(r8 & 0xFF0000) >> 14] << 1)
 	and r0, r6, #0xff
 	ldr r0, [r12, r0, lsl #2]
 	and r7, r10, #0xff
 	ldr r7, [r12, r7, lsl #2]
-	orr r7, r0, r7, lsl #1
+	orr r7, r0, r7, lsl #1 @ r7 = r12[r6 & 0xFF] | (r12[r10 & 0xFF] << 1)
 	and r6, r6, #0xff0000
 	ldr r6, [r12, r6, lsr #14]
 	and r10, r10, #0xff0000
 	ldr r10, [r12, r10, lsr #14]
-	orr r8, r6, r10, lsl #1
+	orr r8, r6, r10, lsl #1 @ r8 = r12[(r6 & 0xFF0000) >> 14] | (r12[(r10 & 0xFF0000) >> 14] << 1)
 	and r0, r5, #0xff0000
 	ldr r0, [r12, r0, lsr #14]
 	and r6, r9, #0xff0000
 	ldr r6, [r12, r6, lsr #14]
-	orr r6, r0, r6, lsl #1
+	orr r6, r0, r6, lsl #1 @ r6 = r12[r5 & 0xFF] | (r12[r9 & 0xFF] << 1)
 	and r5, r5, #0xff
 	ldr r5, [r12, r5, lsl #2]
 	and r9, r9, #0xff
 	ldr r9, [r12, r9, lsl #2]
-	orr r5, r5, r9, lsl #1
-	stm r11, {r1, r2, r3, r4, r5, r6, r7, r8}
+	orr r5, r5, r9, lsl #1 @ r5 = r12[(r5 & 0xFF0000) >> 14] | (r12[(r9 & 0xFF0000) >> 14] << 1)
+	stm r11, {r1, r2, r3, r4, r5, r6, r7, r8} @ store r1-r8 to r11
 	tst r11, #0x2000
-	subeq r11, r11, #0x10000
-	subne r11, r11, #0xe000
-	stm r11, {r1, r2, r3, r4, r5, r6, r7, r8}
+	subeq r11, r11, #0x10000 @ if (r11 & 0x2000) == 0: r11 -= 0x10000
+	subne r11, r11, #0xe000  @ else: r11 -= 0xE000
+	stm r11, {r1, r2, r3, r4, r5, r6, r7, r8} @ store r1-r8 to r11
 	bx lr
 	.align 2, 0
 _030031C8: .4byte EmulatorAudio_GetActiveChannels

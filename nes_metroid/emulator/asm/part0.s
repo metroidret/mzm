@@ -3,4 +3,4 @@
 
     .syntax unified
 
-	.incbin "asm/part0.bin"
+    .zero 0x80
