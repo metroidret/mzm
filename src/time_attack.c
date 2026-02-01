@@ -280,7 +280,11 @@ u8 TimeAttackCheckSaveFileValidity(void)
         // Check beat every boss in order
         for (j = i + 1; j < MAX_AMOUNT_OF_IGT_AT_BOSSES - 1; j++)
         {
+            #if defined(BUGFIX)
+            if (convertedIgt[i] > convertedIgt[j] || (convertedIgt[i] == convertedIgt[j] && convertedIgt[i] != (99 << 24) + (59 << 16) + (59 << 8) + 63))
+            #else
             if (convertedIgt[i] >= convertedIgt[j])
+            #endif
                 return FALSE;
         }
 
