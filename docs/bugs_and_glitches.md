@@ -27,6 +27,8 @@ These are known bugs and glitches in the game: code that clearly does not work a
   - [`ClipdataConvertToCollision` is copied to RAM but still runs in ROM](#clipdataconverttocollision-is-copied-to-ram-but-still-runs-in-rom)
   - [Upgrading suit cutscene code is still called after the cutscene ends](#upgrading-suit-cutscene-code-is-still-called-after-the-cutscene-ends)
   - [Game always boots in mono even if stereo is enabled in settings](#game-always-boots-in-mono-even-if-stereo-is-enabled-in-settings)
+  - [It is possible to get an invalid time attack password without cheating, because the time attack anti-cheat check doesn't check whether maximum ingame time was reached](#it-is-possible-to-get-an-invalid-time-attack-password-without-cheating-because-the-time-attack-anti-cheat-check-doesnt-check-whether-maximum-ingame-time-was-reached)
+  - [Warping when Samus stands on multiple respawning enemies and kills one ([video](https://youtu.be/WfxkYSPTjWw))](#warping-when-samus-stands-on-multiple-respawning-enemies-and-kills-one-([video](https://youtu.be/WfxkYSPTjWw)))
 - [Uninitialized Variables](#uninitialized-variables)
 - [TODO](#todo)
   - [Bugs](#bugs-1)
@@ -325,7 +327,7 @@ At the start of the fully powered suit cutscene (after Samus is locked in place)
   SET_BACKDROP_COLOR(COLOR_BLACK);
 ```
 
-### It is possible to get an invalid time attack password without cheating, because the time attack anti-cheat check doesn't check wheather maximum ingame time was reached
+### It is possible to get an invalid time attack password without cheating, because the time attack anti-cheat check doesn't check whether maximum ingame time was reached
 
 **Fix:** Edit the if statement in line 283 in `TimeAttackCheckSaveFileValidity` in [time_attack.c](../src/time_attack.c) to check if max ingame time was reached if the times are equal.
 
