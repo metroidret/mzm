@@ -682,22 +682,53 @@ _03002F94:
 	orrne r3, r3, #4
 	mov pc, lr
 
+	@ Convert GBA keys into NES keys
+	@ r0 = GBA keys
     arm_func_start sub_03002FAC
 sub_03002FAC: @ 0x03002FAC
 	lsl r1, r0, #0x1c
-	add r2, pc, r1, lsr #27
-	ldrh r3, [r2, #0x18]
+	add r2, pc, r1, lsr #0x1B
+	ldrh r3, [r2, #0x18] @ r3 = _03002FD0[LOW_NYBBLE((u8)r0)]
 	and r1, r0, #0xf0
 	add r2, pc, r1, lsr #3
-	ldrh r4, [r2, #0x2c]
+	ldrh r4, [r2, #0x2c] @ r4 = _03002FF0[HIGH_NYBBLE((u8)r0)]
 	orr r3, r3, r4
-	strb r3, [sp, #SP_823]
+	strb r3, [sp, #SP_823] @ SP_823 = r3 | r4
 	bx lr
 _03002FD0:
-	.byte 0x00, 0x00, 0x80, 0x00, 0x40, 0x00, 0xC0, 0x00, 0x20, 0x00, 0xA0, 0x00, 0x60, 0x00, 0xE0, 0x00
-	.byte 0x10, 0x00, 0x90, 0x00, 0x50, 0x00, 0xD0, 0x00, 0x30, 0x00, 0xB0, 0x00, 0x70, 0x00, 0xF0, 0x00
-	.byte 0x00, 0x00, 0x01, 0x00, 0x02, 0x00, 0x00, 0x00, 0x08, 0x00, 0x09, 0x00, 0x0A, 0x00, 0x00, 0x00
-	.byte 0x04, 0x00, 0x05, 0x00, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+	.2byte 0x0000 @ 0
+	.2byte 0x0080 @ A
+	.2byte 0x0040 @ B
+	.2byte 0x00C0 @ B|A
+	.2byte 0x0020 @ SE
+	.2byte 0x00A0 @ SE|A
+	.2byte 0x0060 @ SE|B
+	.2byte 0x00E0 @ SE|B|A
+	.2byte 0x0010 @ ST
+	.2byte 0x0090 @ ST|A
+	.2byte 0x0050 @ ST|B
+	.2byte 0x00D0 @ ST|B|A
+	.2byte 0x0030 @ ST|SE
+	.2byte 0x00B0 @ ST|SE|A
+	.2byte 0x0070 @ ST|SE|B
+	.2byte 0x00F0 @ ST|SE|B|A
+_03002FF0:
+	.2byte 0x0000 @ 0
+	.2byte 0x0001 @ R
+	.2byte 0x0002 @ L
+	.2byte 0x0000 @ L|R
+	.2byte 0x0008 @ U
+	.2byte 0x0009 @ U|R
+	.2byte 0x000A @ U|L
+	.2byte 0x0000 @ U|L|R
+	.2byte 0x0004 @ D
+	.2byte 0x0005 @ D|R
+	.2byte 0x0006 @ D|L
+	.2byte 0x0000 @ D|L|R
+	.2byte 0x0000 @ D|U
+	.2byte 0x0000 @ D|U|R
+	.2byte 0x0000 @ D|U|L
+	.2byte 0x0000 @ D|U|L|R
 _03003010:
 	ldr r2, [sp, #SP_82C]
 	mov r3, #0x40
@@ -705,7 +736,6 @@ _03003010:
 	ldrb r1, [sp, #SP_A3B]
 	tst r1, #1
 	movne pc, lr
-_03003028:
 	lsl r2, r2, #1
 	str r2, [sp, #SP_82C]
 	mov pc, lr
@@ -1003,15 +1033,15 @@ sub_030033F8: @ 0x030033F8
 	lsr r0, r1, #0xd
 	ldr r0, [r11, r0, lsl #2]
 	add r0, r0, r1
-	lsl r0, r0, #8
+	lsl r0, r0, #8 @ r0 = (_030029AC[r1 >> 13] + r1) << 8
 	mov r1, #0x6700
 	orr r1, r1, #0x6000000
 	mov r2, #-0x7c000000
 	orr r2, r2, #0x40
-	stm lr, {r0, r1, r2}
+	stm lr, {r0, r1, r2} @ DMA3(src=r0, dst=0x06006700, cnt=Enable, 32bit, 0x100 bytes)
 	ldr r0, [sp, #SP_8B4]
-	cmp r0, #0x80
-	addlt r0, r0, #4
+	cmp r0, #0x80         @ if SP_8B4 < 0x80:
+	addlt r0, r0, #4          @ SP_8B4 += 4
 	str r0, [sp, #SP_8B4]
 	adds r4, r4, #0x38000000
 	ldrblt r1, [r5], #1
@@ -1070,7 +1100,7 @@ _030034B8:
 
 @ Register usage:
 @ r0-r3 are scratch
-@ r4 seems to be a set of flags (TODO: possibly status register?)
+@ r4 top 2 bytes is the cycle counter (TODO: what are the rest of the bytes?)
 @ r5 points to code execution (ROM)
 @ r6 is likely the NES stack pointer (TODO: confirm)
 @ r7 is used for Register A
@@ -3241,9 +3271,9 @@ _03005394: .4byte 0xA2600002
     arm_func_start _03005398
 _03005398: @ 0x03005398
 	ldr r12, [sp, #SP_8B4]
-	cmp r12, #0xf0 @ if SP_8B4 > 0xF0:
+	cmp r12, #0xf0 @ if SP_8B4 >= 0xF0:
 	bhs _0300552C     @ goto _0300552C
-	cmp r12, #0xe2 @ if SP_8B4 > 0xE2:
+	cmp r12, #0xe2 @ if SP_8B4 >= 0xE2:
 	bhs _03005478     @ goto _03005478
 	subs r0, r12, #0xc @ r0 = SP_8B4 - 0xC
 	ldrlo r0, [sp, #SP_9C0] @ if r0 < 0: r0 = SP_9C0

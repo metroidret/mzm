@@ -270,8 +270,8 @@ _0600E238: .4byte sub_03000368
 _0600E23C:
 	bl sub_0600EBF8
 _0600E240:
-	add lr, pc, #0x9C @ =_0600E2E4
-	str lr, [sp, #SP_940] @ SP_940 = &_0600E2E4
+	add lr, pc, #0x9C @ =sub_0600E2E4
+	str lr, [sp, #SP_940] @ SP_940 = &sub_0600E2E4
 _0600E248:
 	ldrb r0, [sp, #SP_A30]
 	cmp r0, #0    @ if SP_A30 == 0:
@@ -336,7 +336,10 @@ sub_0600E2C4: @ 0x0600E2C4
 	strb r0, [sp, #SP_A44]
 _0600E2E0:
 	ldr pc, [sp, #SP_940]
-_0600E2E4:
+
+	arm_func_start sub_0600E2E4
+sub_0600E2E4: @ 0x0600E2E4
+	@ EmulatorReplaceCopyrightYear()
 	add lr, pc, #0x8 @ =sub_0600E2F4
 	ldr r12, _0600E2F0 @ =EmulatorReplaceCopyrightYear
 	bx r12
@@ -345,6 +348,7 @@ _0600E2F0: .4byte EmulatorReplaceCopyrightYear
 
 	arm_func_start sub_0600E2F4
 sub_0600E2F4: @ 0x0600E2F4
+	@ EmulatorFillPasswordWithSaved(sp)
 	mov r0, sp
 	add lr, pc, #0x8 @ =sub_0600E308
 	ldr r12, _0600E304 @ =EmulatorFillPasswordWithSaved
@@ -354,6 +358,7 @@ _0600E304: .4byte EmulatorFillPasswordWithSaved
 
 	arm_func_start sub_0600E308
 sub_0600E308: @ 0x0600E308
+	@ r0 = EmulatorRetrieveGameOverPassword(sp)
 	mov r0, sp
 	add lr, pc, #0x8 @ =sub_0600E31C
 	ldr r12, _0600E318 @ =EmulatorRetrieveGameOverPassword
@@ -363,8 +368,8 @@ _0600E318: .4byte EmulatorRetrieveGameOverPassword
 
 	arm_func_start sub_0600E31C
 sub_0600E31C: @ 0x0600E31C
-	cmp r0, #0
-	bne _0600E588
+	cmp r0, #0    @ if r0 != 0 (password retrieved):
+	bne _0600E588     @ goto _0600E588
 	ldrb r1, [sp, #SP_A33]
 	cmp r1, #0
 	bne _0600E340
@@ -413,7 +418,7 @@ sub_0600E3A0: @ 0x0600E3A0
 	b _0600E248
 _0600E3B8:
 	mov r0, #0x41
-	bl sub_06006E08
+	bl sub_06006E08 @ sub_06006E08(0x40|1) (Menu text)
 	mov r0, #0
 	strb r0, [sp, #SP_A45]
 	strb r0, [sp, #SP_A43]
@@ -566,7 +571,7 @@ _0600E580: .4byte sub_03002DF0
 _0600E584: .4byte 0x0000C399
 _0600E588:
 	mov r0, #0x9c
-	bl sub_06006E08
+	bl sub_06006E08 @ sub_06006E08(0x80|0x1C) (Clear text, then Game Over Save Request text)
 	mov r1, #0
 	strb r1, [sp, #SP_A43]
 	mov r0, #0x10
@@ -586,10 +591,10 @@ _0600E588:
 	tst r0, #2
 	movne r1, #1
 	strb r1, [sp, #SP_A43]
-	tst r1, #1
-	moveq r0, #0x1d
-	movne r0, #0x1e
-	bl sub_06006E08
+	tst r1, #1      @ if (r1 & 1) == 0:
+	moveq r0, #0x1d     @ sub_06006E08(0x1D) (Game Over Select Yes text)
+	movne r0, #0x1e @ else:
+	bl sub_06006E08     @ sub_06006E08(0x1E) (Game Over Select No text)
 	ldr r0, [sp, #SP_910]
 	tst r0, #0xb
 	beq _0600E3D8
@@ -600,7 +605,7 @@ _0600E588:
 	b _0600E6DC
 _0600E60C:
 	mov r0, #0x9f
-	bl sub_06006E08
+	bl sub_06006E08 @ sub_06006E08(0x80|0x1F) (Clear text, then Game Over Continue text)
 	bl sub_0600EB18
 	mov r1, #0
 	strb r1, [sp, #SP_A43]
@@ -612,10 +617,10 @@ _0600E60C:
 	tst r0, #2
 	movne r1, #1
 	strb r1, [sp, #SP_A43]
-	tst r1, #1
-	moveq r0, #0x1d
-	movne r0, #0x1e
-	bl sub_06006E08
+	tst r1, #1      @ if (r1 & 1) == 0:
+	moveq r0, #0x1d     @ sub_06006E08(0x1D) (Game Over Select Yes text)
+	movne r0, #0x1e @ else:
+	bl sub_06006E08     @ sub_06006E08(0x1E) (Game Over Select No text)
 	ldr r0, [sp, #SP_910]
 	tst r0, #0xb
 	beq _0600E3D8
@@ -628,7 +633,7 @@ _0600E60C:
 	arm_func_start sub_0600E670
 sub_0600E670: @ 0x0600E670
 	mov r0, #0xa0
-	bl sub_06006E08
+	bl sub_06006E08 @ sub_06006E08(0x80|0x20) (Clear text, then Reset Menu text)
 	mov r1, #1
 	strb r1, [sp, #SP_A43]
 	bl _0600E3D4
@@ -639,16 +644,16 @@ sub_0600E670: @ 0x0600E670
 	tst r0, #2
 	movne r1, #1
 	strb r1, [sp, #SP_A43]
-	tst r1, #1
-	moveq r0, #0x1a
-	movne r0, #0x1b
-	bl sub_06006E08
+	tst r1, #1      @ if (r1 & 1) == 0:
+	moveq r0, #0x1a     @ sub_06006E08(0x1A) (Menu Select Yes text)
+	movne r0, #0x1b @ else:
+	bl sub_06006E08     @ sub_06006E08(0x1B) (Menu Select No text)
 	ldr r0, [sp, #SP_910]
 	tst r0, #0xb
 	beq _0600E3D8
 	strb r0, [sp, #SP_A44]
 	mov r0, #0x80
-	bl sub_06006E08
+	bl sub_06006E08 @ sub_06006E08(0x80) (Clear text)
 	ldrb r1, [sp, #SP_A43]
 	tst r1, #1
 	beq _0600EB40
@@ -660,15 +665,15 @@ _0600E6DC:
 	ldr r1, [r12, #0x200]
 	str r1, [sp, #SP_944]
 	mov r0, #0x10
-	bl sub_06006E08
+	bl sub_06006E08 @ sub_06006E08(0x10) (No text)
 	add lr, pc, #0x4 @ =sub_0600E700
 	ldr r12, _0600E7B0 @ =sub_0203E390
 	bx r12
 
 	arm_func_start sub_0600E700
 sub_0600E700: @ 0x0600E700
-	cmp r0, #0
-	movne r0, #0x18
+	cmp r0, #0        @ if r0 != 0:
+	movne r0, #0x18       @ sub_06006E08(0x18) (Sleep Mode text)
 	blne sub_06006E08
 	mov r12, #0x5000000
 	mov r0, #0
@@ -798,10 +803,10 @@ _0600E868:
 	strbne r1, [sp, #SP_A47]
 	bne _0600E3D8
 	ldr r0, [sp, #SP_9AC]
-	cmp r0, #0
-	moveq r0, #0x8e
-	movne r0, #0x8f
-	blne sub_06006E08
+	cmp r0, #0        @ if r0 == 0:
+	moveq r0, #0x8e       @ sub_06006E08(0x80|0xE) (Clear text, then Sleep Mode text)
+	movne r0, #0x8f   @ else:
+	blne sub_06006E08     @ sub_06006E08(0x80|0xF) (Clear text, then Sleep Mode text)
 	bl sub_0600EB18
 	ldrb r0, [sp, #SP_A41]
 	cmp r0, #0
@@ -826,7 +831,7 @@ _0600E914:
 	mov r0, #0
 	bl sub_0600EB1C
 	mov r0, #0x80
-	bl sub_06006E08
+	bl sub_06006E08 @ sub_06006E08(0x80) (Clear text)
 	b _0600E3D8
 	.align 2, 0
 _0600E938: .4byte sub_0600E440
@@ -867,7 +872,7 @@ sub_0600E960: @ 0x0600E960
 	mov r1, #1
 	strh r1, [r2]
 	mov r0, #0x42
-	bl sub_06006E08
+	bl sub_06006E08 @ sub_06006E08(0x40|2) (Error text)
 	mov r0, #0
 	svc #0x190000
 	svc #0x30000
@@ -904,7 +909,7 @@ sub_0600E960: @ 0x0600E960
 	strbne r0, [sp, #SP_A47]
 	ldrne pc, [sp, #SP_9BC]
 	mov r0, #0x80
-	bl sub_06006E08
+	bl sub_06006E08 @ sub_06006E08(0x80) (Clear text)
 	bl sub_0600EB04
 	b _0600E240
 _0600EA58:
@@ -983,7 +988,7 @@ sub_0600EB1C: @ 0x0600EB1C
 	bx lr
 _0600EB34:
 	mov r0, #0x80
-	bl sub_06006E08
+	bl sub_06006E08 @ sub_06006E08(0x80) (Clear text)
 	b _0600ECFC
 _0600EB40:
 	bl sub_0600EC4C
@@ -1092,7 +1097,7 @@ _0600EC8C: .4byte EmulatorLoadFromPasswordBytes
 	arm_func_start sub_0600EC90
 sub_0600EC90: @ 0x0600EC90
 	mov r0, #0x99
-	bl sub_06006E08
+	bl sub_06006E08 @ sub_06006E08(0x80|0x19) (Clear text, then Quit Menu text)
 	mov r1, #1
 	strb r1, [sp, #SP_A43]
 	bl _0600E3D4
@@ -1103,10 +1108,10 @@ sub_0600EC90: @ 0x0600EC90
 	tst r0, #2
 	movne r1, #1
 	strb r1, [sp, #SP_A43]
-	tst r1, #1
-	moveq r0, #0x1a
-	movne r0, #0x1b
-	bl sub_06006E08
+	tst r1, #1      @ if (r1 & 1) == 0:
+	moveq r0, #0x1a     @ sub_06006E08(0x1A) (Menu Select Yes text)
+	movne r0, #0x1b @ else:
+	bl sub_06006E08     @ sub_06006E08(0x1B) (Menu Select No text)
 	ldr r0, [sp, #SP_910]
 	tst r0, #0xb
 	beq _0600E3D8
@@ -1116,7 +1121,7 @@ sub_0600EC90: @ 0x0600EC90
 _0600ECE8:
 	strb r0, [sp, #SP_A44]
 	mov r0, #0x80
-	bl sub_06006E08
+	bl sub_06006E08 @ sub_06006E08(0x80) (Clear text)
 	ldr lr, _0600ED0C @ =sub_0600E440
 	b _0600E3D4
 _0600ECFC:

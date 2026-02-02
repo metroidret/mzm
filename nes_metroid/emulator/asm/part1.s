@@ -543,16 +543,27 @@ _060069F8:
 _06006E00: .4byte 0x06003840
 _06006E04: .4byte 0x01820182
 
+	@ Draws text to the screen
+	@ r0 = Text ID
 	arm_func_start sub_06006E08
 sub_06006E08: @ 0x06006E08
-	tst r0, #0x80
-	beq _06006E24
+	tst r0, #0x80 @ if (r0 & 0x80) == 0:
+	beq _06006E24     @ goto _06006E24
+
+	@ Fill 0x06003840 to 0x06003FFF with 0x01820182
+	@ This clears the text
 	ldr r1, _06006E00 @ =0x06003840
 	ldr r2, _06006E04 @ =0x01820182
 _06006E18:
 	str r2, [r1], #4
 	tst r1, #0x800
 	bne _06006E18
+
+	@ Skip _06006ED0 if r0 is:
+	@ 1, 2, 0x11-0x16, 0x18, 0x1a-0x1e
+	@ Dont skip _06006ED0 if r0 is:
+	@ 3-0x10, 0x17, 0x19, 0x20
+	@ or has 0x40 flag
 _06006E24:
 	tst r0, #0x40
 	bic r0, r0, #0xc0
@@ -597,6 +608,14 @@ _06006E24:
 	cmp r0, #9
 	add r5, pc, #0xA8 @ =_06006F78
 	bne _06006EF8
+
+	@ r5 is pointer to data
+	@ data is structured as:
+	@     .4byte dst_addr
+	@     .2byte num_col
+	@     .2byte num_row
+	@ Copy 0x1184 into num_col x num_row at dst_addr
+	@ TODO: what does this accomplish?
 _06006ED0:
 	ldr r1, _06006FFC @ =0x00001184
 	ldr r2, [r5]
@@ -610,19 +629,25 @@ _06006EE0:
 	add r2, r2, #0x40
 	subs r4, r4, #1
 	bhs _06006EDC
+
 _06006EF8:
 	mov r12, lr
-	mov r4, #0x1000
+	mov r4, #0x1000 @ r4 = 0x1000 (white)
 	mov r5, #0x100
-	orr r5, r5, #0x84
-	ands r0, r0, #0x3f
-	bxeq r12
+	orr r5, r5, #0x84 @ r5 = 0x184 (tile index base)
+	ands r0, r0, #0x3f @ r0 &= ~0xC0
+	bxeq r12 @ if r0 == 0: return
 	add r3, pc, r0, lsl #2
-	ldr r3, [r3, #0xe8] @ _06007004[r0 - 1]
+	ldr r3, [r3, #0xe8] @ r3 = _06007004[r0 - 1]
+
+	@ Copy text onto screen until 0xFFFF
 _06006F18:
-	ldr r2, [r3], #4
-	cmp r2, #0
-	bxmi r12
+	ldr r2, [r3], #4 @ r2 = *r3++
+	cmp r2, #0       @ if r2 < 0:
+	bxmi r12             @ return
+
+	@ Call sub_06006FB0() on each byte
+	@ Exit loop if byte is 0
 _06006F24:
 	ldrh r1, [r3], #2
 	ands r0, r1, #0xff
@@ -632,117 +657,150 @@ _06006F24:
 	beq _06006F44
 	bl sub_06006FB0
 	b _06006F24
+
+	@ Inc to next entry
 _06006F44:
 	add r3, r3, #3
 	bic r3, r3, #3
 	b _06006F18
+
+	@ Used by 0x40 flag
 _06006F50:
 	.4byte 0x060038CC
 	.2byte 0x22
 	.2byte 0xF
+
+	@ Used by 3 and 4
 _06006F58:
 	.4byte 0x06003A12
 	.2byte 0x16
 	.2byte 0x2
+
+	@ Used by 6
 _06006F60:
 	.4byte 0x060038CA
 	.2byte 0x26
 	.2byte 0xF
+
+	@ Used by 7
 _06006F68:
 	.4byte 0x060038CA
 	.2byte 0x26
 	.2byte 0xF
+
+	@ Used by 8
 _06006F70:
 	.4byte 0x060038CA
 	.2byte 0x26
 	.2byte 0xE
+
+	@ Used by 9
 _06006F78:
 	.4byte 0x060039D0
 	.2byte 0x1A
 	.2byte 0x4
+
+	@ Used by 0xA
 _06006F80:
 	.4byte 0x060038CA
 	.2byte 0x26
 	.2byte 0xE
+
+	@ Used by 5 and 0x17
 _06006F88:
 	.4byte 0x0600398A
 	.2byte 0x26
 	.2byte 0xB
+
+	@ Used by 0xB, 0xC, and 0xD
 _06006F90:
 	.4byte 0x06003B8C
 	.2byte 0x22
 	.2byte 0x5
+
+	@ Used by 0xE and 0xF
 _06006F98:
 	.4byte 0x06003ACC
 	.2byte 0x22
 	.2byte 0x6
+
+	@ Used by 0x10
 _06006FA0:
 	.4byte 0x06003840
 	.2byte 0x3A
 	.2byte 0x13
+
+	@ Used by 0x19 and 0x20
 _06006FA8:
 	.4byte 0x06003A00
 	.2byte 0x3A
 	.2byte 0x8
 
+	@ Draw text character
+	@ r0 = Tile text
+	@ r2 = Dst address
+	@ r4 = Color
+	@ r5 = Tile index base
 	arm_func_start sub_06006FB0
 sub_06006FB0: @ 0x06006FB0
-	subs r0, r0, #0x20
-	blo _06006FD4
-	orr r0, r0, r0, lsl #7
-	bic r0, r0, #0xf80
-	bic r0, r0, #0x60
-	add r0, r0, r4
-	add r0, r0, r5
-	strh r0, [r2], #2
+	subs r0, r0, #0x20 @ r0 -= 0x20
+	blo _06006FD4 @ if r0 < 0: goto _06006FD4
+	orr r0, r0, r0, lsl #7 @ r0 = r0 | (r0 << 7)
+	bic r0, r0, #0xf80 @ r0 &= ~0xF80
+	bic r0, r0, #0x60 @ r0 &= ~0x60
+	add r0, r0, r4 @ r0 += r4 (color)
+	add r0, r0, r5 @ r0 += r5 (tile index base)
+	strh r0, [r2], #2 @ *r2++ = r0
 	bx lr
+
+	@ Handles text commands
 _06006FD4:
-	cmn r0, #0x1f
-	moveq r4, #0xd000
-	cmn r0, #0x1e
-	moveq r4, #0x1000
-	cmn r0, #0x1d
-	moveq r4, #0x9000
-	cmn r0, #0x1b
+	cmn r0, #0x1f     @ if r0 + 0x1F == 0 (r0 was 1):
+	moveq r4, #0xd000     @ r4 = 0xD000 (red color)
+	cmn r0, #0x1e     @ if r0 + 0x1E == 0 (r0 was 2):
+	moveq r4, #0x1000     @ r4 = 0x1000 (white color)
+	cmn r0, #0x1d     @ if r0 + 0x1D == 0 (r0 was 3):
+	moveq r4, #0x9000     @ r4 = 0x9000 (gray color)
+	cmn r0, #0x1b     @ if r0 + 0x1B == 0 (r0 was 5):
 	ldreq r0, _06007000 @ =0x00000183
-	strheq r0, [r2], #2
+	strheq r0, [r2], #2   @ *r2++ = 0x183 (red selection arrow)
 	bx lr
 	.align 2, 0
 _06006FFC: .4byte 0x00001184
 _06007000: .4byte 0x00000183
 _06007004:
-	.4byte sEmulatorMenuText
-	.4byte sEmulatorErrorText
-	.4byte sEmulatorSleepModeText
-	.4byte 0x00000000
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte _0600B138
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorSleepModeText
-	.4byte sEmulatorQuitMenuText
-	.4byte sEmulatorMenuSelectYesText
-	.4byte sEmulatorMenuSelectNoText
-	.4byte sEmulatorGameOverSaveRequestText
-	.4byte sEmulatorGameOverSelectYesText
-	.4byte sEmulatorGameOverSelectNoText
-	.4byte sEmulatorGameOverContinueText
-	.4byte sEmulatorResetMenuText
+	.4byte sEmulatorMenuText                @ 0x01
+	.4byte sEmulatorErrorText               @ 0x02
+	.4byte sEmulatorSleepModeText           @ 0x03
+	.4byte 0x00000000                       @ 0x04
+	.4byte sEmulatorSleepModeText           @ 0x05
+	.4byte sEmulatorSleepModeText           @ 0x06
+	.4byte sEmulatorSleepModeText           @ 0x07
+	.4byte sEmulatorSleepModeText           @ 0x08
+	.4byte sEmulatorSleepModeText           @ 0x09
+	.4byte sEmulatorSleepModeText           @ 0x0A
+	.4byte sEmulatorSleepModeText           @ 0x0B
+	.4byte sEmulatorSleepModeText           @ 0x0C
+	.4byte sEmulatorSleepModeText           @ 0x0D
+	.4byte sEmulatorSleepModeText           @ 0x0E
+	.4byte sEmulatorSleepModeText           @ 0x0F
+	.4byte sEmulatorEmptyText               @ 0x10
+	.4byte sEmulatorSleepModeText           @ 0x11
+	.4byte sEmulatorSleepModeText           @ 0x12
+	.4byte sEmulatorSleepModeText           @ 0x13
+	.4byte sEmulatorSleepModeText           @ 0x14
+	.4byte sEmulatorSleepModeText           @ 0x15
+	.4byte sEmulatorSleepModeText           @ 0x16
+	.4byte sEmulatorSleepModeText           @ 0x17
+	.4byte sEmulatorSleepModeText           @ 0x18
+	.4byte sEmulatorQuitMenuText            @ 0x19
+	.4byte sEmulatorMenuSelectYesText       @ 0x1A
+	.4byte sEmulatorMenuSelectNoText        @ 0x1B
+	.4byte sEmulatorGameOverSaveRequestText @ 0x1C
+	.4byte sEmulatorGameOverSelectYesText   @ 0x1D
+	.4byte sEmulatorGameOverSelectNoText    @ 0x1E
+	.4byte sEmulatorGameOverContinueText    @ 0x1F
+	.4byte sEmulatorResetMenuText           @ 0x20
 
 sEmulatorMenuText: @ 0x06007084
 	@ - MENU -
@@ -791,7 +849,7 @@ sEmulatorMenuText: @ 0x06007084
 	.byte 0x02, 0x4D, 0x6B, 0x2C, 0x2E, 0x48, 0x6D, 0x27, 0x4C, 0x4B, 0x6C, 0x2E, 0x4D, 0x48, 0x29, 0x2A
 	.byte 0x00, 0x00, 0x00, 0x00
 
-	.byte 0xFF, 0xFF, 0xFF, 0xFF
+	.4byte 0xFFFFFFFF
 
 sEmulatorErrorText: @ 0x0600711C
 	@ CARTRIDGE
@@ -800,7 +858,7 @@ sEmulatorErrorText: @ 0x0600711C
 	.byte 0x2B, 0x27, 0x2D, 0x6D, 0x2D, 0x6B, 0x67, 0x25, 0x4B, 0x00, 0x00, 0x00, 0x9A, 0x3A, 0x00, 0x06
 	.byte 0x01, 0x4B, 0x2D, 0x2D, 0x6C, 0x2D
 	.byte 0x00, 0x00
-	.byte 0xFF, 0xFF, 0xFF, 0xFF
+	.4byte 0xFFFFFFFF
 
 	arm_func_start sub_0600713C
 sub_0600713C: @ 0x0600713C
