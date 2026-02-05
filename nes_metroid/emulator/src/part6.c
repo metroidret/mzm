@@ -8,8 +8,12 @@ struct EmulatorSP {
     s32 SP_830;
     u8 pad_834[0x84C - 0x834];
     u8* SP_84C;
-    u8 pad_850[0x904 - 0x850];
+    u8 pad_850[0x854 - 0x850];
+    void* SP_854;
+    u8 pad_858[0x904 - 0x858];
     s32 SP_904;
+    u8 pad_908[0x924 - 0x908];
+    u32** SP_924;
 };
 
 s32 EmulatorRetrieveGameOverPassword(struct EmulatorSP* sp);
