@@ -369,14 +369,14 @@ _0600E318: .4byte EmulatorRetrieveGameOverPassword
 	arm_func_start sub_0600E31C
 sub_0600E31C: @ 0x0600E31C
 	cmp r0, #0    @ if r0 != 0 (password retrieved):
-	bne _0600E588     @ goto _0600E588
+	bne sub_0600E588     @ goto sub_0600E588
 	ldrb r1, [sp, #SP_A33]
 	cmp r1, #0
 	bne _0600E340
 	ldrb r1, [sp, #SP_A32]
 	cmp r1, #0
 	beq _0600E34C
-	b _0600E6DC
+	b sub_0600E6DC
 _0600E340:
 	mov r1, #0
 	strb r1, [sp, #SP_A33]
@@ -386,11 +386,11 @@ _0600E34C:
 	cmp r0, #0xf
 	moveq r1, #1
 	strbeq r1, [sp, #SP_A2C]
-	beq _0600EB34
+	beq sub_0600EB34
 	ldrb r1, [sp, #SP_A2C]
 	cmp r1, #0
 	cmpne r0, #0
-	bne _0600EB34
+	bne sub_0600EB34
 	mov r1, #0
 	strb r1, [sp, #SP_A2C]
 	cmp r0, #0x300
@@ -425,11 +425,11 @@ _0600E3B8:
 	bl sub_0600EB0C
 	add lr, pc, #0x24 @ =sub_0600E3FC
 _0600E3D4:
-	str lr, [sp, #SP_940]
+	str lr, [sp, #SP_940] @ SP_940 = lr
 _0600E3D8:
 	ldrb r0, [sp, #SP_A48]
-	cmp r0, #0
-	ldreq pc, [sp, #SP_9BC]
+	cmp r0, #0              @ if SP_A48 == 0:
+	ldreq pc, [sp, #SP_9BC]     @ goto SP_9BC (sub_03005568())
 	ldr r0, [sp, #SP_840]
 _0600E3E8:
 	ldr r1, [sp, #SP_840]
@@ -455,13 +455,13 @@ sub_0600E3FC: @ 0x0600E3FC
 	strbhs r0, [sp, #SP_A44]
 	add lr, pc, #0x3C @ =sub_0600E474
 	strhs lr, [sp, #SP_940]
-	bl sub_0600EB18
+	bl sub_0600EB18 @ sub_0600EB18() (Enable emulator text display)
 	b _0600E3D8
 
 	arm_func_start sub_0600E440
 sub_0600E440: @ 0x0600E440
 	mov r0, #0
-	bl sub_0600EB1C
+	bl sub_0600EB1C @ sub_0600EB1C(0) (Disable emulator text display)
 	ldrb r0, [sp, #SP_A2D]
 	subs r0, r0, #1
 	blo _0600E468
@@ -475,34 +475,35 @@ _0600E468:
 	sub lr, pc, #0x190
 	b _0600E3D4
 
+	@ Handle main menu
 	arm_func_start sub_0600E474
 sub_0600E474: @ 0x0600E474
 	ldr r0, [sp, #SP_914]
-	tst r0, #0xcf
-	strbne r0, [sp, #SP_A44]
-	tst r0, #2
-	bne _0600E49C
+	tst r0, #0xcf            @ if (SP_914 & 0xCF) != 0 (Pressing A, B, Select, Start, Up, or Down):
+	strbne r0, [sp, #SP_A44]     @ SP_A44 = SP_914
+	tst r0, #2    @ if (SP_914 & 2) != 0 (Pressing B):
+	bne _0600E49C     @ goto _0600E49C
 	and r1, r0, #0x300
-	cmp r1, #0x300
-	bne _0600E4B0
+	cmp r1, #0x300 @ if (SP_914 & 0x300) != 0x300 (Not pressing Left and Right):
+	bne _0600E4B0      @ goto _0600E4B0
 	mov r1, #1
-	strb r1, [sp, #SP_A44]
+	strb r1, [sp, #SP_A44] @ SP_A44 = 1
 _0600E49C:
 	mov r1, #0
-	strb r1, [sp, #SP_A43]
+	strb r1, [sp, #SP_A43] @ SP_A43 = 0
 	sub lr, pc, #0x6c
-	str lr, [sp, #SP_940]
+	str lr, [sp, #SP_940] @ SP_940 = sub_0600E474
 	b _0600EA9C
 _0600E4B0:
 	tst r0, #9
-	ldrb r1, [sp, #SP_A43]
-	ldrne pc, [pc, r1, lsl #2]
+	ldrb r1, [sp, #SP_A43]     @ if (SP_A43 & 9) != 0:
+	ldrne pc, [pc, r1, lsl #2]     @ goto _0600E4C0[SP_A43]
 	beq _0600EA58
 _0600E4C0:
-	.4byte _0600E49C
-	.4byte sub_0600EC90
-	.4byte sub_0600E670
-	.4byte sub_0600E93C
+	.4byte _0600E49C @ Continue
+	.4byte sub_0600EC90 @ Quit Menu
+	.4byte sub_0600E670 @ Reset Menu
+	.4byte sub_0600E93C @ Sleep
 
 	arm_func_start sub_0600E4D0
 sub_0600E4D0: @ 0x0600E4D0
@@ -569,97 +570,103 @@ _0600E578: .4byte EmulatorAudio_Reset
 _0600E57C: .4byte EmulatorLoadFromSram
 _0600E580: .4byte sub_03002DF0
 _0600E584: .4byte 0x0000C399
-_0600E588:
+
+	@ Handle Game Over Menu
+	arm_func_start sub_0600E588
+sub_0600E588: @ 0x0600E588
 	mov r0, #0x9c
 	bl sub_06006E08 @ sub_06006E08(0x80|0x1C) (Clear text, then Game Over Save Request text)
 	mov r1, #0
-	strb r1, [sp, #SP_A43]
+	strb r1, [sp, #SP_A43] @ SP_A43 = 0 (Yes option)
 	mov r0, #0x10
 	mov r12, #0x4000000
 	rsb r2, r0, #0x10
 	orr r0, r0, r2, lsl #8
-	strh r0, [r12, #0x52]
+	strh r0, [r12, #0x52] @ REG_BLDALPHA = (0x10 - 0x10) << 8 | (0x10) ()
 	mov r1, #0x3800
 	orr r1, r1, #0x41
-	strh r1, [r12, #0x50]
-	bl sub_0600EB18
+	strh r1, [r12, #0x50] @ REG_BLDCNT = 0x3841 (Backdrop 2nd Target, OBJ 2nd Target, BG3 2nd Target, Alpha Blend, BG0 1st Target)
+	bl sub_0600EB18 @ sub_0600EB18() (Enable emulator text display)
 	bl _0600E3D4
 	ldr r0, [sp, #SP_910]
-	ldrb r1, [sp, #SP_A43]
-	tst r0, #0x30
-	eorne r1, r1, #1
-	tst r0, #2
-	movne r1, #1
-	strb r1, [sp, #SP_A43]
+	ldrb r1, [sp, #SP_A43] @ r1 = SP_A43
+	tst r0, #0x30    @ if (SP_910 & 0x30) != 0 (Pressing Left or Right):
+	eorne r1, r1, #1     @ r1 ^= 1 (Toggle option)
+	tst r0, #2       @ if (SP_910 & 2) != 0 (Pressing B):
+	movne r1, #1         @ r1 = 1 (No option)
+	strb r1, [sp, #SP_A43] @ SP_A43 = r1
 	tst r1, #1      @ if (r1 & 1) == 0:
 	moveq r0, #0x1d     @ sub_06006E08(0x1D) (Game Over Select Yes text)
 	movne r0, #0x1e @ else:
 	bl sub_06006E08     @ sub_06006E08(0x1E) (Game Over Select No text)
 	ldr r0, [sp, #SP_910]
-	tst r0, #0xb
-	beq _0600E3D8
-	strb r0, [sp, #SP_A44]
+	tst r0, #0xb  @ if (SP_910 & 0xB) == 0 (Not pressing A, B, or Start):
+	beq _0600E3D8     @ goto _0600E3D8
+	strb r0, [sp, #SP_A44] @ SP_A44 = SP_910
 	ldrb r1, [sp, #SP_A43]
-	tst r1, #1
-	bne _0600E60C
-	b _0600E6DC
+	tst r1, #1    @ if (SP_A43 & 1) != 0 (No option):
+	bne _0600E60C     @ goto _0600E60C
+	b sub_0600E6DC
 _0600E60C:
 	mov r0, #0x9f
 	bl sub_06006E08 @ sub_06006E08(0x80|0x1F) (Clear text, then Game Over Continue text)
-	bl sub_0600EB18
+	bl sub_0600EB18 @ sub_0600EB18() (Enable emulator text display)
 	mov r1, #0
-	strb r1, [sp, #SP_A43]
+	strb r1, [sp, #SP_A43] @ SP_A43 = 0 (Yes option)
 	bl _0600E3D4
 	ldr r0, [sp, #SP_910]
-	ldrb r1, [sp, #SP_A43]
-	tst r0, #0x30
-	eorne r1, r1, #1
-	tst r0, #2
-	movne r1, #1
-	strb r1, [sp, #SP_A43]
+	ldrb r1, [sp, #SP_A43] @ r1 = SP_A43
+	tst r0, #0x30    @ if (SP_910 & 0x30) != 0 (Pressing Left or Right):
+	eorne r1, r1, #1     @ r1 ^= 1 (Toggle option)
+	tst r0, #2       @ if (SP_910 & 2) != 0 (Pressing B):
+	movne r1, #1         @ r1 = 1 (No option)
+	strb r1, [sp, #SP_A43] @ SP_A43 = r1
 	tst r1, #1      @ if (r1 & 1) == 0:
 	moveq r0, #0x1d     @ sub_06006E08(0x1D) (Game Over Select Yes text)
 	movne r0, #0x1e @ else:
 	bl sub_06006E08     @ sub_06006E08(0x1E) (Game Over Select No text)
 	ldr r0, [sp, #SP_910]
-	tst r0, #0xb
-	beq _0600E3D8
-	strb r0, [sp, #SP_A44]
+	tst r0, #0xb  @ if (SP_910 & 0xB) == 0 (Not pressing A, B, or Start):
+	beq _0600E3D8     @ _0600E3D8
+	strb r0, [sp, #SP_A44] @ SP_A44 = SP_910
 	ldrb r1, [sp, #SP_A43]
-	tst r1, #1
-	beq _0600ECE8
+	tst r1, #1    @ if (SP_A43 & 1) == 0 (Yes option):
+	beq _0600ECE8     @ goto _0600ECE8
 	b _0600ECFC
 
+	@ Handle Reset Menu
 	arm_func_start sub_0600E670
 sub_0600E670: @ 0x0600E670
 	mov r0, #0xa0
 	bl sub_06006E08 @ sub_06006E08(0x80|0x20) (Clear text, then Reset Menu text)
 	mov r1, #1
-	strb r1, [sp, #SP_A43]
+	strb r1, [sp, #SP_A43] @ SP_A43 = 1 (No option)
 	bl _0600E3D4
 	ldr r0, [sp, #SP_910]
-	ldrb r1, [sp, #SP_A43]
-	tst r0, #0x30
-	eorne r1, r1, #1
-	tst r0, #2
-	movne r1, #1
-	strb r1, [sp, #SP_A43]
+	ldrb r1, [sp, #SP_A43] @ r1 = SP_A43
+	tst r0, #0x30    @ if (SP_910 & 0x30) != 0 (Pressing Left or Right):
+	eorne r1, r1, #1     @ r1 ^= 1 (Toggle option)
+	tst r0, #2       @ if (SP_910 & 2) != 0 (Pressing B):
+	movne r1, #1         @ r1 = 1 (No option)
+	strb r1, [sp, #SP_A43] @ SP_A43 = r1
 	tst r1, #1      @ if (r1 & 1) == 0:
 	moveq r0, #0x1a     @ sub_06006E08(0x1A) (Menu Select Yes text)
 	movne r0, #0x1b @ else:
 	bl sub_06006E08     @ sub_06006E08(0x1B) (Menu Select No text)
 	ldr r0, [sp, #SP_910]
-	tst r0, #0xb
-	beq _0600E3D8
-	strb r0, [sp, #SP_A44]
+	tst r0, #0xb  @ if (SP_910 & 0xB) == 0 (Not pressing A, B, or Start):
+	beq _0600E3D8     @ goto _0600E3D8
+	strb r0, [sp, #SP_A44] @ SP_A44 = SP_910
 	mov r0, #0x80
 	bl sub_06006E08 @ sub_06006E08(0x80) (Clear text)
 	ldrb r1, [sp, #SP_A43]
-	tst r1, #1
-	beq _0600EB40
+	tst r1, #1    @ if (SP_A43 & 1) == 0:
+	beq _0600EB40     @ goto _0600EB40
 	ldr lr, _0600E7AC @ =sub_0600E440
 	b _0600E3D4
-_0600E6DC:
+
+	arm_func_start sub_0600E6DC
+sub_0600E6DC: @ 0x0600E6DC
 	bl _0600E3D4
 	mov r12, #0x4000000
 	ldr r1, [r12, #0x200]
@@ -807,7 +814,7 @@ _0600E868:
 	moveq r0, #0x8e       @ sub_06006E08(0x80|0xE) (Clear text, then Sleep Mode text)
 	movne r0, #0x8f   @ else:
 	blne sub_06006E08     @ sub_06006E08(0x80|0xF) (Clear text, then Sleep Mode text)
-	bl sub_0600EB18
+	bl sub_0600EB18 @ sub_0600EB18() (Enable emulator text display)
 	ldrb r0, [sp, #SP_A41]
 	cmp r0, #0
 	orreq r2, r2, #0x800
@@ -829,23 +836,24 @@ _0600E914:
 	mov r0, #1
 	strb r0, [sp, #SP_A33]
 	mov r0, #0
-	bl sub_0600EB1C
+	bl sub_0600EB1C @ sub_0600EB1C(0) (Disable emulator text display)
 	mov r0, #0x80
 	bl sub_06006E08 @ sub_06006E08(0x80) (Clear text)
 	b _0600E3D8
 	.align 2, 0
 _0600E938: .4byte sub_0600E440
 
+	@ Handle Sleep mode
 	arm_func_start sub_0600E93C
 sub_0600E93C: @ 0x0600E93C
 	bl _0600E3D4
 	mov r12, #0x4000000
 	mov r0, #0x60
-	strh r0, [r12]
+	strh r0, [r12] @ REG_DISPCNT = 0x60 (Screen off, OBJ VRAM 1D, OAM H-Blank)
 	mov r0, #1
-	strb r0, [sp, #SP_A48]
+	strb r0, [sp, #SP_A48] @ SP_A48 = 1
 	add lr, pc, #0x4 @ =sub_0600E960
-	str lr, [sp, #SP_940]
+	str lr, [sp, #SP_940] @ SP_940 = &sub_0600E960
 	b sub_0600E2C4
 
 	arm_func_start sub_0600E960
@@ -974,19 +982,24 @@ _0600EB10:
 	ldr r12, _0600EBE4 @ =sub_03001D24
 	bx r12
 
+	@ Enable emulator text display
 	arm_func_start sub_0600EB18
 sub_0600EB18: @ 0x0600EB18
 	mov r0, #0x100
 
+	@ Set emulator text display
+	@ Input: r0 = 0 is off, r0 = 0x100 is on
 	arm_func_start sub_0600EB1C
 sub_0600EB1C: @ 0x0600EB1C
 	mov r1, #0x4000000
 	ldrh r2, [r1]
 	bic r2, r2, #0x100
 	orr r2, r2, r0
-	strh r2, [r1]
+	strh r2, [r1] @ REG_DISPCNT = (REG_DISPCNT & ~0x100) | r0 (Set BG0 to r0)
 	bx lr
-_0600EB34:
+
+	arm_func_start sub_0600EB34
+sub_0600EB34: @ 0x0600EB34
 	mov r0, #0x80
 	bl sub_06006E08 @ sub_06006E08(0x80) (Clear text)
 	b _0600ECFC
@@ -1094,41 +1107,43 @@ _0600EC80:
 _0600EC88: .4byte 0x0600A010
 _0600EC8C: .4byte EmulatorLoadFromPasswordBytes
 
+	@ Handle Quit Menu
 	arm_func_start sub_0600EC90
 sub_0600EC90: @ 0x0600EC90
 	mov r0, #0x99
 	bl sub_06006E08 @ sub_06006E08(0x80|0x19) (Clear text, then Quit Menu text)
 	mov r1, #1
-	strb r1, [sp, #SP_A43]
+	strb r1, [sp, #SP_A43] @ SP_A43 = 1 (No option)
 	bl _0600E3D4
 	ldr r0, [sp, #SP_910]
-	ldrb r1, [sp, #SP_A43]
-	tst r0, #0x30
-	eorne r1, r1, #1
-	tst r0, #2
-	movne r1, #1
-	strb r1, [sp, #SP_A43]
+	ldrb r1, [sp, #SP_A43] @ r1 = SP_A43
+	tst r0, #0x30    @ if (SP_910 & 0x30) != 0 (Pressing Left or Right):
+	eorne r1, r1, #1     @ r1 ^= 1 (Toggle option)
+	tst r0, #2       @ if (SP_910 & 2) != 0 (Pressing B):
+	movne r1, #1         @ r1 = 1 (No option)
+	strb r1, [sp, #SP_A43] @ SP_A43 = r1
 	tst r1, #1      @ if (r1 & 1) == 0:
 	moveq r0, #0x1a     @ sub_06006E08(0x1A) (Menu Select Yes text)
 	movne r0, #0x1b @ else:
 	bl sub_06006E08     @ sub_06006E08(0x1B) (Menu Select No text)
 	ldr r0, [sp, #SP_910]
-	tst r0, #0xb
-	beq _0600E3D8
+	tst r0, #0xb  @ if (SP_910 & 0xB) == 0 (Not pressing A, B, or Start):
+	beq _0600E3D8     @ goto _0600E3D8
 	ldrb r1, [sp, #SP_A43]
-	tst r1, #1
-	beq _0600ECFC
+	tst r1, #1    @ if (SP_A43 & 1) == 0 (select Yes):
+	beq _0600ECFC     @ goto _0600ECFC
 _0600ECE8:
-	strb r0, [sp, #SP_A44]
+	strb r0, [sp, #SP_A44] @ SP_A44 = SP_910
 	mov r0, #0x80
 	bl sub_06006E08 @ sub_06006E08(0x80) (Clear text)
 	ldr lr, _0600ED0C @ =sub_0600E440
 	b _0600E3D4
 _0600ECFC:
-	add lr, pc, #0x0 @ =0x0600ED04
+	add lr, pc, #0x0 @ =_0600ED04
 	ldr pc, _0600ED10 @ =sub_0600ED14
-	ldr sp, [sp, #SP_920]
-	ldm sp!, {pc}
+_0600ED04:
+	ldr sp, [sp, #SP_920] @ SP = SP_920 (original sp (0x03007EF8))
+	ldm sp!, {pc} @ Exit emulator (returns to 0x087D8124 of loader.s)
 	.align 2, 0
 _0600ED0C: .4byte sub_0600E440
 _0600ED10: .4byte sub_0600ED14
@@ -1137,32 +1152,35 @@ _0600ED10: .4byte sub_0600ED14
 sub_0600ED14: @ 0x0600ED14
 	mov r11, lr
 	bl sub_0600EB0C
-	movs r0, r11
-	movne r0, #0x100
-	bl sub_0600EB1C
+	movs r0, r11 @ r0 = r11
+	movne r0, #0x100 @ if r0 != 0 (always true?): r0 = 0x100
+	bl sub_0600EB1C @ sub_0600EB1C(0x1000) (Enable emulator text display)
 	bic r2, r2, #0x1800
-	strh r2, [r1]
+	strh r2, [r1] @ REG_DISPCNT &= ~0x1800 (Turn off BG3 and OBJ)
 	add r2, r1, #0x208
 	mov r0, #0
-	strh r0, [r2]
+	strh r0, [r2] @ REG_IME = 0 (Disable interrupts)
 	ldrh r0, [r2, #-8]
 	bic r0, r0, #0x78
-	strh r0, [r2, #-8]
+	strh r0, [r2, #-8] @ REG_IE &= ~0x78 (Disable Timer 0-3 interrupts)
 	ldr r0, _0600ED84 @ =0x84400004
-	str r0, [r1, #0xc4]!
+	str r0, [r1, #0xc4]! @ REG_DMA1CNT = 0x84400004 (Enable, 32bit, Fixed, 16 bytes)
 	mov r0, #2
-	strb r0, [sp, #SP_A48]
+	strb r0, [sp, #SP_A48] @ SP_A48 = 2
 	mov r0, #1
-	strb r0, [sp, #SP_A49]
+	strb r0, [sp, #SP_A49] @ SP_A49 = 1
 	mov r0, #1
-	strh r0, [r2]
+	strh r0, [r2] @ REG_IME = 1 (Enable interrupts)
 	mov r0, #0x440
-	strh r0, [r1, #2]
+	strh r0, [r1, #2] @ REG_DMA1CNT_H = 0x440 (Disable, 32bit, Fixed)
+
+	@ Wait until SP_A49 and SP_A48 are the same (Happens during V-Blank interrupt)
 _0600ED70:
 	ldrb r0, [sp, #SP_A49]
 	ldrb r1, [sp, #SP_A48]
 	cmp r0, r1
 	bne _0600ED70
+
 	bx r11
 	.align 2, 0
 _0600ED84: .4byte 0x84400004

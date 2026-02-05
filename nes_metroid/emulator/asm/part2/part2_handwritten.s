@@ -3395,38 +3395,39 @@ _03005564: .4byte 0x80000010
 
 	arm_func_start sub_03005568
 sub_03005568: @ 0x03005568
-	ldrb r0, [sp, #SP_A46]
-	cmp r0, #0x18
-	movhs r0, #0
-	lsr r1, r0, #2
-	add r0, r0, #1
-	strb r0, [sp, #SP_A46]
-	sub r0, pc, #0x30
+	ldrb r0, [sp, #SP_A46] @ r0 = SP_A46
+	cmp r0, #0x18 @ if SP_A46 >= 0x18:
+	movhs r0, #0      @ r0 = 0
+	lsr r1, r0, #2 @ r1 = r0 >> 2
+	add r0, r0, #1 @ r0 += 1
+	strb r0, [sp, #SP_A46] @ SP_A46 = r0
+	sub r0, pc, #0x30 @ r0 = &_03005558
 	ldm r0, {r2, r3, r4, r5}
 	add r3, r3, r1, lsl #5
-	stm r2, {r3, r4, r5}
+	stm r2, {r3, r4, r5} @ DMA3(src=sUnk_0203E634+(r1<<5), dst=0x06003060, cnt=Enable, 16bit, 0x20 bytes)
 _03005590:
 	ldr r12, [sp, #SP_8EC]
 	ldr r0, [sp, #SP_8F4]
-	cmp r0, r12
-	svceq #0x20000
-	beq _03005590
-	ldr r0, [sp, #SP_830]
-	cmp r0, #0
-	moveq r0, #0x9600000
-	lslne r0, r0, #0x18
-	addne r0, r0, #0xc000000
-	str r0, [sp, #SP_838]
-	moveq r0, #0xc00000
-	movne r0, #0x1000000
-	str r0, [sp, #SP_834]
+	cmp r0, r12    @ if SP_8F4 == SP_8EC:
+	svceq #0x20000     @ Halt
+	beq _03005590      @ Goto _03005590
+	ldr r0, [sp, #SP_830] @ r0 = SP_830
+	cmp r0, #0               @ if r0 == 0:
+	moveq r0, #0x9600000         @ r0 = 0x09600000
+	lslne r0, r0, #0x18      @ else:
+	addne r0, r0, #0xc000000     @ r0 = (r0 << 0x18) + 0x0C000000
+	str r0, [sp, #SP_838] @ SP_838 = r0
+	moveq r0, #0xc00000   @ if r0 == 0: r0 = 0x00C00000
+	movne r0, #0x1000000  @ else: r0 = 0x01000000
+	str r0, [sp, #SP_834] @ SP_834 = r0
 	ldr r1, [sp, #SP_8F8]
 	sub r1, r1, r12
-	str r1, [sp, #SP_8EC]
+	str r1, [sp, #SP_8EC] @ SP_8EC = SP_8F8 - SP_8EC
+
 	mov r7, #0x6700
-	orr r7, r7, #0x6000000
-	add r6, r12, #0x200
-	sub lr, r7, #0x760
+	orr r7, r7, #0x6000000 @ r7 = 0x06006700
+	add r6, r12, #0x200 @ r6 = r12 + 0x200
+	sub lr, r7, #0x760 @ lr = 0x06005FA0
 _030055E4:
 	ldr r10, [r7], #4
 	and r9, r10, #0xff
