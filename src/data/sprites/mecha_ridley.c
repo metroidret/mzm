@@ -10132,14 +10132,19 @@ const struct MultiSpriteData sMechaRidleyMultiSpriteData_OpeningMouthLow[3] = {
 };
 
 const struct MultiSpriteData sMechaRidleyMultiSpriteData_SpittingFireballsLow[4] = {
-    sMechaRidleyMultiSpriteData_SpittingFireballsLow_Frame0,
-    CONVERT_SECONDS(1.f / 30),
-    sMechaRidleyMultiSpriteData_SpittingFireballsLow_Frame1,
-    CONVERT_SECONDS(1.f / 30),
-    sMechaRidleyMultiSpriteData_SpittingFireballsLow_Frame2,
-    CONVERT_SECONDS(1.f / 30),
-    NULL,
-    0
+    [0] = {
+        .pData = sMechaRidleyMultiSpriteData_SpittingFireballsLow_Frame0,
+        .timer = CONVERT_SECONDS(1.f / 30)
+    },
+    [1] = {
+        .pData = sMechaRidleyMultiSpriteData_SpittingFireballsLow_Frame1,
+        .timer = CONVERT_SECONDS(1.f / 30),
+    },
+    [2] = {
+        .pData = sMechaRidleyMultiSpriteData_SpittingFireballsLow_Frame2,
+        .timer = CONVERT_SECONDS(1.f / 30),
+    },
+    [3] = MULTI_SPRITE_DATA_TERMINATOR
 };
 
 const struct MultiSpriteData sMechaRidleyMultiSpriteData_ClosingMouthLow[3] = {
@@ -10373,7 +10378,7 @@ const struct MultiSpriteData sMechaRidleyMultiSpriteData_CrawlingBackwardsLow[7]
     },
     [5] = {
         .pData = sMechaRidleyMultiSpriteData_CrawlingBackwardsLow_Frame0,
-        .timer = HALF_BLOCK_SIZE
+        .timer = CONVERT_SECONDS(8.f / 15)
     },
     [6] = MULTI_SPRITE_DATA_TERMINATOR
 };
@@ -10401,7 +10406,7 @@ const struct MultiSpriteData sMechaRidleyMultiSpriteData_CrawlingBackwardsMiddle
     },
     [5] = {
         .pData = sMechaRidleyMultiSpriteData_CrawlingBackwardsMiddle_Frame0,
-        .timer = HALF_BLOCK_SIZE
+        .timer = CONVERT_SECONDS(8.f / 15)
     },
     [6] = MULTI_SPRITE_DATA_TERMINATOR
 };
@@ -10429,7 +10434,7 @@ const struct MultiSpriteData sMechaRidleyMultiSpriteData_CrawlingBackwardsHigh[7
     },
     [5] = {
         .pData = sMechaRidleyMultiSpriteData_CrawlingBackwardsHigh_Frame0,
-        .timer = HALF_BLOCK_SIZE
+        .timer = CONVERT_SECONDS(8.f / 15)
     },
     [6] = MULTI_SPRITE_DATA_TERMINATOR
 };
