@@ -1,6 +1,7 @@
 #include "sprites_ai/geron.h"
 #include "sprites_ai/parasite.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/geron.h"
 
@@ -38,35 +39,35 @@ void Geron(void)
             // Check is destroyed
             if (gCurrentSprite.spriteId == PSPRITE_GERON_BRINSTAR_ROOM_15)
             {
-                if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_PLANT_DESTROYED_LAVA))
+                if (!CHECK_EVENT(EVENT_PLANT_DESTROYED_LAVA))
                     destroyed = FALSE;
                 else
                     destroyed = TRUE;
             }
             else if (gCurrentSprite.spriteId == PSPRITE_GERON_BRINSTAR_ROOM_1C)
             {
-                if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_HIGH_JUMP_OBTAINED))
+                if (!CHECK_EVENT(EVENT_HIGH_JUMP_OBTAINED))
                 {
                     gCurrentSprite.status = 0;
                     break;
                 }
 
-                if (EventFunction(EVENT_ACTION_CHECKING, EVENT_PLANT_DESTROYED_POST_VARIA))
+                if (CHECK_EVENT(EVENT_PLANT_DESTROYED_POST_VARIA))
                     destroyed = TRUE;
             }
             else if (gCurrentSprite.spriteId == PSPRITE_GERON_VARIA1)
             {
-                if (EventFunction(EVENT_ACTION_CHECKING, EVENT_PLANT_DESTROYED_VARIA2))
+                if (CHECK_EVENT(EVENT_PLANT_DESTROYED_VARIA2))
                     destroyed = TRUE;
             }
             else if (gCurrentSprite.spriteId == PSPRITE_GERON_VARIA2)
             {
-                if (EventFunction(EVENT_ACTION_CHECKING, EVENT_PLANT_DESTROYED_VARIA3))
+                if (CHECK_EVENT(EVENT_PLANT_DESTROYED_VARIA3))
                     destroyed = TRUE;
             }
             else if (gCurrentSprite.spriteId == PSPRITE_GERON_VARIA3)
             {
-                if (EventFunction(EVENT_ACTION_CHECKING, EVENT_PLANT_DESTROYED_VARIA1))
+                if (CHECK_EVENT(EVENT_PLANT_DESTROYED_VARIA1))
                     destroyed = TRUE;
             }
             else
@@ -218,15 +219,15 @@ void Geron(void)
 
                 // Set event
                 if (gCurrentSprite.spriteId == PSPRITE_GERON_BRINSTAR_ROOM_15)
-                    EventFunction(EVENT_ACTION_SETTING, EVENT_PLANT_DESTROYED_LAVA);
+                    SET_EVENT(EVENT_PLANT_DESTROYED_LAVA);
                 else if (gCurrentSprite.spriteId == PSPRITE_GERON_BRINSTAR_ROOM_1C)
-                    EventFunction(EVENT_ACTION_SETTING, EVENT_PLANT_DESTROYED_POST_VARIA);
+                    SET_EVENT(EVENT_PLANT_DESTROYED_POST_VARIA);
                 else if (gCurrentSprite.spriteId == PSPRITE_GERON_VARIA1)
-                    EventFunction(EVENT_ACTION_SETTING, EVENT_PLANT_DESTROYED_VARIA2);
+                    SET_EVENT(EVENT_PLANT_DESTROYED_VARIA2);
                 else if (gCurrentSprite.spriteId == PSPRITE_GERON_VARIA2)
-                    EventFunction(EVENT_ACTION_SETTING, EVENT_PLANT_DESTROYED_VARIA3);
+                    SET_EVENT(EVENT_PLANT_DESTROYED_VARIA3);
                 else if (gCurrentSprite.spriteId == PSPRITE_GERON_VARIA3)
-                    EventFunction(EVENT_ACTION_SETTING, EVENT_PLANT_DESTROYED_VARIA1);
+                    SET_EVENT(EVENT_PLANT_DESTROYED_VARIA1);
             }
             break;
 

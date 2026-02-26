@@ -1,5 +1,6 @@
 #include "escape.h"
 #include "gba.h"
+#include "event.h"
 
 #include "data/visual_effects_data.h"
 
@@ -19,9 +20,9 @@
  */
 Escape EscapeDetermineTimer(void)
 {
-    if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_ESCAPED_ZEBES))
+    if (!CHECK_EVENT(EVENT_ESCAPED_ZEBES))
     {
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_MOTHER_BRAIN_KILLED))
+        if (CHECK_EVENT(EVENT_MOTHER_BRAIN_KILLED))
         {
             // Didn't escape zebes, and mother brain killed
             return ESCAPE_MOTHER_BRAIN;
@@ -29,7 +30,7 @@ Escape EscapeDetermineTimer(void)
     }
     else
     {
-        if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_ESCAPED_CHOZODIA) && EventFunction(EVENT_ACTION_CHECKING, EVENT_MECHA_RIDLEY_KILLED))
+        if (!CHECK_EVENT(EVENT_ESCAPED_CHOZODIA) && CHECK_EVENT(EVENT_MECHA_RIDLEY_KILLED))
         {
             // Didn't escape chozodia, and mecha ridley killed
             return ESCAPE_MECHA_RIDLEY;
@@ -47,16 +48,16 @@ Escape EscapeDetermineTimer(void)
 boolu8 EscapeCheckHasEscaped(void)
 {
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_MECHA_RIDLEY_KILLED))
+    if (CHECK_EVENT(EVENT_MECHA_RIDLEY_KILLED))
     {
         // Chozodia escape
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_ESCAPED_CHOZODIA))
+        if (CHECK_EVENT(EVENT_ESCAPED_CHOZODIA))
             return TRUE;
     }
-    else if (EventFunction(EVENT_ACTION_CHECKING, EVENT_MOTHER_BRAIN_KILLED))
+    else if (CHECK_EVENT(EVENT_MOTHER_BRAIN_KILLED))
     {
         // Tourian escape
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_ESCAPED_ZEBES))
+        if (CHECK_EVENT(EVENT_ESCAPED_ZEBES))
             return TRUE;
     }
 

@@ -1,5 +1,6 @@
 #include "sprites_ai/rising_chozo_pillar.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/rising_chozo_pillar.h"
 #include "data/sprites/enemy_drop.h"
@@ -211,7 +212,7 @@ void RisingChozoPillar(void)
     switch (gCurrentSprite.pose)
     {
         case SPRITE_POSE_UNINITIALIZED:
-            if (EventFunction(EVENT_ACTION_CHECKING, EVENT_CHOZO_PILLAR_FULLY_EXTENDED))
+            if (CHECK_EVENT(EVENT_CHOZO_PILLAR_FULLY_EXTENDED))
             {
                 // Already extended, spawn all platforms
                 RisingChozoPillarSpawnThreePlatforms(yPosition, xPosition, caa);
@@ -240,7 +241,7 @@ void RisingChozoPillar(void)
             break;
 
         case RISING_CHOZO_PILLAR_POSE_WAIT_FOR_POWER_GRIP:
-            if (EventFunction(EVENT_ACTION_CHECKING, EVENT_POWER_GRIP_OBTAINED))
+            if (CHECK_EVENT(EVENT_POWER_GRIP_OBTAINED))
             {
                 gCurrentSprite.pose = RISING_CHOZO_PILLAR_POSE_EXTENDING;
                 gCurrentSprite.scaling = 704;
@@ -289,7 +290,7 @@ void RisingChozoPillar(void)
             break;
 
         case RISING_CHOZO_PILLAR_POSE_KILL:
-            EventFunction(EVENT_ACTION_SETTING, EVENT_CHOZO_PILLAR_FULLY_EXTENDED);
+            SET_EVENT(EVENT_CHOZO_PILLAR_FULLY_EXTENDED);
             gCurrentSprite.status = 0;
     }
 }
@@ -322,7 +323,7 @@ void ChozoPillarPlatform(void)
             gCurrentSprite.animationDurationCounter = 0;
             gCurrentSprite.currentAnimationFrame = 0;
 
-            if (EventFunction(EVENT_ACTION_CHECKING, EVENT_CHOZO_PILLAR_FULLY_EXTENDED))
+            if (CHECK_EVENT(EVENT_CHOZO_PILLAR_FULLY_EXTENDED))
             {
                 gCurrentSprite.pose = RISING_CHOZO_PILLAR_PLATFORM_POSE_IDLE;
                 if (gCurrentSprite.roomSlot != CHOZO_PILLAR_PLATFORM_NO_SHADOW)

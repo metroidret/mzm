@@ -1,6 +1,7 @@
 #include "sprites_ai/deorem.h"
 #include "gba.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/deorem.h"
 #include "data/sprite_data.h"
@@ -470,11 +471,11 @@ static void DeoremInit(void)
 {
     if (gCurrentSprite.spriteId == PSPRITE_DEOREM_FIRST_LOCATION)
     {
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_DEOREM_ENCOUNTERED_AT_FIRST_LOCATION_OR_KILLED))
+        if (CHECK_EVENT(EVENT_DEOREM_ENCOUNTERED_AT_FIRST_LOCATION_OR_KILLED))
         {
-            if (EventFunction(EVENT_ACTION_CHECKING, EVENT_DEOREM_ENCOUNTERED_AT_SECOND_LOCATION_OR_KILLED) &&
+            if (CHECK_EVENT(EVENT_DEOREM_ENCOUNTERED_AT_SECOND_LOCATION_OR_KILLED) &&
                 !(gEquipment.beamBombs & BBF_CHARGE_BEAM) &&
-                !EventFunction(EVENT_ACTION_CHECKING, EVENT_DEOREM_KILLED_AT_SECOND_LOCATION))
+                !CHECK_EVENT(EVENT_DEOREM_KILLED_AT_SECOND_LOCATION))
             {
                 gCurrentSprite.pose = DEOREM_POSE_CALL_SPAWN_CHARGE_BEAM;
                 gCurrentSprite.status |= SPRITE_STATUS_NOT_DRAWN;
@@ -488,11 +489,11 @@ static void DeoremInit(void)
     }
     else
     {
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_DEOREM_ENCOUNTERED_AT_SECOND_LOCATION_OR_KILLED))
+        if (CHECK_EVENT(EVENT_DEOREM_ENCOUNTERED_AT_SECOND_LOCATION_OR_KILLED))
         {
-            if (EventFunction(EVENT_ACTION_CHECKING, EVENT_DEOREM_ENCOUNTERED_AT_FIRST_LOCATION_OR_KILLED) &&
+            if (CHECK_EVENT(EVENT_DEOREM_ENCOUNTERED_AT_FIRST_LOCATION_OR_KILLED) &&
                 !(gEquipment.beamBombs & BBF_CHARGE_BEAM) &&
-                EventFunction(EVENT_ACTION_CHECKING, EVENT_DEOREM_KILLED_AT_SECOND_LOCATION))
+                CHECK_EVENT(EVENT_DEOREM_KILLED_AT_SECOND_LOCATION))
             {
                 gCurrentSprite.pose = DEOREM_POSE_CALL_SPAWN_CHARGE_BEAM;
                 gCurrentSprite.status |= SPRITE_STATUS_NOT_DRAWN;
@@ -1180,11 +1181,11 @@ static void DeoremDyingInit(void)
     DeoremChangeRightWallClipdata(CAA_REMOVE_SOLID);
 
     gLockScreen.lock = LOCK_SCREEN_TYPE_NONE;
-    EventFunction(EVENT_ACTION_SETTING, EVENT_DEOREM_ENCOUNTERED_AT_FIRST_LOCATION_OR_KILLED);
-    EventFunction(EVENT_ACTION_SETTING, EVENT_DEOREM_ENCOUNTERED_AT_SECOND_LOCATION_OR_KILLED);
+    SET_EVENT(EVENT_DEOREM_ENCOUNTERED_AT_FIRST_LOCATION_OR_KILLED);
+    SET_EVENT(EVENT_DEOREM_ENCOUNTERED_AT_SECOND_LOCATION_OR_KILLED);
 
     if (gCurrentSprite.spriteId == PSPRITE_DEOREM_SECOND_LOCATION)
-        EventFunction(EVENT_ACTION_SETTING, EVENT_DEOREM_KILLED_AT_SECOND_LOCATION);
+        SET_EVENT(EVENT_DEOREM_KILLED_AT_SECOND_LOCATION);
 
     SoundPlay(SOUND_DEOREM_DYING);
     FadeCurrentMusicAndQueueNextMusic(CONVERT_SECONDS(5.f / 6), MUSIC_BRINSTAR, 0);
@@ -1322,14 +1323,14 @@ static void DeoremStartLeaving(void)
         if (gCurrentSprite.spriteId == PSPRITE_DEOREM_FIRST_LOCATION)
         {
             // Leaving first location
-            EventFunction(EVENT_ACTION_SETTING, EVENT_DEOREM_ENCOUNTERED_AT_FIRST_LOCATION_OR_KILLED);
-            EventFunction(EVENT_ACTION_CLEARING, EVENT_DEOREM_ENCOUNTERED_AT_SECOND_LOCATION_OR_KILLED);
+            SET_EVENT(EVENT_DEOREM_ENCOUNTERED_AT_FIRST_LOCATION_OR_KILLED);
+            CLEAR_EVENT(EVENT_DEOREM_ENCOUNTERED_AT_SECOND_LOCATION_OR_KILLED);
         }
         else
         {
             // Leaving second location
-            EventFunction(EVENT_ACTION_CLEARING, EVENT_DEOREM_ENCOUNTERED_AT_FIRST_LOCATION_OR_KILLED);
-            EventFunction(EVENT_ACTION_SETTING, EVENT_DEOREM_ENCOUNTERED_AT_SECOND_LOCATION_OR_KILLED);
+            CLEAR_EVENT(EVENT_DEOREM_ENCOUNTERED_AT_FIRST_LOCATION_OR_KILLED);
+            SET_EVENT(EVENT_DEOREM_ENCOUNTERED_AT_SECOND_LOCATION_OR_KILLED);
         }
 
         SoundPlay(SOUND_DEOREM_LEAVING);
@@ -2328,8 +2329,8 @@ static void DeoremEyeInit(void)
     // Duration of the fight
     gCurrentSprite.yPositionSpawn = CONVERT_SECONDS(30.f);
 
-    if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_DEOREM_ENCOUNTERED_AT_FIRST_LOCATION_OR_KILLED) &&
-        !EventFunction(EVENT_ACTION_CHECKING, EVENT_DEOREM_ENCOUNTERED_AT_SECOND_LOCATION_OR_KILLED))
+    if (!CHECK_EVENT(EVENT_DEOREM_ENCOUNTERED_AT_FIRST_LOCATION_OR_KILLED) &&
+        !CHECK_EVENT(EVENT_DEOREM_ENCOUNTERED_AT_SECOND_LOCATION_OR_KILLED))
     {
         // Half the time if it's the first encounter
         gCurrentSprite.yPositionSpawn /= 2;
@@ -2523,8 +2524,8 @@ static void DeoremEyeIdle(void)
     DeoremEyeMove();
 
     // Update fight duration timer
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_DEOREM_ENCOUNTERED_AT_FIRST_LOCATION_OR_KILLED) ||
-        EventFunction(EVENT_ACTION_CHECKING, EVENT_DEOREM_ENCOUNTERED_AT_SECOND_LOCATION_OR_KILLED) ||
+    if (CHECK_EVENT(EVENT_DEOREM_ENCOUNTERED_AT_FIRST_LOCATION_OR_KILLED) ||
+        CHECK_EVENT(EVENT_DEOREM_ENCOUNTERED_AT_SECOND_LOCATION_OR_KILLED) ||
         gCurrentSprite.health != DEOREM_MAX_HEALTH)
     {   
         // Timer only goes down if Deorem has been hit

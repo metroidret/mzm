@@ -4,6 +4,7 @@
 #include "oam.h"
 #include "color_effects.h"
 #include "tourian_escape.h"
+#include "event.h"
 
 #include "data/cutscenes/cutscenes_data.h"
 #include "data/menus/pause_screen_data.h"
@@ -151,7 +152,7 @@ void CutsceneEnd(void)
             #endif // DEBUG
             {
                 // Set the event for the ridley in space cutscene, in case it was skipped
-                EventFunction(EVENT_ACTION_SETTING, sCutsceneData[CUTSCENE_RIDLEY_IN_SPACE].event);
+                SET_EVENT(sCutsceneData[CUTSCENE_RIDLEY_IN_SPACE].event);
             }
             break;
 
@@ -230,7 +231,7 @@ void CutsceneEnd(void)
         if (gBootDebugActive == 0)
         #endif // DEBUG
         {
-            EventFunction(EVENT_ACTION_SETTING, sCutsceneData[gCurrentCutscene].event);
+            SET_EVENT(sCutsceneData[gCurrentCutscene].event);
         }
     }
 

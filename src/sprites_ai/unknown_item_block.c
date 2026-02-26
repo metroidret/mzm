@@ -1,6 +1,7 @@
 #include "sprites_ai/unknown_item_block.h"
 #include "gba/display.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/unknown_item_block.h"
 
@@ -92,17 +93,17 @@ void UnknownItemBlock(void)
             // Check activate block
             if (spriteId == PSPRITE_PLASMA_BEAM_BLOCK)
             {
-                if (EventFunction(EVENT_ACTION_CHECKING, EVENT_PLASMA_BEAM_OBTAINED))
+                if (CHECK_EVENT(EVENT_PLASMA_BEAM_OBTAINED))
                     activated++;
             }
             else if (spriteId == PSPRITE_GRAVITY_SUIT_BLOCK)
             {
-                if (EventFunction(EVENT_ACTION_CHECKING, EVENT_GRAVITY_SUIT_OBTAINED))
+                if (CHECK_EVENT(EVENT_GRAVITY_SUIT_OBTAINED))
                     activated++;
             }
             else if (spriteId == PSPRITE_SPACE_JUMP_BLOCK)
             {
-                if (EventFunction(EVENT_ACTION_CHECKING, EVENT_SPACE_JUMP_OBTAINED))
+                if (CHECK_EVENT(EVENT_SPACE_JUMP_OBTAINED))
                     activated++;
             }
 

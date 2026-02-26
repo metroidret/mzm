@@ -1572,7 +1572,7 @@ void PauseDebugEventListInput(void)
     
     if (gChangedInput & KEY_A)
     {
-        event = EventFunction(EVENT_ACTION_TOGGLING, PAUSE_SCREEN_DATA.debugSelectedEvent);
+        event = TOGGLE_EVENT(PAUSE_SCREEN_DATA.debugSelectedEvent);
         PauseDebugDrawEventName(PAUSE_SCREEN_DATA.debugSelectedEvent, VRAM_BASE + 0xB000);
 
         if (PAUSE_SCREEN_DATA.debugSelectedEvent >= EVENT_STATUE_LONG_BEAM_GRABBED && PAUSE_SCREEN_DATA.debugSelectedEvent <= EVENT_STATUE_SCREW_ATTACK_GRABBED)
@@ -1710,7 +1710,7 @@ void PauseDebugDrawEventName(u16 event, u16* dst)
     if (event >= EVENT_COUNT)
         return;
 
-    if (EventFunction(EVENT_ACTION_CHECKING, event))
+    if (CHECK_EVENT(event))
         tmp = 14 << 12;
     else
         tmp = 15 << 12;

@@ -1,6 +1,7 @@
 #include "cutscenes/statue_opening.h"
 #include "cutscenes/cutscene_utils.h"
 #include "dma.h"
+#include "event.h"
 
 #include "data/shortcut_pointers.h"
 #include "data/cutscenes/statue_opening_data.h"
@@ -180,11 +181,11 @@ static u8 StatueOpeningInit(void)
     CUTSCENE_DATA.oam[1].boundBackground = 1;
     CUTSCENE_DATA.oam[1].exists = 1;
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_KRAID_STATUE_OPENED))
+    if (CHECK_EVENT(EVENT_KRAID_STATUE_OPENED))
         oamId = STATUE_OPENING_OAM_ID_KRAID_OPENED;
     else
     {
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_KRAID_KILLED))
+        if (CHECK_EVENT(EVENT_KRAID_KILLED))
             oamId = STATUE_OPENING_OAM_ID_KRAID_ACTIVATED;
         else
             oamId = STATUE_OPENING_OAM_ID_KRAID_IDLE;
@@ -194,11 +195,11 @@ static u8 StatueOpeningInit(void)
     }
     CUTSCENE_DATA.oam[0].oamID = oamId;
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_RIDLEY_STATUE_OPENED))
+    if (CHECK_EVENT(EVENT_RIDLEY_STATUE_OPENED))
        oamId = STATUE_OPENING_OAM_ID_RIDLEY_OPENED;
     else
     {
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_RIDLEY_KILLED))
+        if (CHECK_EVENT(EVENT_RIDLEY_KILLED))
            oamId = STATUE_OPENING_OAM_ID_RIDLEY_ACTIVATED;
         else
            oamId = STATUE_OPENING_OAM_ID_RIDLEY_IDLE;

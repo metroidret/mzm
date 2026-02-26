@@ -1,5 +1,6 @@
 #include "connection.h"
 #include "gba.h"
+#include "event.h"
 
 #include "data/empty_datatypes.h"
 #include "data/hatch_data.h"
@@ -547,7 +548,7 @@ u8 ConnectionFindEventBasedDoor(u8 sourceDoor)
             continue;
 
         // Check event
-        if (EventFunction(EVENT_ACTION_CHECKING, sEventBasedConnections[i][EVENT_BASED_CONNECTION_FIELD_EVENT]))
+        if (CHECK_EVENT(sEventBasedConnections[i][EVENT_BASED_CONNECTION_FIELD_EVENT]))
             return sEventBasedConnections[i][EVENT_BASED_CONNECTION_FIELD_DESTINATION_DOOR];
     }
 
@@ -995,7 +996,7 @@ void ConnectionCheckHatchLockEvents(void)
         if (pLock->room == gCurrentRoom)
         {
             // Check event
-            eventCheck = EventFunction(EVENT_ACTION_CHECKING, pLock->event);
+            eventCheck = CHECK_EVENT(pLock->event);
             
             // Check invert event if before
             if (pLock->type == HATCH_LOCK_EVENT_TYPE_BEFORE)
@@ -1054,7 +1055,7 @@ void ConnectionCheckPlayCutsceneDuringTransition(Area area, u8 dstRoomPlusOne)
     {
         case AREA_KRAID:
             // Room 0x1E is the Kraid fight room
-            if (dstRoomPlusOne == 0x1F && !EventFunction(EVENT_ACTION_CHECKING, EVENT_KRAID_KILLED))
+            if (dstRoomPlusOne == 0x1F && !CHECK_EVENT(EVENT_KRAID_KILLED))
             {
                 FadeMusic(CONVERT_SECONDS(1.f / 6));
                 FadeAllSounds(CONVERT_SECONDS(1.f / 6));
@@ -1066,11 +1067,11 @@ void ConnectionCheckPlayCutsceneDuringTransition(Area area, u8 dstRoomPlusOne)
             // Room 0x2A is the Ruins Test fight room
             if (dstRoomPlusOne == 0x2B)
             {
-                if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_FULLY_POWERED_SUIT_OBTAINED))
+                if (!CHECK_EVENT(EVENT_FULLY_POWERED_SUIT_OBTAINED))
                     gCurrentCutscene = CUTSCENE_BEFORE_RUINS_TEST;
             }
             // Room 0xA is the suitless entry of the mothership
-            else if (dstRoomPlusOne == 0xB && !EventFunction(EVENT_ACTION_CHECKING, EVENT_ENTER_MOTHERSHIP_DEMO_PLAYED))
+            else if (dstRoomPlusOne == 0xB && !CHECK_EVENT(EVENT_ENTER_MOTHERSHIP_DEMO_PLAYED))
             {
                 if (gRainSoundEffect & RAIN_SOUND_PLAYING)
                     SoundFade(SOUND_RAIN, CONVERT_SECONDS(1.f / 6));
@@ -1096,7 +1097,7 @@ void ConnectionCheckPlayCutsceneDuringAreaConnection(void)
     switch (gLastElevatorUsed.route)
     {
         case ELEVATOR_ROUTE_BRINSTAR_TO_NORFAIR:
-            if (gLastElevatorUsed.direction == ELEVATOR_DIRECTION_DOWN && !EventFunction(EVENT_ACTION_CHECKING, EVENT_ENTER_NORFAIR_DEMO_PLAYED))
+            if (gLastElevatorUsed.direction == ELEVATOR_DIRECTION_DOWN && !CHECK_EVENT(EVENT_ENTER_NORFAIR_DEMO_PLAYED))
             {
                 gCurrentCutscene = CUTSCENE_MOTHER_BRAIN_CLOSE_UP;
 
@@ -1107,9 +1108,9 @@ void ConnectionCheckPlayCutsceneDuringAreaConnection(void)
             break;
 
         case ELEVATOR_ROUTE_BRINSTAR_TO_KRAID:
-            if (gLastElevatorUsed.direction == ELEVATOR_DIRECTION_UP && EventFunction(EVENT_ACTION_CHECKING, EVENT_KRAID_KILLED))
+            if (gLastElevatorUsed.direction == ELEVATOR_DIRECTION_UP && CHECK_EVENT(EVENT_KRAID_KILLED))
             {
-                if (EventFunction(EVENT_ACTION_CHECKING, EVENT_EXIT_KRAID_DEMO_PLAYED))
+                if (CHECK_EVENT(EVENT_EXIT_KRAID_DEMO_PLAYED))
                 {
                     // Demo already played
                     break;
@@ -1124,7 +1125,7 @@ void ConnectionCheckPlayCutsceneDuringAreaConnection(void)
             break;
 
         case ELEVATOR_ROUTE_NORFAIR_TO_RIDLEY:
-            if (gLastElevatorUsed.direction == ELEVATOR_DIRECTION_DOWN && !EventFunction(EVENT_ACTION_CHECKING, EVENT_ENTER_RIDLEY_DEMO_PLAYED))
+            if (gLastElevatorUsed.direction == ELEVATOR_DIRECTION_DOWN && !CHECK_EVENT(EVENT_ENTER_RIDLEY_DEMO_PLAYED))
             {
                 gCurrentCutscene = CUTSCENE_RIDLEY_LANDING;
 
@@ -1135,7 +1136,7 @@ void ConnectionCheckPlayCutsceneDuringAreaConnection(void)
             break;
 
         case ELEVATOR_ROUTE_BRINSTAR_TO_TOURIAN:
-            if (gLastElevatorUsed.direction == ELEVATOR_DIRECTION_DOWN && !EventFunction(EVENT_ACTION_CHECKING, EVENT_ENTER_TOURIAN_DEMO_PLAYED))
+            if (gLastElevatorUsed.direction == ELEVATOR_DIRECTION_DOWN && !CHECK_EVENT(EVENT_ENTER_TOURIAN_DEMO_PLAYED))
             {
                 gCurrentCutscene = CUTSCENE_ENTER_TOURIAN;
 

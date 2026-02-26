@@ -1,6 +1,7 @@
 #include "room.h"
 #include "dma.h"
 #include "gba.h"
+#include "event.h"
 
 #include "data/empty_datatypes.h"
 #include "data/common_pals.h"
@@ -293,7 +294,7 @@ void RoomLoadEntry(void)
     gCurrentRoomEntry.firstSpritesetEvent = entry.firstSpritesetEvent;
     gCurrentRoomEntry.secondSpritesetEvent = entry.secondSpritesetEvent;
 
-    if (gCurrentRoomEntry.secondSpritesetEvent != EVENT_NONE && EventFunction(EVENT_ACTION_CHECKING, gCurrentRoomEntry.secondSpritesetEvent))
+    if (gCurrentRoomEntry.secondSpritesetEvent != EVENT_NONE && CHECK_EVENT(gCurrentRoomEntry.secondSpritesetEvent))
     {
         gCurrentRoomEntry.pEnemyRoomData = entry.pSecondSpriteData;
         gSpriteset = entry.secondSpriteset;
@@ -301,7 +302,7 @@ void RoomLoadEntry(void)
     }
 
     if (gCurrentRoomEntry.firstSpritesetEvent != EVENT_NONE && gSpritesetEntryUsed == 0
-        && EventFunction(EVENT_ACTION_CHECKING, gCurrentRoomEntry.firstSpritesetEvent))
+        && CHECK_EVENT(gCurrentRoomEntry.firstSpritesetEvent))
     {
         gCurrentRoomEntry.pEnemyRoomData = entry.pFirstSpriteData;
         gSpriteset = entry.firstSpriteset;

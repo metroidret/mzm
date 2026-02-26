@@ -1,5 +1,6 @@
 #include "macros.h"
 #include "sprites_ai/acid_worm.h"
+#include "event.h"
 
 #include "data/sprites/acid_worm.h"
 #include "data/sprite_data.h"
@@ -194,7 +195,7 @@ static void AcidWormChangeBigBlockDownCcaa(ClipdataAffectingAction caa)
     ClipdataProcess(yPosition, xPosition + HALF_BLOCK_SIZE);
 
     // Play particle effect if acid worm is dying
-    if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_ACID_WORM_KILLED))
+    if (!CHECK_EVENT(EVENT_ACID_WORM_KILLED))
         ParticleSet(yPosition - BLOCK_SIZE, xPosition - QUARTER_BLOCK_SIZE, PE_SPRITE_EXPLOSION_SINGLE_THEN_BIG);
 }
 
@@ -220,7 +221,7 @@ static void AcidWormChangeBigBlockMiddleCcaa(ClipdataAffectingAction caa)
     ClipdataProcess(yPosition, xPosition + HALF_BLOCK_SIZE);
 
     // Play particle effect if acid worm is dying
-    if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_ACID_WORM_KILLED))
+    if (!CHECK_EVENT(EVENT_ACID_WORM_KILLED))
         ParticleSet(yPosition - BLOCK_SIZE, xPosition + QUARTER_BLOCK_SIZE, PE_SPRITE_EXPLOSION_SINGLE_THEN_BIG);
 }
 
@@ -245,7 +246,7 @@ static void AcidWormChangeBigBlockTopCcaa(ClipdataAffectingAction caa)
     gCurrentClipdataAffectingAction = caa;
     ClipdataProcess(yPosition, xPosition + HALF_BLOCK_SIZE);
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_ACID_WORM_KILLED))
+    if (CHECK_EVENT(EVENT_ACID_WORM_KILLED))
         return;
 
     // If acid worm dying, play effects
@@ -355,7 +356,7 @@ static void AcidWormInit(void)
     gSubSpriteData1.work3 = FALSE;
     gSubSpriteData1.work2 = FALSE;
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_ACID_WORM_KILLED))
+    if (CHECK_EVENT(EVENT_ACID_WORM_KILLED))
     {
         // Acid worm killed, remove block and bring liquid down
         gEffectYPositionOffset = BLOCK_SIZE * 9 + HALF_BLOCK_SIZE;
@@ -369,7 +370,7 @@ static void AcidWormInit(void)
         return;
     }
 
-    if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_ZIPLINES_ACTIVATED))
+    if (!CHECK_EVENT(EVENT_ZIPLINES_ACTIVATED))
     {
         gCurrentSprite.status = 0; // No ziplines, kill sprite
         return;
@@ -1575,7 +1576,7 @@ static void AcidWormPartDeath(void)
             AcidWormChangeTwoGroundCcaa(CAA_REMOVE_SOLID, gSpriteData[mainSpriteSlot].yPositionSpawn, gSpriteData[mainSpriteSlot].xPositionSpawn);
 
             // Set event and open door
-            EventFunction(EVENT_ACTION_SETTING, EVENT_ACID_WORM_KILLED);
+            SET_EVENT(EVENT_ACID_WORM_KILLED);
             gDoorUnlockTimer = -ONE_THIRD_SECOND;
             FadeMusic(CONVERT_SECONDS(4.5f));
         }

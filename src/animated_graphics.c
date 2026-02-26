@@ -4,6 +4,7 @@
 #include "macros.h"
 #include "sprite.h"
 #include "color_effects.h"
+#include "event.h"
 
 #include "data/shortcut_pointers.h"
 #include "data/animated_graphics_data.h"
@@ -491,7 +492,7 @@ void AnimatedPaletteCheckDisableOnTransition(void)
     switch (gAnimatedGraphicsEntry.palette)
     {
         case ANIMATED_PALETTE_ID_ZIPLINE:
-            if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_ZIPLINES_ACTIVATED))
+            if (!CHECK_EVENT(EVENT_ZIPLINES_ACTIVATED))
                 gDisableAnimatedPalette = TRUE; // No ziplines
             break;
 

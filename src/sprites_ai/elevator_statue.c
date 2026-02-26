@@ -1,5 +1,6 @@
 #include "sprites_ai/elevator_statue.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/elevator_statue.h"
 
@@ -107,7 +108,7 @@ static void KraidElevatorStatueInit(void)
     gCurrentSprite.properties |= (SP_ALWAYS_ACTIVE | SP_SOLID_FOR_PROJECTILES);
     gCurrentSprite.samusCollision = SSC_NONE;
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_KRAID_ELEVATOR_STATUE_DESTROYED))
+    if (CHECK_EVENT(EVENT_KRAID_ELEVATOR_STATUE_DESTROYED))
     {
         KraidElevatorStatueFallenInit();
         return;
@@ -137,7 +138,7 @@ static void KraidElevatorStatueInit(void)
 static void KraidElevatorStatueCheckShouldFall(void)
 {
     // Samus not using the elevator and kraid dead
-    if (gSamusData.pose != SPOSE_USING_AN_ELEVATOR && EventFunction(EVENT_ACTION_CHECKING, EVENT_KRAID_KILLED))
+    if (gSamusData.pose != SPOSE_USING_AN_ELEVATOR && CHECK_EVENT(EVENT_KRAID_KILLED))
     {
         // Set falling behavior
         gCurrentSprite.pose = ELEVATOR_STATUE_POSE_DELAY_BEFORE_FALLING;
@@ -162,7 +163,7 @@ static void KraidElevatorStatueDelayBeforeFalling(void)
         gCurrentSprite.pose = ELEVATOR_STATUE_POSE_FALLING;
 
         // Set event
-        EventFunction(EVENT_ACTION_SETTING, EVENT_KRAID_ELEVATOR_STATUE_DESTROYED);
+        SET_EVENT(EVENT_KRAID_ELEVATOR_STATUE_DESTROYED);
 
         // Remove collison
         KraidElevatorStatueChangeCAA(CAA_REMOVE_SOLID);
@@ -280,7 +281,7 @@ static void RidleyElevatorStatueInit(void)
     gCurrentSprite.properties |= (SP_ALWAYS_ACTIVE | SP_SOLID_FOR_PROJECTILES);
     gCurrentSprite.samusCollision = SSC_NONE;
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_RIDLEY_ELEVATOR_STATUE_DESTROYED))
+    if (CHECK_EVENT(EVENT_RIDLEY_ELEVATOR_STATUE_DESTROYED))
     {
         RidleyElevatorStatueFallenInit();
         return;
@@ -309,7 +310,7 @@ static void RidleyElevatorStatueInit(void)
 static void RidleyElevatorStatueCheckShouldFall(void)
 {
     // Samus not using the elevator and ridley dead
-    if (gSamusData.pose != SPOSE_USING_AN_ELEVATOR && EventFunction(EVENT_ACTION_CHECKING, EVENT_RIDLEY_KILLED))
+    if (gSamusData.pose != SPOSE_USING_AN_ELEVATOR && CHECK_EVENT(EVENT_RIDLEY_KILLED))
     {
         // Set falling behavior
         gCurrentSprite.pose = ELEVATOR_STATUE_POSE_DELAY_BEFORE_FALLING;
@@ -334,7 +335,7 @@ static void RidleyElevatorStatueDelayBeforeFalling(void)
         gCurrentSprite.pose = ELEVATOR_STATUE_POSE_FALLING;
 
         // Set event
-        EventFunction(EVENT_ACTION_SETTING, EVENT_RIDLEY_ELEVATOR_STATUE_DESTROYED);
+        SET_EVENT(EVENT_RIDLEY_ELEVATOR_STATUE_DESTROYED);
 
         // Remove collision
         RidleyElevatorStatueChangeCcaa(CAA_REMOVE_SOLID);

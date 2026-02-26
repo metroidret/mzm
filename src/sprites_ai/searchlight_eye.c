@@ -1,5 +1,6 @@
 #include "sprites_ai/searchlight_eye.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/searchlight_eye.h"
 #include "data/sprite_data.h"
@@ -40,7 +41,7 @@ static void SearchlightEyeInit(void)
     u8 ramSlot;
 
     // Make invulnerable if during suitless
-    if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_FULLY_POWERED_SUIT_OBTAINED))
+    if (!CHECK_EVENT(EVENT_FULLY_POWERED_SUIT_OBTAINED))
         gCurrentSprite.properties |= SP_IMMUNE_TO_PROJECTILES;
     
     gCurrentSprite.drawDistanceTop = SUB_PIXEL_TO_PIXEL(THREE_QUARTER_BLOCK_SIZE + EIGHTH_BLOCK_SIZE);

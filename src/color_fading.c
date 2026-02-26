@@ -3,6 +3,7 @@
 #include "gba.h"
 #include "color_effects.h"
 #include "sprites_ai/ruins_test.h"
+#include "event.h"
 
 #include "data/color_fading_data.h"
 #include "data/common_pals.h"
@@ -882,12 +883,12 @@ u8 ColorFadingProcess_GettingFullyPowered(void)
             ColorFadingStart(COLOR_FADING_CANCEL);
 
             gSubSpriteData1.work3 = RUINS_TEST_FIGHT_STAGE_STARTING_CUTSCENE;
-            EventFunction(EVENT_ACTION_SETTING, EVENT_STATUE_VARIA_SUIT_GRABBED);
+            SET_EVENT(EVENT_STATUE_VARIA_SUIT_GRABBED);
 
-            if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_VARIA_SUIT_OBTAINED))
+            if (!CHECK_EVENT(EVENT_VARIA_SUIT_OBTAINED))
             {
-                EventFunction(EVENT_ACTION_SETTING, EVENT_VARIA_SUIT_OBTAINED);
-                EventFunction(EVENT_ACTION_SETTING, EVENT_SKIPPED_VARIA_SUIT);
+                SET_EVENT(EVENT_VARIA_SUIT_OBTAINED);
+                SET_EVENT(EVENT_SKIPPED_VARIA_SUIT);
             }
 
             gEquipment.suitMisc |= SMF_VARIA_SUIT;
@@ -1017,9 +1018,9 @@ u8 ColorFadingProcess_BeforeIntroText(void)
             if (gDifficulty != DIFF_NORMAL)
             {
                 if (gDifficulty == DIFF_HARD)
-                    EventFunction(EVENT_ACTION_SETTING, EVENT_HARD);
+                    SET_EVENT(EVENT_HARD);
                 else if (gDifficulty == DIFF_EASY)
-                    EventFunction(EVENT_ACTION_SETTING, EVENT_EASY);
+                    SET_EVENT(EVENT_EASY);
                 else
                 {
                     // ?

@@ -1,4 +1,5 @@
 #include "sprites_ai/space_pirate_carrying_power_bomb.h"
+#include "event.h"
 
 #include "data/sprites/space_pirate_carrying_power_bomb.h"
 #include "data/sprites/space_pirate.h"
@@ -41,9 +42,9 @@ void SpacePirateCarryingPowerBomb(void)
     {
         case SPRITE_POSE_UNINITIALIZED:
             if (room == RUINS_ROOM + 1)
-                eventCheck = EventFunction(EVENT_ACTION_CHECKING, EVENT_SPACE_PIRATE_WITH_POWER_BOMB_ONE);
+                eventCheck = CHECK_EVENT(EVENT_SPACE_PIRATE_WITH_POWER_BOMB_ONE);
             else if (room == POWER_BOMB_ROOM + 1)
-                eventCheck = EventFunction(EVENT_ACTION_CHECKING, EVENT_SPACE_PIRATE_WITH_POWER_BOMB_TWO);
+                eventCheck = CHECK_EVENT(EVENT_SPACE_PIRATE_WITH_POWER_BOMB_TWO);
             else
                 eventCheck = TRUE;
 
@@ -76,9 +77,9 @@ void SpacePirateCarryingPowerBomb(void)
             if (gCurrentSprite.status & SPRITE_STATUS_ONSCREEN)
             {
                 if (room == RUINS_ROOM + 1)
-                    EventFunction(EVENT_ACTION_SETTING, EVENT_SPACE_PIRATE_WITH_POWER_BOMB_ONE);
+                    SET_EVENT(EVENT_SPACE_PIRATE_WITH_POWER_BOMB_ONE);
                 else if (room == POWER_BOMB_ROOM + 1)
-                    EventFunction(EVENT_ACTION_SETTING, EVENT_SPACE_PIRATE_WITH_POWER_BOMB_TWO);
+                    SET_EVENT(EVENT_SPACE_PIRATE_WITH_POWER_BOMB_TWO);
 
                 gCurrentSprite.pose = SPACE_PIRATE_CARRYING_POWER_BOMB_POSE_MOVING;
 
@@ -120,7 +121,7 @@ void FakePowerBomb(void)
 {
     if (gCurrentSprite.pose == SPRITE_POSE_UNINITIALIZED)
     {
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_POWER_BOMB_STOLEN))
+        if (CHECK_EVENT(EVENT_POWER_BOMB_STOLEN))
         {
             gCurrentSprite.status = 0;
             return;
@@ -154,7 +155,7 @@ void FakePowerBombEventTrigger(void)
 {
     if (gCurrentSprite.pose == SPRITE_POSE_UNINITIALIZED)
     {
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_POWER_BOMB_STOLEN))
+        if (CHECK_EVENT(EVENT_POWER_BOMB_STOLEN))
         {
             gCurrentSprite.status = 0;
             return;
@@ -182,6 +183,6 @@ void FakePowerBombEventTrigger(void)
     if (gCurrentSprite.status & SPRITE_STATUS_SAMUS_COLLIDING)
     {
         gCurrentSprite.status = 0;
-        EventFunction(EVENT_ACTION_SETTING, EVENT_POWER_BOMB_STOLEN);
+        SET_EVENT(EVENT_POWER_BOMB_STOLEN);
     }
 }

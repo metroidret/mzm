@@ -1,4 +1,5 @@
 #include "sprites_ai/glass_tube.h"
+#include "event.h"
 
 #include "data/sprites/glass_tube.h"
 
@@ -110,7 +111,7 @@ static void GlassTubeInit(void)
     gCurrentSprite.currentAnimationFrame = 0;
     gCurrentSprite.samusCollision = SSC_NONE;
     
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_GLASS_TUBE_BROKEN))
+    if (CHECK_EVENT(EVENT_GLASS_TUBE_BROKEN))
     {
         // Set broken behavior
         gCurrentSprite.pOam = sGlassTubeOam_Broken;
@@ -124,7 +125,7 @@ static void GlassTubeInit(void)
         gCurrentSprite.pose = GLASS_TUBE_POSE_POWER_BOMB_COLLISION;
     }
 
-    if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_FULLY_POWERED_SUIT_OBTAINED))
+    if (!CHECK_EVENT(EVENT_FULLY_POWERED_SUIT_OBTAINED))
         SoundPlay(SOUND_RAIN_HITTING_GROUND);
 }
 
@@ -147,7 +148,7 @@ static void GlassTubeCheckPowerBombCollision(void)
     u16 spriteLeft;
     u16 spriteRight;
 
-    if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_FULLY_POWERED_SUIT_OBTAINED))
+    if (!CHECK_EVENT(EVENT_FULLY_POWERED_SUIT_OBTAINED))
         return;
 
     if (gCurrentPowerBomb.animationState != PB_STATE_NONE && gEquipment.maxPowerBombs != 0)
@@ -173,7 +174,7 @@ static void GlassTubeCheckPowerBombCollision(void)
             gCurrentSprite.GLASS_TUBE_CRACKING_DELAY_TIMER = CONVERT_SECONDS(2.f);
 
             // Set event
-            EventFunction(EVENT_ACTION_SETTING, EVENT_GLASS_TUBE_BROKEN);
+            SET_EVENT(EVENT_GLASS_TUBE_BROKEN);
         }
     }
 }

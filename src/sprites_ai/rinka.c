@@ -3,6 +3,7 @@
 #include "gba/display.h"
 #include "syscalls.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/rinka.h"
 #include "data/sprites/zebetite_and_cannon.h"
@@ -718,7 +719,7 @@ void Rinka(void)
  */
 void RinkaMotherBrain(void)
 {
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_MOTHER_BRAIN_KILLED))
+    if (CHECK_EVENT(EVENT_MOTHER_BRAIN_KILLED))
     {
         // Kill if mother brain is dead
         if (gCurrentSprite.status & SPRITE_STATUS_ONSCREEN)

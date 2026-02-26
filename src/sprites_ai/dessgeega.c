@@ -1,5 +1,6 @@
 #include "sprites_ai/dessgeega.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/dessgeega.h"
 #include "data/sprite_data.h"
@@ -55,7 +56,7 @@ static void DessgeegaInit(void)
     if (spriteId == PSPRITE_DESSGEEGA_AFTER_LONG_BEAM)
     {
         // Check should kill dessgeega
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_LONG_BEAM_DESSGEEGA_KILLED) || !EventFunction(EVENT_ACTION_CHECKING, EVENT_VIEWED_STATUE_ROOM))
+        if (CHECK_EVENT(EVENT_LONG_BEAM_DESSGEEGA_KILLED) || !CHECK_EVENT(EVENT_VIEWED_STATUE_ROOM))
         {
             // If already dead or didn't view statue room
             gCurrentSprite.status = 0;
@@ -677,13 +678,13 @@ static void DessgeegaDeath(void)
     }
     else
     {
-        // BUG: There's no check for the sprite id, so the event set and door unlock is done for every "ground" dessgeega
+        // BUG: There's no check for the sprite ID, so the event set and door unlock is done for every "ground" dessgeega
         #ifdef BUGFIX
         if (gCurrentSprite.spriteId == PSPRITE_DESSGEEGA_AFTER_LONG_BEAM)
-        #endif
+        #endif // BUGFIX
         {
             // Set event
-            EventFunction(EVENT_ACTION_SETTING, EVENT_LONG_BEAM_DESSGEEGA_KILLED);
+            SET_EVENT(EVENT_LONG_BEAM_DESSGEEGA_KILLED);
             // Unlock doors
             gDoorUnlockTimer = -ONE_THIRD_SECOND;
         }

@@ -36,18 +36,18 @@ u32 EventFunction(EventAction action, Event event)
     // Apply action
     switch (action)
     {
-        case EVENT_ACTION_CLEARING:
+        case EVENT_ACTION_CLEAR:
             // Remove
             *pEvent = previous & ~newEvent;
             break;
 
-        case EVENT_ACTION_SETTING:
+        case EVENT_ACTION_SET:
             // Add
             *pEvent = previous | newEvent;
             isSet ^= TRUE;
             break;
 
-        case EVENT_ACTION_TOGGLING:
+        case EVENT_ACTION_TOGGLE:
             // Toggle
             *pEvent = previous ^ newEvent;
             isSet ^= TRUE;

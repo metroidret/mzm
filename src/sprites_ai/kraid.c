@@ -1,6 +1,7 @@
 #include "sprites_ai/kraid.h"
 #include "gba.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/kraid.h"
 #include "data/sprite_data.h"
@@ -1648,7 +1649,7 @@ static void KraidDyingInit(void)
     gCurrentSprite.health = 1;
     gCurrentSprite.invincibilityStunFlashTimer = EIGHTH_BLOCK_SIZE;
     gCurrentSprite.drawOrder = 12;
-    EventFunction(EVENT_ACTION_SETTING, EVENT_KRAID_KILLED);
+    SET_EVENT(EVENT_KRAID_KILLED);
     MinimapUpdateChunk(EVENT_KRAID_KILLED);
     SoundPlay(SOUND_KRAID_DYING_1);
 }

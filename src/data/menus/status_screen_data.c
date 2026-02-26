@@ -313,9 +313,9 @@ const struct StatusScreenGroupPositions sPauseDebugGroupsPositions[PAUSE_DEBUG_G
 };
 
 const EventAction sEasyHardEventActions[DIFF_COUNT][2] = {
-    [DIFF_EASY] = { EVENT_ACTION_SETTING, EVENT_ACTION_CLEARING },
-    [DIFF_NORMAL] = { EVENT_ACTION_CLEARING, EVENT_ACTION_CLEARING },
-    [DIFF_HARD] = { EVENT_ACTION_CLEARING, EVENT_ACTION_SETTING }
+    [DIFF_EASY] = { EVENT_ACTION_SET, EVENT_ACTION_CLEAR },
+    [DIFF_NORMAL] = { EVENT_ACTION_CLEAR, EVENT_ACTION_CLEAR },
+    [DIFF_HARD] = { EVENT_ACTION_CLEAR, EVENT_ACTION_SET }
 };
 
 const struct PauseDebugEnergyAmmoInfo sPauseDebugEnergyAmmoInfo[8] = {

@@ -1,6 +1,7 @@
 #include "sprites_ai/ridley.h"
 #include "gba.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/ridley.h"
 #include "data/sprite_data.h"
@@ -612,7 +613,7 @@ static void RidleyInit(void)
     gBossWork.work1 = gCurrentSprite.yPosition;
     gBossWork.work2 = gCurrentSprite.xPosition;
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_RIDLEY_KILLED))
+    if (CHECK_EVENT(EVENT_RIDLEY_KILLED))
     {
         // Already dead, destroy blocks
         yPosition = gBossWork.work1 + (BLOCK_SIZE * 6 + HALF_BLOCK_SIZE);
@@ -635,7 +636,7 @@ static void RidleyInit(void)
         return;
     }
     
-    if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_GRAVITY_SUIT_OBTAINED))
+    if (!CHECK_EVENT(EVENT_GRAVITY_SUIT_OBTAINED))
     {
         // Has gravity
         gCurrentSprite.status = 0;
@@ -2009,7 +2010,7 @@ static void RidleyDying(void)
             // Unlock doors
             gDoorUnlockTimer = -CONVERT_SECONDS(1.f);
             // Set event
-            EventFunction(EVENT_ACTION_SETTING, EVENT_RIDLEY_KILLED);
+            SET_EVENT(EVENT_RIDLEY_KILLED);
             // Update minimap
             MinimapUpdateChunk(EVENT_RIDLEY_KILLED);
             PlayMusic(MUSIC_BOSS_KILLED, 0);

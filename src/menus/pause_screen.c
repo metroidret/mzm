@@ -505,7 +505,7 @@ void PauseScreenUpdateBossIcons(void)
         PAUSE_SCREEN_DATA.bossIconOam[0].yPosition = sBossIcons[PAUSE_SCREEN_DATA.currentArea][3] * HALF_BLOCK_SIZE;
 
         // Check event
-        if (EventFunction(EVENT_ACTION_CHECKING, status))
+        if (CHECK_EVENT(status))
         {
             // Boss dead, set new oam id
             if (PAUSE_SCREEN_DATA.currentArea != AREA_CRATERIA)
@@ -2698,7 +2698,7 @@ void PauseScreenGetMinimapData(Area area, u16* dst)
 
     // Check update boss icons
     position = sBossIcons[area][0]; // Event
-    if (position && EventFunction(EVENT_ACTION_CHECKING, position))
+    if (position && CHECK_EVENT(position))
     {
         position = sBossIcons[area][2] + sBossIcons[area][3] * MINIMAP_SIZE;
 
@@ -2738,7 +2738,7 @@ void PauseScreenGetMinimapData(Area area, u16* dst)
     }
 
     // Check update the varia statue tile if varia suit was skipped
-    if (area == AREA_BRINSTAR && EventFunction(EVENT_ACTION_CHECKING, EVENT_SKIPPED_VARIA_SUIT))
+    if (area == AREA_BRINSTAR && CHECK_EVENT(EVENT_SKIPPED_VARIA_SUIT))
         dst[MINIMAP_SIZE * 2 + 14]++;
 }
 

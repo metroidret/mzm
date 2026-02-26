@@ -1,5 +1,6 @@
 #include "sprites_ai/gadora.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/gadora.h"
 #include "data/sprites/enemy_drop.h"
@@ -49,7 +50,7 @@ static void GadoraInit(void)
     // Check isn't already dead
     if (gCurrentSprite.spriteId == PSPRITE_GADORA_KRAID)
     {
-        if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_KRAID_GADORA_KILLED))
+        if (!CHECK_EVENT(EVENT_KRAID_GADORA_KILLED))
         {
             #ifndef REGION_US_BETA
             gCurrentSprite.status |= SPRITE_STATUS_HIGH_PRIORITY;
@@ -61,7 +62,7 @@ static void GadoraInit(void)
             return;
         }
     }
-    else if (gCurrentSprite.spriteId == PSPRITE_GADORA_RIDLEY && EventFunction(EVENT_ACTION_CHECKING, EVENT_RIDLEY_GADORA_KILLED))
+    else if (gCurrentSprite.spriteId == PSPRITE_GADORA_RIDLEY && CHECK_EVENT(EVENT_RIDLEY_GADORA_KILLED))
     {
         gCurrentSprite.status = 0;
         return;
@@ -311,9 +312,9 @@ static void GadoraDeath(void)
 
         // Set event
         if (gCurrentSprite.spriteId == PSPRITE_GADORA_KRAID)
-            EventFunction(EVENT_ACTION_SETTING, EVENT_KRAID_GADORA_KILLED);
+            SET_EVENT(EVENT_KRAID_GADORA_KILLED);
         else if (gCurrentSprite.spriteId == PSPRITE_GADORA_RIDLEY)
-            EventFunction(EVENT_ACTION_SETTING, EVENT_RIDLEY_GADORA_KILLED);
+            SET_EVENT(EVENT_RIDLEY_GADORA_KILLED);
 
         rng = gSpriteRng;
         xPosition += QUARTER_BLOCK_SIZE;

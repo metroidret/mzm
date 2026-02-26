@@ -1,6 +1,7 @@
 #include "sprites_ai/hive.h"
 #include "macros.h"
 #include "gba/display.h"
+#include "event.h"
 
 #include "data/sprites/hive.h"
 #include "data/sprite_data.h"
@@ -57,7 +58,7 @@ static void HiveInit(void)
     u16 yPosition;
     u16 xPosition;
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_THREE_HIVES_DESTROYED))
+    if (CHECK_EVENT(EVENT_THREE_HIVES_DESTROYED))
     {
         // Kill if the 3 hives were destroyed
         gCurrentSprite.status = 0;
@@ -227,7 +228,7 @@ static void HiveDying(void)
     }
 
     if (count == 0) // Set event if all hives are dead
-        EventFunction(EVENT_ACTION_SETTING, EVENT_THREE_HIVES_DESTROYED);
+        SET_EVENT(EVENT_THREE_HIVES_DESTROYED);
 
     pose = MELLOW_POSE_IDLE;
     param = gCurrentSprite.roomSlot;
@@ -321,7 +322,7 @@ static void HiveRootsIdle(void)
  */
 static void MellowInit(struct SpriteData* pSprite)
 {
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_THREE_HIVES_DESTROYED))
+    if (CHECK_EVENT(EVENT_THREE_HIVES_DESTROYED))
     {
         pSprite->status = 0;
         return;
@@ -902,7 +903,7 @@ void MellowSwarm(void)
     gCurrentSprite.ignoreSamusCollisionTimer = DELTA_TIME;
     if (gCurrentSprite.pose == SPRITE_POSE_UNINITIALIZED)
     {
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_THREE_HIVES_DESTROYED))
+        if (CHECK_EVENT(EVENT_THREE_HIVES_DESTROYED))
         {
             gCurrentSprite.status = 0;
             return;

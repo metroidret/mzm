@@ -4,6 +4,7 @@
 #include "dma.h"
 #include "syscalls.h"
 #include "oam_id.h"
+#include "event.h"
 
 #include "data/shortcut_pointers.h"
 #include "data/clipdata_data.h"
@@ -932,7 +933,7 @@ s32 ChozoStatueHintCheckTargetIsActivated(u8 target)
     result = -1;
 
     // Check for status 
-    if (EventFunction(EVENT_ACTION_CHECKING, sChozoStatueHintEvents[target]))
+    if (CHECK_EVENT(sChozoStatueHintEvents[target]))
     {
         if (sChozoStatueTargetConditions[target][0] == CHOZO_STATUE_HINT_CONDITION_TYPE_BEAM_BOMBS)
         {
@@ -953,7 +954,7 @@ s32 ChozoStatueHintCheckTargetIsActivated(u8 target)
         else if (sChozoStatueTargetConditions[target][0] == CHOZO_STATUE_HINT_CONDITION_TYPE_EVENT)
         {
             // Check event is set
-            result = (s8)EventFunction(EVENT_ACTION_CHECKING, sChozoStatueTargetConditions[target][1]);
+            result = (s8)CHECK_EVENT(sChozoStatueTargetConditions[target][1]);
         }
 
         // Condition needs to be false (doesn't have item or item not set) for the target to be active, so we flip the result

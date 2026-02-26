@@ -1,6 +1,7 @@
 #include "sprites_ai/parasite.h"
 #include "sprites_ai/geron.h"
 #include "gba/display.h"
+#include "event.h"
 
 #include "data/sprites/parasite.h"
 #include "data/sprite_data.h"
@@ -86,7 +87,7 @@ static void ParasiteInit(struct SpriteData* pSprite)
     if (spriteId == PSPRITE_PARASITE_MULTIPLE)
     {
         // Check lock doors
-        if (gEquipment.beamBombs & BBF_BOMBS && !EventFunction(EVENT_ACTION_CHECKING, EVENT_BUGS_KILLED))
+        if (gEquipment.beamBombs & BBF_BOMBS && !CHECK_EVENT(EVENT_BUGS_KILLED))
         {
             LOCK_DOORS();
         }
@@ -1131,9 +1132,9 @@ static void ParasiteMultipleDying(struct SpriteData* pSprite)
         pSprite->status = 0;
         gSpriteData[pSprite->primarySpriteRamSlot].status = 0;
 
-        if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_BUGS_KILLED) && SpriteUtilCountPrimarySprites(PSPRITE_PARASITE_MULTIPLE) == 0)
+        if (!CHECK_EVENT(EVENT_BUGS_KILLED) && SpriteUtilCountPrimarySprites(PSPRITE_PARASITE_MULTIPLE) == 0)
         {
-            EventFunction(EVENT_ACTION_SETTING, EVENT_BUGS_KILLED);
+            SET_EVENT(EVENT_BUGS_KILLED);
             gDoorUnlockTimer = -ONE_THIRD_SECOND;
         }
     }

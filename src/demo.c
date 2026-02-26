@@ -1,6 +1,7 @@
 #include "demo.h"
 #include "callbacks.h"
 #include "dma.h"
+#include "event.h"
 
 #include "data/demo_data.h"
 
@@ -107,18 +108,18 @@ void DemoInit(void)
     switch (demoNbr)
     {
         case 6:
-            EventFunction(EVENT_ACTION_SETTING, EVENT_ZIPLINES_ACTIVATED);
-            EventFunction(EVENT_ACTION_SETTING, EVENT_SPACE_JUMP_OBTAINED);
-            EventFunction(EVENT_ACTION_SETTING, EVENT_KRAID_KILLED);
+            SET_EVENT(EVENT_ZIPLINES_ACTIVATED);
+            SET_EVENT(EVENT_SPACE_JUMP_OBTAINED);
+            SET_EVENT(EVENT_KRAID_KILLED);
             break;
 
         case 7:
-            EventFunction(EVENT_ACTION_SETTING, EVENT_KRAID_KILLED);
-            EventFunction(EVENT_ACTION_SETTING, EVENT_POWER_GRIP_OBTAINED);
+            SET_EVENT(EVENT_KRAID_KILLED);
+            SET_EVENT(EVENT_POWER_GRIP_OBTAINED);
             break;
 
         case 10:
-            EventFunction(EVENT_ACTION_SETTING, EVENT_ZIPLINES_ACTIVATED);
+            SET_EVENT(EVENT_ZIPLINES_ACTIVATED);
             break;
 
         case 11:

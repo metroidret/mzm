@@ -1,6 +1,7 @@
 #include "sprites_ai/imago_cocoon.h"
 #include "fixed_point.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/imago_cocoon.h"
 #include "data/sprites/enemy_drop.h"
@@ -250,12 +251,12 @@ static void ImagoCocoonInit(void)
     gSubSpriteData1.yPosition = gCurrentSprite.yPosition;
     gSubSpriteData1.xPosition = gCurrentSprite.xPosition;
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_IMAGO_COCOON_KILLED))
+    if (CHECK_EVENT(EVENT_IMAGO_COCOON_KILLED))
     {
         SpriteSpawnSecondary(SSPRITE_IMAGO_CEILING_VINE, 0, gCurrentSprite.spritesetGfxSlot,
             gCurrentSprite.primarySpriteRamSlot, gSubSpriteData1.yPosition, gSubSpriteData1.xPosition, 0);
 
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_ENTER_RIDLEY_DEMO_PLAYED))
+        if (CHECK_EVENT(EVENT_ENTER_RIDLEY_DEMO_PLAYED))
         {
             gCurrentSprite.status = 0;
             return;
@@ -446,7 +447,7 @@ static void ImagoCocoonIdle(void)
         gCurrentSprite.pose = IMAGO_COCOON_POSE_FALLING_BEFORE_BLOCKS;
 
         // Set falling
-        EventFunction(EVENT_ACTION_SETTING, EVENT_IMAGO_COCOON_KILLED);
+        SET_EVENT(EVENT_IMAGO_COCOON_KILLED);
         SoundPlay(SOUND_IMAGO_COCOON_VINES_CRACKING);
     }
 }
@@ -1665,7 +1666,7 @@ void EventTriggerDiscoveredImagoPassage(void)
 {
     if (gCurrentSprite.pose == SPRITE_POSE_UNINITIALIZED)
     {
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_IMAGO_TUNNEL_DISCOVERED))
+        if (CHECK_EVENT(EVENT_IMAGO_TUNNEL_DISCOVERED))
         {
             gCurrentSprite.status = 0;
             return;
@@ -1692,7 +1693,7 @@ void EventTriggerDiscoveredImagoPassage(void)
     {
         // Set event
         gCurrentSprite.status = 0;
-        EventFunction(EVENT_ACTION_SETTING, EVENT_IMAGO_TUNNEL_DISCOVERED);
+        SET_EVENT(EVENT_IMAGO_TUNNEL_DISCOVERED);
     }
 }
 

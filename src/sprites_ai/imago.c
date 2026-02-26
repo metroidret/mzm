@@ -1,5 +1,6 @@
 #include "sprites_ai/imago.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/imago.h"
 #include "data/sprite_data.h"
@@ -292,7 +293,7 @@ static void ImagoInit(void)
     u16 status;
     u16 health;
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_IMAGO_KILLED))
+    if (CHECK_EVENT(EVENT_IMAGO_KILLED))
     {
         gCurrentSprite.status = 0;
         return;
@@ -1152,7 +1153,7 @@ static void ImagoSetEvent(void)
         gDoorUnlockTimer = -CONVERT_SECONDS(1.f);
         gCurrentSprite.status = 0;
         // Set event
-        EventFunction(EVENT_ACTION_SETTING, EVENT_IMAGO_KILLED);
+        SET_EVENT(EVENT_IMAGO_KILLED);
     }
 }
 

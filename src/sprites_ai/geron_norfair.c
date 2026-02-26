@@ -1,6 +1,7 @@
 #include "sprites_ai/geron_norfair.h"
 #include "sprites_ai/geron.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/geron_norfair.h"
 
@@ -25,7 +26,7 @@ void GeronNorfair(void)
 
     if (gCurrentSprite.pose == SPRITE_POSE_UNINITIALIZED)
     {
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_POWER_GRIP_OBTAINED))
+        if (CHECK_EVENT(EVENT_POWER_GRIP_OBTAINED))
         {
             gCurrentSprite.status = 0;
             return;

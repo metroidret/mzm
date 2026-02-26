@@ -1,5 +1,6 @@
 #include "sprites_ai/boss_statues.h"
 #include "gba/display.h"
+#include "event.h"
 
 #include "data/sprites/boss_statues.h"
 
@@ -153,20 +154,20 @@ static void KraidStatueInit(void)
     gCurrentSprite.drawOrder = 1;
     gCurrentSprite.samusCollision = SSC_NONE;
 
-    if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_VIEWED_STATUE_ROOM))
+    if (!CHECK_EVENT(EVENT_VIEWED_STATUE_ROOM))
     {
         // Set viewed statue room event if not set
-        EventFunction(EVENT_ACTION_SETTING, EVENT_VIEWED_STATUE_ROOM);
+        SET_EVENT(EVENT_VIEWED_STATUE_ROOM);
     }
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_KRAID_STATUE_OPENED))
+    if (CHECK_EVENT(EVENT_KRAID_STATUE_OPENED))
     {
         // Set opened
         KraidStatueOpenedInit();
         return;
     }
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_KRAID_KILLED))
+    if (CHECK_EVENT(EVENT_KRAID_KILLED))
     {
         // Set ready to open
         gCurrentSprite.pOam = sKraidStatueOam_Activated;
@@ -249,10 +250,10 @@ static void KraidStatueOpening(void)
         KraidStatueOpenedInit();
 
         // Set event
-        EventFunction(EVENT_ACTION_SETTING, EVENT_KRAID_STATUE_OPENED);
+        SET_EVENT(EVENT_KRAID_STATUE_OPENED);
 
         // Check should open doors
-        if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_RIDLEY_KILLED) || EventFunction(EVENT_ACTION_CHECKING, EVENT_RIDLEY_STATUE_OPENED))
+        if (!CHECK_EVENT(EVENT_RIDLEY_KILLED) || CHECK_EVENT(EVENT_RIDLEY_STATUE_OPENED))
         {
             gDoorUnlockTimer = -ONE_THIRD_SECOND;
             BossStatusSetWallBehindSamusCollision(CAA_REMOVE_SOLID);
@@ -386,14 +387,14 @@ static void RidleyStatueInit(void)
     gCurrentSprite.drawOrder = 1;
     gCurrentSprite.samusCollision = SSC_NONE;
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_RIDLEY_STATUE_OPENED))
+    if (CHECK_EVENT(EVENT_RIDLEY_STATUE_OPENED))
     {
         // Set opened
         RidleyStatueOpenedInit();
         return;
     }
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_RIDLEY_KILLED))
+    if (CHECK_EVENT(EVENT_RIDLEY_KILLED))
     {
         // Set ready to open
         gCurrentSprite.pOam = sRidleyStatueOam_Activated;
@@ -488,7 +489,7 @@ static void RidleyStatueOpening(void)
             RidleyStatueOpenedInit();
 
             // Set event
-            EventFunction(EVENT_ACTION_SETTING, EVENT_RIDLEY_STATUE_OPENED);
+            SET_EVENT(EVENT_RIDLEY_STATUE_OPENED);
 
             // Unlock doors
             gDoorUnlockTimer = -ONE_THIRD_SECOND;
@@ -579,7 +580,7 @@ void KraidStatue(void)
             pProj->status |= PROJ_STATUS_LOW_OAM_PRIORITY;
     }
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_KRAID_STATUE_OPENED) && EventFunction(EVENT_ACTION_CHECKING, EVENT_RIDLEY_STATUE_OPENED))
+    if (CHECK_EVENT(EVENT_KRAID_STATUE_OPENED) && CHECK_EVENT(EVENT_RIDLEY_STATUE_OPENED))
     {
         if (SpriteUtilCheckSamusNearSpriteLeftRight(BLOCK_SIZE * 10, BLOCK_SIZE * 6 + QUARTER_BLOCK_SIZE) == NSLR_OUT_OF_RANGE)
         {

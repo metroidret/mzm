@@ -1,5 +1,6 @@
 #include "sprites_ai/imago_larva.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/imago_larva.h"
 #include "data/sprite_data.h"
@@ -145,7 +146,7 @@ static void ImagoLarvaInit(struct SubSpriteData* pSub)
     u16 status;
     u16 offset;
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_CATERPILLAR_KILLED))
+    if (CHECK_EVENT(EVENT_CATERPILLAR_KILLED))
     {
         // Already killed
         gCurrentSprite.status = 0;
@@ -517,7 +518,7 @@ static void ImagoLarvaDeath(struct SubSpriteData* pSub)
     if (gCurrentSprite.spriteId == PSPRITE_IMAGO_LARVA_RIGHT)
     {
         // Set event
-        EventFunction(EVENT_ACTION_SETTING, EVENT_CATERPILLAR_KILLED);
+        SET_EVENT(EVENT_CATERPILLAR_KILLED);
 
         // Unlock doors
         gDoorUnlockTimer = -CONVERT_SECONDS(1.f);

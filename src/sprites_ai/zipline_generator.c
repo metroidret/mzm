@@ -1,5 +1,6 @@
 #include "sprites_ai/zipline_generator.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/zipline_generator.h"
 
@@ -96,7 +97,7 @@ static void ZiplineGeneratorInit(void)
         return;
     }
     
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_ZIPLINES_ACTIVATED))
+    if (CHECK_EVENT(EVENT_ZIPLINES_ACTIVATED))
     {
         // Set already activated
         gCurrentSprite.pOam = sZiplineGeneratorOam_Activated;
@@ -197,7 +198,7 @@ static void ZiplineGeneratorActivating(void)
         gSpriteData[ramSlot].status = 0;
 
         // Set event
-        EventFunction(EVENT_ACTION_SETTING, EVENT_ZIPLINES_ACTIVATED);
+        SET_EVENT(EVENT_ZIPLINES_ACTIVATED);
     }
     else if (gCurrentSprite.work0 == CONVERT_SECONDS(1.5f))
     {

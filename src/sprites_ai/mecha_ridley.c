@@ -2,6 +2,7 @@
 #include "transparency.h"
 #include "gba.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/mecha_ridley.h"
 #include "data/sprite_data.h"
@@ -518,7 +519,7 @@ static void MechaRidleyInit(void)
     u8 gfxSlot;
     u8 ramSlot;
 
-    if (EventFunction(EVENT_ACTION_CHECKING, EVENT_MECHA_RIDLEY_KILLED))
+    if (CHECK_EVENT(EVENT_MECHA_RIDLEY_KILLED))
     {
         gCurrentSprite.status = 0;
         return;
@@ -1452,7 +1453,7 @@ static void MechaRidleySecondEyeGlow(void)
         if (gCurrentSprite.work0 == 0)
         {
             // Set event
-            EventFunction(EVENT_ACTION_SETTING, EVENT_MECHA_RIDLEY_KILLED);
+            SET_EVENT(EVENT_MECHA_RIDLEY_KILLED);
             
             // Start escape
             SpriteSpawnPrimary(PSPRITE_MESSAGE_BANNER, MESSAGE_CHOZODIA_ESCAPE, 0, gCurrentSprite.yPosition, gCurrentSprite.xPosition, 0);

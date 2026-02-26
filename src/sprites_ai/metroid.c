@@ -1,6 +1,7 @@
 #include "sprites_ai/metroid.h"
 #include "gba.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/metroid.h"
 #include "data/sprites/enemy_drop.h"
@@ -547,32 +548,32 @@ static void MetroidInit(void)
     switch (gCurrentRoom)
     {
         case 14:
-            if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_FIRST_METROID_ROOM_CLEARED))
+            if (!CHECK_EVENT(EVENT_FIRST_METROID_ROOM_CLEARED))
                 metroidState++;
             break;
 
         case 1:
-            if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_THIRD_METROID_ROOM_CLEARED))
+            if (!CHECK_EVENT(EVENT_THIRD_METROID_ROOM_CLEARED))
                 metroidState++;
             break;
 
         case 2:
-            if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_FIFTH_METROID_ROOM_CLEARED))
+            if (!CHECK_EVENT(EVENT_FIFTH_METROID_ROOM_CLEARED))
                 metroidState++;
             break;
 
         case 15:
-            if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_SECOND_METROID_ROOM_CLEARED))
+            if (!CHECK_EVENT(EVENT_SECOND_METROID_ROOM_CLEARED))
                 metroidState++;
             break;
 
         case 16:
-            if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_SIXTH_METROID_ROOM_CLEARED))
+            if (!CHECK_EVENT(EVENT_SIXTH_METROID_ROOM_CLEARED))
                 metroidState++;
             break;
 
         case 19:
-            if (!EventFunction(EVENT_ACTION_CHECKING, EVENT_FOURTH_METROID_ROOM_CLEARED))
+            if (!CHECK_EVENT(EVENT_FOURTH_METROID_ROOM_CLEARED))
                 metroidState++;
             break;
 
@@ -925,32 +926,32 @@ static void MetroidDeath(void)
     switch (gCurrentRoom)
     {
         case 14:
-            EventFunction(EVENT_ACTION_SETTING, EVENT_FIRST_METROID_ROOM_CLEARED);
+            SET_EVENT(EVENT_FIRST_METROID_ROOM_CLEARED);
             gDoorUnlockTimer = -ONE_THIRD_SECOND;
             break;
 
         case 1:
-            EventFunction(EVENT_ACTION_SETTING, EVENT_THIRD_METROID_ROOM_CLEARED);
+            SET_EVENT(EVENT_THIRD_METROID_ROOM_CLEARED);
             gDoorUnlockTimer = -ONE_THIRD_SECOND;
             break;
 
         case 2:
-            EventFunction(EVENT_ACTION_SETTING, EVENT_FIFTH_METROID_ROOM_CLEARED);
+            SET_EVENT(EVENT_FIFTH_METROID_ROOM_CLEARED);
             gDoorUnlockTimer = -ONE_THIRD_SECOND;
             break;
 
         case 15:
-            EventFunction(EVENT_ACTION_SETTING, EVENT_SECOND_METROID_ROOM_CLEARED);
+            SET_EVENT(EVENT_SECOND_METROID_ROOM_CLEARED);
             gDoorUnlockTimer = -ONE_THIRD_SECOND;
             break;
 
         case 16:
-            EventFunction(EVENT_ACTION_SETTING, EVENT_SIXTH_METROID_ROOM_CLEARED);
+            SET_EVENT(EVENT_SIXTH_METROID_ROOM_CLEARED);
             gDoorUnlockTimer = -ONE_THIRD_SECOND;
             break;
 
         case 19:
-            EventFunction(EVENT_ACTION_SETTING, EVENT_FOURTH_METROID_ROOM_CLEARED);
+            SET_EVENT(EVENT_FOURTH_METROID_ROOM_CLEARED);
             gDoorUnlockTimer = -ONE_THIRD_SECOND;
             break;
     }

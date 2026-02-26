@@ -1,5 +1,6 @@
 #include "sprites_ai/power_grip.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/power_grip.h"
 
@@ -64,7 +65,7 @@ void PowerGrip(void)
                 gCurrentSprite.pose = POWER_GRIP_POSE_BEING_ACQUIRED;
                 gCurrentSprite.work0 = 0;
                 gEquipment.suitMisc |= SMF_POWER_GRIP;
-                EventFunction(EVENT_ACTION_SETTING, EVENT_POWER_GRIP_OBTAINED);
+                SET_EVENT(EVENT_POWER_GRIP_OBTAINED);
 
                 SpriteSpawnPrimary(PSPRITE_MESSAGE_BANNER, MESSAGE_POWER_GRIP, 6,
                     gCurrentSprite.yPosition, gCurrentSprite.xPosition, 0);

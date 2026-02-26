@@ -1,6 +1,7 @@
 #include "sprites_ai/ruins_test.h"
 #include "gba.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/ruins_test.h"
 #include "data/sprite_data.h"
@@ -1128,7 +1129,7 @@ static void RuinsTestDespawn(void)
         RuinsTestChangeCcaa(CAA_REMOVE_SOLID);
 
         // Set event and IGT
-        EventFunction(EVENT_ACTION_SETTING, EVENT_FULLY_POWERED_SUIT_OBTAINED);
+        SET_EVENT(EVENT_FULLY_POWERED_SUIT_OBTAINED);
         gInGameTimerAtBosses[2] = gInGameTimer;
 
         // Start getting fully powered cutscene

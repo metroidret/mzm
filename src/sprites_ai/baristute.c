@@ -1,5 +1,6 @@
 #include "sprites_ai/baristute.h"
 #include "macros.h"
+#include "event.h"
 
 #include "data/sprites/baristute.h"
 #include "data/sprite_data.h"
@@ -56,7 +57,7 @@ static void BaristuteInit(void)
     // Check for kraid baristutes
     if (gCurrentSprite.spriteId == PSPRITE_BARISTUTE_KRAID_UPPER || gCurrentSprite.spriteId == PSPRITE_BARISTUTE_KRAID_LOWER)
     {
-        if (EventFunction(EVENT_ACTION_CHECKING, EVENT_KRAID_BARISTUTES_KILLED))
+        if (CHECK_EVENT(EVENT_KRAID_BARISTUTES_KILLED))
         {
             // Kill if already dead
             gCurrentSprite.status = 0;
@@ -556,7 +557,7 @@ static void BaristuteDeath(void)
         {
             // Both baristutes dead
             // Set event
-            EventFunction(EVENT_ACTION_SETTING, EVENT_KRAID_BARISTUTES_KILLED);
+            SET_EVENT(EVENT_KRAID_BARISTUTES_KILLED);
 
             // Unlock doors
             gDoorUnlockTimer = -ONE_THIRD_SECOND;

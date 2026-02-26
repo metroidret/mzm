@@ -1,5 +1,6 @@
 #include "sprites_ai/escape_ship.h"
 #include "gba.h"
+#include "event.h"
 
 #include "data/sprites/escape_ship.h"
 
@@ -250,7 +251,7 @@ void EscapeShip(void)
             break;
 
         case ESCAPE_SHIP_POSE_CHECK_OPEN:
-            if (EventFunction(EVENT_ACTION_CHECKING, EVENT_MECHA_RIDLEY_KILLED) &&
+            if (CHECK_EVENT(EVENT_MECHA_RIDLEY_KILLED) &&
                 gSamusData.yPosition <= yPosition && (yPosition - gSamusData.yPosition) <= BLOCK_SIZE * 12 &&
                 gSamusData.xPosition < xPosition && (xPosition - gSamusData.xPosition) < BLOCK_SIZE * 4)
             {
@@ -291,7 +292,7 @@ void EscapeShip(void)
                 else
                     SamusSetPose(SPOSE_TURNING_TO_ENTER_ESCAPE_SHIP);
 
-                EventFunction(EVENT_ACTION_SETTING, EVENT_ESCAPED_CHOZODIA);
+                SET_EVENT(EVENT_ESCAPED_CHOZODIA);
 
                 gCurrentSprite.hitboxTop = -(BLOCK_SIZE * 2 + HALF_BLOCK_SIZE);
                 gCurrentSprite.hitboxBottom = 0;

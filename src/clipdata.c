@@ -3,6 +3,7 @@
 #include "macros.h"
 #include "block.h"
 #include "temp_globals.h"
+#include "event.h"
 
 #include "data/clipdata_data.h"
 
@@ -543,7 +544,7 @@ u32 ClipdataCheckCantUseElevator(u32 movementClip)
             // Check escaped zebes
             if (i == ELEVATOR_ROUTE_CRATERIA_TO_TOURIAN_2)
             {
-                if (EventFunction(EVENT_ACTION_CHECKING, EVENT_ESCAPED_ZEBES))
+                if (CHECK_EVENT(EVENT_ESCAPED_ZEBES))
                     i = ELEVATOR_ROUTE_CRATERIA_TO_TOURIAN;
                 else
                     direction = 0;
