@@ -136,7 +136,10 @@ static void IntroInit(void)
 
     IntroVBlank();
 }
-
+/**
+ * @brief 803b0 | 1A0 | Processes the OAM for the intro text
+ * 
+ */
 static void IntroTextProcessOam(void)
 {
     const u16* src;
