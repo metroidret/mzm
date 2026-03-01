@@ -42,7 +42,7 @@ MAKE_ENUM(u8, DoorType) {
 
     DOOR_TYPE_NO_FLAGS = (1 << 4) - 1,
 
-    DOOR_TYPE_EXISTS = 1 << 4,
+    DOOR_TYPE_NORMAL = 1 << 4,
     DOOR_TYPE_LOAD_EVENT_BASED_ROOM = 1 << 5,
     DOOR_TYPE_DISPLAYS_ROOM_LOCATION = 1 << 6
 };

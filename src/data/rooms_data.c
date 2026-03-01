@@ -666,1082 +666,1082 @@ const struct TilesetEntry sTilesetEntries[79] = {
 
 const struct Door sBrinstarDoors[99] = {
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 0,
 		.xStart = 38,
 		.xEnd = 40,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 11,
-		.xExit = 16,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 2,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 1,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 5,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 46,
 		.yEnd = 49,
 		.destinationDoor = 8,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 3,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 7,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 125,
 		.yEnd = 128,
 		.destinationDoor = 6,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 8,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 4,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 8,
 		.xStart = 8,
 		.xEnd = 10,
 		.yStart = 21,
 		.yEnd = 21,
 		.destinationDoor = 0,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 97,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 35,
 		.yEnd = 38,
 		.destinationDoor = 13,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 55,
 		.yEnd = 58,
 		.destinationDoor = 16,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 11,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 15,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 14,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 12,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 19,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 14,
 		.yEnd = 17,
 		.destinationDoor = 60,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 55,
 		.yEnd = 58,
 		.destinationDoor = 17,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 55,
 		.yEnd = 58,
 		.destinationDoor = 29,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 96,
 		.yEnd = 99,
 		.destinationDoor = 27,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 25,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 96,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 10,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 26,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 10,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 22,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 11,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 24,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 12,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 21,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 12,
 		.xStart = 136,
 		.xEnd = 136,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 56,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 20,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 31,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 30,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 33,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 17,
 		.xEnd = 17,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 32,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 35,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 34,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 41,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 39,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 17,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 40,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 17,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 37,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 18,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 38,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 19,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 36,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 19,
 		.xStart = 106,
 		.xEnd = 106,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 45,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 47,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 35,
 		.yEnd = 38,
 		.destinationDoor = 69,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 47,
 		.yEnd = 50,
 		.destinationDoor = 42,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 21,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 84,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 38,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 43,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 22,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 52,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 22,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 58,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 22,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 85,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 23,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 59,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 23,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 48,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 24,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 55,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 24,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 67,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 25,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 53,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 26,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 28,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 26,
 		.xStart = 8,
 		.xEnd = 10,
 		.yStart = 21,
 		.yEnd = 21,
 		.destinationDoor = 0,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 28,
 		.xStart = 91,
 		.xEnd = 91,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 49,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 27,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 51,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 28,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 18,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 11,
 		.xStart = 8,
 		.xEnd = 10,
 		.yStart = 21,
 		.yEnd = 21,
 		.destinationDoor = 0,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 17,
 		.yEnd = 18,
 		.destinationDoor = 75,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 29,
 		.xEnd = 29,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 74,
-		.xExit = 0,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 21,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 18,
 		.yEnd = 18,
 		.destinationDoor = 65,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 38,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 18,
 		.yEnd = 18,
 		.destinationDoor = 64,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 56,
 		.yEnd = 59,
 		.destinationDoor = 70,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 31,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 54,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 31,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 71,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 31,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 44,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 32,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 66,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 33,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 68,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 66,
 		.yEnd = 69,
 		.destinationDoor = 73,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 34,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 72,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 35,
 		.xStart = 14,
 		.xEnd = 14,
 		.yStart = 21,
 		.yEnd = 21,
 		.destinationDoor = 63,
-		.xExit = 0,
-		.yExit = -24
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(1.5f)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 35,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 7,
 		.yEnd = 8,
 		.destinationDoor = 62,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 125,
 		.yEnd = 128,
 		.destinationDoor = 77,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 36,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 76,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 37,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 79,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 8,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 78,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 3,
 		.destinationDoor = 81,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 29,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 3,
 		.yEnd = 3,
 		.destinationDoor = 80,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 29,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 20,
 		.yEnd = 20,
 		.destinationDoor = 83,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 20,
 		.yEnd = 20,
 		.destinationDoor = 82,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 39,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 46,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 39,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 50,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 21,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 5,
 		.yEnd = 5,
 		.destinationDoor = 87,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 38,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 5,
 		.destinationDoor = 86,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 99,
 		.yEnd = 99,
 		.destinationDoor = 89,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 40,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 9,
 		.yEnd = 9,
 		.destinationDoor = 88,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 40,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 8,
 		.yEnd = 8,
 		.destinationDoor = 91,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 98,
 		.yEnd = 98,
 		.destinationDoor = 90,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 98,
 		.yEnd = 98,
 		.destinationDoor = 93,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 41,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 28,
 		.yEnd = 28,
 		.destinationDoor = 92,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 41,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 4,
 		.yEnd = 4,
 		.destinationDoor = 95,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 74,
 		.yEnd = 74,
 		.destinationDoor = 94,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 30,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 23,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 30,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 10,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NONE,
@@ -1751,781 +1751,781 @@ const struct Door sBrinstarDoors[99] = {
 		.yStart = 0,
 		.yEnd = 0,
 		.destinationDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	}
 };
 
 const struct Door sKraidDoors[107] = {
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 0,
 		.xStart = 8,
 		.xEnd = 10,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 9,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 25,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 9,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 35,
 		.yEnd = 38,
 		.destinationDoor = 27,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 35,
 		.yEnd = 38,
 		.destinationDoor = 28,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 54,
 		.yEnd = 57,
 		.destinationDoor = 30,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 54,
 		.yEnd = 57,
 		.destinationDoor = 33,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 76,
 		.yEnd = 79,
 		.destinationDoor = 32,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 76,
 		.yEnd = 79,
 		.destinationDoor = 37,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 2,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 14,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 16,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 93,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 100,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 56,
 		.yEnd = 59,
 		.destinationDoor = 10,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 21,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 11,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 22,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 94,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 23,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 99,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 15,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 17,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 26,
 		.yEnd = 29,
 		.destinationDoor = 19,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 62,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 31,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 1,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 8,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 63,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 8,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 3,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 4,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 10,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 35,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 10,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 5,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 11,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 36,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 11,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 7,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 12,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 6,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 12,
 		.xStart = 91,
 		.xEnd = 91,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 65,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 29,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 31,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 8,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 39,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 38,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 73,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 42,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 41,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 45,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 17,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 66,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 18,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 43,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 18,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 14,
 		.yEnd = 17,
 		.destinationDoor = 48,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 19,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 50,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 19,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 46,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 53,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 20,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 47,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 21,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 56,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 22,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 61,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 22,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 49,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 19,
 		.xStart = 11,
 		.xEnd = 11,
 		.yStart = 11,
 		.yEnd = 11,
 		.destinationDoor = 74,
-		.xExit = 0,
-		.yExit = -16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 23,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 59,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 23,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 51,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 23,
 		.xStart = 4,
 		.xEnd = 4,
 		.yStart = 11,
 		.yEnd = 11,
 		.destinationDoor = 60,
-		.xExit = 0,
-		.yExit = -16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 24,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 64,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 24,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 55,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 25,
 		.xStart = 4,
 		.xEnd = 4,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 57,
-		.xExit = 0,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 25,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 52,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 26,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 24,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 26,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 26,
 		.yEnd = 29,
 		.destinationDoor = 26,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 26,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 74,
 		.yEnd = 77,
 		.destinationDoor = 58,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 27,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 34,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 27,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 44,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 27,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 53,
 		.yEnd = 56,
 		.destinationDoor = 69,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 28,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 71,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 28,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 67,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -2535,393 +2535,393 @@ const struct Door sKraidDoors[107] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 72,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 29,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 68,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 30,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 27,
 		.yEnd = 30,
 		.destinationDoor = 70,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 21,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 40,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 28,
 		.xStart = 11,
 		.xEnd = 11,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 54,
-		.xExit = 0,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 31,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 8,
 		.yEnd = 8,
 		.destinationDoor = 76,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 18,
 		.yEnd = 18,
 		.destinationDoor = 75,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 25,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 79,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 33,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 3,
 		.destinationDoor = 97,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 32,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 77,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 33,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 98,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 30,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 38,
 		.yEnd = 39,
 		.destinationDoor = 82,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 34,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 8,
 		.yEnd = 9,
 		.destinationDoor = 90,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 84,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 35,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 83,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 12,
 		.xStart = 22,
 		.xEnd = 87,
 		.yStart = 11,
 		.yEnd = 11,
 		.destinationDoor = 86,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 17,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 86,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 27,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 88,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 36,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 87,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 37,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 27,
 		.yEnd = 30,
 		.destinationDoor = 70,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 37,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 38,
 		.yEnd = 39,
 		.destinationDoor = 82,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 17,
 		.yEnd = 17,
 		.destinationDoor = 92,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 38,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 7,
 		.yEnd = 7,
 		.destinationDoor = 91,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 39,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 12,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 39,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 18,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 37,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 38,
 		.yEnd = 39,
 		.destinationDoor = 96,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 28,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 18,
 		.yEnd = 19,
 		.destinationDoor = 95,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 25,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 13,
 		.yEnd = 13,
 		.destinationDoor = 78,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 25,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 80,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 40,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 20,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 40,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 13,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 36,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 7,
 		.destinationDoor = 102,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 41,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 7,
 		.destinationDoor = 101,
-		.xExit = 12,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL,
 		.sourceRoom = 41,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 7,
 		.destinationDoor = 129,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 105,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 26,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 104,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NONE,
@@ -2931,737 +2931,737 @@ const struct Door sKraidDoors[107] = {
 		.yStart = 0,
 		.yEnd = 0,
 		.destinationDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	}
 };
 
 const struct Door sNorfairDoors[133] = {
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 0,
 		.xStart = 8,
 		.xEnd = 10,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 57,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 3,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 85,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 121,
 		.xEnd = 121,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 1,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 5,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 24,
 		.yEnd = 27,
 		.destinationDoor = 4,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 33,
 		.yEnd = 36,
 		.destinationDoor = 7,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 6,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 86,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 91,
 		.xEnd = 91,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 13,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 101,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 25,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 24,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 45,
 		.yEnd = 48,
 		.destinationDoor = 9,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 56,
 		.yEnd = 59,
 		.destinationDoor = 26,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 75,
 		.yEnd = 78,
 		.destinationDoor = 27,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 115,
 		.yEnd = 118,
 		.destinationDoor = 98,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 100,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 19,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 18,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 21,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 8,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 20,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 8,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 23,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 22,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 12,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 10,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 11,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 11,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 14,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 12,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 15,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 12,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 29,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 28,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 49,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 31,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 14,
 		.yEnd = 17,
 		.destinationDoor = 30,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 14,
 		.yEnd = 17,
 		.destinationDoor = 33,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 32,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 77,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 40,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 43,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 78,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 49,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 71,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 17,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 35,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 17,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 42,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 18,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 41,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 19,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 36,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 19,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 45,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 20,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 44,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 20,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 48,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 20,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 35,
 		.yEnd = 38,
 		.destinationDoor = 50,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 21,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 46,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 21,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 38,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 22,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 47,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 22,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 52,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 23,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 51,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 23,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 55,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 23,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 33,
 		.yEnd = 36,
 		.destinationDoor = 63,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 24,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 53,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 24,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 57,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 25,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 56,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 25,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 89,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 25,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 60,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 26,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 59,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 26,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 62,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 27,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 61,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 28,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 54,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 29,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 90,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 33,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 97,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -3671,30 +3671,30 @@ const struct Door sNorfairDoors[133] = {
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 67,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 34,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 66,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 34,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 69,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -3704,272 +3704,272 @@ const struct Door sNorfairDoors[133] = {
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 124,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 35,
 		.xStart = 8,
 		.xEnd = 10,
 		.yStart = 21,
 		.yEnd = 21,
 		.destinationDoor = 0,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 30,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 39,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 30,
 		.xStart = 151,
 		.xEnd = 151,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 73,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 31,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 72,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 31,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 75,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 32,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 74,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 2,
 		.xStart = 8,
 		.xEnd = 10,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 17,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 36,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 34,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 36,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 37,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 80,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 44,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 79,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 37,
 		.xStart = 91,
 		.xEnd = 91,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 84,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 37,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 83,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 38,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 82,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 11,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 81,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 39,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 2,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 39,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 8,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 88,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 40,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 87,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 41,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 58,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 41,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 64,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 29,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 92,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 42,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 91,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 42,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 94,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -3979,151 +3979,151 @@ const struct Door sNorfairDoors[133] = {
 		.yStart = 105,
 		.yEnd = 108,
 		.destinationDoor = 99,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 43,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 66,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 43,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 69,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 45,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 65,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 45,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 16,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 46,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 94,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 47,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 17,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 47,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 10,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 35,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 103,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 48,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 102,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 1,
 		.xEnd = 1,
 		.yStart = 9,
 		.yEnd = 9,
 		.destinationDoor = 105,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 49,
 		.xStart = 32,
 		.xEnd = 32,
 		.yStart = 9,
 		.yEnd = 9,
 		.destinationDoor = 104,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 33,
 		.xStart = 55,
 		.xEnd = 55,
 		.yStart = 12,
 		.yEnd = 12,
 		.destinationDoor = 107,
-		.xExit = 0,
-		.yExit = -16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 48,
 		.xStart = 25,
 		.xEnd = 25,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 106,
-		.xExit = 0,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
 		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
@@ -4133,261 +4133,261 @@ const struct Door sNorfairDoors[133] = {
 		.yStart = 42,
 		.yEnd = 42,
 		.destinationDoor = 60,
-		.xExit = 16,
-		.yExit = -48
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = -BLOCK_TO_PIXEL(3)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 48,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 16,
 		.yEnd = 17,
 		.destinationDoor = 110,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 50,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 7,
 		.destinationDoor = 109,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 50,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 7,
 		.destinationDoor = 112,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 51,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 7,
 		.destinationDoor = 111,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 51,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 7,
 		.destinationDoor = 114,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 52,
 		.xStart = 92,
 		.xEnd = 92,
 		.yStart = 6,
 		.yEnd = 7,
 		.destinationDoor = 113,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 52,
 		.xStart = 7,
 		.xEnd = 7,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 116,
-		.xExit = 0,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 23,
 		.xStart = 7,
 		.xEnd = 7,
 		.yStart = 41,
 		.yEnd = 41,
 		.destinationDoor = 115,
-		.xExit = 0,
-		.yExit = -16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 23,
 		.xStart = 7,
 		.xEnd = 7,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 118,
-		.xExit = 0,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 7,
 		.xEnd = 7,
 		.yStart = 32,
 		.yEnd = 32,
 		.destinationDoor = 117,
-		.xExit = 0,
-		.yExit = -16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 93,
 		.yEnd = 96,
 		.destinationDoor = 120,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 53,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 13,
 		.yEnd = 16,
 		.destinationDoor = 119,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 53,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 122,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 87,
 		.yEnd = 90,
 		.destinationDoor = 121,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 54,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 66,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 54,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 69,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 56,
 		.yEnd = 59,
 		.destinationDoor = 126,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 55,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 36,
 		.yEnd = 39,
 		.destinationDoor = 125,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 55,
 		.xStart = 32,
 		.xEnd = 32,
 		.yStart = 5,
 		.yEnd = 5,
 		.destinationDoor = 128,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 20,
 		.xStart = 1,
 		.xEnd = 1,
 		.yStart = 25,
 		.yEnd = 25,
 		.destinationDoor = 127,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 56,
 		.xStart = 1,
 		.xEnd = 1,
 		.yStart = 6,
 		.yEnd = 7,
 		.destinationDoor = 103,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 56,
 		.xStart = 32,
 		.xEnd = 32,
 		.yStart = 4,
 		.yEnd = 5,
 		.destinationDoor = 131,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 20,
 		.xStart = 1,
 		.xEnd = 1,
 		.yStart = 4,
 		.yEnd = 5,
 		.destinationDoor = 130,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NONE,
@@ -4397,484 +4397,484 @@ const struct Door sNorfairDoors[133] = {
 		.yStart = 0,
 		.yEnd = 0,
 		.destinationDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	}
 };
 
 const struct Door sRidleyDoors[77] = {
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 0,
 		.xStart = 8,
 		.xEnd = 10,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 70,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 3,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 39,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 1,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 1,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 1,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 5,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 32,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 4,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 32,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 7,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_OPEN_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_OPEN_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 6,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 9,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 8,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 13,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 19,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 10,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 49,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 10,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 15,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 14,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 24,
 		.yEnd = 27,
 		.destinationDoor = 18,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 55,
 		.yEnd = 58,
 		.destinationDoor = 47,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 16,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 11,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 8,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 50,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 8,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 22,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 21,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 26,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 46,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 32,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 10,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 23,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 11,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 45,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 11,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 14,
 		.yEnd = 17,
 		.destinationDoor = 29,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 12,
 		.xStart = 26,
 		.xEnd = 26,
 		.yStart = 14,
 		.yEnd = 17,
 		.destinationDoor = 28,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 12,
 		.xStart = 7,
 		.xEnd = 7,
 		.yStart = 14,
 		.yEnd = 17,
 		.destinationDoor = 31,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 30,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 26,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 25,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 36,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 38,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 40,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 45,
 		.yEnd = 48,
 		.destinationDoor = 33,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 55,
 		.yEnd = 58,
 		.destinationDoor = 55,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 34,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 2,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 17,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 35,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 18,
 		.xStart = 196,
 		.xEnd = 196,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 56,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 18,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 48,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -4884,184 +4884,184 @@ const struct Door sRidleyDoors[77] = {
 		.yStart = 23,
 		.yEnd = 26,
 		.destinationDoor = 44,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 19,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 23,
 		.yEnd = 26,
 		.destinationDoor = 43,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 27,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 20,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 24,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 21,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 17,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 21,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 42,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 17,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 12,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 22,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 20,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 22,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 52,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 23,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 51,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 54,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 24,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 53,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 25,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 37,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 25,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 41,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 26,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 58,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 57,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 27,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 23,
 		.yEnd = 26,
 		.destinationDoor = 43,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
@@ -5071,30 +5071,30 @@ const struct Door sRidleyDoors[77] = {
 		.yStart = 1,
 		.yEnd = 1,
 		.destinationDoor = 108,
-		.xExit = 16,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 17,
 		.xStart = 66,
 		.xEnd = 70,
 		.yStart = 22,
 		.yEnd = 22,
 		.destinationDoor = 62,
-		.xExit = 32,
-		.yExit = -48
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = -BLOCK_TO_PIXEL(3)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 51,
 		.xEnd = 55,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 61,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -5104,118 +5104,118 @@ const struct Door sRidleyDoors[77] = {
 		.yStart = 8,
 		.yEnd = 10,
 		.destinationDoor = 64,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 19,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 8,
 		.yEnd = 10,
 		.destinationDoor = 63,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 27,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 8,
 		.yEnd = 10,
 		.destinationDoor = 63,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 12,
 		.xEnd = 12,
 		.yStart = 32,
 		.yEnd = 32,
 		.destinationDoor = 74,
-		.xExit = 0,
-		.yExit = -40
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(2.5f)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 28,
 		.xStart = 12,
 		.xEnd = 12,
 		.yStart = 32,
 		.yEnd = 32,
 		.destinationDoor = 74,
-		.xExit = 0,
-		.yExit = -40
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(2.5f)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 67,
 		.yEnd = 70,
 		.destinationDoor = 69,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 29,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 68,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 46,
 		.yEnd = 49,
 		.destinationDoor = 71,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 30,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 70,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 26,
 		.yEnd = 29,
 		.destinationDoor = 73,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 31,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 72,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -5225,19 +5225,19 @@ const struct Door sRidleyDoors[77] = {
 		.yStart = 1,
 		.yEnd = 1,
 		.destinationDoor = 67,
-		.xExit = 0,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 28,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 23,
 		.yEnd = 26,
 		.destinationDoor = 75,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NONE,
@@ -5247,154 +5247,154 @@ const struct Door sRidleyDoors[77] = {
 		.yStart = 0,
 		.yEnd = 0,
 		.destinationDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	}
 };
 
 const struct Door sTourianDoors[44] = {
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 0,
 		.xStart = 8,
 		.xEnd = 10,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 61,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 24,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 23,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 39,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 38,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 45,
 		.yEnd = 48,
 		.destinationDoor = 33,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 13,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 8,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 14,
 		.yEnd = 17,
 		.destinationDoor = 7,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 14,
 		.yEnd = 17,
 		.destinationDoor = 10,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 104,
 		.yEnd = 107,
 		.destinationDoor = 9,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 5,
 		.xStart = 9,
 		.xEnd = 9,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 13,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 6,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 34,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
@@ -5404,327 +5404,327 @@ const struct Door sTourianDoors[44] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 6,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 14,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 7,
 		.xEnd = 7,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 16,
-		.xExit = 0,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 7,
 		.xEnd = 7,
 		.yStart = 21,
 		.yEnd = 21,
 		.destinationDoor = 15,
-		.xExit = 0,
-		.yExit = -48
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(3)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 12,
 		.yEnd = 17,
 		.destinationDoor = 22,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 12,
 		.yEnd = 17,
 		.destinationDoor = 19,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 10,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 2,
 		.yEnd = 7,
 		.destinationDoor = 18,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 10,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 13,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 8,
 		.xStart = 24,
 		.xEnd = 24,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 51,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 8,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 102,
 		.yEnd = 107,
 		.destinationDoor = 17,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 34,
 		.yEnd = 37,
 		.destinationDoor = 2,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 11,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 1,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 11,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 26,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 12,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 25,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 12,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 28,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 27,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 30,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 29,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 32,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 13,
 		.yEnd = 16,
 		.destinationDoor = 31,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 5,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 12,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 23,
 		.yEnd = 26,
 		.destinationDoor = 35,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 36,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 18,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 40,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 18,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 14,
 		.yEnd = 17,
 		.destinationDoor = 4,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 19,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 3,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 19,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 37,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 18,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 42,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 17,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 41,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NONE,
@@ -5734,55 +5734,55 @@ const struct Door sTourianDoors[44] = {
 		.yStart = 0,
 		.yEnd = 0,
 		.destinationDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	}
 };
 
 const struct Door sCrateriaDoors[53] = {
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 39,
 		.xEnd = 39,
 		.yStart = 62,
 		.yEnd = 62,
 		.destinationDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 35,
 		.yEnd = 38,
 		.destinationDoor = 4,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 21,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 42,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 67,
 		.yEnd = 70,
 		.destinationDoor = 5,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
@@ -5792,162 +5792,162 @@ const struct Door sCrateriaDoors[53] = {
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 1,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 3,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 36,
 		.yEnd = 39,
 		.destinationDoor = 8,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 56,
 		.yEnd = 59,
 		.destinationDoor = 12,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 43,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 10,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 9,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 3,
 		.xStart = 8,
 		.xEnd = 10,
 		.yStart = 21,
 		.yEnd = 21,
 		.destinationDoor = 0,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 7,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 4,
 		.xStart = 8,
 		.xEnd = 10,
 		.yStart = 21,
 		.yEnd = 21,
 		.destinationDoor = 11,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 65,
 		.yEnd = 68,
 		.destinationDoor = 27,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 8,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 19,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 18,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 6,
 		.xStart = 8,
 		.xEnd = 10,
 		.yStart = 21,
 		.yEnd = 21,
 		.destinationDoor = 76,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 16,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -5957,85 +5957,85 @@ const struct Door sCrateriaDoors[53] = {
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 15,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 6,
 		.xEnd = 6,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 22,
-		.xExit = 0,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 91,
 		.xEnd = 91,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 32,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 9,
 		.xStart = 6,
 		.xEnd = 6,
 		.yStart = 41,
 		.yEnd = 41,
 		.destinationDoor = 20,
-		.xExit = 0,
-		.yExit = -16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 10,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 25,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 10,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 220,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 91,
 		.xEnd = 91,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 48,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 65,
 		.yEnd = 68,
 		.destinationDoor = 27,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -6045,30 +6045,30 @@ const struct Door sCrateriaDoors[53] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 26,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 11,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 31,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 36,
 		.yEnd = 36,
 		.destinationDoor = 30,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -6078,239 +6078,239 @@ const struct Door sCrateriaDoors[53] = {
 		.yStart = 6,
 		.yEnd = 6,
 		.destinationDoor = 39,
-		.xExit = -12,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(.75f),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 28,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 21,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 13,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 8,
 		.destinationDoor = 150,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 38,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 37,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 19,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 34,
 		.yEnd = 37,
 		.destinationDoor = 35,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 45,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 8,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 36,
 		.yEnd = 36,
 		.destinationDoor = 30,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 9,
 		.xStart = 66,
 		.xEnd = 69,
 		.yStart = 41,
 		.yEnd = 41,
 		.destinationDoor = 41,
-		.xExit = 24,
-		.yExit = -16
+		.xExit = BLOCK_TO_PIXEL(1.5f),
+		.yExit = -BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 66,
 		.xEnd = 69,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 40,
-		.xExit = 24,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(1.5f),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 67,
 		.yEnd = 70,
 		.destinationDoor = 2,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 21,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 36,
 		.yEnd = 39,
 		.destinationDoor = 8,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 21,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 56,
 		.yEnd = 59,
 		.destinationDoor = 50,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 17,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 38,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 35,
 		.yEnd = 38,
 		.destinationDoor = 4,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 17,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 19,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 25,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 20,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 220,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 18,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 44,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 18,
 		.xStart = 8,
 		.xEnd = 10,
 		.yStart = 21,
 		.yEnd = 21,
 		.destinationDoor = 21,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NONE,
@@ -6320,517 +6320,517 @@ const struct Door sCrateriaDoors[53] = {
 		.yStart = 0,
 		.yEnd = 0,
 		.destinationDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	}
 };
 
 const struct Door sChozodiaDoors[246] = {
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 0,
 		.xStart = 26,
 		.xEnd = 26,
 		.yStart = 18,
 		.yEnd = 18,
 		.destinationDoor = 1,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 0,
 		.xStart = 26,
 		.xEnd = 26,
 		.yStart = 18,
 		.yEnd = 18,
 		.destinationDoor = 1,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 26,
 		.yEnd = 29,
 		.destinationDoor = 3,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 26,
 		.yEnd = 29,
 		.destinationDoor = 2,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_SET_MOTHER_SHIP | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_SET_MOTHER_SHIP | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 1,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 27,
 		.yEnd = 30,
 		.destinationDoor = 5,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_REMOVE_MOTHER_SHIP | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_REMOVE_MOTHER_SHIP | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 2,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 4,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 86,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 21,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 13,
 		.yEnd = 16,
 		.destinationDoor = 94,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 14,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 20,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 11,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 10,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 13,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 12,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 6,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 8,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 80,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 17,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 8,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 16,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 52,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 23,
 		.yEnd = 26,
 		.destinationDoor = 19,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 73,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 18,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 11,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 9,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 10,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 6,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 10,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 23,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 11,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 22,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 8,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 25,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 12,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 37,
 		.yEnd = 40,
 		.destinationDoor = 24,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 12,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 117,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 45,
 		.yEnd = 48,
 		.destinationDoor = 35,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 43,
 		.yEnd = 46,
 		.destinationDoor = 29,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 13,
 		.yEnd = 16,
 		.destinationDoor = 28,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 51,
 		.yEnd = 51,
 		.destinationDoor = 31,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 21,
 		.yEnd = 21,
 		.destinationDoor = 30,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 77,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 23,
 		.yEnd = 26,
 		.destinationDoor = 182,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 77,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 34,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 27,
 		.yEnd = 30,
 		.destinationDoor = 33,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 15,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 27,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 23,
 		.yEnd = 26,
 		.destinationDoor = 39,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 38,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 77,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 37,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 17,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 13,
 		.yEnd = 16,
 		.destinationDoor = 36,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 17,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 132,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 18,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 47,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 18,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 18,
 		.yEnd = 21,
 		.destinationDoor = 49,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 19,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 50,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 81,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 9,
 		.yEnd = 11,
 		.destinationDoor = 181,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 6,
 		.destinationDoor = 46,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -6840,74 +6840,74 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 16,
 		.yEnd = 16,
 		.destinationDoor = 45,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 21,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 41,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 20,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 75,
 		.yEnd = 78,
 		.destinationDoor = 51,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 22,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 18,
 		.yEnd = 21,
 		.destinationDoor = 42,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 22,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 13,
 		.yEnd = 16,
 		.destinationDoor = 43,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 23,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 48,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_REMOVE_MOTHER_SHIP | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_REMOVE_MOTHER_SHIP | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 23,
 		.xStart = 17,
 		.xEnd = 17,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 53,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_SET_MOTHER_SHIP | DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
@@ -6917,8 +6917,8 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 52,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -6928,30 +6928,30 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 55,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 25,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 54,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 25,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 40,
 		.yEnd = 40,
 		.destinationDoor = 79,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -6961,74 +6961,74 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 20,
 		.yEnd = 20,
 		.destinationDoor = 78,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 26,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 81,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 27,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 116,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 27,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 183,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 28,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 36,
 		.yEnd = 39,
 		.destinationDoor = 184,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 28,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 73,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 29,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 27,
 		.yEnd = 30,
 		.destinationDoor = 74,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -7038,30 +7038,30 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 65,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 30,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 35,
 		.yEnd = 38,
 		.destinationDoor = 64,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 30,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 67,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -7071,96 +7071,96 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 66,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 31,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 27,
 		.yEnd = 29,
 		.destinationDoor = 133,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 32,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 39,
 		.yEnd = 39,
 		.destinationDoor = 72,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 82,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 71,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 33,
 		.xStart = 17,
 		.xEnd = 17,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 70,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 33,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 9,
 		.yEnd = 9,
 		.destinationDoor = 69,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 34,
 		.xStart = 17,
 		.xEnd = 17,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 62,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 34,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 27,
 		.yEnd = 30,
 		.destinationDoor = 63,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 35,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 5,
 		.destinationDoor = 186,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -7170,30 +7170,30 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 77,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 36,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 67,
 		.yEnd = 70,
 		.destinationDoor = 76,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 36,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 60,
 		.yEnd = 60,
 		.destinationDoor = 57,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -7203,30 +7203,30 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 10,
 		.yEnd = 10,
 		.destinationDoor = 56,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 37,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 15,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 38,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 58,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -7236,30 +7236,30 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 83,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 39,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 23,
 		.yEnd = 26,
 		.destinationDoor = 82,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 39,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 3,
 		.yEnd = 5,
 		.destinationDoor = 85,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -7269,8 +7269,8 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 3,
 		.yEnd = 5,
 		.destinationDoor = 84,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -7280,107 +7280,107 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 87,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 41,
 		.xStart = 17,
 		.xEnd = 17,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 86,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 41,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 89,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 42,
 		.xStart = 33,
 		.xEnd = 33,
 		.yStart = 27,
 		.yEnd = 30,
 		.destinationDoor = 88,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 13,
 		.yEnd = 16,
 		.destinationDoor = 91,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 43,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 13,
 		.yEnd = 16,
 		.destinationDoor = 90,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 60,
 		.xStart = 12,
 		.xEnd = 12,
 		.yStart = 31,
 		.yEnd = 31,
 		.destinationDoor = 95,
-		.xExit = 0,
-		.yExit = -32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 46,
 		.xStart = 12,
 		.xEnd = 12,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 98,
-		.xExit = 0,
-		.yExit = 32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 50,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 7,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 45,
 		.xStart = 12,
 		.xEnd = 12,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 92,
-		.xExit = 0,
-		.yExit = 32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(2)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -7390,41 +7390,41 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 40,
 		.yEnd = 40,
 		.destinationDoor = 97,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 48,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 30,
 		.yEnd = 30,
 		.destinationDoor = 96,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 45,
 		.xStart = 12,
 		.xEnd = 12,
 		.yStart = 11,
 		.yEnd = 11,
 		.destinationDoor = 93,
-		.xExit = 0,
-		.yExit = -32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_OPEN_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_OPEN_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 46,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 102,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -7434,41 +7434,41 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 33,
 		.yEnd = 36,
 		.destinationDoor = 101,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 48,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 23,
 		.yEnd = 26,
 		.destinationDoor = 100,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 47,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 99,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 49,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 163,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -7478,261 +7478,261 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 17,
 		.yEnd = 17,
 		.destinationDoor = 105,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 48,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 7,
 		.yEnd = 7,
 		.destinationDoor = 104,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 107,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 51,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 106,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 51,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 109,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 52,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 108,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 52,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 28,
 		.yEnd = 31,
 		.destinationDoor = 111,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 53,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 18,
 		.yEnd = 21,
 		.destinationDoor = 110,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 57,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 75,
 		.yEnd = 78,
 		.destinationDoor = 113,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 54,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 112,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 56,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 3,
 		.yEnd = 3,
 		.destinationDoor = 115,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 54,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 23,
 		.yEnd = 23,
 		.destinationDoor = 114,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 7,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 59,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 55,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 26,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 57,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 60,
 		.yEnd = 60,
 		.destinationDoor = 57,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 56,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 67,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 56,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 35,
 		.yEnd = 38,
 		.destinationDoor = 64,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 57,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 67,
 		.yEnd = 70,
 		.destinationDoor = 76,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 53,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 18,
 		.yEnd = 21,
 		.destinationDoor = 123,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 44,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 18,
 		.yEnd = 21,
 		.destinationDoor = 122,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 44,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 125,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 58,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 124,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 58,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 127,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 59,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 37,
 		.yEnd = 40,
 		.destinationDoor = 126,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -7742,261 +7742,261 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 129,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 60,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 27,
 		.yEnd = 30,
 		.destinationDoor = 128,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 60,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 236,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 61,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 237,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 21,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 40,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 80,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 7,
 		.yEnd = 9,
 		.destinationDoor = 68,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_REMOVE_MOTHER_SHIP | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_REMOVE_MOTHER_SHIP | DOOR_TYPE_NORMAL,
 		.sourceRoom = 85,
 		.xStart = 8,
 		.xEnd = 11,
 		.yStart = 41,
 		.yEnd = 41,
 		.destinationDoor = 135,
-		.xExit = 24,
-		.yExit = -32
+		.xExit = BLOCK_TO_PIXEL(1.5f),
+		.yExit = -BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_SET_MOTHER_SHIP | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_SET_MOTHER_SHIP | DOOR_TYPE_NORMAL,
 		.sourceRoom = 62,
 		.xStart = 8,
 		.xEnd = 11,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 134,
-		.xExit = 24,
-		.yExit = 32
+		.xExit = BLOCK_TO_PIXEL(1.5f),
+		.yExit = BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 62,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 27,
 		.yEnd = 30,
 		.destinationDoor = 137,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 63,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 136,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_REMOVE_MOTHER_SHIP | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_REMOVE_MOTHER_SHIP | DOOR_TYPE_NORMAL,
 		.sourceRoom = 85,
 		.xStart = 9,
 		.xEnd = 10,
 		.yStart = 32,
 		.yEnd = 32,
 		.destinationDoor = 139,
-		.xExit = 8,
-		.yExit = 32
+		.xExit = BLOCK_TO_PIXEL(.5f),
+		.yExit = BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_SET_MOTHER_SHIP | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_SET_MOTHER_SHIP | DOOR_TYPE_NORMAL,
 		.sourceRoom = 24,
 		.xStart = 9,
 		.xEnd = 10,
 		.yStart = 21,
 		.yEnd = 21,
 		.destinationDoor = 138,
-		.xExit = 8,
-		.yExit = -32
+		.xExit = BLOCK_TO_PIXEL(.5f),
+		.yExit = -BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 63,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 141,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 64,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 140,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 64,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 143,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 65,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 142,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 65,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 145,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 66,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 27,
 		.yEnd = 30,
 		.destinationDoor = 144,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 66,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 149,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 67,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 40,
 		.yEnd = 40,
 		.destinationDoor = 79,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 67,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 54,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 68,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 146,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 68,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 8,
 		.destinationDoor = 33,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 60,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 152,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -8006,217 +8006,217 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 14,
 		.yEnd = 17,
 		.destinationDoor = 151,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 69,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 156,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 70,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 157,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 70,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 158,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 71,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 153,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 71,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 154,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 72,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 155,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 43,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 160,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 73,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 159,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 62,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 162,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 74,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 161,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 47,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 17,
 		.yEnd = 20,
 		.destinationDoor = 103,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 75,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 219,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 85,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 223,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 13,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 77,
 		.yEnd = 80,
 		.destinationDoor = 170,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 16,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 168,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 14,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 36,
 		.yEnd = 39,
 		.destinationDoor = 167,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_REMOVE_MOTHER_SHIP | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_REMOVE_MOTHER_SHIP | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 85,
 		.xStart = 17,
 		.xEnd = 17,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 53,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 77,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 166,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 48,
 		.xStart = 28,
 		.xEnd = 28,
 		.yStart = 33,
 		.yEnd = 33,
 		.destinationDoor = 172,
-		.xExit = 0,
-		.yExit = -32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(2)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -8226,41 +8226,41 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 171,
-		.xExit = 0,
-		.yExit = 32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 94,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 6,
 		.yEnd = 8,
 		.destinationDoor = 174,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 78,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 8,
 		.destinationDoor = 173,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 19,
 		.yEnd = 19,
 		.destinationDoor = 176,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
@@ -8270,206 +8270,206 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 19,
 		.yEnd = 19,
 		.destinationDoor = 175,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 10,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 13,
 		.yEnd = 13,
 		.destinationDoor = 178,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 11,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 13,
 		.yEnd = 13,
 		.destinationDoor = 177,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 5,
 		.destinationDoor = 180,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 5,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 15,
 		.yEnd = 15,
 		.destinationDoor = 179,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 80,
 		.xStart = 17,
 		.xEnd = 17,
 		.yStart = 9,
 		.yEnd = 11,
 		.destinationDoor = 44,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 32,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 76,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 60,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 76,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 61,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 79,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 14,
 		.yEnd = 16,
 		.destinationDoor = 199,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 79,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 13,
 		.yEnd = 15,
 		.destinationDoor = 75,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 80,
 		.xStart = 17,
 		.xEnd = 17,
 		.yStart = 5,
 		.yEnd = 5,
 		.destinationDoor = 188,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 81,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 5,
 		.destinationDoor = 187,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 81,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 190,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 82,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 27,
 		.yEnd = 30,
 		.destinationDoor = 189,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 83,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 3,
 		.yEnd = 5,
 		.destinationDoor = 85,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 83,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 23,
 		.yEnd = 26,
 		.destinationDoor = 82,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 90,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 194,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 57,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 193,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -8479,30 +8479,30 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 22,
 		.yEnd = 24,
 		.destinationDoor = 196,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 84,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 12,
 		.yEnd = 14,
 		.destinationDoor = 195,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 84,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 198,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -8512,437 +8512,437 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 197,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 32,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 3,
 		.yEnd = 6,
 		.destinationDoor = 185,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 86,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 7,
 		.yEnd = 10,
 		.destinationDoor = 202,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 86,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 19,
 		.yEnd = 19,
 		.destinationDoor = 176,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 87,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 27,
 		.yEnd = 30,
 		.destinationDoor = 200,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 87,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 26,
 		.yEnd = 29,
 		.destinationDoor = 204,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 88,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 26,
 		.yEnd = 29,
 		.destinationDoor = 203,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 29,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 18,
 		.yEnd = 20,
 		.destinationDoor = 206,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 89,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 18,
 		.yEnd = 20,
 		.destinationDoor = 205,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 42,
 		.xStart = 41,
 		.xEnd = 41,
 		.yStart = 21,
 		.yEnd = 21,
 		.destinationDoor = 208,
-		.xExit = 0,
-		.yExit = -32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 90,
 		.xStart = 11,
 		.xEnd = 11,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 207,
-		.xExit = 0,
-		.yExit = 16
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(1)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 90,
 		.xStart = 17,
 		.xEnd = 17,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 86,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 29,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 30,
 		.yEnd = 30,
 		.destinationDoor = 211,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 89,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 30,
 		.yEnd = 30,
 		.destinationDoor = 210,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 91,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 6,
 		.yEnd = 9,
 		.destinationDoor = 198,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 47,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 214,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 49,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 213,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 92,
 		.xStart = 28,
 		.xEnd = 28,
 		.yStart = 33,
 		.yEnd = 33,
 		.destinationDoor = 172,
-		.xExit = 0,
-		.yExit = -32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 92,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 30,
 		.yEnd = 30,
 		.destinationDoor = 96,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 92,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 23,
 		.yEnd = 26,
 		.destinationDoor = 100,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 92,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 7,
 		.yEnd = 7,
 		.destinationDoor = 104,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 84,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 164,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_AREA_CONNECTION | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 34,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 24,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 29,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 13,
 		.yEnd = 15,
 		.destinationDoor = 222,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 89,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 13,
 		.yEnd = 15,
 		.destinationDoor = 221,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 93,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 75,
 		.yEnd = 78,
 		.destinationDoor = 165,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 93,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 6,
 		.destinationDoor = 46,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 57,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 36,
 		.yEnd = 38,
 		.destinationDoor = 226,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 94,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 6,
 		.yEnd = 8,
 		.destinationDoor = 225,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 90,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 24,
 		.yEnd = 24,
 		.destinationDoor = 228,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 57,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 24,
 		.yEnd = 24,
 		.destinationDoor = 227,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 85,
 		.xStart = 61,
 		.xEnd = 61,
 		.yStart = 35,
 		.yEnd = 37,
 		.destinationDoor = 230,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 95,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 65,
 		.yEnd = 67,
 		.destinationDoor = 229,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 87,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 18,
 		.yEnd = 18,
 		.destinationDoor = 232,
-		.xExit = 16,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL | DOOR_TYPE_DISPLAYS_ROOM_LOCATION,
 		.sourceRoom = 50,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 8,
 		.yEnd = 8,
 		.destinationDoor = 231,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 96,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 27,
 		.yEnd = 30,
 		.destinationDoor = 128,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 96,
 		.xStart = 46,
 		.xEnd = 46,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 152,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 91,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 12,
 		.yEnd = 14,
 		.destinationDoor = 195,
-		.xExit = -16,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(1),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 97,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 130,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 97,
 		.xStart = 16,
 		.xEnd = 16,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 131,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_LOAD_EVENT_BASED_ROOM,
@@ -8952,74 +8952,74 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 21,
 		.yEnd = 21,
 		.destinationDoor = 239,
-		.xExit = 0,
-		.yExit = -32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 98,
 		.xStart = 14,
 		.xEnd = 15,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 238,
-		.xExit = 0,
-		.yExit = 32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 98,
 		.xStart = 14,
 		.xEnd = 15,
 		.yStart = 51,
 		.yEnd = 51,
 		.destinationDoor = 241,
-		.xExit = 0,
-		.yExit = -32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 23,
 		.xStart = 59,
 		.xEnd = 59,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 240,
-		.xExit = 0,
-		.yExit = 32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 14,
 		.xEnd = 15,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 238,
-		.xExit = 0,
-		.yExit = 32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 9,
 		.xStart = 14,
 		.xEnd = 15,
 		.yStart = 51,
 		.yEnd = 51,
 		.destinationDoor = 244,
-		.xExit = 0,
-		.yExit = -32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = -BLOCK_TO_PIXEL(2)
 	},
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 85,
 		.xStart = 59,
 		.xEnd = 59,
 		.yStart = 2,
 		.yEnd = 2,
 		.destinationDoor = 243,
-		.xExit = 0,
-		.yExit = 32
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(2)
 	},
 	{
 		.type = DOOR_TYPE_NONE,
@@ -9029,264 +9029,264 @@ const struct Door sChozodiaDoors[246] = {
 		.yStart = 0,
 		.yEnd = 0,
 		.destinationDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	}
 };
 
 const struct Door sTest123Doors[24] = {
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 6,
 		.xEnd = 6,
 		.yStart = 19,
 		.yEnd = 20,
 		.destinationDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 2,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 46,
 		.yEnd = 49,
 		.destinationDoor = 1,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 46,
 		.yEnd = 49,
 		.destinationDoor = 4,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 3,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 2,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 4,
 		.yEnd = 7,
 		.destinationDoor = 6,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 5,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 8,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 76,
 		.xEnd = 76,
 		.yStart = 16,
 		.yEnd = 19,
 		.destinationDoor = 7,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 35,
 		.yEnd = 38,
 		.destinationDoor = 10,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 35,
 		.yEnd = 38,
 		.destinationDoor = 9,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 12,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 11,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 121,
 		.xEnd = 121,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 14,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 25,
 		.yEnd = 28,
 		.destinationDoor = 13,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 16,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 15,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 4,
 		.xStart = 121,
 		.xEnd = 121,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 18,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 15,
 		.yEnd = 18,
 		.destinationDoor = 17,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 20,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 1,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 19,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 31,
 		.xEnd = 31,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 22,
-		.xExit = -32,
-		.yExit = 0
+		.xExit = -BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
-		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_CLOSED_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 3,
 		.xStart = 2,
 		.xEnd = 2,
 		.yStart = 5,
 		.yEnd = 8,
 		.destinationDoor = 21,
-		.xExit = 32,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(2),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NONE,
@@ -9296,22 +9296,22 @@ const struct Door sTest123Doors[24] = {
 		.yStart = 0,
 		.yEnd = 0,
 		.destinationDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	}
 };
 
 const struct Door sTestDoors[2] = {
 	{
-		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_EXISTS,
+		.type = DOOR_TYPE_NO_HATCH | DOOR_TYPE_NORMAL,
 		.sourceRoom = 0,
 		.xStart = 5,
 		.xEnd = 5,
 		.yStart = 8,
 		.yEnd = 9,
 		.destinationDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	},
 	{
 		.type = DOOR_TYPE_NONE,
@@ -9321,8 +9321,8 @@ const struct Door sTestDoors[2] = {
 		.yStart = 0,
 		.yEnd = 0,
 		.destinationDoor = 0,
-		.xExit = 0,
-		.yExit = 0
+		.xExit = BLOCK_TO_PIXEL(0),
+		.yExit = BLOCK_TO_PIXEL(0)
 	}
 };
 

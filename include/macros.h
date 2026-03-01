@@ -505,6 +505,14 @@
 #define BLOCK_TO_SUB_PIXEL(block) ((block) * BLOCK_SIZE)
 
 /**
+ * @brief Converts from block to pixel coordinates
+ * 
+ * @param block Block coordinates
+ * @return Pixel coordinates
+ */
+#define BLOCK_TO_PIXEL(block) ((s32)((block) * PIXEL_PER_BLOCK))
+
+/**
  * @brief Screen size X, in sub pixel coordinates
  * 
  */
