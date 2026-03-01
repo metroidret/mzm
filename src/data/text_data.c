@@ -1102,7 +1102,7 @@ const u16** sFileScreenTextPointers[LANGUAGE_COUNT] = {
     #endif // REGION_EU
 };
 
-const u16 sAlign_0 = 0; // File alignment
+static const u16 sAlign_0 = 0; // File alignment
 
 const u16 sJapaneseText_Description_LongBeam[] = INCTEXT("射程距離の長いビーム\nビームは　{L_button}＋{B_button}で　ななめに撃つことができる");
 const u16 sJapaneseText_Description_ChargeBeam[] = INCTEXT("〈{B_button}を押しつづけ　パワーをため、はなすと発射〉\nチャージアタック……パワーをためた状態で回転ジャンプ");
@@ -1240,7 +1240,7 @@ const u16* sJapaneseTextPointers_FileScreen[FILE_SCREEN_TEXT_COUNT] = {
     [FILE_SCREEN_TEXT_NES_METROID_UNLOCK] = sJapaneseText_FileScreen_NesMetroidUnlock
 };
 
-const u16 sAlign_1 = 0; // File alignment
+static const u16 sAlign_1 = 0; // File alignment
 
 const u16 sHiraganaText_Description_LongBeam[] = INCTEXT("とおくまでとどくビーム\nビームは　{L_button}＋{B_button}で　ななめにうつことができる");
 const u16 sHiraganaText_Description_ChargeBeam[] = INCTEXT("〈{B_button}をおしつづけ　パワーをため、はなすとはっしゃ〉\nチャージアタック……パワーをためたままでかいてんジャンプ");
@@ -1420,7 +1420,7 @@ const u16* sEnglishTextPointers_Description[DESCRIPTION_TEXT_COUNT] = {
     [DESCRIPTION_TEXT_PISTOL] = sEnglishText_Description_Pistol
 };
 
-const u16 sAlign_2 = 0;
+static const u16 sAlign_2 = 0;
 
 #ifdef REGION_EU
 // EU gap sizes are different

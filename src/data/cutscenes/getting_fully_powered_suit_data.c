@@ -91,65 +91,65 @@ const struct OamArray sGettingFullyPoweredSuitCutsceneOam[GETTING_FULLY_POWERED_
     }
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleGoingUp_Frame0[OAM_DATA_SIZE(2)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleGoingUp_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, 8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x80, 10, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x40, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleGoingUp_Frame1[OAM_DATA_SIZE(2)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleGoingUp_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x0, 10, 0),
     OAM_ENTRY(-8, 8, OAM_DIMS_16x16, OAM_NO_FLIP, 0xc0, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleGoingUp_Frame2[OAM_DATA_SIZE(2)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleGoingUp_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, 8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x100, 10, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x40, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleGoingUp_Frame3[OAM_DATA_SIZE(3)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleGoingUp_Frame3[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, 8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x140, 10, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x0, 10, 0),
     OAM_ENTRY(-8, -2, OAM_DIMS_16x16, OAM_NO_FLIP, 0x80, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleGoingUp_Frame4[OAM_DATA_SIZE(2)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleGoingUp_Frame4[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x40, 10, 0),
     OAM_ENTRY(-8, 2, OAM_DIMS_16x16, OAM_NO_FLIP, 0xc0, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleGoingUp_Frame5[OAM_DATA_SIZE(3)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleGoingUp_Frame5[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x0, 10, 0),
     OAM_ENTRY(-8, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x100, 10, 0),
     OAM_ENTRY(-8, 3, OAM_DIMS_8x16, OAM_NO_FLIP, 0x140, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing1_Frame2[OAM_DATA_SIZE(1)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing1_Frame2[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x52, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing1_Frame3[OAM_DATA_SIZE(1)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing1_Frame3[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x2, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing1_Frame4[OAM_DATA_SIZE(1)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing1_Frame4[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x6, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing1_Frame9[OAM_DATA_SIZE(1)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing1_Frame9[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-16, -16, OAM_DIMS_32x32, OAM_NO_FLIP, 0xa, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_RingBottom_Frame0[OAM_DATA_SIZE(5)] = {
+static const u16 sGettingFullyPoweredSuitOam_RingBottom_Frame0[OAM_DATA_SIZE(5)] = {
     5,
     OAM_ENTRY(-80, 0, OAM_DIMS_32x16, OAM_NO_FLIP, 0xc3, 10, 0),
     OAM_ENTRY(-48, 0, OAM_DIMS_32x16, OAM_NO_FLIP, 0xc7, 10, 0),
@@ -158,7 +158,7 @@ const u16 sGettingFullyPoweredSuitOam_RingBottom_Frame0[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(48, 0, OAM_DIMS_32x16, OAM_NO_FLIP, 0xd3, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_RingBottom_Frame1[OAM_DATA_SIZE(5)] = {
+static const u16 sGettingFullyPoweredSuitOam_RingBottom_Frame1[OAM_DATA_SIZE(5)] = {
     5,
     OAM_ENTRY(-72, 0, OAM_DIMS_32x16, OAM_NO_FLIP, 0x144, 10, 0),
     OAM_ENTRY(-40, 0, OAM_DIMS_32x16, OAM_NO_FLIP, 0x148, 10, 0),
@@ -167,7 +167,7 @@ const u16 sGettingFullyPoweredSuitOam_RingBottom_Frame1[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(56, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x154, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_RingTop_Frame0[OAM_DATA_SIZE(6)] = {
+static const u16 sGettingFullyPoweredSuitOam_RingTop_Frame0[OAM_DATA_SIZE(6)] = {
     6,
     OAM_ENTRY(-88, -16, OAM_DIMS_32x16, OAM_NO_FLIP, 0x82, 10, 0),
     OAM_ENTRY(-56, -16, OAM_DIMS_32x16, OAM_NO_FLIP, 0x86, 10, 0),
@@ -177,7 +177,7 @@ const u16 sGettingFullyPoweredSuitOam_RingTop_Frame0[OAM_DATA_SIZE(6)] = {
     OAM_ENTRY(72, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x96, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_RingTop_Frame1[OAM_DATA_SIZE(5)] = {
+static const u16 sGettingFullyPoweredSuitOam_RingTop_Frame1[OAM_DATA_SIZE(5)] = {
     5,
     OAM_ENTRY(-80, -16, OAM_DIMS_32x16, OAM_NO_FLIP, 0x103, 10, 0),
     OAM_ENTRY(-48, -16, OAM_DIMS_32x16, OAM_NO_FLIP, 0x107, 10, 0),
@@ -186,27 +186,27 @@ const u16 sGettingFullyPoweredSuitOam_RingTop_Frame1[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(48, -16, OAM_DIMS_32x16, OAM_NO_FLIP, 0x113, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing1_Frame0[OAM_DATA_SIZE(1)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing1_Frame0[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x12, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing1_Frame1[OAM_DATA_SIZE(1)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing1_Frame1[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x14, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing2_Frame2[OAM_DATA_SIZE(1)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing2_Frame2[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x16, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing2_Frame4[OAM_DATA_SIZE(1)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing2_Frame4[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x18, 10, 0)
 };
 
-const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing2_Frame3[OAM_DATA_SIZE(1)] = {
+static const u16 sGettingFullyPoweredSuitOam_SparkleAroundRing2_Frame3[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x1a, 10, 0)
 };

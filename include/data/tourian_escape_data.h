@@ -109,9 +109,18 @@ extern const u16 sTourianEscape_47ac18[OAM_DATA_SIZE(2)];
 extern const u16 sTourianEscapeRainPal[1 * 16];
 
 
-
 extern const struct FrameData sChozodiaEscapeOam_ShipSmokeExplosion[8];
-
+extern const struct FrameData sChozodiaEscapeOam_ShipSmokeSmallExplosion[7];
+extern const struct FrameData sChozodiaEscapeOam_ShipSmokeSmallWideExplosion[10];
+extern const struct FrameData sChozodiaEscapeOam_ShipSmokeWideExplosion[11];
+extern const struct FrameData sChozodiaEscapeOam_SmallExplosion[12];
+extern const struct FrameData sChozodiaEscapeOam_MediumExplosion[18];
+extern const struct FrameData sChozodiaEscapeOam_MediumExplosion2[15];
+extern const struct FrameData sChozodiaEscapeOam_HugeExplosion[13];
+extern const struct FrameData sTourianEscapeOam_HugeShipExplosion[16];
+extern const struct FrameData sChozodiaEscapeOam_47cc64[11];
+extern const struct FrameData sChozodiaEscapeOam_47ccbc[15];
+extern const struct FrameData sChozodiaEscapeOam_MotherShipDecaying[9];
 
 
 extern const u16* const sTourianEscape_47ce00[4];

@@ -43,6 +43,7 @@ extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_Sh
 extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_Crouching[3][2];
 extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_TurningAroundAndCrouching[3][2];
 extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_ShootingAndCrouching[3][2];
+extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_Skidding[2][2];
 extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_MidAir[5][2];
 extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_TurningAroundMidAir[5][2];
 extern const struct ArmCannonAnimationData* const sArmCannonAnimPointers_Suit_Landing[4][2];

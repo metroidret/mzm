@@ -2,6 +2,7 @@
 #define LINK_STRUCTS_H
 
 #include "types.h"
+#include "constants/cable_link.h"
 
 #define MAX_LINK_PLAYERS 2
 #define CMD_LENGTH 2

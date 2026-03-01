@@ -1,6 +1,8 @@
 #ifndef GAME_REGION_CONSTANTS_H
 #define GAME_REGION_CONSTANTS_H
 
+#include "macros.h"
+
 MAKE_ENUM(u8, GameRegion) {
     GAME_REGION_JPN,
     GAME_REGION_EUR,

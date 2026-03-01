@@ -206,6 +206,6 @@ const struct CutsceneInfo sCutsceneData[CUTSCENE_COUNT] = {
     }
 };
 
-const u8 sUnknownPadding_36be9c[8] = {
+static const u8 sUnknownPadding_36be9c[8] = {
     0, 0, 0, 0, 1, 0, 0, 0
 };

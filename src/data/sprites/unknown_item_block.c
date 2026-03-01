@@ -158,7 +158,7 @@ static const u16 sUnknownItemBlockOam_Exploding_Frame9[OAM_DATA_SIZE(2)] = {
     OAM_ENTRY(-4, -96, OAM_DIMS_8x16, OAM_NO_FLIP, 0x20f, 8, 0)
 };
 
-const u16 sUnknownItemBlockLightOam_Idle_Frame0[OAM_DATA_SIZE(10)] = {
+static const u16 sUnknownItemBlockLightOam_Idle_Frame0[OAM_DATA_SIZE(10)] = {
     10,
     OAM_ENTRY(-16, -4, OAM_DIMS_16x8, OAM_X_FLIP, 0x230, 8, 0),
     OAM_ENTRY(-32, -4, OAM_DIMS_16x8, OAM_X_FLIP, 0x230, 8, 0),
@@ -172,7 +172,7 @@ const u16 sUnknownItemBlockLightOam_Idle_Frame0[OAM_DATA_SIZE(10)] = {
     OAM_ENTRY(-4, 64, OAM_DIMS_8x16, OAM_Y_FLIP, 0x20f, 8, 0)
 };
 
-const u16 sUnknownItemBlockLightOam_Idle_Frame1[OAM_DATA_SIZE(2)] = {
+static const u16 sUnknownItemBlockLightOam_Idle_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-96, -4, OAM_DIMS_16x8, OAM_X_FLIP, 0x230, 8, 0),
     OAM_ENTRY(-4, 80, OAM_DIMS_8x16, OAM_Y_FLIP, 0x20f, 8, 0)

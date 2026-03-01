@@ -70,25 +70,25 @@ static const u16 sZiplineOam_OnIdle_Frame2[OAM_DATA_SIZE(2)] = {
     OAM_ENTRY(-8, 0, OAM_DIMS_16x8, OAM_NO_FLIP, 0x208, 8, 0)
 };
 
-const u16 sZiplineButtonOam_OffIdle_Frame0[OAM_DATA_SIZE(2)] = {
+static const u16 sZiplineButtonOam_OffIdle_Frame0[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20c, 8, 0),
     OAM_ENTRY(-8, 16, OAM_DIMS_16x8, OAM_NO_FLIP, 0x214, 8, 0)
 };
 
-const u16 sZiplineButtonOam_OnIdle_Frame1[OAM_DATA_SIZE(2)] = {
+static const u16 sZiplineButtonOam_OnIdle_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20e, 8, 0),
     OAM_ENTRY(-8, 16, OAM_DIMS_16x8, OAM_NO_FLIP, 0x234, 8, 0)
 };
 
-const u16 sZiplineButtonOam_OnIdle_Frame2[OAM_DATA_SIZE(2)] = {
+static const u16 sZiplineButtonOam_OnIdle_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x210, 8, 0),
     OAM_ENTRY(-8, 16, OAM_DIMS_16x8, OAM_NO_FLIP, 0x216, 8, 0)
 };
 
-const u16 sZiplineButtonOam_OnIdle_Frame3[OAM_DATA_SIZE(2)] = {
+static const u16 sZiplineButtonOam_OnIdle_Frame3[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x212, 8, 0),
     OAM_ENTRY(-8, 16, OAM_DIMS_16x8, OAM_NO_FLIP, 0x236, 8, 0)
