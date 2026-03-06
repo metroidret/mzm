@@ -12,7 +12,7 @@
 #include "structs/display.h"
 
 /**
- * @brief 23C | 464 | Main loop of the game
+ * @brief 23c | 464 | Main loop of the game
  *  
  */
 void agbmain(void)
@@ -33,7 +33,7 @@ void agbmain(void)
 
         UpdateInput();
         SoftResetCheck();
-        //Increment frame counters
+        // Increment frame counters
         APPLY_DELTA_TIME_INC(gFrameCounter8Bit);
         APPLY_DELTA_TIME_INC(gFrameCounter16Bit);
 
@@ -115,9 +115,9 @@ void agbmain(void)
             case GM_FILE_SELECT:
                 if (FileSelectMenuMainLoop())
                 {
-                    if (gSubGameMode2 == 1)//If Continuing File
+                    if (gSubGameMode2 == 1) // If continuing file
                         gMainGameMode = GM_INGAME;
-                    else if (gSubGameMode2 == 2)//If starting New File
+                    else if (gSubGameMode2 == 2) // If starting new file
                         gMainGameMode = GM_INGAME;
                     else if (gSubGameMode2 == 4)
                         gMainGameMode = GM_FUSION_GALLERY;

@@ -4382,8 +4382,8 @@ u32 FileSelectMenuMainLoop(void)
         case 0: // Init
             gSubGameMode2 = 0;
             gCutsceneToSkip = 0;
-            FileSelectInit();//sets SubGameMode1 to 2
-            gSubGameMode1--;//Then decrease it to 1, so the next frame it will apply the fading
+            FileSelectInit(); // Sets SubGameMode1 to 2
+            gSubGameMode1--; // Then decrease it to 1, so the next frame it will apply the fading
             break;
 
         case 1:
@@ -4408,7 +4408,7 @@ u32 FileSelectMenuMainLoop(void)
                     gSubGameMode1 = 3;
                 else
                 {
-                    FILE_SELECT_DATA.currentSubMenu = 0;
+                    FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_MAIN;
                     gSubGameMode1 = 10;
                 }
 
@@ -4431,7 +4431,7 @@ u32 FileSelectMenuMainLoop(void)
                 else
                 {
                     gSubGameMode1 = 2;
-                    FILE_SELECT_DATA.currentSubMenu = 6;
+                    FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_LEAVING_OPTIONS;
                     FILE_SELECT_DATA.timer = 0;
                     FILE_SELECT_DATA.subMenuStage = 0;
                     FILE_SELECT_DATA.subMenuTimer = 0;
@@ -4757,9 +4757,11 @@ static void FileSelectInit(void)
 
     gSubGameMode1 = 2;
 
-    if (gSaveFilesInfo[FILE_SELECT_CURSOR_POSITION_FILE_A].corruptionFlag || gSaveFilesInfo[FILE_SELECT_CURSOR_POSITION_FILE_B].corruptionFlag || gSaveFilesInfo[FILE_SELECT_CURSOR_POSITION_FILE_C].corruptionFlag)
+    if (gSaveFilesInfo[FILE_SELECT_CURSOR_POSITION_FILE_A].corruptionFlag ||
+        gSaveFilesInfo[FILE_SELECT_CURSOR_POSITION_FILE_B].corruptionFlag ||
+        gSaveFilesInfo[FILE_SELECT_CURSOR_POSITION_FILE_C].corruptionFlag)
     {
-        FILE_SELECT_DATA.currentSubMenu = 4;
+        FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_CORRUPTED;
     }
     else
     {
@@ -4808,7 +4810,7 @@ static void FileSelectInit(void)
 
     if (gSubGameMode1 == 2)
     {
-        if (FILE_SELECT_DATA.currentSubMenu == 4)
+        if (FILE_SELECT_DATA.currentSubMenu == FILE_SELECT_SUB_MENU_CORRUPTED)
         {
             FILE_SELECT_DATA.fileScreenOam[FILE_SELECT_OAM_CURSOR].notDrawn = TRUE;
 
@@ -5331,7 +5333,7 @@ static u8 FileSelectUpdateSubMenu(void)
 
     switch (FILE_SELECT_DATA.currentSubMenu)
     {
-        case 0: // Main menu
+        case FILE_SELECT_SUB_MENU_MAIN:
             result = 0;
             #ifdef REGION_EU
             CheckForMaintainedInput(MAINTAINED_INPUT_SPEED_FAST);
@@ -5407,10 +5409,10 @@ static u8 FileSelectUpdateSubMenu(void)
                 }
             }
 
-            if (!result)// 0 = no input
+            if (!result) // 0 = no input
                 break;
 
-            if (result == 1)//1 = moved cursor
+            if (result == 1) // 1 = moved cursor
             {
                 FileSelectUpdateCursor(CURSOR_POSE_MOVING, FILE_SELECT_DATA.fileSelectCursorPosition);
                 if (FILE_SELECT_DATA.fileSelectCursorPosition < FILE_SELECT_CURSOR_POSITION_COPY)
@@ -5418,7 +5420,7 @@ static u8 FileSelectUpdateSubMenu(void)
                 else
                     FileSelectPlayMenuSound(MENU_SOUND_REQUEST_SUB_MENU_CURSOR);
             }
-            else if (result == 2)// 2 = pressed B, go back to title
+            else if (result == 2) // 2 = pressed B, go back to title
             {
                 FadeMusic(0);
                 #ifdef REGION_JP
@@ -5444,7 +5446,7 @@ static u8 FileSelectUpdateSubMenu(void)
                         FileSelectPlayMenuSound(MENU_SOUND_REQUEST_FILE_SELECT);
                         cursorPose = CURSOR_POSE_SELECTING_FILE;
                         result = TRUE;
-                        FILE_SELECT_DATA.currentSubMenu = 1;
+                        FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_FILE;
                         break;
 
                     case FILE_SELECT_CURSOR_POSITION_COPY:
@@ -5453,7 +5455,7 @@ static u8 FileSelectUpdateSubMenu(void)
                             FileSelectPlayMenuSound(MENU_SOUND_REQUEST_ACCEPT_CONFIRM_MENU);
                             cursorPose = CURSOR_POSE_OPENING_OPTIONS;
                             result = TRUE;
-                            FILE_SELECT_DATA.currentSubMenu = 2;
+                            FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_COPY;
                         }
                         break;
 
@@ -5463,7 +5465,7 @@ static u8 FileSelectUpdateSubMenu(void)
                             FileSelectPlayMenuSound(MENU_SOUND_REQUEST_ACCEPT_CONFIRM_MENU);
                             cursorPose = CURSOR_POSE_OPENING_OPTIONS;
                             result = TRUE;
-                            FILE_SELECT_DATA.currentSubMenu = 3;
+                            FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_ERASE;
                         }
                         break;
 
@@ -5473,7 +5475,7 @@ static u8 FileSelectUpdateSubMenu(void)
                             FileSelectPlayMenuSound(MENU_SOUND_REQUEST_ACCEPT_CONFIRM_MENU);
                             cursorPose = CURSOR_POSE_OPENING_OPTIONS;
                             result = TRUE;
-                            FILE_SELECT_DATA.currentSubMenu = 5;
+                            FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_ENTERING_OPTIONS;
                         }
                         break;
                 }
@@ -5487,7 +5489,7 @@ static u8 FileSelectUpdateSubMenu(void)
             }
             break;
 
-        case 1: // File selection sub menu
+        case FILE_SELECT_SUB_MENU_FILE:
             result = FileSelectProcessFileSelection();
             if (result == FALSE)
                 break;
@@ -5525,34 +5527,34 @@ static u8 FileSelectUpdateSubMenu(void)
             }
 
             FileSelectUpdateCursor(CURSOR_POSE_DESELECTING_FILE, FILE_SELECT_DATA.fileSelectCursorPosition);
-            FILE_SELECT_DATA.currentSubMenu = 0;
+            FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_MAIN;
             break;
 
-        case 2:
+        case FILE_SELECT_SUB_MENU_COPY:
             if (FileSelectCopyFileMainLoop())
             {
                 FileSelectUpdateCursor(CURSOR_POSE_DEFAULT, FILE_SELECT_DATA.fileSelectCursorPosition);
-                FILE_SELECT_DATA.currentSubMenu = 0;
+                FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_MAIN;
             }
             break;
 
-        case 3:
+        case FILE_SELECT_SUB_MENU_ERASE:
             if (FileSelectEraseFileMainLoop())
             {
                 FileSelectUpdateCursor(CURSOR_POSE_DEFAULT, FILE_SELECT_DATA.fileSelectCursorPosition);
-                FILE_SELECT_DATA.currentSubMenu = 0;
+                FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_MAIN;
             }
             break;
 
-        case 4:
+        case FILE_SELECT_SUB_MENU_CORRUPTED:
             if (FileSelectCorruptedFileMainLoop())
             {
                 FileSelectUpdateCursor(CURSOR_POSE_DEFAULT, FILE_SELECT_DATA.fileSelectCursorPosition);
-                FILE_SELECT_DATA.currentSubMenu = 0;
+                FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_MAIN;
             }
             break;
 
-        case 5:
+        case FILE_SELECT_SUB_MENU_ENTERING_OPTIONS:
             if (FileSelectOptionTransition(FALSE))
             {
                 gSubGameMode2 = 0;
@@ -5560,9 +5562,9 @@ static u8 FileSelectUpdateSubMenu(void)
             }
             break;
 
-        case 6:
+        case FILE_SELECT_SUB_MENU_LEAVING_OPTIONS:
             if (FileSelectOptionTransition(TRUE))
-                FILE_SELECT_DATA.currentSubMenu = 0;
+                FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_MAIN;
             break;
     }
 
@@ -5624,9 +5626,9 @@ static u32 FileSelectCheckInputtingTimeAttackCode(void)
 }
 
 /**
- * @brief 7d62c | dd0 | Handles File Sub Menu (CurrentSubMenu = 1)
+ * @brief 7d62c | dd0 | Handles sub menu when a file is selected (CurrentSubMenu = 1)
  * 
- * @return u8 Leaving, 
+ * @return u8 Leaving
  */
 static u8 FileSelectProcessFileSelection(void)
 {
@@ -5642,7 +5644,7 @@ static u8 FileSelectProcessFileSelection(void)
 
     switch (FILE_SELECT_DATA.subMenuStage)
     {
-        case 0: // Initialize File Sub Menu
+        case 0: // Initialize file sub menu
             gMostRecentSaveFile = FILE_SELECT_DATA.fileSelectCursorPosition;
 
             offset = (FILE_SELECT_DATA.fileSelectCursorPosition + 1) * 3;
@@ -5759,7 +5761,7 @@ static u8 FileSelectProcessFileSelection(void)
             FILE_SELECT_DATA.inputtedTimeAttack = FALSE;
             FILE_SELECT_DATA.subMenuStage = 7;
 
-        case 7://"start game" Sub Menu
+        case 7: // "start game" sub menu
             action = UCHAR_MAX;
 
             if (gChangedInput & KEY_A)
@@ -5801,7 +5803,7 @@ static u8 FileSelectProcessFileSelection(void)
                 unk_7e3fc(0, (u8)action);
             break;
 
-        case 8://start game pressed, check if continue or new
+        case 8: // Start game pressed, check if continue or new
             if (gSaveFilesInfo[FILE_SELECT_DATA.fileSelectCursorPosition].exists || gSaveFilesInfo[FILE_SELECT_DATA.fileSelectCursorPosition].introPlayed)
             {
                 if (gSaveFilesInfo[FILE_SELECT_DATA.fileSelectCursorPosition].timeAttack || FILE_SELECT_DATA.inputtedTimeAttack)
