@@ -113,7 +113,7 @@ extern u32 gHatchesOpened[MAX_AMOUNT_OF_AREAS][8];
 #define gHatchesOpened CAST_TO_ARRAY(u32, [MAX_AMOUNT_OF_AREAS][8], EWRAM_BASE + 0x37C00)
 #endif /* USE_EWRAM_SYMBOLS */
 
-extern u8 gWhichBGPositionIsWrittenToBG3OFS;
+extern u8 gWhichBgPositionIsWrittenToBG3OFS;
 extern struct Coordinates gDoorPositionStart;
 extern boolu8 gUseMotherShipDoors;
 extern Area gCurrentArea;

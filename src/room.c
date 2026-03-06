@@ -744,12 +744,12 @@ void RoomSetInitialTilemap(u8 bgNumber)
 /**
  * @brief 56d18 | 110 | RLE decompression algorithm
  * 
- * @param isBG Is background
+ * @param isBg Is background
  * @param src Source address
  * @param dst Destination address
  * @return u32 Size
  */
-u32 RoomRleDecompress(u8 isBG, const u8* src, u8* dst)
+u32 RoomRleDecompress(u8 isBg, const u8* src, u8* dst)
 {
     u32 size;
     s32 length;
@@ -761,7 +761,7 @@ u32 RoomRleDecompress(u8 isBG, const u8* src, u8* dst)
     // get decompressed size of data
     size = 0;
     length = 0x3000;
-    if (!isBG)
+    if (!isBg)
     {
         sizeType = *src;
         size = 0x800;

@@ -349,8 +349,8 @@ void VBlankCodeInGameLoad(void)
     WRITE_16(REG_BG2HOFS, gBackgroundPositions.bg[2].x);
     WRITE_16(REG_BG2VOFS, gBackgroundPositions.bg[2].y);
 
-    WRITE_16(REG_BG3HOFS, gBackgroundPositions.bg[gWhichBGPositionIsWrittenToBG3OFS].x);
-    WRITE_16(REG_BG3VOFS, gBackgroundPositions.bg[gWhichBGPositionIsWrittenToBG3OFS].y);
+    WRITE_16(REG_BG3HOFS, gBackgroundPositions.bg[gWhichBgPositionIsWrittenToBG3OFS].x);
+    WRITE_16(REG_BG3VOFS, gBackgroundPositions.bg[gWhichBgPositionIsWrittenToBG3OFS].y);
 
     #ifdef DEBUG
     gDebugVCount_VBlankEnd = READ_16(REG_VCOUNT);
@@ -375,8 +375,8 @@ void TransferSamusAndBgGraphics(void)
     WRITE_16(REG_BG2HOFS, gBackgroundPositions.bg[2].x);
     WRITE_16(REG_BG2VOFS, gBackgroundPositions.bg[2].y);
 
-    WRITE_16(REG_BG3HOFS, gBackgroundPositions.bg[gWhichBGPositionIsWrittenToBG3OFS].x);
-    WRITE_16(REG_BG3VOFS, gBackgroundPositions.bg[gWhichBGPositionIsWrittenToBG3OFS].y);
+    WRITE_16(REG_BG3HOFS, gBackgroundPositions.bg[gWhichBgPositionIsWrittenToBG3OFS].x);
+    WRITE_16(REG_BG3VOFS, gBackgroundPositions.bg[gWhichBgPositionIsWrittenToBG3OFS].y);
 }
 
 /**

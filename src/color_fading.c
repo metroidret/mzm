@@ -365,9 +365,9 @@ void ColorFadingHideScreenDuringLoad(void)
 void ColorFadingSetBg3Position(void)
 {
     if (sColorFadingData[gColorFading.type].fadeFunction == COLOR_FADING_FUNCTION_1)
-        gWhichBGPositionIsWrittenToBG3OFS = 4;
+        gWhichBgPositionIsWrittenToBG3OFS = 4;
     else
-        gWhichBGPositionIsWrittenToBG3OFS = 3;
+        gWhichBgPositionIsWrittenToBG3OFS = 3;
 }
 
 /**

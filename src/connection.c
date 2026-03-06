@@ -514,7 +514,7 @@ void ConnectionProcessDoorType(DoorType type)
 
         default:
             // Use door transition coordinates instead of background coordinates
-            gWhichBGPositionIsWrittenToBG3OFS = 4;
+            gWhichBgPositionIsWrittenToBG3OFS = 4;
             if (!gSkipDoorTransition)
                 transition = COLOR_FADING_DOOR_TRANSITION;
 

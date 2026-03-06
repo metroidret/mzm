@@ -18,8 +18,8 @@ void PowerBombYellowTint(u8 paletteRow);
 void ApplyMonochromeToPalette(const u16* src, u16* dst, s8 additionalValue);
 void ApplySmoothMonochromeToPalette(u16* srcBase, u16* srcMonochrome, u16* dst, u8 stage);
 void ApplySmoothPaletteTransition(u16* srcStart, u16* srcEnd, u16* dst, u8 stage);
-void ApplySpecialBackgroundEffectColorOnBG(u16 mask, u16 color, u8 stage);
-void ApplySpecialBackgroundEffectColorOnOBJ(u16 mask, u16 color, u8 stage);
+void ApplySpecialBackgroundEffectColorOnBg(u16 mask, u16 color, u8 stage);
+void ApplySpecialBackgroundEffectColorOnObj(u16 mask, u16 color, u8 stage);
 void ApplySpecialBackgroundFadingColor(ColorFadingType type, u8 color, u16** ppSrc, u16** ppDst, u16 mask);
 u16 ApplyFadeOnColor(ColorFadingType type, u16 color, u8 currentColor);
 

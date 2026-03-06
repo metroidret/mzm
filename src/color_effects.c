@@ -419,7 +419,7 @@ void ApplySmoothPaletteTransition(u16* srcStart, u16* srcEnd, u16* dst, u8 stage
  * @param color Color
  * @param stage Stage
  */
-void ApplySpecialBackgroundEffectColorOnBG(u16 mask, u16 color, u8 stage)
+void ApplySpecialBackgroundEffectColorOnBg(u16 mask, u16 color, u8 stage)
 {
     s32 i;
     s32 j;
@@ -486,7 +486,7 @@ void ApplySpecialBackgroundEffectColorOnBG(u16 mask, u16 color, u8 stage)
  * @param color Color
  * @param stage Stage
  */
-void ApplySpecialBackgroundEffectColorOnOBJ(u16 mask, u16 color, u8 stage)
+void ApplySpecialBackgroundEffectColorOnObj(u16 mask, u16 color, u8 stage)
 {
     s32 i;
     s32 j;

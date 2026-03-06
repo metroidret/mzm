@@ -559,12 +559,12 @@ void BackgroundEffectUpdate(void)
         return;
 
     // Apply on background
-    ApplySpecialBackgroundEffectColorOnBG(sBackgroundEffectColorData[gBackgroundEffect.type].colorMask,
+    ApplySpecialBackgroundEffectColorOnBg(sBackgroundEffectColorData[gBackgroundEffect.type].colorMask,
         color, gBackgroundEffect.colorStage);
 
     // Check apply on obj
     if (sBackgroundEffectColorData[gBackgroundEffect.type].applyToObj)
-        ApplySpecialBackgroundEffectColorOnOBJ(0xFFFC, color, gBackgroundEffect.colorStage);
+        ApplySpecialBackgroundEffectColorOnObj(0xFFFC, color, gBackgroundEffect.colorStage);
 }
 
 /**
