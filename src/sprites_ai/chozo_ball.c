@@ -16,7 +16,7 @@
 #define CHOZO_BALL_FLICKER_TIMER work0
 
 /**
- * 162b0 | 94 | Spawns an message banner depending on the chozo statue sprite ID
+ * @brief 162b0 | 94 | Spawns an message banner depending on the chozo statue sprite ID
  * 
  * @param spriteId Chozo statue sprite ID
  */

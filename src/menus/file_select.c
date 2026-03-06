@@ -4379,11 +4379,11 @@ u32 FileSelectMenuMainLoop(void)
 
     switch (gSubGameMode1)
     {
-        case 0:
+        case 0: // Init
             gSubGameMode2 = 0;
             gCutsceneToSkip = 0;
-            FileSelectInit();
-            gSubGameMode1--;
+            FileSelectInit();//sets SubGameMode1 to 2
+            gSubGameMode1--;//Then decrease it to 1, so the next frame it will apply the fading
             break;
 
         case 1:
@@ -5331,7 +5331,7 @@ static u8 FileSelectUpdateSubMenu(void)
 
     switch (FILE_SELECT_DATA.currentSubMenu)
     {
-        case 0:
+        case 0: // Main menu
             result = 0;
             #ifdef REGION_EU
             CheckForMaintainedInput(MAINTAINED_INPUT_SPEED_FAST);
@@ -5407,10 +5407,10 @@ static u8 FileSelectUpdateSubMenu(void)
                 }
             }
 
-            if (!result)
+            if (!result)// 0 = no input
                 break;
 
-            if (result == 1)
+            if (result == 1)//1 = moved cursor
             {
                 FileSelectUpdateCursor(CURSOR_POSE_MOVING, FILE_SELECT_DATA.fileSelectCursorPosition);
                 if (FILE_SELECT_DATA.fileSelectCursorPosition < FILE_SELECT_CURSOR_POSITION_COPY)
@@ -5418,7 +5418,7 @@ static u8 FileSelectUpdateSubMenu(void)
                 else
                     FileSelectPlayMenuSound(MENU_SOUND_REQUEST_SUB_MENU_CURSOR);
             }
-            else if (result == 2)
+            else if (result == 2)// 2 = pressed B, go back to title
             {
                 FadeMusic(0);
                 #ifdef REGION_JP
@@ -5429,10 +5429,10 @@ static u8 FileSelectUpdateSubMenu(void)
                     gLanguage = gSaveFilesInfo[FILE_SELECT_DATA.fileSelectCursorPosition].language;
                 }
                 #endif // REGION_JP
-                gSubGameMode2 = 3;
+                gSubGameMode2 = 3; // Go to title screen
                 return TRUE;
             }
-            else if (result == 3)
+            else if (result == 3) // 3 = pressed A, open sub menu
             {
                 result = FALSE;
 
@@ -5487,7 +5487,7 @@ static u8 FileSelectUpdateSubMenu(void)
             }
             break;
 
-        case 1:
+        case 1: // File selection sub menu
             result = FileSelectProcessFileSelection();
             if (result == FALSE)
                 break;
@@ -5624,7 +5624,7 @@ static u32 FileSelectCheckInputtingTimeAttackCode(void)
 }
 
 /**
- * @brief 7d62c | dd0 | 
+ * @brief 7d62c | dd0 | Handles File Sub Menu (CurrentSubMenu = 1)
  * 
  * @return u8 Leaving, 
  */
@@ -5642,7 +5642,7 @@ static u8 FileSelectProcessFileSelection(void)
 
     switch (FILE_SELECT_DATA.subMenuStage)
     {
-        case 0:
+        case 0: // Initialize File Sub Menu
             gMostRecentSaveFile = FILE_SELECT_DATA.fileSelectCursorPosition;
 
             offset = (FILE_SELECT_DATA.fileSelectCursorPosition + 1) * 3;
@@ -5759,7 +5759,7 @@ static u8 FileSelectProcessFileSelection(void)
             FILE_SELECT_DATA.inputtedTimeAttack = FALSE;
             FILE_SELECT_DATA.subMenuStage = 7;
 
-        case 7:
+        case 7://"start game" Sub Menu
             action = UCHAR_MAX;
 
             if (gChangedInput & KEY_A)
@@ -5801,7 +5801,7 @@ static u8 FileSelectProcessFileSelection(void)
                 unk_7e3fc(0, (u8)action);
             break;
 
-        case 8:
+        case 8://start game pressed, check if continue or new
             if (gSaveFilesInfo[FILE_SELECT_DATA.fileSelectCursorPosition].exists || gSaveFilesInfo[FILE_SELECT_DATA.fileSelectCursorPosition].introPlayed)
             {
                 if (gSaveFilesInfo[FILE_SELECT_DATA.fileSelectCursorPosition].timeAttack || FILE_SELECT_DATA.inputtedTimeAttack)
