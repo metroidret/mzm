@@ -35,7 +35,7 @@ static void GettingFullyPoweredSuitUpdateRingPalette(struct CutscenePaletteData*
 static void GettingFullyPoweredSuitUpdateRing(struct CutsceneOamData* pOam);
 static void GettingFullyPoweredSuitUpdateSparkleAroundRing(struct CutsceneOamData* pOam, u8 sparkleId);
 static void GettingFullyPoweredSuitUpdateSparkleGoingUp(struct CutsceneOamData* pOam, u8 sparkleId);
-static void GettingFullyPoweredSuitProcessOAM(void);
+static void GettingFullyPoweredSuitProcessOam(void);
 
 /**
  * @brief 65bd8 | 204 | Handles the animation part (entire cutscene)
@@ -471,7 +471,7 @@ u8 GettingFullyPoweredSuitMainLoop(void)
 
     ended = sGettingFullyPoweredSuitStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
     CutsceneUpdateBackgroundsPosition(TRUE);
-    GettingFullyPoweredSuitProcessOAM();
+    GettingFullyPoweredSuitProcessOam();
     
     return ended;
 }
@@ -480,7 +480,7 @@ u8 GettingFullyPoweredSuitMainLoop(void)
  * @brief 66390 | 38 | Processes the OAM
  * 
  */
-static void GettingFullyPoweredSuitProcessOAM(void)
+static void GettingFullyPoweredSuitProcessOam(void)
 {
     gNextOamSlot = 0;
     ProcessCutsceneOam(sGettingFullyPoweredSuitStageData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sGettingFullyPoweredSuitCutsceneOam);

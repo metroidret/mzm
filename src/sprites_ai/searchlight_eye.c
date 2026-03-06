@@ -257,7 +257,7 @@ static void SearchlightEyeBeamInit(void)
     gCurrentSprite.bgPriority = 3;
     gCurrentSprite.drawOrder = 12;
     
-    gCurrentSprite.pOam = sSearchlightEyeBeamOAM_Idle;
+    gCurrentSprite.pOam = sSearchlightEyeBeamOam_Idle;
     gCurrentSprite.currentAnimationFrame = 0;
     gCurrentSprite.animationDurationCounter = 0;
 
@@ -463,7 +463,7 @@ void SearchlightEyeProjectile(void)
             gCurrentSprite.hitboxTop = -(QUARTER_BLOCK_SIZE + EIGHTH_BLOCK_SIZE);
             gCurrentSprite.hitboxBottom = (QUARTER_BLOCK_SIZE + EIGHTH_BLOCK_SIZE);
 
-            gCurrentSprite.pOam = sSearchlightEyeProjectileOAM_Moving;
+            gCurrentSprite.pOam = sSearchlightEyeProjectileOam_Moving;
             gCurrentSprite.animationDurationCounter = 0;
             gCurrentSprite.currentAnimationFrame = 0;
 

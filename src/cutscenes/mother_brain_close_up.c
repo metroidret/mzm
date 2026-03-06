@@ -26,7 +26,7 @@
 #define OAM_SLOT_EYE_PUPIL 1
 
 static void MotherBrainCloseUpUpdateElevatorReflection(struct CutsceneOamData* pOam);
-static void MotherBrainCloseUpProcessOAM(void);
+static void MotherBrainCloseUpProcessOam(void);
 static void MotherBrainCloseUpUpdateEye(u8 lookingAtSamus);
 static void MotherBrainCloseUpUpdateBubble(struct CutsceneOamData* pOam);
 static u8 MotherBrainCloseUpInitBubbles(u8 packId);
@@ -439,7 +439,7 @@ u8 MotherBrainCloseUpMainLoop(void)
 
     ended = sMotherBrainCloseUpData[CUTSCENE_DATA.timeInfo.stage].pFunction();
     CutsceneUpdateBackgroundsPosition(TRUE);
-    MotherBrainCloseUpProcessOAM();
+    MotherBrainCloseUpProcessOam();
 
     return ended;
 }
@@ -448,7 +448,7 @@ u8 MotherBrainCloseUpMainLoop(void)
  * @brief 63670 | 38 | Processes the OAM
  * 
  */
-static void MotherBrainCloseUpProcessOAM(void)
+static void MotherBrainCloseUpProcessOam(void)
 {
     gNextOamSlot = 0;
     ProcessCutsceneOam(sMotherBrainCloseUpData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sMotherBrainCloseUpCutsceneOam);

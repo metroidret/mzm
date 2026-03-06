@@ -13,7 +13,7 @@
 
 static void SamusInBlueShipShakeScreen(struct CutsceneGraphicsData* pGraphics);
 static void SamusInBlueShipUpdateControlPanel(struct CutsceneOamData* pOam);
-static void SamusInBlueShipProcessOAM(void);
+static void SamusInBlueShipProcessOam(void);
 
 /**
  * @brief 67d8c | f8 | Handles the sip powering up part (entire cutscene)
@@ -231,7 +231,7 @@ u8 SamusInBlueShipMainLoop(void)
 
     ended = sSamusInBlueShipStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
     CutsceneUpdateBackgroundsPosition(TRUE);
-    SamusInBlueShipProcessOAM();
+    SamusInBlueShipProcessOam();
 
     return ended;
 }
@@ -240,7 +240,7 @@ u8 SamusInBlueShipMainLoop(void)
  * @brief 680f0 | 38 | Processes the OAM
  * 
  */
-static void SamusInBlueShipProcessOAM(void)
+static void SamusInBlueShipProcessOam(void)
 {
     gNextOamSlot = 0;
     ProcessCutsceneOam(sSamusInBlueShipStageData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sSamusInBlueShipOam);

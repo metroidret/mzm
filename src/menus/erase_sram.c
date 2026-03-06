@@ -23,7 +23,7 @@ static void EraseSramResetOam(void);
 static void EraseSramUpdateCursorPosition(void);
 static void EraseSramVBlank(void);
 static void EraseSramVBlank_Empty(void);
-static void EraseSramProcessOAM(void);
+static void EraseSramProcessOam(void);
 
 static const u32* sEraseSramTextGfxPointers[LANGUAGE_COUNT][2] = {
     [LANGUAGE_JAPANESE] = {
@@ -169,7 +169,7 @@ u32 EraseSramMainLoop(void)
     }
 
     if (!leaving)
-        EraseSramProcessOAM();
+        EraseSramProcessOam();
 
     return leaving;
 }
@@ -425,7 +425,7 @@ static void EraseSramInit(void)
 
     EraseSramResetOam();
     EraseSramUpdateCursorPosition();
-    EraseSramProcessOAM();
+    EraseSramProcessOam();
     EraseSramVBlank();
 
     ERASE_SRAM_DATA.bldcnt = READ_16(REG_BLDCNT);
@@ -513,7 +513,7 @@ static void EraseSramVBlank_Empty(void)
  * @brief 76364 | 2c | Processes the OAM for the erase sram menu
  * 
  */
-static void EraseSramProcessOAM(void)
+static void EraseSramProcessOam(void)
 {
     gNextOamSlot = 0;
     ProcessMenuOam(ARRAY_SIZE(ERASE_SRAM_DATA.oam), ERASE_SRAM_DATA.oam, sEraseSramMenuOam);

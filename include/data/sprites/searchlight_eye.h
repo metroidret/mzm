@@ -8,9 +8,9 @@ extern const u32 sSearchlightEyeGfx[177];
 extern const u16 sSearchlightEyePal[16];
 
 extern const struct FrameData sSearchlightEyeOam_Idle[13];
-extern const struct FrameData sSearchlightEyeBeamOAM_Idle[5];
-extern const struct FrameData sSearchlightEyeBeamOAM_Unused[2];
-extern const struct FrameData sSearchlightEyeProjectileOAM_Moving[9];
+extern const struct FrameData sSearchlightEyeBeamOam_Idle[5];
+extern const struct FrameData sSearchlightEyeBeamOam_Unused[2];
+extern const struct FrameData sSearchlightEyeProjectileOam_Moving[9];
 extern const struct FrameData sSearchlightEyeOam_Shooting[4];
 
 #endif /* SEARCHLIGHT_EYE_DATA_H */

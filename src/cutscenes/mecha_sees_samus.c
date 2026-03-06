@@ -14,7 +14,7 @@
 
 #include "structs/cutscene.h"
 
-static void MechaRidleySeesSamusProcessOAM(void);
+static void MechaRidleySeesSamusProcessOam(void);
 
 /**
  * @brief 65924 | 100 | Handles the eye part of the mecha sees samus cutscene
@@ -160,7 +160,7 @@ u8 MechaRidleySeesSamusMainLoop(void)
 
     ended = sMechaSeesSamusStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
     CutsceneUpdateBackgroundsPosition(TRUE);
-    MechaRidleySeesSamusProcessOAM();
+    MechaRidleySeesSamusProcessOam();
 
     return ended;
 }
@@ -169,7 +169,7 @@ u8 MechaRidleySeesSamusMainLoop(void)
  * @brief 65ba0 | 38 | Processes the OAM for the cutscene
  * 
  */
-static void MechaRidleySeesSamusProcessOAM(void)
+static void MechaRidleySeesSamusProcessOam(void)
 {
     gNextOamSlot = 0;
     ProcessCutsceneOam(sMechaSeesSamusStageData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sMechaSeesSamusCutsceneOam);

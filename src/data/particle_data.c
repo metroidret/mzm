@@ -189,39 +189,39 @@ const u16 sParticleBeamTrailingOam_Frame4[OAM_DATA_SIZE(1)] = {
     OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1a2, 2, 0)
 };
 
-const u16 sParticleChargingBeamBeginOAM_Frame0[OAM_DATA_SIZE(1)] = {
+const u16 sParticleChargingBeamBeginOam_Frame0[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x97, 2, 0)
 };
 
-const u16 sParticleChargingBeamBeginOAM_Frame1[OAM_DATA_SIZE(1)] = {
+const u16 sParticleChargingBeamBeginOam_Frame1[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x95, 2, 0)
 };
 
-const u16 sParticleChargingBeamBeginOAM_Frame2[OAM_DATA_SIZE(1)] = {
+const u16 sParticleChargingBeamBeginOam_Frame2[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x166, 2, 0)
 };
 
-const u16 sParticleChargingBeamBeginOAM_Frame3[OAM_DATA_SIZE(1)] = {
+const u16 sParticleChargingBeamBeginOam_Frame3[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1c8, 2, 0)
 };
 
-const u16 sParticleChargingBeamBeginOAM_Frame6[OAM_DATA_SIZE(2)] = {
+const u16 sParticleChargingBeamBeginOam_Frame6[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x95, 2, 0),
     OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x90, 2, 0)
 };
 
-const u16 sParticleChargingBeamBeginOAM_Frame10[OAM_DATA_SIZE(2)] = {
+const u16 sParticleChargingBeamBeginOam_Frame10[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x97, 2, 0),
     OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0xb0, 2, 0)
 };
 
-const u16 sParticleChargingBeamBeginOAM_Frame16[OAM_DATA_SIZE(5)] = {
+const u16 sParticleChargingBeamBeginOam_Frame16[OAM_DATA_SIZE(5)] = {
     5,
     OAM_ENTRY(-12, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x99, 2, 0),
     OAM_ENTRY(4, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x99, 2, 0),
@@ -230,7 +230,7 @@ const u16 sParticleChargingBeamBeginOAM_Frame16[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x91, 2, 0)
 };
 
-const u16 sParticleChargingBeamChargedOAM_Frame1[OAM_DATA_SIZE(5)] = {
+const u16 sParticleChargingBeamChargedOam_Frame1[OAM_DATA_SIZE(5)] = {
     5,
     OAM_ENTRY(-12, -12, OAM_DIMS_16x16, OAM_NO_FLIP, 0x9b, 2, 0),
     OAM_ENTRY(4, -12, OAM_DIMS_8x16, OAM_X_FLIP, 0x9b, 2, 0),
@@ -391,105 +391,105 @@ const struct FrameData sParticleBeamTrailingOam[6] = {
     [5] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sParticleChargingBeamBeginOAM[23] = {
+const struct FrameData sParticleChargingBeamBeginOam[23] = {
     [0] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame0,
+        .pFrame = sParticleChargingBeamBeginOam_Frame0,
         .timer = CONVERT_SECONDS(1.f / 30)
     },
     [1] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame1,
+        .pFrame = sParticleChargingBeamBeginOam_Frame1,
         .timer = CONVERT_SECONDS(1.f / 30)
     },
     [2] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame2,
+        .pFrame = sParticleChargingBeamBeginOam_Frame2,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [3] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame3,
+        .pFrame = sParticleChargingBeamBeginOam_Frame3,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [4] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame2,
+        .pFrame = sParticleChargingBeamBeginOam_Frame2,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [5] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame3,
+        .pFrame = sParticleChargingBeamBeginOam_Frame3,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [6] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame6,
+        .pFrame = sParticleChargingBeamBeginOam_Frame6,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [7] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame3,
+        .pFrame = sParticleChargingBeamBeginOam_Frame3,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [8] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame6,
+        .pFrame = sParticleChargingBeamBeginOam_Frame6,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [9] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame3,
+        .pFrame = sParticleChargingBeamBeginOam_Frame3,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [10] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame10,
+        .pFrame = sParticleChargingBeamBeginOam_Frame10,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [11] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame6,
+        .pFrame = sParticleChargingBeamBeginOam_Frame6,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [12] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame10,
+        .pFrame = sParticleChargingBeamBeginOam_Frame10,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [13] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame6,
+        .pFrame = sParticleChargingBeamBeginOam_Frame6,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [14] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame10,
+        .pFrame = sParticleChargingBeamBeginOam_Frame10,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [15] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame6,
+        .pFrame = sParticleChargingBeamBeginOam_Frame6,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [16] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame16,
+        .pFrame = sParticleChargingBeamBeginOam_Frame16,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [17] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame10,
+        .pFrame = sParticleChargingBeamBeginOam_Frame10,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [18] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame16,
+        .pFrame = sParticleChargingBeamBeginOam_Frame16,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [19] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame10,
+        .pFrame = sParticleChargingBeamBeginOam_Frame10,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [20] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame16,
+        .pFrame = sParticleChargingBeamBeginOam_Frame16,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [21] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame10,
+        .pFrame = sParticleChargingBeamBeginOam_Frame10,
         .timer = CONVERT_SECONDS(0.05f)
     },
     [22] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sParticleChargingBeamChargedOAM[3] = {
+const struct FrameData sParticleChargingBeamChargedOam[3] = {
     [0] = {
-        .pFrame = sParticleChargingBeamBeginOAM_Frame16,
+        .pFrame = sParticleChargingBeamBeginOam_Frame16,
         .timer = CONVERT_SECONDS(1.f / 30)
     },
     [1] = {
-        .pFrame = sParticleChargingBeamChargedOAM_Frame1,
+        .pFrame = sParticleChargingBeamChargedOam_Frame1,
         .timer = CONVERT_SECONDS(1.f / 30)
     },
     [2] = FRAME_DATA_TERMINATOR
@@ -2089,22 +2089,22 @@ static const u16 sWaterDropOam_Splashing_Frame4[OAM_DATA_SIZE(2)] = {
     OAM_ENTRY(-6, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0xbe, 4, 0)
 };
 
-const u16 sSpriteDebrisOAM_Frame0[OAM_DATA_SIZE(1)] = {
+const u16 sSpriteDebrisOam_Frame0[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x170, 3, 0)
 };
 
-const u16 sSpriteDebrisOAM_Frame1[OAM_DATA_SIZE(1)] = {
+const u16 sSpriteDebrisOam_Frame1[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x16f, 3, 0)
 };
 
-const u16 sSpriteDebrisOAM_Frame2[OAM_DATA_SIZE(1)] = {
+const u16 sSpriteDebrisOam_Frame2[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x16e, 3, 0)
 };
 
-const u16 sSpriteDebrisOAM_Frame3[OAM_DATA_SIZE(1)] = {
+const u16 sSpriteDebrisOam_Frame3[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-4, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x16d, 3, 0)
 };
@@ -2117,7 +2117,7 @@ const u16 sParticleHittingSomethingWithPlasmaBeamOam_Frame6[OAM_DATA_SIZE(4)] = 
     OAM_ENTRY(-12, 4, OAM_DIMS_32x16, OAM_XY_FLIP, 0x192, 2, 0)
 };
 
-const u16 sSpriteDebrisOAM_Unused_Frame4[OAM_DATA_SIZE(8)] = {
+const u16 sSpriteDebrisOam_Unused_Frame4[OAM_DATA_SIZE(8)] = {
     8,
     OAM_ENTRY(-16, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x147, 2, 0),
     OAM_ENTRY(0, -16, OAM_DIMS_16x16, OAM_X_FLIP, 0x147, 2, 0),
@@ -2129,7 +2129,7 @@ const u16 sSpriteDebrisOAM_Unused_Frame4[OAM_DATA_SIZE(8)] = {
     OAM_ENTRY(4, 4, OAM_DIMS_8x8, OAM_XY_FLIP, 0x143, 2, 0)
 };
 
-const u16 sSpriteDebrisOAM_Unused_Frame5[OAM_DATA_SIZE(8)] = {
+const u16 sSpriteDebrisOam_Unused_Frame5[OAM_DATA_SIZE(8)] = {
     8,
     OAM_ENTRY(-24, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x151, 2, 0),
     OAM_ENTRY(-22, -22, OAM_DIMS_16x16, OAM_NO_FLIP, 0x192, 2, 0),
@@ -3201,27 +3201,27 @@ const struct FrameData sWaterDropOam_Splashing[6] = {
     [5] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sSpriteDebrisOAM[5] = {
+const struct FrameData sSpriteDebrisOam[5] = {
     [0] = {
-        .pFrame = sSpriteDebrisOAM_Frame0,
+        .pFrame = sSpriteDebrisOam_Frame0,
         .timer = CONVERT_SECONDS(2.f / 15)
     },
     [1] = {
-        .pFrame = sSpriteDebrisOAM_Frame1,
+        .pFrame = sSpriteDebrisOam_Frame1,
         .timer = CONVERT_SECONDS(2.f / 15)
     },
     [2] = {
-        .pFrame = sSpriteDebrisOAM_Frame2,
+        .pFrame = sSpriteDebrisOam_Frame2,
         .timer = CONVERT_SECONDS(2.f / 15)
     },
     [3] = {
-        .pFrame = sSpriteDebrisOAM_Frame3,
+        .pFrame = sSpriteDebrisOam_Frame3,
         .timer = UCHAR_MAX
     },
     [4] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sSpriteDebrisOAM_Unused[7] = {
+const struct FrameData sSpriteDebrisOam_Unused[7] = {
     [0] = {
         .pFrame = sParticleHittingSomethingWithNormalBeamOam_Frame1,
         .timer = CONVERT_SECONDS(1.f / 60)
@@ -3239,11 +3239,11 @@ const struct FrameData sSpriteDebrisOAM_Unused[7] = {
         .timer = CONVERT_SECONDS(1.f / 30)
     },
     [4] = {
-        .pFrame = sSpriteDebrisOAM_Unused_Frame4,
+        .pFrame = sSpriteDebrisOam_Unused_Frame4,
         .timer = CONVERT_SECONDS(1.f / 30)
     },
     [5] = {
-        .pFrame = sSpriteDebrisOAM_Unused_Frame5,
+        .pFrame = sSpriteDebrisOam_Unused_Frame5,
         .timer = CONVERT_SECONDS(1.f / 30)
     },
     [6] = FRAME_DATA_TERMINATOR

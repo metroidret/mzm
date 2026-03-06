@@ -323,7 +323,7 @@ void FileSelectApplyStereo(void)
  * @brief 7824c | 60 | Processes the OAM for the file select and options screens
  * 
  */
-void FileSelectProcessOAM(void)
+void FileSelectProcessOam(void)
 {
     gNextOamSlot = 0;
 
@@ -355,7 +355,7 @@ void FileSelectProcessOAM(void)
  * @brief 782ac | 258 | Initializes the OAM for the file and options screens
  * 
  */
-static void FileSelectResetOAM(void)
+static void FileSelectResetOam(void)
 {
     s32 i;
     struct MenuOamData* pOam;
@@ -3167,7 +3167,7 @@ static void FileSelectResetIOTransferInfo(void)
         case OPTION_FUSION_GALLERY:
         case OPTION_FUSION_LINK:
             gIoTransferInfo = sIoTransferInfo_Empty;
-            gIoTransferInfo.pFunction = FileSelectProcessOAM;
+            gIoTransferInfo.pFunction = FileSelectProcessOam;
     }
 }
 
@@ -4473,7 +4473,7 @@ u32 FileSelectMenuMainLoop(void)
             return TRUE;
     }
 
-    FileSelectProcessOAM();
+    FileSelectProcessOam();
     return FALSE;
 }
 
@@ -4805,7 +4805,7 @@ static void FileSelectInit(void)
     FILE_SELECT_DATA.messageInfoIdQueue[1] = UCHAR_MAX;
     FILE_SELECT_DATA.messageInfoIdQueue[2] = UCHAR_MAX;
 
-    FileSelectResetOAM();
+    FileSelectResetOam();
     FileSelectUpdateCursor(CURSOR_POSE_DEFAULT, FILE_SELECT_DATA.unk_24);
 
     if (gSubGameMode1 == 2)
@@ -4829,7 +4829,7 @@ static void FileSelectInit(void)
         FILE_SELECT_DATA.dispcnt |= (DCNT_BG2 | DCNT_OBJ);
     }
 
-    FileSelectProcessOAM();
+    FileSelectProcessOam();
     FileSelectInitFading(FALSE);
 
     WRITE_16(REG_BLDY, gWrittenToBldy_NonGameplay = 0);

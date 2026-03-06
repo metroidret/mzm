@@ -37,7 +37,7 @@ static const struct FrameData* sCrocomireFrameDataPointers[CROCOMIRE_OAM_COUNT] 
     [CROCOMIRE_OAM_PART_LEGS_DYING] = sCrocomirePartOam_LegsDying,
     [CROCOMIRE_OAM_PART_TONGUE] = sCrocomirePartOam_Tongue,
     [CROCOMIRE_OAM_PART_TONGUE_DYING] = sCrocomirePartOam_TongueDying,
-    [CROCOMIRE_OAM_PROJECTILE] = sCrocomireProjectileOAM,
+    [CROCOMIRE_OAM_PROJECTILE] = sCrocomireProjectileOam,
     [CROCOMIRE_OAM_PART_307028] = sCrocomirePartOam_307028,
     [CROCOMIRE_OAM_PART_307058] = sCrocomirePartOam_307058,
     [CROCOMIRE_OAM_PART_307088] = sCrocomirePartOam_307088,

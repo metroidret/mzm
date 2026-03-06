@@ -20,7 +20,7 @@ static void EnterTourianScrollBackground(void);
 static void EnterTourianUpdateMetroid(struct CutsceneOamData* pOam, u8 metroidId);
 static void EnterTourianSwitchMetroidPalette(struct CutscenePaletteData* pPalette, u8 grabbedPal);
 static void EnterTourianUpdatePirate(struct CutsceneOamData* pOam);
-static void EnterTourianProcessOAM(void);
+static void EnterTourianProcessOam(void);
 
 #define MAX_METROID_IDS 4
 
@@ -681,7 +681,7 @@ u8 EnterTourianMainLoop(void)
     ended = sEnterTourianStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
 
     CutsceneUpdateBackgroundsPosition(TRUE);
-    EnterTourianProcessOAM();
+    EnterTourianProcessOam();
 
     return ended;
 }
@@ -690,7 +690,7 @@ u8 EnterTourianMainLoop(void)
  * @brief 67d40 | 4c | Processes the OAM for the cutscene
  * 
  */
-static void EnterTourianProcessOAM(void)
+static void EnterTourianProcessOam(void)
 {
     gNextOamSlot = 0;
     ProcessCutsceneOam(sEnterTourianStageData[CUTSCENE_DATA.timeInfo.stage].oamLength,

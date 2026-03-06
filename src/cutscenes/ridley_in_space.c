@@ -38,7 +38,7 @@ static void RidleyInSpaceUpdateAlertPalette(struct CutscenePaletteData* pPalette
 static void RidleyInSpaceUpdateViewOfShip(struct CutsceneOamData* pOam);
 static void RidleyInSpaceUpdateRightBlueShip(struct CutsceneOamData* pOam);
 static void RidleyInSpaceUpdateLeftBlueShip(struct CutsceneOamData* pOam);
-static void RidleyInSpaceProcessOAM(void);
+static void RidleyInSpaceProcessOam(void);
 
 static void RidleyInSpaceViewOfShipParticles(void);
 static u32 RidleyInSpaceViewOfShipUpdateParticle(struct CutsceneOamData* pOam);
@@ -797,7 +797,7 @@ u8 RidleyInSpaceMainLoop(void)
     ended = sRidleyInSpaceStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
     
     CutsceneUpdateBackgroundsPosition(TRUE);
-    RidleyInSpaceProcessOAM();
+    RidleyInSpaceProcessOam();
     return ended;
 }
 
@@ -805,10 +805,10 @@ u8 RidleyInSpaceMainLoop(void)
  * @brief 6444c | 4c | Processes the OAM for the cutscene
  * 
  */
-static void RidleyInSpaceProcessOAM(void)
+static void RidleyInSpaceProcessOam(void)
 {
     gNextOamSlot = 0;
-    ProcessCutsceneOam(sRidleyInSpaceStageData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sRidleyInSpaceCutsceneOAM);
+    ProcessCutsceneOam(sRidleyInSpaceStageData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sRidleyInSpaceCutsceneOam);
 
     ResetFreeOam();
     CalculateOamPart4(gCurrentOamRotation, gCurrentOamScaling, 0);

@@ -15,28 +15,28 @@ const struct CutscenePageData sMechaRidleySeesSamusPagesData[1] = {
 
 const struct OamArray sMechaSeesSamusCutsceneOam[5] = {
     [0] = {
-        .pOam = sMechaSeesSamusOAM_FocusingEye,
+        .pOam = sMechaSeesSamusOam_FocusingEye,
         .preAction = OAM_ARRAY_PRE_ACTION_NONE
     },
     [1] = {
-        .pOam = sMechaSeesSamusOAM_OpeningEye,
+        .pOam = sMechaSeesSamusOam_OpeningEye,
         .preAction = OAM_ARRAY_PRE_ACTION_RESET_FRAME
     },
     [2] = {
-        .pOam = sMechaSeesSamusOAM_OpeningEye,
+        .pOam = sMechaSeesSamusOam_OpeningEye,
         .preAction = OAM_ARRAY_PRE_ACTION_KILL_AFTER_END
     },
     [3] = {
-        .pOam = sMechaSeesSamusOAM_FocusingEye,
+        .pOam = sMechaSeesSamusOam_FocusingEye,
         .preAction = OAM_ARRAY_PRE_ACTION_RESET_FRAME
     },
     [4] = {
-        .pOam = sMechaSeesSamusOAM_FocusingEye,
+        .pOam = sMechaSeesSamusOam_FocusingEye,
         .preAction = OAM_ARRAY_PRE_ACTION_LOOP_ON_LAST_FRAME
     }
 };
 
-static const u16 sMechaSeesSamusOAM_FocusingEye_Frame0[OAM_DATA_SIZE(36)] = {
+static const u16 sMechaSeesSamusOam_FocusingEye_Frame0[OAM_DATA_SIZE(36)] = {
     36,
     OAM_ENTRY(-72, -72, OAM_DIMS_64x64, OAM_NO_FLIP, 0x5, 8, 0),
     OAM_ENTRY(-8, -72, OAM_DIMS_8x32, OAM_NO_FLIP, 0xd, 8, 0),
@@ -76,7 +76,7 @@ static const u16 sMechaSeesSamusOAM_FocusingEye_Frame0[OAM_DATA_SIZE(36)] = {
     OAM_ENTRY(0, 0, OAM_DIMS_8x8, OAM_XY_FLIP, 0x10d, 8, 0)
 };
 
-static const u16 sMechaSeesSamusOAM_FocusingEye_Frame1[OAM_DATA_SIZE(36)] = {
+static const u16 sMechaSeesSamusOam_FocusingEye_Frame1[OAM_DATA_SIZE(36)] = {
     36,
     OAM_ENTRY(-72, -72, OAM_DIMS_64x64, OAM_NO_FLIP, 0xe, 8, 0),
     OAM_ENTRY(-8, -72, OAM_DIMS_8x32, OAM_NO_FLIP, 0x16, 8, 0),
@@ -116,7 +116,7 @@ static const u16 sMechaSeesSamusOAM_FocusingEye_Frame1[OAM_DATA_SIZE(36)] = {
     OAM_ENTRY(0, 0, OAM_DIMS_8x8, OAM_XY_FLIP, 0x116, 8, 0)
 };
 
-static const u16 sMechaSeesSamusOAM_FocusingEye_Frame2[OAM_DATA_SIZE(24)] = {
+static const u16 sMechaSeesSamusOam_FocusingEye_Frame2[OAM_DATA_SIZE(24)] = {
     24,
     OAM_ENTRY(-72, -72, OAM_DIMS_64x64, OAM_NO_FLIP, 0x17, 8, 0),
     OAM_ENTRY(-8, -72, OAM_DIMS_8x32, OAM_NO_FLIP, 0x1f, 8, 0),
@@ -144,7 +144,7 @@ static const u16 sMechaSeesSamusOAM_FocusingEye_Frame2[OAM_DATA_SIZE(24)] = {
     OAM_ENTRY(0, 0, OAM_DIMS_8x8, OAM_XY_FLIP, 0x11f, 8, 0)
 };
 
-static const u16 sMechaSeesSamusOAM_OpeningEye_Frame0[OAM_DATA_SIZE(23)] = {
+static const u16 sMechaSeesSamusOam_OpeningEye_Frame0[OAM_DATA_SIZE(23)] = {
     23,
     OAM_ENTRY(-40, -72, OAM_DIMS_64x64, OAM_NO_FLIP, 0x1c4, 9, 0),
     OAM_ENTRY(-40, -8, OAM_DIMS_64x64, OAM_NO_FLIP, 0x2c4, 9, 0),
@@ -171,7 +171,7 @@ static const u16 sMechaSeesSamusOAM_OpeningEye_Frame0[OAM_DATA_SIZE(23)] = {
     OAM_ENTRY(56, 16, OAM_DIMS_16x32, OAM_NO_FLIP, 0x330, 9, 0)
 };
 
-static const u16 sMechaSeesSamusOAM_OpeningEye_Frame1[OAM_DATA_SIZE(30)] = {
+static const u16 sMechaSeesSamusOam_OpeningEye_Frame1[OAM_DATA_SIZE(30)] = {
     30,
     OAM_ENTRY(-56, -72, OAM_DIMS_64x64, OAM_NO_FLIP, 0x1d4, 9, 0),
     OAM_ENTRY(-56, -8, OAM_DIMS_64x64, OAM_NO_FLIP, 0x2d4, 9, 0),
@@ -205,7 +205,7 @@ static const u16 sMechaSeesSamusOAM_OpeningEye_Frame1[OAM_DATA_SIZE(30)] = {
     OAM_ENTRY(48, 40, OAM_DIMS_16x16, OAM_NO_FLIP, 0x134, 9, 0)
 };
 
-static const u16 sMechaSeesSamusOAM_OpeningEye_Frame2[OAM_DATA_SIZE(31)] = {
+static const u16 sMechaSeesSamusOam_OpeningEye_Frame2[OAM_DATA_SIZE(31)] = {
     31,
     OAM_ENTRY(48, -24, OAM_DIMS_16x32, OAM_NO_FLIP, 0x2, 9, 0),
     OAM_ENTRY(64, -24, OAM_DIMS_8x32, OAM_NO_FLIP, 0x4, 9, 0),
@@ -241,33 +241,33 @@ static const u16 sMechaSeesSamusOAM_OpeningEye_Frame2[OAM_DATA_SIZE(31)] = {
 };
 
 
-const struct FrameData sMechaSeesSamusOAM_FocusingEye[4] = {
+const struct FrameData sMechaSeesSamusOam_FocusingEye[4] = {
     [0] = {
-        .pFrame = sMechaSeesSamusOAM_FocusingEye_Frame0,
+        .pFrame = sMechaSeesSamusOam_FocusingEye_Frame0,
         .timer = CONVERT_SECONDS(1.f / 6)
     },
     [1] = {
-        .pFrame = sMechaSeesSamusOAM_FocusingEye_Frame1,
+        .pFrame = sMechaSeesSamusOam_FocusingEye_Frame1,
         .timer = CONVERT_SECONDS(2.f / 15)
     },
     [2] = {
-        .pFrame = sMechaSeesSamusOAM_FocusingEye_Frame2,
+        .pFrame = sMechaSeesSamusOam_FocusingEye_Frame2,
         .timer = CONVERT_SECONDS(1.f / 6)
     },
     [3] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sMechaSeesSamusOAM_OpeningEye[4] = {
+const struct FrameData sMechaSeesSamusOam_OpeningEye[4] = {
     [0] = {
-        .pFrame = sMechaSeesSamusOAM_OpeningEye_Frame0,
+        .pFrame = sMechaSeesSamusOam_OpeningEye_Frame0,
         .timer = CONVERT_SECONDS(1.f / 6)
     },
     [1] = {
-        .pFrame = sMechaSeesSamusOAM_OpeningEye_Frame1,
+        .pFrame = sMechaSeesSamusOam_OpeningEye_Frame1,
         .timer = CONVERT_SECONDS(2.f / 15)
     },
     [2] = {
-        .pFrame = sMechaSeesSamusOAM_OpeningEye_Frame2,
+        .pFrame = sMechaSeesSamusOam_OpeningEye_Frame2,
         .timer = CONVERT_SECONDS(1.f / 30)
     },
     [3] = FRAME_DATA_TERMINATOR

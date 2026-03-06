@@ -204,7 +204,7 @@ static void IntroTextProcessOam(void)
         }
     }
 
-    src = sIntroTextMarkerOAM;
+    src = sIntroTextMarkerOam;
     partCount = i + *src++;
 
     yPosition = INTRO_DATA.charDrawerY;
@@ -388,7 +388,7 @@ static u8 IntroEmergencyOrder(void)
     }
     else
     {
-        INTRO_DATA.pTextOamFramePointer = sIntroEmergencyOrderTextOAM;
+        INTRO_DATA.pTextOamFramePointer = sIntroEmergencyOrderTextOam;
         IntroTextProcessOam();
         if (textResult != 0)
             INTRO_DATA.unk_A = 0;
@@ -607,7 +607,7 @@ static u8 IntroExterminate(void)
     }
     else
     {
-        INTRO_DATA.pTextOamFramePointer = sIntroExterminateAllTextOAM;
+        INTRO_DATA.pTextOamFramePointer = sIntroExterminateAllTextOam;
         IntroTextProcessOam();
         if (textResult != 0)
             INTRO_DATA.unk_A = 0;
@@ -622,7 +622,7 @@ static u8 IntroExterminate(void)
  * @brief 80b78 | 154 | Processes the OAM for the view of zebes part of the intro
  * 
  */
-static void IntroViewOfZebesProcessOAM(void)
+static void IntroViewOfZebesProcessOam(void)
 {
     const u16* src;
     u16* dst;
@@ -645,7 +645,7 @@ static void IntroViewOfZebesProcessOAM(void)
         xPosition = SCREEN_X_MIDDLE + 8 - 1;
     }
 
-    src = sIntroViewOfZebesShipOAM;
+    src = sIntroViewOfZebesShipOam;
     partCount = *src++;
 
     for (i = 0; i < partCount; i++)
@@ -668,9 +668,9 @@ static void IntroViewOfZebesProcessOAM(void)
     xPosition = SCREEN_X_MIDDLE + 8;
 
     if (MOD_AND(INTRO_DATA.unk_3d, 8) < 4)
-        src = sIntroViewOfZebesHeatOAM_2;
+        src = sIntroViewOfZebesHeatOam_2;
     else
-        src = sIntroViewOfZebesHeatOAM_1;
+        src = sIntroViewOfZebesHeatOam_1;
 
     partCount += *src++;
 
@@ -756,7 +756,7 @@ static u8 IntroViewOfZebes(void)
     else
         INTRO_DATA.timer++;
 
-    IntroViewOfZebesProcessOAM();
+    IntroViewOfZebesProcessOam();
 
     return FALSE;
 }
@@ -803,7 +803,7 @@ static u8 IntroDefeat(void)
     }
     else
     {
-        INTRO_DATA.pTextOamFramePointer = sIntroDefeatTheTextOAM;
+        INTRO_DATA.pTextOamFramePointer = sIntroDefeatTheTextOam;
         IntroTextProcessOam();
         if (textResult != 0)
             INTRO_DATA.unk_A = 0;
@@ -878,7 +878,7 @@ static u8 IntroMotherBrain(void)
  * @brief 81018 | 88 | Processes the OAM for the intro fuzz
  * 
  */
-static void IntroFuzzProcessOAM(void)
+static void IntroFuzzProcessOam(void)
 {
     u16* dst;
     const u16* src;
@@ -888,7 +888,7 @@ static void IntroFuzzProcessOAM(void)
     u16 offset;
 
     dst = (u16*)gOamData;
-    src = sIntroFuzzOAM;
+    src = sIntroFuzzOam;
     partCount = *src++;
 
     offset = BLOCK_SIZE * 2;
@@ -970,7 +970,7 @@ static u8 IntroFuzz(void)
     }
 
     INTRO_DATA.unk_A++;
-    IntroFuzzProcessOAM();
+    IntroFuzzProcessOam();
     return FALSE;
 }
 

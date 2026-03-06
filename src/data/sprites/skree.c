@@ -105,40 +105,40 @@ static const u16 sSkreeOam_CrashingUnused2_Frame2[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(0, -24, OAM_DIMS_16x8, OAM_XY_FLIP, 0x206, 8, 0)
 };
 
-static const u16 sSkreeExplosionOAM_GoingUp_Frame0[OAM_DATA_SIZE(3)] = {
+static const u16 sSkreeExplosionOam_GoingUp_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-5, 6, OAM_DIMS_8x8, OAM_NO_FLIP, 0x238, 8, 0),
     OAM_ENTRY(-5, -10, OAM_DIMS_8x8, OAM_NO_FLIP, 0x217, 8, 0),
     OAM_ENTRY(-5, -2, OAM_DIMS_8x8, OAM_NO_FLIP, 0x218, 8, 0)
 };
 
-static const u16 sSkreeExplosionOAM_GoingUp_Frame1[OAM_DATA_SIZE(3)] = {
+static const u16 sSkreeExplosionOam_GoingUp_Frame1[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-5, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x217, 8, 0),
     OAM_ENTRY(-5, -3, OAM_DIMS_8x8, OAM_NO_FLIP, 0x218, 8, 0),
     OAM_ENTRY(-5, 2, OAM_DIMS_8x8, OAM_NO_FLIP, 0x238, 8, 0)
 };
 
-static const u16 sSkreeExplosionOAM_GoingUp_Frame2[OAM_DATA_SIZE(2)] = {
+static const u16 sSkreeExplosionOam_GoingUp_Frame2[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-7, -1, OAM_DIMS_8x8, OAM_NO_FLIP, 0x238, 8, 0),
     OAM_ENTRY(-7, -7, OAM_DIMS_8x8, OAM_Y_FLIP, 0x238, 8, 0)
 };
 
-static const u16 sSkreeExplosionOAM_GoingDown_Frame0[OAM_DATA_SIZE(3)] = {
+static const u16 sSkreeExplosionOam_GoingDown_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-6, -10, OAM_DIMS_8x16, OAM_NO_FLIP, 0x219, 8, 0),
     OAM_ENTRY(-6, 6, OAM_DIMS_8x8, OAM_NO_FLIP, 0x23a, 8, 0),
     OAM_ENTRY(-6, -2, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21a, 8, 0)
 };
 
-static const u16 sSkreeExplosionOAM_GoingDown_Frame1[OAM_DATA_SIZE(2)] = {
+static const u16 sSkreeExplosionOam_GoingDown_Frame1[OAM_DATA_SIZE(2)] = {
     2,
     OAM_ENTRY(-6, -6, OAM_DIMS_8x8, OAM_NO_FLIP, 0x219, 8, 0),
     OAM_ENTRY(-6, -2, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21a, 8, 0)
 };
 
-static const u16 sSkreeExplosionOAM_GoingDown_Frame2[OAM_DATA_SIZE(1)] = {
+static const u16 sSkreeExplosionOam_GoingDown_Frame2[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-6, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x219, 8, 0)
 };
@@ -311,33 +311,33 @@ const struct FrameData sSkreeOam_CrashingUnused4[5] = {
     [4] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sSkreeExplosionOAM_GoingDown[4] = {
+const struct FrameData sSkreeExplosionOam_GoingDown[4] = {
     [0] = {
-        .pFrame = sSkreeExplosionOAM_GoingDown_Frame0,
+        .pFrame = sSkreeExplosionOam_GoingDown_Frame0,
         .timer = CONVERT_SECONDS(2.f / 15)
     },
     [1] = {
-        .pFrame = sSkreeExplosionOAM_GoingDown_Frame1,
+        .pFrame = sSkreeExplosionOam_GoingDown_Frame1,
         .timer = CONVERT_SECONDS(0.1f)
     },
     [2] = {
-        .pFrame = sSkreeExplosionOAM_GoingDown_Frame2,
+        .pFrame = sSkreeExplosionOam_GoingDown_Frame2,
         .timer = CONVERT_SECONDS(1.f / 15)
     },
     [3] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sSkreeExplosionOAM_GoingUp[4] = {
+const struct FrameData sSkreeExplosionOam_GoingUp[4] = {
     [0] = {
-        .pFrame = sSkreeExplosionOAM_GoingUp_Frame0,
+        .pFrame = sSkreeExplosionOam_GoingUp_Frame0,
         .timer = CONVERT_SECONDS(2.f / 15)
     },
     [1] = {
-        .pFrame = sSkreeExplosionOAM_GoingUp_Frame1,
+        .pFrame = sSkreeExplosionOam_GoingUp_Frame1,
         .timer = CONVERT_SECONDS(0.1f)
     },
     [2] = {
-        .pFrame = sSkreeExplosionOAM_GoingUp_Frame2,
+        .pFrame = sSkreeExplosionOam_GoingUp_Frame2,
         .timer = CONVERT_SECONDS(1.f / 15)
     },
     [3] = FRAME_DATA_TERMINATOR

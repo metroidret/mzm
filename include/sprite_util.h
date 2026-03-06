@@ -85,7 +85,7 @@ void SpriteUtilUpdateSubSprite1Anim(void);
 void SpriteUtilSyncCurrentSpritePositionWithSubSprite1Position(void);
 void SpriteUtilSyncCurrentSpritePositionWithSubSpriteData1PositionAndOam(void);
 void SpriteUtilUpdateSubSprite2Anim(void);
-void SpriteUtilSyncCurrentSpritePositionWithSubSpriteData2PositionAndOAM(void);
+void SpriteUtilSyncCurrentSpritePositionWithSubSpriteData2PositionAndOam(void);
 void SpriteUtilUpdateSubSpriteAnim(struct SubSpriteData* pSub);
 void SpriteUtilSyncCurrentSpritePositionWithSubSpritePosition(struct SubSpriteData* pSub);
 void SpriteUtilSyncCurrentSpritePositionWithSubSpritePositionAndOam(struct SubSpriteData* pSub);

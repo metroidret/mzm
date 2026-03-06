@@ -69,7 +69,7 @@ u32 TransferProcessSend(u32 size, const u32* pData)
 
         // Only reaches here if verifyTransferResult is 0
         if (gIoTransferInfo.pFunction)
-            gIoTransferInfo.pFunction(); // always FileSelectProcessOAM?
+            gIoTransferInfo.pFunction(); // always FileSelectProcessOam?
 
         VBlankIntrWait();
     }

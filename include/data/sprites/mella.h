@@ -18,6 +18,6 @@ extern const u32 sMellaGfx[162];
 extern const u16 sMellaPal[16];
 
 extern const struct FrameData sMellaOam_Idle[9];
-extern const struct FrameData sMellowOAM_Moving[9];
+extern const struct FrameData sMellowOam_Moving[9];
 
 #endif /* MELLA_DATA_H */

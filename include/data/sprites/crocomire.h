@@ -91,7 +91,7 @@ extern const struct FrameData sCrocomirePartOam_Tongue[5];
 
 extern const struct FrameData sCrocomirePartOam_TongueDying[5];
 
-extern const struct FrameData sCrocomireProjectileOAM[2];
+extern const struct FrameData sCrocomireProjectileOam[2];
 
 extern const struct FrameData sCrocomirePartOam_307028[6];
 

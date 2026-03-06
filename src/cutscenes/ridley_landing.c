@@ -19,7 +19,7 @@
 
 static void RidleyLandingUpdateRidley(struct CutsceneOamData* pOam);
 static struct CutsceneOamData* RidleyLandingUpdateShipLanding(struct CutsceneOamData* pOam);
-static void RidleyLandingProcessOAM(void);
+static void RidleyLandingProcessOam(void);
 
 /**
  * @brief 647d0 | 178 | Handles the ridley flying part
@@ -507,7 +507,7 @@ u8 RidleyLandingMainLoop(void)
 
     ended = sRidleyLandingStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
     CutsceneUpdateBackgroundsPosition(TRUE);
-    RidleyLandingProcessOAM();
+    RidleyLandingProcessOam();
 
     return ended;
 }
@@ -516,11 +516,11 @@ u8 RidleyLandingMainLoop(void)
  * @brief 652b8 | 4c | Processes the OAM
  * 
  */
-static void RidleyLandingProcessOAM(void)
+static void RidleyLandingProcessOam(void)
 {
     gNextOamSlot = 0;
 
-    ProcessCutsceneOam(sRidleyLandingStageData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sRidleyLandingCutsceneOAM);
+    ProcessCutsceneOam(sRidleyLandingStageData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sRidleyLandingCutsceneOam);
     ResetFreeOam();
     CalculateOamPart4(gCurrentOamRotation, gCurrentOamScaling, 0);
 }

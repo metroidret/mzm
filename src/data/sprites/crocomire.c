@@ -1067,7 +1067,7 @@ static const u16 sCrocomirePartOam_LegsWalkingBackwards_Frame7[OAM_DATA_SIZE(14)
     OAM_ENTRY(-9, -25, OAM_DIMS_16x16, OAM_NO_FLIP, 0x3d9, 8, 0)
 };
 
-static const u16 sCrocomireProjectileOAM_Frame0[OAM_DATA_SIZE(1)] = {
+static const u16 sCrocomireProjectileOam_Frame0[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x200, 8, 0)
 };
@@ -1692,9 +1692,9 @@ const struct FrameData sCrocomirePartOam_TongueDying[5] = {
     [4] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sCrocomireProjectileOAM[2] = {
+const struct FrameData sCrocomireProjectileOam[2] = {
     [0] = {
-        .pFrame = sCrocomireProjectileOAM_Frame0,
+        .pFrame = sCrocomireProjectileOam_Frame0,
         .timer = CONVERT_SECONDS(1.f / 15)
     },
     [1] = FRAME_DATA_TERMINATOR

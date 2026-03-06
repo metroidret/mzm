@@ -4,7 +4,7 @@
 #include "macros.h"
 #include "constants/intro.h"
 
-const u16 sIntroEmergencyOrderTextOAM[OAM_DATA_SIZE(17)] = {
+const u16 sIntroEmergencyOrderTextOam[OAM_DATA_SIZE(17)] = {
     17,
     OAM_ENTRY(-72, -56, OAM_DIMS_8x16, OAM_NO_FLIP, 0x3, 1, 0),
     OAM_ENTRY(-64, -56, OAM_DIMS_8x16, OAM_NO_FLIP, 0x8, 1, 0),
@@ -25,7 +25,7 @@ const u16 sIntroEmergencyOrderTextOAM[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(56, -56, OAM_DIMS_8x16, OAM_NO_FLIP, 0x1c, 1, 0)
 };
 
-const u16 sIntroExterminateAllTextOAM[OAM_DATA_SIZE(54)] = {
+const u16 sIntroExterminateAllTextOam[OAM_DATA_SIZE(54)] = {
     54,
     OAM_ENTRY(-104, -72, OAM_DIMS_8x16, OAM_NO_FLIP, 0x3, 1, 0),
     OAM_ENTRY(-96, -72, OAM_DIMS_8x16, OAM_NO_FLIP, 0x8, 1, 0),
@@ -83,7 +83,7 @@ const u16 sIntroExterminateAllTextOAM[OAM_DATA_SIZE(54)] = {
     OAM_ENTRY(104, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x1f, 1, 0)
 };
 
-const u16 sIntroDefeatTheTextOAM[OAM_DATA_SIZE(52)] = {
+const u16 sIntroDefeatTheTextOam[OAM_DATA_SIZE(52)] = {
     52,
     OAM_ENTRY(-104, -72, OAM_DIMS_8x16, OAM_NO_FLIP, 0x3, 1, 0),
     OAM_ENTRY(-96, -72, OAM_DIMS_8x16, OAM_NO_FLIP, 0x4, 1, 0),
@@ -139,7 +139,7 @@ const u16 sIntroDefeatTheTextOAM[OAM_DATA_SIZE(52)] = {
     OAM_ENTRY(96, -48, OAM_DIMS_8x16, OAM_NO_FLIP, 0x5f, 1, 0)
 };
 
-const u16 sIntroTextMarkerOAM[OAM_DATA_SIZE(3)] = {
+const u16 sIntroTextMarkerOam[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x20, 1, 0),
     OAM_ENTRY(0, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x21, 1, 0),
@@ -169,7 +169,7 @@ const u16 sIntroShipFlyingTowardsCameraOam_2[OAM_DATA_SIZE(9)] = {
     OAM_ENTRY_MODE(-8, -40, OAM_DIMS_64x64, OAM_X_FLIP, 0x160, 4, 0, OAM_OBJ_MODE_SEMI_TRANSPARENT)
 };
 
-const u16 sIntroViewOfZebesShipOAM[OAM_DATA_SIZE(4)] = {
+const u16 sIntroViewOfZebesShipOam[OAM_DATA_SIZE(4)] = {
     4,
     OAM_ENTRY(-16, -40, OAM_DIMS_64x32, OAM_NO_FLIP, 0x40, 3, 0),
     OAM_ENTRY(48, -40, OAM_DIMS_8x32, OAM_NO_FLIP, 0x48, 3, 0),
@@ -177,7 +177,7 @@ const u16 sIntroViewOfZebesShipOAM[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(16, -8, OAM_DIMS_8x16, OAM_NO_FLIP, 0xc4, 3, 0)
 };
 
-const u16 sIntroViewOfZebesHeatOAM_2[OAM_DATA_SIZE(12)] = {
+const u16 sIntroViewOfZebesHeatOam_2[OAM_DATA_SIZE(12)] = {
     12,
     OAM_ENTRY(0, -96, OAM_DIMS_64x64, OAM_NO_FLIP, 0x50, 4, 0),
     OAM_ENTRY(64, -96, OAM_DIMS_64x64, OAM_NO_FLIP, 0x58, 4, 0),
@@ -193,7 +193,7 @@ const u16 sIntroViewOfZebesHeatOAM_2[OAM_DATA_SIZE(12)] = {
     OAM_ENTRY(96, 0, OAM_DIMS_32x16, OAM_NO_FLIP, 0x1dc, 4, 0)
 };
 
-const u16 sIntroViewOfZebesHeatOAM_1[OAM_DATA_SIZE(24)] = {
+const u16 sIntroViewOfZebesHeatOam_1[OAM_DATA_SIZE(24)] = {
     24,
     OAM_ENTRY(0, -96, OAM_DIMS_64x32, OAM_NO_FLIP, 0x210, 4, 0),
     OAM_ENTRY(64, -96, OAM_DIMS_64x32, OAM_NO_FLIP, 0x218, 4, 0),
@@ -221,7 +221,7 @@ const u16 sIntroViewOfZebesHeatOAM_1[OAM_DATA_SIZE(24)] = {
     OAM_ENTRY(96, 8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x3bc, 4, 0)
 };
 
-const u16 sIntroFuzzOAM[OAM_DATA_SIZE(17)] = {
+const u16 sIntroFuzzOam[OAM_DATA_SIZE(17)] = {
     17,
     OAM_ENTRY(-128, -128, OAM_DIMS_64x64, OAM_NO_FLIP, 0x0, 0, 0),
     OAM_ENTRY(-64, -128, OAM_DIMS_64x64, OAM_NO_FLIP, 0x8, 0, 0),

@@ -18,7 +18,7 @@
 #include "structs/connection.h"
 #include "structs/display.h"
 
-static void StatueOpeningProcessOAM(void);
+static void StatueOpeningProcessOam(void);
 
 /**
  * @brief 66c00 | 164 | Handles the statue opening animation
@@ -245,7 +245,7 @@ u8 StatueOpeningMainLoop(void)
     ended = sStatueOpeningStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
 
     CutsceneUpdateBackgroundsPosition(TRUE);
-    StatueOpeningProcessOAM();
+    StatueOpeningProcessOam();
 
     return ended;
 }
@@ -254,7 +254,7 @@ u8 StatueOpeningMainLoop(void)
  * @brief 67048 | 38 | Processes the OAM for the cutscene
  * 
  */
-static void StatueOpeningProcessOAM(void)
+static void StatueOpeningProcessOam(void)
 {
     gNextOamSlot = 0;
     ProcessCutsceneOam(sStatueOpeningStageData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sStatueOpeningOam);

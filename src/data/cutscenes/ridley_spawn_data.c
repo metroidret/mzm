@@ -34,25 +34,25 @@ const struct CutscenePageData sRidleySpawnPageData[4] = {
     }
 };
 
-const struct FrameData sRidleySpawnOAM_RidleyFlyingReflection[2] = {
+const struct FrameData sRidleySpawnOam_RidleyFlyingReflection[2] = {
     [0] = {
-        .pFrame = sRidleySpawnOAM_RidleyFlyingReflection_Frame0,
+        .pFrame = sRidleySpawnOam_RidleyFlyingReflection_Frame0,
         .timer = CONVERT_SECONDS(2.f) + CONVERT_SECONDS(2.f / 15)
     },
     [1] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sRidleySpawnOAM_RidleyFlying[2] = {
+const struct FrameData sRidleySpawnOam_RidleyFlying[2] = {
     [0] = {
-        .pFrame = sRidleySpawnOAM_RidleyFlying_Frame0,
+        .pFrame = sRidleySpawnOam_RidleyFlying_Frame0,
         .timer = CONVERT_SECONDS(2.f) + CONVERT_SECONDS(2.f / 15)
     },
     [1] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sRidleySpawnOAM_RidleyScreaming[2] = {
+const struct FrameData sRidleySpawnOam_RidleyScreaming[2] = {
     [0] = {
-        .pFrame = sRidleySpawnOAM_RidleyScreaming_Frame0,
+        .pFrame = sRidleySpawnOam_RidleyScreaming_Frame0,
         .timer = CONVERT_SECONDS(2.f) + CONVERT_SECONDS(2.f / 15)
     },
     [1] = FRAME_DATA_TERMINATOR
@@ -60,28 +60,28 @@ const struct FrameData sRidleySpawnOAM_RidleyScreaming[2] = {
 
 const struct OamArray sRidleySpawnOam[RIDLEY_SPAWN_OAM_ID_COUNT] = {
     [RIDLEY_SPAWN_OAM_ID_NONE] = {
-        .pOam = sRidleySpawnOAM_RidleyFlyingReflection,
+        .pOam = sRidleySpawnOam_RidleyFlyingReflection,
         .preAction = OAM_ARRAY_PRE_ACTION_NONE
     },
     [RIDLEY_SPAWN_OAM_ID_RIDLEY_FLYING_REFLECTION] = {
-        .pOam = sRidleySpawnOAM_RidleyFlyingReflection,
+        .pOam = sRidleySpawnOam_RidleyFlyingReflection,
         .preAction = OAM_ARRAY_PRE_ACTION_RESET_FRAME
     },
     [RIDLEY_SPAWN_OAM_ID_RIDLEY_FLYING] = {
-        .pOam = sRidleySpawnOAM_RidleyFlying,
+        .pOam = sRidleySpawnOam_RidleyFlying,
         .preAction = OAM_ARRAY_PRE_ACTION_RESET_FRAME
     },
     [RIDLEY_SPAWN_OAM_ID_RIDLEY_SCREAMING] = {
-        .pOam = sRidleySpawnOAM_RidleyScreaming,
+        .pOam = sRidleySpawnOam_RidleyScreaming,
         .preAction = OAM_ARRAY_PRE_ACTION_RESET_FRAME
     },
     [RIDLEY_SPAWN_OAM_ID_SAMUS] = {
-        .pOam = sRidleySpawnOAM_Samus,
+        .pOam = sRidleySpawnOam_Samus,
         .preAction = OAM_ARRAY_PRE_ACTION_RESET_FRAME
     }
 };
 
-const u16 sRidleySpawnOAM_Samus_Frame0[OAM_DATA_SIZE(4)] = {
+const u16 sRidleySpawnOam_Samus_Frame0[OAM_DATA_SIZE(4)] = {
     4,
     OAM_ENTRY(-64, -48, OAM_DIMS_64x64, OAM_NO_FLIP, 0x0, 0, 0),
     OAM_ENTRY(0, -48, OAM_DIMS_64x64, OAM_NO_FLIP, 0x8, 0, 0),
@@ -89,7 +89,7 @@ const u16 sRidleySpawnOAM_Samus_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(0, 16, OAM_DIMS_64x64, OAM_NO_FLIP, 0x18, 1, 0)
 };
 
-const u16 sRidleySpawnOAM_RidleyFlyingReflection_Frame0[OAM_DATA_SIZE(7)] = {
+const u16 sRidleySpawnOam_RidleyFlyingReflection_Frame0[OAM_DATA_SIZE(7)] = {
     7,
     OAM_ENTRY(-96, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 0x100, 2, 0),
     OAM_ENTRY(-32, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 0x108, 2, 0),
@@ -100,15 +100,15 @@ const u16 sRidleySpawnOAM_RidleyFlyingReflection_Frame0[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(96, -48, OAM_DIMS_16x16, OAM_NO_FLIP, 0x158, 1, 0)
 };
 
-const struct FrameData sRidleySpawnOAM_Samus[2] = {
+const struct FrameData sRidleySpawnOam_Samus[2] = {
     [0] = {
-        .pFrame = sRidleySpawnOAM_Samus_Frame0,
+        .pFrame = sRidleySpawnOam_Samus_Frame0,
         .timer = CONVERT_SECONDS(1.f / 15)
     },
     [1] = FRAME_DATA_TERMINATOR
 };
 
-const u16 sRidleySpawnOAM_RidleyFlying_Frame0[OAM_DATA_SIZE(4)] = {
+const u16 sRidleySpawnOam_RidleyFlying_Frame0[OAM_DATA_SIZE(4)] = {
     4,
     OAM_ENTRY(-64, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 0x0, 0, 0),
     OAM_ENTRY(0, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 0x8, 0, 0),
@@ -116,7 +116,7 @@ const u16 sRidleySpawnOAM_RidleyFlying_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(0, 0, OAM_DIMS_64x64, OAM_NO_FLIP, 0x108, 0, 0)
 };
 
-const u16 sRidleySpawnOAM_RidleyScreaming_Frame0[OAM_DATA_SIZE(4)] = {
+const u16 sRidleySpawnOam_RidleyScreaming_Frame0[OAM_DATA_SIZE(4)] = {
     4,
     OAM_ENTRY(-64, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 0x10, 0, 0),
     OAM_ENTRY(0, -64, OAM_DIMS_64x64, OAM_NO_FLIP, 0x18, 0, 0),
@@ -124,13 +124,13 @@ const u16 sRidleySpawnOAM_RidleyScreaming_Frame0[OAM_DATA_SIZE(4)] = {
     OAM_ENTRY(0, 0, OAM_DIMS_64x64, OAM_NO_FLIP, 0x118, 0, 0)
 };
 
-const struct FrameData sRidleySpawnOAM_RidleyFlyingAndScreaming_Unused[3] = {
+const struct FrameData sRidleySpawnOam_RidleyFlyingAndScreaming_Unused[3] = {
     [0] = {
-        .pFrame = sRidleySpawnOAM_RidleyFlying_Frame0,
+        .pFrame = sRidleySpawnOam_RidleyFlying_Frame0,
         .timer = CONVERT_SECONDS(5.f / 6)
     },
     [1] = {
-        .pFrame = sRidleySpawnOAM_RidleyScreaming_Frame0,
+        .pFrame = sRidleySpawnOam_RidleyScreaming_Frame0,
         .timer = CONVERT_SECONDS(5.f / 6)
     },
     [2] = FRAME_DATA_TERMINATOR

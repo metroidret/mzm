@@ -3560,7 +3560,7 @@ void SpriteUtilUpdateSubSprite2Anim(void)
  * @brief 1144c | 60 | Synchronizes the current sprite position with the sub sprite 2 (X/Y coords and X/Y OAM offsets)
  * 
  */
-void SpriteUtilSyncCurrentSpritePositionWithSubSpriteData2PositionAndOAM(void)
+void SpriteUtilSyncCurrentSpritePositionWithSubSpriteData2PositionAndOam(void)
 {
     MultiSpriteDataInfo_T pData;
 

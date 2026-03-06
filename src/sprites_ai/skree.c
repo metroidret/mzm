@@ -290,9 +290,9 @@ static void SkreeExplosionInit(void)
     gCurrentSprite.rotation = 0;
 
     if (gCurrentSprite.roomSlot != SKREE_EXPLOSION_PART_GOING_UP)
-        gCurrentSprite.pOam = sSkreeExplosionOAM_GoingDown;
+        gCurrentSprite.pOam = sSkreeExplosionOam_GoingDown;
     else
-        gCurrentSprite.pOam = sSkreeExplosionOAM_GoingUp;
+        gCurrentSprite.pOam = sSkreeExplosionOam_GoingUp;
 }
 
 /**

@@ -32,7 +32,7 @@ static const u16 sSearchlightEyeOam_Idle_Frame10[OAM_DATA_SIZE(3)] = {
     OAM_ENTRY(-8, 0, OAM_DIMS_16x16, OAM_NO_FLIP, 0x20b, 8, 0)
 };
 
-static const u16 sSearchlightEyeBeamOAM_Idle_Frame0[OAM_DATA_SIZE(7)] = {
+static const u16 sSearchlightEyeBeamOam_Idle_Frame0[OAM_DATA_SIZE(7)] = {
     7,
     OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-48, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x21c, 8, 0),
@@ -43,7 +43,7 @@ static const u16 sSearchlightEyeBeamOAM_Idle_Frame0[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(80, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
-static const u16 sSearchlightEyeBeamOAM_Idle_Frame2[OAM_DATA_SIZE(7)] = {
+static const u16 sSearchlightEyeBeamOam_Idle_Frame2[OAM_DATA_SIZE(7)] = {
     7,
     OAM_ENTRY(-16, -8, OAM_DIMS_32x16, OAM_Y_FLIP, 0x21c, 8, 0),
     OAM_ENTRY(-48, -8, OAM_DIMS_32x16, OAM_Y_FLIP, 0x21c, 8, 0),
@@ -54,17 +54,17 @@ static const u16 sSearchlightEyeBeamOAM_Idle_Frame2[OAM_DATA_SIZE(7)] = {
     OAM_ENTRY(80, -8, OAM_DIMS_32x16, OAM_Y_FLIP, 0x21c, 8, 0)
 };
 
-static const u16 sSearchlightEyeBeamOAM_Idle_Frame1[OAM_DATA_SIZE(1)] = {
+static const u16 sSearchlightEyeBeamOam_Idle_Frame1[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-8, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x200, 8, 0)
 };
 
-static const u16 sSearchlightEyeBeamOAM_Unused_Frame0[OAM_DATA_SIZE(1)] = {
+static const u16 sSearchlightEyeBeamOam_Unused_Frame0[OAM_DATA_SIZE(1)] = {
     1,
     OAM_ENTRY(-8, -8, OAM_DIMS_16x16, OAM_NO_FLIP, 0x21c, 8, 0)
 };
 
-static const u16 sSearchlightEyeProjectileOAM_Moving_Frame0[OAM_DATA_SIZE(8)] = {
+static const u16 sSearchlightEyeProjectileOam_Moving_Frame0[OAM_DATA_SIZE(8)] = {
     8,
     OAM_ENTRY(-10, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x219, 8, 0),
     OAM_ENTRY(-10, 0, OAM_DIMS_16x8, OAM_Y_FLIP, 0x219, 8, 0),
@@ -76,7 +76,7 @@ static const u16 sSearchlightEyeProjectileOAM_Moving_Frame0[OAM_DATA_SIZE(8)] = 
     OAM_ENTRY(-4, 0, OAM_DIMS_8x8, OAM_Y_FLIP, 0x23b, 8, 0)
 };
 
-static const u16 sSearchlightEyeProjectileOAM_Moving_Frame2[OAM_DATA_SIZE(8)] = {
+static const u16 sSearchlightEyeProjectileOam_Moving_Frame2[OAM_DATA_SIZE(8)] = {
     8,
     OAM_ENTRY(-9, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x219, 8, 0),
     OAM_ENTRY(-9, 0, OAM_DIMS_16x8, OAM_Y_FLIP, 0x219, 8, 0),
@@ -88,7 +88,7 @@ static const u16 sSearchlightEyeProjectileOAM_Moving_Frame2[OAM_DATA_SIZE(8)] = 
     OAM_ENTRY(-2, 0, OAM_DIMS_8x8, OAM_Y_FLIP, 0x23b, 8, 0)
 };
 
-static const u16 sSearchlightEyeProjectileOAM_Moving_Frame4[OAM_DATA_SIZE(8)] = {
+static const u16 sSearchlightEyeProjectileOam_Moving_Frame4[OAM_DATA_SIZE(8)] = {
     8,
     OAM_ENTRY(-10, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x219, 8, 0),
     OAM_ENTRY(-10, 0, OAM_DIMS_16x8, OAM_Y_FLIP, 0x219, 8, 0),
@@ -100,7 +100,7 @@ static const u16 sSearchlightEyeProjectileOAM_Moving_Frame4[OAM_DATA_SIZE(8)] = 
     OAM_ENTRY(0, 0, OAM_DIMS_8x8, OAM_Y_FLIP, 0x23b, 8, 0)
 };
 
-static const u16 sSearchlightEyeProjectileOAM_Moving_Frame6[OAM_DATA_SIZE(8)] = {
+static const u16 sSearchlightEyeProjectileOam_Moving_Frame6[OAM_DATA_SIZE(8)] = {
     8,
     OAM_ENTRY(-9, -8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x219, 8, 0),
     OAM_ENTRY(-9, 0, OAM_DIMS_16x8, OAM_Y_FLIP, 0x219, 8, 0),
@@ -178,65 +178,65 @@ const struct FrameData sSearchlightEyeOam_Idle[13] = {
     [12] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sSearchlightEyeBeamOAM_Idle[5] = {
+const struct FrameData sSearchlightEyeBeamOam_Idle[5] = {
     [0] = {
-        .pFrame = sSearchlightEyeBeamOAM_Idle_Frame0,
+        .pFrame = sSearchlightEyeBeamOam_Idle_Frame0,
         .timer = CONVERT_SECONDS(1.f / 60)
     },
     [1] = {
-        .pFrame = sSearchlightEyeBeamOAM_Idle_Frame1,
+        .pFrame = sSearchlightEyeBeamOam_Idle_Frame1,
         .timer = CONVERT_SECONDS(1.f / 60)
     },
     [2] = {
-        .pFrame = sSearchlightEyeBeamOAM_Idle_Frame2,
+        .pFrame = sSearchlightEyeBeamOam_Idle_Frame2,
         .timer = CONVERT_SECONDS(1.f / 60)
     },
     [3] = {
-        .pFrame = sSearchlightEyeBeamOAM_Idle_Frame1,
+        .pFrame = sSearchlightEyeBeamOam_Idle_Frame1,
         .timer = CONVERT_SECONDS(1.f / 60)
     },
     [4] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sSearchlightEyeBeamOAM_Unused[2] = {
+const struct FrameData sSearchlightEyeBeamOam_Unused[2] = {
     [0] = {
-        .pFrame = sSearchlightEyeBeamOAM_Unused_Frame0,
+        .pFrame = sSearchlightEyeBeamOam_Unused_Frame0,
         .timer = UCHAR_MAX
     },
     [1] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sSearchlightEyeProjectileOAM_Moving[9] = {
+const struct FrameData sSearchlightEyeProjectileOam_Moving[9] = {
     [0] = {
-        .pFrame = sSearchlightEyeProjectileOAM_Moving_Frame0,
+        .pFrame = sSearchlightEyeProjectileOam_Moving_Frame0,
         .timer = CONVERT_SECONDS(1.f / 60)
     },
     [1] = {
-        .pFrame = sSearchlightEyeBeamOAM_Idle_Frame1,
+        .pFrame = sSearchlightEyeBeamOam_Idle_Frame1,
         .timer = CONVERT_SECONDS(1.f / 60)
     },
     [2] = {
-        .pFrame = sSearchlightEyeProjectileOAM_Moving_Frame2,
+        .pFrame = sSearchlightEyeProjectileOam_Moving_Frame2,
         .timer = CONVERT_SECONDS(1.f / 60)
     },
     [3] = {
-        .pFrame = sSearchlightEyeBeamOAM_Idle_Frame1,
+        .pFrame = sSearchlightEyeBeamOam_Idle_Frame1,
         .timer = CONVERT_SECONDS(1.f / 60)
     },
     [4] = {
-        .pFrame = sSearchlightEyeProjectileOAM_Moving_Frame4,
+        .pFrame = sSearchlightEyeProjectileOam_Moving_Frame4,
         .timer = CONVERT_SECONDS(1.f / 60)
     },
     [5] = {
-        .pFrame = sSearchlightEyeBeamOAM_Idle_Frame1,
+        .pFrame = sSearchlightEyeBeamOam_Idle_Frame1,
         .timer = CONVERT_SECONDS(1.f / 60)
     },
     [6] = {
-        .pFrame = sSearchlightEyeProjectileOAM_Moving_Frame6,
+        .pFrame = sSearchlightEyeProjectileOam_Moving_Frame6,
         .timer = CONVERT_SECONDS(1.f / 60)
     },
     [7] = {
-        .pFrame = sSearchlightEyeBeamOAM_Idle_Frame1,
+        .pFrame = sSearchlightEyeBeamOam_Idle_Frame1,
         .timer = CONVERT_SECONDS(1.f / 60)
     },
     [8] = FRAME_DATA_TERMINATOR

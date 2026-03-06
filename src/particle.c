@@ -1853,14 +1853,14 @@ void ParticleChargingBeam(struct ParticleEffect* pParticle)
         case 0:
             pParticle->status |= PARTICLE_STATUS_LIVE_OFF_SCREEN;
             pParticle->stage++;
-            ParticleUpdateAnimation(pParticle, sParticleChargingBeamBeginOAM);
+            ParticleUpdateAnimation(pParticle, sParticleChargingBeamBeginOam);
             ParticlePlayBeginToChargeSound();
             break;
 
         case 1:
             if (gPreventMovementTimer != 0)
             {
-                ParticleSetCurrentOamFramePointer(pParticle, sParticleChargingBeamBeginOAM);
+                ParticleSetCurrentOamFramePointer(pParticle, sParticleChargingBeamBeginOam);
                 break;
             }
 
@@ -1871,22 +1871,22 @@ void ParticleChargingBeam(struct ParticleEffect* pParticle)
                 pParticle->animationDurationCounter = 0;
                 pParticle->frameCounter = 0;
 
-                ParticleUpdateAnimation(pParticle, sParticleChargingBeamChargedOAM);
+                ParticleUpdateAnimation(pParticle, sParticleChargingBeamChargedOam);
             }
             else
             {
-                ParticleUpdateAnimation(pParticle, sParticleChargingBeamBeginOAM);
+                ParticleUpdateAnimation(pParticle, sParticleChargingBeamBeginOam);
             }
             break;
 
         default:
             if (gPreventMovementTimer != 0)
             {
-                ParticleSetCurrentOamFramePointer(pParticle, sParticleChargingBeamChargedOAM);
+                ParticleSetCurrentOamFramePointer(pParticle, sParticleChargingBeamChargedOam);
                 break;
             }
 
-            ParticleUpdateAnimation(pParticle, sParticleChargingBeamChargedOAM);
+            ParticleUpdateAnimation(pParticle, sParticleChargingBeamChargedOam);
             if (MOD_AND(pParticle->frameCounter, CONVERT_SECONDS(.25f + 1.f / 60)) == 0)
                 ParticlePlayBeamFullChargedSound();
 

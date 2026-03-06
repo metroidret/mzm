@@ -163,7 +163,7 @@ void TitleScreenUpdateOamId(u8 offset, u8 oamId)
  * @brief 7644c | 2c | Calls the OAM process handler
  * 
  */
-void TitleScreenCallProcessOAM(void)
+void TitleScreenCallProcessOam(void)
 {
     gNextOamSlot = 0;
     ProcessMenuOam(ARRAY_SIZE(TITLE_SCREEN_DATA.oam), TITLE_SCREEN_DATA.oam, sTitleScreenOam);
@@ -174,7 +174,7 @@ void TitleScreenCallProcessOAM(void)
  * @brief 76478 | 50 | Resets the OAM
  * 
  */
-void TitleScreenResetOAM(void)
+void TitleScreenResetOam(void)
 {
     s32 i;
     struct MenuOamData* pOam;
@@ -691,7 +691,7 @@ void TitleScreenTransferGroundGraphics(void)
  * @brief 76d90 | 88 | Processes the comets and the sparkles
  * 
  */
-void TitleScreenProcessOAM(void)
+void TitleScreenProcessOam(void)
 {
     if (TITLE_SCREEN_DATA.type & TITLE_SCREEN_TYPE_TOP_SPARKLE_ACTIVE)
         TitleScreenProcessTopSparkle(&TITLE_SCREEN_DATA.oamTimings[0], &TITLE_SCREEN_DATA.oam[5]);
@@ -1115,12 +1115,12 @@ u32 TitleScreenMainLoop(void)
             }
 
             TitleScreenUpdateAnimatedPalette();
-            TitleScreenProcessOAM();
+            TitleScreenProcessOam();
             break;
 
         case 3:
             TitleScreenUpdateAnimatedPalette();
-            TitleScreenProcessOAM();
+            TitleScreenProcessOam();
 
             if (TITLE_SCREEN_DATA.animatedPalettes[2].paletteRow == 0 && TITLE_SCREEN_DATA.timer > 40)
             {
@@ -1146,7 +1146,7 @@ u32 TitleScreenMainLoop(void)
     }
 
     if (!leaving)
-        TitleScreenCallProcessOAM();
+        TitleScreenCallProcessOam();
 
     return leaving;
 }
@@ -1373,8 +1373,8 @@ void TitleScreenInit(void)
         TITLE_SCREEN_DATA.timer = 0;
     }
 
-    TitleScreenResetOAM();
-    TitleScreenCallProcessOAM();
+    TitleScreenResetOam();
+    TitleScreenCallProcessOam();
     TitleScreenVBlank();
     unk_76710(FALSE);
 

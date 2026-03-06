@@ -21,9 +21,9 @@ const struct CutscenePageData sEnterTourianPageData[2] = {
     }
 };
 
-static const struct FrameData sEnterTourianOAM_SpacePirate[2] = {
+static const struct FrameData sEnterTourianOam_SpacePirate[2] = {
     [0] = {
-        .pFrame = sEnterTourianOAM_SpacePirate_Frame0,
+        .pFrame = sEnterTourianOam_SpacePirate_Frame0,
         .timer = CONVERT_SECONDS(2.f) + CONVERT_SECONDS(2.f / 15)
     },
     [1] = FRAME_DATA_TERMINATOR
@@ -31,11 +31,11 @@ static const struct FrameData sEnterTourianOAM_SpacePirate[2] = {
 
 const struct OamArray sEnterTourianOam[7] = {
     [0] = {
-        .pOam = sEnterTourianOAM_Empty,
+        .pOam = sEnterTourianOam_Empty,
         .preAction = OAM_ARRAY_PRE_ACTION_NONE
     },
     [1] = {
-        .pOam = sEnterTourianOAM_SpacePirate,
+        .pOam = sEnterTourianOam_SpacePirate,
         .preAction = OAM_ARRAY_PRE_ACTION_RESET_FRAME
     },
     [2] = {
@@ -60,7 +60,7 @@ const struct OamArray sEnterTourianOam[7] = {
     }
 };
 
-const u16 sEnterTourianOAM_SpacePirate_Frame0[OAM_DATA_SIZE(5)] = {
+const u16 sEnterTourianOam_SpacePirate_Frame0[OAM_DATA_SIZE(5)] = {
     5,
     OAM_ENTRY(-40, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x0, 4, 0),
     OAM_ENTRY(-8, -8, OAM_DIMS_32x16, OAM_NO_FLIP, 0x4, 4, 0),
@@ -69,7 +69,7 @@ const u16 sEnterTourianOAM_SpacePirate_Frame0[OAM_DATA_SIZE(5)] = {
     OAM_ENTRY(-8, 8, OAM_DIMS_32x8, OAM_NO_FLIP, 0x44, 4, 0)
 };
 
-const struct FrameData sEnterTourianOAM_Empty[1] = {
+const struct FrameData sEnterTourianOam_Empty[1] = {
     [0] = FRAME_DATA_TERMINATOR
 };
 

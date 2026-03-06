@@ -148,7 +148,7 @@ static u8 ZiplineMoving(void)
  * @brief 1d46c | 1dc | Updates the OAM of the zipline
  * 
  */
-static void ZiplineUpdateOAM(void)
+static void ZiplineUpdateOam(void)
 {
     if (gCurrentSprite.status & SPRITE_STATUS_SAMUS_COLLIDING)
     {
@@ -383,7 +383,7 @@ static void ZiplineUpdate(void)
         gCurrentSprite.ignoreSamusCollisionTimer = CONVERT_SECONDS(0.25f);
     }
 
-    ZiplineUpdateOAM();
+    ZiplineUpdateOam();
     if (gCurrentSprite.health == ZIPLINE_HEALTH_MOVING)
     {
         // Move

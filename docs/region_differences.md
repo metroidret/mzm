@@ -69,7 +69,7 @@ Even though the EU version was released before the JP version, evidence from the
   - `TitleScreenInit` in [title_screen.c](../src/menus/title_screen.c)
   - `FileSelectInit` in [file_select.c](../src/menus/file_select.c)
   - `ChozodiaEscapeMissionAccomplished` in [chozodia_escape.c](../src/chozodia_escape.c)
-  - `EndingImageLoadTextOAM`, `EndingImageDisplayLinePermanently`, `EndingImageInit`, and `EndingImageDisplayText` in [ending_and_gallery.c](../src/ending_and_gallery.c)
+  - `EndingImageLoadTextOam`, `EndingImageDisplayLinePermanently`, `EndingImageInit`, and `EndingImageDisplayText` in [ending_and_gallery.c](../src/ending_and_gallery.c)
 - The language is saved after the new file intro has played
   - `InGameCutsceneSamusCloseUp` in [in_game_cutscene.c](../src/in_game_cutscene.c)
 - The credits support three additional text characters ('ó', 'ß', and acute accent)

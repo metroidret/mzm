@@ -8,19 +8,19 @@
 #include "structs/in_game_timer.h"
 #include "structs/intro.h"
 
-extern const u16 sIntroEmergencyOrderTextOAM[52];
-extern const u16 sIntroExterminateAllTextOAM[163];
-extern const u16 sIntroDefeatTheTextOAM[157];
-extern const u16 sIntroTextMarkerOAM[10];
+extern const u16 sIntroEmergencyOrderTextOam[52];
+extern const u16 sIntroExterminateAllTextOam[163];
+extern const u16 sIntroDefeatTheTextOam[157];
+extern const u16 sIntroTextMarkerOam[10];
 
 extern const u16 sIntroShipFlyingTowardsCameraOam_2[28];
 extern const u16 sIntroShipFlyingTowardsCameraOam_1[19];
 
-extern const u16 sIntroViewOfZebesShipOAM[13];
-extern const u16 sIntroViewOfZebesHeatOAM_2[37];
-extern const u16 sIntroViewOfZebesHeatOAM_1[73];
+extern const u16 sIntroViewOfZebesShipOam[13];
+extern const u16 sIntroViewOfZebesHeatOam_2[37];
+extern const u16 sIntroViewOfZebesHeatOam_1[73];
 
-extern const u16 sIntroFuzzOAM[52];
+extern const u16 sIntroFuzzOam[52];
 
 extern const u16 sIntroTextAndShipPal[16 * 6];
 extern const u16 sIntroPal_45f9d4[16 * 1];

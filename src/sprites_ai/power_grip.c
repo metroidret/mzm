@@ -42,7 +42,7 @@ void PowerGrip(void)
             gCurrentSprite.hitboxLeft = -(HALF_BLOCK_SIZE - PIXEL_SIZE);
             gCurrentSprite.hitboxRight = HALF_BLOCK_SIZE - PIXEL_SIZE;
 
-            gCurrentSprite.pOam = sPowerGripOAM_Idle;
+            gCurrentSprite.pOam = sPowerGripOam_Idle;
             gCurrentSprite.animationDurationCounter = 0;
             gCurrentSprite.currentAnimationFrame = 0;
 
@@ -105,7 +105,7 @@ void PowerGripGlow(void)
             gCurrentSprite.hitboxLeft = 0;
             gCurrentSprite.hitboxRight = 0;
 
-            gCurrentSprite.pOam = sPowerGripGlowOAM_Idle;
+            gCurrentSprite.pOam = sPowerGripGlowOam_Idle;
             gCurrentSprite.animationDurationCounter = 0;
             gCurrentSprite.currentAnimationFrame = 0;
 

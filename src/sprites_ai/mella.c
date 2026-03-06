@@ -207,7 +207,7 @@ static void MellaMovingInit(void)
 
     gCurrentSprite.animationDurationCounter = 0;
     gCurrentSprite.currentAnimationFrame = 0;
-    gCurrentSprite.pOam = sMellowOAM_Moving;
+    gCurrentSprite.pOam = sMellowOam_Moving;
 
     gCurrentSprite.work0 = CONVERT_SECONDS(.1f) + 1 * DELTA_TIME;
 }

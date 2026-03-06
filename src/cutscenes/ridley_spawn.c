@@ -15,7 +15,7 @@
 #include "structs/samus.h"
 
 static void RidleySpawnUpdateRidley(struct CutsceneOamData* pOam);
-static void RidleySpawnProcessOAM(void);
+static void RidleySpawnProcessOam(void);
 
 static struct Coordinates sRidleySpawnRidleyPositions[3] = {
     [0] = {
@@ -341,7 +341,7 @@ u8 RidleySpawnMainLoop(void)
 
     ended = sRidleySpawnStageData[CUTSCENE_DATA.timeInfo.stage].pFunction();
     CutsceneUpdateBackgroundsPosition(TRUE);
-    RidleySpawnProcessOAM();
+    RidleySpawnProcessOam();
     
     return ended;
 }
@@ -350,7 +350,7 @@ u8 RidleySpawnMainLoop(void)
  * @brief 658d8 | 4c | Processes the OAM for the cutscene
  * 
  */
-static void RidleySpawnProcessOAM(void)
+static void RidleySpawnProcessOam(void)
 {
     gNextOamSlot = 0;
     ProcessCutsceneOam(sRidleySpawnStageData[CUTSCENE_DATA.timeInfo.stage].oamLength, CUTSCENE_DATA.oam, sRidleySpawnOam);

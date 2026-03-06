@@ -29,7 +29,7 @@ static void GameOverVBlank(void);
 static void GameOverVBlank_Empty(void);
 static void GameOverUpdateLettersPalette(void);
 static void GameOverUpdateSamusHead(GameOverCursorAction action);
-static void GameOverProcessOAM(void);
+static void GameOverProcessOam(void);
 
 /**
  * @brief 778c4 | 214 | Main loop for the game over
@@ -178,7 +178,7 @@ u32 GameOverMainLoop(void)
             break;
     }
 
-    GameOverProcessOAM();
+    GameOverProcessOam();
     return ended;
 }
 
@@ -560,7 +560,7 @@ static void GameOverUpdateSamusHead(GameOverCursorAction action)
  * @brief 781fc | 2c | Processes the OAM for the game over menu
  * 
  */
-static void GameOverProcessOAM(void)
+static void GameOverProcessOam(void)
 {
     gNextOamSlot = 0;
     ProcessComplexMenuOam(ARRAY_SIZE(GAME_OVER_DATA.oam), GAME_OVER_DATA.oam, sGameOverOam);

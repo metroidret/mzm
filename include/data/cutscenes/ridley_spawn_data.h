@@ -7,14 +7,14 @@
 #include "structs/cutscene.h"
 #include "cutscenes/ridley_spawn.h"
 
-extern const u16 sRidleySpawnOAM_RidleyFlying_Frame0[13];
-extern const u16 sRidleySpawnOAM_RidleyScreaming_Frame0[13];
-extern const u16 sRidleySpawnOAM_RidleyFlyingReflection_Frame0[22];
+extern const u16 sRidleySpawnOam_RidleyFlying_Frame0[13];
+extern const u16 sRidleySpawnOam_RidleyScreaming_Frame0[13];
+extern const u16 sRidleySpawnOam_RidleyFlyingReflection_Frame0[22];
 
 extern const struct CutscenePageData sRidleySpawnPageData[4];
 extern const struct OamArray sRidleySpawnOam[RIDLEY_SPAWN_OAM_ID_COUNT];
 
-extern const struct FrameData sRidleySpawnOAM_Samus[2];
+extern const struct FrameData sRidleySpawnOam_Samus[2];
 
 extern const u16 sRidleySpawnSamusPal[3 * 16];
 extern const u16 sRidleySpawnSamusVariaPal[3 * 16];

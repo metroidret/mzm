@@ -218,7 +218,7 @@ static void ImagoCocoonChangeTwoBlockingCcaa(ClipdataAffectingAction caa)
  * @param limit The limit of the scaling
  * @param value The value to increment/decrement the scaling
  */
-static void ImagoCocoonChangeOAMScaling(u16 limit, u16 value)
+static void ImagoCocoonChangeOamScaling(u16 limit, u16 value)
 {
     if (gCurrentSprite.work2) // Check growing/shrinking
     {
@@ -425,7 +425,7 @@ static void ImagoCocoonIdle(void)
         gCurrentSprite.absolutePaletteRow = 1;
         // CONVERT_SECONDS(1.f) + 4 * DELTA_TIME
         if (MOD_AND(gFrameCounter8Bit, 64) == 0)
-            ImagoCocoonChangeOAMScaling(1, 1);
+            ImagoCocoonChangeOamScaling(1, 1);
     }
 
     // Check should fall
@@ -465,7 +465,7 @@ static void ImagoCocoonFallingBeforeBlocks(void)
 
     // CONVERT_SECONDS(.5f) + 2 * DELTA_TIME
     if (MOD_AND(gFrameCounter8Bit, 32) == 0)
-        ImagoCocoonChangeOAMScaling(1, 1);
+        ImagoCocoonChangeOamScaling(1, 1);
 
     if (gSubSpriteData1.currentAnimationFrame > 7)
     {
@@ -538,7 +538,7 @@ static void ImagoCocoonFallingAfterBlocks(void)
     // Scale and move
     // 2 * DELTA_TIME
     if (MOD_AND(gFrameCounter8Bit, 2) == 0)
-        ImagoCocoonChangeOAMScaling(1, 1);
+        ImagoCocoonChangeOamScaling(1, 1);
 
     ImagoCocoonFallingMovement();
     yPosition = gSubSpriteData1.yPosition + IMAGO_COCOON_SIZE;

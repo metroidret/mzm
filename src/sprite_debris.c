@@ -404,7 +404,7 @@ void SpriteDebrisInit(u8 cloudType, u8 debrisType, u16 yPosition, u16 xPosition)
             return;
     }
 
-    pDebris->pOam = sSpriteDebrisOAM;
+    pDebris->pOam = sSpriteDebrisOam;
     pDebris->exists = TRUE;
     pDebris->yPosition = yPosition;
     pDebris->xPosition = xPosition;

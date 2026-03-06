@@ -20,7 +20,7 @@ extern const struct FrameData sSkreeOam_CrashingUnused2[6];
 extern const struct FrameData sSkreeOam_CrashingUnused3[5];
 extern const struct FrameData sSkreeOam_CrashingUnused4[5];
 
-extern const struct FrameData sSkreeExplosionOAM_GoingDown[4];
-extern const struct FrameData sSkreeExplosionOAM_GoingUp[4];
+extern const struct FrameData sSkreeExplosionOam_GoingDown[4];
+extern const struct FrameData sSkreeExplosionOam_GoingUp[4];
 
 #endif /* SKREE_DATA_H */

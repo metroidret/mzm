@@ -143,7 +143,7 @@ const struct FrameData sMellaOam_Idle[9] = {
     [8] = FRAME_DATA_TERMINATOR
 };
 
-const struct FrameData sMellowOAM_Moving[9] = {
+const struct FrameData sMellowOam_Moving[9] = {
     [0] = {
         .pFrame = sMellaOam_Idle_Frame0,
         .timer = CONVERT_SECONDS(1.f / 30)
