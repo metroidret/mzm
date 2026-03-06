@@ -2,7 +2,7 @@
 #include "gba.h"
 #include "macros.h"
 
-static inline void LZ77UncompVRAM(const void *src, void *dst) {
+static inline void LZ77UncompVram(const void *src, void *dst) {
     asm("\
         mov r0, %0 \n\
         mov r1, %1 \n\
@@ -12,7 +12,7 @@ static inline void LZ77UncompVRAM(const void *src, void *dst) {
       : "r0", "r1");
 }
 
-static inline void LZ77UncompWRAM(const void *src, void *dst) {
+static inline void LZ77UncompWram(const void *src, void *dst) {
     asm("\
         mov r0, %0 \n\
         mov r1, %1 \n\
@@ -66,7 +66,7 @@ void sub_0600E048(s32 arg0, struct EmulatorSP* arg1)
             tmp++,tmp--;
             break;
         }
-        LZ77UncompVRAM(arg1->SP_924[0xD0/4], sUnk_03005840);
+        LZ77UncompVram(arg1->SP_924[0xD0/4], sUnk_03005840);
     }
     while(0);
 
@@ -134,7 +134,7 @@ void sub_0600E048(s32 arg0, struct EmulatorSP* arg1)
         do
         {
             temp_r4 = arg1->SP_854 + ((temp_r5 & 0xFFFF) << 4);
-            LZ77UncompWRAM(var_r6_2, (temp_r4));
+            LZ77UncompWram(var_r6_2, (temp_r4));
         }
         while(0);
         var_r6_2 += temp_r5 >> 0x10;

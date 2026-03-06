@@ -16,19 +16,19 @@
 #define SYSCALL_Sqrt 8
 #define SYSCALL_ArcTan 9
 #define SYSCALL_ArcTan2 10
-#define SYSCALL_CPUSet 11
-#define SYSCALL_CPUSetFast 12
+#define SYSCALL_CpuSet 11
+#define SYSCALL_CpuSetFast 12
 #define SYSCALL_BiosChecksum 13
 #define SYSCALL_BgAffineSet 14
 #define SYSCALL_ObjAffineSet 15
 #define SYSCALL_BitUnPack 16
-#define SYSCALL_LZ77UnCompWRAM 17
-#define SYSCALL_LZ77UnCompVRAM 18
+#define SYSCALL_LZ77UnCompWram 17
+#define SYSCALL_LZ77UnCompVram 18
 #define SYSCALL_HuffUnComp 19
-#define SYSCALL_LRUnCompWRAM 20
-#define SYSCALL_LRUnCompVRAM 21
-#define SYSCALL_Diff8bitUnFilterWRAM 22
-#define SYSCALL_Diff8bitUnFilterVRAM 23
+#define SYSCALL_LRUnCompWram 20
+#define SYSCALL_LRUnCompVram 21
+#define SYSCALL_Diff8bitUnFilterWram 22
+#define SYSCALL_Diff8bitUnFilterVram 23
 #define SYSCALL_Diff16bitUnFilter 24
 #define SYSCALL_SoundBiasChange 25
 #define SYSCALL_SoundDriverInit 26
@@ -36,7 +36,7 @@
 #define SYSCALL_SoundDriverMain 28
 #define SYSCALL_SoundDriverVSync 29
 #define SYSCALL_SoundChannelClear 30
-#define SYSCALL_MIDIKey2Freq 31
+#define SYSCALL_MidiKey2Freq 31
 #define SYSCALL_MusicPlayerOpen 32
 #define SYSCALL_MusicPlayerStart 33
 #define SYSCALL_MusicPlayerStop 34
@@ -62,8 +62,8 @@ void CpuFastSet(void *src, void *dst, u16 size);
 void CpuSet(void *src, void *dst, u32 size);
 s32 DivarmDiv(s32 number, s32 denom);
 s32 DivarmMod(s32 denom, s32 number);
-void LZ77UncompVRAM(const void *src, void *dst);
-void LZ77UncompWRAM(const void *src, void *dst);
+void LZ77UncompVram(const void *src, void *dst);
+void LZ77UncompWram(const void *src, void *dst);
 u32 MidiKey2Freq(u32* wd, u8 mk, u8 fp);
 int Multiboot(void *mbp); /* TODO: proper struct */
 void SoundBias0(void);

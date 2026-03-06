@@ -188,7 +188,7 @@ static const u16 sGunshipPartOam_EntranceFrontOpened_Frame3[OAM_DATA_SIZE(6)] = 
     OAM_ENTRY(18, -51, OAM_DIMS_16x16, OAM_X_FLIP, 0x206, 8, 0)
 };
 
-static const u16 sGunshipPartOam_EntranceBackCLosed_Frame0[OAM_DATA_SIZE(5)] = {
+static const u16 sGunshipPartOam_EntranceBackClosed_Frame0[OAM_DATA_SIZE(5)] = {
     5,
     OAM_ENTRY(-24, -53, OAM_DIMS_32x16, OAM_NO_FLIP, 0x290, 8, 0),
     OAM_ENTRY(8, -53, OAM_DIMS_16x16, OAM_X_FLIP, 0x290, 8, 0),
@@ -664,7 +664,7 @@ const struct FrameData sGunshipPartOam_EntranceFrontClosing[6] = {
 
 const struct FrameData sGunshipPartOam_EntranceBackClosed[2] = {
     [0] = {
-        .pFrame = sGunshipPartOam_EntranceBackCLosed_Frame0,
+        .pFrame = sGunshipPartOam_EntranceBackClosed_Frame0,
         .timer = UCHAR_MAX
     },
     [1] = FRAME_DATA_TERMINATOR

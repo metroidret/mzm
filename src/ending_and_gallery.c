@@ -488,10 +488,10 @@ static void CreditsInit(void)
 
     ClearGfxRam();
 
-    LZ77UncompVRAM(sCreditsChozoWallBackgroundGfx, VRAM_BASE);
-    LZ77UncompVRAM(sCreditsChozoWallBackgroundTileTable, VRAM_BASE + 0xE000);
-    LZ77UncompVRAM(sCreditsChozoWallBottomTileTable, VRAM_BASE + 0xD800);
-    LZ77UncompVRAM(sCreditsCharactersGfx, VRAM_BASE + 0x8000);
+    LZ77UncompVram(sCreditsChozoWallBackgroundGfx, VRAM_BASE);
+    LZ77UncompVram(sCreditsChozoWallBackgroundTileTable, VRAM_BASE + 0xE000);
+    LZ77UncompVram(sCreditsChozoWallBottomTileTable, VRAM_BASE + 0xD800);
+    LZ77UncompVram(sCreditsCharactersGfx, VRAM_BASE + 0x8000);
 
     #ifdef REGION_EU
     DmaTransfer(3, sCreditsChozoWallPal, PALRAM_BASE, sizeof(sCreditsChozoWallPal), 16);
@@ -863,7 +863,7 @@ static u8 CreditsChozoWallMovement(void)
     {
         case 0:
             // Load bottom graphics
-            LZ77UncompVRAM(sCreditsChozoWallBottomGfx, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sCreditsChozoWallBottomGfx, VRAM_BASE + 0x8000);
             break;
 
         case 1:
@@ -904,7 +904,7 @@ static u8 CreditsChozoWallZoom(void)
     switch (ENDING_DATA.timer++)
     {
         case 0:
-            LZ77UncompVRAM(sCreditsChozoWallBottomZoomedGfx, VRAM_BASE);
+            LZ77UncompVram(sCreditsChozoWallBottomZoomedGfx, VRAM_BASE);
             #ifdef REGION_EU
             DmaTransfer(3, sCreditsChozoWallPal, PALRAM_BASE, sizeof(sCreditsChozoWallPal), 16);
             #else // !REGION_EU
@@ -916,7 +916,7 @@ static u8 CreditsChozoWallZoom(void)
             break;
 
         case 1:
-            LZ77UncompVRAM(sCreditsChozoWallBottomZoomedTileTable, VRAM_BASE + 0xF000);
+            LZ77UncompVram(sCreditsChozoWallBottomZoomedTileTable, VRAM_BASE + 0xF000);
             WRITE_16(REG_BG0CNT, CREATE_BGCNT(0, 30, BGCNT_HIGH_PRIORITY, BGCNT_SIZE_256x256));
             ENDING_DATA.dispcnt = DCNT_BG0 | DCNT_BG2 | DCNT_BG3;
             ENDING_DATA.bldcnt = BLDCNT_BG0_FIRST_TARGET_PIXEL | BLDCNT_ALPHA_BLENDING_EFFECT |
@@ -935,11 +935,11 @@ static u8 CreditsChozoWallZoom(void)
             break;
 
         case CONVERT_SECONDS(3.2f) + CONVERT_SECONDS(1.f / 60):
-            LZ77UncompVRAM(sCreditsChozoDrawingGfx, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sCreditsChozoDrawingGfx, VRAM_BASE + 0x8000);
             break;
 
         case CONVERT_SECONDS(3.2f) + CONVERT_SECONDS(2.f / 60):
-            LZ77UncompVRAM(sCreditsChozoDrawingTileTable, VRAM_BASE + 0xF800);
+            LZ77UncompVram(sCreditsChozoDrawingTileTable, VRAM_BASE + 0xF800);
             ENDING_DATA.dispcnt = DCNT_BG0 | DCNT_BG1;
             ENDING_DATA.bldcnt = BLDCNT_BG0_FIRST_TARGET_PIXEL | BLDCNT_ALPHA_BLENDING_EFFECT | BLDCNT_BG1_SECOND_TARGET_PIXEL;
 
@@ -1010,15 +1010,15 @@ static void EndScreenInit(void)
     CallbackSetVblank(EndScreenVBlank);
     WRITE_16(REG_IME, TRUE);
 
-    LZ77UncompVRAM(sEndingSamusPosingSpaceBackgroundGfx, VRAM_BASE + 0x3000);
-    LZ77UncompVRAM(sEndingLightGfx, VRAM_BASE + 0xB000);
-    LZ77UncompVRAM(sEndingSamusPosingGfx_1, VRAM_BASE);
-    LZ77UncompVRAM(sEndingSamusPosingGfx_2, VRAM_BASE + 0x8000);
+    LZ77UncompVram(sEndingSamusPosingSpaceBackgroundGfx, VRAM_BASE + 0x3000);
+    LZ77UncompVram(sEndingLightGfx, VRAM_BASE + 0xB000);
+    LZ77UncompVram(sEndingSamusPosingGfx_1, VRAM_BASE);
+    LZ77UncompVram(sEndingSamusPosingGfx_2, VRAM_BASE + 0x8000);
 
-    LZ77UncompVRAM(sEndingSamusPosingSpaceBackgroundTileTable, VRAM_BASE + 0xF800);
-    LZ77UncompVRAM(sEndingLightTileTable, VRAM_BASE + 0xF000);
-    LZ77UncompVRAM(sEndingSamusPosingTileTable_1, VRAM_BASE + 0xD000);
-    LZ77UncompVRAM(sEndingSamusPosingTileTable_2, VRAM_BASE + 0xE000);
+    LZ77UncompVram(sEndingSamusPosingSpaceBackgroundTileTable, VRAM_BASE + 0xF800);
+    LZ77UncompVram(sEndingLightTileTable, VRAM_BASE + 0xF000);
+    LZ77UncompVram(sEndingSamusPosingTileTable_1, VRAM_BASE + 0xD000);
+    LZ77UncompVram(sEndingSamusPosingTileTable_2, VRAM_BASE + 0xE000);
 
     BitFill(3, 0, VRAM_BASE + 0xD800, 0x800, 32);
     BitFill(3, 0, VRAM_BASE + 0xE800, 0x800, 32);
@@ -1261,8 +1261,8 @@ static u8 EndScreenSamusPosing(void)
             WRITE_16(REG_BG1CNT, CREATE_BGCNT(0, 26, BGCNT_LOW_MID_PRIORITY, BGCNT_SIZE_512x256));
             WRITE_16(REG_BG2CNT, CREATE_BGCNT(2, 28, BGCNT_HIGH_MID_PRIORITY, BGCNT_SIZE_512x256));
 
-            LZ77UncompVRAM(sEndingSamusPosingGfx_3, VRAM_BASE);
-            LZ77UncompVRAM(sEndingSamusPosingTileTable_3, VRAM_BASE + 0xD000);
+            LZ77UncompVram(sEndingSamusPosingGfx_3, VRAM_BASE);
+            LZ77UncompVram(sEndingSamusPosingTileTable_3, VRAM_BASE + 0xD000);
 
             ENDING_DATA.bldcnt = 0;
             gWrittenToBldalpha_L = BLDALPHA_MAX_VALUE;
@@ -1275,8 +1275,8 @@ static u8 EndScreenSamusPosing(void)
             WRITE_16(REG_BG1CNT, CREATE_BGCNT(0, 26, BGCNT_HIGH_MID_PRIORITY, BGCNT_SIZE_512x256));
             WRITE_16(REG_BG2CNT, CREATE_BGCNT(2, 28, BGCNT_LOW_MID_PRIORITY, BGCNT_SIZE_512x256));
 
-            LZ77UncompVRAM(sEndingSamusPosingGfx_4, VRAM_BASE + 0x8000);
-            LZ77UncompVRAM(sEndingSamusPosingTileTable_4, VRAM_BASE + 0xE000);
+            LZ77UncompVram(sEndingSamusPosingGfx_4, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sEndingSamusPosingTileTable_4, VRAM_BASE + 0xE000);
 
             ENDING_DATA.bldcnt = 0;
             gWrittenToBldalpha_L = BLDALPHA_MAX_VALUE;
@@ -1289,8 +1289,8 @@ static u8 EndScreenSamusPosing(void)
             WRITE_16(REG_BG1CNT, CREATE_BGCNT(0, 26, BGCNT_LOW_MID_PRIORITY, BGCNT_SIZE_512x256));
             WRITE_16(REG_BG2CNT, CREATE_BGCNT(2, 28, BGCNT_HIGH_MID_PRIORITY, BGCNT_SIZE_512x256));
 
-            LZ77UncompVRAM(sEndingSamusPosingGfx_5, VRAM_BASE);
-            LZ77UncompVRAM(sEndingSamusPosingTileTable_5, VRAM_BASE + 0xD000);
+            LZ77UncompVram(sEndingSamusPosingGfx_5, VRAM_BASE);
+            LZ77UncompVram(sEndingSamusPosingTileTable_5, VRAM_BASE + 0xD000);
 
             ENDING_DATA.bldcnt = 0;
             gWrittenToBldalpha_L = BLDALPHA_MAX_VALUE;
@@ -1305,18 +1305,18 @@ static u8 EndScreenSamusPosing(void)
 
             if (ENDING_DATA.endingNumber == 0)
             {
-                LZ77UncompVRAM(sEndingSamusPosingFullSuitGfx, VRAM_BASE + 0x8000);
-                LZ77UncompVRAM(sEndingSamusPosingFullSuitTileTable, VRAM_BASE + 0xE000);
+                LZ77UncompVram(sEndingSamusPosingFullSuitGfx, VRAM_BASE + 0x8000);
+                LZ77UncompVram(sEndingSamusPosingFullSuitTileTable, VRAM_BASE + 0xE000);
             }
             else if (ENDING_DATA.endingNumber == 1)
             {
-                LZ77UncompVRAM(sEndingSamusPosingHelmetOffGfx, VRAM_BASE + 0x8000);
-                LZ77UncompVRAM(sEndingSamusPosingHelmetOffTileTable, VRAM_BASE + 0xE000);
+                LZ77UncompVram(sEndingSamusPosingHelmetOffGfx, VRAM_BASE + 0x8000);
+                LZ77UncompVram(sEndingSamusPosingHelmetOffTileTable, VRAM_BASE + 0xE000);
             }
             else
             {
-                LZ77UncompVRAM(sEndingSamusPosingSuitlessGfx, VRAM_BASE + 0x8000);
-                LZ77UncompVRAM(sEndingSamusPosingSuitlessTileTable, VRAM_BASE + 0xE000);
+                LZ77UncompVram(sEndingSamusPosingSuitlessGfx, VRAM_BASE + 0x8000);
+                LZ77UncompVram(sEndingSamusPosingSuitlessTileTable, VRAM_BASE + 0xE000);
             }
 
             ENDING_DATA.dispcnt = DCNT_BG1 | DCNT_BG3;
@@ -1418,10 +1418,10 @@ static void EndingImageInit(void)
     abilityCount = PEN_GET_ABILITY(pen);
     endingNbr = PEN_GET_ENDING(pen);
         
-    LZ77UncompVRAM(sEndingImagesTopGfxPointers[endingNbr], VRAM_BASE);
-    LZ77UncompVRAM(sEndingImagesBottomGfxPointers[endingNbr], VRAM_BASE + 0x8000);
-    LZ77UncompVRAM(sEndingImagesTopTileTablePointers[endingNbr], VRAM_BASE + 0xE000);
-    LZ77UncompVRAM(sEndingImagesHalfTileTablePointers[endingNbr], VRAM_BASE + 0xF800);
+    LZ77UncompVram(sEndingImagesTopGfxPointers[endingNbr], VRAM_BASE);
+    LZ77UncompVram(sEndingImagesBottomGfxPointers[endingNbr], VRAM_BASE + 0x8000);
+    LZ77UncompVram(sEndingImagesTopTileTablePointers[endingNbr], VRAM_BASE + 0xE000);
+    LZ77UncompVram(sEndingImagesHalfTileTablePointers[endingNbr], VRAM_BASE + 0xF800);
     BitFill(3, 0x4FF04FF, VRAM_BASE + 0xE800, 0x800, 0x20);
     #ifdef REGION_EU
     DmaTransfer(3, sEndingImagesPalPointers[endingNbr], PALRAM_BASE, PAL_SIZE, 16);
@@ -1432,7 +1432,7 @@ static void EndingImageInit(void)
     ENDING_DATA.completionPercentage = energyNbr + missilesNbr + superMissilesNbr + powerBombNbr + abilityCount;
 
     #ifndef REGION_EU
-    LZ77UncompVRAM(sEndingImageNumbersMiscEnglishGfx, VRAM_OBJ);
+    LZ77UncompVram(sEndingImageNumbersMiscEnglishGfx, VRAM_OBJ);
     #endif // !REGION_EU
 
     ENDING_DATA.language = gLanguage;
@@ -1441,33 +1441,33 @@ static void EndingImageInit(void)
     switch (ENDING_DATA.language)
     {
         case LANGUAGE_GERMAN:
-            LZ77UncompVRAM(sEndingImageNumbersMiscGermanGfx, VRAM_OBJ);
-            LZ77UncompVRAM(sEndingImageTextGermanGfx, VRAM_BASE + 0x11000);
+            LZ77UncompVram(sEndingImageNumbersMiscGermanGfx, VRAM_OBJ);
+            LZ77UncompVram(sEndingImageTextGermanGfx, VRAM_BASE + 0x11000);
             break;
         
         case LANGUAGE_FRENCH:
-            LZ77UncompVRAM(sEndingImageNumbersMiscFrenchGfx, VRAM_OBJ);
-            LZ77UncompVRAM(sEndingImageTextFrenchGfx, VRAM_BASE + 0x11000);
+            LZ77UncompVram(sEndingImageNumbersMiscFrenchGfx, VRAM_OBJ);
+            LZ77UncompVram(sEndingImageTextFrenchGfx, VRAM_BASE + 0x11000);
             break;
 
         case LANGUAGE_ITALIAN:
-            LZ77UncompVRAM(sEndingImageNumbersMiscItalianGfx, VRAM_OBJ);
-            LZ77UncompVRAM(sEndingImageTextItalianGfx, VRAM_BASE + 0x11000);
+            LZ77UncompVram(sEndingImageNumbersMiscItalianGfx, VRAM_OBJ);
+            LZ77UncompVram(sEndingImageTextItalianGfx, VRAM_BASE + 0x11000);
             break;
 
         case LANGUAGE_SPANISH:
-            LZ77UncompVRAM(sEndingImageNumbersMiscSpanishGfx, VRAM_OBJ);
-            LZ77UncompVRAM(sEndingImageTextSpanishGfx, VRAM_BASE + 0x11000);
+            LZ77UncompVram(sEndingImageNumbersMiscSpanishGfx, VRAM_OBJ);
+            LZ77UncompVram(sEndingImageTextSpanishGfx, VRAM_BASE + 0x11000);
             break;
 
         case LANGUAGE_HIRAGANA:
-            LZ77UncompVRAM(sEndingImageNumbersMiscEnglishGfx, VRAM_OBJ);
-            LZ77UncompVRAM(sEndingImageTextHiraganaGfx, VRAM_BASE + 0x11000);
+            LZ77UncompVram(sEndingImageNumbersMiscEnglishGfx, VRAM_OBJ);
+            LZ77UncompVram(sEndingImageTextHiraganaGfx, VRAM_BASE + 0x11000);
             break;
 
         default:
-            LZ77UncompVRAM(sEndingImageNumbersMiscEnglishGfx, VRAM_OBJ);
-            LZ77UncompVRAM(sEndingImageTextEnglishGfx, VRAM_BASE + 0x11000);
+            LZ77UncompVram(sEndingImageNumbersMiscEnglishGfx, VRAM_OBJ);
+            LZ77UncompVram(sEndingImageTextEnglishGfx, VRAM_BASE + 0x11000);
             break;
     }
     #else // !REGION_EU
@@ -1475,9 +1475,9 @@ static void EndingImageInit(void)
         ENDING_DATA.language = LANGUAGE_ENGLISH;
 
     if (ENDING_DATA.language == LANGUAGE_HIRAGANA)
-        LZ77UncompVRAM(sEndingImageTextHiraganaGfx, VRAM_BASE + 0x11000);
+        LZ77UncompVram(sEndingImageTextHiraganaGfx, VRAM_BASE + 0x11000);
     else
-        LZ77UncompVRAM(sEndingImageTextEnglishGfx, VRAM_BASE + 0x11000);
+        LZ77UncompVram(sEndingImageTextEnglishGfx, VRAM_BASE + 0x11000);
     #endif // REGION_EU
 
     #ifdef REGION_EU
@@ -1750,7 +1750,7 @@ static void UnlockedOptionsInit(void)
     DMA3_FILL_32(0, &gNonGameplayRam, sizeof(gNonGameplayRam));
     ClearGfxRam();
 
-    LZ77UncompVRAM(sUnlockedOptionsTileTable, VRAM_BASE + 0x8000);
+    LZ77UncompVram(sUnlockedOptionsTileTable, VRAM_BASE + 0x8000);
     BitFill(3, -1, VRAM_BASE + 0x7FE0, 0x20, 32);
     BitFill(3, 0xF3FFF3FF, VRAM_BASE + 0x8800, 0x800, 32);
 
@@ -2101,10 +2101,10 @@ static void GalleryInit(void)
 
     ENDING_DATA.endingNumber = endingNbr;
 
-    LZ77UncompVRAM(sEndingImagesTopGfxPointers[endingNbr], VRAM_BASE);
-    LZ77UncompVRAM(sEndingImagesBottomGfxPointers[endingNbr], VRAM_BASE + 0x8000);
-    LZ77UncompVRAM(sEndingImagesTopTileTablePointers[endingNbr], VRAM_BASE + 0xE000);
-    LZ77UncompVRAM(sEndingImagesHalfTileTablePointers[endingNbr], VRAM_BASE + 0xF800);
+    LZ77UncompVram(sEndingImagesTopGfxPointers[endingNbr], VRAM_BASE);
+    LZ77UncompVram(sEndingImagesBottomGfxPointers[endingNbr], VRAM_BASE + 0x8000);
+    LZ77UncompVram(sEndingImagesTopTileTablePointers[endingNbr], VRAM_BASE + 0xE000);
+    LZ77UncompVram(sEndingImagesHalfTileTablePointers[endingNbr], VRAM_BASE + 0xF800);
 
     BitFill(3, 0x4FF04FF, VRAM_BASE + 0xE800, 0x800, 32);
 

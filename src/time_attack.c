@@ -35,7 +35,7 @@ static TimeAttackFunc_T sTimeAttackSeedShuffleFunctionPointers[16] = {
  * @param length Length of seed
  * @param value Value to eor with
  */
-void TimeAttackEORSeed(u8* pSeed, s32 length, u8 value)
+void TimeAttackEorSeed(u8* pSeed, s32 length, u8 value)
 {
     s32 i;
 
@@ -469,10 +469,10 @@ u8 unk_7f60c(u8* param_1)
  */
 void TimeAttackSeedShuffleFunc1(u8* pSeed, s32 length)
 {
-    TimeAttackEORSeed(pSeed, length, 70);
+    TimeAttackEorSeed(pSeed, length, 70);
     TimeAttackSeedRandomFunc1(pSeed, length);
     TimeAttackSeedRandomFunc2(pSeed, length);
-    TimeAttackEORSeed(pSeed, length, 73);
+    TimeAttackEorSeed(pSeed, length, 73);
     TimeAttackSeedRandomFunc3(pSeed, length);
     TimeAttackSeedRandomFunc4(pSeed, length);
     TimeAttackSeedRandomFunc5(pSeed, length);
@@ -486,11 +486,11 @@ void TimeAttackSeedShuffleFunc1(u8* pSeed, s32 length)
  */
 void TimeAttackSeedShuffleFunc2(u8* pSeed, s32 length)
 {
-    TimeAttackEORSeed(pSeed, length, 144);
+    TimeAttackEorSeed(pSeed, length, 144);
     TimeAttackSeedRandomFunc2(pSeed, length);
     TimeAttackSeedRandomFunc1(pSeed, length);
     TimeAttackSeedRandomFunc3(pSeed, length);
-    TimeAttackEORSeed(pSeed, length, 94);
+    TimeAttackEorSeed(pSeed, length, 94);
     TimeAttackSeedRandomFunc5(pSeed, length);
     TimeAttackSeedRandomFunc4(pSeed, length);
 }
@@ -503,11 +503,11 @@ void TimeAttackSeedShuffleFunc2(u8* pSeed, s32 length)
  */
 void TimeAttackSeedShuffleFunc3(u8* pSeed, s32 length)
 {
-    TimeAttackEORSeed(pSeed, length, 145);
+    TimeAttackEorSeed(pSeed, length, 145);
     TimeAttackSeedRandomFunc2(pSeed, length);
     TimeAttackSeedRandomFunc1(pSeed, length);
     TimeAttackSeedRandomFunc3(pSeed, length);
-    TimeAttackEORSeed(pSeed, length, 227);
+    TimeAttackEorSeed(pSeed, length, 227);
     TimeAttackSeedRandomFunc5(pSeed, length);
     TimeAttackSeedRandomFunc4(pSeed, length);
 }
@@ -520,14 +520,14 @@ void TimeAttackSeedShuffleFunc3(u8* pSeed, s32 length)
  */
 void TimeAttackSeedShuffleFunc4(u8* pSeed, s32 length)
 {
-    TimeAttackEORSeed(pSeed, length, 89);
+    TimeAttackEorSeed(pSeed, length, 89);
     TimeAttackSeedRandomFunc5(pSeed, length);
     TimeAttackSeedRandomFunc1(pSeed, length);
     TimeAttackSeedRandomFunc3(pSeed, length);
-    TimeAttackEORSeed(pSeed, length, 99);
+    TimeAttackEorSeed(pSeed, length, 99);
     TimeAttackSeedRandomFunc4(pSeed, length);
     TimeAttackSeedRandomFunc1(pSeed, length);
-    TimeAttackEORSeed(pSeed, length, 57);
+    TimeAttackEorSeed(pSeed, length, 57);
 }
 
 /**
@@ -538,10 +538,10 @@ void TimeAttackSeedShuffleFunc4(u8* pSeed, s32 length)
  */
 void TimeAttackSeedShuffleFunc5(u8* pSeed, s32 length)
 {
-    TimeAttackEORSeed(pSeed, length, 149);
+    TimeAttackEorSeed(pSeed, length, 149);
     TimeAttackSeedRandomFunc1(pSeed, length);
     TimeAttackSeedRandomFunc2(pSeed, length);
-    TimeAttackEORSeed(pSeed, length, 252);
+    TimeAttackEorSeed(pSeed, length, 252);
     TimeAttackSeedRandomFunc3(pSeed, length);
     TimeAttackSeedRandomFunc4(pSeed, length);
     TimeAttackSeedRandomFunc5(pSeed, length);
@@ -555,11 +555,11 @@ void TimeAttackSeedShuffleFunc5(u8* pSeed, s32 length)
  */
 void TimeAttackSeedShuffleFunc6(u8* pSeed, s32 length)
 {
-    TimeAttackEORSeed(pSeed, length, 77);
+    TimeAttackEorSeed(pSeed, length, 77);
     TimeAttackSeedRandomFunc2(pSeed, length);
-    TimeAttackEORSeed(pSeed, length, 74);
+    TimeAttackEorSeed(pSeed, length, 74);
     TimeAttackSeedRandomFunc1(pSeed, length);
-    TimeAttackEORSeed(pSeed, length, 83);
+    TimeAttackEorSeed(pSeed, length, 83);
     TimeAttackSeedRandomFunc3(pSeed, length);
     TimeAttackSeedRandomFunc5(pSeed, length);
     TimeAttackSeedRandomFunc4(pSeed, length);
@@ -573,14 +573,14 @@ void TimeAttackSeedShuffleFunc6(u8* pSeed, s32 length)
  */
 void TimeAttackSeedShuffleFunc7(u8* pSeed, s32 length)
 {
-    TimeAttackEORSeed(pSeed, length, 65);
+    TimeAttackEorSeed(pSeed, length, 65);
     TimeAttackSeedRandomFunc2(pSeed, length);
     TimeAttackSeedRandomFunc1(pSeed, length);
     TimeAttackSeedRandomFunc4(pSeed, length);
-    TimeAttackEORSeed(pSeed, length, 89);
+    TimeAttackEorSeed(pSeed, length, 89);
     TimeAttackSeedRandomFunc5(pSeed, length);
     TimeAttackSeedRandomFunc3(pSeed, length);
-    TimeAttackEORSeed(pSeed, length, 79);
+    TimeAttackEorSeed(pSeed, length, 79);
     TimeAttackSeedRandomFunc1(pSeed, length);
 }
 
@@ -592,14 +592,14 @@ void TimeAttackSeedShuffleFunc7(u8* pSeed, s32 length)
  */
 void TimeAttackSeedShuffleFunc8(u8* pSeed, s32 length)
 {
-    TimeAttackEORSeed(pSeed, length, 84);
+    TimeAttackEorSeed(pSeed, length, 84);
     TimeAttackSeedRandomFunc3(pSeed, length);
     TimeAttackSeedRandomFunc4(pSeed, length);
     TimeAttackSeedRandomFunc5(pSeed, length);
-    TimeAttackEORSeed(pSeed, length, 79);
+    TimeAttackEorSeed(pSeed, length, 79);
     TimeAttackSeedRandomFunc1(pSeed, length);
     TimeAttackSeedRandomFunc2(pSeed, length);
-    TimeAttackEORSeed(pSeed, length, 77);
+    TimeAttackEorSeed(pSeed, length, 77);
     TimeAttackSeedRandomFunc4(pSeed, length);
     TimeAttackSeedRandomFunc5(pSeed, length);
 }

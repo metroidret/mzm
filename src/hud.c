@@ -738,23 +738,23 @@ void HudDrawMissiles(u8 updateHighlight)
         if (gMissileRefillAnimation == 13)
         {
             missiles = 0x480;
-            DMA3_COPY_16(sMissileHUDGfx_Refill1, VRAM_BASE + 0x10E00, 32);
+            DMA3_COPY_16(sMissileHudGfx_Refill1, VRAM_BASE + 0x10E00, 32);
         }
         else if (gMissileRefillAnimation == 10)
         {
             missiles = 0x600;
-            DMA3_COPY_16(sMissileHUDGfx_Refill2, VRAM_BASE + 0x10E00, 32);
+            DMA3_COPY_16(sMissileHudGfx_Refill2, VRAM_BASE + 0x10E00, 32);
         }
         else if (gMissileRefillAnimation == 4)
         {
             missiles = 0x780;
-            DMA3_COPY_16(sMissileHUDGfx_Refill3, VRAM_BASE + 0x10E00, 32);
+            DMA3_COPY_16(sMissileHudGfx_Refill3, VRAM_BASE + 0x10E00, 32);
         }
         else if (gMissileRefillAnimation == 1)
         {
             needUpdate = gMissileHighlightStatus;
             missiles = needUpdate * 384;
-            DMA3_COPY_16(sMissileHUDGfx_Inactive + (gMissileHighlightStatus * 64), VRAM_BASE + 0x10E00, 32);
+            DMA3_COPY_16(sMissileHudGfx_Inactive + (gMissileHighlightStatus * 64), VRAM_BASE + 0x10E00, 32);
         }
         else
             return;
@@ -870,23 +870,23 @@ void HudDrawPowerBomb(u8 updateHighlight)
         if (gPowerBombRefillAnimation == 0xD)
         {
             powerBombs = 0x480;
-            DMA3_COPY_16(sPowerBombHUDGfx_Refill1, VRAM_BASE + 0x10B00, 32);
+            DMA3_COPY_16(sPowerBombHudGfx_Refill1, VRAM_BASE + 0x10B00, 32);
         }
         else if (gPowerBombRefillAnimation == 0xA)
         {
             powerBombs = 0x600;
-            DMA3_COPY_16(sPowerBombHUDGfx_Refill2, VRAM_BASE + 0x10B00, 32);
+            DMA3_COPY_16(sPowerBombHudGfx_Refill2, VRAM_BASE + 0x10B00, 32);
         }
         else if (gPowerBombRefillAnimation == 0x4)
         {
             powerBombs = 0x780;
-            DMA3_COPY_16(sPowerBombHUDGfx_Refill3, VRAM_BASE + 0x10B00, 32);
+            DMA3_COPY_16(sPowerBombHudGfx_Refill3, VRAM_BASE + 0x10B00, 32);
         }
         else if (gPowerBombRefillAnimation == 0x1)
         {
             needUpdate = gPowerBombHighlightStatus;
             powerBombs = needUpdate * 384;
-            DMA3_COPY_16(sPowerBombHUDGfx_Inactive + (gPowerBombHighlightStatus * 64), VRAM_BASE + 0x10B00, 32);
+            DMA3_COPY_16(sPowerBombHudGfx_Inactive + (gPowerBombHighlightStatus * 64), VRAM_BASE + 0x10B00, 32);
         }
         else
             return;
@@ -1001,23 +1001,23 @@ void HudDrawSuperMissiles(u8 updateHighlight)
         if (gSuperMissileRefillAnimation == 0xD)
         {
             superMissiles = 0x480;
-            DMA3_COPY_16(sSuperMissileHUDGfx_Refill1, VRAM_BASE + 0x10E80, 32);
+            DMA3_COPY_16(sSuperMissileHudGfx_Refill1, VRAM_BASE + 0x10E80, 32);
         }
         else if (gSuperMissileRefillAnimation == 0xA)
         {
             superMissiles = 0x600;
-            DMA3_COPY_16(sSuperMissileHUDGfx_Refill2, VRAM_BASE + 0x10E80, 32);
+            DMA3_COPY_16(sSuperMissileHudGfx_Refill2, VRAM_BASE + 0x10E80, 32);
         }
         else if (gSuperMissileRefillAnimation == 0x4)
         {
             superMissiles = 0x780;
-            DMA3_COPY_16(sSuperMissileHUDGfx_Refill3, VRAM_BASE + 0x10E80, 32);
+            DMA3_COPY_16(sSuperMissileHudGfx_Refill3, VRAM_BASE + 0x10E80, 32);
         }
         else if (gSuperMissileRefillAnimation == 0x1)
         {
             needUpdate = gSuperMissileHighlightStatus;
             superMissiles = needUpdate * 384;
-            DMA3_COPY_16(sSuperMissileHUDGfx_Inactive + (gSuperMissileHighlightStatus * 64), VRAM_BASE + 0x10E80, 32);
+            DMA3_COPY_16(sSuperMissileHudGfx_Inactive + (gSuperMissileHighlightStatus * 64), VRAM_BASE + 0x10E80, 32);
         }
         else
             return;
@@ -1044,12 +1044,12 @@ void HudUpdateGfx(void)
         {
             if (gSamusWeaponInfo.missilesSelected || gEquipment.currentMissiles == 0)
             {
-                DMA3_COPY_16(sMissileHUDGfx_Inactive, VRAM_BASE + 0x10E00, 32);
+                DMA3_COPY_16(sMissileHudGfx_Inactive, VRAM_BASE + 0x10E00, 32);
                 gMissileHighlightStatus = HIGHLIGHT_STATUS_NOT_HIGHLIGHTED;
             }
             else
             {
-                DMA3_COPY_16(sMissileHUDGfx_Selected, VRAM_BASE + 0x10E00, 32);
+                DMA3_COPY_16(sMissileHudGfx_Selected, VRAM_BASE + 0x10E00, 32);
                 gMissileHighlightStatus = HIGHLIGHT_STATUS_SELECTED;
             }
 
@@ -1062,7 +1062,7 @@ void HudUpdateGfx(void)
         {
             if (gSamusWeaponInfo.missilesSelected || gEquipment.currentMissiles == 0)
             {
-                DMA3_COPY_16(sMissileHUDGfx_Inactive, VRAM_BASE + 0x10E00, 32);
+                DMA3_COPY_16(sMissileHudGfx_Inactive, VRAM_BASE + 0x10E00, 32);
                 gMissileHighlightStatus = HIGHLIGHT_STATUS_NOT_HIGHLIGHTED;
 
                 HudDrawMissiles(TRUE);
@@ -1070,7 +1070,7 @@ void HudUpdateGfx(void)
         }
         else
         {
-            DMA3_COPY_16(sMissileHUDGfx_Active, VRAM_BASE + 0x10E00, 32);
+            DMA3_COPY_16(sMissileHudGfx_Active, VRAM_BASE + 0x10E00, 32);
             gMissileHighlightStatus = HIGHLIGHT_STATUS_HIGHLIGHTED;
             
             HudDrawMissiles(TRUE);
@@ -1080,7 +1080,7 @@ void HudUpdateGfx(void)
     {
         if (gSamusWeaponInfo.weaponHighlighted & WH_MISSILE)
         {
-            DMA3_COPY_16(sMissileHUDGfx_Active, VRAM_BASE + 0x10E00, 32);
+            DMA3_COPY_16(sMissileHudGfx_Active, VRAM_BASE + 0x10E00, 32);
             gMissileHighlightStatus = HIGHLIGHT_STATUS_HIGHLIGHTED;
                 
             HudDrawMissiles(TRUE);
@@ -1089,7 +1089,7 @@ void HudUpdateGfx(void)
         {
             if (!gSamusWeaponInfo.missilesSelected && gEquipment.currentMissiles != 0)
             {
-                DMA3_COPY_16(sMissileHUDGfx_Selected, VRAM_BASE + 0x10E00, 32);
+                DMA3_COPY_16(sMissileHudGfx_Selected, VRAM_BASE + 0x10E00, 32);
                 gMissileHighlightStatus = HIGHLIGHT_STATUS_SELECTED;
                 
                 HudDrawMissiles(TRUE);
@@ -1104,12 +1104,12 @@ void HudUpdateGfx(void)
         {
             if (gEquipment.currentPowerBombs != 0)
             {
-                DMA3_COPY_16(sPowerBombHUDGfx_Selected, VRAM_BASE + 0x10B00, 32);
+                DMA3_COPY_16(sPowerBombHudGfx_Selected, VRAM_BASE + 0x10B00, 32);
                 gPowerBombHighlightStatus = HIGHLIGHT_STATUS_SELECTED;
             }
             else
             {
-                DMA3_COPY_16(sPowerBombHUDGfx_Inactive, VRAM_BASE + 0x10B00, 32);
+                DMA3_COPY_16(sPowerBombHudGfx_Inactive, VRAM_BASE + 0x10B00, 32);
                 gPowerBombHighlightStatus = HIGHLIGHT_STATUS_NOT_HIGHLIGHTED;
             }
 
@@ -1123,7 +1123,7 @@ void HudUpdateGfx(void)
         {
             if (gEquipment.currentPowerBombs == 0)
             {
-                DMA3_COPY_16(sPowerBombHUDGfx_Inactive, VRAM_BASE + 0x10B00, 32);
+                DMA3_COPY_16(sPowerBombHudGfx_Inactive, VRAM_BASE + 0x10B00, 32);
                 gPowerBombHighlightStatus = HIGHLIGHT_STATUS_NOT_HIGHLIGHTED;
                 
                 HudDrawPowerBomb(TRUE);
@@ -1131,7 +1131,7 @@ void HudUpdateGfx(void)
         }
         else
         {
-            DMA3_COPY_16(sPowerBombHUDGfx_Active, VRAM_BASE + 0x10B00, 32);
+            DMA3_COPY_16(sPowerBombHudGfx_Active, VRAM_BASE + 0x10B00, 32);
             gPowerBombHighlightStatus = HIGHLIGHT_STATUS_HIGHLIGHTED;
             
             HudDrawPowerBomb(TRUE);
@@ -1141,7 +1141,7 @@ void HudUpdateGfx(void)
     {
         if (gSamusWeaponInfo.weaponHighlighted & WH_POWER_BOMB)
         {
-            DMA3_COPY_16(sPowerBombHUDGfx_Active, VRAM_BASE + 0x10B00, 32);
+            DMA3_COPY_16(sPowerBombHudGfx_Active, VRAM_BASE + 0x10B00, 32);
             gPowerBombHighlightStatus = HIGHLIGHT_STATUS_HIGHLIGHTED;
                 
             HudDrawPowerBomb(TRUE);
@@ -1150,7 +1150,7 @@ void HudUpdateGfx(void)
         {
             if (gEquipment.currentPowerBombs != 0)
             {
-                DMA3_COPY_16(sPowerBombHUDGfx_Selected, VRAM_BASE + 0x10B00, 32);
+                DMA3_COPY_16(sPowerBombHudGfx_Selected, VRAM_BASE + 0x10B00, 32);
                 gPowerBombHighlightStatus = HIGHLIGHT_STATUS_SELECTED;
                 
                 HudDrawPowerBomb(TRUE);
@@ -1165,12 +1165,12 @@ void HudUpdateGfx(void)
         {
             if (!gSamusWeaponInfo.missilesSelected)
             {
-                DMA3_COPY_16(sSuperMissileHUDGfx_Inactive, VRAM_BASE + 0x10E80, 32);
+                DMA3_COPY_16(sSuperMissileHudGfx_Inactive, VRAM_BASE + 0x10E80, 32);
                 gSuperMissileHighlightStatus = HIGHLIGHT_STATUS_NOT_HIGHLIGHTED;
             }
             else
             {
-                DMA3_COPY_16(sSuperMissileHUDGfx_Selected, VRAM_BASE + 0x10E80, 32);
+                DMA3_COPY_16(sSuperMissileHudGfx_Selected, VRAM_BASE + 0x10E80, 32);
                 gSuperMissileHighlightStatus = HIGHLIGHT_STATUS_SELECTED;
             }
 
@@ -1183,7 +1183,7 @@ void HudUpdateGfx(void)
         {
             if (!gSamusWeaponInfo.missilesSelected)
             {
-                DMA3_COPY_16(sSuperMissileHUDGfx_Inactive, VRAM_BASE + 0x10E80, 32);
+                DMA3_COPY_16(sSuperMissileHudGfx_Inactive, VRAM_BASE + 0x10E80, 32);
                 gSuperMissileHighlightStatus = HIGHLIGHT_STATUS_NOT_HIGHLIGHTED;
                 
                 HudDrawSuperMissiles(TRUE);
@@ -1191,7 +1191,7 @@ void HudUpdateGfx(void)
         }
         else
         {
-            DMA3_COPY_16(sSuperMissileHUDGfx_Active, VRAM_BASE + 0x10E80, 32);
+            DMA3_COPY_16(sSuperMissileHudGfx_Active, VRAM_BASE + 0x10E80, 32);
             gSuperMissileHighlightStatus = HIGHLIGHT_STATUS_HIGHLIGHTED;
         
             HudDrawSuperMissiles(TRUE);
@@ -1201,7 +1201,7 @@ void HudUpdateGfx(void)
     {
         if (gSamusWeaponInfo.weaponHighlighted & WH_SUPER_MISSILE)
         {
-            DMA3_COPY_16(sSuperMissileHUDGfx_Active, VRAM_BASE + 0x10E80, 32);
+            DMA3_COPY_16(sSuperMissileHudGfx_Active, VRAM_BASE + 0x10E80, 32);
             gSuperMissileHighlightStatus = HIGHLIGHT_STATUS_HIGHLIGHTED;
                 
             HudDrawSuperMissiles(TRUE);
@@ -1210,7 +1210,7 @@ void HudUpdateGfx(void)
         {
             if (gSamusWeaponInfo.missilesSelected)
             {
-                DMA3_COPY_16(sSuperMissileHUDGfx_Selected, VRAM_BASE + 0x10E80, 32);
+                DMA3_COPY_16(sSuperMissileHudGfx_Selected, VRAM_BASE + 0x10E80, 32);
                 gSuperMissileHighlightStatus = HIGHLIGHT_STATUS_SELECTED;
                 
                 HudDrawSuperMissiles(TRUE);
@@ -1252,7 +1252,7 @@ void HudDrawSuitless(void)
     // Transfer graphics
     if (chargeCounter < SUITLESS_BAR_NBR_ELEMS)
     {
-        DMA3_COPY_16(&sSuitlessHUDChargeBarGfx[chargeCounter * SUITLESS_BAR_SIZE], VRAM_BASE + 0x11100, SUITLESS_BAR_SIZE / 2);
+        DMA3_COPY_16(&sSuitlessHudChargeBarGfx[chargeCounter * SUITLESS_BAR_SIZE], VRAM_BASE + 0x11100, SUITLESS_BAR_SIZE / 2);
     }
 }
 

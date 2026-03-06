@@ -20,7 +20,7 @@ static void unk_1e2c(struct TrackData* pTrack, struct TrackVariables* pVariables
 static void unk_1f3c(struct TrackData* pTrack, struct TrackVariables* pVariables);
 static void unk_1f90(struct TrackData* pTrack, struct TrackVariables* pVariables);
 static void unk_1fe0(struct TrackData* pTrack, struct TrackVariables* pVariables);
-static void unk_2030(struct PSGSoundData* pSound, struct TrackVariables* pVariables, u32 param_3);
+static void unk_2030(struct PsgSoundData* pSound, struct TrackVariables* pVariables, u32 param_3);
 
 static u16 GetNoteDelay(struct TrackVariables* pVariables, u8 param_2, u8 param_3);
 
@@ -292,7 +292,7 @@ void UpdatePsgSounds(void)
     u8 control;
     u8 i;
     u8* ptr;
-    struct PSGSoundData* pSound;
+    struct PsgSoundData* pSound;
     struct TrackVariables* pVariables;
     u32 tmp;
 
@@ -693,7 +693,7 @@ void UpdateTrack(struct TrackData* pTrack)
                     if (pVariables->pChannel != NULL)
                         unk_1bf0(pVariables);
 
-                    if (pVariables->pSoundPSG != NULL)
+                    if (pVariables->pSoundPsg != NULL)
                         unk_1c18(pVariables);
 
                     if (pVariables->delay != 0)
@@ -726,7 +726,7 @@ void UpdateTrack(struct TrackData* pTrack)
                                 }
                                 else
                                 {
-                                    if (pVariables->pSoundPSG != NULL && pVariables->pSoundPSG->unk_0 != 0)
+                                    if (pVariables->pSoundPsg != NULL && pVariables->pSoundPsg->unk_0 != 0)
                                     {
                                         pVariables->unk_16 += pVariables->lfoSpeed;
                                         if ((s8)(pVariables->unk_16 - 0x40) < 0)
@@ -848,7 +848,7 @@ void UpdateTrack(struct TrackData* pTrack)
                         if (pVariables->pChannel != NULL)
                             unk_1d5c(pVariables);
 
-                        if (pVariables->pSoundPSG != NULL)
+                        if (pVariables->pSoundPsg != NULL)
                             unk_1ddc(pVariables);
 
                         pVariables->unk_0 &= ~4;
@@ -860,7 +860,7 @@ void UpdateTrack(struct TrackData* pTrack)
                         if (pVariables->pChannel != NULL)
                             unk_1d78(pVariables);
 
-                        if (pVariables->pSoundPSG != NULL)
+                        if (pVariables->pSoundPsg != NULL)
                             unk_1de8(pVariables);
 
                         pVariables->unk_0 &= ~8;
@@ -930,9 +930,9 @@ static void unk_1bf0(struct TrackVariables* pVariables)
  */
 static void unk_1c18(struct TrackVariables* pVariables)
 {
-    struct PSGSoundData* pSound;
+    struct PsgSoundData* pSound;
 
-    pSound = pVariables->pSoundPSG;
+    pSound = pVariables->pSoundPsg;
 
     if (pVariables->unk_E != 0)
     {
@@ -1002,10 +1002,10 @@ static void unk_1c3c(struct TrackVariables* pVariables)
  */
 static void unk_1ccc(struct TrackVariables* pVariables, s16 param_2)
 {
-    struct PSGSoundData* pSound;
+    struct PsgSoundData* pSound;
     s16 var_0;
 
-    pSound = pVariables->pSoundPSG;
+    pSound = pVariables->pSoundPsg;
 
     if (pVariables->modulationType == 1)
     {
@@ -1017,7 +1017,7 @@ static void unk_1ccc(struct TrackVariables* pVariables, s16 param_2)
     {
         unk_4eb4(pVariables);
 
-        var_0 = pVariables->unk_17 + pVariables->pSoundPSG->unk_1C;
+        var_0 = pVariables->unk_17 + pVariables->pSoundPsg->unk_1C;
 
         if (var_0 >= 0x80)
             var_0 = 0x7F;
@@ -1087,7 +1087,7 @@ static void unk_1d78(struct TrackVariables* pVariables)
  */
 static void unk_1ddc(struct TrackVariables* pVariables)
 {
-    pVariables->pSoundPSG->unk_F |= 0x10;
+    pVariables->pSoundPsg->unk_F |= 0x10;
 }
 
 /**
@@ -1099,15 +1099,15 @@ static void unk_1de8(struct TrackVariables* pVariables)
 {
     s16 var_0;
 
-    var_0 = pVariables->unk_17 + pVariables->pSoundPSG->unk_1C;
+    var_0 = pVariables->unk_17 + pVariables->pSoundPsg->unk_1C;
 
     if (var_0 >= 0x80)
         var_0 = 0x7F;
     else if (var_0 < 0)
         var_0 = 0;
 
-    pVariables->pSoundPSG->maybe_noteDelay = GetNoteDelay(pVariables, var_0, pVariables->unk_18);
-    pVariables->pSoundPSG->unk_F |= 0x4;
+    pVariables->pSoundPsg->maybe_noteDelay = GetNoteDelay(pVariables, var_0, pVariables->unk_18);
+    pVariables->pSoundPsg->unk_F |= 0x4;
 }
 
 /**
@@ -1230,7 +1230,7 @@ static void unk_1f3c(struct TrackData* pTrack, struct TrackVariables* pVariables
 static void unk_1f90(struct TrackData* pTrack, struct TrackVariables* pVariables)
 {
     u8 var_0;
-    struct PSGSoundData* pSound;
+    struct PsgSoundData* pSound;
 
     if (pTrack->unk_3 + pVariables->priority > UCHAR_MAX)
         var_0 = UCHAR_MAX;
@@ -1256,7 +1256,7 @@ static void unk_1f90(struct TrackData* pTrack, struct TrackVariables* pVariables
 static void unk_1fe0(struct TrackData* pTrack, struct TrackVariables* pVariables)
 {
     u8 var_0;
-    struct PSGSoundData* pSound;
+    struct PsgSoundData* pSound;
 
     if (pTrack->unk_3 + pVariables->priority > UCHAR_MAX)
         var_0 = UCHAR_MAX;
@@ -1280,7 +1280,7 @@ static void unk_1fe0(struct TrackData* pTrack, struct TrackVariables* pVariables
  * @param pVariables Track variables pointer
  * @param param_3 To document
  */
-static void unk_2030(struct PSGSoundData* pSound, struct TrackVariables* pVariables, u32 param_3)
+static void unk_2030(struct PsgSoundData* pSound, struct TrackVariables* pVariables, u32 param_3)
 {
     s16 var_0;
     s16 tmp;
@@ -1303,11 +1303,11 @@ static void unk_2030(struct PSGSoundData* pSound, struct TrackVariables* pVariab
         var_0 = 0;
 
     pSound->maybe_noteDelay = GetNoteDelay(pVariables, var_0, pVariables->unk_18);
-    pSound->pVariables->pSoundPSG = NULL;
+    pSound->pVariables->pSoundPsg = NULL;
     pSound->pVariables = pVariables;
     pSound->unk_F |= 2;
     pSound->unk_0 = 1;
-    pVariables->pSoundPSG = pSound;
+    pVariables->pSoundPsg = pSound;
 }
 
 /**
@@ -1376,11 +1376,11 @@ void AudioCommand_Fine(struct TrackData* pTrack, struct TrackVariables* pVariabl
     struct SoundChannel* pChannel;
     struct SoundChannel* pNext;
 
-    if (pVariables->pSoundPSG != NULL)
+    if (pVariables->pSoundPsg != NULL)
     {
-        ClearRegistersForPsg(pVariables->pSoundPSG, (pVariables->channel & 7) - 1);
-        pVariables->pSoundPSG->unk_0 = 0;
-        pVariables->pSoundPSG->pVariables = NULL;
+        ClearRegistersForPsg(pVariables->pSoundPsg, (pVariables->channel & 7) - 1);
+        pVariables->pSoundPsg->unk_0 = 0;
+        pVariables->pSoundPsg->pVariables = NULL;
     }
 
     if (pVariables->pChannel != NULL)
@@ -1395,7 +1395,7 @@ void AudioCommand_Fine(struct TrackData* pTrack, struct TrackVariables* pVariabl
         }
     }
 
-    pVariables->pSoundPSG = NULL;
+    pVariables->pSoundPsg = NULL;
     pVariables->pChannel = NULL;
 
     if (++pTrack->currentTrack == pTrack->amountOfTracks)
@@ -1419,11 +1419,11 @@ void unk_21b0(struct TrackData* pTrack, struct TrackVariables* pVariables)
     struct SoundChannel* pChannel;
     struct SoundChannel* pNext;
 
-    if (pVariables->pSoundPSG != NULL)
+    if (pVariables->pSoundPsg != NULL)
     {
-        ClearRegistersForPsg(pVariables->pSoundPSG, (pVariables->channel & 7) - 1);
-        pVariables->pSoundPSG->unk_0 = 0;
-        pVariables->pSoundPSG->pVariables = NULL;
+        ClearRegistersForPsg(pVariables->pSoundPsg, (pVariables->channel & 7) - 1);
+        pVariables->pSoundPsg->unk_0 = 0;
+        pVariables->pSoundPsg->pVariables = NULL;
     }
 
     if (pVariables->pChannel != NULL)
@@ -1438,7 +1438,7 @@ void unk_21b0(struct TrackData* pTrack, struct TrackVariables* pVariables)
         }
     }
 
-    pVariables->pSoundPSG = NULL;
+    pVariables->pSoundPsg = NULL;
     pVariables->pChannel = NULL;
 
     if (++pTrack->currentTrack == pTrack->amountOfTracks)
@@ -1581,7 +1581,7 @@ void AudioCommand_Voice(struct TrackData* pTrack, struct TrackVariables* pVariab
         }
         else if (channel == 3)
         {
-            UploadSampleToWaveRAM(pVoice->pSample);
+            UploadSampleToWaveRam(pVoice->pSample);
         }
         else if (channel == 4)
         {
@@ -1732,7 +1732,7 @@ void AudioCommand_ExtendCommand(struct TrackVariables* pVariables)
 void AudioCommand_EndOfTie(struct TrackVariables* pVariables)
 {
     struct SoundChannel* pChannel;
-    struct PSGSoundData* pSound;
+    struct PsgSoundData* pSound;
     u32 param;
 
     if ((s8)*pVariables->pRawData >= 0)
@@ -1758,11 +1758,11 @@ void AudioCommand_EndOfTie(struct TrackVariables* pVariables)
         }
     }
 
-    pSound = pVariables->pSoundPSG;
+    pSound = pVariables->pSoundPsg;
     if (pSound != NULL && pSound->unk_17 == param)
     {
         pSound->unk_0 = 5;
-        pVariables->pSoundPSG->unk_18 = 0;
+        pVariables->pSoundPsg->unk_18 = 0;
     }
 }
 
@@ -1782,7 +1782,7 @@ void Music_EmptyCommand(struct TrackVariables* pVariables)
  * @param pSound PSG sound pointer
  * @param channel Channel
  */
-void ClearRegistersForPsg(struct PSGSoundData* pSound, u8 channel)
+void ClearRegistersForPsg(struct PsgSoundData* pSound, u8 channel)
 {
     switch (channel)
     {
@@ -1813,7 +1813,7 @@ void ClearRegistersForPsg(struct PSGSoundData* pSound, u8 channel)
  * @param pSound PSG sound pointer
  * @param channel Channel
  */
-void ClearRegistersForPsg_Unused(struct PSGSoundData* pSound, u8 channel)
+void ClearRegistersForPsg_Unused(struct PsgSoundData* pSound, u8 channel)
 {
     switch (channel)
     {

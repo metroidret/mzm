@@ -476,7 +476,7 @@ lbl_08004e88:
     adds r4, r0, #0
     adds r5, r1, #0
     ldr r0, [r5, #4]
-    bl UploadSampleToWaveRAM
+    bl UploadSampleToWaveRam
     adds r0, r4, #0
     adds r1, r5, #0
     b lbl_08004eaa
@@ -804,9 +804,9 @@ lbl_080050cc:
     bx lr
     .align 2, 0
 
-@ Signature: void UploadSampleToWaveRAM(const u32* pSample)
-    thumb_func_start UploadSampleToWaveRAM
-UploadSampleToWaveRAM: @ 0x080050d0
+@ Signature: void UploadSampleToWaveRam(const u32* pSample)
+    thumb_func_start UploadSampleToWaveRam
+UploadSampleToWaveRam: @ 0x080050d0
     ldr r3, lbl_080050fc @ =REG_SOUND3CNT_L
     movs r2, #0x40
     strb r2, [r3]

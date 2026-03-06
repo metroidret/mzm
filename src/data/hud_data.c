@@ -9,26 +9,26 @@ const u32 sCommonSpritesGfx[3584] = INCBIN_U32("data/hud/common.gfx");
 const u8 sMissileDigitsGfx[2304] = INCBIN_U8("data/hud/missile_digits.gfx");
 const u8 sPowerBombDigitsGfx[2304] = INCBIN_U8("data/hud/power_bomb_digits.gfx");
 
-const u8 sMissileHUDGfx_Inactive[64] = INCBIN_U8("data/hud/missile_hud_inactive.gfx");
-const u8 sMissileHUDGfx_Selected[64] = INCBIN_U8("data/hud/missile_hud_selected.gfx");
-const u8 sMissileHUDGfx_Active[64] = INCBIN_U8("data/hud/missile_hud_active.gfx");
-const u8 sMissileHUDGfx_Refill1[64] = INCBIN_U8("data/hud/missile_hud_refill_1.gfx");
-const u8 sMissileHUDGfx_Refill2[64] = INCBIN_U8("data/hud/missile_hud_refill_2.gfx");
-const u8 sMissileHUDGfx_Refill3[64] = INCBIN_U8("data/hud/missile_hud_refill_3.gfx");
+const u8 sMissileHudGfx_Inactive[64] = INCBIN_U8("data/hud/missile_hud_inactive.gfx");
+const u8 sMissileHudGfx_Selected[64] = INCBIN_U8("data/hud/missile_hud_selected.gfx");
+const u8 sMissileHudGfx_Active[64] = INCBIN_U8("data/hud/missile_hud_active.gfx");
+const u8 sMissileHudGfx_Refill1[64] = INCBIN_U8("data/hud/missile_hud_refill_1.gfx");
+const u8 sMissileHudGfx_Refill2[64] = INCBIN_U8("data/hud/missile_hud_refill_2.gfx");
+const u8 sMissileHudGfx_Refill3[64] = INCBIN_U8("data/hud/missile_hud_refill_3.gfx");
 
-const u8 sSuperMissileHUDGfx_Inactive[64] = INCBIN_U8("data/hud/super_missile_hud_inactive.gfx");
-const u8 sSuperMissileHUDGfx_Selected[64] = INCBIN_U8("data/hud/super_missile_hud_selected.gfx");
-const u8 sSuperMissileHUDGfx_Active[64] = INCBIN_U8("data/hud/super_missile_hud_active.gfx");
-const u8 sSuperMissileHUDGfx_Refill1[64] = INCBIN_U8("data/hud/super_missile_hud_refill_1.gfx");
-const u8 sSuperMissileHUDGfx_Refill2[64] = INCBIN_U8("data/hud/super_missile_hud_refill_2.gfx");
-const u8 sSuperMissileHUDGfx_Refill3[64] = INCBIN_U8("data/hud/super_missile_hud_refill_3.gfx");
+const u8 sSuperMissileHudGfx_Inactive[64] = INCBIN_U8("data/hud/super_missile_hud_inactive.gfx");
+const u8 sSuperMissileHudGfx_Selected[64] = INCBIN_U8("data/hud/super_missile_hud_selected.gfx");
+const u8 sSuperMissileHudGfx_Active[64] = INCBIN_U8("data/hud/super_missile_hud_active.gfx");
+const u8 sSuperMissileHudGfx_Refill1[64] = INCBIN_U8("data/hud/super_missile_hud_refill_1.gfx");
+const u8 sSuperMissileHudGfx_Refill2[64] = INCBIN_U8("data/hud/super_missile_hud_refill_2.gfx");
+const u8 sSuperMissileHudGfx_Refill3[64] = INCBIN_U8("data/hud/super_missile_hud_refill_3.gfx");
 
-const u8 sPowerBombHUDGfx_Inactive[64] = INCBIN_U8("data/hud/power_bomb_hud_inactive.gfx");
-const u8 sPowerBombHUDGfx_Selected[64] = INCBIN_U8("data/hud/power_bomb_hud_selected.gfx");
-const u8 sPowerBombHUDGfx_Active[64] = INCBIN_U8("data/hud/power_bomb_hud_active.gfx");
-const u8 sPowerBombHUDGfx_Refill1[64] = INCBIN_U8("data/hud/power_bomb_hud_refill_1.gfx");
-const u8 sPowerBombHUDGfx_Refill2[64] = INCBIN_U8("data/hud/power_bomb_hud_refill_2.gfx");
-const u8 sPowerBombHUDGfx_Refill3[64] = INCBIN_U8("data/hud/power_bomb_hud_refill_3.gfx");
+const u8 sPowerBombHudGfx_Inactive[64] = INCBIN_U8("data/hud/power_bomb_hud_inactive.gfx");
+const u8 sPowerBombHudGfx_Selected[64] = INCBIN_U8("data/hud/power_bomb_hud_selected.gfx");
+const u8 sPowerBombHudGfx_Active[64] = INCBIN_U8("data/hud/power_bomb_hud_active.gfx");
+const u8 sPowerBombHudGfx_Refill1[64] = INCBIN_U8("data/hud/power_bomb_hud_refill_1.gfx");
+const u8 sPowerBombHudGfx_Refill2[64] = INCBIN_U8("data/hud/power_bomb_hud_refill_2.gfx");
+const u8 sPowerBombHudGfx_Refill3[64] = INCBIN_U8("data/hud/power_bomb_hud_refill_3.gfx");
 
 const u8 sEnergyDigitsTensGfx[10 * 32] = INCBIN_U8("data/hud/energy_digits_tens.gfx");
 const u8 sEnergyDigitsOnesGfx[10 * 32] = INCBIN_U8("data/hud/energy_digits_ones.gfx");
@@ -63,6 +63,6 @@ const u8 sEnergyTanksRefillGfx_Ten[160 * 3] = INCBIN_U8("data/hud/energy_tanks_r
 const u8 sEnergyTanksRefillGfx_Eleven[160 * 3] = INCBIN_U8("data/hud/energy_tanks_refill_eleven.gfx");
 const u8 sEnergyTanksRefillGfx_Twelve[160 * 3] = INCBIN_U8("data/hud/energy_tanks_refill_twelve.gfx");
 
-const u8 sSuitlessHUDChargeBarGfx[56 * 256] = INCBIN_U8("data/hud/suitless_hud_bar.gfx");
+const u8 sSuitlessHudChargeBarGfx[56 * 256] = INCBIN_U8("data/hud/suitless_hud_bar.gfx");
 
 // 339aa8

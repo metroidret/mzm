@@ -40,7 +40,7 @@ void HudGenericResetRefillAnimations(void)
  * @brief 53cb0 | 120 | Resets the HUD data and the particles
  * 
  */
-void HudGenericResetHUDData(void)
+void HudGenericResetHudData(void)
 {
     struct ParticleEffect* pParticle;
 

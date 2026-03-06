@@ -56,10 +56,10 @@ static void FusionGalleryInit(void)
     }
 
     image = FUSION_GALLERY_DATA.currentImage;
-    LZ77UncompVRAM(sFusionGalleryData[image].pTopGfx, VRAM_BASE);
-    LZ77UncompVRAM(sFusionGalleryData[image].pBottomGfx, VRAM_BASE + 0x8000);
-    LZ77UncompVRAM(sFusionGalleryData[image].pTopTileTable, VRAM_BASE + 0xE000);
-    LZ77UncompVRAM(sFusionGalleryData[image].pBottomTileTable, VRAM_BASE + 0xF800);
+    LZ77UncompVram(sFusionGalleryData[image].pTopGfx, VRAM_BASE);
+    LZ77UncompVram(sFusionGalleryData[image].pBottomGfx, VRAM_BASE + 0x8000);
+    LZ77UncompVram(sFusionGalleryData[image].pTopTileTable, VRAM_BASE + 0xE000);
+    LZ77UncompVram(sFusionGalleryData[image].pBottomTileTable, VRAM_BASE + 0xF800);
 
     BitFill(3, 0x4FF04FF, VRAM_BASE + 0xE800, 0x800, 32);
     #ifdef REGION_EU

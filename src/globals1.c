@@ -296,9 +296,9 @@ IWRAM_DATA struct MusicInfo gMusicInfo = {};
 IWRAM_DATA u8 gUnk_3003760[12] = {};
 #endif
 
-IWRAM_DATA struct PSGSoundData gUnk_300376C[1] = {};
+IWRAM_DATA struct PsgSoundData gUnk_300376C[1] = {};
 
-IWRAM_DATA struct PSGSoundData gPsgSounds[4] = {};
+IWRAM_DATA struct PsgSoundData gPsgSounds[4] = {};
 IWRAM_DATA struct SoundChannelBackup gSoundChannelBackup[7] = {};
 IWRAM_DATA struct SoundChannelBackup gSoundChannelTrack2Backup[7] = {};
 IWRAM_DATA struct SoundQueue gSoundQueue[9] = {};

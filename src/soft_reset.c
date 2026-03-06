@@ -338,8 +338,8 @@ void SoftResetInit(void)
         DMA3_COPY_16(sLanguageSelectBgPal, PALRAM_BASE, COLORS_IN_PAL);
         SET_BACKDROP_COLOR(COLOR_BLACK);
 
-        LZ77UncompVRAM(sLanguageSelectGfx, VRAM_BASE);
-        LZ77UncompVRAM(sLanguageSelectTileTable, VRAM_BASE + 0xF800);
+        LZ77UncompVram(sLanguageSelectGfx, VRAM_BASE);
+        LZ77UncompVram(sLanguageSelectTileTable, VRAM_BASE + 0xF800);
 
         LanguageSelectChangeHighlight(TRUE, LANGUAGE_SELECT_DATA.selectedLanguage);
 

@@ -88,10 +88,10 @@ static void IntroInit(void)
 
     ClearGfxRam();
 
-    LZ77UncompVRAM(sIntroTextAndShipFlyingInGfx, VRAM_OBJ);
-    LZ77UncompVRAM(sIntroSpaceBackgroundGfx, VRAM_BASE);
-    LZ77UncompVRAM(sIntroSpaceBackgroundTileTable, VRAM_BASE + 0x8000);
-    LZ77UncompVRAM(sIntro_47920c, VRAM_BASE + 0x9000);
+    LZ77UncompVram(sIntroTextAndShipFlyingInGfx, VRAM_OBJ);
+    LZ77UncompVram(sIntroSpaceBackgroundGfx, VRAM_BASE);
+    LZ77UncompVram(sIntroSpaceBackgroundTileTable, VRAM_BASE + 0x8000);
+    LZ77UncompVram(sIntro_47920c, VRAM_BASE + 0x9000);
 
     #ifdef REGION_EU
     DmaTransfer(3, sIntroTextAndShipPal, PALRAM_OBJ, sizeof(sIntroTextAndShipPal), 16);
@@ -515,11 +515,11 @@ static u8 IntroSamusInHerShip(void)
     switch (INTRO_DATA.timer)
     {
         case 0:
-            LZ77UncompVRAM(sIntroSamusInHerShipGfx, VRAM_BASE);
+            LZ77UncompVram(sIntroSamusInHerShipGfx, VRAM_BASE);
             break;
 
         case DELTA_TIME * 1:
-            LZ77UncompVRAM(sIntroSamusInHerShipTileTable, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sIntroSamusInHerShipTileTable, VRAM_BASE + 0x8000);
             break;
 
         case DELTA_TIME * 2:
@@ -708,15 +708,15 @@ static u8 IntroViewOfZebes(void)
     switch (INTRO_DATA.timer)
     {
         case 0:
-            LZ77UncompVRAM(sIntroSamusShipViewOfZebesGfx, VRAM_BASE + 0x10800);
+            LZ77UncompVram(sIntroSamusShipViewOfZebesGfx, VRAM_BASE + 0x10800);
             break;
 
         case DELTA_TIME * 1:
-            LZ77UncompVRAM(sIntroViewOfZebesGfx, VRAM_BASE);
+            LZ77UncompVram(sIntroViewOfZebesGfx, VRAM_BASE);
             break;
 
         case DELTA_TIME * 2:
-            LZ77UncompVRAM(sIntroViewOfZebesTileTable, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sIntroViewOfZebesTileTable, VRAM_BASE + 0x8000);
             #ifdef REGION_EU
             DmaTransfer(3, sIntroViewOfZebesPal, PALRAM_BASE, sizeof(sIntroViewOfZebesPal), 16);
             DmaTransfer(3, sIntroViewOfZebesPal, PALRAM_OBJ, sizeof(sIntroViewOfZebesPal), 16);
@@ -773,7 +773,7 @@ static u8 IntroDefeat(void)
     switch (INTRO_DATA.timer++)
     {
         case 0:
-            LZ77UncompVRAM(sIntroTextAndShipFlyingInGfx, VRAM_OBJ);
+            LZ77UncompVram(sIntroTextAndShipFlyingInGfx, VRAM_OBJ);
             if (gLanguage != LANGUAGE_ENGLISH)
                 TextStartStory(STORY_TEXT_DEFEAT);
             break;
@@ -828,15 +828,15 @@ static u8 IntroMotherBrain(void)
     switch (INTRO_DATA.timer)
     {
         case 0:
-            LZ77UncompVRAM(sIntroFuzzGfx, VRAM_OBJ);
+            LZ77UncompVram(sIntroFuzzGfx, VRAM_OBJ);
             break;
 
         case 1 * DELTA_TIME:
-            LZ77UncompVRAM(sIntroMotherBrainGfx, VRAM_BASE);
+            LZ77UncompVram(sIntroMotherBrainGfx, VRAM_BASE);
             break;
 
         case 2 * DELTA_TIME:
-            LZ77UncompVRAM(sIntroMotherBrainTileTable, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sIntroMotherBrainTileTable, VRAM_BASE + 0x8000);
             gBg0XPosition = 0;
             gBg0YPosition = 0x60;
             break;

@@ -1794,7 +1794,7 @@ void SpriteLoadSpriteset(void)
 
         spriteId = PSPRITE_OFFSET_FOR_GRAPHICS(spriteId);
 
-        LZ77UncompVRAM(sSpritesGraphicsPointers[spriteId], VRAM_BASE + 0x14000 + gfxSlot * 2048);
+        LZ77UncompVram(sSpritesGraphicsPointers[spriteId], VRAM_BASE + 0x14000 + gfxSlot * 2048);
 
         ctrl_1 = ((u8*)sSpritesGraphicsPointers[spriteId])[1];
         ctrl_2 = ((u8*)sSpritesGraphicsPointers[spriteId])[2] << 8;
@@ -1812,7 +1812,7 @@ void SpriteLoadGfx(u8 spriteId, u8 row)
 {
     spriteId = PSPRITE_OFFSET_FOR_GRAPHICS(spriteId);
 
-    LZ77UncompVRAM(sSpritesGraphicsPointers[spriteId], VRAM_BASE + 0x14000 + (row * 0x800));
+    LZ77UncompVram(sSpritesGraphicsPointers[spriteId], VRAM_BASE + 0x14000 + (row * 0x800));
 }
 
 /**

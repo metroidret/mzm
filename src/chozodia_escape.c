@@ -429,13 +429,13 @@ static void ChozodiaEscapeInit(void)
 
     ClearGfxRam();
 
-    LZ77UncompVRAM(sCutsceneMotherShipEscapeShipParticlesGfx, VRAM_OBJ);
-    LZ77UncompVRAM(sCutsceneZebesMotherShipBackgroundGfx, VRAM_BASE);
-    LZ77UncompVRAM(sCutsceneZebesGroundGfx, BGCNT_TO_VRAM_CHAR_BASE(2));
-    LZ77UncompVRAM(sCutsceneZebesRockyBackgroundGfx, VRAM_BASE + 0xC800);
-    LZ77UncompVRAM(sCutsceneZebesGroundTileTable, VRAM_BASE + 0xA000);
-    LZ77UncompVRAM(sCutscene_3b5168_TileTable, VRAM_BASE + 0xA800);
-    LZ77UncompVRAM(sCutsceneZebesMotherShipBackgroundTileTable, VRAM_BASE + 0xB000);
+    LZ77UncompVram(sCutsceneMotherShipEscapeShipParticlesGfx, VRAM_OBJ);
+    LZ77UncompVram(sCutsceneZebesMotherShipBackgroundGfx, VRAM_BASE);
+    LZ77UncompVram(sCutsceneZebesGroundGfx, BGCNT_TO_VRAM_CHAR_BASE(2));
+    LZ77UncompVram(sCutsceneZebesRockyBackgroundGfx, VRAM_BASE + 0xC800);
+    LZ77UncompVram(sCutsceneZebesGroundTileTable, VRAM_BASE + 0xA000);
+    LZ77UncompVram(sCutscene_3b5168_TileTable, VRAM_BASE + 0xA800);
+    LZ77UncompVram(sCutsceneZebesMotherShipBackgroundTileTable, VRAM_BASE + 0xB000);
 
     #ifdef REGION_EU
     DmaTransfer(3, sCutsceneZebesPal, PALRAM_BASE, sizeof(sCutsceneZebesPal), 16);
@@ -785,20 +785,20 @@ static u8 ChozodiaEscapeShipBlowingUp(void)
     switch (CHOZODIA_ESCAPE_DATA.timer++)
     {
         case 0:
-            LZ77UncompVRAM(sChozodiaEscapeCraterBackgroundGfx, VRAM_BASE);
+            LZ77UncompVram(sChozodiaEscapeCraterBackgroundGfx, VRAM_BASE);
             break;
 
         case 1:
-            LZ77UncompVRAM(sMotherShipExplodingFlashGfx, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sMotherShipExplodingFlashGfx, VRAM_BASE + 0x8000);
             break;
 
         case 2:
-            LZ77UncompVRAM(sMotherShipBlowingUpExplosionsGfx, VRAM_OBJ);
+            LZ77UncompVram(sMotherShipBlowingUpExplosionsGfx, VRAM_OBJ);
             break;
 
         case 3:
-            LZ77UncompVRAM(sChozodiaEscapeCraterBackgroundTileTable, VRAM_BASE + 0xE800);
-            LZ77UncompVRAM(sMotherShipExplodingFlashTileTable, VRAM_BASE + 0xF000);
+            LZ77UncompVram(sChozodiaEscapeCraterBackgroundTileTable, VRAM_BASE + 0xE800);
+            LZ77UncompVram(sMotherShipExplodingFlashTileTable, VRAM_BASE + 0xF000);
 
             #ifdef REGION_EU
             DmaTransfer(3, sChozodiaEscapeShipExplodingPal, PALRAM_BASE, sizeof(sChozodiaEscapeShipExplodingPal) - PAL_ROW_SIZE * 2, 16);
@@ -966,22 +966,22 @@ static u8 ChozodiaEscapeShipLeavingPlanet(void)
     switch (CHOZODIA_ESCAPE_DATA.timer++)
     {
         case 0:
-            LZ77UncompVRAM(sChozodiaEscapeZebesAndSkyGfx, VRAM_BASE);
+            LZ77UncompVram(sChozodiaEscapeZebesAndSkyGfx, VRAM_BASE);
             PlayMusic(MUSIC_ESCAPE_SUCCESFUL, 0);
             break;
 
         case 1:
-            LZ77UncompVRAM(sChozodiaEscapeSamusInBlueShipGfx, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sChozodiaEscapeSamusInBlueShipGfx, VRAM_BASE + 0x8000);
             break;
 
         case 2:
-            LZ77UncompVRAM(sChozodiaEscapeBlueShipVeryCloseGfx, VRAM_OBJ);
+            LZ77UncompVram(sChozodiaEscapeBlueShipVeryCloseGfx, VRAM_OBJ);
             break;
 
         case 3:
-            LZ77UncompVRAM(sChozodiaEscapeZebesBackgroundTileTable, VRAM_BASE + 0xE800);
-            LZ77UncompVRAM(sChozodiaEscapeZebesSkyTileTable, VRAM_BASE + 0xF000);
-            LZ77UncompVRAM(sChozodiaEscapeSamusInBlueShipTileTable, VRAM_BASE + 0xF800);
+            LZ77UncompVram(sChozodiaEscapeZebesBackgroundTileTable, VRAM_BASE + 0xE800);
+            LZ77UncompVram(sChozodiaEscapeZebesSkyTileTable, VRAM_BASE + 0xF000);
+            LZ77UncompVram(sChozodiaEscapeSamusInBlueShipTileTable, VRAM_BASE + 0xF800);
             
             #ifdef REGION_EU
             DmaTransfer(3, sChozodiaEscapeMissionAccomplishedPal, PALRAM_BASE,
@@ -1128,7 +1128,7 @@ static u8 ChozodiaEscapeMissionAccomplished(void)
     {
         case 0:
             // Load graphics
-            LZ77UncompVRAM(sChozodiaEscapeMissionAccomplishedLettersGfx, VRAM_OBJ);
+            LZ77UncompVram(sChozodiaEscapeMissionAccomplishedLettersGfx, VRAM_OBJ);
 
             // Load the "correct" palette for samus in blue ship, makes her visible
             #ifdef REGION_EU

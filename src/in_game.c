@@ -498,7 +498,7 @@ void InitAndLoadGenerics(void)
     do {
     } while ((u16)(READ_16(REG_VCOUNT) - 21) < 140); // READ_16(REG_VCOUNT) <= SCREEN_SIZE_Y
 
-    HudGenericResetHUDData();
+    HudGenericResetHudData();
     SpriteLoadAllData();
     ProjectileCallLoadGraphicsAndClearProjectiles();
 

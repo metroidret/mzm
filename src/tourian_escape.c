@@ -514,8 +514,8 @@ static void TourianEscapeInit(void)
     DMA3_FILL_32(0, &gNonGameplayRam, sizeof(gNonGameplayRam));
     ClearGfxRam();
 
-    LZ77UncompVRAM(sMotherShipBlowingUpExplosionsGfx, VRAM_OBJ);
-    LZ77UncompVRAM(sTourianEscapeDebrisGfx, VRAM_BASE + 0x13000);
+    LZ77UncompVram(sMotherShipBlowingUpExplosionsGfx, VRAM_OBJ);
+    LZ77UncompVram(sTourianEscapeDebrisGfx, VRAM_BASE + 0x13000);
 
     #ifdef REGION_EU
     DmaTransfer(3, sMotherShipBlowingUpExplosionsPal, PALRAM_OBJ, sizeof(sMotherShipBlowingUpExplosionsPal), 16);
@@ -639,11 +639,11 @@ static u8 TourianEscapeZebesExploding(void)
             CallbackSetVblank(TourianEscapeVBlankZebesExploding);
             WRITE_16(REG_IME, TRUE);
 
-            LZ77UncompVRAM(sTourianEscapeZebesGfx, VRAM_BASE);
+            LZ77UncompVram(sTourianEscapeZebesGfx, VRAM_BASE);
             break;
 
         case 247:
-            LZ77UncompVRAM(sTourianEscapeZebesExplodingShipAndExplosionsGfx, VRAM_OBJ);
+            LZ77UncompVram(sTourianEscapeZebesExplodingShipAndExplosionsGfx, VRAM_OBJ);
             TOURIAN_ESCAPE_DATA.unk_2++;
             TOURIAN_ESCAPE_DATA.unk_5 = 0;
 
@@ -673,7 +673,7 @@ static u8 TourianEscapeZebesExploding(void)
             break;
 
         case 248:
-            LZ77UncompVRAM(sTourianEscapeZebesTileTable, VRAM_BASE + 0xF000);
+            LZ77UncompVram(sTourianEscapeZebesTileTable, VRAM_BASE + 0xF000);
 
             #ifdef REGION_EU
             DmaTransfer(3, sTourianEscapeExplodingPal, PALRAM_BASE, sizeof(sTourianEscapeExplodingPal), 16);
@@ -897,16 +897,16 @@ static u8 TourianEscapeSamusInHerShip(void)
     switch (TOURIAN_ESCAPE_DATA.timer++)
     {
         case 0:
-            LZ77UncompVRAM(sTourianEscapeSamusInHerShipSuitGfx, VRAM_BASE);
+            LZ77UncompVram(sTourianEscapeSamusInHerShipSuitGfx, VRAM_BASE);
             break;
 
         case 1:
-            LZ77UncompVRAM(sMotherShipExplodingFlashGfx, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sMotherShipExplodingFlashGfx, VRAM_BASE + 0x8000);
             break;
 
         case 2:
-            LZ77UncompVRAM(sTourianEscapeSamusInHerShipSuitTileTable, VRAM_BASE + 0x7000);
-            LZ77UncompVRAM(sMotherShipExplodingFlashTileTable, VRAM_BASE + 0xF000);
+            LZ77UncompVram(sTourianEscapeSamusInHerShipSuitTileTable, VRAM_BASE + 0x7000);
+            LZ77UncompVram(sMotherShipExplodingFlashTileTable, VRAM_BASE + 0xF000);
 
             if (gEquipment.suitMiscActivation & SMF_VARIA_SUIT)
             {
@@ -959,12 +959,12 @@ static u8 TourianEscapeSamusInHerShip(void)
             break;
 
         case 160:
-            LZ77UncompVRAM(sTourianEscapeSamusInHerShipSuitlessGfx, VRAM_BASE);
+            LZ77UncompVram(sTourianEscapeSamusInHerShipSuitlessGfx, VRAM_BASE);
             break;
 
         case 161:
-            LZ77UncompVRAM(sTourianEscapeSamusInHerShipSuitlessTileTable, VRAM_BASE + 0x7000);
-            LZ77UncompVRAM(sTourianEscapeSamusInHerShipSuitlessEyesOpenedTileTable, VRAM_BASE + 0x7800);
+            LZ77UncompVram(sTourianEscapeSamusInHerShipSuitlessTileTable, VRAM_BASE + 0x7000);
+            LZ77UncompVram(sTourianEscapeSamusInHerShipSuitlessEyesOpenedTileTable, VRAM_BASE + 0x7800);
 
             #ifdef REGION_EU
             DmaTransfer(3, sTourianEscapeSamusInHerShipSuitlessPal, PALRAM_BASE,
@@ -1070,11 +1070,11 @@ static u8 TourianEscapeSamusLookingAround(void)
     switch (TOURIAN_ESCAPE_DATA.timer++)
     {
         case 0:
-            LZ77UncompVRAM(sTourianEscapeSamusSamusInHerShipLookingGfx, VRAM_BASE);
+            LZ77UncompVram(sTourianEscapeSamusSamusInHerShipLookingGfx, VRAM_BASE);
             break;
 
         case 1:
-            LZ77UncompVRAM(sTourianEscapeSamusSamusInHerShipLookingGfx, VRAM_OBJ);
+            LZ77UncompVram(sTourianEscapeSamusSamusInHerShipLookingGfx, VRAM_OBJ);
 
             gWrittenToBldalpha_L = BLDALPHA_MAX_VALUE / 2;
             gWrittenToBldalpha_H = BLDALPHA_MAX_VALUE / 2;
@@ -1091,8 +1091,8 @@ static u8 TourianEscapeSamusLookingAround(void)
             break;
 
         case 2:
-            LZ77UncompVRAM(sTourianEscapeSamusSamusInHerShipLookingLeftTileTable, VRAM_BASE + 0x8000);
-            LZ77UncompVRAM(sTourianEscapeSamusSamusInHerShipLookingRightTileTable, VRAM_BASE + 0x8800);
+            LZ77UncompVram(sTourianEscapeSamusSamusInHerShipLookingLeftTileTable, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sTourianEscapeSamusSamusInHerShipLookingRightTileTable, VRAM_BASE + 0x8800);
 
             #ifdef REGION_EU
             DmaTransfer(3, sTourianEscapeSamusLookingAroundPal, PALRAM_BASE,
@@ -1158,16 +1158,16 @@ static u8 TourianEscapeSamusSurrounded(void)
     switch (TOURIAN_ESCAPE_DATA.timer++)
     {
         case 0:
-            LZ77UncompVRAM(sTourianEscapeSamusSurroundedBackgroundGfx, VRAM_BASE);
+            LZ77UncompVram(sTourianEscapeSamusSurroundedBackgroundGfx, VRAM_BASE);
             break;
 
         case 1:
-            LZ77UncompVRAM(sTourianEscape_49cb90, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sTourianEscape_49cb90, VRAM_BASE + 0x8000);
             break;
 
         case 2:
-            LZ77UncompVRAM(sTourianEscapeSamusSurroundedBackgroundTileTable, VRAM_BASE + 0x7000);
-            LZ77UncompVRAM(sTourianEscape_49fb70, VRAM_BASE + 0x7800);
+            LZ77UncompVram(sTourianEscapeSamusSurroundedBackgroundTileTable, VRAM_BASE + 0x7000);
+            LZ77UncompVram(sTourianEscape_49fb70, VRAM_BASE + 0x7800);
 
             #ifdef REGION_EU
             DmaTransfer(3, sTourianEscapeSamusSurroundedPal, PALRAM_BASE, sizeof(sTourianEscapeSamusSurroundedPal), 16);
@@ -1243,16 +1243,16 @@ static u8 TourianEscapeSamusFlyingIn(void)
             CallbackSetVblank(TourianEscapeVBlankZebesExploding);
             WRITE_16(REG_IME, TRUE);
 
-            LZ77UncompVRAM(sIntroTextAndShipFlyingInGfx, VRAM_OBJ);
+            LZ77UncompVram(sIntroTextAndShipFlyingInGfx, VRAM_OBJ);
             SoundPlay(SOUND_TOURIAN_ESCAPE_SAMUS_FLYING_IN);
             break;
 
         case 1:
-            LZ77UncompVRAM(sIntroSpaceBackgroundGfx, VRAM_BASE);
+            LZ77UncompVram(sIntroSpaceBackgroundGfx, VRAM_BASE);
             break;
 
         case 2:
-            LZ77UncompVRAM(sIntroSpaceBackgroundTileTable, VRAM_BASE + 0xF000);
+            LZ77UncompVram(sIntroSpaceBackgroundTileTable, VRAM_BASE + 0xF000);
 
             #ifdef REGION_EU
             DmaTransfer(3, sIntroTextAndShipPal, PALRAM_BASE, sizeof(sIntroTextAndShipPal) + PAL_ROW_SIZE, 16);
@@ -1328,15 +1328,15 @@ static u8 TourianEscapeSamusChasedByPirates(void)
     switch (TOURIAN_ESCAPE_DATA.timer++)
     {
         case 0:
-            LZ77UncompVRAM(sTourianEscapeSamusChasedBackgroundGfx, VRAM_BASE);
+            LZ77UncompVram(sTourianEscapeSamusChasedBackgroundGfx, VRAM_BASE);
             break;
 
         case 1:
-            LZ77UncompVRAM(sTourianEscapeSamusSamusChasedShipsGfx, VRAM_OBJ);
+            LZ77UncompVram(sTourianEscapeSamusSamusChasedShipsGfx, VRAM_OBJ);
             break;
 
         case 2:
-            LZ77UncompVRAM(sTourianEscapeSamusChasedBackgroundTileTable, VRAM_BASE + 0xE000);
+            LZ77UncompVram(sTourianEscapeSamusChasedBackgroundTileTable, VRAM_BASE + 0xE000);
 
             #ifdef REGION_EU
             DmaTransfer(3, sTourianEscapeSamusChasedBackgroundPal, PALRAM_BASE,
@@ -1535,7 +1535,7 @@ static u8 TourianEscapeSamusChasedByPiratesFiring(void)
     switch (TOURIAN_ESCAPE_DATA.timer++)
     {
         case 0:
-            LZ77UncompVRAM(sTourianEscapeShipsAndProjectilesGfx, VRAM_OBJ);
+            LZ77UncompVram(sTourianEscapeShipsAndProjectilesGfx, VRAM_OBJ);
             break;
 
         case 1:
@@ -1768,17 +1768,17 @@ static u8 TourianEscapeSamusGettingShot(void)
     switch (TOURIAN_ESCAPE_DATA.timer++)
     {
         case 0:
-            LZ77UncompVRAM(sTourianEscapeSamusGettingShotGfx, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sTourianEscapeSamusGettingShotGfx, VRAM_BASE + 0x8000);
             break;
 
         case 1:
-            LZ77UncompVRAM(sTourianEscapeSamusGettingShotShipGfx, VRAM_OBJ);
+            LZ77UncompVram(sTourianEscapeSamusGettingShotShipGfx, VRAM_OBJ);
             TOURIAN_ESCAPE_DATA.bldcnt = BLDCNT_SCREEN_FIRST_TARGET | BLDCNT_BRIGHTNESS_DECREASE_EFFECT;
             gWrittenToBldy_NonGameplay = BLDY_MAX_VALUE;
             break;
 
         case 2:
-            LZ77UncompVRAM(sTourianEscapeSamusGettingShotTileTable, VRAM_BASE + 0xF000);
+            LZ77UncompVram(sTourianEscapeSamusGettingShotTileTable, VRAM_BASE + 0xF000);
             #ifdef REGION_EU
             DmaTransfer(3, sTourianEscapeSamusGettingShotPal, PALRAM_OBJ, sizeof(sTourianEscapeSamusGettingShotPal), 16);
             #else // !REGION_EU
@@ -1996,11 +1996,11 @@ static u8 TourianEscapeSamusGoingToCrash(void)
     switch (TOURIAN_ESCAPE_DATA.timer++)
     {
         case 0:
-            LZ77UncompVRAM(sTourianEscapeZebesGfx, VRAM_BASE);
+            LZ77UncompVram(sTourianEscapeZebesGfx, VRAM_BASE);
             break;
 
         case 1:
-            LZ77UncompVRAM(sTourianEscapeShipGoingToCrashGfx, VRAM_OBJ);
+            LZ77UncompVram(sTourianEscapeShipGoingToCrashGfx, VRAM_OBJ);
             gBg0XPosition = 16;
             gBg0YPosition = 0;
 
@@ -2009,7 +2009,7 @@ static u8 TourianEscapeSamusGoingToCrash(void)
             break;
 
         case 2:
-            LZ77UncompVRAM(sTourianEscapeZebesTileTable, VRAM_BASE + 0xF000);
+            LZ77UncompVram(sTourianEscapeZebesTileTable, VRAM_BASE + 0xF000);
 
             #ifdef REGION_EU
             DmaTransfer(3, sTourianEscapeExplodingPal, PALRAM_BASE,
@@ -2079,20 +2079,20 @@ static u8 TourianEscapeSamusCrashing(void)
     switch (TOURIAN_ESCAPE_DATA.timer++)
     {
         case 0:
-            LZ77UncompVRAM(sTourianEscapeShipCrashingForegroundGfx, VRAM_BASE);
+            LZ77UncompVram(sTourianEscapeShipCrashingForegroundGfx, VRAM_BASE);
             break;
 
         case 1:
-            LZ77UncompVRAM(sTourianEscapeShipCrashingExplosionGfx, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sTourianEscapeShipCrashingExplosionGfx, VRAM_BASE + 0x8000);
             break;
 
         case 2:
-            LZ77UncompVRAM(sTourianEscapeShipCrashingBackgroundAndShipGfx, VRAM_OBJ);
+            LZ77UncompVram(sTourianEscapeShipCrashingBackgroundAndShipGfx, VRAM_OBJ);
             break;
 
         case 3:
-            LZ77UncompVRAM(sTourianEscapeShipCrashingForegroundTileTable, VRAM_BASE + 0x7000);
-            LZ77UncompVRAM(sTourianEscapeShipCrashingExplosionTileTable, VRAM_BASE + 0xF000);
+            LZ77UncompVram(sTourianEscapeShipCrashingForegroundTileTable, VRAM_BASE + 0x7000);
+            LZ77UncompVram(sTourianEscapeShipCrashingExplosionTileTable, VRAM_BASE + 0xF000);
 
             #ifdef REGION_EU
             DmaTransfer(3, sTourianEscapeSamusCrashingForegroundPal, PALRAM_BASE,
@@ -2199,21 +2199,21 @@ static u8 TourianEscapeSamusLookingAtSky(void)
     switch (TOURIAN_ESCAPE_DATA.timer++)
     {
         case 0:
-            LZ77UncompVRAM(sTourianEscapeSamusLookingAtSkyGfx, VRAM_BASE);
+            LZ77UncompVram(sTourianEscapeSamusLookingAtSkyGfx, VRAM_BASE);
             break;
 
         case 1:
-            LZ77UncompVRAM(sTourianEscapeSamusLookingAtSkySkyBackgroundGfx, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sTourianEscapeSamusLookingAtSkySkyBackgroundGfx, VRAM_BASE + 0x8000);
             break;
 
         case 2:
-            LZ77UncompVRAM(sTourianEscapeSamusLookingAtSkyPiratesShipGfx, VRAM_OBJ);
+            LZ77UncompVram(sTourianEscapeSamusLookingAtSkyPiratesShipGfx, VRAM_OBJ);
             break;
 
         case 3:
-            LZ77UncompVRAM(sTourianEscapeSamusLookingAtSkySkyBackgroundTileTable, VRAM_BASE + 0xE000);
-            LZ77UncompVRAM(sTourianEscapeSamusLookingAtSkyTopTileTable, VRAM_BASE + 0xF000);
-            LZ77UncompVRAM(sTourianEscapeSamusLookingAtSkyBottomTileTable, VRAM_BASE + 0xF800);
+            LZ77UncompVram(sTourianEscapeSamusLookingAtSkySkyBackgroundTileTable, VRAM_BASE + 0xE000);
+            LZ77UncompVram(sTourianEscapeSamusLookingAtSkyTopTileTable, VRAM_BASE + 0xF000);
+            LZ77UncompVram(sTourianEscapeSamusLookingAtSkyBottomTileTable, VRAM_BASE + 0xF800);
 
             #ifdef REGION_EU
             DmaTransfer(3, sTourianEscapeSamusLookingAtSkyPal, PALRAM_BASE, sizeof(sTourianEscapeSamusLookingAtSkyPal), 16);
@@ -2324,16 +2324,16 @@ static u8 TourianEscapeSamusLookingAtMotherShip(void)
     switch (TOURIAN_ESCAPE_DATA.timer++)
     {
         case 0:
-            LZ77UncompVRAM(sTourianEscapeSamusLookingAtMotherShipGfx, VRAM_BASE);
+            LZ77UncompVram(sTourianEscapeSamusLookingAtMotherShipGfx, VRAM_BASE);
             break;
 
         case 1:
-            LZ77UncompVRAM(sTourianEscapeSamusLookingAtMotherShipMotherShipGfx, VRAM_BASE + 0x8000);
+            LZ77UncompVram(sTourianEscapeSamusLookingAtMotherShipMotherShipGfx, VRAM_BASE + 0x8000);
             break;
 
         case 2:
-            LZ77UncompVRAM(sTourianEscapeSamusLookingAtMotherShipTileTable, VRAM_BASE + 0x7000);
-            LZ77UncompVRAM(sTourianEscapeSamusLookingAtMotherShipMotherShipTileTable, VRAM_BASE + 0xF000);
+            LZ77UncompVram(sTourianEscapeSamusLookingAtMotherShipTileTable, VRAM_BASE + 0x7000);
+            LZ77UncompVram(sTourianEscapeSamusLookingAtMotherShipMotherShipTileTable, VRAM_BASE + 0xF000);
 
             #ifdef REGION_EU
             DmaTransfer(3, sTourianEscapeSamusLookingAtMotherShipPal, PALRAM_BASE,
@@ -2348,7 +2348,7 @@ static u8 TourianEscapeSamusLookingAtMotherShip(void)
 
         case 3:
             BitFill(3, 0, VRAM_OBJ, 0x8000, 32);
-            LZ77UncompVRAM(sTourianEscapeRainGfx, VRAM_OBJ);
+            LZ77UncompVram(sTourianEscapeRainGfx, VRAM_OBJ);
             #ifdef REGION_EU
             DmaTransfer(3, sTourianEscapeRainPal, PALRAM_OBJ, sizeof(sTourianEscapeRainPal), 16);
             DmaTransfer(3, sStoryTextCutscenePal, PALRAM_OBJ + 15 * PAL_ROW_SIZE, sizeof(sStoryTextCutscenePal), 16);

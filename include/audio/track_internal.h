@@ -15,7 +15,7 @@ void unk_4f10(struct TrackVariables* pVariables);
 void unk_4f8c(struct SoundChannel* pChannel, struct TrackVariables* pVariables, s32 param_3);
 void AudioCommand_Goto(struct TrackVariables* pVariables);
 void AudioCommand_PatternPlay(struct TrackVariables* pVariables);
-void UploadSampleToWaveRAM(const u32* pSample);
-void unk_5104(struct PSGSoundData* pSound);
+void UploadSampleToWaveRam(const u32* pSample);
+void unk_5104(struct PsgSoundData* pSound);
 
 #endif /* TRACK_INTERNAL_H */

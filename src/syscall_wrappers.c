@@ -4,12 +4,12 @@
 
 void CallLZ77UncompVram(const void *src, void *dst)
 {
-    LZ77UncompVRAM(src, dst);
+    LZ77UncompVram(src, dst);
 }
 
 void CallLZ77UncompWram(const void *src, void *dst)
 {
-    LZ77UncompWRAM(src, dst);
+    LZ77UncompWram(src, dst);
 }
 
 void TestDivarmSqrt(void)

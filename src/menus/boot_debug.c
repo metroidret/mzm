@@ -659,8 +659,8 @@ void BootDebugSetupMenu(void)
     gBg2VOFS_NonGameplay = BLOCK_TO_SUB_PIXEL(BOOT_DEBUG_DATA.bg2vofs) - QUARTER_BLOCK_SIZE;
     gBg2HOFS_NonGameplay = -(BLOCK_SIZE * 5 + HALF_BLOCK_SIZE);
     
-    LZ77UncompVRAM(sBootDebugObjGfx, VRAM_OBJ);
-    LZ77UncompVRAM(sBootDebugBgGfx, VRAM_BASE);
+    LZ77UncompVram(sBootDebugObjGfx, VRAM_OBJ);
+    LZ77UncompVram(sBootDebugBgGfx, VRAM_BASE);
 
     #ifdef REGION_EU
     DmaTransfer(3, sMinimapTilesGfx, BGCNT_TO_VRAM_CHAR_BASE(1), 0x3000, 16);

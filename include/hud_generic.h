@@ -9,6 +9,6 @@
 
 void HudGenericLoadCommonSpriteGfx(void);
 void HudGenericResetRefillAnimations(void);
-void HudGenericResetHUDData(void);
+void HudGenericResetHudData(void);
 
 #endif /* HUD_GENERIC_H */

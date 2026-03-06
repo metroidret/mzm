@@ -41,7 +41,7 @@ void SramWrite(u8* src, u8* dest, u32 size)
         *dest++ = *src++;
 }
 
-static u8* SRAMCheckInternal(u8* src, u8* dest, u32 size)
+static u8* SramCheckInternal(u8* src, u8* dest, u32 size)
 {
     while (size-- != 0)
     {
@@ -62,11 +62,11 @@ u8* SramCheck(u8* src, u8* dest, u32 size)
 
     WRITE_16(REG_WAITCNT, READ_16(REG_WAITCNT) & ~WAIT_SRAM_CYCLES_MASK | WAIT_SRAM_8CYCLES);
 
-    func_ptr = (u16*)SRAMCheckInternal;
+    func_ptr = (u16*)SramCheckInternal;
     func_ptr = (u16*)((u32)func_ptr & ~1);
     code_ptr = code;
 
-    for (csize = ((u32)SramCheck - (u32)SRAMCheckInternal) / 2; csize > 0; --csize)
+    for (csize = ((u32)SramCheck - (u32)SramCheckInternal) / 2; csize > 0; --csize)
         *code_ptr++ = *func_ptr++;
 
     func = (void* (*)(u8*, u8*, u32))code + 1;

@@ -133,7 +133,7 @@ void TitleScreenSetBGCNTPageData(const struct TitleScreenPageData* const pPageDa
  */
 void TitleScreenLoadPageData(const struct TitleScreenPageData* const pPageData)
 {
-    LZ77UncompVRAM(pPageData->tiletablePointer, VRAM_BASE + pPageData->tiletablePage * 0x800);
+    LZ77UncompVram(pPageData->tiletablePointer, VRAM_BASE + pPageData->tiletablePage * 0x800);
 }
 
 /**
@@ -143,7 +143,7 @@ void TitleScreenLoadPageData(const struct TitleScreenPageData* const pPageData)
  */
 void TitleScreenLoadPageData_Copy(const struct TitleScreenPageData* const pPageData)
 {
-    LZ77UncompVRAM(pPageData->tiletablePointer, VRAM_BASE + pPageData->tiletablePage * 0x800);
+    LZ77UncompVram(pPageData->tiletablePointer, VRAM_BASE + pPageData->tiletablePage * 0x800);
 }
 
 /**

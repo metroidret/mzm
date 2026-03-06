@@ -5,12 +5,12 @@
 
     thumb_func_start CpuFastSet
 CpuFastSet: @ 0x08005190
-    swi SYSCALL_CPUSetFast
+    swi SYSCALL_CpuSetFast
     bx lr
 
     thumb_func_start CpuSet
 CpuSet: @ 0x08005194
-    swi SYSCALL_CPUSet
+    swi SYSCALL_CpuSet
     bx lr
 
     thumb_func_start DivarmDiv
@@ -24,19 +24,19 @@ DivarmMod: @ 0x0800519c
     adds r0, r1, 0
     bx lr
 
-    thumb_func_start LZ77UncompVRAM
-LZ77UncompVRAM: @ 0x080051a4
-    swi SYSCALL_LZ77UnCompVRAM
+    thumb_func_start LZ77UncompVram
+LZ77UncompVram: @ 0x080051a4
+    swi SYSCALL_LZ77UnCompVram
     bx lr
 
-    thumb_func_start LZ77UncompWRAM
-LZ77UncompWRAM: @ 0x080051a8
-    swi SYSCALL_LZ77UnCompWRAM
+    thumb_func_start LZ77UncompWram
+LZ77UncompWram: @ 0x080051a8
+    swi SYSCALL_LZ77UnCompWram
     bx lr
 
     thumb_func_start MidiKey2Freq
 MidiKey2Freq: @ 0x080051ac
-    swi SYSCALL_MIDIKey2Freq
+    swi SYSCALL_MidiKey2Freq
     bx lr
 
     thumb_func_start Multiboot

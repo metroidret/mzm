@@ -130,9 +130,9 @@ void unk_34ac(u8 isInterrupting)
                 {
                     if (!(pVariables->channel & 0xC0))
                     {
-                        if (pVariables->pSoundPSG != NULL)
+                        if (pVariables->pSoundPsg != NULL)
                         {
-                            ClearRegistersForPsg(pVariables->pSoundPSG, (u8)((pVariables->channel & 7) - 1));
+                            ClearRegistersForPsg(pVariables->pSoundPsg, (u8)((pVariables->channel & 7) - 1));
                         }
 
                         if (pVariables->pChannel == NULL)
@@ -975,8 +975,8 @@ void BackupTrackData2SoundChannels(void)
             {
                 if (!(pVariables->channel & 0xC0))
                 {
-                    if (pVariables->pSoundPSG)
-                        ClearRegistersForPsg(pVariables->pSoundPSG, (pVariables->channel & 7) - 1);
+                    if (pVariables->pSoundPsg)
+                        ClearRegistersForPsg(pVariables->pSoundPsg, (pVariables->channel & 7) - 1);
 
                     if (pVariables->pChannel)
                     {

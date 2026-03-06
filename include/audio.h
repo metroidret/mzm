@@ -29,7 +29,7 @@ void AudioCommand_Tune(struct TrackVariables* pVariables);
 void AudioCommand_ExtendCommand(struct TrackVariables* pVariables);
 void AudioCommand_EndOfTie(struct TrackVariables* pVariables);
 void Music_EmptyCommand(struct TrackVariables* pVariables);
-void ClearRegistersForPsg(struct PSGSoundData* pSound, u8 channel);
-void ClearRegistersForPsg_Unused(struct PSGSoundData* pSound, u8 channel);
+void ClearRegistersForPsg(struct PsgSoundData* pSound, u8 channel);
+void ClearRegistersForPsg_Unused(struct PsgSoundData* pSound, u8 channel);
 
 #endif /* AUDIO_H */

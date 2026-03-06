@@ -395,17 +395,17 @@ static void EraseSramInit(void)
     
     SET_BACKDROP_COLOR(COLOR_BLACK);
 
-    LZ77UncompVRAM(sEraseSramMenuFirstBoxGfx, VRAM_BASE + 0x1000);
-    LZ77UncompVRAM(sEraseSramMenuObjectsGfx, VRAM_BASE + 0x12000);
-    LZ77UncompVRAM(sTitleScreenSpaceBackgroundDecorationGfx, VRAM_BASE + 0x1800);
-    LZ77UncompVRAM(sTitleScreenSpaceAndGroundBackgroundGfx, VRAM_BASE + 0x3400);
+    LZ77UncompVram(sEraseSramMenuFirstBoxGfx, VRAM_BASE + 0x1000);
+    LZ77UncompVram(sEraseSramMenuObjectsGfx, VRAM_BASE + 0x12000);
+    LZ77UncompVram(sTitleScreenSpaceBackgroundDecorationGfx, VRAM_BASE + 0x1800);
+    LZ77UncompVram(sTitleScreenSpaceAndGroundBackgroundGfx, VRAM_BASE + 0x3400);
 
-    LZ77UncompVRAM(sEraseSramTextGfxPointers[ERASE_SRAM_DATA.language][0], VRAM_BASE);
-    LZ77UncompVRAM(sEraseSramTextGfxPointers[ERASE_SRAM_DATA.language][1], VRAM_BASE + 0x11000);
-    LZ77UncompVRAM(sEraseSramTextGfxPointers[ERASE_SRAM_DATA.language][0], VRAM_OBJ);
+    LZ77UncompVram(sEraseSramTextGfxPointers[ERASE_SRAM_DATA.language][0], VRAM_BASE);
+    LZ77UncompVram(sEraseSramTextGfxPointers[ERASE_SRAM_DATA.language][1], VRAM_BASE + 0x11000);
+    LZ77UncompVram(sEraseSramTextGfxPointers[ERASE_SRAM_DATA.language][0], VRAM_OBJ);
 
-    LZ77UncompVRAM(sEraseSramMenuBoxTileTable, VRAM_BASE + 0xD000);
-    LZ77UncompVRAM(sEraseSramMenuBackgroundTileTable, VRAM_BASE + 0xF000);
+    LZ77UncompVram(sEraseSramMenuBoxTileTable, VRAM_BASE + 0xD000);
+    LZ77UncompVram(sEraseSramMenuBackgroundTileTable, VRAM_BASE + 0xF000);
 
     WRITE_16(REG_BG0CNT, 0);
     WRITE_16(REG_BG2CNT, 0);

@@ -70,7 +70,7 @@ struct SoundChannelBackup {
     struct SoundChannel channel;
 };
 
-struct PSGSoundData {
+struct PsgSoundData {
     u8 unk_0;
     u8 unk_1;
     u8 unk_2;
@@ -149,7 +149,7 @@ struct TrackVariables {
     struct Envelope envelope2;
 
     struct SoundChannel* pChannel;
-    struct PSGSoundData* pSoundPSG;
+    struct PsgSoundData* pSoundPsg;
 };
 
 struct TrackData {
@@ -309,7 +309,7 @@ extern u8 gSoundCodeB[164];
 extern SoundCodeCFunc_T gSoundCodeCPointer;
 extern u8 gSoundCodeC[176];
 
-extern struct PSGSoundData gUnk_300376C[];
-extern struct PSGSoundData gPsgSounds[4];
+extern struct PsgSoundData gUnk_300376C[];
+extern struct PsgSoundData gPsgSounds[4];
 
 #endif /* AUDIO_STRUCT_H */

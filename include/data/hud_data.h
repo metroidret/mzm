@@ -14,26 +14,26 @@ extern const u32 sCommonSpritesGfx[3584];
 extern const u8 sMissileDigitsGfx[2304];
 extern const u8 sPowerBombDigitsGfx[2304];
 
-extern const u8 sMissileHUDGfx_Inactive[64];
-extern const u8 sMissileHUDGfx_Selected[64];
-extern const u8 sMissileHUDGfx_Active[64];
-extern const u8 sMissileHUDGfx_Refill1[64];
-extern const u8 sMissileHUDGfx_Refill2[64];
-extern const u8 sMissileHUDGfx_Refill3[64];
+extern const u8 sMissileHudGfx_Inactive[64];
+extern const u8 sMissileHudGfx_Selected[64];
+extern const u8 sMissileHudGfx_Active[64];
+extern const u8 sMissileHudGfx_Refill1[64];
+extern const u8 sMissileHudGfx_Refill2[64];
+extern const u8 sMissileHudGfx_Refill3[64];
 
-extern const u8 sSuperMissileHUDGfx_Inactive[64];
-extern const u8 sSuperMissileHUDGfx_Selected[64];
-extern const u8 sSuperMissileHUDGfx_Active[64];
-extern const u8 sSuperMissileHUDGfx_Refill1[64];
-extern const u8 sSuperMissileHUDGfx_Refill2[64];
-extern const u8 sSuperMissileHUDGfx_Refill3[64];
+extern const u8 sSuperMissileHudGfx_Inactive[64];
+extern const u8 sSuperMissileHudGfx_Selected[64];
+extern const u8 sSuperMissileHudGfx_Active[64];
+extern const u8 sSuperMissileHudGfx_Refill1[64];
+extern const u8 sSuperMissileHudGfx_Refill2[64];
+extern const u8 sSuperMissileHudGfx_Refill3[64];
 
-extern const u8 sPowerBombHUDGfx_Inactive[64];
-extern const u8 sPowerBombHUDGfx_Selected[64];
-extern const u8 sPowerBombHUDGfx_Active[64];
-extern const u8 sPowerBombHUDGfx_Refill1[64];
-extern const u8 sPowerBombHUDGfx_Refill2[64];
-extern const u8 sPowerBombHUDGfx_Refill3[64];
+extern const u8 sPowerBombHudGfx_Inactive[64];
+extern const u8 sPowerBombHudGfx_Selected[64];
+extern const u8 sPowerBombHudGfx_Active[64];
+extern const u8 sPowerBombHudGfx_Refill1[64];
+extern const u8 sPowerBombHudGfx_Refill2[64];
+extern const u8 sPowerBombHudGfx_Refill3[64];
 
 extern const u8 sEnergyDigitsTensGfx[10 * 32];
 extern const u8 sEnergyDigitsOnesGfx[10 * 32];
@@ -68,7 +68,7 @@ extern const u8 sEnergyTanksRefillGfx_Ten[160 * 3];
 extern const u8 sEnergyTanksRefillGfx_Eleven[160 * 3];
 extern const u8 sEnergyTanksRefillGfx_Twelve[160 * 3];
 
-extern const u8 sSuitlessHUDChargeBarGfx[SUITLESS_BAR_NBR_ELEMS * SUITLESS_BAR_SIZE];
+extern const u8 sSuitlessHudChargeBarGfx[SUITLESS_BAR_NBR_ELEMS * SUITLESS_BAR_SIZE];
 
 // 8339aa8
 
