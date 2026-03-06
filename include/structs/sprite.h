@@ -124,7 +124,7 @@ struct BossWork {
 
 extern u16 gAlarmTimer;
 extern struct SpriteData gSpriteData[MAX_AMOUNT_OF_SPRITES];
-extern u8 gSpritesetSpritesID[MAX_AMOUNT_OF_SPRITE_TYPES];
+extern u8 gSpritesetSpritesId[MAX_AMOUNT_OF_SPRITE_TYPES];
 extern u8 gSpritesetGfxSlots[MAX_AMOUNT_OF_SPRITE_TYPES];
 extern struct SubSpriteData gSubSpriteData1;
 extern struct SubSpriteData gSubSpriteData2;

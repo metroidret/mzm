@@ -419,7 +419,7 @@ u32 PauseScreenMapDownloadInstantWithLine_Unused(void)
             if (PAUSE_SCREEN_DATA.downloadTimer > CONVERT_SECONDS(2.f / 15))
             {
                 // Setup line
-                PAUSE_SCREEN_DATA.miscOam[2].oamID = MISC_OAM_ID_MAP_DOWNLOAD_LINE;
+                PAUSE_SCREEN_DATA.miscOam[2].oamId = MISC_OAM_ID_MAP_DOWNLOAD_LINE;
                 PAUSE_SCREEN_DATA.miscOam[2].animationDurationCounter = 0;
                 PAUSE_SCREEN_DATA.miscOam[2].currentAnimationFrame = 0;
                 PAUSE_SCREEN_DATA.miscOam[2].xPosition = BLOCK_SIZE * 7 + QUARTER_BLOCK_SIZE;
@@ -493,7 +493,7 @@ u32 PauseScreenMapDownload(void)
                 break;
 
             // Setup line
-            PAUSE_SCREEN_DATA.miscOam[2].oamID = MISC_OAM_ID_MAP_DOWNLOAD_LINE;
+            PAUSE_SCREEN_DATA.miscOam[2].oamId = MISC_OAM_ID_MAP_DOWNLOAD_LINE;
             PAUSE_SCREEN_DATA.miscOam[2].animationDurationCounter = 0;
             PAUSE_SCREEN_DATA.miscOam[2].currentAnimationFrame = 0;
             PAUSE_SCREEN_DATA.miscOam[2].xPosition = BLOCK_SIZE * 7 + QUARTER_BLOCK_SIZE;
@@ -506,7 +506,7 @@ u32 PauseScreenMapDownload(void)
             // Setup line trails
             for (i = 3; i >= 0; i--)
             {
-                PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].oamID = 0;
+                PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].oamId = 0;
                 PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].animationDurationCounter = 0;
                 PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].currentAnimationFrame = 0;
                 PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].xPosition = BLOCK_SIZE * 7 + QUARTER_BLOCK_SIZE;
@@ -560,7 +560,7 @@ u32 PauseScreenMapDownload(void)
                         PAUSE_SCREEN_DATA.currentDownloadedLine = 0;
 
                     // Check reveal the boss icon of the area if the line is at the bottom of it (hence the + 2)
-                    if (PAUSE_SCREEN_DATA.bossIconOam[0].oamID != 0 && PAUSE_SCREEN_DATA.currentDownloadedLine
+                    if (PAUSE_SCREEN_DATA.bossIconOam[0].oamId != 0 && PAUSE_SCREEN_DATA.currentDownloadedLine
                         == sBossIcons[PAUSE_SCREEN_DATA.currentArea][3] + 2)
                         PAUSE_SCREEN_DATA.bossIconOam[0].notDrawn = FALSE;
                 }
@@ -588,7 +588,7 @@ u32 PauseScreenMapDownload(void)
                 PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].yPosition = PAUSE_SCREEN_DATA.miscOam[2].yPosition - 4;
 
                 // Setup trail
-                PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].oamID = MISC_OAM_ID_MAP_DOWNLOAD_LINE_TRAIL;
+                PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].oamId = MISC_OAM_ID_MAP_DOWNLOAD_LINE_TRAIL;
                 PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].animationDurationCounter = 0;
                 PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].currentAnimationFrame = 0;
                 PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].exists = TRUE;
@@ -622,7 +622,7 @@ u32 PauseScreenMapDownload(void)
 
         case 5:
             // Kill line
-            PAUSE_SCREEN_DATA.miscOam[2].oamID = 0;
+            PAUSE_SCREEN_DATA.miscOam[2].oamId = 0;
             PAUSE_SCREEN_DATA.miscOam[2].animationDurationCounter = 0;
             PAUSE_SCREEN_DATA.miscOam[2].currentAnimationFrame = 0;
             PAUSE_SCREEN_DATA.miscOam[2].exists = FALSE;
@@ -631,7 +631,7 @@ u32 PauseScreenMapDownload(void)
             for (i = ARRAY_SIZE(sMapDownloadLineTrailOamOffsets); i > 0; )
             {
                 i--;
-                PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].oamID = 0;
+                PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].oamId = 0;
                 PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].animationDurationCounter = 0;
                 PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].currentAnimationFrame = 0;
                 PAUSE_SCREEN_DATA.miscOam[sMapDownloadLineTrailOamOffsets[i]].exists = FALSE;

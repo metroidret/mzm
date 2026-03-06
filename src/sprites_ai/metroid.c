@@ -878,8 +878,8 @@ static void MetroidDeath(void)
     u8 rng;
     u16 yPosition;
     u16 xPosition;
-    u8 metroidID;
-    u8 frozenID;
+    u8 metroidId;
+    u8 frozenId;
     u16 exists;
     u8 secondary;
     u8 pose;
@@ -896,8 +896,8 @@ static void MetroidDeath(void)
     // Kill sprite
     SpriteUtilSpriteDeath(DEATH_NORMAL, yPosition, xPosition + HALF_BLOCK_SIZE + PIXEL_SIZE, TRUE, PE_FREEZING_SPRITE_WITH_CHARGED_ICE);
 
-    metroidID = PSPRITE_METROID;
-    frozenID = PSPRITE_FROZEN_METROID;
+    metroidId = PSPRITE_METROID;
+    frozenId = PSPRITE_FROZEN_METROID;
     pose = METROID_POSE_DEATH;
     exists = SPRITE_STATUS_EXISTS;
     secondary = SP_SECONDARY_SPRITE;
@@ -911,7 +911,7 @@ static void MetroidDeath(void)
         if (pSprite->properties & secondary)
             continue;
 
-        if ((pSprite->spriteId == metroidID || pSprite->spriteId == frozenID) && pSprite->pose < pose)
+        if ((pSprite->spriteId == metroidId || pSprite->spriteId == frozenId) && pSprite->pose < pose)
         {
             // Found an alive metroid, abort
             isMetroidAlive++;

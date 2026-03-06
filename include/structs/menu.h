@@ -16,7 +16,7 @@ struct MenuOamData {
     u8 unk_7;
     u8 animationDurationCounter;
     u8 currentAnimationFrame;
-    u8 oamID;
+    u8 oamId;
     // B
     u16 priority:2;
     u16 objMode:2;

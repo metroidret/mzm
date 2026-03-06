@@ -543,7 +543,7 @@ static void GameOverUpdateLettersPalette(void)
  */
 static void GameOverUpdateSamusHead(GameOverCursorAction action)
 {
-    UpdateMenuOamDataID(&GAME_OVER_DATA.oam[0], sGameOverSamusHeadOamIds[gEquipment.suitType][action]);
+    UpdateMenuOamDataId(&GAME_OVER_DATA.oam[0], sGameOverSamusHeadOamIds[gEquipment.suitType][action]);
 
     GAME_OVER_DATA.oam[0].xPosition = sGameOverSamusHeadXPositions[gLanguage];
     GAME_OVER_DATA.oam[0].yPosition = sGameOverSamusHeadYPositions[GAME_OVER_DATA.optionSelected];

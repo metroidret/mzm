@@ -354,7 +354,7 @@ const EraseSramOamId sEraseSramQuestionWindowYesSelectedOamId = ERASE_SRAM_OAM_I
 const EraseSramOamId sEraseSramConfirmWindowNoSelectedOamId = ERASE_SRAM_OAM_ID_CONFIRM_WINDOW_NO_SELECTED;
 const EraseSramOamId sEraseSramConfirmWindowYesSelectedOamId = ERASE_SRAM_OAM_ID_CONFIRM_WINDOW_YES_SELECTED;
 
-const u16 sEraseSramMenuSoundsID[ERASE_SRAM_SOUND_COUNT] = {
+const u16 sEraseSramMenuSoundsId[ERASE_SRAM_SOUND_COUNT] = {
     [ERASE_SRAM_SOUND_NONE] = MUSIC_NONE,
     [ERASE_SRAM_SOUND_CONFIRM] = SOUND_ACCEPT_CONFIRM_MENU,
     [ERASE_SRAM_SOUND_SELECT_YES] = SOUND_YES_NO_CURSOR_SELECTING_YES,

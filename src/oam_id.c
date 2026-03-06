@@ -6,9 +6,9 @@
  * @param pOam Menu OAM data pointer
  * @param oamId OAM ID
  */
-void UpdateMenuOamDataID(struct MenuOamData* pOam, u8 oamId)
+void UpdateMenuOamDataId(struct MenuOamData* pOam, u8 oamId)
 {
-    pOam->oamID = oamId;
+    pOam->oamId = oamId;
     pOam->exists = oamId ? OAM_ID_CHANGED_FLAG : FALSE;
 }
 
@@ -18,8 +18,8 @@ void UpdateMenuOamDataID(struct MenuOamData* pOam, u8 oamId)
  * @param pOam Cutscene OAM data pointer
  * @param oamId OAM ID
  */
-void UpdateCutsceneOamDataID(struct CutsceneOamData* pOam, u8 oamId)
+void UpdateCutsceneOamDataId(struct CutsceneOamData* pOam, u8 oamId)
 {
-    pOam->oamID = oamId;
+    pOam->oamId = oamId;
     pOam->exists = oamId ? OAM_ID_CHANGED_FLAG : FALSE;
 }

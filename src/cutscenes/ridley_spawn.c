@@ -63,7 +63,7 @@ static u8 RidleySpawnRidleyFlyingIn(void)
             CUTSCENE_DATA.oam[0].objMode = FALSE;
 
             gCurrentOamScaling = Q_8_8(1.125f);
-            UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[0], RIDLEY_SPAWN_OAM_ID_RIDLEY_FLYING);
+            UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[0], RIDLEY_SPAWN_OAM_ID_RIDLEY_FLYING);
             CUTSCENE_DATA.dispcnt = sRidleySpawnPageData[3].bg | DCNT_OBJ;
             
             CUTSCENE_DATA.timeInfo.timer = 0;
@@ -119,10 +119,10 @@ static void RidleySpawnUpdateRidley(struct CutsceneOamData* pOam)
             gCurrentOamScaling = Q_8_8(1.97f);
             pOam->actions = 0;
         }
-        else if (pOam->oamID != RIDLEY_SPAWN_OAM_ID_RIDLEY_SCREAMING && gCurrentOamScaling >= Q_8_8(1.44f))
+        else if (pOam->oamId != RIDLEY_SPAWN_OAM_ID_RIDLEY_SCREAMING && gCurrentOamScaling >= Q_8_8(1.44f))
         {
             SoundPlay(SOUND_RIDLEY_SPAWN_ROAR);
-            UpdateCutsceneOamDataID(pOam, RIDLEY_SPAWN_OAM_ID_RIDLEY_SCREAMING);
+            UpdateCutsceneOamDataId(pOam, RIDLEY_SPAWN_OAM_ID_RIDLEY_SCREAMING);
         }
     }
 
@@ -168,7 +168,7 @@ static u8 RidleySpawnHelmetReflection(void)
             CUTSCENE_DATA.oam[0].objMode = 1;
 
             gCurrentOamScaling = Q_8_8(.25f);
-            UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[0], RIDLEY_SPAWN_OAM_ID_RIDLEY_FLYING_REFLECTION);
+            UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[0], RIDLEY_SPAWN_OAM_ID_RIDLEY_FLYING_REFLECTION);
             CUTSCENE_DATA.dispcnt = sRidleySpawnPageData[1].bg | sRidleySpawnPageData[2].bg | DCNT_OBJ;
 
             CUTSCENE_DATA.timeInfo.timer = 0;
@@ -295,7 +295,7 @@ static u8 RidleySpawnInit(void)
     CUTSCENE_DATA.oam[0].objMode = 1;
 
     gCurrentOamScaling = Q_8_8(1.f);
-    UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[0], RIDLEY_SPAWN_OAM_ID_SAMUS);
+    UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[0], RIDLEY_SPAWN_OAM_ID_SAMUS);
 
     CUTSCENE_DATA.dispcnt = sRidleySpawnPageData[0].bg | DCNT_OBJ;
 

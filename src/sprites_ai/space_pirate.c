@@ -135,7 +135,7 @@ void SpawnWaitingPirates(void)
     
     for (i = 0; i < MAX_AMOUNT_OF_SPRITE_TYPES; i++)
     {
-        spriteId = gSpritesetSpritesID[i];
+        spriteId = gSpritesetSpritesId[i];
         if (spriteId == PSPRITE_SPACE_PIRATE_WAITING2)
         {
             foundPirate++;
@@ -147,7 +147,7 @@ void SpawnWaitingPirates(void)
     {
         for (i = 0; i < MAX_AMOUNT_OF_SPRITE_TYPES; i++)
         {
-            spriteId = gSpritesetSpritesID[i];
+            spriteId = gSpritesetSpritesId[i];
 
             if (spriteId == PSPRITE_SPACE_PIRATE || spriteId == PSPRITE_SPACE_PIRATE_WAITING1 ||
                 spriteId == PSPRITE_SPACE_PIRATE_WAITING3 || spriteId == PSPRITE_SPACE_PIRATE2)

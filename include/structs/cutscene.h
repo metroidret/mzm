@@ -133,7 +133,7 @@ struct CutsceneOamData {
     u8 padding_4[4];
     u8 animationDurationCounter;
     u8 currentAnimationFrame;
-    u8 oamID;
+    u8 oamId;
     u16 priority:2;
     u16 objMode:2;
     u16 ended:1;

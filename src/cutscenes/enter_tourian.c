@@ -151,7 +151,7 @@ static u8 EnterTourianAnimation(void)
         case 4:
             if (CUTSCENE_DATA.timeInfo.timer > CONVERT_SECONDS(5.f))
             {
-                CUTSCENE_DATA.oam[1].oamID++;
+                CUTSCENE_DATA.oam[1].oamId++;
                 CUTSCENE_DATA.timeInfo.timer = 0;
                 CUTSCENE_DATA.timeInfo.subStage++;
             }
@@ -190,7 +190,7 @@ static u8 EnterTourianAnimation(void)
 
             if (CUTSCENE_DATA.oam[1].currentAnimationFrame != 6)
             {
-                CUTSCENE_DATA.oam[1].oamID = 5;
+                CUTSCENE_DATA.oam[1].oamId = 5;
 
                 if (gCurrentOamScaling > Q_8_8(1.625f))
                     CUTSCENE_DATA.oam[1].currentAnimationFrame = 6;
@@ -287,7 +287,7 @@ static void EnterTourianUpdateMetroid(struct CutsceneOamData* pOam, u8 metroidId
 
     if (pOam->actions & 2)
     {
-        UpdateCutsceneOamDataID(pOam, 3);
+        UpdateCutsceneOamDataId(pOam, 3);
         pOam->actions &= ~1;
         pOam->actions ^= 2;
         pOam->actions |= 4;
@@ -599,7 +599,7 @@ static u8 EnterTourianInit(void)
     CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X, sEnterTourianPageData[0].bg, NON_GAMEPLAY_START_BG_POS + 5 * BLOCK_SIZE + QUARTER_BLOCK_SIZE);
     CutsceneSetBackgroundPosition(CUTSCENE_BG_EDIT_X, sEnterTourianPageData[1].bg, NON_GAMEPLAY_START_BG_POS);
 
-    CUTSCENE_DATA.oam[1].oamID = 6;
+    CUTSCENE_DATA.oam[1].oamId = 6;
     CUTSCENE_DATA.oam[1].exists = TRUE;
     CUTSCENE_DATA.oam[1].boundBackground = 3;
     CUTSCENE_DATA.oam[1].priority = sEnterTourianPageData[0].priority;
@@ -616,7 +616,7 @@ static u8 EnterTourianInit(void)
     CUTSCENE_DATA.oam[7].currentAnimationFrame = 8;
 
     
-    CUTSCENE_DATA.oam[0].oamID = 2;
+    CUTSCENE_DATA.oam[0].oamId = 2;
     CUTSCENE_DATA.oam[0].exists = TRUE;
     CUTSCENE_DATA.oam[0].boundBackground = 3;
     CUTSCENE_DATA.oam[0].priority = sEnterTourianPageData[0].priority;
@@ -636,7 +636,7 @@ static u8 EnterTourianInit(void)
         CUTSCENE_DATA.oam[i].yPosition = sEnterTourianMetroidsStartPosition[i >> 1][1];
     }
 
-    UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[MAX_METROID_IDS * 2], 1);
+    UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[MAX_METROID_IDS * 2], 1);
     CUTSCENE_DATA.oam[MAX_METROID_IDS * 2].boundBackground = 3;
     CUTSCENE_DATA.oam[MAX_METROID_IDS * 2].priority = sEnterTourianPageData[0].priority;
     CUTSCENE_DATA.oam[MAX_METROID_IDS * 2].actions = 1;

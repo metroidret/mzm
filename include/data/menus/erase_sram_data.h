@@ -34,7 +34,7 @@ extern const EraseSramOamId sEraseSramQuestionWindowNoSelectedOamId;
 extern const EraseSramOamId sEraseSramQuestionWindowYesSelectedOamId;
 extern const EraseSramOamId sEraseSramConfirmWindowNoSelectedOamId;
 extern const EraseSramOamId sEraseSramConfirmWindowYesSelectedOamId;
-extern const u16 sEraseSramMenuSoundsID[ERASE_SRAM_SOUND_COUNT];
+extern const u16 sEraseSramMenuSoundsId[ERASE_SRAM_SOUND_COUNT];
 extern const u16 sEraseSramMenuCursorPosition[2][2];
 extern const u16 sEraseSramMenuCursorPositionOffset[ERASE_SRAM_OPTION_COUNT][2];
 extern const struct OamArray sEraseSramMenuOam[ERASE_SRAM_OAM_ID_COUNT];

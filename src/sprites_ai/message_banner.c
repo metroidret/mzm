@@ -85,7 +85,7 @@ static void MessageBannerInit(void)
     // Loop through sprites to try and find if a message banner is in the spriteset
     for (i = 0; i < MAX_AMOUNT_OF_SPRITE_TYPES; i++)
     {
-        if (gSpritesetSpritesID[i] == PSPRITE_MESSAGE_BANNER)
+        if (gSpritesetSpritesId[i] == PSPRITE_MESSAGE_BANNER)
         {
             // Found area banner, load the gfx slot
             gfxSlot = gSpritesetGfxSlots[i];

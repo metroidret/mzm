@@ -253,7 +253,7 @@ static u8 LocationTextLoadAreaBannerGfx(void)
     // Loop through sprites to try and find if an area banner is in the spriteset
     for (count = 0; count < MAX_AMOUNT_OF_SPRITE_TYPES; count++)
     {
-        if (gSpritesetSpritesID[count] == PSPRITE_AREA_BANNER)
+        if (gSpritesetSpritesId[count] == PSPRITE_AREA_BANNER)
         {
             // Found area banner, load the gfx slot
             gfxSlot = gSpritesetGfxSlots[count];

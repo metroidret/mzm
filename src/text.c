@@ -114,26 +114,26 @@ static u32 sArray_7603b8[8] = {
 /**
  * @brief 6e460 | 24 | Gets the width of a character
  * 
- * @param charID Character
+ * @param charId Character
  * @return u8 Width
  */
-u32 TextGetCharacterWidth(u16 charID)
+u32 TextGetCharacterWidth(u16 charId)
 {
-    if (charID >= ARRAY_SIZE(sCharacterWidths))
+    if (charId >= ARRAY_SIZE(sCharacterWidths))
         return 10;
     else
-        return sCharacterWidths[charID];
+        return sCharacterWidths[charId];
 }
 
 /**
  * @brief 6e484 | 4b8 | Draws a character in append mode
  * 
- * @param charID Character
+ * @param charId Character
  * @param dst Destination address
  * @param indent Indent
  * @param color Color
  */
-void TextDrawCharacter(u16 charID, u32* dst, u16 indent, u8 color)
+void TextDrawCharacter(u16 charId, u32* dst, u16 indent, u8 color)
 {
     s32 palette;
     u32* dstGfx;
@@ -147,7 +147,7 @@ void TextDrawCharacter(u16 charID, u32* dst, u16 indent, u8 color)
     s32 i;
 
     BitFill(3, 0, gCurrentCharacterGfx, sizeof(gCurrentCharacterGfx), 16);
-    width = TextGetCharacterWidth(charID);
+    width = TextGetCharacterWidth(charId);
 
     for (pass = 0; pass < 2; pass++)
     {
@@ -156,7 +156,7 @@ void TextDrawCharacter(u16 charID, u32* dst, u16 indent, u8 color)
         else
             dstGfx = gCurrentCharacterGfx;
 
-        pixelSrc = charID * 32 + pass * 0x400;
+        pixelSrc = charId * 32 + pass * 0x400;
         srcGfx = (const u32*)&sCharactersGfx[pixelSrc];
         
         if (width > 8)
@@ -400,12 +400,12 @@ void TextDrawCharacter(u16 charID, u32* dst, u16 indent, u8 color)
 /**
  * @brief 6e93c | 5f0 | Draws a character in mask mode
  * 
- * @param charID Character
+ * @param charId Character
  * @param dst Destination address
  * @param indent Indent
  * @param color Color
  */
-void TextDrawMessageCharacter(u16 charID, u32* dst, u16 indent, u8 color)
+void TextDrawMessageCharacter(u16 charId, u32* dst, u16 indent, u8 color)
 {
     s32 palette;
     u32* dstGfx;
@@ -419,7 +419,7 @@ void TextDrawMessageCharacter(u16 charID, u32* dst, u16 indent, u8 color)
     s32 i;
 
     BitFill(3, 0, gCurrentCharacterGfx, sizeof(gCurrentCharacterGfx), 16);
-    width = TextGetCharacterWidth(charID);
+    width = TextGetCharacterWidth(charId);
 
     for (pass = 0; pass < 2; pass++)
     {
@@ -428,7 +428,7 @@ void TextDrawMessageCharacter(u16 charID, u32* dst, u16 indent, u8 color)
         else
             dstGfx = gCurrentCharacterGfx + 0;
 
-        pixelDst = charID * 0x20 + pass * 0x400;
+        pixelDst = charId * 0x20 + pass * 0x400;
         srcGfx = (const u32*)&sCharactersGfx[pixelDst];
         
         if (width > 8)
@@ -770,12 +770,12 @@ void TextDrawLocation(u8 locationText, u8 gfxSlot)
 /**
  * @brief 6f0a8 | 1b0 | To document
  * 
- * @param textID Message ID
+ * @param textId Message ID
  * @param gfxSlot Gfx slot
  * @param param_3 To document
  * @return u8 To document
  */
-u8 unk_6f0a8(u8 textID, u8 gfxSlot, u8 param_3)
+u8 unk_6f0a8(u8 textId, u8 gfxSlot, u8 param_3)
 {
     s32 i;
     s32 flag;
@@ -784,7 +784,7 @@ u8 unk_6f0a8(u8 textID, u8 gfxSlot, u8 param_3)
     {
         gCurrentMessage = sMessage_Empty;
         
-        gCurrentMessage.messageId = textID > MESSAGE_ENEMY_LOCATION_ABNORMAL ? MESSAGE_ENEMY_LOCATION_ABNORMAL : textID;
+        gCurrentMessage.messageId = textId > MESSAGE_ENEMY_LOCATION_ABNORMAL ? MESSAGE_ENEMY_LOCATION_ABNORMAL : textId;
         gCurrentMessage.gfxSlot = gfxSlot;
     }
 
@@ -860,14 +860,14 @@ u8 unk_6f0a8(u8 textID, u8 gfxSlot, u8 param_3)
 /**
  * @brief 6f258 | 34 | Starts a new message
  * 
- * @param textID Text ID
+ * @param textId Text ID
  * @param gfxSlot Graphics slot
  */
-void TextStartMessage(u8 textID, u8 gfxSlot)
+void TextStartMessage(u8 textId, u8 gfxSlot)
 {
     gCurrentMessage = sMessage_Empty;
 
-    gCurrentMessage.messageId = textID > MESSAGE_ENEMY_LOCATION_ABNORMAL ? MESSAGE_ENEMY_LOCATION_ABNORMAL : textID;
+    gCurrentMessage.messageId = textId > MESSAGE_ENEMY_LOCATION_ABNORMAL ? MESSAGE_ENEMY_LOCATION_ABNORMAL : textId;
     gCurrentMessage.gfxSlot = gfxSlot;
 }
 
@@ -958,7 +958,7 @@ u8 TextProcessMessageBanner(void)
 /**
  * @brief 6f404 | 20 | Starts a story text
  * 
- * @param textID Story text ID
+ * @param textId Story text ID
  */
 void TextStartStory(StoryTextId textId)
 {
@@ -1078,12 +1078,12 @@ u8 TextProcessStory(void)
 /**
  * @brief 6f5a4 | 20 | Starts a file screen text
  * 
- * @param textID File screen text ID
+ * @param textId File screen text ID
  */
-void TextStartFileScreen(u8 textID)
+void TextStartFileScreen(u8 textId)
 {
     gCurrentMessage = sMessageFileScreen_Empty;
-    gCurrentMessage.messageId = textID;
+    gCurrentMessage.messageId = textId;
 }
 
 /**
@@ -1254,7 +1254,7 @@ void TextProcessDescription(void)
                         result = 0;
                 }
 
-                UpdateMenuOamDataID(&PAUSE_SCREEN_DATA.miscOam[1], result);
+                UpdateMenuOamDataId(&PAUSE_SCREEN_DATA.miscOam[1], result);
             }
             break;
 

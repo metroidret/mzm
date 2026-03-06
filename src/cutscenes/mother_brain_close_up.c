@@ -112,7 +112,7 @@ static u8 MotherBrainCloseUpLookingAtSamus(void)
                 SoundPlay(SOUND_MOTHER_BRAIN_CLOSE_UP_EYE_FOCUSING);
 
                 // Set eye focusing animation
-                UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[OAM_SLOT_EYE_PUPIL], MOTHER_BRAIN_CLOSE_UP_OAM_ID_EYE_FOCUSING);
+                UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[OAM_SLOT_EYE_PUPIL], MOTHER_BRAIN_CLOSE_UP_OAM_ID_EYE_FOCUSING);
                 CUTSCENE_DATA.timeInfo.timer = 0;
                 CUTSCENE_DATA.timeInfo.subStage++;
             }
@@ -171,7 +171,7 @@ static void MotherBrainCloseUpUpdateElevatorReflection(struct CutsceneOamData* p
     pOam->timer = CONVERT_SECONDS(1.5f);
 
     // Set the elevator animation
-    UpdateCutsceneOamDataID(pOam, MOTHER_BRAIN_CLOSE_UP_OAM_ID_ELEVATOR_ANIMATION);
+    UpdateCutsceneOamDataId(pOam, MOTHER_BRAIN_CLOSE_UP_OAM_ID_ELEVATOR_ANIMATION);
 
     // Check for elevator animation limit
     pOam->actions++;
@@ -259,7 +259,7 @@ static u8 MotherBrainCloseUpEyeOpening(void)
             {
                 SoundPlay(SOUND_MOTHER_BRAIN_CLOSE_UP_EYE_OPENING);
                 // Start eye opening animation
-                UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[7], MOTHER_BRAIN_CLOSE_UP_OAM_ID_EYE_OPENING);
+                UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[7], MOTHER_BRAIN_CLOSE_UP_OAM_ID_EYE_OPENING);
                 CUTSCENE_DATA.timeInfo.timer = 0;
                 CUTSCENE_DATA.timeInfo.subStage++;
             }
@@ -293,7 +293,7 @@ static u8 MotherBrainCloseUpEyeOpening(void)
     // Update bubbles
     for (i = 0; i < OAM_BUBBLES_COUNT; i++)
     {
-        if (CUTSCENE_DATA.oam[i].oamID != 0)
+        if (CUTSCENE_DATA.oam[i].oamId != 0)
             MotherBrainCloseUpUpdateBubble(&CUTSCENE_DATA.oam[i]);
     }
 
@@ -478,7 +478,7 @@ static void MotherBrainCloseUpUpdateEye(u8 lookingAtSamus)
 
         pEye->priority = sMotherBrainCloseUpPageData[2].priority;
         pEye->boundBackground = 3;
-        pEye->oamID = 0;
+        pEye->oamId = 0;
         pEye->exists = TRUE;
     }
     else
@@ -493,7 +493,7 @@ static void MotherBrainCloseUpUpdateEye(u8 lookingAtSamus)
         pOam->objMode = OAM_OBJ_MODE_SEMI_TRANSPARENT;
 
         // Setup eye pupil
-        UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[OAM_SLOT_EYE_PUPIL], MOTHER_BRAIN_CLOSE_UP_OAM_ID_EYE_OPENED);
+        UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[OAM_SLOT_EYE_PUPIL], MOTHER_BRAIN_CLOSE_UP_OAM_ID_EYE_OPENED);
         
         // Place at the center of the screen
         pOam[OAM_SLOT_EYE_PUPIL].xPosition = SCREEN_SIZE_X_SUB_PIXEL / 2;
@@ -571,7 +571,7 @@ static u8 MotherBrainCloseUpInitBubbles(u8 packId)
         CUTSCENE_DATA.oam[i].xPosition = sMotherBrainCloseUpBubblesSpawnPositions[packId][0];
         CUTSCENE_DATA.oam[i].yPosition = sMotherBrainCloseUpBubblesSpawnPositions[packId][1];
 
-        UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[i], MOTHER_BRAIN_CLOSE_UP_OAM_ID_BUBBLE);
+        UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[i], MOTHER_BRAIN_CLOSE_UP_OAM_ID_BUBBLE);
         CUTSCENE_DATA.oam[i].boundBackground = 3;
 
         return FALSE;

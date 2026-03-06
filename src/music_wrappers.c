@@ -951,7 +951,7 @@ void Music_Empty_2(void)
  */
 void BackupTrackData2SoundChannels(void)
 {
-    u8 trackID;
+    u8 trackId;
     u8 i;
     struct TrackData* pTrack;
     struct TrackVariables* pVariables;
@@ -968,10 +968,10 @@ void BackupTrackData2SoundChannels(void)
         {
             pTrack->unk_1E = TRUE;
 
-            trackID = 0;
+            trackId = 0;
             pVariables  = pTrack->pVariables;
 
-            while (trackID < pTrack->amountOfTracks)
+            while (trackId < pTrack->amountOfTracks)
             {
                 if (!(pVariables->channel & 0xC0))
                 {
@@ -998,7 +998,7 @@ void BackupTrackData2SoundChannels(void)
                     }
                 }
 
-                trackID++;
+                trackId++;
                 pVariables++;
             }
         }
@@ -1014,7 +1014,7 @@ void BackupTrackData2SoundChannels(void)
 void RetrieveTrackData2SoundChannels(void)
 {
     u8 i;
-    u8 trackID;
+    u8 trackId;
     struct TrackData* pTrack;
     struct TrackVariables* pVariables;
     struct SoundChannel* pChannel;
@@ -1029,10 +1029,10 @@ void RetrieveTrackData2SoundChannels(void)
         if (pTrack->unk_1E & TRUE)
         {
             pTrack->unk_1E &= ~TRUE;
-            trackID = 0;
+            trackId = 0;
             pVariables = pTrack->pVariables;
 
-            while (trackID < pTrack->amountOfTracks)
+            while (trackId < pTrack->amountOfTracks)
             {
                 if (!(pVariables->channel & 0xC0))
                 {
@@ -1051,7 +1051,7 @@ void RetrieveTrackData2SoundChannels(void)
                     }
                 }
 
-                trackID++;
+                trackId++;
                 pVariables++;
             }
         }
@@ -1069,20 +1069,20 @@ void RetrieveTrackData2SoundChannels(void)
 void DelayMusicStart(struct TrackData* pTrack, u16 delay)
 {
     struct TrackVariables* pVariables;
-    u8 trackID;
+    u8 trackId;
 
     if (!pTrack->occupied)
     {
         pTrack->occupied = TRUE;
         
-        trackID = 0;
+        trackId = 0;
         pVariables = pTrack->pVariables;
-        while (trackID < pTrack->amountOfTracks)
+        while (trackId < pTrack->amountOfTracks)
         {
             if (pVariables->unk_0 != 0)
                 pVariables->delay += delay;
 
-            trackID++;
+            trackId++;
             pVariables++;
         }
     }

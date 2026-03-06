@@ -210,7 +210,7 @@ static EraseSramInputAction EraseSramProcessInput(void)
  */
 static void EraseSramApplyInput(void)
 {
-    if (ERASE_SRAM_DATA.oam[0].oamID == ERASE_SRAM_OAM_ID_CURSOR_SELECTING)
+    if (ERASE_SRAM_DATA.oam[0].oamId == ERASE_SRAM_OAM_ID_CURSOR_SELECTING)
         return;
 
     ERASE_SRAM_DATA.nextOption &= ~ERASE_SRAM_OPTION_CHANGED_FLAG;
@@ -219,28 +219,28 @@ static void EraseSramApplyInput(void)
     switch (ERASE_SRAM_DATA.nextOption)
     {
         case ERASE_SRAM_OPTION_QUESTION_NO:
-            ERASE_SRAM_DATA.oam[2].oamID = sEraseSramQuestionWindowNoSelectedOamId;
-            ERASE_SRAM_DATA.oam[1].oamID = 0;
+            ERASE_SRAM_DATA.oam[2].oamId = sEraseSramQuestionWindowNoSelectedOamId;
+            ERASE_SRAM_DATA.oam[1].oamId = 0;
             break;
 
         case ERASE_SRAM_OPTION_QUESTION_YES:
-            ERASE_SRAM_DATA.oam[2].oamID = sEraseSramQuestionWindowYesSelectedOamId;
-            ERASE_SRAM_DATA.oam[1].oamID = 0;
+            ERASE_SRAM_DATA.oam[2].oamId = sEraseSramQuestionWindowYesSelectedOamId;
+            ERASE_SRAM_DATA.oam[1].oamId = 0;
             break;
 
         case ERASE_SRAM_OPTION_CONFIRM_NO:
-            ERASE_SRAM_DATA.oam[1].oamID = sEraseSramConfirmWindowNoSelectedOamId;
+            ERASE_SRAM_DATA.oam[1].oamId = sEraseSramConfirmWindowNoSelectedOamId;
             break;
 
         case ERASE_SRAM_OPTION_CONFIRM_YES:
-            ERASE_SRAM_DATA.oam[1].oamID = sEraseSramConfirmWindowYesSelectedOamId;
+            ERASE_SRAM_DATA.oam[1].oamId = sEraseSramConfirmWindowYesSelectedOamId;
             break;
     }
 
     ERASE_SRAM_DATA.oam[1].exists = OAM_ID_CHANGED_FLAG;
     ERASE_SRAM_DATA.oam[2].exists = OAM_ID_CHANGED_FLAG;
 
-    ERASE_SRAM_DATA.oam[0].oamID = ERASE_SRAM_OAM_ID_CURSOR_IDLE;
+    ERASE_SRAM_DATA.oam[0].oamId = ERASE_SRAM_OAM_ID_CURSOR_IDLE;
     ERASE_SRAM_DATA.oam[0].exists = OAM_ID_CHANGED_FLAG;
 }
 
@@ -334,13 +334,13 @@ static EraseSramInputAction EraseSramCheckForInput(void)
 
     if (exiting)
     {
-        ERASE_SRAM_DATA.oam[0].oamID = ERASE_SRAM_OAM_ID_CURSOR_SELECTING;
+        ERASE_SRAM_DATA.oam[0].oamId = ERASE_SRAM_OAM_ID_CURSOR_SELECTING;
         ERASE_SRAM_DATA.oam[0].exists = OAM_ID_CHANGED_FLAG;
         sound = ERASE_SRAM_SOUND_CONFIRM;
     }
 
-    if (sEraseSramMenuSoundsID[sound])
-        SoundPlay(sEraseSramMenuSoundsID[sound]);
+    if (sEraseSramMenuSoundsId[sound])
+        SoundPlay(sEraseSramMenuSoundsId[sound]);
 
     return result;
 }
@@ -452,17 +452,17 @@ static void EraseSramResetOam(void)
     for (i = 0; i < ARRAY_SIZE(ERASE_SRAM_DATA.oam); i++)
         ERASE_SRAM_DATA.oam[i] = sMenuOamDataEraseSram_Empty;
 
-    ERASE_SRAM_DATA.oam[2].oamID = sEraseSramQuestionWindowNoSelectedOamId;
+    ERASE_SRAM_DATA.oam[2].oamId = sEraseSramQuestionWindowNoSelectedOamId;
     ERASE_SRAM_DATA.oam[2].yPosition = sEraseSramMenuCursorPosition[0][1];
     ERASE_SRAM_DATA.oam[2].xPosition = sEraseSramMenuCursorPosition[0][0];
     ERASE_SRAM_DATA.oam[2].exists = TRUE;
 
-    ERASE_SRAM_DATA.oam[1].oamID = 0;
+    ERASE_SRAM_DATA.oam[1].oamId = 0;
     ERASE_SRAM_DATA.oam[1].yPosition = sEraseSramMenuCursorPosition[1][1];
     ERASE_SRAM_DATA.oam[1].xPosition = sEraseSramMenuCursorPosition[1][0];
     ERASE_SRAM_DATA.oam[1].exists = TRUE;
 
-    ERASE_SRAM_DATA.oam[0].oamID = ERASE_SRAM_OAM_ID_CURSOR_IDLE;
+    ERASE_SRAM_DATA.oam[0].oamId = ERASE_SRAM_OAM_ID_CURSOR_IDLE;
     ERASE_SRAM_DATA.oam[0].exists = TRUE;
 }
 

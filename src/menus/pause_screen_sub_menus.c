@@ -240,7 +240,7 @@ void ChozoStatueHintMovement(void)
 
             PAUSE_SCREEN_DATA.chozoHintOam[0].yPosition = PAUSE_SCREEN_DATA.chozoHintMapMovementData.mapYPosition;
             PAUSE_SCREEN_DATA.chozoHintOam[0].xPosition = PAUSE_SCREEN_DATA.chozoHintMapMovementData.mapXPosition;
-            PAUSE_SCREEN_DATA.chozoHintOam[0].oamID = sChozoStatueTargets[PAUSE_SCREEN_DATA.chozoHintTarget.index].startIcon;
+            PAUSE_SCREEN_DATA.chozoHintOam[0].oamId = sChozoStatueTargets[PAUSE_SCREEN_DATA.chozoHintTarget.index].startIcon;
 
             PAUSE_SCREEN_DATA.chozoHintMapMovementData.distXToHintTarget = PAUSE_SCREEN_DATA.chozoHintMapMovementData.hintTargetXPosition - PAUSE_SCREEN_DATA.chozoHintMapMovementData.mapXPosition;
 
@@ -338,7 +338,7 @@ void ChozoStatueHintMovement(void)
 
                 if (PAUSE_SCREEN_DATA.chozoHintTarget.index < TARGET_ITEM_COUNT)
                 {
-                    PAUSE_SCREEN_DATA.chozoHintOam[norm].oamID = 0x7;
+                    PAUSE_SCREEN_DATA.chozoHintOam[norm].oamId = 0x7;
                     PAUSE_SCREEN_DATA.chozoHintOam[norm].exists = OAM_ID_CHANGED_FLAG;
                 }
                 else
@@ -347,7 +347,7 @@ void ChozoStatueHintMovement(void)
                         var_2 = 0xB;
                     else
                         var_2 = 0xF;
-                    PAUSE_SCREEN_DATA.chozoHintOam[norm].oamID = var_2;
+                    PAUSE_SCREEN_DATA.chozoHintOam[norm].oamId = var_2;
                     PAUSE_SCREEN_DATA.chozoHintOam[norm].animationDurationCounter = 3;
                     PAUSE_SCREEN_DATA.chozoHintOam[norm].currentAnimationFrame = 5;
                     PAUSE_SCREEN_DATA.chozoHintOam[norm].exists = TRUE;
@@ -605,7 +605,7 @@ u32 ChozoStatueHintMainLoop(void)
 
             ChozoStatueHintDeterminePath(TRUE);
             PauseScreenMapSetSpawnPosition(1);
-            UpdateMenuOamDataID(&PAUSE_SCREEN_DATA.overlayOam[0], sChozoHintAreaNamesOamIds[PAUSE_SCREEN_DATA.currentArea]);
+            UpdateMenuOamDataId(&PAUSE_SCREEN_DATA.overlayOam[0], sChozoHintAreaNamesOamIds[PAUSE_SCREEN_DATA.currentArea]);
             PauseScreenUpdateBossIcons();
 
             PAUSE_SCREEN_DATA.stateInfo.stage++;
@@ -668,9 +668,9 @@ void ChozoStatueHintChangeArea(u8* pXPosition, u8* pYPosition, struct MenuOamDat
         pOam->yPosition = (*pYPosition + 4) * HALF_BLOCK_SIZE;
 
         if (pTarget[1] < 0)
-            pOam->oamID = TARGET_OAM_ID_UP_ARROW;
+            pOam->oamId = TARGET_OAM_ID_UP_ARROW;
         else
-            pOam->oamID = TARGET_OAM_ID_DOWN_ARROW;
+            pOam->oamId = TARGET_OAM_ID_DOWN_ARROW;
     }
     else
     {
@@ -683,9 +683,9 @@ void ChozoStatueHintChangeArea(u8* pXPosition, u8* pYPosition, struct MenuOamDat
         pOam->yPosition = (*pYPosition - 3) * HALF_BLOCK_SIZE;
 
         if (pTarget[1] < 0)
-            pOam->oamID = TARGET_OAM_ID_UP_ARROW;
+            pOam->oamId = TARGET_OAM_ID_UP_ARROW;
         else
-            pOam->oamID = TARGET_OAM_ID_DOWN_ARROW;
+            pOam->oamId = TARGET_OAM_ID_DOWN_ARROW;
     }
 }
 
@@ -781,13 +781,13 @@ void ChozoStatueHintDeterminePath(u8 param_1)
         {
             pOam->xPosition = PAUSE_SCREEN_DATA.mapX * HALF_BLOCK_SIZE;
             pOam->yPosition = PAUSE_SCREEN_DATA.mapY * HALF_BLOCK_SIZE;
-            pOam->oamID = pStatueTarget->startIcon;
+            pOam->oamId = pStatueTarget->startIcon;
             pOam++;
             
             PAUSE_SCREEN_DATA.hintTargetX = pStatueTarget->targetX;
             PAUSE_SCREEN_DATA.hintTargetY = pStatueTarget->targetY;
 
-            pOam->oamID = pStatueTarget->endIcon;
+            pOam->oamId = pStatueTarget->endIcon;
             pOam->xPosition = PAUSE_SCREEN_DATA.hintTargetX * HALF_BLOCK_SIZE;
             pOam->yPosition = PAUSE_SCREEN_DATA.hintTargetY * HALF_BLOCK_SIZE;
             pOam++;
@@ -801,7 +801,7 @@ void ChozoStatueHintDeterminePath(u8 param_1)
             {
                 pOam->xPosition = PAUSE_SCREEN_DATA.mapX * HALF_BLOCK_SIZE;
                 pOam->yPosition = PAUSE_SCREEN_DATA.mapY * HALF_BLOCK_SIZE;
-                pOam->oamID = pStatueTarget->startIcon;
+                pOam->oamId = pStatueTarget->startIcon;
                 pOam++;
 
                 ChozoStatueHintChangeArea(&PAUSE_SCREEN_DATA.hintTargetX, &PAUSE_SCREEN_DATA.hintTargetY, pOam, pTarget);
@@ -820,7 +820,7 @@ void ChozoStatueHintDeterminePath(u8 param_1)
 
                 pOam->xPosition = pStatueTarget->targetX * HALF_BLOCK_SIZE;
                 pOam->yPosition = pStatueTarget->targetY * HALF_BLOCK_SIZE;
-                pOam->oamID = pStatueTarget->endIcon;
+                pOam->oamId = pStatueTarget->endIcon;
                 pOam++;
 
                 PAUSE_SCREEN_DATA.chozoHintTarget.unk_42 = AREA_NONE;
@@ -873,9 +873,9 @@ void ChozoStatueHintDeterminePath(u8 param_1)
                         pOam->exists = TRUE;
     
                         if (pTarget[i + 1] < 0)
-                            pOam->oamID = TARGET_OAM_ID_UP_ARROW;
+                            pOam->oamId = TARGET_OAM_ID_UP_ARROW;
                         else
-                            pOam->oamID = TARGET_OAM_ID_DOWN_ARROW;
+                            pOam->oamId = TARGET_OAM_ID_DOWN_ARROW;
     
                         pOam++;
                     }
@@ -887,9 +887,9 @@ void ChozoStatueHintDeterminePath(u8 param_1)
                         pOam->exists = TRUE;
     
                         if (pTarget[i + 1] < 0)
-                            pOam->oamID = TARGET_OAM_ID_UP_ARROW;
+                            pOam->oamId = TARGET_OAM_ID_UP_ARROW;
                         else
-                            pOam->oamID = TARGET_OAM_ID_DOWN_ARROW;
+                            pOam->oamId = TARGET_OAM_ID_DOWN_ARROW;
     
                         pOam++;
                     }
@@ -910,7 +910,7 @@ void ChozoStatueHintDeterminePath(u8 param_1)
         if (pStatueTarget->targetArea != PAUSE_SCREEN_DATA.currentArea)
             continue;
 
-        pOam->oamID = pStatueTarget->endIcon;
+        pOam->oamId = pStatueTarget->endIcon;
         pOam->xPosition = pStatueTarget->targetX * HALF_BLOCK_SIZE;
         pOam->yPosition = pStatueTarget->targetY * HALF_BLOCK_SIZE;
         pOam->exists = TRUE;
@@ -1029,7 +1029,7 @@ void PauseScreenDrawBossFlames(void)
         for (i = 0; i < ARRAY_SIZE(PAUSE_SCREEN_DATA.targetsOam); i++)
         {
             // Check object exists
-            if (PAUSE_SCREEN_DATA.targetsOam[i].oamID != TARGET_OAM_GREEN_FLAME_MOVING)
+            if (PAUSE_SCREEN_DATA.targetsOam[i].oamId != TARGET_OAM_GREEN_FLAME_MOVING)
                 continue;
 
             // Register in boss flame data 0
@@ -1049,7 +1049,7 @@ void PauseScreenDrawBossFlames(void)
         for (i = 0; i < ARRAY_SIZE(PAUSE_SCREEN_DATA.targetsOam); i++)
         {
             // Check object exists
-            if (PAUSE_SCREEN_DATA.targetsOam[i].oamID != TARGET_OAM_PURPLE_FLAME_MOVING)
+            if (PAUSE_SCREEN_DATA.targetsOam[i].oamId != TARGET_OAM_PURPLE_FLAME_MOVING)
                 continue;
 
             // Register in boss flame data 1

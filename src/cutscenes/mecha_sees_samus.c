@@ -37,7 +37,7 @@ static u8 MechaRidleySeesSamusEyeOpen(void)
             if (CUTSCENE_DATA.timeInfo.timer > CONVERT_SECONDS(.5f))
             {
                 SoundPlay(SOUND_MECHA_SEES_SAMUS_EYE_OPENING);
-                UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[0], 2);
+                UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[0], 2);
                 CUTSCENE_DATA.timeInfo.timer = 0;
                 CUTSCENE_DATA.timeInfo.subStage++;
             }
@@ -55,7 +55,7 @@ static u8 MechaRidleySeesSamusEyeOpen(void)
             if (CUTSCENE_DATA.timeInfo.timer > CONVERT_SECONDS(1.f / 15))
             {
                 SoundPlay(SOUND_MECHA_SEES_SAMUS_EYE_FOCUSING);
-                UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[1], 4);
+                UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[1], 4);
                 CUTSCENE_DATA.timeInfo.timer = 0;
                 CUTSCENE_DATA.timeInfo.subStage++;
             }
@@ -117,12 +117,12 @@ static u8 MechaRidleySeesSamusInit(void)
     CUTSCENE_DATA.oam[0].xPosition = SCREEN_SIZE_X_SUB_PIXEL / 2;
     CUTSCENE_DATA.oam[0].yPosition = SCREEN_SIZE_Y_SUB_PIXEL / 2;
     CUTSCENE_DATA.oam[0].priority = sMechaRidleySeesSamusPagesData[0].priority;
-    UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[0], 1);
+    UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[0], 1);
 
     CUTSCENE_DATA.oam[1].xPosition = SCREEN_SIZE_X_SUB_PIXEL / 2;
     CUTSCENE_DATA.oam[1].yPosition = SCREEN_SIZE_Y_SUB_PIXEL / 2;
     CUTSCENE_DATA.oam[1].priority = sMechaRidleySeesSamusPagesData[0].priority + 1;
-    UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[1], 3);
+    UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[1], 3);
 
     CutsceneStartBackgroundFading(2);
 

@@ -78,8 +78,8 @@ static u8 StatueOpeningOpening(void)
                 #ifdef DEBUG
                 if (gBootDebugActive)
                 {
-                    UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[0], STATUE_OPENING_OAM_ID_KRAID_ACTIVATING);
-                    UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[1], STATUE_OPENING_OAM_ID_RIDLEY_ACTIVATING);
+                    UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[0], STATUE_OPENING_OAM_ID_KRAID_ACTIVATING);
+                    UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[1], STATUE_OPENING_OAM_ID_RIDLEY_ACTIVATING);
                     SoundPlay(SOUND_STATUE_OPENING_STATUE_ACTIVATING);
                     CUTSCENE_DATA.timeInfo.subStage++;
                     CUTSCENE_DATA.timeInfo.timer = 0;
@@ -89,9 +89,9 @@ static u8 StatueOpeningOpening(void)
                 {
                     // Set opening animation for appropriate statue
                     if (gCurrentArea == AREA_KRAID)
-                        UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[0], STATUE_OPENING_OAM_ID_KRAID_ACTIVATING);
+                        UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[0], STATUE_OPENING_OAM_ID_KRAID_ACTIVATING);
                     else if (gCurrentArea == AREA_RIDLEY)
-                        UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[1], STATUE_OPENING_OAM_ID_RIDLEY_ACTIVATING);
+                        UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[1], STATUE_OPENING_OAM_ID_RIDLEY_ACTIVATING);
     
                     SoundPlay(SOUND_STATUE_OPENING_STATUE_ACTIVATING);
                     CUTSCENE_DATA.timeInfo.subStage++;
@@ -193,7 +193,7 @@ static u8 StatueOpeningInit(void)
         if (gCurrentArea == AREA_KRAID)
             oamId = STATUE_OPENING_OAM_ID_KRAID_IDLE;
     }
-    CUTSCENE_DATA.oam[0].oamID = oamId;
+    CUTSCENE_DATA.oam[0].oamId = oamId;
 
     if (CHECK_EVENT(EVENT_RIDLEY_STATUE_OPENED))
        oamId = STATUE_OPENING_OAM_ID_RIDLEY_OPENED;
@@ -207,7 +207,7 @@ static u8 StatueOpeningInit(void)
         if (gCurrentArea == AREA_RIDLEY)
            oamId = STATUE_OPENING_OAM_ID_RIDLEY_IDLE;
     }
-    CUTSCENE_DATA.oam[1].oamID = oamId;
+    CUTSCENE_DATA.oam[1].oamId = oamId;
 
     CUTSCENE_DATA.dispcnt = DCNT_OBJ | sStatueOpeningPageData[0].bg | sStatueOpeningPageData[1].bg | sStatueOpeningPageData[2].bg;
 

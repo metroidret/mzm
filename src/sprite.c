@@ -1755,7 +1755,7 @@ void SpriteLoadSpriteset(void)
 
     for (i = 0; i < MAX_AMOUNT_OF_SPRITE_TYPES; i++)
     {
-        gSpritesetSpritesID[i] = PSPRITE_UNUSED16;
+        gSpritesetSpritesId[i] = PSPRITE_UNUSED16;
         gSpritesetGfxSlots[i] = 0;
     }
 
@@ -1782,7 +1782,7 @@ void SpriteLoadSpriteset(void)
             EMPTY_DO_WHILE // Needed to produce matching ASM.
         }
 
-        gSpritesetSpritesID[i] = spriteId;
+        gSpritesetSpritesId[i] = spriteId;
         gSpritesetGfxSlots[i] = MOD_AND(gfxSlot, 8);
 
         if (gfxSlot == prevGfxSlot)
@@ -1915,7 +1915,7 @@ void SpriteInitPrimary(u8 spritesetSlot, u16 yPosition, u16 xPosition, u8 roomSl
 
             // Fetch the gfx slot and the sprite id
             pSprite->spritesetGfxSlot = gSpritesetGfxSlots[spritesetSlot];
-            pSprite->spriteId = gSpritesetSpritesID[spritesetSlot];
+            pSprite->spriteId = gSpritesetSpritesId[spritesetSlot];
         }
         else
         {

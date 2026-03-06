@@ -21,8 +21,8 @@
 #define KRAID_RISING_PUFF_AMOUNT 11
 #define KRAID_RISING_DEBRIS_AMOUNT 6
 
-static struct CutsceneOamData* KraidRisingUpdatePuff(struct CutsceneOamData* pOam, u8 puffID);
-static struct CutsceneOamData* KraidRisingUpdateDebris(struct CutsceneOamData* pOam, u8 debrisID);
+static struct CutsceneOamData* KraidRisingUpdatePuff(struct CutsceneOamData* pOam, u8 puffId);
+static struct CutsceneOamData* KraidRisingUpdateDebris(struct CutsceneOamData* pOam, u8 debrisId);
 static void KraidRisingProcessOam(void);
 
 // 0: x position
@@ -174,7 +174,7 @@ static u8 KraidRisingRising(void)
             CUTSCENE_DATA.oam[KRAID_RISING_DEBRIS_AMOUNT + KRAID_RISING_PUFF_AMOUNT].yPosition = BLOCK_SIZE * 10;
             CUTSCENE_DATA.oam[KRAID_RISING_DEBRIS_AMOUNT + KRAID_RISING_PUFF_AMOUNT].priority = sKraidRisingPagesData[2].priority;
 
-            UpdateCutsceneOamDataID(&CUTSCENE_DATA.oam[KRAID_RISING_DEBRIS_AMOUNT + KRAID_RISING_PUFF_AMOUNT], KRAID_RISING_OAM_ID_SAMUS);
+            UpdateCutsceneOamDataId(&CUTSCENE_DATA.oam[KRAID_RISING_DEBRIS_AMOUNT + KRAID_RISING_PUFF_AMOUNT], KRAID_RISING_OAM_ID_SAMUS);
 
             // Enable render for kraid rising, the cave background and objects
             CUTSCENE_DATA.dispcnt = sKraidRisingPagesData[2].bg | sKraidRisingPagesData[3].bg | DCNT_OBJ;
@@ -237,10 +237,10 @@ static u8 KraidRisingRising(void)
  * @brief 626f8 | 54 | Updates a puff
  * 
  * @param pOam Cutscene OAM Data Pointer
- * @param puffID Puff ID
+ * @param puffId Puff ID
  * @return struct CutsceneOamData* First param
  */
-static struct CutsceneOamData* KraidRisingUpdatePuff(struct CutsceneOamData* pOam, u8 puffID)
+static struct CutsceneOamData* KraidRisingUpdatePuff(struct CutsceneOamData* pOam, u8 puffId)
 {
     s32 offset;
 
@@ -259,10 +259,10 @@ static struct CutsceneOamData* KraidRisingUpdatePuff(struct CutsceneOamData* pOa
 
     // Set new timer
     // CONVERT_SECONDS(.25f) + 1 * DELTA_TIME
-    pOam->timer = MOD_AND(sRandomNumberTable[gFrameCounter8Bit + puffID], 16) + 1 * DELTA_TIME;
+    pOam->timer = MOD_AND(sRandomNumberTable[gFrameCounter8Bit + puffId], 16) + 1 * DELTA_TIME;
 
     // Update OAM id
-    UpdateCutsceneOamDataID(pOam, sKraidRisingPuffData[puffID][2]);
+    UpdateCutsceneOamDataId(pOam, sKraidRisingPuffData[puffId][2]);
 
     // Implicit return
 }
@@ -271,10 +271,10 @@ static struct CutsceneOamData* KraidRisingUpdatePuff(struct CutsceneOamData* pOa
  * @brief 6274c | c0 | Updates a debris
  * 
  * @param pOam Cutscene OAM Data Pointer
- * @param puffID Debris ID
+ * @param puffId Debris ID
  * @return struct CutsceneOamData* First param
  */
-static struct CutsceneOamData* KraidRisingUpdateDebris(struct CutsceneOamData* pOam, u8 debrisID)
+static struct CutsceneOamData* KraidRisingUpdateDebris(struct CutsceneOamData* pOam, u8 debrisId)
 {
     if (pOam->timer != 0)
     {
@@ -288,17 +288,17 @@ static struct CutsceneOamData* KraidRisingUpdateDebris(struct CutsceneOamData* p
         // Initialize debris
 
         // Set spawn X (base + [0-64])
-        pOam->xPosition = sKraidRisingDebrisSpawnXPosition[debrisID] + MOD_AND(sRandomNumberTable[~MOD_AND(gFrameCounter8Bit + debrisID, ARRAY_SIZE(sRandomNumberTable))], 64);
+        pOam->xPosition = sKraidRisingDebrisSpawnXPosition[debrisId] + MOD_AND(sRandomNumberTable[~MOD_AND(gFrameCounter8Bit + debrisId, ARRAY_SIZE(sRandomNumberTable))], 64);
         
         // Start above ceiling
         pOam->yPosition = -HALF_BLOCK_SIZE;
 
         // Set random velocity
-        pOam->yVelocity = ((gFrameCounter8Bit + debrisID) & (MOD_AND(debrisID, 2) + 3)) - 2;
+        pOam->yVelocity = ((gFrameCounter8Bit + debrisId) & (MOD_AND(debrisId, 2) + 3)) - 2;
         pOam->unk_18 = 0;
 
         // Reset anim
-        UpdateCutsceneOamDataID(pOam, KRAID_RISING_OAM_ID_DEBRIS);
+        UpdateCutsceneOamDataId(pOam, KRAID_RISING_OAM_ID_DEBRIS);
     }
     else
     {
@@ -315,7 +315,7 @@ static struct CutsceneOamData* KraidRisingUpdateDebris(struct CutsceneOamData* p
             pOam->exists = FALSE;
 
             // Set random respawn timer
-            pOam->timer = 1 + MOD_AND(sRandomNumberTable[MOD_AND(gFrameCounter8Bit + debrisID, ARRAY_SIZE(sRandomNumberTable))], 16);
+            pOam->timer = 1 + MOD_AND(sRandomNumberTable[MOD_AND(gFrameCounter8Bit + debrisId, ARRAY_SIZE(sRandomNumberTable))], 16);
         }
     }
 }
