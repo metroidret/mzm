@@ -1906,7 +1906,7 @@ static CreditsFunc_T sUnlockedOptionsFunctionPointers[2] = {
  * 
  * @return u32 bool, ended
  */
-u32 CreditsMainLoop(void)
+u32 CreditsHandler(void)
 {
     u32 ended;
     u32 stageResult;
@@ -2251,7 +2251,7 @@ static u32 GalleryDisplay(void)
  * 
  * @return u32 bool, ended
  */
-u32 GalleryMainLoop(void)
+u32 GalleryHandler(void)
 {
     u32 ended;
 

@@ -199,7 +199,7 @@ static u32 FusionGalleryDisplay(void)
  * 
  * @return u32 bool, ended
  */
-u32 FusionGalleryMainLoop(void)
+u32 FusionGalleryHandler(void)
 {
     u32 ended;
 

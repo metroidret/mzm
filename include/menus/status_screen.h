@@ -15,7 +15,7 @@ void LoadPauseScreenBgPalette(void);
 
 void PauseDebugUpdateMapOverlay(u8 param_0, Area area);
 void PauseDebugActivateAbilities(void);
-u32 PauseDebugMainLoop(void);
+u32 PauseDebugHandler(void);
 void PauseDebugToggleAbility(u8 isActivation, u8 group, u8 abilityNum);
 void PauseDebugStatusScreen(void);
 void PauseDebugDrawAbilityGroup(u8 group);
@@ -53,7 +53,7 @@ u32 StatusScreenSuitlessItems(void);
 u32 StatusScreenFindUnknownItemSlot(u8 wantUnknownItem);
 u32 StatusScreenUpdateUnknownItemPalette(u8 stage);
 u32 StatusScreenFullyPoweredItems(void);
-void StatusScreenMainLoop(void);
+void StatusScreenHandler(void);
 DescriptionTextId StatusScreenGetCurrentEquipmentSelected(u8 statusSlot);
 u32 StatusScreenUpdateCursorPosition(u8 statusSlot);
 u32 StatusScreenIsStatusSlotEnabled(u8 statusSlot);

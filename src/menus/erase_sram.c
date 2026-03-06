@@ -80,7 +80,7 @@ static const u32* sEraseSramTextGfxPointers[LANGUAGE_COUNT][2] = {
  * 
  * @return u32 bool, leaving
  */
-u32 EraseSramMainLoop(void)
+u32 EraseSramHandler(void)
 {
     u32 leaving;
 

@@ -1044,7 +1044,7 @@ u32 TitleScreenCheckPlayEffects(void)
  * 
  * @return u32 bool, leaving
  */
-u32 TitleScreenMainLoop(void)
+u32 TitleScreenHandler(void)
 {
     u32 leaving;
     u32 ret;

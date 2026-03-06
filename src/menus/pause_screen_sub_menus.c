@@ -34,7 +34,7 @@ static const s8* sChozoStatueTargetPathPointers[6] = {
  * 
  * @return u32 bool, ended
  */
-u32 PauseScreenEasySleepMainLoop(void)
+u32 PauseScreenEasySleepHandler(void)
 {
     u32 action;
     u16 ie;
@@ -530,7 +530,7 @@ void ChozoStatueHintScrolling(void)
  * 
  * @return u32 bool, ended
  */
-u32 ChozoStatueHintMainLoop(void)
+u32 ChozoStatueHintHandler(void)
 {
     u32 ended;
 

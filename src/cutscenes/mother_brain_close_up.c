@@ -433,7 +433,7 @@ static struct CutsceneStageData sMotherBrainCloseUpData[5] = {
  * 
  * @return u8 bool, ended
  */
-u8 MotherBrainCloseUpMainLoop(void)
+u8 MotherBrainCloseUpHandler(void)
 {
     u8 ended;
 

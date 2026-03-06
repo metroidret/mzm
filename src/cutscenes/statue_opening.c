@@ -238,7 +238,7 @@ static struct CutsceneStageData sStatueOpeningStageData[3] = {
  * 
  * @return u8 bool, ended
  */
-u8 StatueOpeningMainLoop(void)
+u8 StatueOpeningHandler(void)
 {
     u8 ended;
 

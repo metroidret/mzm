@@ -4,6 +4,6 @@
 #include "types.h"
 #include "structs/cutscene.h"
 
-u8 EnterTourianMainLoop(void);
+u8 EnterTourianHandler(void);
 
 #endif /* ENTER_TOURIAN_CUTSCENE */

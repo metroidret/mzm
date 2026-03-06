@@ -2059,7 +2059,7 @@ void ProcessCutsceneOam(u8 length, struct CutsceneOamData* pOam, const struct Oa
  * 
  * @return u32 bool, leaving
  */
-u32 PauseScreenMainLoop(void)
+u32 PauseScreenHandler(void)
 {
     u32 leaving;
 
@@ -2082,7 +2082,7 @@ u32 PauseScreenMainLoop(void)
 
         case 2:
             PauseScreenUpdateOrStartFading(0);
-            if (PauseScreenCallStateMainLoop())
+            if (PauseScreenCallStateHandler())
             {
                 PauseScreenUpdateOrStartFading(PAUSE_SCREEN_FADING_OUT_INIT);
                 gSubGameModeStage++;
@@ -2126,7 +2126,7 @@ u32 PauseScreenMainLoop(void)
             else
             {
                 gButtonInput = gChangedInput = KEY_NONE;
-                if (PauseScreenCallStateMainLoop())
+                if (PauseScreenCallStateHandler())
                 {
                     gSubGameMode2 = 11;
                     leaving = TRUE;
@@ -2747,7 +2747,7 @@ void PauseScreenGetMinimapData(Area area, u16* dst)
  * 
  * @return u32 bool, ended
  */
-u32 PauseScreenCallStateMainLoop(void)
+u32 PauseScreenCallStateHandler(void)
 {
     u32 leaving;
 
@@ -2765,13 +2765,13 @@ u32 PauseScreenCallStateMainLoop(void)
         case PAUSE_SCREEN_STATE_MAP_SCREEN:
             if (!(gChangedInput & (gButtonAssignments.pause | KEY_B)))
             {
-                MapScreenMainLoop();
+                MapScreenHandler();
                 break;
             }
             
             if (PAUSE_SCREEN_DATA.onWorldMap)
             {
-                MapScreenMainLoop();
+                MapScreenHandler();
                 break;
             }
 
@@ -2785,14 +2785,14 @@ u32 PauseScreenCallStateMainLoop(void)
                     PauseScreenMoveDebugCursor(TRUE);
 
                 #ifdef DEBUG
-                leaving = PauseDebugMainLoop();
+                leaving = PauseDebugHandler();
                 #else // !DEBUG
                 leaving = FALSE;
                 #endif
             }
             else
             {
-                StatusScreenMainLoop();
+                StatusScreenHandler();
             }
             break;
 
@@ -2834,21 +2834,21 @@ u32 PauseScreenCallStateMainLoop(void)
             break;
 
         case PAUSE_SCREEN_STATE_CHOZO_STATUE_HINT:
-            if (ChozoStatueHintMainLoop())
+            if (ChozoStatueHintHandler())
             {
                 PAUSE_SCREEN_DATA.stateInfo.state = 14;
             }
             break;
 
         case PAUSE_SCREEN_STATE_MAP_DOWNLOAD:
-            if (PauseScreenMapDownloadMainLoop())
+            if (PauseScreenMapDownloadHandler())
             {
                 PAUSE_SCREEN_DATA.stateInfo.state = 18;
             }
             break;
 
         case PAUSE_SCREEN_STATE_EASY_SLEEP:
-            if (PauseScreenEasySleepMainLoop())
+            if (PauseScreenEasySleepHandler())
             {
                 PAUSE_SCREEN_DATA.stateInfo.state = PAUSE_SCREEN_STATE_EASY_SLEEP_LEAVING;
             }

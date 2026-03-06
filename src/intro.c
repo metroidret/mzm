@@ -990,7 +990,7 @@ static IntroFunc_T sIntroStageFunctionsPointer[8] = {
  * 
  * @return u32 bool, ended
  */
-u32 IntroMainLoop(void)
+u32 IntroHandler(void)
 {
     u32 ended;
 

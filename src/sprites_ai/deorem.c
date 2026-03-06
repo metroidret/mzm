@@ -864,7 +864,7 @@ static void DeoremSpawnHead(void)
  * @brief 21880 | 284 | Handles deorem being idle and the down attack 
  * 
  */
-static void DeoremMainLoop(void)
+static void DeoremHandler(void)
 {
     u16 movement;
     u16 yRange;
@@ -2809,7 +2809,7 @@ void Deorem(void)
             break;
 
         case DEOREM_POSE_MAIN:
-            DeoremMainLoop();
+            DeoremHandler();
             break;
 
         case DEOREM_POSE_RETRACTING:

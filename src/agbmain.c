@@ -40,7 +40,7 @@ void agbmain(void)
         switch (gMainGameMode)
         {
             case GM_SOFT_RESET:
-                if (SoftResetMainLoop())
+                if (SoftResetHandler())
                 {
                     gMainGameMode = GM_INTRO;
                     gSubGameMode1 = 0;
@@ -56,7 +56,7 @@ void agbmain(void)
                 }
                 else
                 #endif // DEBUG
-                if (IntroMainLoop())
+                if (IntroHandler())
                 {
                     gMainGameMode = GM_TITLE;
                     gSubGameMode1 = 0;
@@ -74,7 +74,7 @@ void agbmain(void)
                 }
                 else
                 #endif // DEBUG
-                if (TitleScreenMainLoop())
+                if (TitleScreenHandler())
                 {
                     #ifdef REGION_EU
                     gSubGameMode1 = 0;
@@ -113,7 +113,7 @@ void agbmain(void)
                 break;
 
             case GM_FILE_SELECT:
-                if (FileSelectMenuMainLoop())
+                if (FileSelectMenuHandler())
                 {
                     if (gSubGameMode2 == 1) // If continuing file
                         gMainGameMode = GM_INGAME;
@@ -133,7 +133,7 @@ void agbmain(void)
                 break;
 
             case GM_INGAME:
-                if (InGameMainLoop()) 
+                if (InGameHandler()) 
                 {
                     if (gPauseScreenFlag == PAUSE_SCREEN_NONE)
                     {
@@ -163,7 +163,7 @@ void agbmain(void)
                 break;
 
             case GM_MAP_SCREEN:
-                if (PauseScreenMainLoop())
+                if (PauseScreenHandler())
                 {
                     gMainGameMode = gSubGameMode2;
                     gSubGameMode2 = 0;
@@ -195,7 +195,7 @@ void agbmain(void)
                 break;
 
             case GM_GAMEOVER:
-                if (GameOverMainLoop())
+                if (GameOverHandler())
                 {
                     gMainGameMode = gSubGameMode2;
                     gSubGameMode1 = 0;
@@ -204,7 +204,7 @@ void agbmain(void)
                 break;
 
             case GM_CHOZODIA_ESCAPE:
-                if (ChozodiaEscapeMainLoop())
+                if (ChozodiaEscapeHandler())
                 {
                     gSubGameMode1 = 0;
                     gMainGameMode = GM_CREDITS;
@@ -212,7 +212,7 @@ void agbmain(void)
                 break;
 
             case GM_CREDITS:
-                if (CreditsMainLoop())
+                if (CreditsHandler())
                 {
                     gSubGameMode1 = 0;
                     gMainGameMode = GM_INTRO;
@@ -224,7 +224,7 @@ void agbmain(void)
                 break;
 
             case GM_TOURIAN_ESCAPE:
-                if (TourianEscapeMainLoop())
+                if (TourianEscapeHandler())
                 {
                     gSubGameMode1 = 0;
                     gMainGameMode = gSubGameMode2;
@@ -236,7 +236,7 @@ void agbmain(void)
                 break;
 
             case GM_CUTSCENE:
-                if (CutsceneMainLoop())
+                if (CutsceneHandler())
                 {
                     gSubGameMode1 = 0;
 
@@ -256,7 +256,7 @@ void agbmain(void)
                 break;
 
             case GM_DEMO:
-                if (InGameMainLoop())
+                if (InGameHandler())
                 {
                     if (gPauseScreenFlag == PAUSE_SCREEN_PAUSE_OR_CUTSCENE)
                     {
@@ -279,7 +279,7 @@ void agbmain(void)
                 break;
 
             case GM_GALLERY:
-                if (GalleryMainLoop())
+                if (GalleryHandler())
                 {
                     gSubGameMode1 = 0;
                     gMainGameMode = GM_FILE_SELECT;
@@ -287,7 +287,7 @@ void agbmain(void)
                 break;
 
             case GM_FUSION_GALLERY:
-                if (FusionGalleryMainLoop())
+                if (FusionGalleryHandler())
                 {
                     gSubGameMode1 = 0;
                     gMainGameMode = GM_FILE_SELECT;
@@ -299,7 +299,7 @@ void agbmain(void)
                 break;
 
             case GM_ERASE_SRAM:
-                if (EraseSramMainLoop())
+                if (EraseSramHandler())
                 {
                     if (gSubGameMode2 == 1)
                     {
@@ -321,7 +321,7 @@ void agbmain(void)
 
             case GM_DEBUG_MENU:
                 #ifdef DEBUG
-                if (BootDebugMainLoop())
+                if (BootDebugHandler())
                 {
                     gSubGameMode1 = 0;
 

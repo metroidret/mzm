@@ -501,7 +501,7 @@ static struct CutsceneStageData sRidleyLandingStageData[5] = {
  * 
  * @return u8 bool, ended
  */
-u8 RidleyLandingMainLoop(void)
+u8 RidleyLandingHandler(void)
 {
     u8 ended;
 

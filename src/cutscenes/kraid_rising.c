@@ -489,7 +489,7 @@ static struct CutsceneStageData sKraidRisingStageData[4] = {
  * 
  * @return u8 1 if ended, 0 otherwise
  */
-u8 KraidRisingMainLoop(void)
+u8 KraidRisingHandler(void)
 {
     u8 ended;
 

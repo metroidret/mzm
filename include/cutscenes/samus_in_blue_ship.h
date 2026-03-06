@@ -3,6 +3,6 @@
 
 #include "types.h"
 
-u8 SamusInBlueShipMainLoop(void);
+u8 SamusInBlueShipHandler(void);
 
 #endif /* SAMUS_IN_BLUE_SHIP_CUTSCENE */

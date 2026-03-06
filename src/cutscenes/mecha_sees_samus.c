@@ -154,7 +154,7 @@ static struct CutsceneStageData sMechaSeesSamusStageData[3] = {
  * 
  * @return u8 bool, ended
  */
-u8 MechaRidleySeesSamusMainLoop(void)
+u8 MechaRidleySeesSamusHandler(void)
 {
     u8 ended;
 

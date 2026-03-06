@@ -309,7 +309,7 @@ void PauseDebugActivateAbilities(void)
  * 
  * @return u32 Leaving
  */
-u32 PauseDebugMainLoop(void)
+u32 PauseDebugHandler(void)
 {
     if (!PAUSE_SCREEN_DATA.debugOnEventList)
     {
@@ -3218,7 +3218,7 @@ u32 StatusScreenFullyPoweredItems(void)
  * @brief 71800 | 94 | Main loop for the status screen
  * 
  */
-void StatusScreenMainLoop(void)
+void StatusScreenHandler(void)
 {
     u32 toggleResult;
 

@@ -790,7 +790,7 @@ static struct CutsceneStageData sRidleyInSpaceStageData[6] = {
  * 
  * @return u8 bool, ended
  */
-u8 RidleyInSpaceMainLoop(void)
+u8 RidleyInSpaceHandler(void)
 {
     u8 ended;
 

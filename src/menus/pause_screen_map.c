@@ -330,7 +330,7 @@ void PauseScreenInitMapDownload(void)
  * 
  * @return u32 bool, ended
  */
-u32 PauseScreenMapDownloadMainLoop(void)
+u32 PauseScreenMapDownloadHandler(void)
 {
     u32 ended;
 
@@ -971,7 +971,7 @@ void PauseScreenMapCheckExploredAreas(void)
  * @brief 6e04c | 1a8 | Map screen main loop
  * 
  */
-void MapScreenMainLoop(void)
+void MapScreenHandler(void)
 {
     u8 action;
 

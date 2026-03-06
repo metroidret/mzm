@@ -335,7 +335,7 @@ static struct CutsceneStageData sRidleySpawnStageData[5] = {
  * 
  * @return u8 bool, ended
  */
-u8 RidleySpawnMainLoop(void)
+u8 RidleySpawnHandler(void)
 {
     u8 ended;
 

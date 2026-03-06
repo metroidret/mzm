@@ -221,7 +221,7 @@ static void MotherBrainCheckGlassBroke(void)
  * @brief 3cbfc | 3fc | Mother brain main behavior loop
  * 
  */
-static void MotherBrainMainLoop(void)
+static void MotherBrainHandler(void)
 {
     u8 palette;
     u8 beamShooterSlot;
@@ -738,7 +738,7 @@ void MotherBrain(void)
             break;
 
         case MOTHER_BRAIN_POSE_MAIN_LOOP:
-            MotherBrainMainLoop();
+            MotherBrainHandler();
             break;
 
         case MOTHER_BRAIN_POSE_DYING:

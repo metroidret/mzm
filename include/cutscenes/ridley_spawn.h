@@ -14,6 +14,6 @@ MAKE_ENUM(u8, RidleySpawnOamId) {
     RIDLEY_SPAWN_OAM_ID_COUNT
 };
 
-u8 RidleySpawnMainLoop(void);
+u8 RidleySpawnHandler(void);
 
 #endif /* RIDLEY_SPAWN_CUTSCENE */

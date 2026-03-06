@@ -8,10 +8,10 @@
 #include "structs/cutscene.h"
 
 u8 CutsceneDummyStage(void);
-u8 TourianEscapeMainLoop(void);
+u8 TourianEscapeHandler(void);
 void CutsceneUpdateMusicAfterSkip(void);
 void CutsceneEnd(void);
-u8 CutsceneMainLoop(void);
+u8 CutsceneHandler(void);
 u8 CutsceneEndFunction(void);
 void CutsceneVBlank(void);
 void CutsceneLoadingVBlank(void);

@@ -674,7 +674,7 @@ static struct CutsceneStageData sEnterTourianStageData[3] = {
     }
 };
 
-u8 EnterTourianMainLoop(void)
+u8 EnterTourianHandler(void)
 {
     u8 ended;
 

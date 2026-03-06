@@ -16,6 +16,6 @@ MAKE_ENUM(u8, MotherBrainCloseUpOamId) {
     MOTHER_BRAIN_CLOSE_UP_OAM_ID_COUNT
 };
 
-u8 MotherBrainCloseUpMainLoop(void);
+u8 MotherBrainCloseUpHandler(void);
 
 #endif /* MOTHER_BRAIN_CLOSE_UP_CUTSCENE */

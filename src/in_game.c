@@ -35,7 +35,7 @@
  * 
  * @return u32 bool, changing game mode
  */
-u32 InGameMainLoop(void)
+u32 InGameHandler(void)
 {
     u32 changing;
 
@@ -72,7 +72,7 @@ u32 InGameMainLoop(void)
             break;
 
         case SUB_GAME_MODE_PLAYING:
-            DemoMainLoop();
+            DemoHandler();
             #ifndef REGION_EU
             IoWriteRegisters();
             #endif // !REGION_EU

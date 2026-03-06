@@ -452,7 +452,7 @@ static struct CutsceneStageData sBeforeRuinsTestStageData[5] = {
  * 
  * @return u8 bool, ended
  */
-u8 BeforeRuinsTestMainLoop(void)
+u8 BeforeRuinsTestHandler(void)
 {
     u8 ended;
 

@@ -21,6 +21,6 @@ MAKE_ENUM(u8, RidleyLandingOamId) {
     RIDLEY_LANDING_OAM_ID_COUNT
 };
 
-u8 RidleyLandingMainLoop(void);
+u8 RidleyLandingHandler(void);
 
 #endif /* RIDLEY_LANDING_CUTSCENE */

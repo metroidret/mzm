@@ -10,7 +10,7 @@
  * @brief c2d8 | 24 | Main loop for a demo
  * 
  */
-void DemoMainLoop(void)
+void DemoHandler(void)
 {
     if (gDemoState == DEMO_STATE_NONE)
         return;

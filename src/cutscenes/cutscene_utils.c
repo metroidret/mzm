@@ -65,7 +65,7 @@ u8 CutsceneDummyStage(void)
  * 
  * @return u8 bool, ended
  */
-u8 TourianEscapeMainLoop(void)
+u8 TourianEscapeHandler(void)
 {
     u8 ended;
 
@@ -254,7 +254,7 @@ void CutsceneEnd(void)
  * 
  * @return u8 bool, ended
  */
-u8 CutsceneMainLoop(void)
+u8 CutsceneHandler(void)
 {
     u8 result;
     u8 ended;

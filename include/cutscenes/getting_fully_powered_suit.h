@@ -18,6 +18,6 @@ MAKE_ENUM(u8, GettingFullyPoweredSuitOamId) {
 
 #define OAM_RING_SPARKLES_AMOUNT 6
 
-u8 GettingFullyPoweredSuitMainLoop(void);
+u8 GettingFullyPoweredSuitHandler(void);
 
 #endif /* GETTING_FULLY_POWERED_SUIT_CUTSCENE */

@@ -4,7 +4,7 @@ This document goes into a high level overview of the emulator used to run Metroi
 
 ## Loading the Emulator
 
-The boot code for the emulator is fairly small. The emulator is called in [file_select.c](../src/file_select.c) by `OptionsNesMetroidMainLoop`.
+The boot code for the emulator is fairly small. The emulator is called in [file_select.c](../src/file_select.c) by `OptionsNesMetroidHandler`.
 In the boot code, located in [loader.s](../nes_metroid/asm/loader.s), the program decompresses the payload program, which is responsible for loading the emulator and rom.
 The payload program, located in [code.s](../nes_metroid/payload/asm/code.s), decompresses the emulator and rom, and puts them into specific regions of memory.
 

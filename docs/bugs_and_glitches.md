@@ -178,7 +178,7 @@ After the Ruins Test fight, the game tries to lock you in place in the center of
 
 During a door transition, the game calls various "update" routines for one frame in order to initialize data, such as Samus and sprites. When entering a door transition while submerged in lava or acid, it's possible for Samus to take damage during that one frame and die. This sets `gSubGameMode1` to `SUB_GAME_MODE_DYING`, which then gets incremented by one. This is supposed to change the mode from 0 to 1 (`SUB_GAME_MODE_DOOR_TRANSITION`), but instead changes it from 5 to 6 (`SUB_GAME_MODE_NO_CLIP`). This was fixed in the European release.
 
-**Fix:** Edit `SamusExecutePoseMainLoop` in [samus.c](../src/samus.c) to only check for hazard damage if `gSubGameMode1` isn't 0.
+**Fix:** Edit `SamusExecutePoseHandler` in [samus.c](../src/samus.c) to only check for hazard damage if `gSubGameMode1` isn't 0.
 
 ```diff
 + if (gSubGameMode1 != 0)
@@ -196,7 +196,7 @@ During a door transition, the game calls various "update" routines for one frame
 
 During Samus's death animation, missiles can be highlighted and super missiles can be toggled. Even though the HUD isn't displayed, the sound for each will still play. This was fixed in the European release.
 
-**Fix:** Edit `SamusExecutePoseMainLoop` in [samus.c](../src/samus.c) to check if Samus is dying before updating the highlighted weapon.
+**Fix:** Edit `SamusExecutePoseHandler` in [samus.c](../src/samus.c) to check if Samus is dying before updating the highlighted weapon.
 
 ```diff
   // Update weapon highlight
@@ -457,8 +457,8 @@ The last cutscene stage for upgrading your suit (obtaining Varia or the fully po
 | `src` | `TitleScreenTransferGroundGraphics` | [title_screen.c](../src/menus/title_screen.c) |
 | `currSlot` | `unk_818cc` | [tourian_escape.c](../src/tourian_escape.c) |
 | `diff` | `SramWriteChecked` | [sram.c](../src/sram/sram.c) |
-| `updateTextAndEvents` | `BootDebugModeMainLoop` | [boot_debug.c](../src/menus/boot_debug.c) |
-| `updateText` | `BootDebugSoundMainLoop` | [boot_debug.c](../src/menus/boot_debug.c) |
+| `updateTextAndEvents` | `BootDebugModeHandler` | [boot_debug.c](../src/menus/boot_debug.c) |
+| `updateText` | `BootDebugSoundHandler` | [boot_debug.c](../src/menus/boot_debug.c) |
 
 
 ## TODO

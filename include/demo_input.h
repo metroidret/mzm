@@ -3,7 +3,7 @@
 
 #include "types.h"
 
-void DemoMainLoop(void);
+void DemoHandler(void);
 void RecordDemo(void);
 void UpdateDemoInput(void);
 void CopyDemoInput(void);

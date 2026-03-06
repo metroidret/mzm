@@ -36,7 +36,7 @@ static void GameOverProcessOam(void);
  * 
  * @return u32 bool, ended
  */
-u32 GameOverMainLoop(void)
+u32 GameOverHandler(void)
 {
     u32 ended;
 

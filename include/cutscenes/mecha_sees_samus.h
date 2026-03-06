@@ -3,6 +3,6 @@
 
 #include "types.h"
 
-u8 MechaRidleySeesSamusMainLoop(void);
+u8 MechaRidleySeesSamusHandler(void);
 
 #endif /* MECHA_SEES_SAMUS_CUTSCENE */

@@ -377,7 +377,7 @@ static struct CutsceneStageData sStoryTextCutsceneStageData[7] = {
  * 
  * @return u8 bool, ended
  */
-u8 StoryTextCutsceneMainLoop(void)
+u8 StoryTextCutsceneHandler(void)
 {
     u8 ended;
 

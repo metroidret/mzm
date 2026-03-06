@@ -18,6 +18,6 @@ MAKE_ENUM(u8, StatueOpeningOamId) {
     STATUE_OPENING_OAM_ID_COUNT
 };
 
-u8 StatueOpeningMainLoop(void);
+u8 StatueOpeningHandler(void);
 
 #endif /* STATUE_OPENING_CUTSCENE */

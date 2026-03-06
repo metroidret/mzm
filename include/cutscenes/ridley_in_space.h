@@ -29,6 +29,6 @@ MAKE_ENUM(u8, RidleyInSpaceShipSlot) {
     RIDLEY_INSPACE_SHIP_SLOT_COUNT
 };
 
-u8 RidleyInSpaceMainLoop(void);
+u8 RidleyInSpaceHandler(void);
 
 #endif /* RIDLEY_IN_SPACE_CUTSCENE */

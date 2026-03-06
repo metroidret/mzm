@@ -225,7 +225,7 @@ static struct CutsceneStageData sSamusInBlueShipStageData[3] = {
  * 
  * @return u8 bool, ended
  */
-u8 SamusInBlueShipMainLoop(void)
+u8 SamusInBlueShipHandler(void)
 {
     u8 ended;
 

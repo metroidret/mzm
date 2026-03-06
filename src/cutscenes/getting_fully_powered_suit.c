@@ -465,7 +465,7 @@ static struct CutsceneStageData sGettingFullyPoweredSuitStageData[3] = {
  * 
  * @return u8 bool, ended
  */
-u8 GettingFullyPoweredSuitMainLoop(void)
+u8 GettingFullyPoweredSuitHandler(void)
 {
     u8 ended;
 

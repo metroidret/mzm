@@ -4,7 +4,7 @@
 #include "types.h"
 #include "structs/samus.h"
 
-u32 InGameMainLoop(void);
+u32 InGameHandler(void);
 void SetVBlankCodeInGame(void);
 #ifdef REGION_EU
 void InGameIoWriteRegisters(void);

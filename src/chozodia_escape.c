@@ -1217,7 +1217,7 @@ static ChozodiaEscapeFunc_T sChozodiaEscapeFunctionPointers[5] = {
  * 
  * @return u32 bool, ended
  */
-u32 ChozodiaEscapeMainLoop(void)
+u32 ChozodiaEscapeHandler(void)
 {
     u32 ended;
     u8 stageResult;

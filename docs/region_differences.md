@@ -35,16 +35,16 @@ Even though the EU version was released before the JP version, evidence from the
 - Save file game version text has "EUR" in the string
   - `SramWrite_FileScreenOptionsUnlocked` in [save_file.c](../src/save_file.c)
 - The cursor for "Yes" on the easy sleep menu is moved slightly to the right (due to text being thinner)
-  - `PauseScreenEasySleepMainLoop` in [pause_screen_sub_menus.c](../src/menus/pause_screen_sub_menus.c)
+  - `PauseScreenEasySleepHandler` in [pause_screen_sub_menus.c](../src/menus/pause_screen_sub_menus.c)
 - The credits scroll a bit faster due to being longer
   - `CreditsDisplay` in [ending_and_gallery.c](../src/ending_and_gallery.c)
 - Text drawing has an extra check that can increment the character width by 1 (TODO: investigate the purpose of this)
   - `TextDrawCharacter` and `TextDrawMessageCharacter` in [text.c](../src/text.c)
 - `CheckForMaintainedInput` allows for two different speeds (the language select menu uses a slower speed)
   - `MaintainedInputSpeed` in [pause_screen.h](../include/menus/pause_screen.h)
-  - `CheckForMaintainedInput` and `PauseScreenCallStateMainLoop` in [pause_screen.c](../src/menus/pause_screen.c)
+  - `CheckForMaintainedInput` and `PauseScreenCallStateHandler` in [pause_screen.c](../src/menus/pause_screen.c)
   - `BootDebugHandleInput` in [boot_debug.c](../src/menus/boot_debug.c)
-  - `FileSelectUpdateSubMenu` and `OptionsMainLoop` in [file_select.c](../src/menus/file_select.c)
+  - `FileSelectUpdateSubMenu` and `OptionsHandler` in [file_select.c](../src/menus/file_select.c)
 
 #### Language
 
@@ -60,7 +60,7 @@ Even though the EU version was released before the JP version, evidence from the
 - The title screen has a language select menu
   - See [soft_reset.c](../src/soft_reset.c) and [soft_reset_input.c](../src/soft_reset_input.c)
   - `agbmain` in [agbmain.c](../src/agbmain.c)
-  - `TitleScreenCheckPlayEffects`, `TitleScreenMainLoop`, and `TitleScreenInit` in [title_screen.c](../src/menus/title_screen.c)
+  - `TitleScreenCheckPlayEffects`, `TitleScreenHandler`, and `TitleScreenInit` in [title_screen.c](../src/menus/title_screen.c)
 - The title screen has an extra function for setting the menu palette
   - `TitleScreenSetMenuPalette` and `TitleScreenInit` in [title_screen.c](../src/menus/title_screen.c)
 - A different palette row is used for title screen debug text
@@ -80,7 +80,7 @@ Even though the EU version was released before the JP version, evidence from the
 #### File Select
 
 - Some file select options OAM use a different priority
-  - `OptionsUpdateStereoOam`, `OptionsSoundTestMainLoop`, and `OptionsTimeAttackRecordsMainLoop` in [file_select.c](../src/menus/file_select.c)
+  - `OptionsUpdateStereoOam`, `OptionsSoundTestHandler`, and `OptionsTimeAttackRecordsHandler` in [file_select.c](../src/menus/file_select.c)
 - The `FileScreenProcessTextStage` enum uses a single value for lines
   - `FileScreenProcessTextStage` in [file_select.h](../include/menus/file_select.h)
   - `FileScreenProcessText` in [file_select.c](../src/menus/file_select.c)
@@ -92,7 +92,7 @@ Even though the EU version was released before the JP version, evidence from the
 #### Gameplay
 
 - A function was added (`InGameIoWriteRegisters`) to handle writing IO values and slightly clean up the code
-  - `InGameIoWriteRegisters` and `InGameMainLoop` in [in_game.c](../src/in_game.c)
+  - `InGameIoWriteRegisters` and `InGameHandler` in [in_game.c](../src/in_game.c)
   - `agbmain` in [agbmain.c](../src/agbmain.c)
 - Upgrading suit cutscenes are properly stopped (see [bugs_and_glitches.md](bugs_and_glitches.md#upgrading-suit-cutscene-code-is-still-called-after-the-cutscene-ends))
   - `InGameCutsceneUpgradingSuit` in [in_game_cutscene.c](../src/in_game_cutscene.c)
@@ -105,9 +105,9 @@ Even though the EU version was released before the JP version, evidence from the
 - Samus's standing status is checked before updating her horizontal and vertical movement directions (TODO: investigate the purpose of this)
   - `SamusUpdateHitboxMovingDirection` in [samus.c](../src/samus.c)
 - `gSubGameMode1` is checked before taking hazard damage, which prevents dying during a door transition (see [bugs_and_glitches.md](bugs_and_glitches.md#dying-during-a-door-transition-from-lavaacid-puts-samus-in-the-no-clip-state))
-  - `SamusExecutePoseMainLoop` in [samus.c](../src/samus.c)
+  - `SamusExecutePoseHandler` in [samus.c](../src/samus.c)
 - Samus's pose is checked before updating the highlighted weapon, which prevents highlighting or toggling missiles while dying (see [bugs_and_glitches.md](bugs_and_glitches.md#missiles-can-be-highlighted-and-toggled-while-dying))
-  - `SamusExecutePoseMainLoop` in [samus.c](../src/samus.c)
+  - `SamusExecutePoseHandler` in [samus.c](../src/samus.c)
 - Ziplines update Samus's horizontal movement direction (TODO: investigate the purpose of this)
   - `ZiplineMoving` in [zipline.c](../src/sprites_ai/zipline.c)
 
@@ -197,7 +197,7 @@ Even though the EU version was released before the JP version, evidence from the
   - `FileSelectSetLanguage` in [file_select.c](../src/menus/file_select.c)
   - `EraseSramInit` in [erase_sram.c](../src/menus/erase_sram.c)
 - When starting a new file, there's an extra dialog for choosing Japanese for adults (with kanji) or for children (without kanji)
-  - `FileSelectMenuMainLoop`, `FileSelectUpdateSubMenu`, and `FileSelectProcessFileSelection` in [file_select.c](../src/menus/file_select.c)
+  - `FileSelectMenuHandler`, `FileSelectUpdateSubMenu`, and `FileSelectProcessFileSelection` in [file_select.c](../src/menus/file_select.c)
 - Hiragana uses different text graphics in some places
   - `FileSelectDisplaySaveFileMiscInfo` in [file_select.c](../src/menus/file_select.c)
   - `PauseScreenInit` in [pause_screen.c](../src/menus/pause_screen.c)
@@ -238,7 +238,7 @@ The beta ROMs include all of the debug related code (see [debug.md](debug.md)), 
 - The enemy drop function is missing a check for the RNG value being 0, which would cause nothing to be dropped
   - `SpriteUtilDetermineEnemyDrop` in [sprite_util.c](../src/sprite_util.c)
 - Various differences related to viewing time attack records
-  - `OptionsTimeAttackRecordsMainLoop` and `OptionsTimeAttackLoadBestTimeMessage` in [file_select.c](../src/menus/file_select.c)
+  - `OptionsTimeAttackRecordsHandler` and `OptionsTimeAttackLoadBestTimeMessage` in [file_select.c](../src/menus/file_select.c)
   - `OptionsTimeAttackStage` and `OptionsOam` in [file_select.h](../include/menus/file_select.h)
 - The high priority flag is not set on the gadora before Kraid
   - `GadoraInit` in [gadora.c](../src/sprites_ai/gadora.c)
@@ -287,7 +287,7 @@ The beta ROMs include all of the debug related code (see [debug.md](debug.md)), 
 ### Code Differences
 
 - The credits can be skipped by pressing `L` (the US beta does not have this feature)
-  - `CreditsMainLoop` in [ending_and_gallery.c](../src/ending_and_gallery.c)
+  - `CreditsHandler` in [ending_and_gallery.c](../src/ending_and_gallery.c)
 
 ### Data Differences
 

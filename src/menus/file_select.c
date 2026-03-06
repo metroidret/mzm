@@ -38,21 +38,21 @@
 
 static void OptionsUpdateStereoOam(u16 flags);
 static void FileSelectResetIOTransferInfo(void);
-static u8 OptionsNesMetroidMainLoop(void);
+static u8 OptionsNesMetroidHandler(void);
 static u8 OptionsSubMenu_Empty(void);
-static u8 OptionsGalleryMainLoop(void);
-static u8 OptionsStereoMainLoop(void);
-static u8 OptionsSoundTestMainLoop(void);
+static u8 OptionsGalleryHandler(void);
+static u8 OptionsStereoHandler(void);
+static u8 OptionsSoundTestHandler(void);
 static u32 OptionsSoundTestCheckNotAlreadyPlaying(void);
 static void OptionsSoundTestUpdateIdGfx(void);
-static u8 OptionsTimeAttackRecordsMainLoop(void);
+static u8 OptionsTimeAttackRecordsHandler(void);
 #ifndef REGION_US_BETA
 static void OptionsTimeAttackLoadBestTimeMessage(void);
 #endif // !REGION_US_BETA
 static void OptionsTimeAttackLoadRecord(u8 id);
 static void unk_7b854(void);
 static void OptionsTimeAttackLoadPassword(u8 part);
-static u8 OptionsMetroidFusionLinkMainLoop(void);
+static u8 OptionsMetroidFusionLinkHandler(void);
 static u32 FileSelectUpdateFading(void);
 static void FileSelectInitFading(u8 fadingOut);
 static void FileSelectApplyFading(void);
@@ -1164,7 +1164,7 @@ static void FileSelectFileCopyChooseBaseDestinationFile(void)
 }
 
 #ifdef NON_MATCHING
-static u32 FileSelectCopyFileMainLoop(void)
+static u32 FileSelectCopyFileHandler(void)
 {
     // https://decomp.me/scratch/Rz4bp
 
@@ -1448,7 +1448,7 @@ static u32 FileSelectCopyFileMainLoop(void)
 }
 #else
 NAKED_FUNCTION
-static u32 FileSelectCopyFileMainLoop(void)
+static u32 FileSelectCopyFileHandler(void)
 {
     asm(" \n\
     push {r4, r5, r6, r7, lr} \n\
@@ -2125,7 +2125,7 @@ lbl_08079794: \n\
  * 
  * @return u32 bool, ended
  */
-static u32 FileSelectEraseFileMainLoop(void)
+static u32 FileSelectEraseFileHandler(void)
 {
     u32 ended;
     u32 action;
@@ -2323,7 +2323,7 @@ static u32 FileSelectEraseFileMainLoop(void)
  * 
  * @return u32 bool, ended
  */
-static u32 FileSelectCorruptedFileMainLoop(void)
+static u32 FileSelectCorruptedFileHandler(void)
 {
     u8 done;
 
@@ -2996,31 +2996,31 @@ static struct OptionsSubMenuInfo sOptionsSubMenuInfo[OPTION_COUNT + 1] = {
         .gameMode = 0
     },
     [OPTION_STEREO_SELECT] = {
-        .pFunction = OptionsStereoMainLoop,
+        .pFunction = OptionsStereoHandler,
         .gameMode = 0
     },
     [OPTION_SOUND_TEST] = {
-        .pFunction = OptionsSoundTestMainLoop,
+        .pFunction = OptionsSoundTestHandler,
         .gameMode = 0
     },
     [OPTION_TIME_ATTACK] = {
-        .pFunction = OptionsTimeAttackRecordsMainLoop,
+        .pFunction = OptionsTimeAttackRecordsHandler,
         .gameMode = 0
     },
     [OPTION_GALLERY] = {
-        .pFunction = OptionsGalleryMainLoop,
+        .pFunction = OptionsGalleryHandler,
         .gameMode = 5
     },
     [OPTION_FUSION_GALLERY] = {
-        .pFunction = OptionsMetroidFusionLinkMainLoop,
+        .pFunction = OptionsMetroidFusionLinkHandler,
         .gameMode = 4
     },
     [OPTION_FUSION_LINK] = {
-        .pFunction = OptionsMetroidFusionLinkMainLoop,
+        .pFunction = OptionsMetroidFusionLinkHandler,
         .gameMode = 0
     },
     [OPTION_NES_METROID] = {
-        .pFunction = OptionsNesMetroidMainLoop,
+        .pFunction = OptionsNesMetroidHandler,
         .gameMode = 0
     },
     [8] = {
@@ -3034,7 +3034,7 @@ static struct OptionsSubMenuInfo sOptionsSubMenuInfo[OPTION_COUNT + 1] = {
  * 
  * @return u8 bool, leaving
  */
-static u8 OptionsMainLoop(void)
+static u8 OptionsHandler(void)
 {
     u8 result;
 
@@ -3176,7 +3176,7 @@ static void FileSelectResetIOTransferInfo(void)
  * 
  * @return u8 bool, leaving
  */
-static u8 OptionsNesMetroidMainLoop(void)
+static u8 OptionsNesMetroidHandler(void)
 {
     u8 i;
     NesEmuFunc_T func;
@@ -3277,7 +3277,7 @@ static u8 OptionsSubMenu_Empty(void)
  * 
  * @return u8 bool, leaving
  */
-static u8 OptionsGalleryMainLoop(void)
+static u8 OptionsGalleryHandler(void)
 {
     APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subMenuTimer);
 
@@ -3303,7 +3303,7 @@ static u8 OptionsGalleryMainLoop(void)
  * 
  * @return u8 bool, leaving
  */
-static u8 OptionsStereoMainLoop(void)
+static u8 OptionsStereoHandler(void)
 {
     u8 updatedStereo;
 
@@ -3377,7 +3377,7 @@ static u8 OptionsStereoMainLoop(void)
  * 
  * @return u8 bool, leaving
  */
-static u8 OptionsSoundTestMainLoop(void)
+static u8 OptionsSoundTestHandler(void)
 {
     s32 action;
 
@@ -3598,7 +3598,7 @@ static void OptionsSoundTestUpdateIdGfx(void)
  * 
  * @return u8 bool, ended
  */
-static u8 OptionsTimeAttackRecordsMainLoop(void)
+static u8 OptionsTimeAttackRecordsHandler(void)
 {
     u32 action;
 
@@ -4049,7 +4049,7 @@ static void OptionsTimeAttackLoadPassword(u8 part)
  * 
  * @return u8 bool, ended
  */
-static u8 OptionsMetroidFusionLinkMainLoop(void)
+static u8 OptionsMetroidFusionLinkHandler(void)
 {
     APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.subMenuTimer);
 
@@ -4373,7 +4373,7 @@ static u8 OptionsMetroidFusionLinkMainLoop(void)
  * 
  * @return u32 bool, leaving
  */
-u32 FileSelectMenuMainLoop(void)
+u32 FileSelectMenuHandler(void)
 {
     APPLY_DELTA_TIME_INC(FILE_SELECT_DATA.timer);
 
@@ -4421,7 +4421,7 @@ u32 FileSelectMenuMainLoop(void)
             break;
 
         case 10:
-            if (OptionsMainLoop())
+            if (OptionsHandler())
             {
                 if (gSubGameMode2)
                 {
@@ -5531,7 +5531,7 @@ static u8 FileSelectUpdateSubMenu(void)
             break;
 
         case FILE_SELECT_SUB_MENU_COPY:
-            if (FileSelectCopyFileMainLoop())
+            if (FileSelectCopyFileHandler())
             {
                 FileSelectUpdateCursor(CURSOR_POSE_DEFAULT, FILE_SELECT_DATA.fileSelectCursorPosition);
                 FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_MAIN;
@@ -5539,7 +5539,7 @@ static u8 FileSelectUpdateSubMenu(void)
             break;
 
         case FILE_SELECT_SUB_MENU_ERASE:
-            if (FileSelectEraseFileMainLoop())
+            if (FileSelectEraseFileHandler())
             {
                 FileSelectUpdateCursor(CURSOR_POSE_DEFAULT, FILE_SELECT_DATA.fileSelectCursorPosition);
                 FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_MAIN;
@@ -5547,7 +5547,7 @@ static u8 FileSelectUpdateSubMenu(void)
             break;
 
         case FILE_SELECT_SUB_MENU_CORRUPTED:
-            if (FileSelectCorruptedFileMainLoop())
+            if (FileSelectCorruptedFileHandler())
             {
                 FileSelectUpdateCursor(CURSOR_POSE_DEFAULT, FILE_SELECT_DATA.fileSelectCursorPosition);
                 FILE_SELECT_DATA.currentSubMenu = FILE_SELECT_SUB_MENU_MAIN;
