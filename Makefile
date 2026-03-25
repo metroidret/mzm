@@ -99,9 +99,7 @@ include make_tools.mk
 GBAFIX = $(TOOLS_DIR)/gbafix/gbafix
 PYTHON = python3
 EXTRACTOR = $(PYTHON) $(TOOLS_DIR)/extractor.py
-PREPROC1 = $(TOOLS_DIR)/preproc/preproc
-PREPROC2 = $(PYTHON) $(TOOLS_DIR)/preproc.py
-PREPROC = $(PREPROC2)
+PREPROC = $(PYTHON) $(TOOLS_DIR)/preproc.py
 
 # Flags
 ASFLAGS += -mcpu=arm7tdmi
@@ -248,7 +246,6 @@ $(LD_SCRIPT): linker.ld
 
 %.s: %.c
 	$(MSG) CC $@
-	bash -c 'diff --color <($(PREPROC1) $< $(PREPROCFLAGS)) <($(PREPROC2) $< $(PREPROCFLAGS))'
 	$Q$(PREPROC) $< $(PREPROCFLAGS) | $(CPP) $(CPPFLAGS) | $(CC) -o $@ $(CFLAGS) && printf '\t.align 2, 0 @ dont insert nops\n' >> $@
 
 src/dma.s: CFLAGS = -Werror -O1 -mthumb-interwork -fhex-asm -f2003-patch

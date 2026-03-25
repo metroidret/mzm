@@ -11,7 +11,7 @@ MAKEFLAGS += --no-print-directory
 
 TOOLS_DIR := tools
 # Tool executables to build
-TOOLS := gbafix preproc
+TOOLS := gbafix
 
 TOOLDIRS := $(TOOLS:%=$(TOOLS_DIR)/%)
 

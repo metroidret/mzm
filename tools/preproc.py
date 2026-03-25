@@ -174,8 +174,8 @@ def convert_incbin(ic):
             value = 0
             for j in range(size):
                 value += incbinfile_bytes[i+j] << (j*8)
-            incbinfile_values.append(str(value) + "u,")
-        incbin_converted = "".join(incbinfile_values)
+            incbinfile_values.append(str(value) + "u")
+        incbin_converted = ",".join(incbinfile_values)
         if is_brackets:
             incbin_converted = "{" + incbin_converted + "}"
         
@@ -202,7 +202,7 @@ def convert_inctext(ic, charmap):
         inctext = mstr[9:-2]
         
         inctext_ids = charmap.convert_string(inctext)
-        inctext_converted = "{ " + ", ".join(inctext_ids) + ", CHAR_TERMINATOR }"
+        inctext_converted = "{" + ",".join(inctext_ids) + ",CHAR_TERMINATOR}"
         
         out += ic[:m.start()] + inctext_converted
         ic = ic[m.end():]
@@ -234,7 +234,7 @@ def convert_shift_jis(ic):
             inctext_half += c
         
         inctext_ids = [f"0x{b:04X}" for b in inctext_half.encode('shift_jis')]
-        inctext_converted = "{ " + ", ".join(inctext_ids) + ",  }"
+        inctext_converted = "{" + ",".join(inctext_ids) + "}"
         
         out += ic[:m.start()] + inctext_converted
         ic = ic[m.end():]
