@@ -9,8 +9,12 @@ const s16 sHoltzIdleYVelocity[65] = {
     0, -1, 0, -1, 0, -1, 0, -1, 0, 0, 0, 0, SHORT_MAX
 };
 
-const u32 sHoltzGfx[200] = INCBIN_U32("data/sprites/holtz.gfx.lz");
-const u16 sHoltzPal[16] = INCBIN_U16("data/sprites/holtz.pal");
+const u32 sHoltzGfx[200] = {
+    #include "extracted/data/sprites/holtz.gfx.lz.inc"
+};
+const u16 sHoltzPal[16] = {
+    #include "extracted/data/sprites/holtz.pal.inc"
+};
 
 static const u16 sHoltzOam_Idle_Frame0[OAM_DATA_SIZE(4)] = {
     4,

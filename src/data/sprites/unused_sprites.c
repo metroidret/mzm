@@ -31,5 +31,9 @@ const struct FrameData sUnusedSpritesOam_Unused[2] = {
     [1] = FRAME_DATA_TERMINATOR
 };
 
-const u32 sUnusedSpritesGfx[6] = INCBIN_U32("data/sprites/unused_sprites.gfx.lz");
-const u16 sUnusedSpritesPal[16] = INCBIN_U16("data/sprites/unused_sprites.pal");
+const u32 sUnusedSpritesGfx[6] = {
+    #include "extracted/data/sprites/unused_sprites.gfx.lz.inc"
+};
+const u16 sUnusedSpritesPal[16] = {
+    #include "extracted/data/sprites/unused_sprites.pal.inc"
+};

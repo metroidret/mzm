@@ -16,9 +16,15 @@ const s16 sEscapeShipHoveringXMovement[57] = {
     -1, 0, -1, 0, -1, 0, 0, 0, 0, SHORT_MAX
 };
 
-const u32 sEscapeShipGfx[919] = INCBIN_U32("data/sprites/escape_ship.gfx.lz");
-const u16 sEscapeShipPal[64] = INCBIN_U16("data/sprites/escape_ship.pal");
-const u16 sEscapeShipFlashingPal[3 * 16] = INCBIN_U16("data/sprites/escape_ship_flashing.pal");
+const u32 sEscapeShipGfx[919] = {
+    #include "extracted/data/sprites/escape_ship.gfx.lz.inc"
+};
+const u16 sEscapeShipPal[64] = {
+    #include "extracted/data/sprites/escape_ship.pal.inc"
+};
+const u16 sEscapeShipFlashingPal[3 * 16] = {
+    #include "extracted/data/sprites/escape_ship_flashing.pal.inc"
+};
 
 static const u16 sEscapeShipOam_Idle_Frame0[OAM_DATA_SIZE(11)] = {
     11,

@@ -139,52 +139,6 @@ class CharMap:
 
 
 """
-"INCBIN_S8", "INCBIN_U8", "_INCBIN_S8", "_INCBIN_U8", 
-"INCBIN_S16", "INCBIN_U16", "_INCBIN_S16", "_INCBIN_U16", 
-"INCBIN_S32", "INCBIN_U32", "_INCBIN_S32", "_INCBIN_U32"
-
-INCBIN = curly brackets, _INCBIN = no curly brackets
-U = unsigned (signed is never used, so not implemented)
-8, 16 or 32 bits integer
-"""
-def convert_incbin(ic):
-    REGEX_INCBIN = re.compile(r'_?INCBIN_U(8|16|32)+\(\".+\"\)')
-    out = ""
-    while True:
-        m = REGEX_INCBIN.search(ic)
-        if m is None:
-            break
-        mstr = m[0]
-        is_brackets = mstr[0] != '_'
-        size = int(m[1]) // 8
-        
-        incbinfile = mstr.removeprefix("_")[10+len(m[1]):-2]
-        
-        try:
-            with open(incbinfile, "rb") as f:
-                incbinfile_bytes = f.read()
-        except FileNotFoundError:
-            incbinfile_bytes = bytes()
-        filesize = len(incbinfile_bytes)
-        if filesize % size != 0:
-            raise Exception(f"Size {size} doesn't evenly divide file size {filesize}.")
-        
-        incbinfile_values = []
-        for i in range(0, len(incbinfile_bytes), size):
-            value = 0
-            for j in range(size):
-                value += incbinfile_bytes[i+j] << (j*8)
-            incbinfile_values.append(str(value) + "u")
-        incbin_converted = ",".join(incbinfile_values)
-        if is_brackets:
-            incbin_converted = "{" + incbin_converted + "}"
-        
-        out += ic[:m.start()] + incbin_converted
-        ic = ic[m.end():]
-    return out + ic
-
-
-"""
 "INCTEXT"
 
 curly brackets
@@ -249,7 +203,6 @@ def preproc(infile, charmapfile):
         charmapfile_content = f.read()
     charmap = CharMap(charmapfile_content)
     
-    infile_content = convert_incbin(infile_content)
     infile_content = convert_inctext(infile_content, charmap)
     infile_content = convert_shift_jis(infile_content)
     

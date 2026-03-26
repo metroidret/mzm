@@ -1,26 +1,64 @@
 #include "data/tourian_escape_data.h"
 
-const u16 sTourianEscapeExplodingPal[9 * 16] = INCBIN_U16("data/tourian_escape/exploding.pal");
-const u16 sMotherShipBlowingUpExplosionsPal[6 * 16] = INCBIN_U16("data/tourian_escape/blowing_up_explosions.pal");
+const u16 sTourianEscapeExplodingPal[9 * 16] = {
+    #include "extracted/data/tourian_escape/exploding.pal.inc"
+};
+const u16 sMotherShipBlowingUpExplosionsPal[6 * 16] = {
+    #include "extracted/data/tourian_escape/blowing_up_explosions.pal.inc"
+};
 
-const u16 sTourianEscapeSamusInHerShipPowerSuitPal[7 * 16] = INCBIN_U16("data/tourian_escape/samus_in_her_ship_power_suit.pal");
-const u16 sTourianEscapeSamusInHerShipVariaSuitPal[7 * 16] = INCBIN_U16("data/tourian_escape/samus_in_her_ship_varia_suit.pal");
-const u16 sTourianEscapeSamusInHerShipSuitlessPal[8 * 16] = INCBIN_U16("data/tourian_escape/samus_in_her_ship_suitless.pal");
+const u16 sTourianEscapeSamusInHerShipPowerSuitPal[7 * 16] = {
+    #include "extracted/data/tourian_escape/samus_in_her_ship_power_suit.pal.inc"
+};
+const u16 sTourianEscapeSamusInHerShipVariaSuitPal[7 * 16] = {
+    #include "extracted/data/tourian_escape/samus_in_her_ship_varia_suit.pal.inc"
+};
+const u16 sTourianEscapeSamusInHerShipSuitlessPal[8 * 16] = {
+    #include "extracted/data/tourian_escape/samus_in_her_ship_suitless.pal.inc"
+};
 
-const u16 sTourianEscapeSamusLookingAroundPal[7 * 16] = INCBIN_U16("data/tourian_escape/samus_looking_around.pal");
-const u16 sTourianEscapeSamusChasedBackgroundPal[5 * 16] = INCBIN_U16("data/tourian_escape/samus_chased_background.pal");
-const u16 sTourianEscapeSamusGettingShotPal[5 * 16] = INCBIN_U16("data/tourian_escape/samus_getting_shot.pal");
-const u16 sTourianEscapeSamusSurroundedPal[16 * 16] = INCBIN_U16("data/tourian_escape/samus_surrounded.pal");
-const u16 sTourianEscapeSamusChasedShipsPal[6 * 16] = INCBIN_U16("data/tourian_escape/samus_chased_ships.pal");
-const u16 sTourianEscapeSamusChasedByPiratesFiringPal[4 * 16] = INCBIN_U16("data/tourian_escape/samus_chased_by_pirates_firing.pal");
-const u16 sTourianEscapeSamusGoingToCrashPal[7 * 16] = INCBIN_U16("data/tourian_escape/samus_going_to_crash.pal");
-const u16 sTourianEscape_479ee0[1 * 16] = INCBIN_U16("data/tourian_escape/479ee0.pal");
-const u16 sTourianEscape_479f00[1 * 16] = INCBIN_U16("data/tourian_escape/479f00.pal");
-const u16 sTourianEscapeSamusCrashingForegroundPal[3 * 16] = INCBIN_U16("data/tourian_escape/samus_crashing_foreground.pal");
-const u16 sTourianEscape_479f80[7 * 16] = INCBIN_U16("data/tourian_escape/479f80.pal");
-const u16 sTourianEscapeShipCrashingBackgroundAndShipPal[16 * 16] = INCBIN_U16("data/tourian_escape/ship_crashing_background_and_ship.pal");
-const u16 sTourianEscapeSamusLookingAtSkyPal[10 * 16] = INCBIN_U16("data/tourian_escape/samus_looking_at_sky.pal");
-const u16 sTourianEscapeSamusLookingAtMotherShipPal[10 * 16] = INCBIN_U16("data/tourian_escape/samus_looking_at_mother_ship.pal");
+const u16 sTourianEscapeSamusLookingAroundPal[7 * 16] = {
+    #include "extracted/data/tourian_escape/samus_looking_around.pal.inc"
+};
+const u16 sTourianEscapeSamusChasedBackgroundPal[5 * 16] = {
+    #include "extracted/data/tourian_escape/samus_chased_background.pal.inc"
+};
+const u16 sTourianEscapeSamusGettingShotPal[5 * 16] = {
+    #include "extracted/data/tourian_escape/samus_getting_shot.pal.inc"
+};
+const u16 sTourianEscapeSamusSurroundedPal[16 * 16] = {
+    #include "extracted/data/tourian_escape/samus_surrounded.pal.inc"
+};
+const u16 sTourianEscapeSamusChasedShipsPal[6 * 16] = {
+    #include "extracted/data/tourian_escape/samus_chased_ships.pal.inc"
+};
+const u16 sTourianEscapeSamusChasedByPiratesFiringPal[4 * 16] = {
+    #include "extracted/data/tourian_escape/samus_chased_by_pirates_firing.pal.inc"
+};
+const u16 sTourianEscapeSamusGoingToCrashPal[7 * 16] = {
+    #include "extracted/data/tourian_escape/samus_going_to_crash.pal.inc"
+};
+const u16 sTourianEscape_479ee0[1 * 16] = {
+    #include "extracted/data/tourian_escape/479ee0.pal.inc"
+};
+const u16 sTourianEscape_479f00[1 * 16] = {
+    #include "extracted/data/tourian_escape/479f00.pal.inc"
+};
+const u16 sTourianEscapeSamusCrashingForegroundPal[3 * 16] = {
+    #include "extracted/data/tourian_escape/samus_crashing_foreground.pal.inc"
+};
+const u16 sTourianEscape_479f80[7 * 16] = {
+    #include "extracted/data/tourian_escape/479f80.pal.inc"
+};
+const u16 sTourianEscapeShipCrashingBackgroundAndShipPal[16 * 16] = {
+    #include "extracted/data/tourian_escape/ship_crashing_background_and_ship.pal.inc"
+};
+const u16 sTourianEscapeSamusLookingAtSkyPal[10 * 16] = {
+    #include "extracted/data/tourian_escape/samus_looking_at_sky.pal.inc"
+};
+const u16 sTourianEscapeSamusLookingAtMotherShipPal[10 * 16] = {
+    #include "extracted/data/tourian_escape/samus_looking_at_mother_ship.pal.inc"
+};
 
 const u16 sTourianEscape_47a4e0[OAM_DATA_SIZE(6)] = {
     6,
@@ -528,7 +566,9 @@ const u16 sTourianEscape_47abc8[OAM_DATA_SIZE(2)] = {
     OAM_ENTRY(-40, 16, OAM_DIMS_32x32, OAM_NO_FLIP, 0x10a, 9, 0)
 };
 
-const u32 sTourianEscapeRainGfx[14] = INCBIN_U32("data/tourian_escape/rain.gfx.lz");
+const u32 sTourianEscapeRainGfx[14] = {
+    #include "extracted/data/tourian_escape/rain.gfx.lz.inc"
+};
 
 const u16 sTourianEscape_47ac10[OAM_DATA_SIZE(1)] = {
     1,
@@ -541,7 +581,9 @@ const u16 sTourianEscape_47ac18[OAM_DATA_SIZE(2)] = {
     OAM_ENTRY(-4, -8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x3, 0, 0)
 };
 
-const u16 sTourianEscapeRainPal[1 * 16] = INCBIN_U16("data/tourian_escape/rain.pal");
+const u16 sTourianEscapeRainPal[1 * 16] = {
+    #include "extracted/data/tourian_escape/rain.pal.inc"
+};
 
 
 
@@ -2793,7 +2835,9 @@ const struct FrameData sChozodiaEscapeOam_MotherShipDecaying[9] = {
     [8] = FRAME_DATA_TERMINATOR
 };
 
-const u32 sTourianEscapeDebrisGfx[25] = INCBIN_U32("data/tourian_escape/debris.gfx.lz");
+const u32 sTourianEscapeDebrisGfx[25] = {
+    #include "extracted/data/tourian_escape/debris.gfx.lz.inc"
+};
 
 static const u16 sTourianEscape_47cde0[OAM_DATA_SIZE(1)] = {
     1,
@@ -3225,57 +3269,139 @@ const u16 sTourianEscape_47cffe[TOURIAN_ESCAPE_MAX_OBJECTS] = {
 };
 
 
-const u32 sMotherShipExplodingFlashGfx[2588] = INCBIN_U32("data/tourian_escape/mother_ship_exploding_flash.gfx.lz");
-const u32 sMotherShipExplodingFlashTileTable[561] = INCBIN_U32("data/tourian_escape/mother_ship_exploding_flash.tt");
-const u32 sMotherShipBlowingUpExplosionsGfx[1761] = INCBIN_U32("data/tourian_escape/mother_ship_blowing_up_explosions.gfx.lz");
+const u32 sMotherShipExplodingFlashGfx[2588] = {
+    #include "extracted/data/tourian_escape/mother_ship_exploding_flash.gfx.lz.inc"
+};
+const u32 sMotherShipExplodingFlashTileTable[561] = {
+    #include "extracted/data/tourian_escape/mother_ship_exploding_flash.tt.inc"
+};
+const u32 sMotherShipBlowingUpExplosionsGfx[1761] = {
+    #include "extracted/data/tourian_escape/mother_ship_blowing_up_explosions.gfx.lz.inc"
+};
 
-const u32 sTourianEscapeSamusInHerShipSuitGfx[3108] = INCBIN_U32("data/tourian_escape/samus_in_her_ship_suit.gfx.lz");
-const u32 sTourianEscapeSamusInHerShipSuitTileTable[368] = INCBIN_U32("data/tourian_escape/samus_in_her_ship_suit.tt");
-const u32 sTourianEscapeSamusInHerShipSuitlessGfx[4280] = INCBIN_U32("data/tourian_escape/samus_in_her_ship_suitless.gfx.lz");
-const u32 sTourianEscapeSamusInHerShipSuitlessTileTable[368] = INCBIN_U32("data/tourian_escape/samus_in_her_ship_suitless.tt");
-const u32 sTourianEscapeSamusInHerShipSuitlessEyesOpenedTileTable[368] = INCBIN_U32("data/tourian_escape/samus_in_her_ship_suitless_eyes_opened.tt");
+const u32 sTourianEscapeSamusInHerShipSuitGfx[3108] = {
+    #include "extracted/data/tourian_escape/samus_in_her_ship_suit.gfx.lz.inc"
+};
+const u32 sTourianEscapeSamusInHerShipSuitTileTable[368] = {
+    #include "extracted/data/tourian_escape/samus_in_her_ship_suit.tt.inc"
+};
+const u32 sTourianEscapeSamusInHerShipSuitlessGfx[4280] = {
+    #include "extracted/data/tourian_escape/samus_in_her_ship_suitless.gfx.lz.inc"
+};
+const u32 sTourianEscapeSamusInHerShipSuitlessTileTable[368] = {
+    #include "extracted/data/tourian_escape/samus_in_her_ship_suitless.tt.inc"
+};
+const u32 sTourianEscapeSamusInHerShipSuitlessEyesOpenedTileTable[368] = {
+    #include "extracted/data/tourian_escape/samus_in_her_ship_suitless_eyes_opened.tt.inc"
+};
 
-const u32 sTourianEscapeZebesGfx[3442] = INCBIN_U32("data/tourian_escape/zebes.gfx.lz");
-const u32 sTourianEscapeZebesTileTable[577] = INCBIN_U32("data/tourian_escape/zebes.tt");
+const u32 sTourianEscapeZebesGfx[3442] = {
+    #include "extracted/data/tourian_escape/zebes.gfx.lz.inc"
+};
+const u32 sTourianEscapeZebesTileTable[577] = {
+    #include "extracted/data/tourian_escape/zebes.tt.inc"
+};
 
-const u32 sTourianEscapeZebesExplodingShipAndExplosionsGfx[1297] = INCBIN_U32("data/tourian_escape/zebes_exploding_ship_and_explosions.gfx.lz");
+const u32 sTourianEscapeZebesExplodingShipAndExplosionsGfx[1297] = {
+    #include "extracted/data/tourian_escape/zebes_exploding_ship_and_explosions.gfx.lz.inc"
+};
 
-const u32 sTourianEscapeSamusChasedBackgroundGfx[5470] = INCBIN_U32("data/tourian_escape/samus_chased_background.gfx.lz");
-const u32 sTourianEscapeSamusChasedBackgroundTileTable[577] = INCBIN_U32("data/tourian_escape/samus_chased_background.tt");
-const u32 sTourianEscapeSamusSurroundedBackgroundGfx[2337] = INCBIN_U32("data/tourian_escape/samus_surrounded_background.gfx.lz");
-const u32 sTourianEscapeSamusSurroundedBackgroundTileTable[551] = INCBIN_U32("data/tourian_escape/samus_surrounded_background.tt");
+const u32 sTourianEscapeSamusChasedBackgroundGfx[5470] = {
+    #include "extracted/data/tourian_escape/samus_chased_background.gfx.lz.inc"
+};
+const u32 sTourianEscapeSamusChasedBackgroundTileTable[577] = {
+    #include "extracted/data/tourian_escape/samus_chased_background.tt.inc"
+};
+const u32 sTourianEscapeSamusSurroundedBackgroundGfx[2337] = {
+    #include "extracted/data/tourian_escape/samus_surrounded_background.gfx.lz.inc"
+};
+const u32 sTourianEscapeSamusSurroundedBackgroundTileTable[551] = {
+    #include "extracted/data/tourian_escape/samus_surrounded_background.tt.inc"
+};
 
-const u32 sTourianEscapeSamusSamusInHerShipLookingGfx[4090] = INCBIN_U32("data/tourian_escape/samus_samus_in_her_ship_looking.gfx.lz");
-const u32 sTourianEscapeSamusSamusInHerShipLookingLeftTileTable[368] = INCBIN_U32("data/tourian_escape/samus_samus_in_her_ship_looking_left.tt");
-const u32 sTourianEscapeSamusSamusInHerShipLookingRightTileTable[368] = INCBIN_U32("data/tourian_escape/samus_samus_in_her_ship_looking_right.tt");
+const u32 sTourianEscapeSamusSamusInHerShipLookingGfx[4090] = {
+    #include "extracted/data/tourian_escape/samus_samus_in_her_ship_looking.gfx.lz.inc"
+};
+const u32 sTourianEscapeSamusSamusInHerShipLookingLeftTileTable[368] = {
+    #include "extracted/data/tourian_escape/samus_samus_in_her_ship_looking_left.tt.inc"
+};
+const u32 sTourianEscapeSamusSamusInHerShipLookingRightTileTable[368] = {
+    #include "extracted/data/tourian_escape/samus_samus_in_her_ship_looking_right.tt.inc"
+};
 
-const u32 sTourianEscape_49cb90[3064] = INCBIN_U32("data/tourian_escape/49cb90.gfx.lz");
-const u32 sTourianEscape_49fb70[113] = INCBIN_U32("data/tourian_escape/49fb70.tt");
+const u32 sTourianEscape_49cb90[3064] = {
+    #include "extracted/data/tourian_escape/49cb90.gfx.lz.inc"
+};
+const u32 sTourianEscape_49fb70[113] = {
+    #include "extracted/data/tourian_escape/49fb70.tt.inc"
+};
 
-const u32 sTourianEscapeSamusSamusChasedShipsGfx[2507] = INCBIN_U32("data/tourian_escape/samus_samus_chased_ships.gfx.lz");
-const u32 sTourianEscapeShipsAndProjectilesGfx[1461] = INCBIN_U32("data/tourian_escape/ships_and_projectiles.gfx.lz");
+const u32 sTourianEscapeSamusSamusChasedShipsGfx[2507] = {
+    #include "extracted/data/tourian_escape/samus_samus_chased_ships.gfx.lz.inc"
+};
+const u32 sTourianEscapeShipsAndProjectilesGfx[1461] = {
+    #include "extracted/data/tourian_escape/ships_and_projectiles.gfx.lz.inc"
+};
 
-const u32 sTourianEscapeSamusGettingShotShipGfx[563] = INCBIN_U32("data/tourian_escape/samus_getting_shot_ship.gfx.lz");
-const u32 sTourianEscapeSamusGettingShotGfx[2999] = INCBIN_U32("data/tourian_escape/samus_getting_shot.gfx.lz");
-const u32 sTourianEscapeSamusGettingShotTileTable[566] = INCBIN_U32("data/tourian_escape/samus_getting_shot.tt");
+const u32 sTourianEscapeSamusGettingShotShipGfx[563] = {
+    #include "extracted/data/tourian_escape/samus_getting_shot_ship.gfx.lz.inc"
+};
+const u32 sTourianEscapeSamusGettingShotGfx[2999] = {
+    #include "extracted/data/tourian_escape/samus_getting_shot.gfx.lz.inc"
+};
+const u32 sTourianEscapeSamusGettingShotTileTable[566] = {
+    #include "extracted/data/tourian_escape/samus_getting_shot.tt.inc"
+};
 
-const u32 sTourianEscapeShipCrashingBackgroundAndShipGfx[3251] = INCBIN_U32("data/tourian_escape/ship_crashing_background_and_ship.gfx.lz");
-const u32 sTourianEscapeShipCrashingForegroundGfx[1914] = INCBIN_U32("data/tourian_escape/ship_crashing_foreground.gfx.lz");
-const u32 sTourianEscapeShipCrashingForegroundTileTable[577] = INCBIN_U32("data/tourian_escape/ship_crashing_foreground.tt");
-const u32 sTourianEscapeShipGoingToCrashGfx[1219] = INCBIN_U32("data/tourian_escape/ship_going_to_crash.gfx.lz");
+const u32 sTourianEscapeShipCrashingBackgroundAndShipGfx[3251] = {
+    #include "extracted/data/tourian_escape/ship_crashing_background_and_ship.gfx.lz.inc"
+};
+const u32 sTourianEscapeShipCrashingForegroundGfx[1914] = {
+    #include "extracted/data/tourian_escape/ship_crashing_foreground.gfx.lz.inc"
+};
+const u32 sTourianEscapeShipCrashingForegroundTileTable[577] = {
+    #include "extracted/data/tourian_escape/ship_crashing_foreground.tt.inc"
+};
+const u32 sTourianEscapeShipGoingToCrashGfx[1219] = {
+    #include "extracted/data/tourian_escape/ship_going_to_crash.gfx.lz.inc"
+};
 
-const u32 sTourianEscapeShipCrashingExplosionGfx[1826] = INCBIN_U32("data/tourian_escape/ship_crashing_explosion.gfx.lz");
-const u32 sTourianEscapeShipCrashingExplosionTileTable[577] = INCBIN_U32("data/tourian_escape/ship_crashing_explosion.tt");
+const u32 sTourianEscapeShipCrashingExplosionGfx[1826] = {
+    #include "extracted/data/tourian_escape/ship_crashing_explosion.gfx.lz.inc"
+};
+const u32 sTourianEscapeShipCrashingExplosionTileTable[577] = {
+    #include "extracted/data/tourian_escape/ship_crashing_explosion.tt.inc"
+};
 
-const u32 sTourianEscapeSamusLookingAtSkyPiratesShipGfx[867] = INCBIN_U32("data/tourian_escape/samus_looking_at_sky_pirates_ship.gfx.lz");
-const u32 sTourianEscapeSamusLookingAtSkySkyBackgroundGfx[3056] = INCBIN_U32("data/tourian_escape/samus_looking_at_sky_sky_background.gfx.lz");
-const u32 sTourianEscapeSamusLookingAtSkySkyBackgroundTileTable[399] = INCBIN_U32("data/tourian_escape/samus_looking_at_sky_sky_background.tt");
-const u32 sTourianEscapeSamusLookingAtSkyGfx[4060] = INCBIN_U32("data/tourian_escape/samus_looking_at_sky.gfx.lz");
-const u32 sTourianEscapeSamusLookingAtSkyTopTileTable[430] = INCBIN_U32("data/tourian_escape/samus_looking_at_sky_top.tt");
-const u32 sTourianEscapeSamusLookingAtSkyBottomTileTable[185] = INCBIN_U32("data/tourian_escape/samus_looking_at_sky_bottom.tt");
+const u32 sTourianEscapeSamusLookingAtSkyPiratesShipGfx[867] = {
+    #include "extracted/data/tourian_escape/samus_looking_at_sky_pirates_ship.gfx.lz.inc"
+};
+const u32 sTourianEscapeSamusLookingAtSkySkyBackgroundGfx[3056] = {
+    #include "extracted/data/tourian_escape/samus_looking_at_sky_sky_background.gfx.lz.inc"
+};
+const u32 sTourianEscapeSamusLookingAtSkySkyBackgroundTileTable[399] = {
+    #include "extracted/data/tourian_escape/samus_looking_at_sky_sky_background.tt.inc"
+};
+const u32 sTourianEscapeSamusLookingAtSkyGfx[4060] = {
+    #include "extracted/data/tourian_escape/samus_looking_at_sky.gfx.lz.inc"
+};
+const u32 sTourianEscapeSamusLookingAtSkyTopTileTable[430] = {
+    #include "extracted/data/tourian_escape/samus_looking_at_sky_top.tt.inc"
+};
+const u32 sTourianEscapeSamusLookingAtSkyBottomTileTable[185] = {
+    #include "extracted/data/tourian_escape/samus_looking_at_sky_bottom.tt.inc"
+};
 
-const u32 sTourianEscapeSamusLookingAtMotherShipGfx[2153] = INCBIN_U32("data/tourian_escape/samus_looking_at_mother_ship.gfx.lz");
-const u32 sTourianEscapeSamusLookingAtMotherShipTileTable[577] = INCBIN_U32("data/tourian_escape/samus_looking_at_mother_ship.tt");
-const u32 sTourianEscapeSamusLookingAtMotherShipMotherShipGfx[3112] = INCBIN_U32("data/tourian_escape/samus_looking_at_mother_ship_mother_ship.gfx.lz");
-const u32 sTourianEscapeSamusLookingAtMotherShipMotherShipTileTable[577] = INCBIN_U32("data/tourian_escape/samus_looking_at_mother_ship_mother_ship.tt");
+const u32 sTourianEscapeSamusLookingAtMotherShipGfx[2153] = {
+    #include "extracted/data/tourian_escape/samus_looking_at_mother_ship.gfx.lz.inc"
+};
+const u32 sTourianEscapeSamusLookingAtMotherShipTileTable[577] = {
+    #include "extracted/data/tourian_escape/samus_looking_at_mother_ship.tt.inc"
+};
+const u32 sTourianEscapeSamusLookingAtMotherShipMotherShipGfx[3112] = {
+    #include "extracted/data/tourian_escape/samus_looking_at_mother_ship_mother_ship.gfx.lz.inc"
+};
+const u32 sTourianEscapeSamusLookingAtMotherShipMotherShipTileTable[577] = {
+    #include "extracted/data/tourian_escape/samus_looking_at_mother_ship_mother_ship.tt.inc"
+};
 

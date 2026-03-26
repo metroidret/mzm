@@ -5,6 +5,7 @@ from pathlib import Path
 
 
 DATA_PATH = "data"
+DATA_INC_PATH = "include/extracted"
 DATABASE_PATH = "database.json"
 DATABASE_DEBUG_PATH = "database_debug.json"
 REGIONS = ["us", "eu", "jp", "us_beta", "eu_beta"]
@@ -27,6 +28,8 @@ def extract_data(region: str, debug: bool, quiet: bool = False) -> None:
         root_dir = entry.get("dir", DATA_PATH)
         path_obj = Path(root_dir, path)
         path_obj.parent.mkdir(parents=True, exist_ok=True)
+        path_inc_obj = Path(DATA_INC_PATH, str(path_obj)+".inc")
+        path_inc_obj.parent.mkdir(parents=True, exist_ok=True)
 
         addr = entry["addr"].get(region)
         if addr is not None:
@@ -35,8 +38,15 @@ def extract_data(region: str, debug: bool, quiet: bool = False) -> None:
                 count = count[region]
             size: int = int(count, 16) * entry["size"]
             rom.seek(int(addr, 16))
+            entry_bytes = rom.read(size)
             with open(path_obj, "wb") as f:
-                f.write(rom.read(size))
+                f.write(entry_bytes)
+            # all values in the .inc are unsigned
+            entry_values = []
+            for i in range(0, size, entry["size"]):
+                entry_values.append(int.from_bytes(entry_bytes[i:i+entry["size"]], byteorder='little', signed=False))
+            with open(path_inc_obj, "w") as f:
+                f.write(",".join([str(v)+"u" for v in entry_values]))
 
     rom.close()
 

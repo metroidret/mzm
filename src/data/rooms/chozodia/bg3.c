@@ -1,31 +1,59 @@
 #include "data/rooms/chozodia_rooms_data.h"
 #include "macros.h"
 
-const u8 sCrateria_Bg3_6[1500] = INCBIN_U8("data/rooms/chozodia/crateria_bg3_6.gfx");
+const u8 sCrateria_Bg3_6[1500] = {
+    #include "extracted/data/rooms/chozodia/crateria_bg3_6.gfx.inc"
+};
 
-const u8 sChozodia_Bg3_0[1488] = INCBIN_U8("data/rooms/chozodia/chozodia_bg3_0.gfx");
+const u8 sChozodia_Bg3_0[1488] = {
+    #include "extracted/data/rooms/chozodia/chozodia_bg3_0.gfx.inc"
+};
 
-const u8 sChozodia_Bg3_1[1156] = INCBIN_U8("data/rooms/chozodia/chozodia_bg3_1.gfx");
+const u8 sChozodia_Bg3_1[1156] = {
+    #include "extracted/data/rooms/chozodia/chozodia_bg3_1.gfx.inc"
+};
 
-const u8 sChozodia_Bg3_2[1712] = INCBIN_U8("data/rooms/chozodia/chozodia_bg3_2.gfx");
+const u8 sChozodia_Bg3_2[1712] = {
+    #include "extracted/data/rooms/chozodia/chozodia_bg3_2.gfx.inc"
+};
 
-const u8 sChozodia_Bg3_3[1600] = INCBIN_U8("data/rooms/chozodia/chozodia_bg3_3.gfx");
+const u8 sChozodia_Bg3_3[1600] = {
+    #include "extracted/data/rooms/chozodia/chozodia_bg3_3.gfx.inc"
+};
 
-const u8 sChozodia_DarkSpotlight_Bg0[356] = INCBIN_U8("data/rooms/chozodia/chozodia_dark_spotlight_bg0.gfx");
+const u8 sChozodia_DarkSpotlight_Bg0[356] = {
+    #include "extracted/data/rooms/chozodia/chozodia_dark_spotlight_bg0.gfx.inc"
+};
 
-const u8 sChozodia_Bg3_4[1468] = INCBIN_U8("data/rooms/chozodia/chozodia_bg3_4.gfx");
+const u8 sChozodia_Bg3_4[1468] = {
+    #include "extracted/data/rooms/chozodia/chozodia_bg3_4.gfx.inc"
+};
 
-const u8 sChozodia_10_Bg0[320] = INCBIN_U8("data/rooms/chozodia/chozodia_10_bg0.gfx");
+const u8 sChozodia_10_Bg0[320] = {
+    #include "extracted/data/rooms/chozodia/chozodia_10_bg0.gfx.inc"
+};
 
-const u8 sChozodia_Bg3_5[848] = INCBIN_U8("data/rooms/chozodia/chozodia_bg3_5.gfx");
+const u8 sChozodia_Bg3_5[848] = {
+    #include "extracted/data/rooms/chozodia/chozodia_bg3_5.gfx.inc"
+};
 
-const u8 sChozodia_Bg3_6[1064] = INCBIN_U8("data/rooms/chozodia/chozodia_bg3_6.gfx");
+const u8 sChozodia_Bg3_6[1064] = {
+    #include "extracted/data/rooms/chozodia/chozodia_bg3_6.gfx.inc"
+};
 
-const u8 sChozodia_Bg3_7[788] = INCBIN_U8("data/rooms/chozodia/chozodia_bg3_7.gfx");
+const u8 sChozodia_Bg3_7[788] = {
+    #include "extracted/data/rooms/chozodia/chozodia_bg3_7.gfx.inc"
+};
 
-const u8 sChozodia_Bg3_8[1364] = INCBIN_U8("data/rooms/chozodia/chozodia_bg3_8.gfx");
+const u8 sChozodia_Bg3_8[1364] = {
+    #include "extracted/data/rooms/chozodia/chozodia_bg3_8.gfx.inc"
+};
 
-const u8 sChozodia_Bg3_9[1040] = INCBIN_U8("data/rooms/chozodia/chozodia_bg3_9.gfx");
+const u8 sChozodia_Bg3_9[1040] = {
+    #include "extracted/data/rooms/chozodia/chozodia_bg3_9.gfx.inc"
+};
 
-const u8 sChozodia_Bg3_10[676] = INCBIN_U8("data/rooms/chozodia/chozodia_bg3_10.gfx");
+const u8 sChozodia_Bg3_10[676] = {
+    #include "extracted/data/rooms/chozodia/chozodia_bg3_10.gfx.inc"
+};
 

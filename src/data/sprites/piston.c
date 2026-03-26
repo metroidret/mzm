@@ -1,8 +1,12 @@
 #include "data/sprites/piston.h"
 #include "macros.h"
 
-const u32 sPistonGfx[179] = INCBIN_U32("data/sprites/piston.gfx.lz");
-const u16 sPistonPal[16] = INCBIN_U16("data/sprites/piston.pal");
+const u32 sPistonGfx[179] = {
+    #include "extracted/data/sprites/piston.gfx.lz.inc"
+};
+const u16 sPistonPal[16] = {
+    #include "extracted/data/sprites/piston.pal.inc"
+};
 
 static const u16 sPistonOam_Idle_Frame0[OAM_DATA_SIZE(11)] = {
     11,

@@ -1,12 +1,24 @@
 #include "data/sprites/unknown_item_block.h"
 #include "macros.h"
 
-const u32 sPlasmaBeamBlockGfx[306] = INCBIN_U32("data/sprites/plasma_beam_block.gfx.lz");
-const u16 sPlasmaBeamBlockPal[16] = INCBIN_U16("data/sprites/plasma_beam_block.pal");
-const u32 sGravityBlockGfx[303] = INCBIN_U32("data/sprites/gravity_suit_block.gfx.lz");
-const u16 sGravityBlockPal[16] = INCBIN_U16("data/sprites/gravity_suit_block.pal");
-const u32 sSpaceJumpBlockGfx[297] = INCBIN_U32("data/sprites/space_jump_block.gfx.lz");
-const u16 sSpaceJumpBlockPal[16] = INCBIN_U16("data/sprites/space_jump_block.pal");
+const u32 sPlasmaBeamBlockGfx[306] = {
+    #include "extracted/data/sprites/plasma_beam_block.gfx.lz.inc"
+};
+const u16 sPlasmaBeamBlockPal[16] = {
+    #include "extracted/data/sprites/plasma_beam_block.pal.inc"
+};
+const u32 sGravityBlockGfx[303] = {
+    #include "extracted/data/sprites/gravity_suit_block.gfx.lz.inc"
+};
+const u16 sGravityBlockPal[16] = {
+    #include "extracted/data/sprites/gravity_suit_block.pal.inc"
+};
+const u32 sSpaceJumpBlockGfx[297] = {
+    #include "extracted/data/sprites/space_jump_block.gfx.lz.inc"
+};
+const u16 sSpaceJumpBlockPal[16] = {
+    #include "extracted/data/sprites/space_jump_block.pal.inc"
+};
 
 static const u16 sUnknownItemBlockOam_Idle_Frame0[OAM_DATA_SIZE(2)] = {
     2,

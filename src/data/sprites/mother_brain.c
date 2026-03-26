@@ -145,8 +145,12 @@ const u8 sMotherBrainDynamicPaletteData[19][2] = {
     { SCHAR_MAX + 1, SCHAR_MAX + 1 }
 };
 
-const u32 sMotherBrainGfx[1871] = INCBIN_U32("data/sprites/mother_brain.gfx.lz");
-const u16 sMotherBrainPal[96] = INCBIN_U16("data/sprites/mother_brain.pal");
+const u32 sMotherBrainGfx[1871] = {
+    #include "extracted/data/sprites/mother_brain.gfx.lz.inc"
+};
+const u16 sMotherBrainPal[96] = {
+    #include "extracted/data/sprites/mother_brain.pal.inc"
+};
 
 static const u16 sMotherBrainOam_Idle_Frame0[OAM_DATA_SIZE(19)] = {
     19,

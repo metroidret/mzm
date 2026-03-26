@@ -202,6 +202,8 @@ ifeq ($(DATA),1)
 	$Q$(RM) -r data
 	$(MSG) RM sound/direct_sound_samples
 	$Q$(RM) -r sound/direct_sound_samples
+	$(MSG) RM include/extracted
+	$Q$(RM) -r include/extracted
 endif
 	$(MSG) RM linker.ld.pp
 	$Q$(RM) linker.ld.pp

@@ -1,8 +1,12 @@
 #include "data/sprites/geron_norfair.h"
 #include "macros.h"
 
-const u32 sGeronNorfairGfx[270] = INCBIN_U32("data/sprites/geron_norfair.gfx.lz");
-const u16 sGeronNorfairPal[16] = INCBIN_U16("data/sprites/geron_norfair.pal");
+const u32 sGeronNorfairGfx[270] = {
+    #include "extracted/data/sprites/geron_norfair.gfx.lz.inc"
+};
+const u16 sGeronNorfairPal[16] = {
+    #include "extracted/data/sprites/geron_norfair.pal.inc"
+};
 
 static const u16 sGeronNorfairOam_Idle_Frame0[OAM_DATA_SIZE(14)] = {
     14,
