@@ -24,6 +24,7 @@ These are known bugs and glitches in the game: code that clearly does not work a
   - [The fully powered suit cutscene fades to black after fading to white](#the-fully-powered-suit-cutscene-fades-to-black-after-fading-to-white)
   - [Reaching the maximum in-game time causes the time attack password to be invalid](#reaching-the-maximum-in-game-time-causes-the-time-attack-password-to-be-invalid)
   - [Samus can warp when standing on multiple enemies and one is killed](#samus-can-warp-when-standing-on-multiple-enemies-and-one-is-killed)
+  - [The pause debug TANK option can toggle abilities without redrawing them](#the-pause-debug-tank-option-can-toggle-abilities-without-redrawing-them)
 - [Oversights and Design Flaws](#oversights-and-design-flaws)
   - [Floating point math is used when fixed point could have been used](#floating-point-math-is-used-when-fixed-point-could-have-been-used)
   - [`ClipdataConvertToCollision` is copied to RAM but still runs in ROM](#clipdataconverttocollision-is-copied-to-ram-but-still-runs-in-rom)
@@ -351,6 +352,54 @@ When Samus stands on two enemies and kills one that respawns, the enemy's standi
 
 ```diff
 + gCurrentSprite.standingOnSprite = SAMUS_STANDING_ON_SPRITE_OFF;
+```
+
+### The pause debug TANK option can toggle abilities without redrawing them
+
+When R or Start is pressed on the TANK option, all ammo is set to the max amount, in addition to equipping morph ball, power grip, and bombs. It then calls `UpdateSuitType`, which updates the activated abilities. However, only the "bomb" and "misc" groups are redrawn, but the "beam" and "suit" groups can be affected too.
+
+**Fix:** The simplest fix is to avoid updating any abilities for the TANK option (it's unclear why power grip is equipped anyway.) Edit `PauseDebugEquipTank` in [status_screen.c](../src/menus/status_screen.c) to skip setting equipment and skip calling `UpdateSuitType`.
+
+```diff
+      if (gChangedInput & (KEY_R | KEY_START))
+      {
+          gEquipment.maxEnergy = sNumberOfTanksPerArea[MAX_AMOUNT_OF_AREAS - 1].energy *
+              sTankIncreaseAmount[gDifficulty].energy + sStartingHealthAmmo.energy;
+          gEquipment.maxMissiles = sNumberOfTanksPerArea[MAX_AMOUNT_OF_AREAS - 1].missile *
+              sTankIncreaseAmount[gDifficulty].missile + sStartingHealthAmmo.missile;
+          gEquipment.maxSuperMissiles = sNumberOfTanksPerArea[MAX_AMOUNT_OF_AREAS - 1].superMissile *
+              sTankIncreaseAmount[gDifficulty].superMissile + sStartingHealthAmmo.superMissile;
+          gEquipment.maxPowerBombs = sNumberOfTanksPerArea[MAX_AMOUNT_OF_AREAS - 1].powerBomb *
+              sTankIncreaseAmount[gDifficulty].powerBomb + sStartingHealthAmmo.powerBomb;
+
+-             gEquipment.suitMisc |= SMF_MORPH_BALL | SMF_POWER_GRIP;
+-             gEquipment.beamBombs |= BBF_BOMBS;
+
+          change = 1;
+      }
+
+...
+
+- if (change != 0)
++ if (change == 2)
+  {
+      UpdateSuitType(gEquipment.suitType);
+      PauseDebugActivateAbilities();
+  }
+
+  if (change == 1) // Tank
+  {
+      gEquipment.currentEnergy = gEquipment.maxEnergy;
+      gEquipment.currentMissiles = gEquipment.maxMissiles;
+      gEquipment.currentSuperMissiles = gEquipment.maxSuperMissiles;
+      gEquipment.currentPowerBombs = gEquipment.maxPowerBombs;
+
+-     PauseDebugDrawAffectedGroups((1 << PAUSE_DEBUG_GROUP_BOMB) | (1 << PAUSE_DEBUG_GROUP_MISC) |
+-         (1 << PAUSE_DEBUG_GROUP_CURRENT_ENERGY) | (1 << PAUSE_DEBUG_GROUP_CURRENT_MISSILES) |
+-         (1 << PAUSE_DEBUG_GROUP_CURRENT_SUPER_MISSILES) | (1 << PAUSE_DEBUG_GROUP_CURRENT_POWER_BOMBS));
++     PauseDebugDrawAffectedGroups((1 << PAUSE_DEBUG_GROUP_CURRENT_ENERGY) | (1 << PAUSE_DEBUG_GROUP_CURRENT_MISSILES) |
++         (1 << PAUSE_DEBUG_GROUP_CURRENT_SUPER_MISSILES) | (1 << PAUSE_DEBUG_GROUP_CURRENT_POWER_BOMBS));
+  }
 ```
 
 
