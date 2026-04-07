@@ -3,10 +3,10 @@
 
 #include "types.h"
 
-extern u16 gInterruptCode[0x100];
+extern u32 gInterruptCode[0x80];
 
 extern Func_T gIntrVector[13];
-extern u16 (*gIntrCodePointer)[0x100];
+extern u32 (*gIntrCodePointer)[0x80];
 
 extern u16 gInterruptCheckFlag;
 

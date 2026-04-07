@@ -223,7 +223,7 @@ IWRAM_DATA vu16 gVBlankRequestFlag = 0;
 IWRAM_DATA u8 gUnk_3000C7A = 0;
 #endif
 
-IWRAM_DATA u16 gInterruptCode[0x100] = {};
+IWRAM_DATA u32 gInterruptCode[0x80] = {};
 IWRAM_DATA union OamData gOamData[OAM_BUFFER_DATA_SIZE + OAM_BUFFER_AFFINE_SIZE] = {};
 IWRAM_DATA u16 gButtonInput = 0;
 IWRAM_DATA u16 gPreviousButtonInput = 0;
