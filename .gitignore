@@ -15,6 +15,7 @@
 *.dll
 *.deps.json
 *.runtimeconfig.json
+*.pyc
 
 linker.ld.pp
 include/**/*.s
