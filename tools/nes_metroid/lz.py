@@ -107,13 +107,10 @@ def find_longest_match_nesrom(decomp_bytes: bytes, i: int, triplets: dict[int, l
     longest_len = 0
     longest_idx = -1
 
-    # Skip first index if one byte behind current position
-    j = len(indexes) - 1
-    if indexes[j] >= i - 1:
-        j -= 1
+    j = 0
 
     # Try each index to find the longest match
-    while j >= 0:
+    while j < len(indexes):
         idx = indexes[j]
         # Stop if past window
         if idx < window_start:
@@ -135,7 +132,7 @@ def find_longest_match_nesrom(decomp_bytes: bytes, i: int, triplets: dict[int, l
             if longest_len == max_size:
                 break
         
-        j -= 1
+        j += 1
 
     indexes.append(i)
     if longest_len >= 3:
@@ -290,7 +287,7 @@ def comp_lz_bios(decomp_bytes: bytes) -> bytes:
             if _match is not None:
                 # Compressed
                 match_len, match_idx = _match
-                match_offset = idx - match_idx - MIN_WINDOW_SIZE
+                match_offset = idx - match_idx - 1
                 
                 output.append(((match_len - 3) << 4) | (match_offset >> 8))
                 output.append(match_offset & 0xFF)
