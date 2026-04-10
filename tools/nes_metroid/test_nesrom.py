@@ -138,6 +138,8 @@ def comp_lz_nesromtest(decomp_bytes: bytes, decomp_str) -> bytes:
 
     output = bytearray()
 
+    match_next_optimise = True
+
     str_out = []
     modlist_u = []
 
@@ -150,27 +152,42 @@ def comp_lz_nesromtest(decomp_bytes: bytes, decomp_str) -> bytes:
             # Find longest match at current position
             _match = find_longest_match_nesromtest(decomp_bytes, idx, triplets)
 
-            """if _match is not None:
+            if len(str_out) == 572:
+                print(match_next_optimise)
+                print(_match)
+
+            if _match is not None and match_next_optimise:
+                match_len, match_idx = _match
+
+                # triplets assume uncompressed for match_next
+                commit_match_to_triplets(idx, triplets, None, decomp_bytes)
+                
                 _match_next = find_longest_match_nesromtest(decomp_bytes, idx+1, triplets)
 
-                # match saves length
-                # match_next saves length_next - 1 - 1/8
+                if len(str_out) == 572:
+                    print(_match_next)
 
-                if _match_next is not None and _match_next[0] > _match[0] + 1:
-                    _match = None"""
+                if _match_next is not None:
+                    match_next_len, match_next_idx = _match_next
+                    # for match_next to be better than match, its length must be better 
+                    # even while compensating for the uncompressed byte instruction before it
+                    if match_next_len - (1 + 1/8) > match_len:
+                        _match = None
+                        match_next_optimise = False
 
             # debug hardcoding
-            try:
+            """try:
                 if decomp_str[len(str_out)][0].startswith("u") and _match is not None:
+                    modlist_u.append([len(str_out), idx, _match])
                     _match = None
-                    modlist_u.append(len(str_out))
             except IndexError:
-                pass
+                pass"""
 
             commit_match_to_triplets(idx, triplets, _match, decomp_bytes)
 
             if _match is not None:
                 # Compressed
+                match_next_optimise = True
                 match_len, match_idx = _match
                 match_offset = idx - match_idx - MIN_WINDOW_SIZE
                 str_out.append([f"c({match_len},-0x{match_offset + MIN_WINDOW_SIZE:X})", [f"{b:02X}" for b in decomp_bytes[idx:idx + match_len]]])
@@ -215,6 +232,11 @@ if __name__ == "__main__":
             raise Exception(f"command {i} (off 0x{byte_qty:X}): \ndecomp: {cd}\nrecomp: {cr}")
         byte_qty += len(cd[1])
     print("ok")
-    for i in modlist_u:
-        print(f"0x{i:X}: " + " ".join([f"{b:02X}" for b in decomp_bytes[max(i, 0):min(i+4, len(decomp_bytes))]]))
+    for i, idx, _match_bad in modlist_u:
+        match_bad_len, match_bad_idx = _match_bad
+        match_bad_offset = idx - match_bad_idx - MIN_WINDOW_SIZE
+        match_bad_str = f"c({match_bad_len},-0x{match_bad_offset + MIN_WINDOW_SIZE:X})"
+        matches_good_str = decomp_str[i][0] + " " + decomp_str[i+1][0]
+        bytesstr = " ".join([f"{b:02X}" for b in decomp_bytes[max(idx, 0):min(idx+4, len(decomp_bytes))]])
+        print(f"cmd {i} (0x{idx:X}): repl {match_bad_str} by {matches_good_str}")
 
