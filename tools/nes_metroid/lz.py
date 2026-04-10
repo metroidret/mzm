@@ -108,13 +108,14 @@ def find_longest_match_nesrom(decomp_bytes: bytes, i: int, triplets: dict[int, l
     longest_idx = -1
 
     j = 0
-
     # Try each index to find the longest match
     while j < len(indexes):
         idx = indexes[j]
-        # Stop if past window
+        # remove if past window
         if idx < window_start:
-            break
+            indexes.pop(j)
+            # dont inc j
+            continue
 
         # Find length of match
         match_len = 3
@@ -136,17 +137,6 @@ def find_longest_match_nesrom(decomp_bytes: bytes, i: int, triplets: dict[int, l
 
     indexes.append(i)
     if longest_len >= 3:
-        for j in range(i+1, min(i+longest_len, decomp_size-3+1)):
-            # Get triplet at current position
-            triplet = decomp_bytes[j] | (decomp_bytes[j + 1] << 8) | (decomp_bytes[j + 2] << 16)
-
-            # Check if triplet has no match
-            indexes = triplets.get(triplet)
-            if indexes is None:
-                triplets[triplet] = [j]
-            else:
-                indexes.append(j)
-        
         return (longest_len, longest_idx)
 
     return None
@@ -160,17 +150,50 @@ def comp_lz_nesrom(decomp_bytes: bytes) -> bytes:
 
     output = bytearray()
 
+    _match_next = None
+
     while idx < decomp_size:
         # Get index of new compression flag
         flag = len(output)
         output.append(0)
 
         for i in range(8):
-            # Find longest match at current position
-            _match = find_longest_match_nesrom(decomp_bytes, idx, triplets)
+            if _match_next is not None:
+                _match = _match_next
+                _match_next = None
+            else:
+                # Find longest match at current position
+                _match = find_longest_match_nesrom(decomp_bytes, idx, triplets)
+                
+                if _match is not None:
+                    match_len, _ = _match
+                    
+                    _match_next = find_longest_match_nesrom(decomp_bytes, idx+1, triplets)
+
+                    if _match_next is not None:
+                        match_next_len, _ = _match_next
+                        # for match_next to be better than match, its length must be better 
+                        # even while compensating for the uncompressed byte instruction before it
+                        if match_next_len - (1 + 1/8) > match_len:
+                            _match = None
+                        else:
+                            _match_next = None
+
             if _match is not None:
                 # Compressed
                 match_len, match_idx = _match
+
+                for j in range(idx+1, min(idx+match_len, decomp_size-3+1)):
+                    # Get triplet at current position
+                    triplet = decomp_bytes[j] | (decomp_bytes[j + 1] << 8) | (decomp_bytes[j + 2] << 16)
+
+                    # Check if triplet has no match
+                    indexes = triplets.get(triplet)
+                    if indexes is None:
+                        triplets[triplet] = [j]
+                    else:
+                        indexes.append(j)
+                
                 match_offset = idx - match_idx - MIN_WINDOW_SIZE
                 if match_len - MIN_MATCH_SIZE < 0x10:
                     output.append(((match_len - MIN_MATCH_SIZE) << 4) | (match_offset >> 8))
@@ -246,17 +269,6 @@ def find_longest_match_bios(decomp_bytes: bytes, i: int, triplets: dict[int, lis
 
     indexes.append(i)
     if longest_len >= 3:
-        for j in range(i+1, min(i+longest_len, decomp_size-3+1)):
-            # Get triplet at current position
-            triplet = decomp_bytes[j] | (decomp_bytes[j + 1] << 8) | (decomp_bytes[j + 2] << 16)
-
-            # Check if triplet has no match
-            indexes = triplets.get(triplet)
-            if indexes is None:
-                triplets[triplet] = [j]
-            else:
-                indexes.append(j)
-        
         return (longest_len, longest_idx)
 
     return None
@@ -287,6 +299,18 @@ def comp_lz_bios(decomp_bytes: bytes) -> bytes:
             if _match is not None:
                 # Compressed
                 match_len, match_idx = _match
+
+                for j in range(idx+1, min(idx+match_len, decomp_size-3+1)):
+                    # Get triplet at current position
+                    triplet = decomp_bytes[j] | (decomp_bytes[j + 1] << 8) | (decomp_bytes[j + 2] << 16)
+
+                    # Check if triplet has no match
+                    indexes = triplets.get(triplet)
+                    if indexes is None:
+                        triplets[triplet] = [j]
+                    else:
+                        indexes.append(j)
+                
                 match_offset = idx - match_idx - 1
                 
                 output.append(((match_len - 3) << 4) | (match_offset >> 8))

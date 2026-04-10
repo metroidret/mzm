@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from romExtractor import *
 from gfxExtractor import *
 from lz import *
@@ -20,7 +18,7 @@ if __name__ == "__main__":
         for i, (bc, br) in enumerate(zip(nesrom_comp_bytes, nesrom_recomp_bytes)):
             if bc == br:
                 continue
-            raise Exception(f"nesrom byte {i}: {bc:02X} != {br:02X}")
+            raise Exception(f"nesrom byte 0x{i:X}: {bc:02X} != {br:02X}")
         print(f"nesrom success")
     except Exception as e:
         print(e)
@@ -35,7 +33,7 @@ if __name__ == "__main__":
             for i, (bc, br) in enumerate(zip(comp_bytes, recomp_bytes)):
                 if bc == br:
                     continue
-                raise Exception(f"gfx_entry {name} byte {i}: {bc:02X} != {br:02X}")
+                raise Exception(f"gfx_entry {name} byte 0x{i:X}: {bc:02X} != {br:02X}")
             print(f"gfx_entry {name} success")
         except Exception as e:
             print(e)
