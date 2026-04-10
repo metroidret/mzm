@@ -50,7 +50,87 @@ def decomp_lz_nesromtest(src: bytes, idx: int, decomp_size: int) -> Tuple[bytes,
             cflag <<= 1
 
 
-def comp_lz_nesromtest(decomp_bytes: bytes) -> bytes:
+def find_longest_match_nesromtest(decomp_bytes: bytes, i: int, triplets: dict[int, list[int]]) -> Optional[tuple[int, int]]:
+    decomp_size = len(decomp_bytes)
+    if i > decomp_size - 3:
+        return None
+
+    # Get triplet at current position
+    triplet = decomp_bytes[i] | (decomp_bytes[i + 1] << 8) | (decomp_bytes[i + 2] << 16)
+
+    # Check if triplet has no match
+    indexes = triplets.get(triplet)
+    if indexes is None:
+        return None
+
+    window_start = max(i - MAX_WINDOW_SIZE, 0)
+    max_size = min(MAX_MATCH_SIZE, decomp_size - i)
+    longest_len = 0
+    longest_idx = -1
+
+    j = 0
+    # Try each index to find the longest match
+    while j < len(indexes):
+        idx = indexes[j]
+        # remove if past window
+        if idx < window_start:
+            indexes.pop(j)
+            # dont inc j
+            continue
+
+        # Find length of match
+        match_len = 3
+        while match_len < max_size:
+            if decomp_bytes[idx + match_len] != decomp_bytes[i + match_len]:
+                break
+            match_len += 1
+        
+        # Update longest match
+        if match_len > longest_len:
+            longest_len = match_len
+            longest_idx = idx
+
+            # Stop looking if max size
+            if longest_len == max_size:
+                break
+        
+        j += 1
+
+    if longest_len >= 3:
+        return (longest_len, longest_idx)
+
+    return None
+
+def commit_match_to_triplets(i: int, triplets: dict[int, list[int]], _match, decomp_bytes):
+    decomp_size = len(decomp_bytes)
+    if i > decomp_size - 3:
+        return
+    
+    # Get triplet at current position
+    triplet = decomp_bytes[i] | (decomp_bytes[i + 1] << 8) | (decomp_bytes[i + 2] << 16)
+
+    # Check if triplet has no match
+    indexes = triplets.get(triplet)
+    if indexes is None:
+        triplets[triplet] = [i]
+    else:
+        indexes.append(i)
+
+    if _match is not None:
+        longest_len, longest_idx = _match
+        for j in range(i+1, min(i+longest_len, decomp_size-3+1)):
+            # Get triplet at current position
+            triplet = decomp_bytes[j] | (decomp_bytes[j + 1] << 8) | (decomp_bytes[j + 2] << 16)
+
+            # Check if triplet has no match
+            indexes = triplets.get(triplet)
+            if indexes is None:
+                triplets[triplet] = [j]
+            else:
+                indexes.append(j)
+
+
+def comp_lz_nesromtest(decomp_bytes: bytes, decomp_str) -> bytes:
     # Assumes input stream starts at 0
     decomp_size = len(decomp_bytes)
     idx = 0
@@ -59,6 +139,7 @@ def comp_lz_nesromtest(decomp_bytes: bytes) -> bytes:
     output = bytearray()
 
     str_out = []
+    modlist_u = []
 
     while idx < decomp_size:
         # Get index of new compression flag
@@ -67,19 +148,42 @@ def comp_lz_nesromtest(decomp_bytes: bytes) -> bytes:
 
         for i in range(8):
             # Find longest match at current position
-            _match = find_longest_match_nesrom(decomp_bytes, idx, triplets)
+            _match = find_longest_match_nesromtest(decomp_bytes, idx, triplets)
+
+            """if _match is not None:
+                _match_next = find_longest_match_nesromtest(decomp_bytes, idx+1, triplets)
+
+                # match saves length
+                # match_next saves length_next - 1 - 1/8
+
+                if _match_next is not None and _match_next[0] > _match[0] + 1:
+                    _match = None"""
+
+            # debug hardcoding
+            try:
+                if decomp_str[len(str_out)][0].startswith("u") and _match is not None:
+                    _match = None
+                    modlist_u.append(len(str_out))
+            except IndexError:
+                pass
+
+            commit_match_to_triplets(idx, triplets, _match, decomp_bytes)
+
             if _match is not None:
                 # Compressed
                 match_len, match_idx = _match
                 match_offset = idx - match_idx - MIN_WINDOW_SIZE
+                str_out.append([f"c({match_len},-0x{match_offset + MIN_WINDOW_SIZE:X})", [f"{b:02X}" for b in decomp_bytes[idx:idx + match_len]]])
                 if match_len - MIN_MATCH_SIZE < 0x10:
                     output.append(((match_len - MIN_MATCH_SIZE) << 4) | (match_offset >> 8))
                     output.append(match_offset & 0xFF)
                 else:
+                    if (match_offset >> 8) < 0 or (match_offset >> 8) >= 256:
+                        print(f"0x{idx:X}")
+                        print(str_out[len(str_out)-1])
                     output.append(match_offset >> 8)
                     output.append(match_offset & 0xFF)
                     output.append(match_len - 0x10 - MIN_MATCH_SIZE)
-                str_out.append([f"c({match_len},-0x{match_offset + MIN_WINDOW_SIZE:X})", [f"{b:02X}" for b in decomp_bytes[idx:idx + match_len]]])
                 idx += match_len
             else:
                 # Uncompressed
@@ -90,7 +194,7 @@ def comp_lz_nesromtest(decomp_bytes: bytes) -> bytes:
 
             # Check if at end
             if idx >= decomp_size:
-                return bytes(output), str_out
+                return bytes(output), str_out, modlist_u
     
     raise Exception("LZ77 compression error")
 
@@ -103,7 +207,7 @@ if __name__ == "__main__":
     decomp_bytes, comp_size, decomp_str = decomp_lz_nesromtest(nes_metroid_data, nestroid_rom_addr_rel, NESTROID_ROM_DECOMP_SIZE)
     comp_bytes = nes_metroid_data[nestroid_rom_addr_rel:nestroid_rom_addr_rel+comp_size]
 
-    recomp_bytes, recomp_str = comp_lz_nesromtest(decomp_bytes)
+    recomp_bytes, recomp_str, modlist_u = comp_lz_nesromtest(decomp_bytes, decomp_str)
 
     byte_qty = 0
     for i, (cd, cr) in enumerate(zip(decomp_str, recomp_str)):
@@ -111,3 +215,6 @@ if __name__ == "__main__":
             raise Exception(f"command {i} (off 0x{byte_qty:X}): \ndecomp: {cd}\nrecomp: {cr}")
         byte_qty += len(cd[1])
     print("ok")
+    for i in modlist_u:
+        print(f"0x{i:X}: " + " ".join([f"{b:02X}" for b in decomp_bytes[max(i, 0):min(i+4, len(decomp_bytes))]]))
+
