@@ -189,13 +189,20 @@ help:
 	@echo '  REGION=<region>: selects the region of the ROM, possible values are "us", "eu", "jp", "cn", "us_beta", and "eu_beta"'
 	@echo '  DEBUG=1: enables the debug code'
 
-# asm/data.o: payload/payload.gba.lz
 
-# payload/payload.gba:
-# 	@$(MAKE) -C payload
+asm/data.o: emulator/emulator_$(REGION).gba.lz payload/payload_$(REGION).gba.lz
 
-# payload/payload.gba.lz: payload/payload.gba
-# 	$Q python3 ../tools/compress.py comp_lz payload/mzm_us.gba 0x0 payload/payload.gba.lz
+emulator/emulator_$(REGION).gba:
+	@$(MAKE) -C emulator
+
+emulator/emulator_$(REGION).gba.lz: emulator/emulator_$(REGION).gba
+	$(PYTHON) ../tools/nes_metroid/emulatorCompressor.py emulator/emulator_$(REGION).gba
+
+payload/payload_$(REGION).gba:
+	@$(MAKE) -C payload
+
+payload/payload_$(REGION).gba.lz: payload/payload_$(REGION).gba
+	$(PYTHON) ../tools/nes_metroid/payloadCompressor.py payload/payload_$(REGION).gba
 
 $(TARGET): $(ELF) $(GBAFIX)
 	$(MSG) OBJCOPY $@
