@@ -4,6 +4,7 @@
 
 *.gba
 *.gba.lz
+*.nes
 *.elf
 *.dump
 *.o
