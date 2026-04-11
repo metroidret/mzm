@@ -31,19 +31,21 @@ def extract_rom(nes_metroid_data):
     return decomp_bytes, comp_bytes
 
 
+def save_rom(output_path, decomp_bytes):
+    decomp_bytes_headered = NESTROID_ROM_INES_HEADER + decomp_bytes
+    
+    with open(args.output_path, "wb") as f:
+        f.write(decomp_bytes_headered)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("zm_path", type=str, help="Path to a Zero Mission ROM")
-    parser.add_argument("output_path", type=str, help="Folder where output ROM should be written")
+    parser.add_argument("output_path", type=str, help="Path where output ROM should be written")
     
     args = parser.parse_args()
     
     nes_metroid_data = get_nes_metroid_data(args.zm_path)
     decomp_bytes, comp_bytes = extract_rom(nes_metroid_data)
-    decomp_bytes_headered = NESTROID_ROM_INES_HEADER + decomp_bytes
-    
-    output_path_obj = Path(args.output_path)
-    output_path_obj.mkdir(parents=True, exist_ok=True)
-    with open(Path(args.output_path, "M1_NES_MZMUS.nes"), "wb") as f:
-        f.write(decomp_bytes_headered)
+    save_rom(args.output_path, decomp_bytes)
     

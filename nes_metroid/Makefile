@@ -141,10 +141,11 @@ diff: $(DUMPS)
 	$(MSG) DIFF $^
 	$Q$(DIFF) $^
 
-# .PHONY: extract
-# extract:
-# 	$(MSG) Extracting
-# 	$Q python3 ../tools/extractor.py -r $(REGION)
+.PHONY: extract
+extract:
+	$(MSG) Extracting
+	$Q$(PYTHON) ../tools/nes_metroid/gfxExtractor.py ../mzm_us_baserom.gba data/gfx/
+	$Q$(PYTHON) ../tools/nes_metroid/romExtractor.py ../mzm_us_baserom.gba data/M1_NES_MZMUS.nes
 
 .PHONY: clean
 clean:

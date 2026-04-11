@@ -105,19 +105,22 @@ def extract_gfx(nes_metroid_data):
     return gfx_entry_decomp_bytes_list, gfx_entry_comp_bytes_list
 
 
+def save_gfx(output_folder, gfx_entry_decomp_bytes_list):
+    output_folder_obj = Path(output_folder)
+    output_folder_obj.mkdir(parents=True, exist_ok=True)
+    for name, decomp_bytes in zip(GFX_ENTRY_NAMES, gfx_entry_decomp_bytes_list):
+        with open(Path(args.output_folder, name + ".bin"), "wb") as f:
+            f.write(decomp_bytes)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("zm_path", type=str, help="Path to a Zero Mission ROM")
-    parser.add_argument("output_path", type=str, help="Folder where output LZ-compressed graphics should be written")
+    parser.add_argument("output_folder", type=str, help="Folder where output LZ-compressed graphics should be written")
     
     args = parser.parse_args()
     
     nes_metroid_data = get_nes_metroid_data(args.zm_path)
     gfx_entry_decomp_bytes_list, _ = extract_gfx(nes_metroid_data)
-    
-    output_path_obj = Path(args.output_path)
-    output_path_obj.mkdir(parents=True, exist_ok=True)
-    for name, decomp_bytes in zip(GFX_ENTRY_NAMES, gfx_entry_decomp_bytes_list):
-        with open(Path(args.output_path, name + ".bin"), "wb") as f:
-            f.write(decomp_bytes)
+    save_gfx(args.output_folder, gfx_entry_decomp_bytes_list)
     
