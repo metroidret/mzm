@@ -8,7 +8,7 @@ MAX_MATCH_SIZE = (1 << 8) - 1 + 0x10 + MIN_MATCH_SIZE
 MAX_WINDOW_SIZE = (1 << 12) - 1 + MIN_WINDOW_SIZE
 
 
-def decomp_lz_nesrom(src: bytes, idx: int, decomp_size: int) -> Tuple[bytes, int]:
+def decomp_lz_custom(src: bytes, idx: int, decomp_size: int) -> Tuple[bytes, int]:
     output = bytearray(decomp_size)
 
     start = idx
@@ -88,7 +88,7 @@ def decomp_lz_bios(src: bytes, idx: int) -> Tuple[bytes, int]:
             cflag <<= 1
 
 
-def find_longest_match_nesrom(decomp_bytes: bytes, i: int, triplets: dict[int, list[int]]) -> Optional[tuple[int, int]]:
+def find_longest_match_custom(decomp_bytes: bytes, i: int, triplets: dict[int, list[int]]) -> Optional[tuple[int, int]]:
     decomp_size = len(decomp_bytes)
     if i > decomp_size - 3:
         return None
@@ -142,7 +142,7 @@ def find_longest_match_nesrom(decomp_bytes: bytes, i: int, triplets: dict[int, l
     return None
 
 
-def comp_lz_nesrom(decomp_bytes: bytes) -> bytes:
+def comp_lz_custom(decomp_bytes: bytes) -> bytes:
     # Assumes input stream starts at 0
     decomp_size = len(decomp_bytes)
     idx = 0
@@ -163,12 +163,12 @@ def comp_lz_nesrom(decomp_bytes: bytes) -> bytes:
                 _match_next = None
             else:
                 # Find longest match at current position
-                _match = find_longest_match_nesrom(decomp_bytes, idx, triplets)
+                _match = find_longest_match_custom(decomp_bytes, idx, triplets)
                 
                 if _match is not None:
                     match_len, _ = _match
                     
-                    _match_next = find_longest_match_nesrom(decomp_bytes, idx+1, triplets)
+                    _match_next = find_longest_match_custom(decomp_bytes, idx+1, triplets)
 
                     if _match_next is not None:
                         match_next_len, _ = _match_next

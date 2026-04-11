@@ -25,7 +25,7 @@ def get_nes_metroid_data(zm_path):
 def extract_rom(nes_metroid_data):
     nestroid_rom_addr_rel = NESTROID_ROM_ADDR - NES_METROID_BIN_ADDR
     
-    decomp_bytes, comp_size = decomp_lz_nesrom(nes_metroid_data, nestroid_rom_addr_rel, NESTROID_ROM_DECOMP_SIZE)
+    decomp_bytes, comp_size = decomp_lz_custom(nes_metroid_data, nestroid_rom_addr_rel, NESTROID_ROM_DECOMP_SIZE)
     comp_bytes = nes_metroid_data[nestroid_rom_addr_rel:nestroid_rom_addr_rel+comp_size]
     
     return decomp_bytes, comp_bytes

@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     # TEST NESTROID ROM RECOMPRESS
     nesrom_decomp_bytes, nesrom_comp_bytes = extract_rom(nes_metroid_data)
-    nesrom_recomp_bytes = comp_lz_nesrom(nesrom_decomp_bytes)
+    nesrom_recomp_bytes = comp_lz_custom(nesrom_decomp_bytes)
     try:
         for i, (bc, br) in enumerate(zip(nesrom_comp_bytes, nesrom_recomp_bytes)):
             if bc == br:
