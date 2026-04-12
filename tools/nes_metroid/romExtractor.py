@@ -41,7 +41,7 @@ def save_rom(output_path, decomp_bytes):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("zm_path", type=str, help="Path to a Zero Mission ROM")
-    parser.add_argument("output_path", type=str, help="Path where output ROM should be written")
+    parser.add_argument("output_path", type=str, help="Path where output NES ROM should be written")
     
     args = parser.parse_args()
     

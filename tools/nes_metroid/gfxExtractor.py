@@ -105,11 +105,11 @@ def extract_gfx(nes_metroid_data):
     return gfx_entry_decomp_bytes_list, gfx_entry_comp_bytes_list
 
 
-def save_gfx(output_folder, gfx_entry_decomp_bytes_list):
+def save_gfx(output_folder, gfx_entry_comp_bytes_list):
     output_folder_obj = Path(output_folder)
     output_folder_obj.mkdir(parents=True, exist_ok=True)
-    for name, decomp_bytes in zip(GFX_ENTRY_NAMES, gfx_entry_decomp_bytes_list):
-        with open(Path(args.output_folder, name + ".bin"), "wb") as f:
+    for name, decomp_bytes in zip(GFX_ENTRY_NAMES, gfx_entry_comp_bytes_list):
+        with open(Path(args.output_folder, name + ".nes.lz"), "wb") as f:
             f.write(decomp_bytes)
 
 
@@ -121,6 +121,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     nes_metroid_data = get_nes_metroid_data(args.zm_path)
-    gfx_entry_decomp_bytes_list, _ = extract_gfx(nes_metroid_data)
-    save_gfx(args.output_folder, gfx_entry_decomp_bytes_list)
+    _, gfx_entry_comp_bytes_list = extract_gfx(nes_metroid_data)
+    save_gfx(args.output_folder, gfx_entry_comp_bytes_list)
     
