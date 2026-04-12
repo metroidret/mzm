@@ -116,10 +116,8 @@ _087F73F8:
 _087F7544:
     .incbin "data/gfx/GFX_Solid.nes.lz"
     .align 2, 0
+
 _087F7558:
-    
-    
-    @ some stuff goes here (087F7558-087F7733)
-    
-    
+    .incbin "data/palette.pal.lz"
+    .align 2, 0
 

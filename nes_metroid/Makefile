@@ -146,6 +146,7 @@ extract:
 	$(MSG) Extracting
 	$Q$(PYTHON) ../tools/nes_metroid/gfxExtractor.py ../mzm_us_baserom.gba data/gfx/
 	$Q$(PYTHON) ../tools/nes_metroid/romExtractor.py ../mzm_us_baserom.gba data/M1_NES_MZMUS.nes
+	$Q$(PYTHON) ../tools/nes_metroid/paletteExtractor.py ../mzm_us_baserom.gba data/palette.pal.lz
 
 .PHONY: clean
 clean:
