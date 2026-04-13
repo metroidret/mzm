@@ -354,13 +354,13 @@ void BootDebugUpdateMapScreenPosition(void)
         yOffset = FALSE;
         if (gBg0VOFS_NonGameplay < BOOT_DEBUG_DATA.bg0vofs)
         {
-            gBg0VOFS_NonGameplay += 8;
+            gBg0VOFS_NonGameplay += BOOT_DEBUG_MAP_SCROLL_SPEED;
             if (gBg0VOFS_NonGameplay > BOOT_DEBUG_DATA.bg0vofs)
                 yOffset = TRUE;
         }
         else
         {
-            gBg0VOFS_NonGameplay -= 8;
+            gBg0VOFS_NonGameplay -= BOOT_DEBUG_MAP_SCROLL_SPEED;
             if (gBg0VOFS_NonGameplay < BOOT_DEBUG_DATA.bg0vofs)
                 yOffset = TRUE;
         }
@@ -374,13 +374,13 @@ void BootDebugUpdateMapScreenPosition(void)
         yOffset = FALSE;
         if (gBg0HOFS_NonGameplay < BOOT_DEBUG_DATA.bg0hofs)
         {
-            gBg0HOFS_NonGameplay += 8;
+            gBg0HOFS_NonGameplay += BOOT_DEBUG_MAP_SCROLL_SPEED;
             if (gBg0HOFS_NonGameplay > BOOT_DEBUG_DATA.bg0hofs)
                 yOffset = TRUE;
         }
         else
         {
-            gBg0HOFS_NonGameplay -= 8;
+            gBg0HOFS_NonGameplay -= BOOT_DEBUG_MAP_SCROLL_SPEED;
             if (gBg0HOFS_NonGameplay < BOOT_DEBUG_DATA.bg0hofs)
                 yOffset = TRUE;
         }
@@ -1155,9 +1155,12 @@ void BootDebugSectionMapRoomOrDoorUpdated(u8 roomOrDoor)
                 // We don't want to spawn Samus next to an elevator transition, so
                 // skip this door if it's an elevator to the current room
                 elevator = 1;
-                while (sElevatorRoomPairs[elevator].area1 != gSectionInfo.sectionIndex ||
-                    sElevatorRoomPairs[elevator].room1 != gCurrentRoom)
+                while (TRUE)
                 {
+                    if (sElevatorRoomPairs[elevator].area1 == gSectionInfo.sectionIndex &&
+                        sElevatorRoomPairs[elevator].room1 == gCurrentRoom)
+                        break;
+                    
                     if (sElevatorRoomPairs[elevator].area2 == gSectionInfo.sectionIndex &&
                         sElevatorRoomPairs[elevator].room2 == gCurrentRoom)
                         break;

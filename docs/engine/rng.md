@@ -2,6 +2,12 @@
 
 Random number generation (RNG) is primarily used by sprites to choose random behavior. This document details how RNG works, as well as some of its flaws.
 
+- [Sprite RNG](#sprite-rng)
+  - [RNG Calculation](#rng-calculation)
+- [Other RNG](#other-rng)
+- [Sprite RNG Flaws](#sprite-rng-flaws)
+
+
 ## Sprite RNG
 
 Sprites use the RAM variable `gSpriteRng`, which is set to a value between 0-15 for each sprite that is processed. This value can be used by the sprite in a variety of ways, including:
@@ -46,7 +52,8 @@ Using modulo with a power of 2 (or bitwise AND with a power of 2 minus 1) comput
 
 #### Mutiplied or divided with another number
 
-Multiplying or dividing can be used to convert the range of 0-16 to a bigger or smaller range, which is often used for timers or counters. For example, dividing by 4 gives a range of 0-3, which could determine the number of attacks. Multiplying by 16 gives a range of 0-240, which could determine how long to wait before attacking.
+Multiplying or dividing can be used to convert the range of 0-15 to a bigger or smaller range, which is often used for timers or counters. For example, dividing by 4 gives a range of 0-3, which could determine the number of attacks. Multiplying by 16 gives a range of 0-240, which could determine how long to wait before attacking.
+
 
 ## Other RNG
 
@@ -58,6 +65,7 @@ There's a random number table which contains one of each number between 0-255 (s
 - The particles floating through space in the Ridley in space cutscene (`RidleyInSpaceShipLeaving`, `RidleyInSpaceViewOfShipParticles`, and `RidleyInSpaceShipLeavingParticles` in [ridley_in_space.c](../src/cutscenes/ridley_in_space.c))
 - Sprite positions and speeds for the enter Tourian cutscene (`EnterTourianUpdateMetroid` and `EnterTourianUpdatePirate` in [enter_tourian.c](../src/cutscenes/enter_tourian.c))
 - Various effects during the fully powered suit cutscene (`GettingFullyPoweredSuitUpdateSparkleAroundRing` and `GettingFullyPoweredSuitUpdateSparkleGoingUp` in [getting_fully_powered_suit.c](../src/cutscenes/getting_fully_powered_suit.c))
+
 
 ## Sprite RNG Flaws
 

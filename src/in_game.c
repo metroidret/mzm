@@ -195,13 +195,18 @@ u32 InGameHandler(void)
         if (gDebugVCount_AudioMax <= gOamData[0x7E].split.y)
             gDebugVCount_AudioMax = gOamData[0x7E].split.y;
 
+        // Max audio execution time
         gOamData[0x7D].split.y = gDebugVCount_AudioMax; 
-        gOamData[0x7D].split.x = 234;
+        gOamData[0x7D].split.x = SCREEN_SIZE_X - 6;
         gOamData[0x7D].split.tileNum = 0x76;
         gOamData[0x7D].split.paletteNum = 4;
-        gOamData[0x7E].split.x = 234;
+
+        // Current frame audio execution time
+        gOamData[0x7E].split.x = SCREEN_SIZE_X - 6;
         gOamData[0x7E].split.tileNum = 0x77;
         gOamData[0x7E].split.paletteNum = 4;
+
+        // Current frame total execution time
         gOamData[0x7F].split.y = gDebugVCount_InGameEnd = READ_16(REG_VCOUNT);
         gOamData[0x7F].split.x = 0;
         gOamData[0x7F].split.tileNum = 0x78;

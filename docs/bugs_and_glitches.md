@@ -315,7 +315,7 @@ On the first frame of a power bomb explosion, the background becomes black (it s
 
 ### The fully powered suit cutscene fades to black after fading to white
 
-At the start of the fully powered suit cutscene (after Samus is locked in place), the screen fades to white. Right before the image of suitless Samus is shown, the screen becomes black. Since the image of Samus is relatively bright, this creates an unnecessary flash between dark and light.
+At the start of the fully powered suit cutscene (after Samus is locked in place), the screen fades to white. Right before the image of suitless Samus is shown, the screen becomes black. Since the image of Samus is relatively bright, it causes an unnecessary flash between dark and light. This was fixed in the European release.
 
 **Fix:** Edit `GettingFullyPoweredSuitInit` in [getting_fully_powered_suit.c](../src/cutscenes/getting_fully_powered_suit.c) to call `CutsceneFadeScreenToWhite` instead of `CutsceneFadeScreenToBlack`.
 
@@ -415,18 +415,18 @@ Floating point math is used in a few instances even when the result is assigned 
 ```diff
   verticalAxis = gCurrentPowerBomb.semiMinorAxis * 4;
   horizontalAxis = gCurrentPowerBomb.semiMinorAxis * 8;
-+ verticalAxis = FixedMultiplication(verticalAxis, Q_8_8(0.95));
-+ horizontalAxis = FixedMultiplication(horizontalAxis, Q_8_8(0.95));
 - verticalAxis *= 0.95;
 - horizontalAxis *= 0.95;
++ verticalAxis = FixedMultiplication(verticalAxis, Q_8_8(0.95));
++ horizontalAxis = FixedMultiplication(horizontalAxis, Q_8_8(0.95));
 ```
 Could also do `verticalAxis * 19 / 20`
 
 `ImagoCocoonSporeMove`:
 ```diff
   case IMAGO_COCOON_SPORE_PART_DIAG_RIGHT_UP:
-+     movement = FixedMultiplication(movement, Q_8_8(0.8));
 -     movement *= 0.8; // 4 * 0.8 = 3.2
++     movement = FixedMultiplication(movement, Q_8_8(0.8));
       gCurrentSprite.yPosition -= movement;
       gCurrentSprite.xPosition += movement;
       break;
@@ -435,8 +435,8 @@ Could also do `movement * 4 / 5`
 
 `RidleyLandingShipLanding`:
 ```diff
-+ if (movement >= 2848 - FixedMultiplication(sRidleyLandingScrollingInfo[1].length, Q_8_8(2.f / 3)))
 - if (movement >= 2848 - sRidleyLandingScrollingInfo[1].length / 1.5)
++ if (movement >= 2848 - FixedMultiplication(sRidleyLandingScrollingInfo[1].length, Q_8_8(2.f / 3)))
   {
       CUTSCENE_DATA.dispcnt |= sRidleyLandingPageData[2].bg;
       CutsceneStartBackgroundScrolling(sRidleyLandingScrollingInfo[1], sRidleyLandingPageData[2].bg);
@@ -446,7 +446,7 @@ Could also do `sRidleyLandingScrollingInfo[1].length * 2 / 3`
 
 ### `ClipdataConvertToCollision` is copied to RAM but still runs in ROM
 
-`ClipdataConvertToCollision` is copied to RAM, presumably for performance reasons, because it is often called many times per frame and code runs faster in RAM. However, the switch statement gets compiled as a jump table, which ends up jumping to the code in ROM.
+`ClipdataConvertToCollision` is copied to RAM, presumably for performance reasons, because it is often called many times per frame and code runs faster in RAM. However, the switch statement gets compiled as a jump table, which ends up jumping to the code in ROM. This issue also occurs in Fusion.
 
 **Fix:** Convert the switch statement to a series of if statements. Order them such that common block types (like solid and air) are checked first.
 
@@ -519,5 +519,7 @@ The last cutscene stage for upgrading your suit (obtaining Varia or the fully po
 - Bomb hover on frozen enemies ([video](https://youtu.be/UIK8YnT1sG4))
 - Frame perfect pause buffering on ziplines ignores collision
 - Clipping into slopes ([video](https://www.youtube.com/watch?v=XiZRJesXHWw))
+- The boot debug map screen doesn't update the door ID in rooms with an elevator and no hatch
 
 ### Oversights and Design Flaws
+- The HUD isn't drawn during VBlank, which can cause tearing
