@@ -4,13 +4,12 @@
 _087D8150:
     .incbin "payload/payload_us.gba.lz"
     .align 4, 0
+
 _087D8360:
     .incbin "emulator/emulator_us.gba.lz"
-    
-    
-    @ some stuff goes here (087DCDB0-087DCF5F)
-    
-    
+_087DCDB0:
+    .incbin "emulator/emulatorUnused_us.gba"
+
 _087DCF60:
     .incbin "data/M1_NES_MZMUS.nes.lz"
     .align 2, 0

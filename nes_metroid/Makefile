@@ -174,6 +174,9 @@ endif
 	$(MSG) RM linker.ld.pp
 	$Q$(RM) linker.ld.pp
 
+	@$(MAKE) clean -C emulator
+	@$(MAKE) clean -C payload
+
 .PHONY: help
 help:
 	@echo 'Targets:'
@@ -191,19 +194,22 @@ help:
 	@echo '  DEBUG=1: enables the debug code'
 
 
-asm/data.o: emulator/emulator_$(REGION).gba.lz payload/payload_$(REGION).gba.lz data/M1_NES_MZMUS.nes.lz
+asm/data.o: emulator/emulator_$(REGION).gba.lz emulator/emulatorUnused_$(REGION).gba payload/payload_$(REGION).gba.lz data/M1_NES_MZMUS.nes.lz
 
 emulator/emulator_$(REGION).gba:
 	@$(MAKE) -C emulator
 
 emulator/emulator_$(REGION).gba.lz: emulator/emulator_$(REGION).gba
-	$(PYTHON) ../tools/nes_metroid/emulatorCompressor.py emulator/emulator_$(REGION).gba
+	$(PYTHON) ../tools/nes_metroid/emulatorCompressor.py $<
+
+emulator/emulatorUnused_$(REGION).gba: emulator/emulator_$(REGION).gba
+	$(PYTHON) ../tools/nes_metroid/emulatorUnusedExtractor.py $< $@
 
 payload/payload_$(REGION).gba:
 	@$(MAKE) -C payload
 
 payload/payload_$(REGION).gba.lz: payload/payload_$(REGION).gba
-	$(PYTHON) ../tools/nes_metroid/payloadCompressor.py payload/payload_$(REGION).gba
+	$(PYTHON) ../tools/nes_metroid/payloadCompressor.py $<
 
 data/M1_NES_MZMUS.nes.lz:
 	$(PYTHON) ../tools/nes_metroid/romCompressor.py data/M1_NES_MZMUS.nes
