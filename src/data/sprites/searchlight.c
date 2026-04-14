@@ -1,8 +1,12 @@
 #include "data/sprites/searchlight.h"
 #include "macros.h"
 
-const u32 sSearchlightGfx[172] = INCBIN_U32("data/sprites/searchlight.gfx.lz");
-const u16 sSearchlightPal[16] = INCBIN_U16("data/sprites/searchlight.pal");
+const u32 sSearchlightGfx[172] = {
+    #include "extracted/data/sprites/searchlight.gfx.lz.inc"
+};
+const u16 sSearchlightPal[16] = {
+    #include "extracted/data/sprites/searchlight.pal.inc"
+};
 
 static const u16 sSearchlightOam_Moving_Frame0[OAM_DATA_SIZE(8)] = {
     8,

@@ -5,7 +5,9 @@
 #include "constants/game_state.h"
 #include "constants/text.h"
 
-const u8 sCharactersGfx[176 * 1024] = INCBIN_U8("data/text_characters.gfx");
+const u8 sCharactersGfx[176 * 1024] = {
+    #include "extracted/data/text_characters.gfx.inc"
+};
 
 const u16 sJapaneseText_Message_Dummy[] = INCTEXT("{GAP(98)}ダミー\n{GAP(110)}");
 const u16 sJapaneseText_Message_EnergyTankAcquired[] = INCTEXT("{GAP(38)}{COLOR(5)}ENERGY TANK エネルギータンク\n{GAP(62)}{COLOR(0)}体力の最大値がＵＰした");

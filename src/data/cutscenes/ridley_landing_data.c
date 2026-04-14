@@ -398,30 +398,82 @@ const struct FrameData sRidleyLandingOam_Rocks[5] = {
 
 
 
-const u16 sCutscene_3a09d4_Pal[9 * 16] = INCBIN_U16("data/cutscenes/ridley_landing/3a09d4.pal");
-const u16 sCutsceneZebesPal[13 * 16] = INCBIN_U16("data/cutscenes/ridley_landing/cutscene_zebes.pal");
-const u16 sCutsceneMotherShipPal[5 * 16] = INCBIN_U16("data/cutscenes/ridley_landing/cutscene_mother_ship.pal");
-const u16 sRidleyLandingRidleyAndRocksPal[2 * 16] = INCBIN_U16("data/cutscenes/ridley_landing/objects.pal");
-const u16 sRidleyLandingSkyBackgroundPal[5 * 16] = INCBIN_U16("data/cutscenes/ridley_landing/sky_background.pal");
+const u16 sCutscene_3a09d4_Pal[9 * 16] = {
+    #include "extracted/data/cutscenes/ridley_landing/3a09d4.pal.inc"
+};
+const u16 sCutsceneZebesPal[13 * 16] = {
+    #include "extracted/data/cutscenes/ridley_landing/cutscene_zebes.pal.inc"
+};
+const u16 sCutsceneMotherShipPal[5 * 16] = {
+    #include "extracted/data/cutscenes/ridley_landing/cutscene_mother_ship.pal.inc"
+};
+const u16 sRidleyLandingRidleyAndRocksPal[2 * 16] = {
+    #include "extracted/data/cutscenes/ridley_landing/objects.pal.inc"
+};
+const u16 sRidleyLandingSkyBackgroundPal[5 * 16] = {
+    #include "extracted/data/cutscenes/ridley_landing/sky_background.pal.inc"
+};
 
-const u32 sRidleyLandingZebesBackgroundGfx[3167] = INCBIN_U32("data/cutscenes/ridley_landing/zebes_background.gfx.lz");
-const u32 sRidleyLandingMotherShipGfx_1[38] = INCBIN_U32("data/cutscenes/ridley_landing/mother_ship_1.gfx.lz");
-const u32 sRidleyLandingMotherShipGfx_2[59] = INCBIN_U32("data/cutscenes/ridley_landing/mother_ship_2.gfx.lz");
-const u32 sRidleyLandingMotherShipGfx_3[65] = INCBIN_U32("data/cutscenes/ridley_landing/mother_ship_3.gfx.lz");
-const u32 sRidleyLandingMotherShipGfx_4[88] = INCBIN_U32("data/cutscenes/ridley_landing/mother_ship_4.gfx.lz");
-const u32 sRidleyLandingMotherShipGfx_5[90] = INCBIN_U32("data/cutscenes/ridley_landing/mother_ship_5.gfx.lz");
-const u32 sRidleyLandingMotherShipGfx_6[97] = INCBIN_U32("data/cutscenes/ridley_landing/mother_ship_6.gfx.lz");
-const u32 sRidleyLandingMotherShipGfx_7[75] = INCBIN_U32("data/cutscenes/ridley_landing/mother_ship_7.gfx.lz");
-const u32 sRidleyLandingMotherShipGfx_8[40] = INCBIN_U32("data/cutscenes/ridley_landing/mother_ship_8.gfx.lz");
-const u32 sRidleyLandingMotherShipGfx_9[18] = INCBIN_U32("data/cutscenes/ridley_landing/mother_ship_9.gfx.lz");
-const u32 sCutsceneZebesMotherShipBackgroundGfx[5067] = INCBIN_U32("data/cutscenes/ridley_landing/cutscene_zebes_mother_ship_background.gfx.lz");
-const u32 sCutsceneZebesGroundGfx[477] = INCBIN_U32("data/cutscenes/ridley_landing/cutscene_zebes_ground.gfx.lz");
-const u32 sCutsceneZebesRockyBackgroundGfx[1514] = INCBIN_U32("data/cutscenes/ridley_landing/cutscene_zebes_rocky_background.gfx.lz");
-const u32 sCutsceneMotherShipEscapeShipParticlesGfx[2955] = INCBIN_U32("data/cutscenes/ridley_landing/cutscene_mother_ship_escape_ship_particles.gfx.lz");
-const u32 sRidleyLandingRidleyAndRockShadowGfx[2788] = INCBIN_U32("data/cutscenes/ridley_landing/ridley_and_rock.gfx.lz");
-const u32 sRidleyLandingRidleyFlyingBackgroundGfx[2970] = INCBIN_U32("data/cutscenes/ridley_landing/ridley_flying_background.gfx.lz");
-const u32 sRidleyLandingZebesBackgroundTileTable[545] = INCBIN_U32("data/cutscenes/ridley_landing/zebes_background.tt");
-const u32 sCutsceneZebesMotherShipBackgroundTileTable[640] = INCBIN_U32("data/cutscenes/ridley_landing/cutscene_zebes_mother_ship_background.tt");
-const u32 sCutscene_3b5168_TileTable[261] = INCBIN_U32("data/cutscenes/ridley_landing/3b5168.tt");
-const u32 sCutsceneZebesGroundTileTable[111] = INCBIN_U32("data/cutscenes/ridley_landing/cutscene_zebes_ground.tt");
-const u32 sRidleyLandingRidleyFlyingBackgroundTileTable[368] = INCBIN_U32("data/cutscenes/ridley_landing/ridley_flying_background.tt");
+const u32 sRidleyLandingZebesBackgroundGfx[3167] = {
+    #include "extracted/data/cutscenes/ridley_landing/zebes_background.gfx.lz.inc"
+};
+const u32 sRidleyLandingMotherShipGfx_1[38] = {
+    #include "extracted/data/cutscenes/ridley_landing/mother_ship_1.gfx.lz.inc"
+};
+const u32 sRidleyLandingMotherShipGfx_2[59] = {
+    #include "extracted/data/cutscenes/ridley_landing/mother_ship_2.gfx.lz.inc"
+};
+const u32 sRidleyLandingMotherShipGfx_3[65] = {
+    #include "extracted/data/cutscenes/ridley_landing/mother_ship_3.gfx.lz.inc"
+};
+const u32 sRidleyLandingMotherShipGfx_4[88] = {
+    #include "extracted/data/cutscenes/ridley_landing/mother_ship_4.gfx.lz.inc"
+};
+const u32 sRidleyLandingMotherShipGfx_5[90] = {
+    #include "extracted/data/cutscenes/ridley_landing/mother_ship_5.gfx.lz.inc"
+};
+const u32 sRidleyLandingMotherShipGfx_6[97] = {
+    #include "extracted/data/cutscenes/ridley_landing/mother_ship_6.gfx.lz.inc"
+};
+const u32 sRidleyLandingMotherShipGfx_7[75] = {
+    #include "extracted/data/cutscenes/ridley_landing/mother_ship_7.gfx.lz.inc"
+};
+const u32 sRidleyLandingMotherShipGfx_8[40] = {
+    #include "extracted/data/cutscenes/ridley_landing/mother_ship_8.gfx.lz.inc"
+};
+const u32 sRidleyLandingMotherShipGfx_9[18] = {
+    #include "extracted/data/cutscenes/ridley_landing/mother_ship_9.gfx.lz.inc"
+};
+const u32 sCutsceneZebesMotherShipBackgroundGfx[5067] = {
+    #include "extracted/data/cutscenes/ridley_landing/cutscene_zebes_mother_ship_background.gfx.lz.inc"
+};
+const u32 sCutsceneZebesGroundGfx[477] = {
+    #include "extracted/data/cutscenes/ridley_landing/cutscene_zebes_ground.gfx.lz.inc"
+};
+const u32 sCutsceneZebesRockyBackgroundGfx[1514] = {
+    #include "extracted/data/cutscenes/ridley_landing/cutscene_zebes_rocky_background.gfx.lz.inc"
+};
+const u32 sCutsceneMotherShipEscapeShipParticlesGfx[2955] = {
+    #include "extracted/data/cutscenes/ridley_landing/cutscene_mother_ship_escape_ship_particles.gfx.lz.inc"
+};
+const u32 sRidleyLandingRidleyAndRockShadowGfx[2788] = {
+    #include "extracted/data/cutscenes/ridley_landing/ridley_and_rock.gfx.lz.inc"
+};
+const u32 sRidleyLandingRidleyFlyingBackgroundGfx[2970] = {
+    #include "extracted/data/cutscenes/ridley_landing/ridley_flying_background.gfx.lz.inc"
+};
+const u32 sRidleyLandingZebesBackgroundTileTable[545] = {
+    #include "extracted/data/cutscenes/ridley_landing/zebes_background.tt.inc"
+};
+const u32 sCutsceneZebesMotherShipBackgroundTileTable[640] = {
+    #include "extracted/data/cutscenes/ridley_landing/cutscene_zebes_mother_ship_background.tt.inc"
+};
+const u32 sCutscene_3b5168_TileTable[261] = {
+    #include "extracted/data/cutscenes/ridley_landing/3b5168.tt.inc"
+};
+const u32 sCutsceneZebesGroundTileTable[111] = {
+    #include "extracted/data/cutscenes/ridley_landing/cutscene_zebes_ground.tt.inc"
+};
+const u32 sRidleyLandingRidleyFlyingBackgroundTileTable[368] = {
+    #include "extracted/data/cutscenes/ridley_landing/ridley_flying_background.tt.inc"
+};

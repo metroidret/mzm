@@ -20,11 +20,17 @@ const u8 sChozodia_8_Scrolls[SCROLL_DATA_SIZE(2)] = {
 	UCHAR_MAX, // Breakable block Y bound extension
 };
 
-const u8 sChozodia_12_Clipdata[276] = INCBIN_U8("data/rooms/chozodia/chozodia_12_clipdata.gfx");
+const u8 sChozodia_12_Clipdata[276] = {
+    #include "extracted/data/rooms/chozodia/chozodia_12_clipdata.gfx.inc"
+};
 
-const u8 sChozodia_12_Bg2[372] = INCBIN_U8("data/rooms/chozodia/chozodia_12_bg2.gfx");
+const u8 sChozodia_12_Bg2[372] = {
+    #include "extracted/data/rooms/chozodia/chozodia_12_bg2.gfx.inc"
+};
 
-const u8 sChozodia_12_Bg1[684] = INCBIN_U8("data/rooms/chozodia/chozodia_12_bg1.gfx");
+const u8 sChozodia_12_Bg1[684] = {
+    #include "extracted/data/rooms/chozodia/chozodia_12_bg1.gfx.inc"
+};
 
 const u8 sChozodia_12_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(3)] = {
 	40, 8, SPRITESET_IDX(2),

@@ -1,11 +1,17 @@
 #include "data/rooms/norfair_rooms_data.h"
 #include "macros.h"
 
-const u8 sNorfair_33_Clipdata[184] = INCBIN_U8("data/rooms/norfair/norfair_33_clipdata.gfx");
+const u8 sNorfair_33_Clipdata[184] = {
+    #include "extracted/data/rooms/norfair/norfair_33_clipdata.gfx.inc"
+};
 
-const u8 sNorfair_33_Bg2[152] = INCBIN_U8("data/rooms/norfair/norfair_33_bg2.gfx");
+const u8 sNorfair_33_Bg2[152] = {
+    #include "extracted/data/rooms/norfair/norfair_33_bg2.gfx.inc"
+};
 
-const u8 sNorfair_33_Bg1[682] = INCBIN_U8("data/rooms/norfair/norfair_33_bg1.gfx");
+const u8 sNorfair_33_Bg1[682] = {
+    #include "extracted/data/rooms/norfair/norfair_33_bg1.gfx.inc"
+};
 
 const u8 sNorfair_33_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(15)] = {
 	4, 15, SPRITESET_IDX(0),

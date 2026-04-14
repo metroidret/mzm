@@ -200,5 +200,9 @@ const ClipBehavior sClipdataBehaviorTypes[CLIPDATA_COUNT] = {
     [CLIPDATA_ACID] = CLIP_BEHAVIOR_ACID
 };
 
-const u8 sCommonTilesGfx[4096] = INCBIN_U8("data/common/common_tiles.gfx");
-const u8 sCommonTilesMothershipGfx[4096] = INCBIN_U8("data/common/common_tiles_mother_ship.gfx");
+const u8 sCommonTilesGfx[4096] = {
+    #include "extracted/data/common/common_tiles.gfx.inc"
+};
+const u8 sCommonTilesMothershipGfx[4096] = {
+    #include "extracted/data/common/common_tiles_mother_ship.gfx.inc"
+};

@@ -13,11 +13,17 @@ const u8 sTourian_2_Scrolls[SCROLL_DATA_SIZE(1)] = {
 	2, // Breakable block Y bound extension
 };
 
-const u8 sTourian_5_Clipdata[597] = INCBIN_U8("data/rooms/tourian/tourian_5_clipdata.gfx");
+const u8 sTourian_5_Clipdata[597] = {
+    #include "extracted/data/rooms/tourian/tourian_5_clipdata.gfx.inc"
+};
 
-const u8 sTourian_5_Bg2[226] = INCBIN_U8("data/rooms/tourian/tourian_5_bg2.gfx");
+const u8 sTourian_5_Bg2[226] = {
+    #include "extracted/data/rooms/tourian/tourian_5_bg2.gfx.inc"
+};
 
-const u8 sTourian_5_Bg1[1425] = INCBIN_U8("data/rooms/tourian/tourian_5_bg1.gfx");
+const u8 sTourian_5_Bg1[1425] = {
+    #include "extracted/data/rooms/tourian/tourian_5_bg1.gfx.inc"
+};
 
 const u8 sTourian_5_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(24)] = {
 	13, 6, SPRITESET_IDX(4),
@@ -46,5 +52,7 @@ const u8 sTourian_5_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(24)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sTourian_5_Bg0[186] = INCBIN_U8("data/rooms/tourian/tourian_5_bg0.gfx");
+const u8 sTourian_5_Bg0[186] = {
+    #include "extracted/data/rooms/tourian/tourian_5_bg0.gfx.inc"
+};
 

@@ -396,8 +396,12 @@ const struct MultiSpriteData sCrocomireMultiSpriteData_Angry[2] = {
     [1] = MULTI_SPRITE_DATA_TERMINATOR
 };
 
-const u32 sCrocomireGfx[1954] = INCBIN_U32("data/sprites/crocomire.gfx.lz");
-const u16 sCrocomirePal[128] = INCBIN_U16("data/sprites/crocomire.pal");
+const u32 sCrocomireGfx[1954] = {
+    #include "extracted/data/sprites/crocomire.gfx.lz.inc"
+};
+const u16 sCrocomirePal[128] = {
+    #include "extracted/data/sprites/crocomire.pal.inc"
+};
 
 static const u16 sCrocomireOam_Screaming_Frame1[OAM_DATA_SIZE(7)] = {
     7,

@@ -12,6 +12,12 @@ const struct CutscenePageData sStoryTextCutscenePagesData[1] = {
     }
 };
 
-const u32 sStoryTextCutsceneGfx_Unused[645] = INCBIN_U32("data/cutscenes/story_text/unused_letters.gfx.lz");
-const u16 sStoryTextCutscenePal[1 * 16] = INCBIN_U16("data/cutscenes/story_text/palette.pal");
-const u32 sStoryTextCutsceneTileTable[347] = INCBIN_U32("data/cutscenes/story_text/text.tt");
+const u32 sStoryTextCutsceneGfx_Unused[645] = {
+    #include "extracted/data/cutscenes/story_text/unused_letters.gfx.lz.inc"
+};
+const u16 sStoryTextCutscenePal[1 * 16] = {
+    #include "extracted/data/cutscenes/story_text/palette.pal.inc"
+};
+const u32 sStoryTextCutsceneTileTable[347] = {
+    #include "extracted/data/cutscenes/story_text/text.tt.inc"
+};

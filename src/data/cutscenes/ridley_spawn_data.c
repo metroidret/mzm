@@ -137,14 +137,36 @@ const struct FrameData sRidleySpawnOam_RidleyFlyingAndScreaming_Unused[3] = {
 };
 
 
-const u16 sRidleySpawnSamusPal[3 * 16] = INCBIN_U16("data/cutscenes/ridley_spawn/samus.pal");
-const u16 sRidleySpawnSamusVariaPal[3 * 16] = INCBIN_U16("data/cutscenes/ridley_spawn/samus_varia.pal");
-const u16 sRidleySpawnBackgroundPal[13 * 16] = INCBIN_U16("data/cutscenes/ridley_spawn/background.pal");
-const u16 sRidleySpawnRidleyScreamingPal[1 * 16] = INCBIN_U16("data/cutscenes/ridley_spawn/ridley_screaming.pal");
-const u32 sRidleySpawnBackgroundGfx[2830] = INCBIN_U32("data/cutscenes/ridley_spawn/background.gfx.lz");
-const u32 sRidleySpawnSamusAndRidleyGfx[2215] = INCBIN_U32("data/cutscenes/ridley_spawn/samus_and_ridley.gfx.lz");
-const u32 sRidleySpawnSamusHelmetFaceGfx[3164] = INCBIN_U32("data/cutscenes/ridley_spawn/samus_helmet_face.gfx.lz");
-const u32 sRidleySpawnScreamingGfx[1663] = INCBIN_U32("data/cutscenes/ridley_spawn/ridley_screaming.gfx.lz");
-const u32 sRidleySpawnBackgroundTileTable[368] = INCBIN_U32("data/cutscenes/ridley_spawn/background.tt");
-const u32 sRidleySpawnSamusHelmetTileTable[368] = INCBIN_U32("data/cutscenes/ridley_spawn/samus_helmet.tt");
-const u32 sRidleySpawnSamusFaceTileTable[189] = INCBIN_U32("data/cutscenes/ridley_spawn/samus_face.tt");
+const u16 sRidleySpawnSamusPal[3 * 16] = {
+    #include "extracted/data/cutscenes/ridley_spawn/samus.pal.inc"
+};
+const u16 sRidleySpawnSamusVariaPal[3 * 16] = {
+    #include "extracted/data/cutscenes/ridley_spawn/samus_varia.pal.inc"
+};
+const u16 sRidleySpawnBackgroundPal[13 * 16] = {
+    #include "extracted/data/cutscenes/ridley_spawn/background.pal.inc"
+};
+const u16 sRidleySpawnRidleyScreamingPal[1 * 16] = {
+    #include "extracted/data/cutscenes/ridley_spawn/ridley_screaming.pal.inc"
+};
+const u32 sRidleySpawnBackgroundGfx[2830] = {
+    #include "extracted/data/cutscenes/ridley_spawn/background.gfx.lz.inc"
+};
+const u32 sRidleySpawnSamusAndRidleyGfx[2215] = {
+    #include "extracted/data/cutscenes/ridley_spawn/samus_and_ridley.gfx.lz.inc"
+};
+const u32 sRidleySpawnSamusHelmetFaceGfx[3164] = {
+    #include "extracted/data/cutscenes/ridley_spawn/samus_helmet_face.gfx.lz.inc"
+};
+const u32 sRidleySpawnScreamingGfx[1663] = {
+    #include "extracted/data/cutscenes/ridley_spawn/ridley_screaming.gfx.lz.inc"
+};
+const u32 sRidleySpawnBackgroundTileTable[368] = {
+    #include "extracted/data/cutscenes/ridley_spawn/background.tt.inc"
+};
+const u32 sRidleySpawnSamusHelmetTileTable[368] = {
+    #include "extracted/data/cutscenes/ridley_spawn/samus_helmet.tt.inc"
+};
+const u32 sRidleySpawnSamusFaceTileTable[189] = {
+    #include "extracted/data/cutscenes/ridley_spawn/samus_face.tt.inc"
+};

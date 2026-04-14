@@ -2,8 +2,12 @@
 
 #include "macros.h"
 
-const u32 sBossStatuesGfx[2388] = INCBIN_U32("data/sprites/boss_statues.gfx.lz");
-const u16 sBossStatuesPal[128] = INCBIN_U16("data/sprites/boss_statues.pal");
+const u32 sBossStatuesGfx[2388] = {
+    #include "extracted/data/sprites/boss_statues.gfx.lz.inc"
+};
+const u16 sBossStatuesPal[128] = {
+    #include "extracted/data/sprites/boss_statues.pal.inc"
+};
 
 static const u16 sKraidStatueOam_Idle_Frame0[OAM_DATA_SIZE(5)] = {
     5,

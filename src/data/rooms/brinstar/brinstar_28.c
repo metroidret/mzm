@@ -1,7 +1,9 @@
 #include "data/rooms/brinstar_rooms_data.h"
 #include "macros.h"
 
-const u8 sBrinstar_28_Clipdata[213] = INCBIN_U8("data/rooms/brinstar/brinstar_28_clipdata.gfx");
+const u8 sBrinstar_28_Clipdata[213] = {
+    #include "extracted/data/rooms/brinstar/brinstar_28_clipdata.gfx.inc"
+};
 
 const u8 sBrinstar_28_Spriteset2[ENEMY_ROOM_DATA_ARRAY_SIZE(13)] = {
 	3, 83, SPRITESET_IDX(6),
@@ -19,7 +21,9 @@ const u8 sBrinstar_28_Spriteset2[ENEMY_ROOM_DATA_ARRAY_SIZE(13)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sBrinstar_28_Bg2[107] = INCBIN_U8("data/rooms/brinstar/brinstar_28_bg2.gfx");
+const u8 sBrinstar_28_Bg2[107] = {
+    #include "extracted/data/rooms/brinstar/brinstar_28_bg2.gfx.inc"
+};
 
 const u8 sBrinstar_28_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(8)] = {
 	5, 58, SPRITESET_IDX(1),
@@ -32,7 +36,9 @@ const u8 sBrinstar_28_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(8)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sBrinstar_28_Bg1[746] = INCBIN_U8("data/rooms/brinstar/brinstar_28_bg1.gfx");
+const u8 sBrinstar_28_Bg1[746] = {
+    #include "extracted/data/rooms/brinstar/brinstar_28_bg1.gfx.inc"
+};
 
 const u8 sBrinstar_28_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(11)] = {
 	3, 10, SPRITESET_IDX(2),
@@ -48,5 +54,7 @@ const u8 sBrinstar_28_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(11)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sBrinstar_28_Bg0[94] = INCBIN_U8("data/rooms/brinstar/brinstar_28_bg0.gfx");
+const u8 sBrinstar_28_Bg0[94] = {
+    #include "extracted/data/rooms/brinstar/brinstar_28_bg0.gfx.inc"
+};
 

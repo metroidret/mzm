@@ -1,8 +1,12 @@
 #include "data/sprites/space_pirate_carrying_power_bomb.h"
 #include "macros.h"
 
-const u32 sFakePowerBombGfx[115] = INCBIN_U32("data/sprites/fake_power_bomb.gfx.lz");
-const u16 sFakePowerBombPal[16] = INCBIN_U16("data/sprites/fake_power_bomb.pal");
+const u32 sFakePowerBombGfx[115] = {
+    #include "extracted/data/sprites/fake_power_bomb.gfx.lz.inc"
+};
+const u16 sFakePowerBombPal[16] = {
+    #include "extracted/data/sprites/fake_power_bomb.pal.inc"
+};
 
 static const u16 sFakePowerBombOam_Idle_Frame0[OAM_DATA_SIZE(1)] = {
     1,

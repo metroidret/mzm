@@ -1,10 +1,18 @@
 #include "data/sprites/ripper.h"
 #include "macros.h"
 
-const u32 sRipperBrownGfx[141] = INCBIN_U32("data/sprites/ripper_brown.gfx.lz");
-const u16 sRipperBrownPal[16] = INCBIN_U16("data/sprites/ripper_brown.pal");
-const u32 sRipperPurpleGfx[141] = INCBIN_U32("data/sprites/ripper_purple.gfx.lz");
-const u16 sRipperPurplePal[16] = INCBIN_U16("data/sprites/ripper_purple.pal");
+const u32 sRipperBrownGfx[141] = {
+    #include "extracted/data/sprites/ripper_brown.gfx.lz.inc"
+};
+const u16 sRipperBrownPal[16] = {
+    #include "extracted/data/sprites/ripper_brown.pal.inc"
+};
+const u32 sRipperPurpleGfx[141] = {
+    #include "extracted/data/sprites/ripper_purple.gfx.lz.inc"
+};
+const u16 sRipperPurplePal[16] = {
+    #include "extracted/data/sprites/ripper_purple.pal.inc"
+};
 
 static const u16 sRipperOam_Moving_Frame0[OAM_DATA_SIZE(1)] = {
     1,

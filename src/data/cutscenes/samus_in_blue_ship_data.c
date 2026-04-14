@@ -497,7 +497,15 @@ static const struct FrameData sSamusInBlueShipOam_Controls[11] = {
     [10] = FRAME_DATA_TERMINATOR
 };
 
-const u16 sSamusInBlueShipPal[9 * 16] = INCBIN_U16("data/cutscenes/samus_in_blue_ship/ship.pal");
-const u32 sSamusInBlueShipSamusGfx[3641] = INCBIN_U32("data/cutscenes/samus_in_blue_ship/samus.gfx.lz");
-const u32 sSamusInBlueShipControlsGfx[1642] = INCBIN_U32("data/cutscenes/samus_in_blue_ship/controls.gfx.lz");
-const u32 sSamusInBlueShipSamusTileTable[368] = INCBIN_U32("data/cutscenes/samus_in_blue_ship/ship.tt");
+const u16 sSamusInBlueShipPal[9 * 16] = {
+    #include "extracted/data/cutscenes/samus_in_blue_ship/ship.pal.inc"
+};
+const u32 sSamusInBlueShipSamusGfx[3641] = {
+    #include "extracted/data/cutscenes/samus_in_blue_ship/samus.gfx.lz.inc"
+};
+const u32 sSamusInBlueShipControlsGfx[1642] = {
+    #include "extracted/data/cutscenes/samus_in_blue_ship/controls.gfx.lz.inc"
+};
+const u32 sSamusInBlueShipSamusTileTable[368] = {
+    #include "extracted/data/cutscenes/samus_in_blue_ship/ship.tt.inc"
+};

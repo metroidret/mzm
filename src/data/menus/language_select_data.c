@@ -2,9 +2,15 @@
 
 #ifdef REGION_EU
 
-const u16 sLanguageSelectBgPal[16 * 16] = INCBIN_U16("data/menus/language_select/background.pal");
-const u32 sLanguageSelectGfx[145] = INCBIN_U32("data/menus/language_select/background.gfx.lz");
-const u32 sLanguageSelectTileTable[95] = INCBIN_U32("data/menus/language_select/background.tt");
+const u16 sLanguageSelectBgPal[16 * 16] = {
+    #include "extracted/data/menus/language_select/background.pal.inc"
+};
+const u32 sLanguageSelectGfx[145] = {
+    #include "extracted/data/menus/language_select/background.gfx.lz.inc"
+};
+const u32 sLanguageSelectTileTable[95] = {
+    #include "extracted/data/menus/language_select/background.tt.inc"
+};
 
 const struct LanguageColorAnimation sInitialLanguageColorAnimation = {
     .timer = 4,

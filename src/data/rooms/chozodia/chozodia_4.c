@@ -1,21 +1,29 @@
 #include "data/rooms/chozodia_rooms_data.h"
 #include "macros.h"
 
-const u8 sChozodia_4_Clipdata[90] = INCBIN_U8("data/rooms/chozodia/chozodia_4_clipdata.gfx");
+const u8 sChozodia_4_Clipdata[90] = {
+    #include "extracted/data/rooms/chozodia/chozodia_4_clipdata.gfx.inc"
+};
 
-const u8 sChozodia_4_Bg2[26] = INCBIN_U8("data/rooms/chozodia/chozodia_4_bg2.gfx");
+const u8 sChozodia_4_Bg2[26] = {
+    #include "extracted/data/rooms/chozodia/chozodia_4_bg2.gfx.inc"
+};
 
 const u8 sChozodia_4_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
 	10, 9, SPRITESET_IDX(0),
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sChozodia_4_Bg1[204] = INCBIN_U8("data/rooms/chozodia/chozodia_4_bg1.gfx");
+const u8 sChozodia_4_Bg1[204] = {
+    #include "extracted/data/rooms/chozodia/chozodia_4_bg1.gfx.inc"
+};
 
 const u8 sChozodia_4_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
 	10, 9, SPRITESET_IDX(0),
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sChozodia_4_Bg0[44] = INCBIN_U8("data/rooms/chozodia/chozodia_4_bg0.gfx");
+const u8 sChozodia_4_Bg0[44] = {
+    #include "extracted/data/rooms/chozodia/chozodia_4_bg0.gfx.inc"
+};
 
