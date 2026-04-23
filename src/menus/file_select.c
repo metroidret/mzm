@@ -4752,8 +4752,10 @@ static void FileSelectInit(void)
     FileSelectCopyTimeAttackTime();
     FileSelectDisplaySaveFileInfo();
     DmaTransfer(3, (void*)sEwramPointer + 0x800, VRAM_BASE + 0xD800, 0x800, 16);
+    #ifndef BUGFIX
     SramRead_SoundMode();
     FileSelectApplyStereo();
+    #endif // !BUGFIX
 
     gSubGameMode1 = 2;
 

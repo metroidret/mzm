@@ -378,7 +378,7 @@ When R or Start is pressed on the TANK option, all ammo is set to the max amount
           change = 1;
       }
 
-...
+  ...
 
 - if (change != 0)
 + if (change == 2)
@@ -484,6 +484,17 @@ The last cutscene stage for upgrading your suit (obtaining Varia or the fully po
   InitializeAudio();
 + SramRead_SoundMode();
 + FileSelectApplyStereo();
+
+  ...
+
+- gStereoFlag = FALSE;
+```
+
+Applying stereo can also be removed from `FileSelectInit` in [file_select.c](../src/menus/file_select.c).
+
+```diff
+- SramRead_SoundMode();
+- FileSelectApplyStereo();
 ```
 
 

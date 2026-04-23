@@ -68,7 +68,9 @@ void InitializeGame(void)
     gChangedInput = KEY_NONE;
 
     gDisableSoftReset = FALSE;
+    #ifndef BUGFIX
     gStereoFlag = FALSE;
+    #endif // !BUGFIX
 
     WRITE_16(REG_IF, USHORT_MAX);
     WRITE_16(REG_IME, TRUE);
