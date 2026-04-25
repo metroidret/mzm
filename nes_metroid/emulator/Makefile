@@ -5,7 +5,7 @@ REGION ?= us
 PAD_TO = 0x08800000
 
 ifeq ($(REGION),us)
-	TARGET = mzm_us
+	TARGET = emulator_us
 	GAME_TITLE = "NES METROID"
 	GAME_CODE = "    "
 	CPPFLAGS += -DREGION_US
@@ -13,7 +13,7 @@ ifeq ($(REGION),us)
 endif
 
 # ifeq ($(REGION),us_beta)
-# 	TARGET = mzm_us_beta
+# 	TARGET = emulator_us_beta
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXE
 # 	CPPFLAGS += -DREGION_US -DREGION_US_BETA -DDEBUG
@@ -22,7 +22,7 @@ endif
 # endif
 
 # ifeq ($(REGION),eu)
-# 	TARGET = mzm_eu
+# 	TARGET = emulator_eu
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXP
 # 	CPPFLAGS += -DREGION_EU
@@ -30,7 +30,7 @@ endif
 # endif
 
 # ifeq ($(REGION),eu_beta)
-# 	TARGET = mzm_eu_beta
+# 	TARGET = emulator_eu_beta
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXP
 # 	CPPFLAGS += -DREGION_EU -DREGION_EU_BETA -DDEBUG
@@ -39,7 +39,7 @@ endif
 # endif
 
 # ifeq ($(REGION),jp)
-# 	TARGET = mzm_jp
+# 	TARGET = emulator_jp
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXJ
 # 	CPPFLAGS += -DREGION_JP
@@ -47,7 +47,7 @@ endif
 # endif
 
 # ifeq ($(REGION),cn)
-# 	TARGET = mzm_cn
+# 	TARGET = emulator_cn
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXC
 # 	CPPFLAGS += -DREGION_CN

@@ -1,6 +1,7 @@
 /src/**/*.s
 /data/*
 /sound/direct_sound_samples/*
+/nes_metroid/data/*
 
 *.gba
 *.gba.lz
@@ -15,6 +16,7 @@
 *.dll
 *.deps.json
 *.runtimeconfig.json
+*.pyc
 
 linker.ld.pp
 include/**/*.s

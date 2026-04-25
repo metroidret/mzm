@@ -5,7 +5,7 @@ REGION ?= us
 PAD_TO = 0x08800000
 
 ifeq ($(REGION),us)
-	TARGET = mzm_us
+	TARGET = nes_metroid_us
 	GAME_TITLE = "NES METROID"
 	GAME_CODE = "    "
 	CPPFLAGS += -DREGION_US
@@ -13,7 +13,7 @@ ifeq ($(REGION),us)
 endif
 
 # ifeq ($(REGION),us_beta)
-# 	TARGET = mzm_us_beta
+# 	TARGET = nes_metroid_us_beta
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXE
 # 	CPPFLAGS += -DREGION_US -DREGION_US_BETA -DDEBUG
@@ -22,7 +22,7 @@ endif
 # endif
 
 # ifeq ($(REGION),eu)
-# 	TARGET = mzm_eu
+# 	TARGET = nes_metroid_eu
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXP
 # 	CPPFLAGS += -DREGION_EU
@@ -30,7 +30,7 @@ endif
 # endif
 
 # ifeq ($(REGION),eu_beta)
-# 	TARGET = mzm_eu_beta
+# 	TARGET = nes_metroid_eu_beta
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXP
 # 	CPPFLAGS += -DREGION_EU -DREGION_EU_BETA -DDEBUG
@@ -39,7 +39,7 @@ endif
 # endif
 
 # ifeq ($(REGION),jp)
-# 	TARGET = mzm_jp
+# 	TARGET = nes_metroid_jp
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXJ
 # 	CPPFLAGS += -DREGION_JP
@@ -47,7 +47,7 @@ endif
 # endif
 
 # ifeq ($(REGION),cn)
-# 	TARGET = mzm_cn
+# 	TARGET = nes_metroid_cn
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXC
 # 	CPPFLAGS += -DREGION_CN
@@ -141,10 +141,12 @@ diff: $(DUMPS)
 	$(MSG) DIFF $^
 	$Q$(DIFF) $^
 
-# .PHONY: extract
-# extract:
-# 	$(MSG) Extracting
-# 	$Q python3 ../tools/extractor.py -r $(REGION)
+.PHONY: extract
+extract:
+	$(MSG) Extracting
+	$Q$(PYTHON) ../tools/nes_metroid/gfxExtractor.py ../mzm_us_baserom.gba data/gfx/
+	$Q$(PYTHON) ../tools/nes_metroid/romExtractor.py ../mzm_us_baserom.gba data/M1_NES_MZMUS.nes
+	$Q$(PYTHON) ../tools/nes_metroid/paletteExtractor.py ../mzm_us_baserom.gba data/palette.pal.lz
 
 .PHONY: clean
 clean:
@@ -172,6 +174,9 @@ endif
 	$(MSG) RM linker.ld.pp
 	$Q$(RM) linker.ld.pp
 
+	@$(MAKE) clean -C emulator
+	@$(MAKE) clean -C payload
+
 .PHONY: help
 help:
 	@echo 'Targets:'
@@ -188,13 +193,26 @@ help:
 	@echo '  REGION=<region>: selects the region of the ROM, possible values are "us", "eu", "jp", "cn", "us_beta", and "eu_beta"'
 	@echo '  DEBUG=1: enables the debug code'
 
-# asm/data.o: payload/payload.gba.lz
 
-# payload/payload.gba:
-# 	@$(MAKE) -C payload
+asm/data.o: emulator/emulator_$(REGION).gba.lz emulator/emulatorUnused_$(REGION).gba payload/payload_$(REGION).gba.lz data/M1_NES_MZMUS.nes.lz
 
-# payload/payload.gba.lz: payload/payload.gba
-# 	$Q python3 ../tools/compress.py comp_lz payload/mzm_us.gba 0x0 payload/payload.gba.lz
+emulator/emulator_$(REGION).gba:
+	@$(MAKE) -C emulator
+
+emulator/emulator_$(REGION).gba.lz: emulator/emulator_$(REGION).gba
+	$(PYTHON) ../tools/nes_metroid/emulatorCompressor.py $<
+
+emulator/emulatorUnused_$(REGION).gba: emulator/emulator_$(REGION).gba
+	$(PYTHON) ../tools/nes_metroid/emulatorUnusedExtractor.py $< $@
+
+payload/payload_$(REGION).gba:
+	@$(MAKE) -C payload
+
+payload/payload_$(REGION).gba.lz: payload/payload_$(REGION).gba
+	$(PYTHON) ../tools/nes_metroid/payloadCompressor.py $<
+
+data/M1_NES_MZMUS.nes.lz:
+	$(PYTHON) ../tools/nes_metroid/romCompressor.py data/M1_NES_MZMUS.nes
 
 $(TARGET): $(ELF) $(GBAFIX)
 	$(MSG) OBJCOPY $@
