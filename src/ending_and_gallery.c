@@ -627,7 +627,7 @@ static u8 CreditsDisplayLine(u32 line)
             ret_0 = 1;
             break;
 
-        case CREDIT_LINE_TYPE_COUNT:
+        case CREDIT_LINE_TYPE_END:
             ret_0 = 9;
             break;
 

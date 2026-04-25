@@ -5438,7 +5438,7 @@ const struct CreditsEntry sCredits[308] = {
         .text = ""
     },
     [307] = {
-        .type = CREDIT_LINE_TYPE_COUNT,
+        .type = CREDIT_LINE_TYPE_END,
         .text = ""
     }
 };
@@ -6423,7 +6423,7 @@ const struct CreditsEntry sCredits[245] = {
         .text = ""
     },
     [244] = {
-        .type = CREDIT_LINE_TYPE_COUNT,
+        .type = CREDIT_LINE_TYPE_END,
         .text = ""
     }
 };
@@ -7388,7 +7388,7 @@ const struct CreditsEntry sCredits[240] = {
         .text = ""
     },
     [239] = {
-        .type = CREDIT_LINE_TYPE_COUNT,
+        .type = CREDIT_LINE_TYPE_END,
         .text = ""
     }
 };
