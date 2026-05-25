@@ -10450,19 +10450,39 @@ const u8 sMechaRidleyGreenGlowPaletteData[7][2] = {
     { SCHAR_MAX + 1, SCHAR_MAX + 1 }
 };
 
-const u32 sMechaRidleyGfx[2525] = INCBIN_U32("data/sprites/mecha_ridley.gfx.lz");
-const u32 sMechaRidleyWeaponsGfx[32 * 32] = INCBIN_U32("data/sprites/mecha_ridley_weapons.gfx.lz");
-const u32 sMechaRidleyDestroyedGfx[336] = INCBIN_U32("data/sprites/mecha_ridley_destroyed.gfx.lz");
+const u32 sMechaRidleyGfx[2525] = {
+    #include "extracted/data/sprites/mecha_ridley.gfx.lz.inc"
+};
+const u32 sMechaRidleyWeaponsGfx[32 * 32] = {
+    #include "extracted/data/sprites/mecha_ridley_weapons.gfx.lz.inc"
+};
+const u32 sMechaRidleyDestroyedGfx[336] = {
+    #include "extracted/data/sprites/mecha_ridley_destroyed.gfx.lz.inc"
+};
 
-const u16 sMechaRidleyPal[129] = INCBIN_U16("data/sprites/mecha_ridley.pal");
+const u16 sMechaRidleyPal[129] = {
+    #include "extracted/data/sprites/mecha_ridley.pal.inc"
+};
 
-const u16 sMechaRidley_8323aaa_Pal[12] = INCBIN_U16("data/sprites/mecha_ridley_323aaa.pal");
-const u16 sMechaRidleyGreenGlowPal[4 * 16] = INCBIN_U16("data/sprites/mecha_ridley_green_glow.pal");
-const u16 sMechaRidley_8323b42_Pal[4] = INCBIN_U16("data/sprites/mecha_ridley_323b42.pal");
-const u16 sMechaRidley_8323b4a_Pal[12] = INCBIN_U16("data/sprites/mecha_ridley_323b4a.pal");
-const u16 sMechaRidley_8323b62_Pal[3] = INCBIN_U16("data/sprites/mecha_ridley_323b62.pal");
+const u16 sMechaRidley_8323aaa_Pal[12] = {
+    #include "extracted/data/sprites/mecha_ridley_323aaa.pal.inc"
+};
+const u16 sMechaRidleyGreenGlowPal[4 * 16] = {
+    #include "extracted/data/sprites/mecha_ridley_green_glow.pal.inc"
+};
+const u16 sMechaRidley_8323b42_Pal[4] = {
+    #include "extracted/data/sprites/mecha_ridley_323b42.pal.inc"
+};
+const u16 sMechaRidley_8323b4a_Pal[12] = {
+    #include "extracted/data/sprites/mecha_ridley_323b4a.pal.inc"
+};
+const u16 sMechaRidley_8323b62_Pal[3] = {
+    #include "extracted/data/sprites/mecha_ridley_323b62.pal.inc"
+};
 
-const u16 sMechaRidleyFadingPal[7 * 16] = INCBIN_U16("data/sprites/mecha_ridley_fading.pal");
+const u16 sMechaRidleyFadingPal[7 * 16] = {
+    #include "extracted/data/sprites/mecha_ridley_fading.pal.inc"
+};
 
 
 static const u16 sMechaRidleyPartOam_Tail_Frame0[OAM_DATA_SIZE(2)] = {

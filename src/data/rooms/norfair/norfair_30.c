@@ -1,7 +1,9 @@
 #include "data/rooms/norfair_rooms_data.h"
 #include "macros.h"
 
-const u8 sNorfair_30_Clipdata[420] = INCBIN_U8("data/rooms/norfair/norfair_30_clipdata.gfx");
+const u8 sNorfair_30_Clipdata[420] = {
+    #include "extracted/data/rooms/norfair/norfair_30_clipdata.gfx.inc"
+};
 
 const u8 sNorfair_30_Spriteset2[ENEMY_ROOM_DATA_ARRAY_SIZE(14)] = {
 	5, 41, SPRITESET_IDX(0),
@@ -20,7 +22,9 @@ const u8 sNorfair_30_Spriteset2[ENEMY_ROOM_DATA_ARRAY_SIZE(14)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sNorfair_30_Bg2[14] = INCBIN_U8("data/rooms/norfair/norfair_30_bg2.gfx");
+const u8 sNorfair_30_Bg2[14] = {
+    #include "extracted/data/rooms/norfair/norfair_30_bg2.gfx.inc"
+};
 
 const u8 sNorfair_30_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(18)] = {
 	4, 17, SPRITESET_IDX(0),
@@ -43,7 +47,9 @@ const u8 sNorfair_30_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(18)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sNorfair_30_Bg1[1118] = INCBIN_U8("data/rooms/norfair/norfair_30_bg1.gfx");
+const u8 sNorfair_30_Bg1[1118] = {
+    #include "extracted/data/rooms/norfair/norfair_30_bg1.gfx.inc"
+};
 
 const u8 sNorfair_30_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(17)] = {
 	4, 57, SPRITESET_IDX(0),
@@ -65,5 +71,7 @@ const u8 sNorfair_30_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(17)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sNorfair_30_Bg0[489] = INCBIN_U8("data/rooms/norfair/norfair_30_bg0.gfx");
+const u8 sNorfair_30_Bg0[489] = {
+    #include "extracted/data/rooms/norfair/norfair_30_bg0.gfx.inc"
+};
 

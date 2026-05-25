@@ -344,10 +344,24 @@ const struct FrameData sGettingFullyPoweredSuitOam_SparkleAroundRing2[9] = {
 };
 
 
-const u16 sGettingFullyPoweredSuitPal[19 * 16] = INCBIN_U16("data/cutscenes/getting_fully_powered_suit/palette.pal");
-const u32 sGettingFullyPoweredSuitSamusGfx[2608] = INCBIN_U32("data/cutscenes/getting_fully_powered_suit/samus.gfx.lz");
-const u32 sGettingFullyPoweredSuitRingSparklesGfx[646] = INCBIN_U32("data/cutscenes/getting_fully_powered_suit/ring_sparkles.gfx.lz");
-const u32 sGettingFullyPoweredSuitSamusTileTable[387] = INCBIN_U32("data/cutscenes/getting_fully_powered_suit/samus.tt");
-const u8 sGettingFullyPoweredSuitBackgroundGfx[13872] = INCBIN_U8("data/cutscenes/getting_fully_powered_suit/background.gfx.lz");
-const u32 sGettingFullyPoweredSuitBackgroundTileTable[734] = INCBIN_U32("data/cutscenes/getting_fully_powered_suit/background.tt");
-const u16 sGettingFullyPoweredSuitRingPal[7 * 16] = INCBIN_U16("data/cutscenes/getting_fully_powered_suit/ring_palette.pal");
+const u16 sGettingFullyPoweredSuitPal[19 * 16] = {
+    #include "extracted/data/cutscenes/getting_fully_powered_suit/palette.pal.inc"
+};
+const u32 sGettingFullyPoweredSuitSamusGfx[2608] = {
+    #include "extracted/data/cutscenes/getting_fully_powered_suit/samus.gfx.lz.inc"
+};
+const u32 sGettingFullyPoweredSuitRingSparklesGfx[646] = {
+    #include "extracted/data/cutscenes/getting_fully_powered_suit/ring_sparkles.gfx.lz.inc"
+};
+const u32 sGettingFullyPoweredSuitSamusTileTable[387] = {
+    #include "extracted/data/cutscenes/getting_fully_powered_suit/samus.tt.inc"
+};
+const u8 sGettingFullyPoweredSuitBackgroundGfx[13872] = {
+    #include "extracted/data/cutscenes/getting_fully_powered_suit/background.gfx.lz.inc"
+};
+const u32 sGettingFullyPoweredSuitBackgroundTileTable[734] = {
+    #include "extracted/data/cutscenes/getting_fully_powered_suit/background.tt.inc"
+};
+const u16 sGettingFullyPoweredSuitRingPal[7 * 16] = {
+    #include "extracted/data/cutscenes/getting_fully_powered_suit/ring_palette.pal.inc"
+};

@@ -1,10 +1,18 @@
 #include "data/sprites/rinka.h"
 #include "macros.h"
 
-const u32 sRinkaOrangeGfx[242] = INCBIN_U32("data/sprites/rinka_orange.gfx.lz");
-const u16 sRinkaOrangePal[16] = INCBIN_U16("data/sprites/rinka_orange.pal");
-const u32 sRinkaGreenGfx[242] = INCBIN_U32("data/sprites/rinka_green.gfx.lz");
-const u16 sRinkaGreenPal[16] = INCBIN_U16("data/sprites/rinka_green.pal");
+const u32 sRinkaOrangeGfx[242] = {
+    #include "extracted/data/sprites/rinka_orange.gfx.lz.inc"
+};
+const u16 sRinkaOrangePal[16] = {
+    #include "extracted/data/sprites/rinka_orange.pal.inc"
+};
+const u32 sRinkaGreenGfx[242] = {
+    #include "extracted/data/sprites/rinka_green.gfx.lz.inc"
+};
+const u16 sRinkaGreenPal[16] = {
+    #include "extracted/data/sprites/rinka_green.pal.inc"
+};
 
 static const u16 sRinkaOrangeOam_Moving_Frame0[OAM_DATA_SIZE(1)] = {
     1,

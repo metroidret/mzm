@@ -1,8 +1,12 @@
 #include "data/sprites/elevator_statue.h"
 #include "macros.h"
 
-const u32 sElevatorStatuesGfx[1122] = INCBIN_U32("data/sprites/elevator_statues.gfx.lz");
-const u16 sElevatorStatuesPal[64] = INCBIN_U16("data/sprites/elevator_statues.pal");
+const u32 sElevatorStatuesGfx[1122] = {
+    #include "extracted/data/sprites/elevator_statues.gfx.lz.inc"
+};
+const u16 sElevatorStatuesPal[64] = {
+    #include "extracted/data/sprites/elevator_statues.pal.inc"
+};
 
 static const u16 sKraidElevatorStatueOam_Idle_Frame0[OAM_DATA_SIZE(21)] = {
     21,

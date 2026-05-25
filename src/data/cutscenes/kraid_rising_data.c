@@ -212,18 +212,48 @@ const struct FrameData sKraidRisingOam_BigPuff[5] = {
     [4] = FRAME_DATA_TERMINATOR
 };
 
-const u16 sKraidRisingCloseUpPal[5 * 16] = INCBIN_U16("data/cutscenes/kraid_rising/close_up.pal");
-const u16 sKraidRisingSamusPal[1 * 16] = INCBIN_U16("data/cutscenes/kraid_rising/samus.pal");
-const u16 sKraidRisingParticlesPal[1 * 16] = INCBIN_U16("data/cutscenes/kraid_rising/particles.pal");
-const u16 sKraidRisingSamusVariaPal[1 * 16] = INCBIN_U16("data/cutscenes/kraid_rising/samus_varia.pal");
-const u16 sKraidRisingRisingPal[7 * 16] = INCBIN_U16("data/cutscenes/kraid_rising/rising.pal");
-const u32 sKraidRisingKraidCloseUpGfx[3087] = INCBIN_U32("data/cutscenes/kraid_rising/close_up.gfx.lz");
-const u32 sKraidRisingOamGfx[753] = INCBIN_U32("data/cutscenes/kraid_rising/oam.gfx.lz");
-const u32 sKraidRisingKraidRisingGfx[1609] = INCBIN_U32("data/cutscenes/kraid_rising/kraid_rising.gfx.lz");
-const u32 sKraidRisingCaveBackgroundGfx[1327] = INCBIN_U32("data/cutscenes/kraid_rising/cave_background.gfx.lz");
-const u32 sKraidRisingKraidCloseUpEyesClosedTileTable[368] = INCBIN_U32("data/cutscenes/kraid_rising/kraid_close_up_eyes_closed.tt");
-const u32 sKraidRisingKraidCloseUpEyesBarelyOpenedTileTable[368] = INCBIN_U32("data/cutscenes/kraid_rising/kraid_close_up_eyes_barely_opened.tt");
-const u32 sKraidRisingKraidCloseUpEyesALittleOpenedTileTable[368] = INCBIN_U32("data/cutscenes/kraid_rising/kraid_close_up_eyes_a_little_opened.tt");
-const u32 sKraidRisingKraidCloseUpEyesOpenedTileTable[368] = INCBIN_U32("data/cutscenes/kraid_rising/kraid_close_up_eyes_opened.tt");
-const u32 sKraidRisingKraidRisingTileTable[295] = INCBIN_U32("data/cutscenes/kraid_rising/kraid_rising.tt");
-const u32 sKraidRisingCaveBackgroundTileTable[370] = INCBIN_U32("data/cutscenes/kraid_rising/cave_background.tt");
+const u16 sKraidRisingCloseUpPal[5 * 16] = {
+    #include "extracted/data/cutscenes/kraid_rising/close_up.pal.inc"
+};
+const u16 sKraidRisingSamusPal[1 * 16] = {
+    #include "extracted/data/cutscenes/kraid_rising/samus.pal.inc"
+};
+const u16 sKraidRisingParticlesPal[1 * 16] = {
+    #include "extracted/data/cutscenes/kraid_rising/particles.pal.inc"
+};
+const u16 sKraidRisingSamusVariaPal[1 * 16] = {
+    #include "extracted/data/cutscenes/kraid_rising/samus_varia.pal.inc"
+};
+const u16 sKraidRisingRisingPal[7 * 16] = {
+    #include "extracted/data/cutscenes/kraid_rising/rising.pal.inc"
+};
+const u32 sKraidRisingKraidCloseUpGfx[3087] = {
+    #include "extracted/data/cutscenes/kraid_rising/close_up.gfx.lz.inc"
+};
+const u32 sKraidRisingOamGfx[753] = {
+    #include "extracted/data/cutscenes/kraid_rising/oam.gfx.lz.inc"
+};
+const u32 sKraidRisingKraidRisingGfx[1609] = {
+    #include "extracted/data/cutscenes/kraid_rising/kraid_rising.gfx.lz.inc"
+};
+const u32 sKraidRisingCaveBackgroundGfx[1327] = {
+    #include "extracted/data/cutscenes/kraid_rising/cave_background.gfx.lz.inc"
+};
+const u32 sKraidRisingKraidCloseUpEyesClosedTileTable[368] = {
+    #include "extracted/data/cutscenes/kraid_rising/kraid_close_up_eyes_closed.tt.inc"
+};
+const u32 sKraidRisingKraidCloseUpEyesBarelyOpenedTileTable[368] = {
+    #include "extracted/data/cutscenes/kraid_rising/kraid_close_up_eyes_barely_opened.tt.inc"
+};
+const u32 sKraidRisingKraidCloseUpEyesALittleOpenedTileTable[368] = {
+    #include "extracted/data/cutscenes/kraid_rising/kraid_close_up_eyes_a_little_opened.tt.inc"
+};
+const u32 sKraidRisingKraidCloseUpEyesOpenedTileTable[368] = {
+    #include "extracted/data/cutscenes/kraid_rising/kraid_close_up_eyes_opened.tt.inc"
+};
+const u32 sKraidRisingKraidRisingTileTable[295] = {
+    #include "extracted/data/cutscenes/kraid_rising/kraid_rising.tt.inc"
+};
+const u32 sKraidRisingCaveBackgroundTileTable[370] = {
+    #include "extracted/data/cutscenes/kraid_rising/cave_background.tt.inc"
+};

@@ -2,12 +2,22 @@
 #include "data/tourian_escape_data.h"
 #include "constants/game_state.h"
 
-const u16 sChozodiaEscapeShipHeatingUpPal[8 * 16] = INCBIN_U16("data/chozodia_escape/ship_heating_up.pal");
-const u16 sChozodiaEscapeGroundHeatingUpPal[8 * 16] = INCBIN_U16("data/chozodia_escape/ground_heating_up.pal");
+const u16 sChozodiaEscapeShipHeatingUpPal[8 * 16] = {
+    #include "extracted/data/chozodia_escape/ship_heating_up.pal.inc"
+};
+const u16 sChozodiaEscapeGroundHeatingUpPal[8 * 16] = {
+    #include "extracted/data/chozodia_escape/ground_heating_up.pal.inc"
+};
 
-const u16 sChozodiaEscapeShipExplodingPal[9 * 16] = INCBIN_U16("data/chozodia_escape/ship_exploding.pal");
-const u16 sChozodiaEscapeMissionAccomplishedPal[16 * 16] = INCBIN_U16("data/chozodia_escape/mission_accomplished.pal");
-const u16 sChozodiaEscapeSamusInBlueShipPal[1 * 16] = INCBIN_U16("data/chozodia_escape/samus_in_blue_ship.pal");
+const u16 sChozodiaEscapeShipExplodingPal[9 * 16] = {
+    #include "extracted/data/chozodia_escape/ship_exploding.pal.inc"
+};
+const u16 sChozodiaEscapeMissionAccomplishedPal[16 * 16] = {
+    #include "extracted/data/chozodia_escape/mission_accomplished.pal.inc"
+};
+const u16 sChozodiaEscapeSamusInBlueShipPal[1 * 16] = {
+    #include "extracted/data/chozodia_escape/samus_in_blue_ship.pal.inc"
+};
 
 const u16 sChozodiaEscapeOam_ShipExterior_Frame0[OAM_DATA_SIZE(10)] = {
     10,
@@ -452,16 +462,34 @@ const u16 * const sChozodiaEscapeOamPointers_MissionAccomplished[LANGUAGE_COUNT]
 };
 #endif // REGION_EU
 
-const u32 sChozodiaEscapeCraterBackgroundGfx[5227] = INCBIN_U32("data/chozodia_escape/crater_background.gfx.lz");
-const u32 sChozodiaEscapeCraterBackgroundTileTable[418] = INCBIN_U32("data/chozodia_escape/crater_background.tt");
+const u32 sChozodiaEscapeCraterBackgroundGfx[5227] = {
+    #include "extracted/data/chozodia_escape/crater_background.gfx.lz.inc"
+};
+const u32 sChozodiaEscapeCraterBackgroundTileTable[418] = {
+    #include "extracted/data/chozodia_escape/crater_background.tt.inc"
+};
 
-const u32 sChozodiaEscapeBlueShipVeryCloseGfx[1079] = INCBIN_U32("data/chozodia_escape/blue_ship_very_close.gfx.lz");
+const u32 sChozodiaEscapeBlueShipVeryCloseGfx[1079] = {
+    #include "extracted/data/chozodia_escape/blue_ship_very_close.gfx.lz.inc"
+};
 
-const u32 sChozodiaEscapeZebesBackgroundTileTable[176] = INCBIN_U32("data/chozodia_escape/zebes_background.tt");
-const u32 sChozodiaEscapeZebesAndSkyGfx[4574] = INCBIN_U32("data/chozodia_escape/zebes_and_sky.gfx.lz");
-const u32 sChozodiaEscapeZebesSkyTileTable[418] = INCBIN_U32("data/chozodia_escape/zebes_sky.tt");
+const u32 sChozodiaEscapeZebesBackgroundTileTable[176] = {
+    #include "extracted/data/chozodia_escape/zebes_background.tt.inc"
+};
+const u32 sChozodiaEscapeZebesAndSkyGfx[4574] = {
+    #include "extracted/data/chozodia_escape/zebes_and_sky.gfx.lz.inc"
+};
+const u32 sChozodiaEscapeZebesSkyTileTable[418] = {
+    #include "extracted/data/chozodia_escape/zebes_sky.tt.inc"
+};
 
-const u32 sChozodiaEscapeSamusInBlueShipGfx[2699] = INCBIN_U32("data/chozodia_escape/samus_in_blue_ship.gfx.lz");
-const u32 sChozodiaEscapeSamusInBlueShipTileTable[368] = INCBIN_U32("data/chozodia_escape/samus_in_blue_ship.tt");
+const u32 sChozodiaEscapeSamusInBlueShipGfx[2699] = {
+    #include "extracted/data/chozodia_escape/samus_in_blue_ship.gfx.lz.inc"
+};
+const u32 sChozodiaEscapeSamusInBlueShipTileTable[368] = {
+    #include "extracted/data/chozodia_escape/samus_in_blue_ship.tt.inc"
+};
 
-const u32 sChozodiaEscapeMissionAccomplishedLettersGfx[] = INCBIN_U32("data/chozodia_escape/mission_accomplished_letters.gfx.lz");
+const u32 sChozodiaEscapeMissionAccomplishedLettersGfx[] = {
+    #include "extracted/data/chozodia_escape/mission_accomplished_letters.gfx.lz.inc"
+};

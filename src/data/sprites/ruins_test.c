@@ -1,25 +1,61 @@
 #include "data/sprites/ruins_test.h"
 #include "macros.h"
 
-const u32 sRuinsTestGfx[1951] = INCBIN_U32("data/sprites/ruins_test.gfx");
-const u32 sRuinsTestGfx_SamusReflectionTurningRightTop[96] = INCBIN_U32("data/sprites/ruins_test_samus_reflection_turning_right_top.gfx");
-const u32 sRuinsTestGfx_SamusReflectionTurningRightBottom[64] = INCBIN_U32("data/sprites/ruins_test_samus_reflection_turning_right_bottom.gfx");
-const u32 sRuinsTestGfx_SamusReflectionTurningLeftTop[96] = INCBIN_U32("data/sprites/ruins_test_samus_reflection_turning_left_top.gfx");
-const u32 sRuinsTestGfx_SamusReflectionTurningLeftBottom[64] = INCBIN_U32("data/sprites/ruins_test_samus_reflection_turning_left_bottom.gfx");
-const u32 sRuinsTestGfx_SamusReflectionFullSuitTop[96] = INCBIN_U32("data/sprites/ruins_test_samus_reflection_full_suit_top.gfx");
-const u32 sRuinsTestGfx_SamusReflectionFullSuitBottom[64] = INCBIN_U32("data/sprites/ruins_test_samus_reflection_full_suit_bottom.gfx");
-const u32 sRuinsTestGfx_SamusReflectionSuitlessTop[96] = INCBIN_U32("data/sprites/ruins_test_samus_reflection_suitless_top.gfx");
-const u32 sRuinsTestGfx_SamusReflectionSuitlessBottom[64] = INCBIN_U32("data/sprites/ruins_test_samus_reflection_suitless_bottom.gfx");
+const u32 sRuinsTestGfx[1951] = {
+    #include "extracted/data/sprites/ruins_test.gfx.inc"
+};
+const u32 sRuinsTestGfx_SamusReflectionTurningRightTop[96] = {
+    #include "extracted/data/sprites/ruins_test_samus_reflection_turning_right_top.gfx.inc"
+};
+const u32 sRuinsTestGfx_SamusReflectionTurningRightBottom[64] = {
+    #include "extracted/data/sprites/ruins_test_samus_reflection_turning_right_bottom.gfx.inc"
+};
+const u32 sRuinsTestGfx_SamusReflectionTurningLeftTop[96] = {
+    #include "extracted/data/sprites/ruins_test_samus_reflection_turning_left_top.gfx.inc"
+};
+const u32 sRuinsTestGfx_SamusReflectionTurningLeftBottom[64] = {
+    #include "extracted/data/sprites/ruins_test_samus_reflection_turning_left_bottom.gfx.inc"
+};
+const u32 sRuinsTestGfx_SamusReflectionFullSuitTop[96] = {
+    #include "extracted/data/sprites/ruins_test_samus_reflection_full_suit_top.gfx.inc"
+};
+const u32 sRuinsTestGfx_SamusReflectionFullSuitBottom[64] = {
+    #include "extracted/data/sprites/ruins_test_samus_reflection_full_suit_bottom.gfx.inc"
+};
+const u32 sRuinsTestGfx_SamusReflectionSuitlessTop[96] = {
+    #include "extracted/data/sprites/ruins_test_samus_reflection_suitless_top.gfx.inc"
+};
+const u32 sRuinsTestGfx_SamusReflectionSuitlessBottom[64] = {
+    #include "extracted/data/sprites/ruins_test_samus_reflection_suitless_bottom.gfx.inc"
+};
 
-const u16 sRuinsTestPal[128] = INCBIN_U16("data/sprites/ruins_test.pal");
-const u16 sRuinsTestPal_SymbolShot_Frame1[8] = INCBIN_U16("data/sprites/ruins_test_symbol_shot_frame_1.pal");
-const u16 sRuinsTestPal_SymbolShot_Frame2[8] = INCBIN_U16("data/sprites/ruins_test_symbol_shot_frame_2.pal");
-const u16 sRuinsTestPal_SymbolShot_Frame3[8] = INCBIN_U16("data/sprites/ruins_test_symbol_shot_frame_3.pal");
-const u16 sRuinsTestPal_SymbolShot_Frame4[8] = INCBIN_U16("data/sprites/ruins_test_symbol_shot_frame_4.pal");
-const u16 sRuinsTestPal_SymbolShot_Frame5[8] = INCBIN_U16("data/sprites/ruins_test_symbol_shot_frame_5.pal");
-const u16 sRuinsTestPal_SymbolShot_Frame6[8] = INCBIN_U16("data/sprites/ruins_test_symbol_shot_frame_6.pal");
-const u16 sRuinsTestPal_SamusReflection[15 * 16] = INCBIN_U16("data/sprites/ruins_test_samus_reflection.pal");
-const u16 sRuinsTestPal_SamusReflectionFullSuit[15 * 16] = INCBIN_U16("data/sprites/ruins_test_samus_reflection_full_suit.pal");
+const u16 sRuinsTestPal[128] = {
+    #include "extracted/data/sprites/ruins_test.pal.inc"
+};
+const u16 sRuinsTestPal_SymbolShot_Frame1[8] = {
+    #include "extracted/data/sprites/ruins_test_symbol_shot_frame_1.pal.inc"
+};
+const u16 sRuinsTestPal_SymbolShot_Frame2[8] = {
+    #include "extracted/data/sprites/ruins_test_symbol_shot_frame_2.pal.inc"
+};
+const u16 sRuinsTestPal_SymbolShot_Frame3[8] = {
+    #include "extracted/data/sprites/ruins_test_symbol_shot_frame_3.pal.inc"
+};
+const u16 sRuinsTestPal_SymbolShot_Frame4[8] = {
+    #include "extracted/data/sprites/ruins_test_symbol_shot_frame_4.pal.inc"
+};
+const u16 sRuinsTestPal_SymbolShot_Frame5[8] = {
+    #include "extracted/data/sprites/ruins_test_symbol_shot_frame_5.pal.inc"
+};
+const u16 sRuinsTestPal_SymbolShot_Frame6[8] = {
+    #include "extracted/data/sprites/ruins_test_symbol_shot_frame_6.pal.inc"
+};
+const u16 sRuinsTestPal_SamusReflection[15 * 16] = {
+    #include "extracted/data/sprites/ruins_test_samus_reflection.pal.inc"
+};
+const u16 sRuinsTestPal_SamusReflectionFullSuit[15 * 16] = {
+    #include "extracted/data/sprites/ruins_test_samus_reflection_full_suit.pal.inc"
+};
 
 static const u16 sRuinsTestSamusReflectionOam_Frame0[OAM_DATA_SIZE(3)] = {
     3,

@@ -366,24 +366,60 @@ const struct FrameData sMotherBrainCloseUpOam_ElevatorAnimation[4] = {
     [3] = FRAME_DATA_TERMINATOR
 };
 
-const u16 sMotherBrainCloseUpPal[6 * 16] = INCBIN_U16("data/cutscenes/mother_brain_close_up/palette.pal");
-const u16 sMotherBrainCloseUpBackgroundPal[5 * 16] = INCBIN_U16("data/cutscenes/mother_brain_close_up/background.pal");
-const u16 sMotherBrainCloseUpSamusPal[5 * 16] = INCBIN_U16("data/cutscenes/mother_brain_close_up/samus.pal");
-const u16 sMotherBrainCloseUpSamusVariaPal[5 * 16] = INCBIN_U16("data/cutscenes/mother_brain_close_up/samus_varia.pal");
-const u16 sMotherBrainCloseUpEyePal[2 * 16] = INCBIN_U16("data/cutscenes/mother_brain_close_up/eye.pal");
-const u16 sMotherBrainCloseUpBigEyePal[2 * 16] = INCBIN_U16("data/cutscenes/mother_brain_close_up/big_eye.pal");
+const u16 sMotherBrainCloseUpPal[6 * 16] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/palette.pal.inc"
+};
+const u16 sMotherBrainCloseUpBackgroundPal[5 * 16] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/background.pal.inc"
+};
+const u16 sMotherBrainCloseUpSamusPal[5 * 16] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/samus.pal.inc"
+};
+const u16 sMotherBrainCloseUpSamusVariaPal[5 * 16] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/samus_varia.pal.inc"
+};
+const u16 sMotherBrainCloseUpEyePal[2 * 16] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/eye.pal.inc"
+};
+const u16 sMotherBrainCloseUpBigEyePal[2 * 16] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/big_eye.pal.inc"
+};
 
-const u32 sMotherBrainCloseUpMotherBrainGfx[2722] = INCBIN_U32("data/cutscenes/mother_brain_close_up/mother_brain.gfx.lz");
-const u32 sMotherBrainCloseUpBackgroundGfx[2422] = INCBIN_U32("data/cutscenes/mother_brain_close_up/background.gfx.lz");
-const u32 sMotherBrainCloseUpSamusGfx[2999] = INCBIN_U32("data/cutscenes/mother_brain_close_up/samus.gfx.lz");
-const u32 sMotherBrainCloseUpEyeGfx[1134] = INCBIN_U32("data/cutscenes/mother_brain_close_up/eye.gfx.lz");
-const u32 sMotherBrainCloseUpBigEyeGfx[2309] = INCBIN_U32("data/cutscenes/mother_brain_close_up/big_eye.gfx.lz");
+const u32 sMotherBrainCloseUpMotherBrainGfx[2722] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/mother_brain.gfx.lz.inc"
+};
+const u32 sMotherBrainCloseUpBackgroundGfx[2422] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/background.gfx.lz.inc"
+};
+const u32 sMotherBrainCloseUpSamusGfx[2999] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/samus.gfx.lz.inc"
+};
+const u32 sMotherBrainCloseUpEyeGfx[1134] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/eye.gfx.lz.inc"
+};
+const u32 sMotherBrainCloseUpBigEyeGfx[2309] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/big_eye.gfx.lz.inc"
+};
 
-const u32 sMotherBrainCloseUpMotherBrainTileTable[369] = INCBIN_U32("data/cutscenes/mother_brain_close_up/mother_brain.tt");
-const u32 sMotherBrainCloseUpBackgroundTileTable[369] = INCBIN_U32("data/cutscenes/mother_brain_close_up/background.tt");
-const u32 sMotherBrainCloseUpSamusTileTable[368] = INCBIN_U32("data/cutscenes/mother_brain_close_up/samus.tt");
-const u32 sMotherBrainCloseUpGlassTileTable[67] = INCBIN_U32("data/cutscenes/mother_brain_close_up/glass.tt");
+const u32 sMotherBrainCloseUpMotherBrainTileTable[369] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/mother_brain.tt.inc"
+};
+const u32 sMotherBrainCloseUpBackgroundTileTable[369] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/background.tt.inc"
+};
+const u32 sMotherBrainCloseUpSamusTileTable[368] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/samus.tt.inc"
+};
+const u32 sMotherBrainCloseUpGlassTileTable[67] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/glass.tt.inc"
+};
 
-const u32 sMotherBrainCloseUpTankViewGfx[3944] = INCBIN_U32("data/cutscenes/mother_brain_close_up/tank_view.gfx.lz");
-const u32 sMotherBrainCloseUpTankViewTileTable[368] = INCBIN_U32("data/cutscenes/mother_brain_close_up/tank_view.tt");
-const u16 sMotherBrainCloseUpTankViewPal[8 * 16] = INCBIN_U16("data/cutscenes/mother_brain_close_up/tank_view.pal");
+const u32 sMotherBrainCloseUpTankViewGfx[3944] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/tank_view.gfx.lz.inc"
+};
+const u32 sMotherBrainCloseUpTankViewTileTable[368] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/tank_view.tt.inc"
+};
+const u16 sMotherBrainCloseUpTankViewPal[8 * 16] = {
+    #include "extracted/data/cutscenes/mother_brain_close_up/tank_view.pal.inc"
+};

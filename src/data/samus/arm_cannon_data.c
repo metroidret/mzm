@@ -5,139 +5,347 @@
 
 #include "constants/samus.h"
 
-const u8 sArmCannonGfx_Upper_Forward_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_forward_left_default.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalUp_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_up_left_default.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalDown_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_down_left_default.gfx");
-const u8 sArmCannonGfx_Upper_Up_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_up_left_default.gfx");
-const u8 sArmCannonGfx_Upper_Down_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_down_left_default.gfx");
+const u8 sArmCannonGfx_Upper_Forward_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_forward_left_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalUp_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_up_left_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalDown_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_down_left_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Up_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_up_left_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Down_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_down_left_default.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Lower_Forward_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_forward_left_default.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalUp_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_up_left_default.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalDown_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_down_left_default.gfx");
-const u8 sArmCannonGfx_Lower_Up_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_up_left_default.gfx");
-const u8 sArmCannonGfx_Lower_Down_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_down_left_default.gfx");
+const u8 sArmCannonGfx_Lower_Forward_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_forward_left_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalUp_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_up_left_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalDown_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_down_left_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Up_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_up_left_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Down_Left_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_down_left_default.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Upper_Forward_Right_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_forward_right_default.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalUp_Right_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_up_right_default.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalDown_Right_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_down_right_default.gfx");
+const u8 sArmCannonGfx_Upper_Forward_Right_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_forward_right_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalUp_Right_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_up_right_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalDown_Right_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_down_right_default.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Upper_Up_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_up_standing.gfx");
-const u8 sArmCannonGfx_Upper_Down_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_down_standing.gfx");
+const u8 sArmCannonGfx_Upper_Up_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_up_standing.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Down_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_down_standing.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Lower_Forward_Right_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_forward_right_default.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalUp_Right_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_up_right_default.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalDown_Right_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_down_right_default.gfx");
+const u8 sArmCannonGfx_Lower_Forward_Right_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_forward_right_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalUp_Right_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_up_right_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalDown_Right_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_down_right_default.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Lower_Up_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_up_standing.gfx");
-const u8 sArmCannonGfx_Lower_Down_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_down_standing.gfx");
-
-
-const u8 sArmCannonGfx_Upper_Forward_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_forward_left_armed_default.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalUp_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_up_left_armed_default.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalDown_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_down_left_armed_default.gfx");
-const u8 sArmCannonGfx_Upper_Up_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_up_left_armed_default.gfx");
-const u8 sArmCannonGfx_Upper_Down_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_down_left_armed_default.gfx");
-
-const u8 sArmCannonGfx_Lower_Forward_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_forward_left_armed_default.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalUp_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_up_left_armed_default.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalDown_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_down_left_armed_default.gfx");
-const u8 sArmCannonGfx_Lower_Up_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_up_left_armed_default.gfx");
-const u8 sArmCannonGfx_Lower_Down_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_down_left_armed_default.gfx");
-
-const u8 sArmCannonGfx_Upper_Forward_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_forward_right_armed_default.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalUp_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_up_right_armed_default.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalDown_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_down_right_armed_default.gfx");
-const u8 sArmCannonGfx_Upper_Up_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_up_right_armed_default.gfx");
-const u8 sArmCannonGfx_Upper_Down_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_down_right_armed_default.gfx");
-
-const u8 sArmCannonGfx_Lower_Forward_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_forward_right_armed_default.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalUp_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_up_right_armed_default.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalDown_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_down_right_armed_default.gfx");
-
-const u8 sArmCannonGfx_Unused[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/unused.gfx");
-
-const u8 sArmCannonGfx_Lower_Armed_Down[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_armed_down.gfx");
+const u8 sArmCannonGfx_Lower_Up_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_up_standing.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Down_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_down_standing.gfx.inc"
+};
 
 
-const u8 sArmCannonGfx_Upper_Forward_Right_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_forward_right_hanging.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalUp_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_up_right_on_zipline.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalDown_Right_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_down_right_hanging.gfx");
-const u8 sArmCannonGfx_Upper_Up_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_up_right_on_zipline.gfx");
-const u8 sArmCannonGfx_Upper_Down_Right_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_down_right_hanging.gfx");
+const u8 sArmCannonGfx_Upper_Forward_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_forward_left_armed_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalUp_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_up_left_armed_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalDown_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_down_left_armed_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Up_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_up_left_armed_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Down_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_down_left_armed_default.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Lower_Forward_Right_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_forward_right_hanging.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalUp_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_up_right_on_zipline.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalDown_Right_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_down_right_hanging.gfx");
-const u8 sArmCannonGfx_Lower_Up_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_up_right_on_zipline.gfx");
-const u8 sArmCannonGfx_Lower_Down_Right_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_down_right_hanging.gfx");
+const u8 sArmCannonGfx_Lower_Forward_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_forward_left_armed_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalUp_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_up_left_armed_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalDown_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_down_left_armed_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Up_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_up_left_armed_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Down_Left_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_down_left_armed_default.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Upper_Forward_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_forward_left_hanging.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalUp_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_up_left_hanging.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalDown_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_down_left_hanging.gfx");
-const u8 sArmCannonGfx_Upper_Up_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_up_left_hanging.gfx");
-const u8 sArmCannonGfx_Upper_Down_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_down_left_hanging.gfx");
+const u8 sArmCannonGfx_Upper_Forward_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_forward_right_armed_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalUp_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_up_right_armed_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalDown_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_down_right_armed_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Up_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_up_right_armed_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Down_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_down_right_armed_default.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Lower_Forward_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_forward_left_hanging.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalUp_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_up_left_hanging.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalDown_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_down_left_hanging.gfx");
-const u8 sArmCannonGfx_Lower_Up_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_up_left_hanging.gfx");
-const u8 sArmCannonGfx_Lower_Down_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_down_left_hanging.gfx");
+const u8 sArmCannonGfx_Lower_Forward_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_forward_right_armed_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalUp_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_up_right_armed_default.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalDown_Right_Armed_Default[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_down_right_armed_default.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Upper_Forward_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_forward_right_armed_hanging.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalUp_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_up_right_armed_hanging.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalDown_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_down_right_armed_hanging.gfx");
-const u8 sArmCannonGfx_Upper_Up_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_up_right_armed_hanging.gfx");
-const u8 sArmCannonGfx_Upper_Down_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_down_right_armed_hanging.gfx");
+const u8 sArmCannonGfx_Unused[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/unused.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Lower_Forward_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_forward_right_armed_hanging.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalUp_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_up_right_armed_hanging.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalDown_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_down_right_armed_hanging.gfx");
-const u8 sArmCannonGfx_Lower_Up_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_up_right_armed_hanging.gfx");
-const u8 sArmCannonGfx_Lower_Down_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_down_right_armed_hanging.gfx");
+const u8 sArmCannonGfx_Lower_Armed_Down[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_armed_down.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Upper_Forward_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_forward_left_armed_hanging.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalUp_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_up_left_armed_hanging.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalDown_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_down_left_armed_hanging.gfx");
-const u8 sArmCannonGfx_Upper_Up_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_up_left_armed_hanging.gfx");
-const u8 sArmCannonGfx_Upper_Down_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_down_left_armed_hanging.gfx");
 
-const u8 sArmCannonGfx_Lower_Forward_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_forward_left_armed_hanging.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalUp_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_up_left_armed_hanging.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalDown_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_down_left_armed_hanging.gfx");
-const u8 sArmCannonGfx_Lower_Up_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_up_left_armed_hanging.gfx");
-const u8 sArmCannonGfx_Lower_Down_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_down_left_armed_hanging.gfx");
+const u8 sArmCannonGfx_Upper_Forward_Right_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_forward_right_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalUp_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_up_right_on_zipline.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalDown_Right_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_down_right_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Up_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_up_right_on_zipline.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Down_Right_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_down_right_hanging.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Upper_Forward_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_forward_right_on_zipline.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalDown_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_down_right_on_zipline.gfx");
-const u8 sArmCannonGfx_Upper_Down_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_down_right_on_zipline.gfx");
+const u8 sArmCannonGfx_Lower_Forward_Right_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_forward_right_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalUp_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_up_right_on_zipline.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalDown_Right_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_down_right_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Up_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_up_right_on_zipline.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Down_Right_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_down_right_hanging.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Lower_Forward_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_forward_right_on_zipline.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalDown_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_down_right_on_zipline.gfx");
-const u8 sArmCannonGfx_Lower_Down_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_down_right_on_zipline.gfx");
+const u8 sArmCannonGfx_Upper_Forward_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_forward_left_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalUp_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_up_left_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalDown_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_down_left_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Up_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_up_left_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Down_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_down_left_hanging.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Upper_Forward_Right_Armed_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_forward_right_armed_on_zipline.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalDown_Right_Armed_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_down_right_armed_on_zipline.gfx");
-const u8 sArmCannonGfx_Upper_Down_Right_Armed_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_down_right_armed_on_zipline.gfx");
+const u8 sArmCannonGfx_Lower_Forward_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_forward_left_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalUp_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_up_left_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalDown_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_down_left_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Up_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_up_left_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Down_Left_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_down_left_hanging.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Lower_Forward_Right_Armed_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_forward_right_armed_on_zipline.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalDown_Right_Armed_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_down_right_armed_on_zipline.gfx");
-const u8 sArmCannonGfx_Lower_Down_Right_Armed_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_down_right_armed_on_zipline.gfx");
+const u8 sArmCannonGfx_Upper_Forward_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_forward_right_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalUp_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_up_right_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalDown_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_down_right_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Up_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_up_right_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Down_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_down_right_armed_hanging.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Upper_Forward_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_forward_standing.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalUp_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_up_standing.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalDown_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_down_standing.gfx");
+const u8 sArmCannonGfx_Lower_Forward_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_forward_right_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalUp_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_up_right_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalDown_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_down_right_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Up_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_up_right_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Down_Right_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_down_right_armed_hanging.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Lower_Forward_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_forward_standing.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalUp_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_up_standing.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalDown_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_down_standing.gfx");
+const u8 sArmCannonGfx_Upper_Forward_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_forward_left_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalUp_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_up_left_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalDown_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_down_left_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Up_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_up_left_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Down_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_down_left_armed_hanging.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Upper_Forward_Armed_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_forward_armed_standing.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalUp_Armed_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_up_armed_standing.gfx");
-const u8 sArmCannonGfx_Upper_DiagonalDown_Armed_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/upper_diagonal_down_armed_standing.gfx");
+const u8 sArmCannonGfx_Lower_Forward_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_forward_left_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalUp_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_up_left_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalDown_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_down_left_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Up_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_up_left_armed_hanging.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Down_Left_Armed_Hanging[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_down_left_armed_hanging.gfx.inc"
+};
 
-const u8 sArmCannonGfx_Lower_Forward_Armed_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_forward_armed_standing.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalUp_Armed_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_up_armed_standing.gfx");
-const u8 sArmCannonGfx_Lower_DiagonalDown_Armed_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = INCBIN_U8("data/samus/graphics/arm_cannon/lower_diagonal_down_armed_standing.gfx");
+const u8 sArmCannonGfx_Upper_Forward_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_forward_right_on_zipline.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalDown_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_down_right_on_zipline.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Down_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_down_right_on_zipline.gfx.inc"
+};
+
+const u8 sArmCannonGfx_Lower_Forward_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_forward_right_on_zipline.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalDown_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_down_right_on_zipline.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Down_Right_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_down_right_on_zipline.gfx.inc"
+};
+
+const u8 sArmCannonGfx_Upper_Forward_Right_Armed_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_forward_right_armed_on_zipline.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalDown_Right_Armed_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_down_right_armed_on_zipline.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_Down_Right_Armed_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_down_right_armed_on_zipline.gfx.inc"
+};
+
+const u8 sArmCannonGfx_Lower_Forward_Right_Armed_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_forward_right_armed_on_zipline.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalDown_Right_Armed_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_down_right_armed_on_zipline.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_Down_Right_Armed_OnZipline[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_down_right_armed_on_zipline.gfx.inc"
+};
+
+const u8 sArmCannonGfx_Upper_Forward_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_forward_standing.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalUp_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_up_standing.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalDown_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_down_standing.gfx.inc"
+};
+
+const u8 sArmCannonGfx_Lower_Forward_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_forward_standing.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalUp_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_up_standing.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalDown_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_down_standing.gfx.inc"
+};
+
+const u8 sArmCannonGfx_Upper_Forward_Armed_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_forward_armed_standing.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalUp_Armed_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_up_armed_standing.gfx.inc"
+};
+const u8 sArmCannonGfx_Upper_DiagonalDown_Armed_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/upper_diagonal_down_armed_standing.gfx.inc"
+};
+
+const u8 sArmCannonGfx_Lower_Forward_Armed_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_forward_armed_standing.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalUp_Armed_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_up_armed_standing.gfx.inc"
+};
+const u8 sArmCannonGfx_Lower_DiagonalDown_Armed_Standing[SAMUS_ARM_CANNON_GFX_SIZE] = {
+    #include "extracted/data/samus/graphics/arm_cannon/lower_diagonal_down_armed_standing.gfx.inc"
+};
 
 
 static const u16 sSamusArmCannonOam_Suit_Left_Forward_Running_Frame0[OAM_DATA_SIZE(1)] = {

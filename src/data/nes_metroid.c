@@ -31,7 +31,9 @@ const u8 sNesMetroidData_Text[18] = {
     '\0', '\0', '\0', '\0', '0', '1'
 };
 
-const u8 sNesMetroidData[] = INCBIN_U8("data/nes_metroid.bin");
+const u8 sNesMetroidData[] = {
+    #include "extracted/data/nes_metroid.bin.inc"
+};
 
 #if defined(REGION_US_BETA)
 static const u8 sNesMetroidDataEnd[20] = {

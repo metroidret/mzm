@@ -1,9 +1,13 @@
 #include "data/rooms/kraid_rooms_data.h"
 #include "macros.h"
 
-const u8 sKraid_21_Clipdata[360] = INCBIN_U8("data/rooms/kraid/kraid_21_clipdata.gfx");
+const u8 sKraid_21_Clipdata[360] = {
+    #include "extracted/data/rooms/kraid/kraid_21_clipdata.gfx.inc"
+};
 
-const u8 sKraid_21_Bg1[521] = INCBIN_U8("data/rooms/kraid/kraid_21_bg1.gfx");
+const u8 sKraid_21_Bg1[521] = {
+    #include "extracted/data/rooms/kraid/kraid_21_bg1.gfx.inc"
+};
 
 const u8 sKraid_21_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(16)] = {
 	2, 17, SPRITESET_IDX(0),
@@ -24,5 +28,7 @@ const u8 sKraid_21_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(16)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sKraid_21_Bg0[119] = INCBIN_U8("data/rooms/kraid/kraid_21_bg0.gfx");
+const u8 sKraid_21_Bg0[119] = {
+    #include "extracted/data/rooms/kraid/kraid_21_bg0.gfx.inc"
+};
 

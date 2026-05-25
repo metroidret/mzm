@@ -298,8 +298,12 @@ const u8 sImagoDynamicPaletteData[9][2] = {
     { 128, 128 }
 };
 
-const u32 sImagoGfx[1503] = INCBIN_U32("data/sprites/imago.gfx.lz");
-const u16 sImagoPal[96] = INCBIN_U16("data/sprites/imago.pal");
+const u32 sImagoGfx[1503] = {
+    #include "extracted/data/sprites/imago.gfx.lz.inc"
+};
+const u16 sImagoPal[96] = {
+    #include "extracted/data/sprites/imago.pal.inc"
+};
 
 static const u16 sImagoPartOam_BodyIdle_Frame0[OAM_DATA_SIZE(18)] = {
     18,

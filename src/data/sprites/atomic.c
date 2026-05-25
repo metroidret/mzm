@@ -18,8 +18,12 @@ const s16 sAtomicIdleXMovement[81] = {
     SHORT_MAX
 };
 
-const u32 sAtomicGfx[752] = INCBIN_U32("data/sprites/atomic.gfx.lz");
-const u16 sAtomicPal[64] = INCBIN_U16("data/sprites/atomic.pal");
+const u32 sAtomicGfx[752] = {
+    #include "extracted/data/sprites/atomic.gfx.lz.inc"
+};
+const u16 sAtomicPal[64] = {
+    #include "extracted/data/sprites/atomic.pal.inc"
+};
 
 static const u16 sAtomicOam_Idle_Frame0[OAM_DATA_SIZE(4)] = {
     4,

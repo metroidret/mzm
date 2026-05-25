@@ -1,7 +1,9 @@
 #include "data/ending_and_gallery_data.h"
 #include "oam.h"
 
-const u16 sEndingImageTextPal[14 * 16] = INCBIN_U16("data/ending/image_text.pal");
+const u16 sEndingImageTextPal[14 * 16] = {
+    #include "extracted/data/ending/image_text.pal.inc"
+};
 
 static const u16 sEndingImageOam_LineTimer_English[OAM_DATA_SIZE(8)] = {
     8,
@@ -2162,25 +2164,57 @@ static const u16 sYourRateHiraganaOam_10[OAM_DATA_SIZE(1)] = {
     OAM_ENTRY(58, -16, OAM_DIMS_16x16, OAM_NO_FLIP, 0x154, 0, 0)
 };
 
-const u16 sCreditsCharactersPal[3 * 16] = INCBIN_U16("data/ending/credits_characters.pal");
-const u16 sCreditsChozoWallPal[15 * 16] = INCBIN_U16("data/ending/credits_chozo_wall.pal");
+const u16 sCreditsCharactersPal[3 * 16] = {
+    #include "extracted/data/ending/credits_characters.pal.inc"
+};
+const u16 sCreditsChozoWallPal[15 * 16] = {
+    #include "extracted/data/ending/credits_chozo_wall.pal.inc"
+};
 
-static const u16 sEndingImage_Palette_0[16 * 16] = INCBIN_U16("data/ending/image_0.pal");
-static const u16 sEndingImage_Palette_1[16 * 16] = INCBIN_U16("data/ending/image_1.pal");
-static const u16 sEndingImage_Palette_2[16 * 16] = INCBIN_U16("data/ending/image_2.pal");
-static const u16 sEndingImage_Palette_3[16 * 16] = INCBIN_U16("data/ending/image_3.pal");
-static const u16 sEndingImage_Palette_4[16 * 16] = INCBIN_U16("data/ending/image_4.pal");
-static const u16 sEndingImage_Palette_5[16 * 16] = INCBIN_U16("data/ending/image_5.pal");
-static const u16 sEndingImage_Palette_6[16 * 16] = INCBIN_U16("data/ending/image_6.pal");
-static const u16 sEndingImage_Palette_7[16 * 16] = INCBIN_U16("data/ending/image_7.pal");
+static const u16 sEndingImage_Palette_0[16 * 16] = {
+    #include "extracted/data/ending/image_0.pal.inc"
+};
+static const u16 sEndingImage_Palette_1[16 * 16] = {
+    #include "extracted/data/ending/image_1.pal.inc"
+};
+static const u16 sEndingImage_Palette_2[16 * 16] = {
+    #include "extracted/data/ending/image_2.pal.inc"
+};
+static const u16 sEndingImage_Palette_3[16 * 16] = {
+    #include "extracted/data/ending/image_3.pal.inc"
+};
+static const u16 sEndingImage_Palette_4[16 * 16] = {
+    #include "extracted/data/ending/image_4.pal.inc"
+};
+static const u16 sEndingImage_Palette_5[16 * 16] = {
+    #include "extracted/data/ending/image_5.pal.inc"
+};
+static const u16 sEndingImage_Palette_6[16 * 16] = {
+    #include "extracted/data/ending/image_6.pal.inc"
+};
+static const u16 sEndingImage_Palette_7[16 * 16] = {
+    #include "extracted/data/ending/image_7.pal.inc"
+};
 
-const u16 sEndingPosingPal[13 * 16] = INCBIN_U16("data/ending/posing.pal");
-const u16 sEndingPosingPal_White1[5 * 16] = INCBIN_U16("data/ending/posing_white_1.pal");
-const u16 sEndingPosingPal_White2[5 * 16] = INCBIN_U16("data/ending/posing_white_2.pal");
-const u16 sEndingPosingPal_White3[5 * 16] = INCBIN_U16("data/ending/posing_white_3.pal");
-const u16 sEndingPosingPal_White4[5 * 16] = INCBIN_U16("data/ending/posing_white_4.pal");
+const u16 sEndingPosingPal[13 * 16] = {
+    #include "extracted/data/ending/posing.pal.inc"
+};
+const u16 sEndingPosingPal_White1[5 * 16] = {
+    #include "extracted/data/ending/posing_white_1.pal.inc"
+};
+const u16 sEndingPosingPal_White2[5 * 16] = {
+    #include "extracted/data/ending/posing_white_2.pal.inc"
+};
+const u16 sEndingPosingPal_White3[5 * 16] = {
+    #include "extracted/data/ending/posing_white_3.pal.inc"
+};
+const u16 sEndingPosingPal_White4[5 * 16] = {
+    #include "extracted/data/ending/posing_white_4.pal.inc"
+};
 
-const u16 sUnlockedOptionsPal[1 * 16] = INCBIN_U16("data/ending/unlocked_options.pal");
+const u16 sUnlockedOptionsPal[1 * 16] = {
+    #include "extracted/data/ending/unlocked_options.pal.inc"
+};
 
 const struct EndingImageOam sEndingImageOam_FullLines_English[ENDING_IMAGE_LINE_COUNT] = {
     [ENDING_IMAGE_LINE_CLEAR_TIME] = {
@@ -7422,98 +7456,248 @@ const u16 * const sEndingImageOamPointers_NewRecord[LANGUAGE_COUNT] = {
 };
 #endif // REGION_EU
 
-const u32 sCreditsCharactersGfx[] = INCBIN_U32("data/ending/credits_characters.gfx.lz");
+const u32 sCreditsCharactersGfx[] = {
+    #include "extracted/data/ending/credits_characters.gfx.lz.inc"
+};
 
-static const u32 sEndingImage_TopGfx_0[6186] = INCBIN_U32("data/ending/image_top_0.gfx.lz");
-static const u32 sEndingImage_TopTileTable_0[577] = INCBIN_U32("data/ending/image_top_0.tt");
-static const u32 sEndingImage_BottomGfx_0[3525] = INCBIN_U32("data/ending/image_bottom_0.gfx.lz");
-static const u32 sEndingImage_BottomTileTable_0[398] = INCBIN_U32("data/ending/image_bottom_0.tt");
+static const u32 sEndingImage_TopGfx_0[6186] = {
+    #include "extracted/data/ending/image_top_0.gfx.lz.inc"
+};
+static const u32 sEndingImage_TopTileTable_0[577] = {
+    #include "extracted/data/ending/image_top_0.tt.inc"
+};
+static const u32 sEndingImage_BottomGfx_0[3525] = {
+    #include "extracted/data/ending/image_bottom_0.gfx.lz.inc"
+};
+static const u32 sEndingImage_BottomTileTable_0[398] = {
+    #include "extracted/data/ending/image_bottom_0.tt.inc"
+};
 
-static const u32 sEndingImage_TopGfx_1[5578] = INCBIN_U32("data/ending/image_top_1.gfx.lz");
-static const u32 sEndingImage_TopTileTable_1[577] = INCBIN_U32("data/ending/image_top_1.tt");
-static const u32 sEndingImage_BottomGfx_1[3339] = INCBIN_U32("data/ending/image_bottom_1.gfx.lz");
-static const u32 sEndingImage_BottomTileTable_1[577] = INCBIN_U32("data/ending/image_bottom_1.tt");
+static const u32 sEndingImage_TopGfx_1[5578] = {
+    #include "extracted/data/ending/image_top_1.gfx.lz.inc"
+};
+static const u32 sEndingImage_TopTileTable_1[577] = {
+    #include "extracted/data/ending/image_top_1.tt.inc"
+};
+static const u32 sEndingImage_BottomGfx_1[3339] = {
+    #include "extracted/data/ending/image_bottom_1.gfx.lz.inc"
+};
+static const u32 sEndingImage_BottomTileTable_1[577] = {
+    #include "extracted/data/ending/image_bottom_1.tt.inc"
+};
 
-static const u32 sEndingImage_TopGfx_2[6259] = INCBIN_U32("data/ending/image_top_2.gfx.lz");
-static const u32 sEndingImage_TopTileTable_2[577] = INCBIN_U32("data/ending/image_top_2.tt");
-static const u32 sEndingImage_BottomGfx_2[3178] = INCBIN_U32("data/ending/image_bottom_2.gfx.lz");
-static const u32 sEndingImage_BottomTileTable_2[577] = INCBIN_U32("data/ending/image_bottom_2.tt");
+static const u32 sEndingImage_TopGfx_2[6259] = {
+    #include "extracted/data/ending/image_top_2.gfx.lz.inc"
+};
+static const u32 sEndingImage_TopTileTable_2[577] = {
+    #include "extracted/data/ending/image_top_2.tt.inc"
+};
+static const u32 sEndingImage_BottomGfx_2[3178] = {
+    #include "extracted/data/ending/image_bottom_2.gfx.lz.inc"
+};
+static const u32 sEndingImage_BottomTileTable_2[577] = {
+    #include "extracted/data/ending/image_bottom_2.tt.inc"
+};
 
-static const u32 sEndingImage_TopGfx_3[5289] = INCBIN_U32("data/ending/image_top_3.gfx.lz");
-static const u32 sEndingImage_TopTileTable_3[577] = INCBIN_U32("data/ending/image_top_3.tt");
-static const u32 sEndingImage_BottomGfx_3[2789] = INCBIN_U32("data/ending/image_bottom_3.gfx.lz");
-static const u32 sEndingImage_BottomTileTable_3[577] = INCBIN_U32("data/ending/image_bottom_3.tt");
+static const u32 sEndingImage_TopGfx_3[5289] = {
+    #include "extracted/data/ending/image_top_3.gfx.lz.inc"
+};
+static const u32 sEndingImage_TopTileTable_3[577] = {
+    #include "extracted/data/ending/image_top_3.tt.inc"
+};
+static const u32 sEndingImage_BottomGfx_3[2789] = {
+    #include "extracted/data/ending/image_bottom_3.gfx.lz.inc"
+};
+static const u32 sEndingImage_BottomTileTable_3[577] = {
+    #include "extracted/data/ending/image_bottom_3.tt.inc"
+};
 
-static const u32 sEndingImage_TopGfx_4[5900] = INCBIN_U32("data/ending/image_top_4.gfx.lz");
-static const u32 sEndingImage_TopTileTable_4[577] = INCBIN_U32("data/ending/image_top_4.tt");
-static const u32 sEndingImage_BottomGfx_4[3029] = INCBIN_U32("data/ending/image_bottom_4.gfx.lz");
-static const u32 sEndingImage_BottomTileTable_4[577] = INCBIN_U32("data/ending/image_bottom_4.tt");
+static const u32 sEndingImage_TopGfx_4[5900] = {
+    #include "extracted/data/ending/image_top_4.gfx.lz.inc"
+};
+static const u32 sEndingImage_TopTileTable_4[577] = {
+    #include "extracted/data/ending/image_top_4.tt.inc"
+};
+static const u32 sEndingImage_BottomGfx_4[3029] = {
+    #include "extracted/data/ending/image_bottom_4.gfx.lz.inc"
+};
+static const u32 sEndingImage_BottomTileTable_4[577] = {
+    #include "extracted/data/ending/image_bottom_4.tt.inc"
+};
 
-static const u32 sEndingImage_TopGfx_5[5080] = INCBIN_U32("data/ending/image_top_5.gfx.lz");
-static const u32 sEndingImage_TopTileTable_5[577] = INCBIN_U32("data/ending/image_top_5.tt");
-static const u32 sEndingImage_BottomGfx_5[3899] = INCBIN_U32("data/ending/image_bottom_5.gfx.lz");
-static const u32 sEndingImage_BottomTileTable_5[577] = INCBIN_U32("data/ending/image_bottom_5.tt");
+static const u32 sEndingImage_TopGfx_5[5080] = {
+    #include "extracted/data/ending/image_top_5.gfx.lz.inc"
+};
+static const u32 sEndingImage_TopTileTable_5[577] = {
+    #include "extracted/data/ending/image_top_5.tt.inc"
+};
+static const u32 sEndingImage_BottomGfx_5[3899] = {
+    #include "extracted/data/ending/image_bottom_5.gfx.lz.inc"
+};
+static const u32 sEndingImage_BottomTileTable_5[577] = {
+    #include "extracted/data/ending/image_bottom_5.tt.inc"
+};
 
-static const u32 sEndingImage_TopGfx_6[5748] = INCBIN_U32("data/ending/image_top_6.gfx.lz");
-static const u32 sEndingImage_TopTileTable_6[577] = INCBIN_U32("data/ending/image_top_6.tt");
-static const u32 sEndingImage_BottomGfx_6[2932] = INCBIN_U32("data/ending/image_bottom_6.gfx.lz");
-static const u32 sEndingImage_BottomTileTable_6[577] = INCBIN_U32("data/ending/image_bottom_6.tt");
+static const u32 sEndingImage_TopGfx_6[5748] = {
+    #include "extracted/data/ending/image_top_6.gfx.lz.inc"
+};
+static const u32 sEndingImage_TopTileTable_6[577] = {
+    #include "extracted/data/ending/image_top_6.tt.inc"
+};
+static const u32 sEndingImage_BottomGfx_6[2932] = {
+    #include "extracted/data/ending/image_bottom_6.gfx.lz.inc"
+};
+static const u32 sEndingImage_BottomTileTable_6[577] = {
+    #include "extracted/data/ending/image_bottom_6.tt.inc"
+};
 
-static const u32 sEndingImage_TopGfx_7[6818] = INCBIN_U32("data/ending/image_top_7.gfx.lz");
-static const u32 sEndingImage_TopTileTable_7[577] = INCBIN_U32("data/ending/image_top_7.tt");
-static const u32 sEndingImage_BottomGfx_7[3901] = INCBIN_U32("data/ending/image_bottom_7.gfx.lz");
-static const u32 sEndingImage_BottomTileTable_7[577] = INCBIN_U32("data/ending/image_bottom_7.tt");
+static const u32 sEndingImage_TopGfx_7[6818] = {
+    #include "extracted/data/ending/image_top_7.gfx.lz.inc"
+};
+static const u32 sEndingImage_TopTileTable_7[577] = {
+    #include "extracted/data/ending/image_top_7.tt.inc"
+};
+static const u32 sEndingImage_BottomGfx_7[3901] = {
+    #include "extracted/data/ending/image_bottom_7.gfx.lz.inc"
+};
+static const u32 sEndingImage_BottomTileTable_7[577] = {
+    #include "extracted/data/ending/image_bottom_7.tt.inc"
+};
 
-const u32 sEndingImageTextEnglishGfx[803] = INCBIN_U32("data/ending/text_english.gfx.lz");
-const u32 sEndingImageTextHiraganaGfx[511] = INCBIN_U32("data/ending/text_hiragana.gfx.lz");
+const u32 sEndingImageTextEnglishGfx[803] = {
+    #include "extracted/data/ending/text_english.gfx.lz.inc"
+};
+const u32 sEndingImageTextHiraganaGfx[511] = {
+    #include "extracted/data/ending/text_hiragana.gfx.lz.inc"
+};
 #ifdef REGION_EU
-const u32 sEndingImageTextFrenchGfx[759] = INCBIN_U32("data/ending/text_french.gfx.lz");
-const u32 sEndingImageTextGermanGfx[726] = INCBIN_U32("data/ending/text_german.gfx.lz");
-const u32 sEndingImageTextItalianGfx[883] = INCBIN_U32("data/ending/text_italian.gfx.lz");
-const u32 sEndingImageTextSpanishGfx[773] = INCBIN_U32("data/ending/text_spanish.gfx.lz");
+const u32 sEndingImageTextFrenchGfx[759] = {
+    #include "extracted/data/ending/text_french.gfx.lz.inc"
+};
+const u32 sEndingImageTextGermanGfx[726] = {
+    #include "extracted/data/ending/text_german.gfx.lz.inc"
+};
+const u32 sEndingImageTextItalianGfx[883] = {
+    #include "extracted/data/ending/text_italian.gfx.lz.inc"
+};
+const u32 sEndingImageTextSpanishGfx[773] = {
+    #include "extracted/data/ending/text_spanish.gfx.lz.inc"
+};
 #endif // REGION_EU
 
-const u8 sEndingImageNumbersGfx_Upper[10 * 64] = INCBIN_U8("data/ending/numbers_upper.gfx");
-const u8 sEndingImageNumbersGfx_Lower[10 * 64] = INCBIN_U8("data/ending/numbers_lower.gfx");
+const u8 sEndingImageNumbersGfx_Upper[10 * 64] = {
+    #include "extracted/data/ending/numbers_upper.gfx.inc"
+};
+const u8 sEndingImageNumbersGfx_Lower[10 * 64] = {
+    #include "extracted/data/ending/numbers_lower.gfx.inc"
+};
 
-const u32 sEndingImageNumbersMiscEnglishGfx[218] = INCBIN_U32("data/ending/numbers_misc_english.gfx.lz");
+const u32 sEndingImageNumbersMiscEnglishGfx[218] = {
+    #include "extracted/data/ending/numbers_misc_english.gfx.lz.inc"
+};
 #ifdef REGION_EU
-const u32 sEndingImageNumbersMiscGermanGfx[209] = INCBIN_U32("data/ending/numbers_misc_german.gfx.lz");
-const u32 sEndingImageNumbersMiscFrenchGfx[217] = INCBIN_U32("data/ending/numbers_misc_french.gfx.lz");
-const u32 sEndingImageNumbersMiscItalianGfx[208] = INCBIN_U32("data/ending/numbers_misc_italian.gfx.lz");
-const u32 sEndingImageNumbersMiscSpanishGfx[225] = INCBIN_U32("data/ending/numbers_misc_spanish.gfx.lz");
+const u32 sEndingImageNumbersMiscGermanGfx[209] = {
+    #include "extracted/data/ending/numbers_misc_german.gfx.lz.inc"
+};
+const u32 sEndingImageNumbersMiscFrenchGfx[217] = {
+    #include "extracted/data/ending/numbers_misc_french.gfx.lz.inc"
+};
+const u32 sEndingImageNumbersMiscItalianGfx[208] = {
+    #include "extracted/data/ending/numbers_misc_italian.gfx.lz.inc"
+};
+const u32 sEndingImageNumbersMiscSpanishGfx[225] = {
+    #include "extracted/data/ending/numbers_misc_spanish.gfx.lz.inc"
+};
 #endif // REGION_EU
 
-const u32 sEndingSamusPosingSpaceBackgroundGfx[2938] = INCBIN_U32("data/ending/samus_posing_space_background.gfx.lz");
-const u32 sEndingSamusPosingSpaceBackgroundTileTable[412] = INCBIN_U32("data/ending/samus_posing_space_background.tt");
-const u32 sEndingLightGfx[743] = INCBIN_U32("data/ending/ending_light.gfx.lz");
-const u32 sEndingLightTileTable[145] = INCBIN_U32("data/ending/ending_light.tt");
+const u32 sEndingSamusPosingSpaceBackgroundGfx[2938] = {
+    #include "extracted/data/ending/samus_posing_space_background.gfx.lz.inc"
+};
+const u32 sEndingSamusPosingSpaceBackgroundTileTable[412] = {
+    #include "extracted/data/ending/samus_posing_space_background.tt.inc"
+};
+const u32 sEndingLightGfx[743] = {
+    #include "extracted/data/ending/ending_light.gfx.lz.inc"
+};
+const u32 sEndingLightTileTable[145] = {
+    #include "extracted/data/ending/ending_light.tt.inc"
+};
 
-const u32 sEndingSamusPosingGfx_1[1481] = INCBIN_U32("data/ending/samus_posing_1.gfx.lz");
-const u32 sEndingSamusPosingTileTable_1[209] = INCBIN_U32("data/ending/samus_posing_1.tt");
-const u32 sEndingSamusPosingGfx_2[1562] = INCBIN_U32("data/ending/samus_posing_2.gfx.lz");
-const u32 sEndingSamusPosingTileTable_2[230] = INCBIN_U32("data/ending/samus_posing_2.tt");
-const u32 sEndingSamusPosingGfx_3[1712] = INCBIN_U32("data/ending/samus_posing_3.gfx.lz");
-const u32 sEndingSamusPosingTileTable_3[238] = INCBIN_U32("data/ending/samus_posing_3.tt");
-const u32 sEndingSamusPosingGfx_4[1692] = INCBIN_U32("data/ending/samus_posing_4.gfx.lz");
-const u32 sEndingSamusPosingTileTable_4[221] = INCBIN_U32("data/ending/samus_posing_4.tt");
-const u32 sEndingSamusPosingGfx_5[1279] = INCBIN_U32("data/ending/samus_posing_5.gfx.lz");
-const u32 sEndingSamusPosingTileTable_5[181] = INCBIN_U32("data/ending/samus_posing_5.tt");
+const u32 sEndingSamusPosingGfx_1[1481] = {
+    #include "extracted/data/ending/samus_posing_1.gfx.lz.inc"
+};
+const u32 sEndingSamusPosingTileTable_1[209] = {
+    #include "extracted/data/ending/samus_posing_1.tt.inc"
+};
+const u32 sEndingSamusPosingGfx_2[1562] = {
+    #include "extracted/data/ending/samus_posing_2.gfx.lz.inc"
+};
+const u32 sEndingSamusPosingTileTable_2[230] = {
+    #include "extracted/data/ending/samus_posing_2.tt.inc"
+};
+const u32 sEndingSamusPosingGfx_3[1712] = {
+    #include "extracted/data/ending/samus_posing_3.gfx.lz.inc"
+};
+const u32 sEndingSamusPosingTileTable_3[238] = {
+    #include "extracted/data/ending/samus_posing_3.tt.inc"
+};
+const u32 sEndingSamusPosingGfx_4[1692] = {
+    #include "extracted/data/ending/samus_posing_4.gfx.lz.inc"
+};
+const u32 sEndingSamusPosingTileTable_4[221] = {
+    #include "extracted/data/ending/samus_posing_4.tt.inc"
+};
+const u32 sEndingSamusPosingGfx_5[1279] = {
+    #include "extracted/data/ending/samus_posing_5.gfx.lz.inc"
+};
+const u32 sEndingSamusPosingTileTable_5[181] = {
+    #include "extracted/data/ending/samus_posing_5.tt.inc"
+};
 
-const u32 sEndingSamusPosingSuitlessGfx[1167] = INCBIN_U32("data/ending/samus_posing_suitless.gfx.lz");
-const u32 sEndingSamusPosingSuitlessTileTable[135] = INCBIN_U32("data/ending/samus_posing_suitless.tt");
-const u32 sEndingSamusPosingFullSuitGfx[1557] = INCBIN_U32("data/ending/samus_posing_full_suit.gfx.lz");
-const u32 sEndingSamusPosingFullSuitTileTable[226] = INCBIN_U32("data/ending/samus_posing_full_suit.tt");
-const u32 sEndingSamusPosingHelmetOffGfx[1568] = INCBIN_U32("data/ending/samus_posing_helmet_off.gfx.lz");
-const u32 sEndingSamusPosingHelmetOffTileTable[226] = INCBIN_U32("data/ending/samus_posing_helmet_off.tt");
+const u32 sEndingSamusPosingSuitlessGfx[1167] = {
+    #include "extracted/data/ending/samus_posing_suitless.gfx.lz.inc"
+};
+const u32 sEndingSamusPosingSuitlessTileTable[135] = {
+    #include "extracted/data/ending/samus_posing_suitless.tt.inc"
+};
+const u32 sEndingSamusPosingFullSuitGfx[1557] = {
+    #include "extracted/data/ending/samus_posing_full_suit.gfx.lz.inc"
+};
+const u32 sEndingSamusPosingFullSuitTileTable[226] = {
+    #include "extracted/data/ending/samus_posing_full_suit.tt.inc"
+};
+const u32 sEndingSamusPosingHelmetOffGfx[1568] = {
+    #include "extracted/data/ending/samus_posing_helmet_off.gfx.lz.inc"
+};
+const u32 sEndingSamusPosingHelmetOffTileTable[226] = {
+    #include "extracted/data/ending/samus_posing_helmet_off.tt.inc"
+};
 
-const u32 sCreditsChozoWallBackgroundGfx[7710] = INCBIN_U32("data/ending/credits_chozo_wall_background.gfx.lz");
-const u32 sCreditsChozoWallBackgroundTileTable[551] = INCBIN_U32("data/ending/credits_chozo_wall_background.tt");
-const u32 sCreditsChozoWallBottomGfx[3909] = INCBIN_U32("data/ending/credits_chozo_wall_bottom.gfx.lz");
-const u32 sCreditsChozoWallBottomTileTable[307] = INCBIN_U32("data/ending/credits_chozo_wall_bottom.tt");
-const u32 sCreditsChozoWallBottomZoomedGfx[5160] = INCBIN_U32("data/ending/credits_chozo_wall_bottom_zoomed.gfx.lz");
-const u32 sCreditsChozoWallBottomZoomedTileTable[368] = INCBIN_U32("data/ending/credits_chozo_wall_bottom_zoomed.tt");
-const u32 sCreditsChozoDrawingGfx[4770] = INCBIN_U32("data/ending/credits_chozo_drawing.gfx.lz");
-const u32 sCreditsChozoDrawingTileTable[368] = INCBIN_U32("data/ending/credits_chozo_drawing.tt");
+const u32 sCreditsChozoWallBackgroundGfx[7710] = {
+    #include "extracted/data/ending/credits_chozo_wall_background.gfx.lz.inc"
+};
+const u32 sCreditsChozoWallBackgroundTileTable[551] = {
+    #include "extracted/data/ending/credits_chozo_wall_background.tt.inc"
+};
+const u32 sCreditsChozoWallBottomGfx[3909] = {
+    #include "extracted/data/ending/credits_chozo_wall_bottom.gfx.lz.inc"
+};
+const u32 sCreditsChozoWallBottomTileTable[307] = {
+    #include "extracted/data/ending/credits_chozo_wall_bottom.tt.inc"
+};
+const u32 sCreditsChozoWallBottomZoomedGfx[5160] = {
+    #include "extracted/data/ending/credits_chozo_wall_bottom_zoomed.gfx.lz.inc"
+};
+const u32 sCreditsChozoWallBottomZoomedTileTable[368] = {
+    #include "extracted/data/ending/credits_chozo_wall_bottom_zoomed.tt.inc"
+};
+const u32 sCreditsChozoDrawingGfx[4770] = {
+    #include "extracted/data/ending/credits_chozo_drawing.gfx.lz.inc"
+};
+const u32 sCreditsChozoDrawingTileTable[368] = {
+    #include "extracted/data/ending/credits_chozo_drawing.tt.inc"
+};
 
-const u32 sUnlockedOptionsTileTable[127] = INCBIN_U32("data/ending/unlocked_options.tt");
+const u32 sUnlockedOptionsTileTable[127] = {
+    #include "extracted/data/ending/unlocked_options.tt.inc"
+};

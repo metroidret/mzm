@@ -1,11 +1,17 @@
 #include "data/rooms/crateria_rooms_data.h"
 #include "macros.h"
 
-const u8 sCrateria_7_Clipdata[538] = INCBIN_U8("data/rooms/crateria/crateria_7_clipdata.gfx");
+const u8 sCrateria_7_Clipdata[538] = {
+    #include "extracted/data/rooms/crateria/crateria_7_clipdata.gfx.inc"
+};
 
-const u8 sCrateria_7_Bg2[1867] = INCBIN_U8("data/rooms/crateria/crateria_7_bg2.gfx");
+const u8 sCrateria_7_Bg2[1867] = {
+    #include "extracted/data/rooms/crateria/crateria_7_bg2.gfx.inc"
+};
 
-const u8 sCrateria_7_Bg1[1592] = INCBIN_U8("data/rooms/crateria/crateria_7_bg1.gfx");
+const u8 sCrateria_7_Bg1[1592] = {
+    #include "extracted/data/rooms/crateria/crateria_7_bg1.gfx.inc"
+};
 
 const u8 sCrateria_7_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(20)] = {
 	3, 65, SPRITESET_IDX(1),

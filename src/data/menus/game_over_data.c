@@ -5,17 +5,39 @@
 
 #include "constants/game_over.h"
 
-const u16 sGameOverMenuPal[16 * 5] = INCBIN_U16("data/menus/game_over/palette.pal");
-const u32 sGameOverTextAndBackgroundGfx[2738] = INCBIN_U32("data/menus/game_over/text_and_background.gfx.lz");
-const u32 sGameOverTextPromptEnglishGfx[333] = INCBIN_U32("data/menus/game_over/text_prompt_english.gfx.lz");
-const u32 sGameOverTextPromptHiraganaGfx[428] = INCBIN_U32("data/menus/game_over/text_prompt_hiragana.gfx.lz");
-const u32 sGameOverTextPromptGermanGfx[] = INCBIN_U32("data/menus/game_over/text_prompt_german.gfx.lz");
-const u32 sGameOverTextPromptFrenchGfx[] = INCBIN_U32("data/menus/game_over/text_prompt_french.gfx.lz");
-const u32 sGameOverTextPromptItalianGfx[] = INCBIN_U32("data/menus/game_over/text_prompt_italian.gfx.lz");
-const u32 sGameOverTextPromptSpanishGfx[] = INCBIN_U32("data/menus/game_over/text_prompt_spanish.gfx.lz");
-const u32 sGameOverBackgroundTileTable[370] = INCBIN_U32("data/menus/game_over/background.tt");
-const u32 sGameOverTextTileTable[116] = INCBIN_U32("data/menus/game_over/text.tt");
-const u32 sGameOver_454520[160] = INCBIN_U32("data/menus/game_over/454520.tt");
+const u16 sGameOverMenuPal[16 * 5] = {
+    #include "extracted/data/menus/game_over/palette.pal.inc"
+};
+const u32 sGameOverTextAndBackgroundGfx[2738] = {
+    #include "extracted/data/menus/game_over/text_and_background.gfx.lz.inc"
+};
+const u32 sGameOverTextPromptEnglishGfx[333] = {
+    #include "extracted/data/menus/game_over/text_prompt_english.gfx.lz.inc"
+};
+const u32 sGameOverTextPromptHiraganaGfx[428] = {
+    #include "extracted/data/menus/game_over/text_prompt_hiragana.gfx.lz.inc"
+};
+const u32 sGameOverTextPromptGermanGfx[] = {
+    #include "extracted/data/menus/game_over/text_prompt_german.gfx.lz.inc"
+};
+const u32 sGameOverTextPromptFrenchGfx[] = {
+    #include "extracted/data/menus/game_over/text_prompt_french.gfx.lz.inc"
+};
+const u32 sGameOverTextPromptItalianGfx[] = {
+    #include "extracted/data/menus/game_over/text_prompt_italian.gfx.lz.inc"
+};
+const u32 sGameOverTextPromptSpanishGfx[] = {
+    #include "extracted/data/menus/game_over/text_prompt_spanish.gfx.lz.inc"
+};
+const u32 sGameOverBackgroundTileTable[370] = {
+    #include "extracted/data/menus/game_over/background.tt.inc"
+};
+const u32 sGameOverTextTileTable[116] = {
+    #include "extracted/data/menus/game_over/text.tt.inc"
+};
+const u32 sGameOver_454520[160] = {
+    #include "extracted/data/menus/game_over/454520.tt.inc"
+};
 
 const struct GameOverDynamicPalette sGameOverDynamicPalette_Empty = {
     .timer = 0,

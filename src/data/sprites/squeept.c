@@ -16,8 +16,12 @@ const s16 sSqueeptFallingMovement[16] = {
     14, 16, 16, SHORT_MAX
 };
 
-const u32 sSqueeptGfx[263] = INCBIN_U32("data/sprites/squeept.gfx.lz");
-const u16 sSqueeptPal[16] = INCBIN_U16("data/sprites/squeept.pal");
+const u32 sSqueeptGfx[263] = {
+    #include "extracted/data/sprites/squeept.gfx.lz.inc"
+};
+const u16 sSqueeptPal[16] = {
+    #include "extracted/data/sprites/squeept.pal.inc"
+};
 
 static const u16 sSqueeptOam_GoingUp_Frame0[OAM_DATA_SIZE(8)] = {
     8,

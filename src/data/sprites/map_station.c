@@ -1,8 +1,12 @@
 #include "data/sprites/map_station.h"
 #include "macros.h"
 
-const u32 sMapStationGfx[680] = INCBIN_U32("data/sprites/map_station.gfx.lz");
-const u16 sMapStationPal[64] = INCBIN_U16("data/sprites/map_station.pal");
+const u32 sMapStationGfx[680] = {
+    #include "extracted/data/sprites/map_station.gfx.lz.inc"
+};
+const u16 sMapStationPal[64] = {
+    #include "extracted/data/sprites/map_station.pal.inc"
+};
 
 static const u16 sMapStationOam_Inactive_Frame19[OAM_DATA_SIZE(25)] = {
     25,

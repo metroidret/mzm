@@ -1,9 +1,13 @@
 #include "data/rooms/tourian_rooms_data.h"
 #include "macros.h"
 
-const u8 sTourian_17_Clipdata[80] = INCBIN_U8("data/rooms/tourian/tourian_17_clipdata.gfx");
+const u8 sTourian_17_Clipdata[80] = {
+    #include "extracted/data/rooms/tourian/tourian_17_clipdata.gfx.inc"
+};
 
-const u8 sTourian_17_Bg1[162] = INCBIN_U8("data/rooms/tourian/tourian_17_bg1.gfx");
+const u8 sTourian_17_Bg1[162] = {
+    #include "extracted/data/rooms/tourian/tourian_17_bg1.gfx.inc"
+};
 
 const u8 sTourian_17_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
 	10, 9, SPRITESET_IDX(0),

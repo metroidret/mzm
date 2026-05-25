@@ -532,12 +532,22 @@ const struct FrameData sParticleSuperMissileTrailOam[9] = {
     [8] = FRAME_DATA_TERMINATOR
 };
 
-const u16 sBeamPal[16 * 6] = INCBIN_U16("data/weapons/beams.pal");
+const u16 sBeamPal[16 * 6] = {
+    #include "extracted/data/weapons/beams.pal.inc"
+};
 
-const u8 sNormalBeamGfx_Top[512] = INCBIN_U8("data/weapons/normal_beam_top.gfx");
-const u8 sNormalBeamGfx_Bottom[512] = INCBIN_U8("data/weapons/normal_beam_bottom.gfx");
-const u8 sNormalBeamGfx_Charged_Top[512] = INCBIN_U8("data/weapons/normal_beam_charged_top.gfx");
-const u8 sNormalBeamGfx_Charged_Bottom[512] = INCBIN_U8("data/weapons/normal_beam_charged_bottom.gfx");
+const u8 sNormalBeamGfx_Top[512] = {
+    #include "extracted/data/weapons/normal_beam_top.gfx.inc"
+};
+const u8 sNormalBeamGfx_Bottom[512] = {
+    #include "extracted/data/weapons/normal_beam_bottom.gfx.inc"
+};
+const u8 sNormalBeamGfx_Charged_Top[512] = {
+    #include "extracted/data/weapons/normal_beam_charged_top.gfx.inc"
+};
+const u8 sNormalBeamGfx_Charged_Bottom[512] = {
+    #include "extracted/data/weapons/normal_beam_charged_bottom.gfx.inc"
+};
 
 static const u16 sNormalBeamOam_Horizontal_Frame0[OAM_DATA_SIZE(1)] = {
     1,
@@ -786,10 +796,18 @@ const struct FrameData sChargedNormalBeamOam_Horizontal_Unused[5] = {
     [4] = FRAME_DATA_TERMINATOR
 };
 
-const u8 sLongBeamGfx_Top[512] = INCBIN_U8("data/weapons/long_beam_top.gfx");
-const u8 sLongBeamGfx_Bottom[512] = INCBIN_U8("data/weapons/long_beam_bottom.gfx");
-const u8 sLongBeamGfx_Charged_Top[512] = INCBIN_U8("data/weapons/long_beam_charged_top.gfx");
-const u8 sLongBeamGfx_Charged_Bottom[512] = INCBIN_U8("data/weapons/long_beam_charged_bottom.gfx");
+const u8 sLongBeamGfx_Top[512] = {
+    #include "extracted/data/weapons/long_beam_top.gfx.inc"
+};
+const u8 sLongBeamGfx_Bottom[512] = {
+    #include "extracted/data/weapons/long_beam_bottom.gfx.inc"
+};
+const u8 sLongBeamGfx_Charged_Top[512] = {
+    #include "extracted/data/weapons/long_beam_charged_top.gfx.inc"
+};
+const u8 sLongBeamGfx_Charged_Bottom[512] = {
+    #include "extracted/data/weapons/long_beam_charged_bottom.gfx.inc"
+};
 
 static const u16 sLongBeamOam_Horizontal_Frame0[OAM_DATA_SIZE(1)] = {
     1,
@@ -972,10 +990,18 @@ const struct FrameData sParticleChargedLongBeamTrailOam[5] = {
     [4] = FRAME_DATA_TERMINATOR
 };
 
-const u8 sIceBeamGfx_Top[512] = INCBIN_U8("data/weapons/ice_beam_top.gfx");
-const u8 sIceBeamGfx_Bottom[512] = INCBIN_U8("data/weapons/ice_beam_bottom.gfx");
-const u8 sIceBeamGfx_Charged_Top[512] = INCBIN_U8("data/weapons/ice_beam_charged_top.gfx");
-const u8 sIceBeamGfx_Charged_Bottom[512] = INCBIN_U8("data/weapons/ice_beam_charged_bottom.gfx");
+const u8 sIceBeamGfx_Top[512] = {
+    #include "extracted/data/weapons/ice_beam_top.gfx.inc"
+};
+const u8 sIceBeamGfx_Bottom[512] = {
+    #include "extracted/data/weapons/ice_beam_bottom.gfx.inc"
+};
+const u8 sIceBeamGfx_Charged_Top[512] = {
+    #include "extracted/data/weapons/ice_beam_charged_top.gfx.inc"
+};
+const u8 sIceBeamGfx_Charged_Bottom[512] = {
+    #include "extracted/data/weapons/ice_beam_charged_bottom.gfx.inc"
+};
 
 static const u16 sIceBeamOam_Horizontal_Frame0[OAM_DATA_SIZE(1)] = {
     1,
@@ -1243,10 +1269,18 @@ const struct FrameData sParticleChargedIceBeamTrailOam[6] = {
     [5] = FRAME_DATA_TERMINATOR
 };
 
-const u8 sWaveBeamGfx_Top[512] = INCBIN_U8("data/weapons/wave_beam_top.gfx");
-const u8 sWaveBeamGfx_Bottom[512] = INCBIN_U8("data/weapons/wave_beam_bottom.gfx");
-const u8 sWaveBeamGfx_Charged_Top[512] = INCBIN_U8("data/weapons/wave_beam_charged_top.gfx");
-const u8 sWaveBeamGfx_Charged_Bottom[512] = INCBIN_U8("data/weapons/wave_beam_charged_bottom.gfx");
+const u8 sWaveBeamGfx_Top[512] = {
+    #include "extracted/data/weapons/wave_beam_top.gfx.inc"
+};
+const u8 sWaveBeamGfx_Bottom[512] = {
+    #include "extracted/data/weapons/wave_beam_bottom.gfx.inc"
+};
+const u8 sWaveBeamGfx_Charged_Top[512] = {
+    #include "extracted/data/weapons/wave_beam_charged_top.gfx.inc"
+};
+const u8 sWaveBeamGfx_Charged_Bottom[512] = {
+    #include "extracted/data/weapons/wave_beam_charged_bottom.gfx.inc"
+};
 
 static const u16 sWaveBeamOam_Horizontal_Frame0[OAM_DATA_SIZE(1)] = {
     1,
@@ -2024,10 +2058,18 @@ const struct FrameData sParticleChargedWaveBeamTrailOam[5] = {
     [4] = FRAME_DATA_TERMINATOR
 };
 
-const u8 sPlasmaBeamGfx_Top[512] = INCBIN_U8("data/weapons/plasma_beam_top.gfx");
-const u8 sPlasmaBeamGfx_Bottom[512] = INCBIN_U8("data/weapons/plasma_beam_bottom.gfx");
-const u8 sPlasmaBeamGfx_Charged_Top[512] = INCBIN_U8("data/weapons/plasma_beam_charged_top.gfx");
-const u8 sPlasmaBeamGfx_Charged_Bottom[512] = INCBIN_U8("data/weapons/plasma_beam_charged_bottom.gfx");
+const u8 sPlasmaBeamGfx_Top[512] = {
+    #include "extracted/data/weapons/plasma_beam_top.gfx.inc"
+};
+const u8 sPlasmaBeamGfx_Bottom[512] = {
+    #include "extracted/data/weapons/plasma_beam_bottom.gfx.inc"
+};
+const u8 sPlasmaBeamGfx_Charged_Top[512] = {
+    #include "extracted/data/weapons/plasma_beam_charged_top.gfx.inc"
+};
+const u8 sPlasmaBeamGfx_Charged_Bottom[512] = {
+    #include "extracted/data/weapons/plasma_beam_charged_bottom.gfx.inc"
+};
 
 static const u16 sPlasmaBeamOam_Horizontal_NoWave_Frame0[OAM_DATA_SIZE(1)] = {
     1,
@@ -2964,10 +3006,18 @@ const struct FrameData sParticleChargedFullBeamTrailOam[9] = {
     [8] = FRAME_DATA_TERMINATOR
 };
 
-const u8 sPistolGfx_Top[512] = INCBIN_U8("data/weapons/pistol_top.gfx");
-const u8 sPistolGfx_Bottom[512] = INCBIN_U8("data/weapons/pistol_bottom.gfx");
-const u8 sPistolGfx_Charged_Top[512] = INCBIN_U8("data/weapons/pistol_charged_top.gfx");
-const u8 sPistolGfx_Charged_Bottom[512] = INCBIN_U8("data/weapons/pistol_charged_bottom.gfx");
+const u8 sPistolGfx_Top[512] = {
+    #include "extracted/data/weapons/pistol_top.gfx.inc"
+};
+const u8 sPistolGfx_Bottom[512] = {
+    #include "extracted/data/weapons/pistol_bottom.gfx.inc"
+};
+const u8 sPistolGfx_Charged_Top[512] = {
+    #include "extracted/data/weapons/pistol_charged_top.gfx.inc"
+};
+const u8 sPistolGfx_Charged_Bottom[512] = {
+    #include "extracted/data/weapons/pistol_charged_bottom.gfx.inc"
+};
 
 static const u16 sPistolOam_Horizontal_Frame0[OAM_DATA_SIZE(1)] = {
     1,
