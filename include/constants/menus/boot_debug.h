@@ -4,6 +4,8 @@
 #include "types.h"
 #include "macros.h"
 
+#define BOOT_DEBUG_MAP_SCROLL_SPEED 8
+
 MAKE_ENUM(u8, BootDebugMenuDepth) {
     BOOT_DEBUG_MENU_MAIN,
     BOOT_DEBUG_MENU_SUB,
