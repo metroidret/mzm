@@ -39,7 +39,7 @@ The default built ROM is mzm_us.gba
 - Install `binutils-arm-none-eabi` by running this command: `sudo apt install binutils-arm-none-eabi` or `sudo dnf install arm-none-eabi-binutils-cs`
 - Install `git` by running this command: `sudo apt install git` or `sudo dnf install git`
 - Install `make` by running this command: `sudo apt install make` or `sudo dnf install make`
-- Clone [agbcc](https://github.com/jiangzhengwenjz/agbcc) by running this command: `git clone https://github.com/jiangzhengwenjz/agbcc`
+- Clone [agbcc](https://github.com/jiangzhengwenjz/agbcc) by running this command: `git clone https://github.com/jiangzhengwenjz/agbcc.git`
 - Enter the agbcc folder (run `cd agbcc`) and build it (run `./build.sh`)
 - Either:
   - Install agbcc into this project (by using its `./install.sh <path>` script, where `<path>` is the path to the root of this repository), or
