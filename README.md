@@ -36,9 +36,9 @@ The default built ROM is mzm_us.gba
 
 - **WINDOWS ONLY**: Install and setup [WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
 - Run `sudo apt update` just in case
-- Install `binutils-arm-none-eabi` by running this command: `sudo apt-get install binutils-arm-none-eabi`
-- Install `git` by running this command: `sudo apt-get install git`
-- Install `make` by running this command: `sudo apt-get install make`
+- Install `binutils-arm-none-eabi` by running this command: `sudo apt install binutils-arm-none-eabi`
+- Install `git` by running this command: `sudo apt install git`
+- Install `make` by running this command: `sudo apt install make`
 - Clone [agbcc](https://github.com/jiangzhengwenjz/agbcc) by running this command: `git clone https://github.com/jiangzhengwenjz/agbcc`
 - Enter the agbcc folder (run `cd agbcc`) and build it (run `./build.sh`)
 - Either:
