@@ -1307,17 +1307,17 @@ void SamusCheckSetEnvironmentalEffect(struct SamusData* pData, u32 defaultOffset
                     effect = ENV_EFFECT_GOING_OUT_OF_WATER;
                     found++;
                 }
-                else if (affecting != HAZARD_TYPE_STRONG_LAVA && previousAffecting == HAZARD_TYPE_STRONG_LAVA)
+                else if (affecting != HAZARD_TYPE_LAVA && previousAffecting == HAZARD_TYPE_LAVA)
                 {
                     effect = ENV_EFFECT_GOING_OUT_OF_LAVA;
                     found++;
                 }
-                else if (affecting != HAZARD_TYPE_WEAK_LAVA && previousAffecting == HAZARD_TYPE_WEAK_LAVA)
+                else if (affecting != HAZARD_TYPE_WEAK_ACID && previousAffecting == HAZARD_TYPE_WEAK_ACID)
                 {
                     effect = ENV_EFFECT_GOING_OUT_OF_LAVA;
                     found++;
                 }
-                else if (affecting != HAZARD_TYPE_ACID && previousAffecting == HAZARD_TYPE_ACID)
+                else if (affecting != HAZARD_TYPE_STRONG_ACID && previousAffecting == HAZARD_TYPE_STRONG_ACID)
                 {
                     effect = ENV_EFFECT_GOING_OUT_OF_ACID;
                     found++;
@@ -1331,17 +1331,17 @@ void SamusCheckSetEnvironmentalEffect(struct SamusData* pData, u32 defaultOffset
                     effect = ENV_EFFECT_GOING_OUT_OF_WATER;
                     found++;
                 }
-                else if (affecting == HAZARD_TYPE_STRONG_LAVA && previousAffecting != HAZARD_TYPE_STRONG_LAVA)
+                else if (affecting == HAZARD_TYPE_LAVA && previousAffecting != HAZARD_TYPE_LAVA)
                 {
                     effect = ENV_EFFECT_GOING_OUT_OF_LAVA;
                     found++;
                 }
-                else if (affecting == HAZARD_TYPE_WEAK_LAVA && previousAffecting != HAZARD_TYPE_WEAK_LAVA)
+                else if (affecting == HAZARD_TYPE_WEAK_ACID && previousAffecting != HAZARD_TYPE_WEAK_ACID)
                 {
                     effect = ENV_EFFECT_GOING_OUT_OF_LAVA;
                     found++;
                 }
-                else if (affecting == HAZARD_TYPE_ACID && previousAffecting != HAZARD_TYPE_ACID)
+                else if (affecting == HAZARD_TYPE_STRONG_ACID && previousAffecting != HAZARD_TYPE_STRONG_ACID)
                 {
                     effect = ENV_EFFECT_GOING_OUT_OF_ACID;
                     found++;
@@ -1544,27 +1544,27 @@ void SamusUpdateEnvironmentalEffect(struct SamusData* pData)
         subAnimEnded = FALSE;
 
         // Check is only half-way in a liquid and can be damaged by said liquid
-        if (affecting == HAZARD_TYPE_STRONG_LAVA && affectingTop != HAZARD_TYPE_STRONG_LAVA)
+        if (affecting == HAZARD_TYPE_LAVA && affectingTop != HAZARD_TYPE_LAVA)
         {
-            // Strong lava, check has gravity
+            // Lava, check has gravity
             if (!(gEquipment.suitMiscActivation & SMF_GRAVITY_SUIT))
             {
                 effect = ENV_EFFECT_TAKING_DAMAGE_IN_LAVA;
                 subAnimEnded++;
             }
         }
-        else if (affecting == HAZARD_TYPE_WEAK_LAVA && affectingTop != HAZARD_TYPE_WEAK_LAVA)
+        else if (affecting == HAZARD_TYPE_WEAK_ACID && affectingTop != HAZARD_TYPE_WEAK_ACID)
         {
-            // Weak lava, check has varia or gravity
+            // Weak acid, check has varia or gravity
             if (!(gEquipment.suitMiscActivation & SMF_ALL_SUITS))
             {
                 effect = ENV_EFFECT_TAKING_DAMAGE_IN_LAVA;
                 subAnimEnded++;
             }
         }
-        else if (affecting == HAZARD_TYPE_ACID && affectingTop != HAZARD_TYPE_ACID)
+        else if (affecting == HAZARD_TYPE_STRONG_ACID && affectingTop != HAZARD_TYPE_STRONG_ACID)
         {
-            // Acid, always
+            // Strong acid, always
             effect = ENV_EFFECT_TAKING_DAMAGE_IN_ACID;
             subAnimEnded++;
         }
@@ -1584,8 +1584,8 @@ void SamusUpdateEnvironmentalEffect(struct SamusData* pData)
             }
             else
             {
-                if (affectingLiquid == HAZARD_TYPE_STRONG_LAVA || affectingLiquid == HAZARD_TYPE_WEAK_LAVA ||
-                    affectingLiquid == HAZARD_TYPE_ACID)
+                if (affectingLiquid == HAZARD_TYPE_LAVA || affectingLiquid == HAZARD_TYPE_WEAK_ACID ||
+                    affectingLiquid == HAZARD_TYPE_STRONG_ACID)
                 {
                     // Is a valid liquid, use its position
                     pEnv->yPosition = liquidY & BLOCK_POSITION_FLAG;
@@ -2647,9 +2647,9 @@ void SamusUpdatePhysics(struct SamusData* pData)
     switch (affecting)
     {
         case HAZARD_TYPE_WATER:
-        case HAZARD_TYPE_STRONG_LAVA:
-        case HAZARD_TYPE_WEAK_LAVA:
-        case HAZARD_TYPE_ACID:
+        case HAZARD_TYPE_LAVA:
+        case HAZARD_TYPE_WEAK_ACID:
+        case HAZARD_TYPE_STRONG_ACID:
             // In liquid, check has gravity to see if slowed
             if (!(pEquipment->suitMiscActivation & SMF_GRAVITY_SUIT))
                 slowed++;
@@ -3619,8 +3619,8 @@ u8 SamusTakeHazardDamage(struct SamusData* pData, struct Equipment* pEquipment, 
 
     if (pEquipment->suitMiscActivation & SMF_GRAVITY_SUIT)
     {
-        // Has gravity, only check for acid
-        if (hazard == HAZARD_TYPE_ACID)
+        // Has gravity, only check for strong acid
+        if (hazard == HAZARD_TYPE_STRONG_ACID)
         {
             damaged = TRUE;
             if (pHazard->damageTimer > 3)
@@ -3629,14 +3629,14 @@ u8 SamusTakeHazardDamage(struct SamusData* pData, struct Equipment* pEquipment, 
     }
     else if (pEquipment->suitMiscActivation & SMF_VARIA_SUIT)
     {
-        // Has varia, only check for acid and strong lava
-        if (hazard == HAZARD_TYPE_ACID)
+        // Has varia, only check for strong acid and lava
+        if (hazard == HAZARD_TYPE_STRONG_ACID)
         {
             damaged = TRUE;
             if (pHazard->damageTimer > 1)
                 damageType = SAMUS_HAZARD_DAMAGE_TYPE_LIQUID;
         }
-        else if (hazard == HAZARD_TYPE_STRONG_LAVA)
+        else if (hazard == HAZARD_TYPE_LAVA)
         {
             damaged = TRUE;
             if (pHazard->damageTimer > 4)
@@ -3646,7 +3646,7 @@ u8 SamusTakeHazardDamage(struct SamusData* pData, struct Equipment* pEquipment, 
     else
     {
         // Has no suit, check for everything
-        if (hazard == HAZARD_TYPE_ACID)
+        if (hazard == HAZARD_TYPE_STRONG_ACID)
         {
             damaged = TRUE;
             damageType = SAMUS_HAZARD_DAMAGE_TYPE_LIQUID;
@@ -3664,13 +3664,13 @@ u8 SamusTakeHazardDamage(struct SamusData* pData, struct Equipment* pEquipment, 
                 knockback = TRUE;
             }
         }
-        else if (hazard == HAZARD_TYPE_STRONG_LAVA)
+        else if (hazard == HAZARD_TYPE_LAVA)
         {
             damaged = TRUE;
             if (pHazard->damageTimer > 2)
                 damageType = SAMUS_HAZARD_DAMAGE_TYPE_LIQUID;
         }
-        else if (hazard == HAZARD_TYPE_WEAK_LAVA)
+        else if (hazard == HAZARD_TYPE_WEAK_ACID)
         {
             damaged = TRUE;
             if (pHazard->damageTimer > 7)
@@ -3704,7 +3704,7 @@ u8 SamusTakeHazardDamage(struct SamusData* pData, struct Equipment* pEquipment, 
         {
             case 1:
             case 33:
-                if (hazard == HAZARD_TYPE_ACID || hazard == HAZARD_TYPE_STRONG_LAVA || hazard == HAZARD_TYPE_WEAK_LAVA)
+                if (hazard == HAZARD_TYPE_STRONG_ACID || hazard == HAZARD_TYPE_LAVA || hazard == HAZARD_TYPE_WEAK_ACID)
                     SoundPlay(SOUND_LIQUID_DAMAGE_SUBMERGED);
                 break;
     

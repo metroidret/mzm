@@ -3689,8 +3689,8 @@ void SpriteUtilSetSplashEffect(u16 yPosition, u16 xPosition, SplashSize size)
                 ParticleSet(yPosition, xPosition, PE_SPRITE_SPLASH_WATER_HUGE);
             break;
 
-        case HAZARD_TYPE_WEAK_LAVA:
-        case HAZARD_TYPE_STRONG_LAVA:
+        case HAZARD_TYPE_WEAK_ACID:
+        case HAZARD_TYPE_LAVA:
             if (size == SPLASH_SMALL)
                 ParticleSet(yPosition, xPosition, PE_SPRITE_SPLASH_LAVA_SMALL);
             else if (size == SPLASH_BIG)
@@ -3699,7 +3699,7 @@ void SpriteUtilSetSplashEffect(u16 yPosition, u16 xPosition, SplashSize size)
                 ParticleSet(yPosition, xPosition, PE_SPRITE_SPLASH_LAVA_HUGE);
             break;
         
-        case HAZARD_TYPE_ACID:            
+        case HAZARD_TYPE_STRONG_ACID:            
             if (size == SPLASH_SMALL)
                 ParticleSet(yPosition, xPosition, PE_SPRITE_SPLASH_ACID_SMALL);
             else if (size == SPLASH_BIG)

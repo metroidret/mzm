@@ -478,7 +478,7 @@ u32 ClipdataUpdateCurrentAffecting(u16 yPosition, u16 tileY, u16 tileX, u8 dontC
     specialClip = HAZARD_TYPE_NONE;
 
     // Check for hazard behavior (tile based)
-    if ((u32)BEHAVIOR_TO_HAZARD(behavior) <= BEHAVIOR_TO_HAZARD(CLIP_BEHAVIOR_ACID))
+    if ((u32)BEHAVIOR_TO_HAZARD(behavior) <= BEHAVIOR_TO_HAZARD(CLIP_BEHAVIOR_STRONG_ACID))
     {
         // Directly get from the table
         specialClip = sHazardClipdataValues[BEHAVIOR_TO_HAZARD(behavior)];
