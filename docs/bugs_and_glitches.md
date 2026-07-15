@@ -80,9 +80,9 @@ So when Samus is in a liquid that doesn't slow her, she also won't be slowed eve
 
 ```diff
   case HAZARD_TYPE_WATER:
-  case HAZARD_TYPE_STRONG_LAVA:
-  case HAZARD_TYPE_WEAK_LAVA:
-  case HAZARD_TYPE_ACID:
+  case HAZARD_TYPE_LAVA:
+  case HAZARD_TYPE_WEAK_ACID:
+  case HAZARD_TYPE_STRONG_ACID:
       // In liquid, check has gravity to see if slowed
       if (!(pEquipment->suitMiscActivation & SMF_GRAVITY_SUIT))
           slowed++;
