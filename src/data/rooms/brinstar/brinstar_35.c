@@ -1,11 +1,17 @@
 #include "data/rooms/brinstar_rooms_data.h"
 #include "macros.h"
 
-const u8 sBrinstar_35_Clipdata[123] = INCBIN_U8("data/rooms/brinstar/brinstar_35_clipdata.gfx");
+const u8 sBrinstar_35_Clipdata[123] = {
+    #include "extracted/data/rooms/brinstar/brinstar_35_clipdata.gfx.inc"
+};
 
-const u8 sBrinstar_35_Bg2[58] = INCBIN_U8("data/rooms/brinstar/brinstar_35_bg2.gfx");
+const u8 sBrinstar_35_Bg2[58] = {
+    #include "extracted/data/rooms/brinstar/brinstar_35_bg2.gfx.inc"
+};
 
-const u8 sBrinstar_35_Bg1[482] = INCBIN_U8("data/rooms/brinstar/brinstar_35_bg1.gfx");
+const u8 sBrinstar_35_Bg1[482] = {
+    #include "extracted/data/rooms/brinstar/brinstar_35_bg1.gfx.inc"
+};
 
 const u8 sBrinstar_35_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(3)] = {
 	5, 7, SPRITESET_IDX(1),

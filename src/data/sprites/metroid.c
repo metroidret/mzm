@@ -16,9 +16,15 @@ const s16 sMetroidSpawningXMovement[81] = {
     -1, -1, -1, 0, -1, 0, -1, 0, -1, 0, -1, 0, 0, 0, 0, SHORT_MAX 
 };
 
-const u32 sMetroidGfx[793] = INCBIN_U32("data/sprites/metroid.gfx.lz");
-const u16 sMetroidPal[80] = INCBIN_U16("data/sprites/metroid.pal");
-const u16 sMetroidPal_SamusGrabbed[80] = INCBIN_U16("data/sprites/metroid_samus_grabbed.pal");
+const u32 sMetroidGfx[793] = {
+    #include "extracted/data/sprites/metroid.gfx.lz.inc"
+};
+const u16 sMetroidPal[80] = {
+    #include "extracted/data/sprites/metroid.pal.inc"
+};
+const u16 sMetroidPal_SamusGrabbed[80] = {
+    #include "extracted/data/sprites/metroid_samus_grabbed.pal.inc"
+};
 
 static const u16 sMetroidShellOam_Idle_Frame0[OAM_DATA_SIZE(2)] = {
     2,

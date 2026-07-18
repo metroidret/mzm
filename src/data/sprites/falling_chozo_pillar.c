@@ -1,8 +1,12 @@
 #include "data/sprites/falling_chozo_pillar.h"
 #include "macros.h"
 
-const u32 sFallingChozoPillarGfx[219] = INCBIN_U32("data/sprites/falling_chozo_pillar.gfx.lz");
-const u16 sFallingChozoPillarPal[16] = INCBIN_U16("data/sprites/falling_chozo_pillar.pal");
+const u32 sFallingChozoPillarGfx[219] = {
+    #include "extracted/data/sprites/falling_chozo_pillar.gfx.lz.inc"
+};
+const u16 sFallingChozoPillarPal[16] = {
+    #include "extracted/data/sprites/falling_chozo_pillar.pal.inc"
+};
 
 static const u16 sFallingChozoPillarOam_Falling_Frame0[OAM_DATA_SIZE(8)] = {
     8,

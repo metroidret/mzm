@@ -1,8 +1,12 @@
 #include "data/sprites/rising_chozo_pillar.h"
 #include "macros.h"
 
-const u32 sRisingChozoPillarGfx[671] = INCBIN_U32("data/sprites/rising_chozo_pillar.gfx.lz");
-const u16 sRisingChozoPillarPal[64] = INCBIN_U16("data/sprites/rising_chozo_pillar.pal");
+const u32 sRisingChozoPillarGfx[671] = {
+    #include "extracted/data/sprites/rising_chozo_pillar.gfx.lz.inc"
+};
+const u16 sRisingChozoPillarPal[64] = {
+    #include "extracted/data/sprites/rising_chozo_pillar.pal.inc"
+};
 
 static const u16 sRisingChozoPillarPlatformOam_Slot0Spawning_Frame0[OAM_DATA_SIZE(2)] = {
     2,

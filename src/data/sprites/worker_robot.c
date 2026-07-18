@@ -1,8 +1,12 @@
 #include "data/sprites/worker_robot.h"
 #include "macros.h"
 
-const u32 sWorkerRobotGfx[376] = INCBIN_U32("data/sprites/worker_robot.gfx.lz");
-const u16 sWorkerRobotPal[32] = INCBIN_U16("data/sprites/worker_robot.pal");
+const u32 sWorkerRobotGfx[376] = {
+    #include "extracted/data/sprites/worker_robot.gfx.lz.inc"
+};
+const u16 sWorkerRobotPal[32] = {
+    #include "extracted/data/sprites/worker_robot.pal.inc"
+};
 
 static const u16 sWorkerRobotOam_Walking_Frame2[OAM_DATA_SIZE(6)] = {
     6,

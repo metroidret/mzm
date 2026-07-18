@@ -238,7 +238,9 @@ const u8 sClipdataCollisionTypes_Tilemap[CLIPDATA_TILEMAP_COUNT] = {
     [CLIPDATA_TILEMAP_NO_HATCH_DOOR_BOTTOM_RIGHT] = CLIPDATA_TYPE_DOOR, // 0xCB
 };
 
-const u16 sCommonTilemap[832] = INCBIN_U16("data/common/common_tilemap.tt");
+const u16 sCommonTilemap[832] = {
+    #include "extracted/data/common/common_tilemap.tt.inc"
+};
 
 const u8 sClipdataCollisionTypes_Test[CLIPDATA_TEST_COUNT] = {
     [CLIPDATA_TEST_AIR] = CLIPDATA_TYPE_AIR, // 0x0

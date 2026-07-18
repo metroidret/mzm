@@ -2633,8 +2633,12 @@ const s16 sRidleyIdleYOffsets[65] = {
     0, 0, 0, SHORT_MAX
 };
 
-const u32 sRidleyGfx[2211] = INCBIN_U32("data/sprites/ridley.gfx.lz");
-const u16 sRidleyPal[128] = INCBIN_U16("data/sprites/ridley.pal");
+const u32 sRidleyGfx[2211] = {
+    #include "extracted/data/sprites/ridley.gfx.lz.inc"
+};
+const u16 sRidleyPal[128] = {
+    #include "extracted/data/sprites/ridley.pal.inc"
+};
 
 static const u16 sRidleyOam_Idle_Frame0[OAM_DATA_SIZE(16)] = {
     16,

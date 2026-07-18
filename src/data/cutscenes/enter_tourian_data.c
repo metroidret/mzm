@@ -73,12 +73,30 @@ const struct FrameData sEnterTourianOam_Empty[1] = {
     [0] = FRAME_DATA_TERMINATOR
 };
 
-const u16 sEnterTourianBackgroundPal[10 * 16] = INCBIN_U16("data/cutscenes/enter_tourian/background.pal");
-const u16 sEnterTourianMetroidPal[6 * 16] = INCBIN_U16("data/cutscenes/enter_tourian/metroid.pal");
-const u32 sEnterTourianBackgroundGfx[3110] = INCBIN_U32("data/cutscenes/enter_tourian/background.gfx.lz");
-const u32 sEnterTourianForegroundGfx[2483] = INCBIN_U32("data/cutscenes/enter_tourian/foreground.gfx.lz");
-const u32 sEnterTourianDeadSpacePirateGfx_1[55] = INCBIN_U32("data/cutscenes/enter_tourian/dead_space_pirate_1.gfx.lz");
-const u32 sEnterTourianDeadSpacePirateGfx_2[77] = INCBIN_U32("data/cutscenes/enter_tourian/dead_space_pirate_2.gfx.lz");
-const u32 sEnterTourianDeadSpacePirateGfx_3[32] = INCBIN_U32("data/cutscenes/enter_tourian/dead_space_pirate_3.gfx.lz");
-const u32 sEnterTourianBackgroundTileTable[385] = INCBIN_U32("data/cutscenes/enter_tourian/background.tt");
-const u32 sEnterTourianForegroundTileTable[385] = INCBIN_U32("data/cutscenes/enter_tourian/foreground.tt");
+const u16 sEnterTourianBackgroundPal[10 * 16] = {
+    #include "extracted/data/cutscenes/enter_tourian/background.pal.inc"
+};
+const u16 sEnterTourianMetroidPal[6 * 16] = {
+    #include "extracted/data/cutscenes/enter_tourian/metroid.pal.inc"
+};
+const u32 sEnterTourianBackgroundGfx[3110] = {
+    #include "extracted/data/cutscenes/enter_tourian/background.gfx.lz.inc"
+};
+const u32 sEnterTourianForegroundGfx[2483] = {
+    #include "extracted/data/cutscenes/enter_tourian/foreground.gfx.lz.inc"
+};
+const u32 sEnterTourianDeadSpacePirateGfx_1[55] = {
+    #include "extracted/data/cutscenes/enter_tourian/dead_space_pirate_1.gfx.lz.inc"
+};
+const u32 sEnterTourianDeadSpacePirateGfx_2[77] = {
+    #include "extracted/data/cutscenes/enter_tourian/dead_space_pirate_2.gfx.lz.inc"
+};
+const u32 sEnterTourianDeadSpacePirateGfx_3[32] = {
+    #include "extracted/data/cutscenes/enter_tourian/dead_space_pirate_3.gfx.lz.inc"
+};
+const u32 sEnterTourianBackgroundTileTable[385] = {
+    #include "extracted/data/cutscenes/enter_tourian/background.tt.inc"
+};
+const u32 sEnterTourianForegroundTileTable[385] = {
+    #include "extracted/data/cutscenes/enter_tourian/foreground.tt.inc"
+};

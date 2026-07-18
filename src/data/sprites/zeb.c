@@ -1,10 +1,18 @@
 #include "data/sprites/zeb.h"
 #include "macros.h"
 
-const u32 sZebPinkGfx[162] = INCBIN_U32("data/sprites/zeb_pink.gfx.lz");
-const u16 sZebPinkPal[16] = INCBIN_U16("data/sprites/zeb_pink.pal");
-const u32 sZebBlueGfx[162] = INCBIN_U32("data/sprites/zeb_blue.gfx.lz");
-const u16 sZebBluePal[16] = INCBIN_U16("data/sprites/zeb_blue.pal");
+const u32 sZebPinkGfx[162] = {
+    #include "extracted/data/sprites/zeb_pink.gfx.lz.inc"
+};
+const u16 sZebPinkPal[16] = {
+    #include "extracted/data/sprites/zeb_pink.pal.inc"
+};
+const u32 sZebBlueGfx[162] = {
+    #include "extracted/data/sprites/zeb_blue.gfx.lz.inc"
+};
+const u16 sZebBluePal[16] = {
+    #include "extracted/data/sprites/zeb_blue.pal.inc"
+};
 
 static const u16 sZebOam_Idle_Frame0[OAM_DATA_SIZE(2)] = {
     2,

@@ -20,7 +20,9 @@ const u8 sRidley_10_Scrolls[SCROLL_DATA_SIZE(2)] = {
 	UCHAR_MAX, // Breakable block Y bound extension
 };
 
-const u8 sRidley_17_Clipdata[346] = INCBIN_U8("data/rooms/ridley/ridley_17_clipdata.gfx");
+const u8 sRidley_17_Clipdata[346] = {
+    #include "extracted/data/rooms/ridley/ridley_17_clipdata.gfx.inc"
+};
 
 const u8 sRidley_17_Spriteset2[ENEMY_ROOM_DATA_ARRAY_SIZE(10)] = {
 	8, 23, SPRITESET_IDX(2),
@@ -35,7 +37,9 @@ const u8 sRidley_17_Spriteset2[ENEMY_ROOM_DATA_ARRAY_SIZE(10)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sRidley_17_Bg2[1131] = INCBIN_U8("data/rooms/ridley/ridley_17_bg2.gfx");
+const u8 sRidley_17_Bg2[1131] = {
+    #include "extracted/data/rooms/ridley/ridley_17_bg2.gfx.inc"
+};
 
 const u8 sRidley_17_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(13)] = {
 	8, 23, SPRITESET_IDX(2),
@@ -53,7 +57,9 @@ const u8 sRidley_17_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(13)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sRidley_17_Bg1[1107] = INCBIN_U8("data/rooms/ridley/ridley_17_bg1.gfx");
+const u8 sRidley_17_Bg1[1107] = {
+    #include "extracted/data/rooms/ridley/ridley_17_bg1.gfx.inc"
+};
 
 const u8 sRidley_17_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(13)] = {
 	8, 23, SPRITESET_IDX(2),
@@ -71,5 +77,7 @@ const u8 sRidley_17_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(13)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sRidley_17_Bg0[466] = INCBIN_U8("data/rooms/ridley/ridley_17_bg0.gfx");
+const u8 sRidley_17_Bg0[466] = {
+    #include "extracted/data/rooms/ridley/ridley_17_bg0.gfx.inc"
+};
 

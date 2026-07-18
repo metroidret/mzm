@@ -20,11 +20,17 @@ const u8 sCrateria_2_Scrolls[SCROLL_DATA_SIZE(2)] = {
 	UCHAR_MAX, // Breakable block Y bound extension
 };
 
-const u8 sCrateria_3_Clipdata[108] = INCBIN_U8("data/rooms/crateria/crateria_3_clipdata.gfx");
+const u8 sCrateria_3_Clipdata[108] = {
+    #include "extracted/data/rooms/crateria/crateria_3_clipdata.gfx.inc"
+};
 
-const u8 sCrateria_3_Bg2[184] = INCBIN_U8("data/rooms/crateria/crateria_3_bg2.gfx");
+const u8 sCrateria_3_Bg2[184] = {
+    #include "extracted/data/rooms/crateria/crateria_3_bg2.gfx.inc"
+};
 
-const u8 sCrateria_3_Bg1[340] = INCBIN_U8("data/rooms/crateria/crateria_3_bg1.gfx");
+const u8 sCrateria_3_Bg1[340] = {
+    #include "extracted/data/rooms/crateria/crateria_3_bg1.gfx.inc"
+};
 
 const u8 sCrateria_3_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(1)] = {
 	ROOM_SPRITE_DATA_TERMINATOR

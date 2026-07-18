@@ -1,8 +1,12 @@
 #include "data/sprites/zipline_generator.h"
 #include "macros.h"
 
-const u32 sZiplineGeneratorGfx[1124] = INCBIN_U32("data/sprites/zipline_generator.gfx.lz");
-const u16 sZiplineGeneratorPal[64] = INCBIN_U16("data/sprites/zipline_generator.pal");
+const u32 sZiplineGeneratorGfx[1124] = {
+    #include "extracted/data/sprites/zipline_generator.gfx.lz.inc"
+};
+const u16 sZiplineGeneratorPal[64] = {
+    #include "extracted/data/sprites/zipline_generator.pal.inc"
+};
 
 static const u16 sZiplineGeneratorPartOam_ConductorDeactivated_Frame0[OAM_DATA_SIZE(10)] = {
     10,

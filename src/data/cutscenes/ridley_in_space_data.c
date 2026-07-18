@@ -185,13 +185,27 @@ const struct OamArray sRidleyInSpaceCutsceneOam[RIDLEY_IN_SPACE_OAM_ID_COUNT] = 
     }
 };
 
-const u32 sRidleyInSpaceShipsGfx[1565] = INCBIN_U32("data/cutscenes/ridley_in_space/ship.gfx.lz");
-const u32 sRidleyInSpaceRidleySittingGfx[3848] = INCBIN_U32("data/cutscenes/ridley_in_space/ridley_sitting.gfx.lz");
-const u32 sRidleyInSpaceShipInteriorGfx[4391] = INCBIN_U32("data/cutscenes/ridley_in_space/ship_interior.gfx.lz");
-const u32 sRidleyInSpaceRidleySuspiciousGfx[1961] = INCBIN_U32("data/cutscenes/ridley_in_space/ridley_suspicious.gfx.lz");
-const u32 sRidleyInSpaceShipInterior2Gfx[4235] = INCBIN_U32("data/cutscenes/ridley_in_space/ship_interior_2.gfx.lz");
-const u32 sRidleyInSpaceMotherShipLeavingGfx[1497] = INCBIN_U32("data/cutscenes/ridley_in_space/mother_ship_leaving.gfx.lz");
-const u32 sRidleyInSpaceSpaceBackgroundGfx[5470] = INCBIN_U32("data/cutscenes/ridley_in_space/space_background.gfx.lz");
+const u32 sRidleyInSpaceShipsGfx[1565] = {
+    #include "extracted/data/cutscenes/ridley_in_space/ship.gfx.lz.inc"
+};
+const u32 sRidleyInSpaceRidleySittingGfx[3848] = {
+    #include "extracted/data/cutscenes/ridley_in_space/ridley_sitting.gfx.lz.inc"
+};
+const u32 sRidleyInSpaceShipInteriorGfx[4391] = {
+    #include "extracted/data/cutscenes/ridley_in_space/ship_interior.gfx.lz.inc"
+};
+const u32 sRidleyInSpaceRidleySuspiciousGfx[1961] = {
+    #include "extracted/data/cutscenes/ridley_in_space/ridley_suspicious.gfx.lz.inc"
+};
+const u32 sRidleyInSpaceShipInterior2Gfx[4235] = {
+    #include "extracted/data/cutscenes/ridley_in_space/ship_interior_2.gfx.lz.inc"
+};
+const u32 sRidleyInSpaceMotherShipLeavingGfx[1497] = {
+    #include "extracted/data/cutscenes/ridley_in_space/mother_ship_leaving.gfx.lz.inc"
+};
+const u32 sRidleyInSpaceSpaceBackgroundGfx[5470] = {
+    #include "extracted/data/cutscenes/ridley_in_space/space_background.gfx.lz.inc"
+};
 
 
 const u16 sRidleyInSpaceOam_LeftBlueShip_Frame0[OAM_DATA_SIZE(1)] = {
@@ -358,16 +372,40 @@ const struct FrameData sRidleyInSpaceOam_ShipLeavingParticleSecond[5] = {
     [4] = FRAME_DATA_TERMINATOR
 };
 
-const u16 sRidleyInSpaceShipsPal[3 * 16] = INCBIN_U16("data/cutscenes/ridley_in_space/ships.pal");
-const u16 sRidleyInSpace_39d910_Pal[6 * 16] = INCBIN_U16("data/cutscenes/ridley_in_space/39d910.pal");
-const u16 sRidleyInSpaceRedAlertPal[6 * 16] = INCBIN_U16("data/cutscenes/ridley_in_space/red_alert.pal");
-const u16 sRidleyInSpaceShipInteriorPal[15 * 16] = INCBIN_U16("data/cutscenes/ridley_in_space/ship_interior.pal");
-const u16 sRidleyInSpace_39dc70_Pal[3 * 16] = INCBIN_U16("data/cutscenes/ridley_in_space/39dc70.pal");
-const u16 sRidleyInSpaceSpaceBackgroundPal[5 * 16] = INCBIN_U16("data/cutscenes/ridley_in_space/space_background.pal");
+const u16 sRidleyInSpaceShipsPal[3 * 16] = {
+    #include "extracted/data/cutscenes/ridley_in_space/ships.pal.inc"
+};
+const u16 sRidleyInSpace_39d910_Pal[6 * 16] = {
+    #include "extracted/data/cutscenes/ridley_in_space/39d910.pal.inc"
+};
+const u16 sRidleyInSpaceRedAlertPal[6 * 16] = {
+    #include "extracted/data/cutscenes/ridley_in_space/red_alert.pal.inc"
+};
+const u16 sRidleyInSpaceShipInteriorPal[15 * 16] = {
+    #include "extracted/data/cutscenes/ridley_in_space/ship_interior.pal.inc"
+};
+const u16 sRidleyInSpace_39dc70_Pal[3 * 16] = {
+    #include "extracted/data/cutscenes/ridley_in_space/39dc70.pal.inc"
+};
+const u16 sRidleyInSpaceSpaceBackgroundPal[5 * 16] = {
+    #include "extracted/data/cutscenes/ridley_in_space/space_background.pal.inc"
+};
 
-const u32 sRidleyInSpaceRidleySittingTileTable[449] = INCBIN_U32("data/cutscenes/ridley_in_space/ridley_sitting.tt");
-const u32 sRidleyInSpaceShipInteriorTileTable[559] = INCBIN_U32("data/cutscenes/ridley_in_space/ship_interior.tt");
-const u32 sRidleyInSpaceRidleySuspiciousEyesOpenTileTable[287] = INCBIN_U32("data/cutscenes/ridley_in_space/ridley_suspicious_eyes_open.tt");
-const u32 sRidleyInSpaceRidleySuspiciousEyesSquintedTileTable[287] = INCBIN_U32("data/cutscenes/ridley_in_space/ridley_suspicious_squinted_eyes.tt");
-const u32 sRidleyInSpaceShipInteriorTileTable2[385] = INCBIN_U32("data/cutscenes/ridley_in_space/ship_interior_2.tt");
-const u32 sRidleyInSpaceSpaceBackgroundTileTable[577] = INCBIN_U32("data/cutscenes/ridley_in_space/s_pace_background.tt");
+const u32 sRidleyInSpaceRidleySittingTileTable[449] = {
+    #include "extracted/data/cutscenes/ridley_in_space/ridley_sitting.tt.inc"
+};
+const u32 sRidleyInSpaceShipInteriorTileTable[559] = {
+    #include "extracted/data/cutscenes/ridley_in_space/ship_interior.tt.inc"
+};
+const u32 sRidleyInSpaceRidleySuspiciousEyesOpenTileTable[287] = {
+    #include "extracted/data/cutscenes/ridley_in_space/ridley_suspicious_eyes_open.tt.inc"
+};
+const u32 sRidleyInSpaceRidleySuspiciousEyesSquintedTileTable[287] = {
+    #include "extracted/data/cutscenes/ridley_in_space/ridley_suspicious_squinted_eyes.tt.inc"
+};
+const u32 sRidleyInSpaceShipInteriorTileTable2[385] = {
+    #include "extracted/data/cutscenes/ridley_in_space/ship_interior_2.tt.inc"
+};
+const u32 sRidleyInSpaceSpaceBackgroundTileTable[577] = {
+    #include "extracted/data/cutscenes/ridley_in_space/s_pace_background.tt.inc"
+};

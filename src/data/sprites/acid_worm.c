@@ -26,8 +26,12 @@ const s16 sAcidWormHeadRandomXVelocity[45] = {
     0x4, 0x4, 0x3, 0x2, 0x2, 0x1, 0x1, SHORT_MAX
 };
 
-const u32 sAcidWormGfx[1000] = INCBIN_U32("data/sprites/acid_worm.gfx.lz");
-const u16 sAcidWormPal[64] = INCBIN_U16("data/sprites/acid_worm.pal");
+const u32 sAcidWormGfx[1000] = {
+    #include "extracted/data/sprites/acid_worm.gfx.lz.inc"
+};
+const u16 sAcidWormPal[64] = {
+    #include "extracted/data/sprites/acid_worm.pal.inc"
+};
 
 static const u16 sAcidWormPartOam_Unused2_Frame0[OAM_DATA_SIZE(17)] = {
     17,
