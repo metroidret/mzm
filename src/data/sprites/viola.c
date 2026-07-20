@@ -1,10 +1,18 @@
 #include "data/sprites/viola.h"
 #include "macros.h"
 
-const u32 sViolaBlueGfx[302] = INCBIN_U32("data/sprites/viola_blue.gfx.lz");
-const u16 sViolaBluePal[16] = INCBIN_U16("data/sprites/viola_blue.pal");
-const u32 sViolaOrangeGfx[305] = INCBIN_U32("data/sprites/viola_orange.gfx.lz");
-const u16 sViolaOrangePal[16] = INCBIN_U16("data/sprites/viola_orange.pal");
+const u32 sViolaBlueGfx[302] = {
+    #include "extracted/data/sprites/viola_blue.gfx.lz.inc"
+};
+const u16 sViolaBluePal[16] = {
+    #include "extracted/data/sprites/viola_blue.pal.inc"
+};
+const u32 sViolaOrangeGfx[305] = {
+    #include "extracted/data/sprites/viola_orange.gfx.lz.inc"
+};
+const u16 sViolaOrangePal[16] = {
+    #include "extracted/data/sprites/viola_orange.pal.inc"
+};
 
 static const u16 sViolaOam_Moving_Frame0[OAM_DATA_SIZE(1)] = {
     1,

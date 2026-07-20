@@ -1,8 +1,12 @@
 #include "data/sprites/imago_larva_right_side.h"
 #include "macros.h"
 
-const u32 sImagoLarvaRightSideGfx[592] = INCBIN_U32("data/sprites/imago_larva_right_side.gfx.lz");
-const u16 sImagoLarvaRightSidePal[32] = INCBIN_U16("data/sprites/imago_larva_right_side.pal");
+const u32 sImagoLarvaRightSideGfx[592] = {
+    #include "extracted/data/sprites/imago_larva_right_side.gfx.lz.inc"
+};
+const u16 sImagoLarvaRightSidePal[32] = {
+    #include "extracted/data/sprites/imago_larva_right_side.pal.inc"
+};
 
 static const u16 sImagoLarvaRightSideOam_Frame0[OAM_DATA_SIZE(12)] = {
     12,

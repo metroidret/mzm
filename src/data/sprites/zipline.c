@@ -1,8 +1,12 @@
 #include "data/sprites/zipline.h"
 #include "macros.h"
 
-const u32 sZiplineGfx[264] = INCBIN_U32("data/sprites/zipline.gfx.lz");
-const u16 sZiplinePal[16] = INCBIN_U16("data/sprites/zipline.pal");
+const u32 sZiplineGfx[264] = {
+    #include "extracted/data/sprites/zipline.gfx.lz.inc"
+};
+const u16 sZiplinePal[16] = {
+    #include "extracted/data/sprites/zipline.pal.inc"
+};
 
 static const u16 sZiplineOam_OffIdle_Frame0[OAM_DATA_SIZE(2)] = {
     2,

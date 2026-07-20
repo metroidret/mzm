@@ -20,9 +20,13 @@ const u8 sBrinstar_18_Scrolls[SCROLL_DATA_SIZE(2)] = {
 	UCHAR_MAX, // Breakable block Y bound extension
 };
 
-const u8 sBrinstar_38_Clipdata[153] = INCBIN_U8("data/rooms/brinstar/brinstar_38_clipdata.gfx");
+const u8 sBrinstar_38_Clipdata[153] = {
+    #include "extracted/data/rooms/brinstar/brinstar_38_clipdata.gfx.inc"
+};
 
-const u8 sBrinstar_38_Bg2[102] = INCBIN_U8("data/rooms/brinstar/brinstar_38_bg2.gfx");
+const u8 sBrinstar_38_Bg2[102] = {
+    #include "extracted/data/rooms/brinstar/brinstar_38_bg2.gfx.inc"
+};
 
 const u8 sBrinstar_38_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(7)] = {
 	3, 15, SPRITESET_IDX(1),
@@ -34,7 +38,9 @@ const u8 sBrinstar_38_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(7)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sBrinstar_38_Bg1[578] = INCBIN_U8("data/rooms/brinstar/brinstar_38_bg1.gfx");
+const u8 sBrinstar_38_Bg1[578] = {
+    #include "extracted/data/rooms/brinstar/brinstar_38_bg1.gfx.inc"
+};
 
 const u8 sBrinstar_38_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(5)] = {
 	3, 19, SPRITESET_IDX(1),
@@ -44,5 +50,7 @@ const u8 sBrinstar_38_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(5)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sBrinstar_38_Bg0[213] = INCBIN_U8("data/rooms/brinstar/brinstar_38_bg0.gfx");
+const u8 sBrinstar_38_Bg0[213] = {
+    #include "extracted/data/rooms/brinstar/brinstar_38_bg0.gfx.inc"
+};
 

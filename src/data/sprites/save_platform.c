@@ -1,8 +1,12 @@
 #include "data/sprites/save_platform.h"
 #include "macros.h"
 
-const u32 sSavePlatformGfx[603] = INCBIN_U32("data/sprites/save_platform.gfx.lz");
-const u16 sSavePlatformPal[64] = INCBIN_U16("data/sprites/save_platform.pal");
+const u32 sSavePlatformGfx[603] = {
+    #include "extracted/data/sprites/save_platform.gfx.lz.inc"
+};
+const u16 sSavePlatformPal[64] = {
+    #include "extracted/data/sprites/save_platform.pal.inc"
+};
 
 static const u16 sSavePlatformOam_Idle_Frame0[OAM_DATA_SIZE(9)] = {
     9,

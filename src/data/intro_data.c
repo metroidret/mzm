@@ -242,11 +242,21 @@ const u16 sIntroFuzzOam[OAM_DATA_SIZE(17)] = {
     OAM_ENTRY(96, 0, OAM_DIMS_16x32, OAM_NO_FLIP, 0x21c, 0, 0)
 };
 
-const u16 sIntroTextAndShipPal[16 * 6] = INCBIN_U16("data/intro/text_and_ship.pal");
-const u16 sIntroPal_45f9d4[16 * 1] = INCBIN_U16("data/intro/45f9d4.pal");
-const u16 sIntroSamusInHerShipPal[16 * 5] = INCBIN_U16("data/intro/samus_in_her_ship.pal");
-const u16 sIntroViewOfZebesPal[16 * 10] = INCBIN_U16("data/intro/view_of_zebes.pal");
-const u16 sIntroMotherBrainPal[16 * 5] = INCBIN_U16("data/intro/mother_brain.pal");
+const u16 sIntroTextAndShipPal[16 * 6] = {
+    #include "extracted/data/intro/text_and_ship.pal.inc"
+};
+const u16 sIntroPal_45f9d4[16 * 1] = {
+    #include "extracted/data/intro/45f9d4.pal.inc"
+};
+const u16 sIntroSamusInHerShipPal[16 * 5] = {
+    #include "extracted/data/intro/samus_in_her_ship.pal.inc"
+};
+const u16 sIntroViewOfZebesPal[16 * 10] = {
+    #include "extracted/data/intro/view_of_zebes.pal.inc"
+};
+const u16 sIntroMotherBrainPal[16 * 5] = {
+    #include "extracted/data/intro/mother_brain.pal.inc"
+};
 
 
 const u8 sIntroFuzzRandomValues_1[64] = {
@@ -446,16 +456,40 @@ const IntroTextAction sIntroDefeatTheActions[50] = {
 };
 
 
-const u32 sIntroTextAndShipFlyingInGfx[1310] = INCBIN_U32("data/intro/text_and_ship.gfx.lz");
-const u32 sIntroSpaceBackgroundGfx[3181] = INCBIN_U32("data/intro/space_background.gfx.lz");
-const u32 sIntroSpaceBackgroundTileTable[577] = INCBIN_U32("data/intro/space_background.tt");
-const u32 sIntroSamusInHerShipGfx[4800] = INCBIN_U32("data/intro/samus_in_her_ship.gfx.lz");
-const u32 sIntroSamusInHerShipTileTable[418] = INCBIN_U32("data/intro/samus_in_her_ship.tt");
-const u32 sIntroSamusShipViewOfZebesGfx[1224] = INCBIN_U32("data/intro/samus_ship_view_of_zebes.gfx.lz");
-const u32 sIntroViewOfZebesGfx[2986] = INCBIN_U32("data/intro/view_of_zebes.gfx.lz");
-const u32 sIntroViewOfZebesTileTable[577] = INCBIN_U32("data/intro/view_of_zebes.tt");
-const u32 sIntroMotherBrainGfx[5004] = INCBIN_U32("data/intro/mother_brain.gfx.lz");
-const u32 sIntroMotherBrainTileTable[577] = INCBIN_U32("data/intro/mother_brain.tt");
-const u32 sIntroFuzzGfx[5224] = INCBIN_U32("data/intro/fuzz.gfx.lz");
-const u32 sIntro_47920c[125] = INCBIN_U32("data/intro/47920c.tt");
+const u32 sIntroTextAndShipFlyingInGfx[1310] = {
+    #include "extracted/data/intro/text_and_ship.gfx.lz.inc"
+};
+const u32 sIntroSpaceBackgroundGfx[3181] = {
+    #include "extracted/data/intro/space_background.gfx.lz.inc"
+};
+const u32 sIntroSpaceBackgroundTileTable[577] = {
+    #include "extracted/data/intro/space_background.tt.inc"
+};
+const u32 sIntroSamusInHerShipGfx[4800] = {
+    #include "extracted/data/intro/samus_in_her_ship.gfx.lz.inc"
+};
+const u32 sIntroSamusInHerShipTileTable[418] = {
+    #include "extracted/data/intro/samus_in_her_ship.tt.inc"
+};
+const u32 sIntroSamusShipViewOfZebesGfx[1224] = {
+    #include "extracted/data/intro/samus_ship_view_of_zebes.gfx.lz.inc"
+};
+const u32 sIntroViewOfZebesGfx[2986] = {
+    #include "extracted/data/intro/view_of_zebes.gfx.lz.inc"
+};
+const u32 sIntroViewOfZebesTileTable[577] = {
+    #include "extracted/data/intro/view_of_zebes.tt.inc"
+};
+const u32 sIntroMotherBrainGfx[5004] = {
+    #include "extracted/data/intro/mother_brain.gfx.lz.inc"
+};
+const u32 sIntroMotherBrainTileTable[577] = {
+    #include "extracted/data/intro/mother_brain.tt.inc"
+};
+const u32 sIntroFuzzGfx[5224] = {
+    #include "extracted/data/intro/fuzz.gfx.lz.inc"
+};
+const u32 sIntro_47920c[125] = {
+    #include "extracted/data/intro/47920c.tt.inc"
+};
 

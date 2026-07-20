@@ -84,7 +84,9 @@ void SoftReset(void)
     gSubGameMode1 = 0;
     gSubGameMode2 = 0;
     gResetGame = FALSE;
-    gStereoFlag = 0;
+#ifndef BUGFIX
+    gStereoFlag = FALSE;
+#endif // !BUGFIX
 
     #ifdef REGION_EU
     #ifdef DEBUG

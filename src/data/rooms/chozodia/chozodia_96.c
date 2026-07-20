@@ -1,11 +1,17 @@
 #include "data/rooms/chozodia_rooms_data.h"
 #include "macros.h"
 
-const u8 sChozodia_96_Clipdata[222] = INCBIN_U8("data/rooms/chozodia/chozodia_96_clipdata.gfx");
+const u8 sChozodia_96_Clipdata[222] = {
+    #include "extracted/data/rooms/chozodia/chozodia_96_clipdata.gfx.inc"
+};
 
-const u8 sChozodia_96_Bg2[805] = INCBIN_U8("data/rooms/chozodia/chozodia_96_bg2.gfx");
+const u8 sChozodia_96_Bg2[805] = {
+    #include "extracted/data/rooms/chozodia/chozodia_96_bg2.gfx.inc"
+};
 
-const u8 sChozodia_96_Bg1[861] = INCBIN_U8("data/rooms/chozodia/chozodia_96_bg1.gfx");
+const u8 sChozodia_96_Bg1[861] = {
+    #include "extracted/data/rooms/chozodia/chozodia_96_bg1.gfx.inc"
+};
 
 const u8 sChozodia_96_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(7)] = {
 	7, 46, SPRITESET_IDX(1),
@@ -17,5 +23,7 @@ const u8 sChozodia_96_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(7)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sChozodia_96_Bg0[71] = INCBIN_U8("data/rooms/chozodia/chozodia_96_bg0.gfx");
+const u8 sChozodia_96_Bg0[71] = {
+    #include "extracted/data/rooms/chozodia/chozodia_96_bg0.gfx.inc"
+};
 

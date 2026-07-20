@@ -28,8 +28,12 @@ const u16 sMellaMovingXMovement[7] = {
     0, 1, 2, 3, 4, 5, 6 
 };
 
-const u32 sMellaGfx[162] = INCBIN_U32("data/sprites/mella.gfx.lz");
-const u16 sMellaPal[16] = INCBIN_U16("data/sprites/mella.pal");
+const u32 sMellaGfx[162] = {
+    #include "extracted/data/sprites/mella.gfx.lz.inc"
+};
+const u16 sMellaPal[16] = {
+    #include "extracted/data/sprites/mella.pal.inc"
+};
 
 static const u16 sMellaOam_Idle_Frame0[OAM_DATA_SIZE(1)] = {
     1,

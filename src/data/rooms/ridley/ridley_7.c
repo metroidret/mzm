@@ -1,9 +1,13 @@
 #include "data/rooms/ridley_rooms_data.h"
 #include "macros.h"
 
-const u8 sRidley_7_Clipdata[76] = INCBIN_U8("data/rooms/ridley/ridley_7_clipdata.gfx");
+const u8 sRidley_7_Clipdata[76] = {
+    #include "extracted/data/rooms/ridley/ridley_7_clipdata.gfx.inc"
+};
 
-const u8 sRidley_7_Bg2[68] = INCBIN_U8("data/rooms/ridley/ridley_7_bg2.gfx");
+const u8 sRidley_7_Bg2[68] = {
+    #include "extracted/data/rooms/ridley/ridley_7_bg2.gfx.inc"
+};
 
 const u8 sRidley_7_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(6)] = {
 	2, 10, SPRITESET_IDX(2),
@@ -14,7 +18,9 @@ const u8 sRidley_7_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(6)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sRidley_7_Bg1[206] = INCBIN_U8("data/rooms/ridley/ridley_7_bg1.gfx");
+const u8 sRidley_7_Bg1[206] = {
+    #include "extracted/data/rooms/ridley/ridley_7_bg1.gfx.inc"
+};
 
 const u8 sRidley_7_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(8)] = {
 	2, 10, SPRITESET_IDX(2),
@@ -27,5 +33,7 @@ const u8 sRidley_7_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(8)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sRidley_7_Bg0[464] = INCBIN_U8("data/rooms/ridley/ridley_7_bg0.gfx");
+const u8 sRidley_7_Bg0[464] = {
+    #include "extracted/data/rooms/ridley/ridley_7_bg0.gfx.inc"
+};
 

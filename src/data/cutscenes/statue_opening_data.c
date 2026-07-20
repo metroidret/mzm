@@ -72,7 +72,15 @@ const struct OamArray sStatueOpeningOam[STATUE_OPENING_OAM_ID_COUNT] = {
     }
 };
 
-const u16 sStatueOpeningPal[8 * 16] = INCBIN_U16("data/cutscenes/statue_opening/palette.pal");
-const u32 sStatueOpeningRoomGfx[2357] = INCBIN_U32("data/cutscenes/statue_opening/room.gfx.lz");
-const u32 sStatueOpeningRoomTileTable[318] = INCBIN_U32("data/cutscenes/statue_opening/room.tt");
-const u32 sStatueOpening_3effc8[242] = INCBIN_U32("data/cutscenes/statue_opening/3effc8.tt");
+const u16 sStatueOpeningPal[8 * 16] = {
+    #include "extracted/data/cutscenes/statue_opening/palette.pal.inc"
+};
+const u32 sStatueOpeningRoomGfx[2357] = {
+    #include "extracted/data/cutscenes/statue_opening/room.gfx.lz.inc"
+};
+const u32 sStatueOpeningRoomTileTable[318] = {
+    #include "extracted/data/cutscenes/statue_opening/room.tt.inc"
+};
+const u32 sStatueOpening_3effc8[242] = {
+    #include "extracted/data/cutscenes/statue_opening/3effc8.tt.inc"
+};

@@ -99,7 +99,7 @@ include make_tools.mk
 GBAFIX = $(TOOLS_DIR)/gbafix/gbafix
 PYTHON = python3
 EXTRACTOR = $(PYTHON) $(TOOLS_DIR)/extractor.py
-PREPROC = $(TOOLS_DIR)/preproc/preproc
+PREPROC = $(PYTHON) $(TOOLS_DIR)/preproc.py
 
 # Flags
 ASFLAGS += -mcpu=arm7tdmi
@@ -202,6 +202,8 @@ ifeq ($(DATA),1)
 	$Q$(RM) -r data
 	$(MSG) RM sound/direct_sound_samples
 	$Q$(RM) -r sound/direct_sound_samples
+	$(MSG) RM include/extracted
+	$Q$(RM) -r include/extracted
 endif
 	$(MSG) RM linker.ld.pp
 	$Q$(RM) linker.ld.pp

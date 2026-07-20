@@ -20,9 +20,15 @@ const s16 sGunshipFlyingYVelocity[22] = {
     -7, -7, -8, -12, -16, -20, -24, -28, -32, SHORT_MAX
 };
 
-const u32 sGunshipGfx[1027] = INCBIN_U32("data/sprites/gunship.gfx.lz");
-const u16 sGunshipPal[48] = INCBIN_U16("data/sprites/gunship.pal");
-const u16 sGunshipFlashingPal[8 * 16] = INCBIN_U16("data/sprites/gunship_flashing_pal.pal");
+const u32 sGunshipGfx[1027] = {
+    #include "extracted/data/sprites/gunship.gfx.lz.inc"
+};
+const u16 sGunshipPal[48] = {
+    #include "extracted/data/sprites/gunship.pal.inc"
+};
+const u16 sGunshipFlashingPal[8 * 16] = {
+    #include "extracted/data/sprites/gunship_flashing_pal.pal.inc"
+};
 
 static const u16 sGunshipOam_Idle_Frame0[OAM_DATA_SIZE(17)] = {
     17,

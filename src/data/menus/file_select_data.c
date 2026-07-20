@@ -3,9 +3,15 @@
 #include "macros.h"
 #include "gba.h"
 
-const u16 sFileSelectPal[7 * 16] = INCBIN_U16("data/menus/file_select/palette.pal");
-const u16 sFileSelect_4548f8[2 * 16] = INCBIN_U16("data/menus/file_select/4548f8.pal");
-const u16 sFileSelectIconsPal[6 * 16] = INCBIN_U16("data/menus/file_select/icons.pal");
+const u16 sFileSelectPal[7 * 16] = {
+    #include "extracted/data/menus/file_select/palette.pal.inc"
+};
+const u16 sFileSelect_4548f8[2 * 16] = {
+    #include "extracted/data/menus/file_select/4548f8.pal.inc"
+};
+const u16 sFileSelectIconsPal[6 * 16] = {
+    #include "extracted/data/menus/file_select/icons.pal.inc"
+};
 
 static const u16 sFileSelectOam_SamusHeadTurningOn_Frame0[OAM_DATA_SIZE(1)] = {
     1,
@@ -1860,41 +1866,93 @@ static const struct FrameData sOptionsOam_SmallPanel[5] = {
     [4] = FRAME_DATA_TERMINATOR
 };
 
-const u32 sFileSelectChozoBackgroundGfx[2985] = INCBIN_U32("data/menus/file_select/chozo_background.gfx.lz");
+const u32 sFileSelectChozoBackgroundGfx[2985] = {
+    #include "extracted/data/menus/file_select/chozo_background.gfx.lz.inc"
+};
 #ifdef REGION_EU
-const u32 sFileSelectAreaNamesGfx[331] = INCBIN_U32("data/menus/file_select/area_names.gfx.lz");
-const u32 sFileSelectBgIconsGfx[651] = INCBIN_U32("data/menus/file_select/bg_icons.gfx.lz");
+const u32 sFileSelectAreaNamesGfx[331] = {
+    #include "extracted/data/menus/file_select/area_names.gfx.lz.inc"
+};
+const u32 sFileSelectBgIconsGfx[651] = {
+    #include "extracted/data/menus/file_select/bg_icons.gfx.lz.inc"
+};
 #else // !REGION_EU
-const u32 sFileSelectCharactersGfx[1531] = INCBIN_U32("data/menus/file_select/characters.gfx.lz");
+const u32 sFileSelectCharactersGfx[1531] = {
+    #include "extracted/data/menus/file_select/characters.gfx.lz.inc"
+};
 #endif // REGION_EU
 
-const u32 sFileSelectOptionsTextEnglishGfx[345] = INCBIN_U32("data/menus/file_select/options_text_english.gfx.lz");
-const u32 sFileSelectOptionsTextGermanGfx[] = INCBIN_U32("data/menus/file_select/options_text_german.gfx.lz");
-const u32 sFileSelectOptionsTextFrenchGfx[] = INCBIN_U32("data/menus/file_select/options_text_french.gfx.lz");
-const u32 sFileSelectOptionsTextItalianGfx[] = INCBIN_U32("data/menus/file_select/options_text_italian.gfx.lz");
-const u32 sFileSelectOptionsTextSpanishGfx[] = INCBIN_U32("data/menus/file_select/options_text_spanish.gfx.lz");
+const u32 sFileSelectOptionsTextEnglishGfx[345] = {
+    #include "extracted/data/menus/file_select/options_text_english.gfx.lz.inc"
+};
+const u32 sFileSelectOptionsTextGermanGfx[] = {
+    #include "extracted/data/menus/file_select/options_text_german.gfx.lz.inc"
+};
+const u32 sFileSelectOptionsTextFrenchGfx[] = {
+    #include "extracted/data/menus/file_select/options_text_french.gfx.lz.inc"
+};
+const u32 sFileSelectOptionsTextItalianGfx[] = {
+    #include "extracted/data/menus/file_select/options_text_italian.gfx.lz.inc"
+};
+const u32 sFileSelectOptionsTextSpanishGfx[] = {
+    #include "extracted/data/menus/file_select/options_text_spanish.gfx.lz.inc"
+};
 
 #ifdef REGION_EU
-const u32 sFileSelectLargeTextEnglishGfx[332] = INCBIN_U32("data/menus/file_select/large_text_english.gfx.lz");
-const u32 sFileSelectLargeTextGermanGfx[391] = INCBIN_U32("data/menus/file_select/large_text_german.gfx.lz");
-const u32 sFileSelectLargeTextFrenchGfx[392] = INCBIN_U32("data/menus/file_select/large_text_french.gfx.lz");
-const u32 sFileSelectLargeTextItalianGfx[353] = INCBIN_U32("data/menus/file_select/large_text_italian.gfx.lz");
-const u32 sFileSelectLargeTextSpanishGfx[364] = INCBIN_U32("data/menus/file_select/large_text_spanish.gfx.lz");
+const u32 sFileSelectLargeTextEnglishGfx[332] = {
+    #include "extracted/data/menus/file_select/large_text_english.gfx.lz.inc"
+};
+const u32 sFileSelectLargeTextGermanGfx[391] = {
+    #include "extracted/data/menus/file_select/large_text_german.gfx.lz.inc"
+};
+const u32 sFileSelectLargeTextFrenchGfx[392] = {
+    #include "extracted/data/menus/file_select/large_text_french.gfx.lz.inc"
+};
+const u32 sFileSelectLargeTextItalianGfx[353] = {
+    #include "extracted/data/menus/file_select/large_text_italian.gfx.lz.inc"
+};
+const u32 sFileSelectLargeTextSpanishGfx[364] = {
+    #include "extracted/data/menus/file_select/large_text_spanish.gfx.lz.inc"
+};
 
-const u32 sFileSelectDifficultyTextEnglishGfx[67] = INCBIN_U32("data/menus/file_select/difficulty_text_english.gfx.lz");
-const u32 sFileSelectDifficultyTextGermanGfx[70] = INCBIN_U32("data/menus/file_select/difficulty_text_german.gfx.lz");
-const u32 sFileSelectDifficultyTextFrenchGfx[71] = INCBIN_U32("data/menus/file_select/difficulty_text_french.gfx.lz");
-const u32 sFileSelectDifficultyTextItalianGfx[71] = INCBIN_U32("data/menus/file_select/difficulty_text_italian.gfx.lz");
-const u32 sFileSelectDifficultyTextSpanishGfx[70] = INCBIN_U32("data/menus/file_select/difficulty_text_spanish.gfx.lz");
+const u32 sFileSelectDifficultyTextEnglishGfx[67] = {
+    #include "extracted/data/menus/file_select/difficulty_text_english.gfx.lz.inc"
+};
+const u32 sFileSelectDifficultyTextGermanGfx[70] = {
+    #include "extracted/data/menus/file_select/difficulty_text_german.gfx.lz.inc"
+};
+const u32 sFileSelectDifficultyTextFrenchGfx[71] = {
+    #include "extracted/data/menus/file_select/difficulty_text_french.gfx.lz.inc"
+};
+const u32 sFileSelectDifficultyTextItalianGfx[71] = {
+    #include "extracted/data/menus/file_select/difficulty_text_italian.gfx.lz.inc"
+};
+const u32 sFileSelectDifficultyTextSpanishGfx[70] = {
+    #include "extracted/data/menus/file_select/difficulty_text_spanish.gfx.lz.inc"
+};
 #endif // REGION_EU
 
-const u32 sFileSelectObjIconsGfx[1722] = INCBIN_U32("data/menus/file_select/obj_icons.gfx.lz");
-const u32 sFileSelectChozoBackgroundTileTable[368] = INCBIN_U32("data/menus/file_select/chozo_background.tt");
-const u32 sFileSelectMenuTileTable[] = INCBIN_U32("data/menus/file_select/menu.tt");
-const u32 sFileSelectOptionsTileTable[] = INCBIN_U32("data/menus/file_select/options.tt");
-const u32 sFileSelect3BigPanelsTileTable[233] = INCBIN_U32("data/menus/file_select/3_big_panels.tt");
-const u32 sFileSelect1Small2BigPanelsTileTable[233] = INCBIN_U32("data/menus/file_select/1_small2_big_panels.tt");
-const u32 sFileSelect2Big1SmallPanelsTileTable[230] = INCBIN_U32("data/menus/file_select/2_big1_small_panels.tt");
+const u32 sFileSelectObjIconsGfx[1722] = {
+    #include "extracted/data/menus/file_select/obj_icons.gfx.lz.inc"
+};
+const u32 sFileSelectChozoBackgroundTileTable[368] = {
+    #include "extracted/data/menus/file_select/chozo_background.tt.inc"
+};
+const u32 sFileSelectMenuTileTable[] = {
+    #include "extracted/data/menus/file_select/menu.tt.inc"
+};
+const u32 sFileSelectOptionsTileTable[] = {
+    #include "extracted/data/menus/file_select/options.tt.inc"
+};
+const u32 sFileSelect3BigPanelsTileTable[233] = {
+    #include "extracted/data/menus/file_select/3_big_panels.tt.inc"
+};
+const u32 sFileSelect1Small2BigPanelsTileTable[233] = {
+    #include "extracted/data/menus/file_select/1_small2_big_panels.tt.inc"
+};
+const u32 sFileSelect2Big1SmallPanelsTileTable[230] = {
+    #include "extracted/data/menus/file_select/2_big1_small_panels.tt.inc"
+};
 
 const struct MenuOamData sFileSelectOamData_Empty[2] = {
     [0] = {

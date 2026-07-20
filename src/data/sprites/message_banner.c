@@ -1,8 +1,12 @@
 #include "data/sprites/message_banner.h"
 #include "macros.h"
 
-const u32 sMessageBannerGfx[139] = INCBIN_U32("data/sprites/message_banner.gfx.lz");
-const u16 sMessageBannerPal[32] = INCBIN_U16("data/sprites/message_banner.pal");
+const u32 sMessageBannerGfx[139] = {
+    #include "extracted/data/sprites/message_banner.gfx.lz.inc"
+};
+const u16 sMessageBannerPal[32] = {
+    #include "extracted/data/sprites/message_banner.pal.inc"
+};
 
 static const u16 sSaveYesNoCursorOam_Idle_Frame0[OAM_DATA_SIZE(1)] = {
     1,

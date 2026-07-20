@@ -9674,7 +9674,7 @@ const struct RoomEntryRom sBrinstarRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 13,
 		.mapY = 12,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 11,
 		.musicTrack = MUSIC_BRINSTAR
 	},
@@ -9701,7 +9701,7 @@ const struct RoomEntryRom sBrinstarRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 13,
 		.mapY = 8,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 11,
 		.musicTrack = MUSIC_BRINSTAR
 	},
@@ -9863,7 +9863,7 @@ const struct RoomEntryRom sBrinstarRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 22,
 		.mapY = 8,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 11,
 		.musicTrack = MUSIC_BRINSTAR
 	},
@@ -9917,7 +9917,7 @@ const struct RoomEntryRom sBrinstarRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 21,
 		.mapY = 4,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 11,
 		.musicTrack = MUSIC_BRINSTAR
 	},
@@ -9944,7 +9944,7 @@ const struct RoomEntryRom sBrinstarRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 19,
 		.mapY = 2,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 31,
 		.musicTrack = MUSIC_BRINSTAR
 	},
@@ -9971,7 +9971,7 @@ const struct RoomEntryRom sBrinstarRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 15,
 		.mapY = 2,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 11,
 		.musicTrack = MUSIC_BRINSTAR
 	},
@@ -10106,7 +10106,7 @@ const struct RoomEntryRom sBrinstarRoomEntries[42] = {
 		.secondSpriteset = 76,
 		.mapX = 13,
 		.mapY = 4,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 11,
 		.musicTrack = MUSIC_BRINSTAR
 	},
@@ -10376,7 +10376,7 @@ const struct RoomEntryRom sBrinstarRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 26,
 		.mapY = 4,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 11,
 		.musicTrack = MUSIC_BRINSTAR
 	},
@@ -10514,7 +10514,7 @@ const struct RoomEntryRom sKraidRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 10,
 		.mapY = 6,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 11,
 		.musicTrack = MUSIC_KRAID
 	},
@@ -10568,7 +10568,7 @@ const struct RoomEntryRom sKraidRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 12,
 		.mapY = 1,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 11,
 		.musicTrack = MUSIC_KRAID
 	},
@@ -10595,7 +10595,7 @@ const struct RoomEntryRom sKraidRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 12,
 		.mapY = 2,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 11,
 		.musicTrack = MUSIC_KRAID
 	},
@@ -10622,7 +10622,7 @@ const struct RoomEntryRom sKraidRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 12,
 		.mapY = 3,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 12,
 		.musicTrack = MUSIC_KRAID
 	},
@@ -10676,7 +10676,7 @@ const struct RoomEntryRom sKraidRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 4,
 		.mapY = 5,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 21,
 		.musicTrack = MUSIC_KRAID
 	},
@@ -10703,7 +10703,7 @@ const struct RoomEntryRom sKraidRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 4,
 		.mapY = 7,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 11,
 		.musicTrack = MUSIC_KRAID
 	},
@@ -10730,7 +10730,7 @@ const struct RoomEntryRom sKraidRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 10,
 		.mapY = 7,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 11,
 		.musicTrack = MUSIC_KRAID
 	},
@@ -10811,7 +10811,7 @@ const struct RoomEntryRom sKraidRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 10,
 		.mapY = 9,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 10,
 		.musicTrack = MUSIC_KRAID
 	},
@@ -10950,7 +10950,7 @@ const struct RoomEntryRom sKraidRoomEntries[42] = {
 		.effect = EFFECT_NONE,
 		.effectY = UCHAR_MAX,
 		#else // !REGION_EU
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 11,
 		#endif // REGION_EU
 		.musicTrack = MUSIC_KRAID
@@ -11275,7 +11275,7 @@ const struct RoomEntryRom sKraidRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 11,
 		.mapY = 14,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 13,
 		.musicTrack = MUSIC_KRAID
 	},
@@ -11518,7 +11518,7 @@ const struct RoomEntryRom sKraidRoomEntries[42] = {
 		.secondSpriteset = 0,
 		.mapX = 11,
 		.mapY = 4,
-		.effect = EFFECT_WEAK_LAVA,
+		.effect = EFFECT_WEAK_ACID,
 		.effectY = 10,
 		.musicTrack = MUSIC_KRAID
 	},
@@ -11656,7 +11656,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 63,
 		.mapX = 6,
 		.mapY = 5,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -11710,7 +11710,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 63,
 		.mapX = 6,
 		.mapY = 6,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -11737,7 +11737,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 71,
 		.mapX = 16,
 		.mapY = 4,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 20,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -11791,7 +11791,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 17,
 		.mapY = 1,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -11818,7 +11818,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 16,
 		.mapY = 1,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 30,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -11845,7 +11845,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 17,
 		.mapY = 3,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_SAVE_ELEVATOR_ROOM
 	},
@@ -11872,7 +11872,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 29,
 		.mapX = 19,
 		.mapY = 3,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 10,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -11899,7 +11899,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 19,
 		.mapY = 2,
-		.effect = EFFECT_STRONG_LAVA_HEAT_HAZE,
+		.effect = EFFECT_LAVA_HEAT_HAZE,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -11926,7 +11926,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 58,
 		.mapX = 19,
 		.mapY = 6,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -11953,7 +11953,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 49,
 		.mapX = 20,
 		.mapY = 8,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -11980,7 +11980,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 19,
 		.mapY = 8,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_SAVE_ELEVATOR_ROOM
 	},
@@ -12007,7 +12007,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 13,
 		.mapY = 7,
-		.effect = EFFECT_STRONG_LAVA_HEAT_HAZE,
+		.effect = EFFECT_LAVA_HEAT_HAZE,
 		.effectY = 19,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -12034,7 +12034,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 11,
 		.mapY = 8,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -12088,7 +12088,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 7,
 		.mapY = 7,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -12115,7 +12115,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 6,
 		.mapY = 7,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_SAVE_ELEVATOR_ROOM
 	},
@@ -12142,7 +12142,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 6,
 		.mapY = 8,
-		.effect = EFFECT_STRONG_LAVA_HEAT_HAZE,
+		.effect = EFFECT_LAVA_HEAT_HAZE,
 		.effectY = 10,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -12169,7 +12169,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 5,
 		.mapY = 8,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 40,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -12196,7 +12196,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 6,
 		.mapY = 9,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -12223,7 +12223,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 6,
 		.mapY = 10,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 21,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -12331,7 +12331,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 11,
 		.mapY = 12,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -12358,7 +12358,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 10,
 		.mapY = 12,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_SAVE_ELEVATOR_ROOM
 	},
@@ -12385,7 +12385,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 10,
 		.mapY = 13,
-		.effect = EFFECT_STRONG_LAVA_HEAT_HAZE,
+		.effect = EFFECT_LAVA_HEAT_HAZE,
 		.effectY = 9,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -12412,7 +12412,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 15,
 		.mapY = 11,
-		.effect = EFFECT_STRONG_LAVA_HEAT_HAZE,
+		.effect = EFFECT_LAVA_HEAT_HAZE,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -12439,7 +12439,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 29,
 		.mapX = 10,
 		.mapY = 9,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -12493,7 +12493,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 15,
 		.mapY = 10,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -12628,7 +12628,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 29,
 		.mapX = 13,
 		.mapY = 6,
-		.effect = EFFECT_STRONG_LAVA_HEAT_HAZE,
+		.effect = EFFECT_LAVA_HEAT_HAZE,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -12655,7 +12655,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 11,
 		.mapY = 6,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 17,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -12952,7 +12952,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 17,
 		.mapY = 8,
-		.effect = EFFECT_STRONG_LAVA_HEAT_HAZE,
+		.effect = EFFECT_LAVA_HEAT_HAZE,
 		.effectY = 11,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -13114,7 +13114,7 @@ const struct RoomEntryRom sNorfairRoomEntries[57] = {
 		.secondSpriteset = 0,
 		.mapX = 3,
 		.mapY = 10,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 12,
 		.musicTrack = MUSIC_NORFAIR
 	},
@@ -13252,7 +13252,7 @@ const struct RoomEntryRom sRidleyRoomEntries[33] = {
 		.secondSpriteset = 36,
 		.mapX = 8,
 		.mapY = 3,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_RIDLEY
 	},
@@ -13360,7 +13360,7 @@ const struct RoomEntryRom sRidleyRoomEntries[33] = {
 		.secondSpriteset = 0,
 		.mapX = 5,
 		.mapY = 5,
-		.effect = EFFECT_STRONG_LAVA_HEAT_HAZE,
+		.effect = EFFECT_LAVA_HEAT_HAZE,
 		.effectY = 11,
 		.musicTrack = MUSIC_RIDLEY
 	},
@@ -13387,7 +13387,7 @@ const struct RoomEntryRom sRidleyRoomEntries[33] = {
 		.secondSpriteset = 0,
 		.mapX = 10,
 		.mapY = 5,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_RIDLEY
 	},
@@ -13495,7 +13495,7 @@ const struct RoomEntryRom sRidleyRoomEntries[33] = {
 		.secondSpriteset = 0,
 		.mapX = 7,
 		.mapY = 6,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 19,
 		.musicTrack = MUSIC_RIDLEY
 	},
@@ -13603,7 +13603,7 @@ const struct RoomEntryRom sRidleyRoomEntries[33] = {
 		.secondSpriteset = 0,
 		.mapX = 16,
 		.mapY = 2,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 21,
 		.musicTrack = MUSIC_RIDLEY
 	},
@@ -13657,7 +13657,7 @@ const struct RoomEntryRom sRidleyRoomEntries[33] = {
 		.secondSpriteset = 25,
 		.mapX = 6,
 		.mapY = 8,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_RIDLEY
 	},
@@ -14092,7 +14092,7 @@ const struct RoomEntryRom sTourianRoomEntries[20] = {
 		.secondSpriteset = 0,
 		.mapX = 21,
 		.mapY = 6,
-		.effect = EFFECT_STRONG_LAVA,
+		.effect = EFFECT_LAVA,
 		.effectY = 11,
 		.musicTrack = MUSIC_TOURIAN
 	},

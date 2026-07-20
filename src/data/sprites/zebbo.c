@@ -1,10 +1,18 @@
 #include "data/sprites/zebbo.h"
 #include "macros.h"
 
-const u32 sZebboGreenGfx[124] = INCBIN_U32("data/sprites/zebbo_green.gfx.lz");
-const u16 sZebboGreenPal[16] = INCBIN_U16("data/sprites/zebbo_green.pal");
-const u32 sZebboYellowGfx[124] = INCBIN_U32("data/sprites/zebbo_yellow.gfx.lz");
-const u16 sZebboYellowPal[16] = INCBIN_U16("data/sprites/zebbo_yellow.pal");
+const u32 sZebboGreenGfx[124] = {
+    #include "extracted/data/sprites/zebbo_green.gfx.lz.inc"
+};
+const u16 sZebboGreenPal[16] = {
+    #include "extracted/data/sprites/zebbo_green.pal.inc"
+};
+const u32 sZebboYellowGfx[124] = {
+    #include "extracted/data/sprites/zebbo_yellow.gfx.lz.inc"
+};
+const u16 sZebboYellowPal[16] = {
+    #include "extracted/data/sprites/zebbo_yellow.pal.inc"
+};
 
 static const u16 sZebboOam_Idle_Frame0[OAM_DATA_SIZE(1)] = {
     1,

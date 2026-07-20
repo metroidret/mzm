@@ -273,7 +273,15 @@ const struct FrameData sMechaSeesSamusOam_OpeningEye[4] = {
     [3] = FRAME_DATA_TERMINATOR
 };
 
-const u32 sMechaSeesSamusMetalGfx[2382] = INCBIN_U32("data/cutscenes/mecha_sees_samus/metal.gfx.lz");
-const u32 sMechaSeesSamusCoverEyeGfx[2671] = INCBIN_U32("data/cutscenes/mecha_sees_samus/eye_cover.gfx.lz");
-const u16 sMechaSeesSamusPal[10 * 16] = INCBIN_U16("data/cutscenes/mecha_sees_samus/palette.pal");
-const u32 sMechaSeesSamusCoverMetalTileTable[368] = INCBIN_U32("data/cutscenes/mecha_sees_samus/metal.tt");
+const u32 sMechaSeesSamusMetalGfx[2382] = {
+    #include "extracted/data/cutscenes/mecha_sees_samus/metal.gfx.lz.inc"
+};
+const u32 sMechaSeesSamusCoverEyeGfx[2671] = {
+    #include "extracted/data/cutscenes/mecha_sees_samus/eye_cover.gfx.lz.inc"
+};
+const u16 sMechaSeesSamusPal[10 * 16] = {
+    #include "extracted/data/cutscenes/mecha_sees_samus/palette.pal.inc"
+};
+const u32 sMechaSeesSamusCoverMetalTileTable[368] = {
+    #include "extracted/data/cutscenes/mecha_sees_samus/metal.tt.inc"
+};

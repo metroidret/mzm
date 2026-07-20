@@ -1,9 +1,13 @@
 #include "data/rooms/tourian_rooms_data.h"
 #include "macros.h"
 
-const u8 sTourian_2_Clipdata[242] = INCBIN_U8("data/rooms/tourian/tourian_2_clipdata.gfx");
+const u8 sTourian_2_Clipdata[242] = {
+    #include "extracted/data/rooms/tourian/tourian_2_clipdata.gfx.inc"
+};
 
-const u8 sTourian_2_Bg2[114] = INCBIN_U8("data/rooms/tourian/tourian_2_bg2.gfx");
+const u8 sTourian_2_Bg2[114] = {
+    #include "extracted/data/rooms/tourian/tourian_2_bg2.gfx.inc"
+};
 
 const u8 sTourian_2_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(13)] = {
 	5, 16, SPRITESET_IDX(1),
@@ -21,7 +25,9 @@ const u8 sTourian_2_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(13)] = {
 	ROOM_SPRITE_DATA_TERMINATOR
 };
 
-const u8 sTourian_2_Bg1[618] = INCBIN_U8("data/rooms/tourian/tourian_2_bg1.gfx");
+const u8 sTourian_2_Bg1[618] = {
+    #include "extracted/data/rooms/tourian/tourian_2_bg1.gfx.inc"
+};
 
 const u8 sTourian_2_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(12)] = {
 	5, 16, SPRITESET_IDX(1),
