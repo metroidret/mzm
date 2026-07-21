@@ -5,7 +5,7 @@ REGION ?= us
 PAD_TO = 0x08800000
 
 ifeq ($(REGION),us)
-	TARGET = mzm_us
+	TARGET = emulator_us
 	GAME_TITLE = "NES METROID"
 	GAME_CODE = "    "
 	CPPFLAGS += -DREGION_US
@@ -13,7 +13,7 @@ ifeq ($(REGION),us)
 endif
 
 # ifeq ($(REGION),us_beta)
-# 	TARGET = mzm_us_beta
+# 	TARGET = emulator_us_beta
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXE
 # 	CPPFLAGS += -DREGION_US -DREGION_US_BETA -DDEBUG
@@ -22,7 +22,7 @@ endif
 # endif
 
 # ifeq ($(REGION),eu)
-# 	TARGET = mzm_eu
+# 	TARGET = emulator_eu
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXP
 # 	CPPFLAGS += -DREGION_EU
@@ -30,7 +30,7 @@ endif
 # endif
 
 # ifeq ($(REGION),eu_beta)
-# 	TARGET = mzm_eu_beta
+# 	TARGET = emulator_eu_beta
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXP
 # 	CPPFLAGS += -DREGION_EU -DREGION_EU_BETA -DDEBUG
@@ -39,7 +39,7 @@ endif
 # endif
 
 # ifeq ($(REGION),jp)
-# 	TARGET = mzm_jp
+# 	TARGET = emulator_jp
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXJ
 # 	CPPFLAGS += -DREGION_JP
@@ -47,7 +47,7 @@ endif
 # endif
 
 # ifeq ($(REGION),cn)
-# 	TARGET = mzm_cn
+# 	TARGET = emulator_cn
 # 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXC
 # 	CPPFLAGS += -DREGION_CN
@@ -91,10 +91,11 @@ SHA1SUM = sha1sum
 TAIL = tail
 
 # Tools
-GBAFIX = ../../tools/gbafix/gbafix
+TOOLS_DIR := ../../tools
+GBAFIX = $(TOOLS_DIR)/gbafix/gbafix
 PYTHON = python3
-EXTRACTOR = ../../tools/extractor.py
-PREPROC = ../../tools/preproc/preproc
+EXTRACTOR = $(PYTHON) $(TOOLS_DIR)/extractor.py
+PREPROC = $(PYTHON) $(TOOLS_DIR)/preproc.py
 
 # Flags
 ASFLAGS += -mcpu=arm7tdmi
@@ -144,7 +145,7 @@ diff: $(DUMPS)
 # .PHONY: extract
 # extract:
 # 	$(MSG) Extracting
-# 	$Q python3 ../tools/extractor.py -r $(REGION)
+# 	$Q python3 $(TOOLS_DIR)/extractor.py -r $(REGION)
 
 .PHONY: clean
 clean:
@@ -170,8 +171,8 @@ ifeq ($(DATA),1)
 	$(MSG) RM data/
 	$Q$(RM) -r data
 endif
-	$(MSG) RM linker.ld.pp
-	$Q$(RM) linker.ld.pp
+	$(MSG) RM $(LD_SCRIPT)
+	$Q$(RM) $(LD_SCRIPT)
 
 .PHONY: help
 help:
@@ -199,7 +200,7 @@ $(ELF) $(MAP): $(OBJ) $(LD_SCRIPT)
 	$(MSG) LD $@
 	$Q$(LD) $(LDFLAGS) -n -T $(LD_SCRIPT) -Map=$(MAP) $(LIBS) -o $@
 
-$(LD_SCRIPT): linker.ld
+$(LD_SCRIPT): $(basename $(LD_SCRIPT))
 	$(MSG) CPP $@
 	$Q$(CPP) $(CPPFLAGS) $< -o $@
 
@@ -221,7 +222,7 @@ $(LD_SCRIPT): linker.ld
 src/sram/%.s: CFLAGS = -Werror -O1 -mthumb-interwork -fhex-asm -f2003-patch
 src/sram/%.s: src/sram/%.c
 
-../../tools/%: ../../tools/%.c
+$(TOOLS_DIR)/%: $(TOOLS_DIR)/%.c
 	$(MSG) HOSTCC $@
 	$Q$(HOSTCC) $< $(HOSTCFLAGS) $(HOSTCPPFLAGS) -o $@
 
