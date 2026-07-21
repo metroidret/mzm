@@ -91,10 +91,11 @@ SHA1SUM = sha1sum
 TAIL = tail
 
 # Tools
-GBAFIX = ../../tools/gbafix/gbafix
+TOOLS_DIR := ../../tools
+GBAFIX = $(TOOLS_DIR)/gbafix/gbafix
 PYTHON = python3
-EXTRACTOR = ../../tools/extractor.py
-PREPROC = ../../tools/preproc/preproc
+EXTRACTOR = $(PYTHON) $(TOOLS_DIR)/extractor.py
+PREPROC = $(PYTHON) $(TOOLS_DIR)/preproc.py
 
 # Flags
 ASFLAGS += -mcpu=arm7tdmi
