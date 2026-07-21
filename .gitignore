@@ -19,7 +19,7 @@
 *.runtimeconfig.json
 *.pyc
 
-linker.ld.pp
+*.ld.pp
 include/**/*.s
 tools/*.txt
 tools/agbcc

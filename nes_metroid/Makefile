@@ -145,9 +145,9 @@ diff: $(DUMPS)
 .PHONY: extract
 extract:
 	$(MSG) Extracting
-	$Q$(PYTHON) ../tools/nes_metroid/gfxExtractor.py ../mzm_us_baserom.gba data/gfx/
-	$Q$(PYTHON) ../tools/nes_metroid/romExtractor.py ../mzm_us_baserom.gba data/M1_NES_MZMUS.nes
-	$Q$(PYTHON) ../tools/nes_metroid/paletteExtractor.py ../mzm_us_baserom.gba data/palette.pal.lz
+	$Q$(PYTHON) $(TOOLS_DIR)/nes_metroid/gfxExtractor.py ../mzm_us_baserom.gba data/gfx/
+	$Q$(PYTHON) $(TOOLS_DIR)/nes_metroid/romExtractor.py ../mzm_us_baserom.gba data/M1_NES_MZMUS.nes
+	$Q$(PYTHON) $(TOOLS_DIR)/nes_metroid/paletteExtractor.py ../mzm_us_baserom.gba data/palette.pal.lz
 
 .PHONY: clean
 clean:
@@ -172,10 +172,11 @@ ifeq ($(DATA),1)
 	$(MSG) RM data/
 	$Q$(RM) -r data
 endif
-	$(MSG) RM linker.ld.pp
-	$Q$(RM) linker.ld.pp
+	$(MSG) RM $(LD_SCRIPT)
+	$Q$(RM) $(LD_SCRIPT)
 
 	@$(MAKE) clean -C emulator
+	@$(MAKE) clean -C emulator -f Makefile_part6.mk
 	@$(MAKE) clean -C payload
 
 .PHONY: help
@@ -201,20 +202,24 @@ asm/data.o: emulator/emulator_$(REGION).gba.lz emulator/emulatorUnused_$(REGION)
 emulator/emulator_$(REGION).gba:
 	@$(MAKE) -C emulator
 
-emulator/emulator_$(REGION).gba.lz: emulator/emulator_$(REGION).gba
-	$(PYTHON) ../tools/nes_metroid/emulatorCompressor.py $<
+emulator/emulator_$(REGION)_part6.gba:
+	@$(MAKE) -C emulator -f Makefile_part6.mk
+
+emulator/emulator_$(REGION).gba.lz: emulator/emulator_$(REGION).gba emulator/emulator_$(REGION)_part6.gba
+	$(PYTHON) $(TOOLS_DIR)/nes_metroid/emulatorPart6Combiner.py $< $(<:.gba=.map) $(<:.gba=_part6.gba)
+	$(PYTHON) $(TOOLS_DIR)/nes_metroid/emulatorCompressor.py $<
 
 emulator/emulatorUnused_$(REGION).gba: emulator/emulator_$(REGION).gba
-	$(PYTHON) ../tools/nes_metroid/emulatorUnusedExtractor.py $< $@
+	$(PYTHON) $(TOOLS_DIR)/nes_metroid/emulatorUnusedExtractor.py $< $@
 
 payload/payload_$(REGION).gba:
 	@$(MAKE) -C payload
 
 payload/payload_$(REGION).gba.lz: payload/payload_$(REGION).gba
-	$(PYTHON) ../tools/nes_metroid/payloadCompressor.py $<
+	$(PYTHON) $(TOOLS_DIR)/nes_metroid/payloadCompressor.py $<
 
 data/M1_NES_MZMUS.nes.lz:
-	$(PYTHON) ../tools/nes_metroid/romCompressor.py data/M1_NES_MZMUS.nes
+	$(PYTHON) $(TOOLS_DIR)/nes_metroid/romCompressor.py data/M1_NES_MZMUS.nes
 
 $(TARGET): $(ELF) $(GBAFIX)
 	$(MSG) OBJCOPY $@
@@ -248,7 +253,7 @@ $(LD_SCRIPT): linker.ld
 # src/sram/%.s: CFLAGS = -Werror -O1 -mthumb-interwork -fhex-asm -f2003-patch
 # src/sram/%.s: src/sram/%.c
 
-../tools/%: ../tools/%.c
+$(TOOLS_DIR)/%: $(TOOLS_DIR)/%.c
 	$(MSG) HOSTCC $@
 	$Q$(HOSTCC) $< $(HOSTCFLAGS) $(HOSTCPPFLAGS) -o $@
 

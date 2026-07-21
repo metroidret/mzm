@@ -5,50 +5,50 @@ REGION ?= us
 PAD_TO = 0x08800000
 
 ifeq ($(REGION),us)
-	TARGET = mzm_us
-	GAME_TITLE = ZEROMISSIONE
-	GAME_CODE = BMXE
+	TARGET = emulator_us
+	GAME_TITLE = "NES METROID"
+	GAME_CODE = "    "
 	CPPFLAGS += -DREGION_US
 	ASFLAGS += --defsym REGION_US=1
 endif
 
-ifeq ($(REGION),us_beta)
-	TARGET = mzm_us_beta
-	GAME_TITLE = ZEROMISSIONE
-	GAME_CODE = BMXE
-	CPPFLAGS += -DREGION_US -DREGION_US_BETA -DDEBUG
-	ASFLAGS += --defsym REGION_US=1 --defsym REGION_US_BETA=1 --defsym DEBUG=1
-	PAD_TO = 0x09000000
-endif
+# ifeq ($(REGION),us_beta)
+# 	TARGET = emulator_us_beta
+# 	GAME_TITLE = NES METROID
+# 	GAME_CODE = BMXE
+# 	CPPFLAGS += -DREGION_US -DREGION_US_BETA -DDEBUG
+# 	ASFLAGS += --defsym REGION_US=1 --defsym REGION_US_BETA=1 --defsym DEBUG=1
+# 	PAD_TO = 0x09000000
+# endif
 
-ifeq ($(REGION),eu)
-	TARGET = mzm_eu
-	GAME_TITLE = ZEROMISSIONP
-	GAME_CODE = BMXP
-	CPPFLAGS += -DREGION_EU
-	ASFLAGS += --defsym REGION_EU=1
-endif
+# ifeq ($(REGION),eu)
+# 	TARGET = emulator_eu
+# 	GAME_TITLE = NES METROID
+# 	GAME_CODE = BMXP
+# 	CPPFLAGS += -DREGION_EU
+# 	ASFLAGS += --defsym REGION_EU=1
+# endif
 
-ifeq ($(REGION),eu_beta)
-	TARGET = mzm_eu_beta
-	GAME_TITLE = ZEROMISSIONP
-	GAME_CODE = BMXP
-	CPPFLAGS += -DREGION_EU -DREGION_EU_BETA -DDEBUG
-	ASFLAGS += --defsym REGION_EU=1 --defsym REGION_EU_BETA=1 --defsym DEBUG=1
-	PAD_TO = 0x09000000
-endif
+# ifeq ($(REGION),eu_beta)
+# 	TARGET = emulator_eu_beta
+# 	GAME_TITLE = NES METROID
+# 	GAME_CODE = BMXP
+# 	CPPFLAGS += -DREGION_EU -DREGION_EU_BETA -DDEBUG
+# 	ASFLAGS += --defsym REGION_EU=1 --defsym REGION_EU_BETA=1 --defsym DEBUG=1
+# 	PAD_TO = 0x09000000
+# endif
 
-ifeq ($(REGION),jp)
-	TARGET = mzm_jp
-	GAME_TITLE = ZEROMISSIONJ
-	GAME_CODE = BMXJ
-	CPPFLAGS += -DREGION_JP
-	ASFLAGS += --defsym REGION_JP=1
-endif
+# ifeq ($(REGION),jp)
+# 	TARGET = emulator_jp
+# 	GAME_TITLE = NES METROID
+# 	GAME_CODE = BMXJ
+# 	CPPFLAGS += -DREGION_JP
+# 	ASFLAGS += --defsym REGION_JP=1
+# endif
 
 # ifeq ($(REGION),cn)
-# 	TARGET = mzm_cn
-# 	GAME_TITLE = ZEROMISSIONC
+# 	TARGET = emulator_cn
+# 	GAME_TITLE = NES METROID
 # 	GAME_CODE = BMXC
 # 	CPPFLAGS += -DREGION_CN
 #	ASFLAGS += --defsym REGION_CN=1
@@ -61,17 +61,13 @@ ifeq ($(DEBUG),1)
 endif
 
 BASEROM := $(TARGET)_baserom.gba
-TARGET := $(TARGET).gba
-
-# Default target
-.PHONY: all
-all: $(TARGET)
+TARGET := $(TARGET)_part6.gba
 
 ELF = $(TARGET:.gba=.elf)
 MAP = $(TARGET:.gba=.map)
 SHA1FILE = $(TARGET:.gba=.sha1)
 DUMPS = $(BASEROM:.gba=.dump) $(TARGET:.gba=.dump)
-LD_SCRIPT = linker.ld.pp
+LD_SCRIPT = linker_part6.ld.pp
 
 # ROM header
 MAKER_CODE = 01
@@ -95,7 +91,7 @@ SHA1SUM = sha1sum
 TAIL = tail
 
 # Tools
-include make_tools.mk
+TOOLS_DIR := ../../tools
 GBAFIX = $(TOOLS_DIR)/gbafix/gbafix
 PYTHON = python3
 EXTRACTOR = $(PYTHON) $(TOOLS_DIR)/extractor.py
@@ -110,20 +106,13 @@ PREPROCFLAGS = charmap.txt
 # Objects
 CSRC = $(wildcard src/**.c) $(wildcard src/**/**.c) $(wildcard src/**/**/**.c) $(wildcard src/**/**/**/**.c)
 .PRECIOUS: $(CSRC:.c=.s)
-ASMSRC = $(CSRC:.c=.s) $(wildcard asm/*.s) $(wildcard sound/*.s) $(wildcard sound/**/*.s) $(wildcard sound/**/**/*.s)
+ASMSRC = $(CSRC:.c=.s) $(wildcard asm/*.s) $(wildcard asm/**/*.s) $(wildcard sound/*.s) $(wildcard sound/**/*.s) $(wildcard sound/**/**/*.s)
 OBJ = $(ASMSRC:.s=.o) 
 
-# Detect if agbcc was installed into the project
-ifneq (,$(wildcard tools/agbcc))
-	AGBCC_BIN := tools/agbcc/bin/agbcc
-	AGBCC_LIB := tools/agbcc/lib
-	CC = $(AGBCC_BIN)
-else
-	# Dynamically find agbcc path and its lib folder
-	AGBCC_BIN := $(shell which agbcc)
-	AGBCC_DIR := $(dir $(AGBCC_BIN))/
-	AGBCC_LIB := $(abspath $(AGBCC_DIR))
-endif
+# Dynamically find agbcc path and its lib folder
+AGBCC_BIN := $(shell which agbcc)
+AGBCC_DIR := $(dir $(AGBCC_BIN))/
+AGBCC_LIB := $(abspath $(AGBCC_DIR))
 
 LIBS := $(AGBCC_LIB)/libgcc.a $(AGBCC_LIB)/libc.a
 
@@ -137,25 +126,8 @@ else
 	MSG = @echo " "
 endif
 
-# Rules that do not require scanning for dependencies
-RULES_NO_SCAN += dump diff extract clean tidy
-
-# Generate tools before building anything
-SETUP_PREREQS ?= 1
-# Disable generating tools for rules that do not build anything
-ifneq (,$(MAKECMDGOALS))
-  ifeq (,$(filter-out $(RULES_NO_SCAN),$(MAKECMDGOALS)))
-    SETUP_PREREQS := 0
-  endif
-endif
-.SHELLSTATUS ?= 0
-ifeq ($(SETUP_PREREQS),1)
-  $(foreach line, $(shell $(MAKE) -f make_tools.mk | sed "s/ /__SPACE__/g"), $(info $(subst __SPACE__, ,$(line))))
-  ifneq ($(.SHELLSTATUS),0)
-    $(error Errors occurred while building tools. See error messages above for more details)
-  endif
-endif
-
+.PHONY: all
+all: $(TARGET)
 
 .PHONY: check
 check: all
@@ -170,19 +142,17 @@ diff: $(DUMPS)
 	$(MSG) DIFF $^
 	$Q$(DIFF) $^
 
-.PHONY: extract
-extract:
-	$(MSG) Extracting
-	$Q$(EXTRACTOR) -r $(REGION)
+# .PHONY: extract
+# extract:
+# 	$(MSG) Extracting
+# 	$Q python3 $(TOOLS_DIR)/extractor.py -r $(REGION)
 
 .PHONY: clean
-clean: clean-tools tidy
-
-.PHONY: tidy
-tidy:
+clean:
 	$(MSG) RM roms
 # Delete every gba file that doesn't end with baserom
 	$Qfind -type f -name "*.gba" -a ! -name "*baserom.gba" -delete
+	$Qfind -type f -name "*.gba.lz" -a ! -name "*baserom.gba.lz" -delete
 	$(MSG) RM elf
 	$Q$(RM) *.elf
 	$(MSG) RM map
@@ -200,10 +170,6 @@ tidy:
 ifeq ($(DATA),1)
 	$(MSG) RM data/
 	$Q$(RM) -r data
-	$(MSG) RM sound/direct_sound_samples
-	$Q$(RM) -r sound/direct_sound_samples
-	$(MSG) RM include/extracted
-	$Q$(RM) -r include/extracted
 endif
 	$(MSG) RM $(LD_SCRIPT)
 	$Q$(RM) $(LD_SCRIPT)
@@ -215,7 +181,6 @@ help:
 	@echo '  check: checksum the ROM'
 	@echo '  dump: dump the ROMs'
 	@echo '  diff: compare the ROM with the original'
-	@echo '  extract: extract data from baserom'
 	@echo '  clean: remove the ROM and intermediate files'
 	@echo '  	DATA=1: removes the data folder generated by the extractor'
 	@echo '  help: show this message'
@@ -227,15 +192,15 @@ help:
 
 $(TARGET): $(ELF)
 	$(MSG) OBJCOPY $@
-	$Q$(OBJCOPY) -O binary --gap-fill 0xff --pad-to $(PAD_TO) $< $@
-	$(MSG) GBAFIX $@
-	$Q$(GBAFIX) $@ -t$(GAME_TITLE) -c$(GAME_CODE) -m$(MAKER_CODE) -r$(GAME_REVISION)
+	$Q$(OBJCOPY) -O binary --gap-fill 0xff $< $@
+# 	$(MSG) GBAFIX $@
+# 	$Q$(GBAFIX) $@ -t$(GAME_TITLE)  -m$(MAKER_CODE) -r$(GAME_REVISION)
 
 $(ELF) $(MAP): $(OBJ) $(LD_SCRIPT)
 	$(MSG) LD $@
 	$Q$(LD) $(LDFLAGS) -n -T $(LD_SCRIPT) -Map=$(MAP) $(LIBS) -o $@
 
-$(LD_SCRIPT): linker.ld
+$(LD_SCRIPT): $(basename $(LD_SCRIPT))
 	$(MSG) CPP $@
 	$Q$(CPP) $(CPPFLAGS) $< -o $@
 
@@ -251,11 +216,15 @@ $(LD_SCRIPT): linker.ld
 	$(MSG) CC $@
 	$Q$(PREPROC) $< $(PREPROCFLAGS) | $(CPP) $(CPPFLAGS) | $(CC) -o $@ $(CFLAGS) && printf '\t.align 2, 0 @ dont insert nops\n' >> $@
 
-src/dma.s: CFLAGS = -Werror -O1 -mthumb-interwork -fhex-asm -f2003-patch
-src/dma.s: src/dma.c
+# src/dma.s: CFLAGS = -Werror -O1 -mthumb-interwork -fhex-asm -f2003-patch
+# src/dma.s: src/dma.c
 
 src/sram/%.s: CFLAGS = -Werror -O1 -mthumb-interwork -fhex-asm -f2003-patch
 src/sram/%.s: src/sram/%.c
+
+$(TOOLS_DIR)/%: $(TOOLS_DIR)/%.c
+	$(MSG) HOSTCC $@
+	$Q$(HOSTCC) $< $(HOSTCFLAGS) $(HOSTCPPFLAGS) -o $@
 
 .PHONY: us us_debug us_beta eu eu_debug eu_beta jp jp_debug
 # cn cn_debug

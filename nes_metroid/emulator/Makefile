@@ -145,7 +145,7 @@ diff: $(DUMPS)
 # .PHONY: extract
 # extract:
 # 	$(MSG) Extracting
-# 	$Q python3 ../tools/extractor.py -r $(REGION)
+# 	$Q python3 $(TOOLS_DIR)/extractor.py -r $(REGION)
 
 .PHONY: clean
 clean:
@@ -171,8 +171,8 @@ ifeq ($(DATA),1)
 	$(MSG) RM data/
 	$Q$(RM) -r data
 endif
-	$(MSG) RM linker.ld.pp
-	$Q$(RM) linker.ld.pp
+	$(MSG) RM $(LD_SCRIPT)
+	$Q$(RM) $(LD_SCRIPT)
 
 .PHONY: help
 help:
@@ -200,7 +200,7 @@ $(ELF) $(MAP): $(OBJ) $(LD_SCRIPT)
 	$(MSG) LD $@
 	$Q$(LD) $(LDFLAGS) -n -T $(LD_SCRIPT) -Map=$(MAP) $(LIBS) -o $@
 
-$(LD_SCRIPT): linker.ld
+$(LD_SCRIPT): $(basename $(LD_SCRIPT))
 	$(MSG) CPP $@
 	$Q$(CPP) $(CPPFLAGS) $< -o $@
 
@@ -222,7 +222,7 @@ $(LD_SCRIPT): linker.ld
 src/sram/%.s: CFLAGS = -Werror -O1 -mthumb-interwork -fhex-asm -f2003-patch
 src/sram/%.s: src/sram/%.c
 
-../../tools/%: ../../tools/%.c
+$(TOOLS_DIR)/%: $(TOOLS_DIR)/%.c
 	$(MSG) HOSTCC $@
 	$Q$(HOSTCC) $< $(HOSTCFLAGS) $(HOSTCPPFLAGS) -o $@
 
