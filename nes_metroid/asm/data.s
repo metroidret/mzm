@@ -2,21 +2,23 @@
     .include "asm/macros.inc"
 
 _087D8150:
-.ifdef REGION_JP
-    .incbin "payload/payload_jp.gba.lz"
+.ifdef REGION_US_BETA
+    .incbin "payload/payload_us_beta.gba.lz"
 .else
-    .ifdef REGION_EU
-        .ifdef DEBUG
-            .incbin "payload/payload_eu_beta.gba.lz"
-        .else
-            .incbin "payload/payload_eu.gba.lz"
-        .endif
+    .ifdef REGION_EU_BETA
+        .incbin "payload/payload_eu_beta.gba.lz"
     .else
-        .ifdef REGION_US
-            .ifdef DEBUG
-                .incbin "payload/payload_us_beta.gba.lz"
+        .ifdef REGION_EU
+            .incbin "payload/payload_eu.gba.lz"
+        .else
+            .ifdef REGION_JP
+                .incbin "payload/payload_jp.gba.lz"
             .else
-                .incbin "payload/payload_us.gba.lz"
+                .ifdef REGION_CN
+                    .incbin "payload/payload_cn.gba.lz"
+                .else
+                    .incbin "payload/payload_us.gba.lz"
+                .endif
             .endif
         .endif
     .endif
@@ -24,41 +26,46 @@ _087D8150:
     .align 4, 0
 
 _087D8360:
-.ifdef REGION_JP
-    .incbin "emulator/emulator_jp.gba.lz"
+.ifdef REGION_US_BETA
+    .incbin "emulator/emulator_us_beta.gba.lz"
 .else
-    .ifdef REGION_EU
-        .ifdef DEBUG
-            .incbin "emulator/emulator_eu_beta.gba.lz"
-        .else
-            .incbin "emulator/emulator_eu.gba.lz"
-        .endif
+    .ifdef REGION_EU_BETA
+        .incbin "emulator/emulator_eu_beta.gba.lz"
     .else
-        .ifdef REGION_US
-            .ifdef DEBUG
-                .incbin "emulator/emulator_us_beta.gba.lz"
+        .ifdef REGION_EU
+            .incbin "emulator/emulator_eu.gba.lz"
+        .else
+            .ifdef REGION_JP
+                .incbin "emulator/emulator_jp.gba.lz"
             .else
-                .incbin "emulator/emulator_us.gba.lz"
+                .ifdef REGION_CN
+                    .incbin "emulator/emulator_cn.gba.lz"
+                .else
+                    .incbin "emulator/emulator_us.gba.lz"
+                .endif
             .endif
         .endif
     .endif
 .endif
+
 _087DCDB0:
-.ifdef REGION_JP
-    .incbin "emulator/emulatorUnused_jp.gba"
+.ifdef REGION_US_BETA
+    .incbin "emulator/emulatorUnused_us_beta.gba"
 .else
-    .ifdef REGION_EU
-        .ifdef DEBUG
-            .incbin "emulator/emulatorUnused_eu_beta.gba"
-        .else
-            .incbin "emulator/emulatorUnused_eu.gba"
-        .endif
+    .ifdef REGION_EU_BETA
+        .incbin "emulator/emulatorUnused_eu_beta.gba"
     .else
-        .ifdef REGION_US
-            .ifdef DEBUG
-                .incbin "emulator/emulatorUnused_us_beta.gba"
+        .ifdef REGION_EU
+            .incbin "emulator/emulatorUnused_eu.gba"
+        .else
+            .ifdef REGION_JP
+                .incbin "emulator/emulatorUnused_jp.gba"
             .else
-                .incbin "emulator/emulatorUnused_us.gba"
+                .ifdef REGION_CN
+                    .incbin "emulator/emulatorUnused_cn.gba"
+                .else
+                    .incbin "emulator/emulatorUnused_us.gba"
+                .endif
             .endif
         .endif
     .endif

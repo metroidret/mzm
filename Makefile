@@ -174,6 +174,9 @@ diff: $(DUMPS)
 extract:
 	$(MSG) Extracting
 	$Q$(EXTRACTOR) -r $(REGION)
+ifeq ($(DEBUG),1)
+	$Q$(EXTRACTOR) -d
+endif
 	$(MAKE) -C nes_metroid extract REGION=$(REGION)
 
 .PHONY: clean
