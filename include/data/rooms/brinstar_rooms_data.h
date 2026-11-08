@@ -6,7 +6,7 @@
 #include "structs/sprite.h"
 #include "structs/room.h"
 
-extern const u8 sBrinstar_0_Scrolls[SCROLL_DATA_SIZE(3)];
+extern const struct ScrollArray(3) sBrinstar_0_Scrolls;
 extern const u8 sBrinstar_0_Clipdata[311];
 extern const u8 sBrinstar_0_Bg2[124];
 extern const u8 sBrinstar_0_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(9)];
