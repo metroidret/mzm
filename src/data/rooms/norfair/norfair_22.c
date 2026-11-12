@@ -21,30 +21,30 @@ const u8 sNorfair_22_Bg2[456] = {
     #include "extracted/data/rooms/norfair/norfair_22_bg2.gfx.inc"
 };
 
-const u8 sNorfair_22_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(8)] = {
-	9, 21, SPRITESET_IDX(4),
-	9, 30, SPRITESET_IDX(4),
-	16, 18, SPRITESET_IDX(0),
-	16, 24, SPRITESET_IDX(1),
-	17, 35, SPRITESET_IDX(1),
-	19, 29, SPRITESET_IDX(1),
-	21, 11, SPRITESET_IDX(2),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sNorfair_22_Spriteset1[8] = {
+    { .y = 9, .x = 21, .id = SPRITESET_IDX(4) },
+    { .y = 9, .x = 30, .id = SPRITESET_IDX(4) },
+    { .y = 16, .x = 18, .id = SPRITESET_IDX(0) },
+    { .y = 16, .x = 24, .id = SPRITESET_IDX(1) },
+    { .y = 17, .x = 35, .id = SPRITESET_IDX(1) },
+    { .y = 19, .x = 29, .id = SPRITESET_IDX(1) },
+    { .y = 21, .x = 11, .id = SPRITESET_IDX(2) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sNorfair_22_Bg1[647] = {
     #include "extracted/data/rooms/norfair/norfair_22_bg1.gfx.inc"
 };
 
-const u8 sNorfair_22_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(8)] = {
-	9, 21, SPRITESET_IDX(4),
-	9, 30, SPRITESET_IDX(4),
-	16, 18, SPRITESET_IDX(0),
-	16, 24, SPRITESET_IDX(0),
-	17, 35, SPRITESET_IDX(0),
-	19, 29, SPRITESET_IDX(1),
-	21, 11, SPRITESET_IDX(2),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sNorfair_22_Spriteset0[8] = {
+    { .y = 9, .x = 21, .id = SPRITESET_IDX(4) },
+    { .y = 9, .x = 30, .id = SPRITESET_IDX(4) },
+    { .y = 16, .x = 18, .id = SPRITESET_IDX(0) },
+    { .y = 16, .x = 24, .id = SPRITESET_IDX(0) },
+    { .y = 17, .x = 35, .id = SPRITESET_IDX(0) },
+    { .y = 19, .x = 29, .id = SPRITESET_IDX(1) },
+    { .y = 21, .x = 11, .id = SPRITESET_IDX(2) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sNorfair_22_Bg0[175] = {

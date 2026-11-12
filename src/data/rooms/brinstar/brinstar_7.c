@@ -9,50 +9,50 @@ const u8 sBrinstar_7_Bg2[] = {
     #include "extracted/data/rooms/brinstar/brinstar_7_bg2.gfx.inc"
 };
 
-const u8 sBrinstar_7_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(19)] = {
-	12, 5, SPRITESET_IDX(2),
-	15, 5, SPRITESET_IDX(1),
-	25, 8, SPRITESET_IDX(1),
-	35, 12, SPRITESET_IDX(1),
-	36, 7, SPRITESET_IDX(2),
-	43, 8, SPRITESET_IDX(2),
-	45, 11, SPRITESET_IDX(1),
-	55, 8, SPRITESET_IDX(1),
-	62, 9, SPRITESET_IDX(5),
-	65, 4, SPRITESET_IDX(5),
-	67, 6, SPRITESET_IDX(5),
-	67, 8, SPRITESET_IDX(5),
-	75, 5, SPRITESET_IDX(5),
-	78, 10, SPRITESET_IDX(1),
-	80, 6, SPRITESET_IDX(2),
-	82, 10, SPRITESET_IDX(1),
-	84, 6, SPRITESET_IDX(1),
-	89, 9, SPRITESET_IDX(1),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sBrinstar_7_Spriteset1[19] = {
+    { .y = 12, .x = 5, .id = SPRITESET_IDX(2) },
+    { .y = 15, .x = 5, .id = SPRITESET_IDX(1) },
+    { .y = 25, .x = 8, .id = SPRITESET_IDX(1) },
+    { .y = 35, .x = 12, .id = SPRITESET_IDX(1) },
+    { .y = 36, .x = 7, .id = SPRITESET_IDX(2) },
+    { .y = 43, .x = 8, .id = SPRITESET_IDX(2) },
+    { .y = 45, .x = 11, .id = SPRITESET_IDX(1) },
+    { .y = 55, .x = 8, .id = SPRITESET_IDX(1) },
+    { .y = 62, .x = 9, .id = SPRITESET_IDX(5) },
+    { .y = 65, .x = 4, .id = SPRITESET_IDX(5) },
+    { .y = 67, .x = 6, .id = SPRITESET_IDX(5) },
+    { .y = 67, .x = 8, .id = SPRITESET_IDX(5) },
+    { .y = 75, .x = 5, .id = SPRITESET_IDX(5) },
+    { .y = 78, .x = 10, .id = SPRITESET_IDX(1) },
+    { .y = 80, .x = 6, .id = SPRITESET_IDX(2) },
+    { .y = 82, .x = 10, .id = SPRITESET_IDX(1) },
+    { .y = 84, .x = 6, .id = SPRITESET_IDX(1) },
+    { .y = 89, .x = 9, .id = SPRITESET_IDX(1) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sBrinstar_7_Bg1[] = {
     #include "extracted/data/rooms/brinstar/brinstar_7_bg1.gfx.inc"
 };
 
-const u8 sBrinstar_7_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(18)] = {
-	6, 10, SPRITESET_IDX(5),
-	6, 12, SPRITESET_IDX(5),
-	9, 5, SPRITESET_IDX(2),
-	12, 5, SPRITESET_IDX(2),
-	15, 5, SPRITESET_IDX(1),
-	25, 8, SPRITESET_IDX(1),
-	35, 12, SPRITESET_IDX(1),
-	36, 7, SPRITESET_IDX(2),
-	43, 8, SPRITESET_IDX(2),
-	45, 11, SPRITESET_IDX(0),
-	55, 8, SPRITESET_IDX(0),
-	67, 6, SPRITESET_IDX(5),
-	78, 10, SPRITESET_IDX(0),
-	80, 6, SPRITESET_IDX(2),
-	82, 10, SPRITESET_IDX(0),
-	84, 6, SPRITESET_IDX(1),
-	89, 9, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sBrinstar_7_Spriteset0[18] = {
+    { .y = 6, .x = 10, .id = SPRITESET_IDX(5) },
+    { .y = 6, .x = 12, .id = SPRITESET_IDX(5) },
+    { .y = 9, .x = 5, .id = SPRITESET_IDX(2) },
+    { .y = 12, .x = 5, .id = SPRITESET_IDX(2) },
+    { .y = 15, .x = 5, .id = SPRITESET_IDX(1) },
+    { .y = 25, .x = 8, .id = SPRITESET_IDX(1) },
+    { .y = 35, .x = 12, .id = SPRITESET_IDX(1) },
+    { .y = 36, .x = 7, .id = SPRITESET_IDX(2) },
+    { .y = 43, .x = 8, .id = SPRITESET_IDX(2) },
+    { .y = 45, .x = 11, .id = SPRITESET_IDX(0) },
+    { .y = 55, .x = 8, .id = SPRITESET_IDX(0) },
+    { .y = 67, .x = 6, .id = SPRITESET_IDX(5) },
+    { .y = 78, .x = 10, .id = SPRITESET_IDX(0) },
+    { .y = 80, .x = 6, .id = SPRITESET_IDX(2) },
+    { .y = 82, .x = 10, .id = SPRITESET_IDX(0) },
+    { .y = 84, .x = 6, .id = SPRITESET_IDX(1) },
+    { .y = 89, .x = 9, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

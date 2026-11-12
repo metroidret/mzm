@@ -13,8 +13,8 @@ const u8 sBrinstar_37_Bg1[137] = {
     #include "extracted/data/rooms/brinstar/brinstar_37_bg1.gfx.inc"
 };
 
-const u8 sBrinstar_37_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
-	9, 12, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sBrinstar_37_Spriteset0[2] = {
+    { .y = 9, .x = 12, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

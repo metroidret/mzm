@@ -13,14 +13,14 @@ const u8 sTourian_3_Bg1[225] = {
     #include "extracted/data/rooms/tourian/tourian_3_bg1.gfx.inc"
 };
 
-const u8 sTourian_3_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(8)] = {
-	2, 9, SPRITESET_IDX(1),
-	2, 14, SPRITESET_IDX(2),
-	2, 19, SPRITESET_IDX(2),
-	2, 24, SPRITESET_IDX(1),
-	2, 29, SPRITESET_IDX(2),
-	2, 34, SPRITESET_IDX(2),
-	2, 39, SPRITESET_IDX(1),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sTourian_3_Spriteset0[8] = {
+    { .y = 2, .x = 9, .id = SPRITESET_IDX(1) },
+    { .y = 2, .x = 14, .id = SPRITESET_IDX(2) },
+    { .y = 2, .x = 19, .id = SPRITESET_IDX(2) },
+    { .y = 2, .x = 24, .id = SPRITESET_IDX(1) },
+    { .y = 2, .x = 29, .id = SPRITESET_IDX(2) },
+    { .y = 2, .x = 34, .id = SPRITESET_IDX(2) },
+    { .y = 2, .x = 39, .id = SPRITESET_IDX(1) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

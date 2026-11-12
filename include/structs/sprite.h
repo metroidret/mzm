@@ -5,9 +5,6 @@
 
 #include "constants/sprite.h"
 
-#define ENEMY_ROOM_DATA_SIZE 3
-#define ENEMY_ROOM_DATA_ARRAY_SIZE(nbr) (ENEMY_ROOM_DATA_SIZE * nbr)
-
 // Structs
 
 MAKE_ENUM(u8, MultiSpriteDataElements) {

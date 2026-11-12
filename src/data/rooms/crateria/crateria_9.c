@@ -39,9 +39,9 @@ const u8 sCrateria_9_Bg1[1539] = {
     #include "extracted/data/rooms/crateria/crateria_9_bg1.gfx.inc"
 };
 
-const u8 sCrateria_9_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
-	35, 21, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sCrateria_9_Spriteset0[2] = {
+    { .y = 35, .x = 21, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sCrateria_9_Bg0[293] = {

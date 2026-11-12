@@ -9,26 +9,26 @@ const u8 sBrinstar_19_Bg2[42] = {
     #include "extracted/data/rooms/brinstar/brinstar_19_bg2.gfx.inc"
 };
 
-const u8 sBrinstar_19_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(7)] = {
-	3, 16, SPRITESET_IDX(0),
-	3, 20, SPRITESET_IDX(0),
-	3, 24, SPRITESET_IDX(0),
-	3, 77, SPRITESET_IDX(0),
-	3, 81, SPRITESET_IDX(0),
-	3, 96, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sBrinstar_19_Spriteset1[7] = {
+    { .y = 3, .x = 16, .id = SPRITESET_IDX(0) },
+    { .y = 3, .x = 20, .id = SPRITESET_IDX(0) },
+    { .y = 3, .x = 24, .id = SPRITESET_IDX(0) },
+    { .y = 3, .x = 77, .id = SPRITESET_IDX(0) },
+    { .y = 3, .x = 81, .id = SPRITESET_IDX(0) },
+    { .y = 3, .x = 96, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sBrinstar_19_Bg1[935] = {
     #include "extracted/data/rooms/brinstar/brinstar_19_bg1.gfx.inc"
 };
 
-const u8 sBrinstar_19_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(5)] = {
-	3, 13, SPRITESET_IDX(1),
-	3, 50, SPRITESET_IDX(0),
-	3, 80, SPRITESET_IDX(0),
-	3, 96, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sBrinstar_19_Spriteset0[5] = {
+    { .y = 3, .x = 13, .id = SPRITESET_IDX(1) },
+    { .y = 3, .x = 50, .id = SPRITESET_IDX(0) },
+    { .y = 3, .x = 80, .id = SPRITESET_IDX(0) },
+    { .y = 3, .x = 96, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sBrinstar_19_Bg0[274] = {

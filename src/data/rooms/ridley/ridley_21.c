@@ -13,8 +13,8 @@ const u8 sRidley_21_Bg1[177] = {
     #include "extracted/data/rooms/ridley/ridley_21_bg1.gfx.inc"
 };
 
-const u8 sRidley_21_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
-	4, 8, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sRidley_21_Spriteset0[2] = {
+    { .y = 4, .x = 8, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

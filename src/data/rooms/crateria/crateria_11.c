@@ -13,13 +13,13 @@ const u8 sCrateria_11_Bg1[313] = {
     #include "extracted/data/rooms/crateria/crateria_11_bg1.gfx.inc"
 };
 
-const u8 sCrateria_11_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(7)] = {
-	3, 12, SPRITESET_IDX(2),
-	4, 16, SPRITESET_IDX(0),
-	4, 21, SPRITESET_IDX(2),
-	5, 7, SPRITESET_IDX(2),
-	7, 12, SPRITESET_IDX(1),
-	9, 20, SPRITESET_IDX(1),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sCrateria_11_Spriteset0[7] = {
+    { .y = 3, .x = 12, .id = SPRITESET_IDX(2) },
+    { .y = 4, .x = 16, .id = SPRITESET_IDX(0) },
+    { .y = 4, .x = 21, .id = SPRITESET_IDX(2) },
+    { .y = 5, .x = 7, .id = SPRITESET_IDX(2) },
+    { .y = 7, .x = 12, .id = SPRITESET_IDX(1) },
+    { .y = 9, .x = 20, .id = SPRITESET_IDX(1) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

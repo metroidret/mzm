@@ -28,28 +28,28 @@ const u8 sRidley_14_Bg2[14] = {
     #include "extracted/data/rooms/ridley/ridley_14_bg2.gfx.inc"
 };
 
-const u8 sRidley_14_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(6)] = {
-	2, 20, SPRITESET_IDX(3),
-	2, 29, SPRITESET_IDX(3),
-	6, 26, SPRITESET_IDX(4),
-	7, 17, SPRITESET_IDX(4),
-	7, 35, SPRITESET_IDX(5),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sRidley_14_Spriteset1[6] = {
+    { .y = 2, .x = 20, .id = SPRITESET_IDX(3) },
+    { .y = 2, .x = 29, .id = SPRITESET_IDX(3) },
+    { .y = 6, .x = 26, .id = SPRITESET_IDX(4) },
+    { .y = 7, .x = 17, .id = SPRITESET_IDX(4) },
+    { .y = 7, .x = 35, .id = SPRITESET_IDX(5) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sRidley_14_Bg1[433] = {
     #include "extracted/data/rooms/ridley/ridley_14_bg1.gfx.inc"
 };
 
-const u8 sRidley_14_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(8)] = {
-	2, 20, SPRITESET_IDX(3),
-	2, 24, SPRITESET_IDX(3),
-	2, 29, SPRITESET_IDX(3),
-	2, 33, SPRITESET_IDX(3),
-	6, 26, SPRITESET_IDX(5),
-	7, 17, SPRITESET_IDX(5),
-	7, 35, SPRITESET_IDX(5),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sRidley_14_Spriteset0[8] = {
+    { .y = 2, .x = 20, .id = SPRITESET_IDX(3) },
+    { .y = 2, .x = 24, .id = SPRITESET_IDX(3) },
+    { .y = 2, .x = 29, .id = SPRITESET_IDX(3) },
+    { .y = 2, .x = 33, .id = SPRITESET_IDX(3) },
+    { .y = 6, .x = 26, .id = SPRITESET_IDX(5) },
+    { .y = 7, .x = 17, .id = SPRITESET_IDX(5) },
+    { .y = 7, .x = 35, .id = SPRITESET_IDX(5) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sRidley_14_Bg0[242] = {

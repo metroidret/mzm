@@ -25,31 +25,31 @@ const u8 sTourian_5_Bg1[1425] = {
     #include "extracted/data/rooms/tourian/tourian_5_bg1.gfx.inc"
 };
 
-const u8 sTourian_5_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(24)] = {
-	13, 6, SPRITESET_IDX(4),
-	15, 9, SPRITESET_IDX(0),
-	17, 4, SPRITESET_IDX(3),
-	18, 14, SPRITESET_IDX(5),
-	24, 14, SPRITESET_IDX(7),
-	27, 4, SPRITESET_IDX(6),
-	34, 14, SPRITESET_IDX(3),
-	38, 4, SPRITESET_IDX(7),
-	43, 14, SPRITESET_IDX(3),
-	50, 4, SPRITESET_IDX(5),
-	54, 14, SPRITESET_IDX(7),
-	64, 4, SPRITESET_IDX(4),
-	65, 14, SPRITESET_IDX(5),
-	75, 14, SPRITESET_IDX(8),
-	76, 4, SPRITESET_IDX(8),
-	86, 14, SPRITESET_IDX(5),
-	87, 4, SPRITESET_IDX(5),
-	96, 4, SPRITESET_IDX(3),
-	97, 14, SPRITESET_IDX(6),
-	103, 4, SPRITESET_IDX(5),
-	110, 6, SPRITESET_IDX(3),
-	110, 9, SPRITESET_IDX(2),
-	110, 11, SPRITESET_IDX(4),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sTourian_5_Spriteset0[24] = {
+    { .y = 13, .x = 6, .id = SPRITESET_IDX(4) },
+    { .y = 15, .x = 9, .id = SPRITESET_IDX(0) },
+    { .y = 17, .x = 4, .id = SPRITESET_IDX(3) },
+    { .y = 18, .x = 14, .id = SPRITESET_IDX(5) },
+    { .y = 24, .x = 14, .id = SPRITESET_IDX(7) },
+    { .y = 27, .x = 4, .id = SPRITESET_IDX(6) },
+    { .y = 34, .x = 14, .id = SPRITESET_IDX(3) },
+    { .y = 38, .x = 4, .id = SPRITESET_IDX(7) },
+    { .y = 43, .x = 14, .id = SPRITESET_IDX(3) },
+    { .y = 50, .x = 4, .id = SPRITESET_IDX(5) },
+    { .y = 54, .x = 14, .id = SPRITESET_IDX(7) },
+    { .y = 64, .x = 4, .id = SPRITESET_IDX(4) },
+    { .y = 65, .x = 14, .id = SPRITESET_IDX(5) },
+    { .y = 75, .x = 14, .id = SPRITESET_IDX(8) },
+    { .y = 76, .x = 4, .id = SPRITESET_IDX(8) },
+    { .y = 86, .x = 14, .id = SPRITESET_IDX(5) },
+    { .y = 87, .x = 4, .id = SPRITESET_IDX(5) },
+    { .y = 96, .x = 4, .id = SPRITESET_IDX(3) },
+    { .y = 97, .x = 14, .id = SPRITESET_IDX(6) },
+    { .y = 103, .x = 4, .id = SPRITESET_IDX(5) },
+    { .y = 110, .x = 6, .id = SPRITESET_IDX(3) },
+    { .y = 110, .x = 9, .id = SPRITESET_IDX(2) },
+    { .y = 110, .x = 11, .id = SPRITESET_IDX(4) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sTourian_5_Bg0[186] = {

@@ -49,41 +49,41 @@ const u8 sNorfair_5_Bg2[2172] = {
     #include "extracted/data/rooms/norfair/norfair_5_bg2.gfx.inc"
 };
 
-const u8 sNorfair_5_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(14)] = {
-	8, 11, SPRITESET_IDX(0),
-	8, 14, SPRITESET_IDX(2),
-	18, 14, SPRITESET_IDX(0),
-	21, 6, SPRITESET_IDX(0),
-	30, 10, SPRITESET_IDX(2),
-	34, 14, SPRITESET_IDX(2),
-	44, 13, SPRITESET_IDX(2),
-	66, 3, SPRITESET_IDX(0),
-	82, 4, SPRITESET_IDX(0),
-	88, 9, SPRITESET_IDX(3),
-	95, 7, SPRITESET_IDX(1),
-	114, 23, SPRITESET_IDX(4),
-	115, 6, SPRITESET_IDX(1),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sNorfair_5_Spriteset1[14] = {
+    { .y = 8, .x = 11, .id = SPRITESET_IDX(0) },
+    { .y = 8, .x = 14, .id = SPRITESET_IDX(2) },
+    { .y = 18, .x = 14, .id = SPRITESET_IDX(0) },
+    { .y = 21, .x = 6, .id = SPRITESET_IDX(0) },
+    { .y = 30, .x = 10, .id = SPRITESET_IDX(2) },
+    { .y = 34, .x = 14, .id = SPRITESET_IDX(2) },
+    { .y = 44, .x = 13, .id = SPRITESET_IDX(2) },
+    { .y = 66, .x = 3, .id = SPRITESET_IDX(0) },
+    { .y = 82, .x = 4, .id = SPRITESET_IDX(0) },
+    { .y = 88, .x = 9, .id = SPRITESET_IDX(3) },
+    { .y = 95, .x = 7, .id = SPRITESET_IDX(1) },
+    { .y = 114, .x = 23, .id = SPRITESET_IDX(4) },
+    { .y = 115, .x = 6, .id = SPRITESET_IDX(1) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sNorfair_5_Bg1[2886] = {
     #include "extracted/data/rooms/norfair/norfair_5_bg1.gfx.inc"
 };
 
-const u8 sNorfair_5_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(13)] = {
-	6, 12, SPRITESET_IDX(2),
-	8, 12, SPRITESET_IDX(0),
-	18, 14, SPRITESET_IDX(0),
-	21, 6, SPRITESET_IDX(0),
-	34, 14, SPRITESET_IDX(2),
-	45, 14, SPRITESET_IDX(0),
-	66, 3, SPRITESET_IDX(0),
-	82, 4, SPRITESET_IDX(0),
-	88, 9, SPRITESET_IDX(3),
-	95, 7, SPRITESET_IDX(1),
-	114, 23, SPRITESET_IDX(4),
-	115, 6, SPRITESET_IDX(1),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sNorfair_5_Spriteset0[13] = {
+    { .y = 6, .x = 12, .id = SPRITESET_IDX(2) },
+    { .y = 8, .x = 12, .id = SPRITESET_IDX(0) },
+    { .y = 18, .x = 14, .id = SPRITESET_IDX(0) },
+    { .y = 21, .x = 6, .id = SPRITESET_IDX(0) },
+    { .y = 34, .x = 14, .id = SPRITESET_IDX(2) },
+    { .y = 45, .x = 14, .id = SPRITESET_IDX(0) },
+    { .y = 66, .x = 3, .id = SPRITESET_IDX(0) },
+    { .y = 82, .x = 4, .id = SPRITESET_IDX(0) },
+    { .y = 88, .x = 9, .id = SPRITESET_IDX(3) },
+    { .y = 95, .x = 7, .id = SPRITESET_IDX(1) },
+    { .y = 114, .x = 23, .id = SPRITESET_IDX(4) },
+    { .y = 115, .x = 6, .id = SPRITESET_IDX(1) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sNorfair_5_Bg0[363] = {

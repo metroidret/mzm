@@ -9,20 +9,20 @@ const u8 sNorfair_15_Bg2[14] = {
     #include "extracted/data/rooms/norfair/norfair_15_bg2.gfx.inc"
 };
 
-const u8 sNorfair_15_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(4)] = {
-	9, 13, SPRITESET_IDX(0),
-	9, 17, SPRITESET_IDX(0),
-	9, 21, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sNorfair_15_Spriteset1[4] = {
+    { .y = 9, .x = 13, .id = SPRITESET_IDX(0) },
+    { .y = 9, .x = 17, .id = SPRITESET_IDX(0) },
+    { .y = 9, .x = 21, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sNorfair_15_Bg1[210] = {
     #include "extracted/data/rooms/norfair/norfair_15_bg1.gfx.inc"
 };
 
-const u8 sNorfair_15_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
-	9, 16, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sNorfair_15_Spriteset0[2] = {
+    { .y = 9, .x = 16, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sNorfair_15_Bg0[128] = {

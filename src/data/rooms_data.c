@@ -25,8 +25,8 @@
 #include "constants/event.h"
 #include "constants/room.h"
 
-const u8 sEnemyRoomData_Empty[3] = {
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sEnemyRoomData_Empty[1] = {
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const struct TilesetEntry sTilesetEntries[79] = {
