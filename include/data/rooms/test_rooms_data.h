@@ -2,6 +2,7 @@
 #define TEST_ROOMS_DATA_H
 
 #include "types.h"
+#include "structs/sprite.h"
 #include "structs/room.h"
 
 extern const u32 sTileset_0_Gfx[445];
