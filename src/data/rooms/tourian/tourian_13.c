@@ -9,19 +9,19 @@ const u8 sTourian_13_Bg2[52] = {
     #include "extracted/data/rooms/tourian/tourian_13_bg2.gfx.inc"
 };
 
-const struct SpriteDataRom sTourian_13_Spriteset1[4] = {
+const struct SpriteSpawn sTourian_13_Spriteset1[4] = {
     { .y = 2, .x = 10, .id = SPRITESET_IDX(1) },
     { .y = 12, .x = 15, .id = SPRITESET_IDX(1) },
     { .y = 19, .x = 7, .id = SPRITESET_IDX(1) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sTourian_13_Bg1[280] = {
     #include "extracted/data/rooms/tourian/tourian_13_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sTourian_13_Spriteset0[2] = {
+const struct SpriteSpawn sTourian_13_Spriteset0[2] = {
     { .y = 12, .x = 15, .id = SPRITESET_IDX(1) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 

@@ -28,19 +28,19 @@ const u8 sKraid_7_Bg2[259] = {
     #include "extracted/data/rooms/kraid/kraid_7_bg2.gfx.inc"
 };
 
-const struct SpriteDataRom sKraid_7_Spriteset1[2] = {
+const struct SpriteSpawn sKraid_7_Spriteset1[2] = {
     { .y = 9, .x = 6, .id = SPRITESET_IDX(0) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sKraid_7_Bg1[684] = {
     #include "extracted/data/rooms/kraid/kraid_7_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sKraid_7_Spriteset0[3] = {
+const struct SpriteSpawn sKraid_7_Spriteset0[3] = {
     { .y = 9, .x = 6, .id = SPRITESET_IDX(0) },
     { .y = 18, .x = 17, .id = SPRITESET_IDX(1) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sKraid_7_Bg0[70] = {

@@ -28,26 +28,26 @@ const u8 sBrinstar_38_Bg2[102] = {
     #include "extracted/data/rooms/brinstar/brinstar_38_bg2.gfx.inc"
 };
 
-const struct SpriteDataRom sBrinstar_38_Spriteset1[7] = {
+const struct SpriteSpawn sBrinstar_38_Spriteset1[7] = {
     { .y = 3, .x = 15, .id = SPRITESET_IDX(1) },
     { .y = 3, .x = 19, .id = SPRITESET_IDX(1) },
     { .y = 3, .x = 37, .id = SPRITESET_IDX(1) },
     { .y = 3, .x = 40, .id = SPRITESET_IDX(1) },
     { .y = 6, .x = 30, .id = SPRITESET_IDX(1) },
     { .y = 9, .x = 5, .id = SPRITESET_IDX(0) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sBrinstar_38_Bg1[578] = {
     #include "extracted/data/rooms/brinstar/brinstar_38_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sBrinstar_38_Spriteset0[5] = {
+const struct SpriteSpawn sBrinstar_38_Spriteset0[5] = {
     { .y = 3, .x = 19, .id = SPRITESET_IDX(1) },
     { .y = 3, .x = 37, .id = SPRITESET_IDX(1) },
     { .y = 3, .x = 40, .id = SPRITESET_IDX(1) },
     { .y = 9, .x = 5, .id = SPRITESET_IDX(0) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sBrinstar_38_Bg0[213] = {

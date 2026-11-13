@@ -13,8 +13,8 @@ const u8 sCrateria_15_Bg1[510] = {
     #include "extracted/data/rooms/crateria/crateria_15_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sCrateria_15_Spriteset0[1] = {
-    ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteSpawn sCrateria_15_Spriteset0[1] = {
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sCrateria_15_Bg0[148] = {

@@ -17,7 +17,7 @@ const u8 sChozodia_18_Clipdata[402] = {
     #include "extracted/data/rooms/chozodia/chozodia_18_clipdata.gfx.inc"
 };
 
-const struct SpriteDataRom sChozodia_18_Spriteset2[10] = {
+const struct SpriteSpawn sChozodia_18_Spriteset2[10] = {
     { .y = 13, .x = 31, .id = SPRITESET_IDX(4) },
     { .y = 14, .x = 12, .id = SPRITESET_IDX(4) },
     { .y = 18, .x = 19, .id = SPRITESET_IDX(3) },
@@ -27,14 +27,14 @@ const struct SpriteDataRom sChozodia_18_Spriteset2[10] = {
     { .y = 29, .x = 10, .id = SPRITESET_IDX(4) },
     { .y = 35, .x = 29, .id = SPRITESET_IDX(3) },
     { .y = 39, .x = 20, .id = SPRITESET_IDX(0) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sChozodia_18_Bg2[14] = {
     #include "extracted/data/rooms/chozodia/chozodia_18_bg2.gfx.inc"
 };
 
-const struct SpriteDataRom sChozodia_18_Spriteset1[15] = {
+const struct SpriteSpawn sChozodia_18_Spriteset1[15] = {
     { .y = 20, .x = 46, .id = SPRITESET_IDX(1) },
     { .y = 21, .x = 2, .id = SPRITESET_IDX(1) },
     { .y = 21, .x = 13, .id = SPRITESET_IDX(9) },
@@ -49,14 +49,14 @@ const struct SpriteDataRom sChozodia_18_Spriteset1[15] = {
     { .y = 32, .x = 34, .id = SPRITESET_IDX(8) },
     { .y = 35, .x = 8, .id = SPRITESET_IDX(9) },
     { .y = 35, .x = 13, .id = SPRITESET_IDX(9) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sChozodia_18_Bg1[949] = {
     #include "extracted/data/rooms/chozodia/chozodia_18_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sChozodia_18_Spriteset0[23] = {
+const struct SpriteSpawn sChozodia_18_Spriteset0[23] = {
     { .y = 18, .x = 12, .id = SPRITESET_IDX(8) },
     { .y = 19, .x = 46, .id = SPRITESET_IDX(1) },
     { .y = 20, .x = 2, .id = SPRITESET_IDX(1) },
@@ -79,7 +79,7 @@ const struct SpriteDataRom sChozodia_18_Spriteset0[23] = {
     { .y = 35, .x = 13, .id = SPRITESET_IDX(9) },
     { .y = 36, .x = 19, .id = SPRITESET_IDX(9) },
     { .y = 36, .x = 25, .id = SPRITESET_IDX(7) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sChozodia_18_Bg0[17] = {

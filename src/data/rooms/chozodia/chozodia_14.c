@@ -28,23 +28,23 @@ const u8 sChozodia_14_Bg2[368] = {
     #include "extracted/data/rooms/chozodia/chozodia_14_bg2.gfx.inc"
 };
 
-const struct SpriteDataRom sChozodia_14_Spriteset1[6] = {
+const struct SpriteSpawn sChozodia_14_Spriteset1[6] = {
     { .y = 10, .x = 6, .id = SPRITESET_IDX(5) },
     { .y = 16, .x = 11, .id = SPRITESET_IDX(0) },
     { .y = 20, .x = 6, .id = SPRITESET_IDX(0) },
     { .y = 28, .x = 11, .id = SPRITESET_IDX(3) },
     { .y = 39, .x = 7, .id = SPRITESET_IDX(0) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sChozodia_14_Bg1[776] = {
     #include "extracted/data/rooms/chozodia/chozodia_14_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sChozodia_14_Spriteset0[3] = {
+const struct SpriteSpawn sChozodia_14_Spriteset0[3] = {
     { .y = 10, .x = 6, .id = SPRITESET_IDX(5) },
     { .y = 20, .x = 6, .id = SPRITESET_IDX(0) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sChozodia_14_Bg0[185] = {

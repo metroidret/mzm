@@ -39,7 +39,7 @@ const u8 sCrateria_1_Bg1[1608] = {
     #include "extracted/data/rooms/crateria/crateria_1_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sCrateria_1_Spriteset0[19] = {
+const struct SpriteSpawn sCrateria_1_Spriteset0[19] = {
     { .y = 4, .x = 34, .id = SPRITESET_IDX(4) },
     { .y = 5, .x = 23, .id = SPRITESET_IDX(3) },
     { .y = 5, .x = 43, .id = SPRITESET_IDX(3) },
@@ -58,7 +58,7 @@ const struct SpriteDataRom sCrateria_1_Spriteset0[19] = {
     { .y = 47, .x = 15, .id = SPRITESET_IDX(3) },
     { .y = 50, .x = 4, .id = SPRITESET_IDX(4) },
     { .y = 60, .x = 8, .id = SPRITESET_IDX(2) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sCrateria_1_Bg0[14] = {

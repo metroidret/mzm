@@ -9,7 +9,7 @@ const u8 sBrinstar_7_Bg2[] = {
     #include "extracted/data/rooms/brinstar/brinstar_7_bg2.gfx.inc"
 };
 
-const struct SpriteDataRom sBrinstar_7_Spriteset1[19] = {
+const struct SpriteSpawn sBrinstar_7_Spriteset1[19] = {
     { .y = 12, .x = 5, .id = SPRITESET_IDX(2) },
     { .y = 15, .x = 5, .id = SPRITESET_IDX(1) },
     { .y = 25, .x = 8, .id = SPRITESET_IDX(1) },
@@ -28,14 +28,14 @@ const struct SpriteDataRom sBrinstar_7_Spriteset1[19] = {
     { .y = 82, .x = 10, .id = SPRITESET_IDX(1) },
     { .y = 84, .x = 6, .id = SPRITESET_IDX(1) },
     { .y = 89, .x = 9, .id = SPRITESET_IDX(1) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sBrinstar_7_Bg1[] = {
     #include "extracted/data/rooms/brinstar/brinstar_7_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sBrinstar_7_Spriteset0[18] = {
+const struct SpriteSpawn sBrinstar_7_Spriteset0[18] = {
     { .y = 6, .x = 10, .id = SPRITESET_IDX(5) },
     { .y = 6, .x = 12, .id = SPRITESET_IDX(5) },
     { .y = 9, .x = 5, .id = SPRITESET_IDX(2) },
@@ -53,6 +53,6 @@ const struct SpriteDataRom sBrinstar_7_Spriteset0[18] = {
     { .y = 82, .x = 10, .id = SPRITESET_IDX(0) },
     { .y = 84, .x = 6, .id = SPRITESET_IDX(1) },
     { .y = 89, .x = 9, .id = SPRITESET_IDX(0) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 

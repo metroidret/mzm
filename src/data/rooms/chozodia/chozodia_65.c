@@ -32,14 +32,14 @@ const u8 sChozodia_65_Bg1[586] = {
     #include "extracted/data/rooms/chozodia/chozodia_65_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sChozodia_65_Spriteset0[7] = {
+const struct SpriteSpawn sChozodia_65_Spriteset0[7] = {
     { .y = 3, .x = 11, .id = SPRITESET_IDX(1) },
     { .y = 4, .x = 5, .id = SPRITESET_IDX(1) },
     { .y = 7, .x = 11, .id = SPRITESET_IDX(1) },
     { .y = 10, .x = 4, .id = SPRITESET_IDX(1) },
     { .y = 10, .x = 13, .id = SPRITESET_IDX(1) },
     { .y = 14, .x = 5, .id = SPRITESET_IDX(1) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sChozodia_65_Bg0[41] = {

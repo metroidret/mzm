@@ -9,7 +9,7 @@ const u8 sKraid_13_Bg2[308] = {
     #include "extracted/data/rooms/kraid/kraid_13_bg2.gfx.inc"
 };
 
-const struct SpriteDataRom sKraid_13_Spriteset1[16] = {
+const struct SpriteSpawn sKraid_13_Spriteset1[16] = {
     { .y = 4, .x = 6, .id = SPRITESET_IDX(4) },
     { .y = 11, .x = 8, .id = SPRITESET_IDX(1) },
     { .y = 11, .x = 10, .id = SPRITESET_IDX(4) },
@@ -25,14 +25,14 @@ const struct SpriteDataRom sKraid_13_Spriteset1[16] = {
     { .y = 24, .x = 9, .id = SPRITESET_IDX(1) },
     { .y = 26, .x = 9, .id = SPRITESET_IDX(4) },
     { .y = 29, .x = 9, .id = SPRITESET_IDX(3) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sKraid_13_Bg1[562] = {
     #include "extracted/data/rooms/kraid/kraid_13_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sKraid_13_Spriteset0[16] = {
+const struct SpriteSpawn sKraid_13_Spriteset0[16] = {
     { .y = 4, .x = 6, .id = SPRITESET_IDX(0) },
     { .y = 11, .x = 8, .id = SPRITESET_IDX(1) },
     { .y = 11, .x = 10, .id = SPRITESET_IDX(0) },
@@ -48,7 +48,7 @@ const struct SpriteDataRom sKraid_13_Spriteset0[16] = {
     { .y = 24, .x = 9, .id = SPRITESET_IDX(1) },
     { .y = 26, .x = 9, .id = SPRITESET_IDX(0) },
     { .y = 29, .x = 9, .id = SPRITESET_IDX(3) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sKraid_13_Bg0[42] = {

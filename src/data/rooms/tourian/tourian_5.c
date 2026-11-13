@@ -25,7 +25,7 @@ const u8 sTourian_5_Bg1[1425] = {
     #include "extracted/data/rooms/tourian/tourian_5_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sTourian_5_Spriteset0[24] = {
+const struct SpriteSpawn sTourian_5_Spriteset0[24] = {
     { .y = 13, .x = 6, .id = SPRITESET_IDX(4) },
     { .y = 15, .x = 9, .id = SPRITESET_IDX(0) },
     { .y = 17, .x = 4, .id = SPRITESET_IDX(3) },
@@ -49,7 +49,7 @@ const struct SpriteDataRom sTourian_5_Spriteset0[24] = {
     { .y = 110, .x = 6, .id = SPRITESET_IDX(3) },
     { .y = 110, .x = 9, .id = SPRITESET_IDX(2) },
     { .y = 110, .x = 11, .id = SPRITESET_IDX(4) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sTourian_5_Bg0[186] = {

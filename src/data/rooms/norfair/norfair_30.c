@@ -5,7 +5,7 @@ const u8 sNorfair_30_Clipdata[420] = {
     #include "extracted/data/rooms/norfair/norfair_30_clipdata.gfx.inc"
 };
 
-const struct SpriteDataRom sNorfair_30_Spriteset2[14] = {
+const struct SpriteSpawn sNorfair_30_Spriteset2[14] = {
     { .y = 5, .x = 41, .id = SPRITESET_IDX(0) },
     { .y = 5, .x = 114, .id = SPRITESET_IDX(0) },
     { .y = 6, .x = 23, .id = SPRITESET_IDX(0) },
@@ -19,14 +19,14 @@ const struct SpriteDataRom sNorfair_30_Spriteset2[14] = {
     { .y = 11, .x = 41, .id = SPRITESET_IDX(2) },
     { .y = 11, .x = 56, .id = SPRITESET_IDX(2) },
     { .y = 11, .x = 114, .id = SPRITESET_IDX(2) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sNorfair_30_Bg2[14] = {
     #include "extracted/data/rooms/norfair/norfair_30_bg2.gfx.inc"
 };
 
-const struct SpriteDataRom sNorfair_30_Spriteset1[18] = {
+const struct SpriteSpawn sNorfair_30_Spriteset1[18] = {
     { .y = 4, .x = 17, .id = SPRITESET_IDX(0) },
     { .y = 4, .x = 57, .id = SPRITESET_IDX(1) },
     { .y = 5, .x = 41, .id = SPRITESET_IDX(0) },
@@ -44,14 +44,14 @@ const struct SpriteDataRom sNorfair_30_Spriteset1[18] = {
     { .y = 11, .x = 41, .id = SPRITESET_IDX(2) },
     { .y = 11, .x = 56, .id = SPRITESET_IDX(2) },
     { .y = 11, .x = 114, .id = SPRITESET_IDX(2) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sNorfair_30_Bg1[1118] = {
     #include "extracted/data/rooms/norfair/norfair_30_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sNorfair_30_Spriteset0[17] = {
+const struct SpriteSpawn sNorfair_30_Spriteset0[17] = {
     { .y = 4, .x = 57, .id = SPRITESET_IDX(0) },
     { .y = 5, .x = 41, .id = SPRITESET_IDX(0) },
     { .y = 5, .x = 114, .id = SPRITESET_IDX(0) },
@@ -68,7 +68,7 @@ const struct SpriteDataRom sNorfair_30_Spriteset0[17] = {
     { .y = 11, .x = 41, .id = SPRITESET_IDX(2) },
     { .y = 11, .x = 56, .id = SPRITESET_IDX(2) },
     { .y = 11, .x = 114, .id = SPRITESET_IDX(2) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sNorfair_30_Bg0[489] = {

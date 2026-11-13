@@ -13,7 +13,7 @@ const u8 sBrinstar_13_Bg1[520] = {
     #include "extracted/data/rooms/brinstar/brinstar_13_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sBrinstar_13_Spriteset0[8] = {
+const struct SpriteSpawn sBrinstar_13_Spriteset0[8] = {
     { .y = 2, .x = 8, .id = SPRITESET_IDX(3) },
     { .y = 2, .x = 23, .id = SPRITESET_IDX(3) },
     { .y = 2, .x = 27, .id = SPRITESET_IDX(3) },
@@ -21,7 +21,7 @@ const struct SpriteDataRom sBrinstar_13_Spriteset0[8] = {
     { .y = 2, .x = 44, .id = SPRITESET_IDX(3) },
     { .y = 2, .x = 48, .id = SPRITESET_IDX(3) },
     { .y = 2, .x = 51, .id = SPRITESET_IDX(3) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sBrinstar_13_Bg0[220] = {
