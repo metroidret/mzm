@@ -213,6 +213,8 @@ endif
 	$Q$(RM) $(LD_SCRIPT)
 
 	@$(MAKE) clean -C nes_metroid DATA=$(DATA)
+	$(MSG) RM docs/doxygen/
+	$Q$(RM) -r docs/doxygen
 
 .PHONY: help
 help:
@@ -296,3 +298,11 @@ jp_debug:
 # 	$(MAKE) REGION=cn
 # cn_debug:
 # 	$(MAKE) REGION=cn DEBUG=1
+
+.PHONY: docs
+docs:
+	doxygen
+
+.PHONY: serve
+serve:
+	python -m http.server 8080 -d docs/doxygen/html
