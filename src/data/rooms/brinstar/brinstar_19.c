@@ -9,7 +9,7 @@ const u8 sBrinstar_19_Bg2[42] = {
     #include "extracted/data/rooms/brinstar/brinstar_19_bg2.gfx.inc"
 };
 
-const struct SpriteSpawn sBrinstar_19_Spriteset1[7] = {
+const struct SpriteSpawn sBrinstar_19_SpriteLayer1[7] = {
     { .y = 3, .x = 16, .id = SPRITESET_IDX(0) },
     { .y = 3, .x = 20, .id = SPRITESET_IDX(0) },
     { .y = 3, .x = 24, .id = SPRITESET_IDX(0) },
@@ -23,7 +23,7 @@ const u8 sBrinstar_19_Bg1[935] = {
     #include "extracted/data/rooms/brinstar/brinstar_19_bg1.gfx.inc"
 };
 
-const struct SpriteSpawn sBrinstar_19_Spriteset0[5] = {
+const struct SpriteSpawn sBrinstar_19_SpriteLayer0[5] = {
     { .y = 3, .x = 13, .id = SPRITESET_IDX(1) },
     { .y = 3, .x = 50, .id = SPRITESET_IDX(0) },
     { .y = 3, .x = 80, .id = SPRITESET_IDX(0) },

@@ -9,7 +9,7 @@ const u8 sNorfair_38_Bg2[14] = {
     #include "extracted/data/rooms/norfair/norfair_38_bg2.gfx.inc"
 };
 
-const struct SpriteSpawn sNorfair_38_Spriteset1[10] = {
+const struct SpriteSpawn sNorfair_38_SpriteLayer1[10] = {
     { .y = 4, .x = 8, .id = SPRITESET_IDX(1) },
     { .y = 7, .x = 8, .id = SPRITESET_IDX(1) },
     { .y = 8, .x = 7, .id = SPRITESET_IDX(0) },
@@ -26,7 +26,7 @@ const u8 sNorfair_38_Bg1[462] = {
     #include "extracted/data/rooms/norfair/norfair_38_bg1.gfx.inc"
 };
 
-const struct SpriteSpawn sNorfair_38_Spriteset0[3] = {
+const struct SpriteSpawn sNorfair_38_SpriteLayer0[3] = {
     { .y = 21, .x = 11, .id = SPRITESET_IDX(4) },
     { .y = 21, .x = 18, .id = SPRITESET_IDX(4) },
     SPRITE_SPAWN_TERMINATOR

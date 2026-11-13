@@ -13,7 +13,7 @@ const u8 sKraid_23_Bg1[163] = {
     #include "extracted/data/rooms/kraid/kraid_23_bg1.gfx.inc"
 };
 
-const struct SpriteSpawn sKraid_23_Spriteset0[1] = {
+const struct SpriteSpawn sKraid_23_SpriteLayer0[1] = {
     SPRITE_SPAWN_TERMINATOR
 };
 

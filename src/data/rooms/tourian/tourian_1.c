@@ -9,7 +9,7 @@ const u8 sTourian_1_Bg2[116] = {
     #include "extracted/data/rooms/tourian/tourian_1_bg2.gfx.inc"
 };
 
-const struct SpriteSpawn sTourian_1_Spriteset1[16] = {
+const struct SpriteSpawn sTourian_1_SpriteLayer1[16] = {
     { .y = 2, .x = 19, .id = SPRITESET_IDX(1) },
     { .y = 3, .x = 22, .id = SPRITESET_IDX(0) },
     { .y = 3, .x = 57, .id = SPRITESET_IDX(0) },
@@ -32,7 +32,7 @@ const u8 sTourian_1_Bg1[436] = {
     #include "extracted/data/rooms/tourian/tourian_1_bg1.gfx.inc"
 };
 
-const struct SpriteSpawn sTourian_1_Spriteset0[10] = {
+const struct SpriteSpawn sTourian_1_SpriteLayer0[10] = {
     { .y = 2, .x = 19, .id = SPRITESET_IDX(1) },
     { .y = 4, .x = 42, .id = SPRITESET_IDX(0) },
     { .y = 4, .x = 58, .id = SPRITESET_IDX(0) },

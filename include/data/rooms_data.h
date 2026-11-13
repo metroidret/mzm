@@ -4,7 +4,7 @@
 #include "structs/connection.h"
 #include "structs/room.h"
 
-extern const struct SpriteSpawn sEnemyRoomData_Empty[1];
+extern const struct SpriteSpawn sSpriteLayer_Empty[1];
 
 extern const struct TilesetEntry sTilesetEntries[79];
 

@@ -61,50 +61,50 @@ const u8 sTest_4_Bg1[330] = {
     #include "extracted/data/rooms/test/test_4_bg1.rle.inc"
 };
 
-const struct SpriteSpawn sTest1_0_SpriteData[2] = {
+const struct SpriteSpawn sTest1_0_SpriteLayer[2] = {
     { .y = 20, .x = 9, .id = SPRITESET_IDX(0) },
     SPRITE_SPAWN_TERMINATOR
 };
 
-const struct SpriteSpawn sTest1_1_SpriteData[3] = {
+const struct SpriteSpawn sTest1_1_SpriteLayer[3] = {
     { .y = 45, .x = 30, .id = SPRITESET_IDX(1) },
     { .y = 45, .x = 31, .id = SPRITESET_IDX(2) },
     SPRITE_SPAWN_TERMINATOR
 };
 
-const struct SpriteSpawn sTest1_2_SpriteData[2] = {
+const struct SpriteSpawn sTest1_2_SpriteLayer[2] = {
     { .y = 10, .x = 10, .id = SPRITESET_IDX(0) },
     SPRITE_SPAWN_TERMINATOR
 };
 
-const struct SpriteSpawn sTest1_3_SpriteData[2] = {
+const struct SpriteSpawn sTest1_3_SpriteLayer[2] = {
     { .y = 10, .x = 10, .id = SPRITESET_IDX(0) },
     SPRITE_SPAWN_TERMINATOR
 };
 
-const struct SpriteSpawn sTest_4_SpriteData[1] = {
+const struct SpriteSpawn sTest_4_SpriteLayer[1] = {
     SPRITE_SPAWN_TERMINATOR
 };
 
-const struct SpriteSpawn sTest2_0_SpriteData[2] = {
+const struct SpriteSpawn sTest2_0_SpriteLayer[2] = {
     { .y = 4, .x = 10, .id = SPRITESET_IDX(16) },
     SPRITE_SPAWN_TERMINATOR
 };
 
-const struct SpriteSpawn sTest2_1_SpriteData[1] = {
+const struct SpriteSpawn sTest2_1_SpriteLayer[1] = {
     SPRITE_SPAWN_TERMINATOR
 };
 
-const struct SpriteSpawn sTest2_2_SpriteData[1] = {
+const struct SpriteSpawn sTest2_2_SpriteLayer[1] = {
     SPRITE_SPAWN_TERMINATOR
 };
 
-const struct SpriteSpawn sTest2_3_SpriteData[2] = {
+const struct SpriteSpawn sTest2_3_SpriteLayer[2] = {
     SPRITE_SPAWN_TERMINATOR,
     SPRITE_SPAWN_TERMINATOR
 };
 
-const struct SpriteSpawn sTest3_0_SpriteData[7] = {
+const struct SpriteSpawn sTest3_0_SpriteLayer[7] = {
     { .y = 3, .x = 14, .id = SPRITESET_IDX(1) },
     { .y = 8, .x = 12, .id = SPRITESET_IDX(3) },
     { .y = 8, .x = 15, .id = SPRITESET_IDX(2) },
@@ -114,15 +114,15 @@ const struct SpriteSpawn sTest3_0_SpriteData[7] = {
     SPRITE_SPAWN_TERMINATOR
 };
 
-const struct SpriteSpawn sTest3_1_SpriteData[1] = {
+const struct SpriteSpawn sTest3_1_SpriteLayer[1] = {
     SPRITE_SPAWN_TERMINATOR
 };
 
-const struct SpriteSpawn sTest3_2_SpriteData[1] = {
+const struct SpriteSpawn sTest3_2_SpriteLayer[1] = {
     SPRITE_SPAWN_TERMINATOR
 };
 
-const struct SpriteSpawn sTest3_3_SpriteData[3] = {
+const struct SpriteSpawn sTest3_3_SpriteLayer[3] = {
     SPRITE_SPAWN_TERMINATOR,
     SPRITE_SPAWN_TERMINATOR
 };

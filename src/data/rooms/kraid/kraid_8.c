@@ -39,7 +39,7 @@ const u8 sKraid_8_Bg1[1051] = {
     #include "extracted/data/rooms/kraid/kraid_8_bg1.gfx.inc"
 };
 
-const struct SpriteSpawn sKraid_8_Spriteset0[4] = {
+const struct SpriteSpawn sKraid_8_SpriteLayer0[4] = {
     { .y = 3, .x = 49, .id = SPRITESET_IDX(1) },
     { .y = 4, .x = 6, .id = SPRITESET_IDX(2) },
     { .y = 4, .x = 51, .id = SPRITESET_IDX(2) },

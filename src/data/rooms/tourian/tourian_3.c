@@ -13,7 +13,7 @@ const u8 sTourian_3_Bg1[225] = {
     #include "extracted/data/rooms/tourian/tourian_3_bg1.gfx.inc"
 };
 
-const struct SpriteSpawn sTourian_3_Spriteset0[8] = {
+const struct SpriteSpawn sTourian_3_SpriteLayer0[8] = {
     { .y = 2, .x = 9, .id = SPRITESET_IDX(1) },
     { .y = 2, .x = 14, .id = SPRITESET_IDX(2) },
     { .y = 2, .x = 19, .id = SPRITESET_IDX(2) },

@@ -13,7 +13,7 @@ const u8 sNorfair_42_Bg1[314] = {
     #include "extracted/data/rooms/norfair/norfair_42_bg1.gfx.inc"
 };
 
-const struct SpriteSpawn sNorfair_42_Spriteset0[3] = {
+const struct SpriteSpawn sNorfair_42_SpriteLayer0[3] = {
     { .y = 5, .x = 13, .id = SPRITESET_IDX(1) },
     { .y = 9, .x = 22, .id = SPRITESET_IDX(0) },
     SPRITE_SPAWN_TERMINATOR

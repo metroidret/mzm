@@ -32,7 +32,7 @@ const u8 sRidley_11_Bg1[407] = {
     #include "extracted/data/rooms/ridley/ridley_11_bg1.gfx.inc"
 };
 
-const struct SpriteSpawn sRidley_11_Spriteset0[4] = {
+const struct SpriteSpawn sRidley_11_SpriteLayer0[4] = {
     { .y = 7, .x = 23, .id = SPRITESET_IDX(3) },
     { .y = 15, .x = 3, .id = SPRITESET_IDX(4) },
     { .y = 19, .x = 17, .id = SPRITESET_IDX(2) },

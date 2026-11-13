@@ -17,7 +17,7 @@ const u8 sChozodia_18_Clipdata[402] = {
     #include "extracted/data/rooms/chozodia/chozodia_18_clipdata.gfx.inc"
 };
 
-const struct SpriteSpawn sChozodia_18_Spriteset2[10] = {
+const struct SpriteSpawn sChozodia_18_SpriteLayer2[10] = {
     { .y = 13, .x = 31, .id = SPRITESET_IDX(4) },
     { .y = 14, .x = 12, .id = SPRITESET_IDX(4) },
     { .y = 18, .x = 19, .id = SPRITESET_IDX(3) },
@@ -34,7 +34,7 @@ const u8 sChozodia_18_Bg2[14] = {
     #include "extracted/data/rooms/chozodia/chozodia_18_bg2.gfx.inc"
 };
 
-const struct SpriteSpawn sChozodia_18_Spriteset1[15] = {
+const struct SpriteSpawn sChozodia_18_SpriteLayer1[15] = {
     { .y = 20, .x = 46, .id = SPRITESET_IDX(1) },
     { .y = 21, .x = 2, .id = SPRITESET_IDX(1) },
     { .y = 21, .x = 13, .id = SPRITESET_IDX(9) },
@@ -56,7 +56,7 @@ const u8 sChozodia_18_Bg1[949] = {
     #include "extracted/data/rooms/chozodia/chozodia_18_bg1.gfx.inc"
 };
 
-const struct SpriteSpawn sChozodia_18_Spriteset0[23] = {
+const struct SpriteSpawn sChozodia_18_SpriteLayer0[23] = {
     { .y = 18, .x = 12, .id = SPRITESET_IDX(8) },
     { .y = 19, .x = 46, .id = SPRITESET_IDX(1) },
     { .y = 20, .x = 2, .id = SPRITESET_IDX(1) },

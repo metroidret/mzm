@@ -13,7 +13,7 @@ const u8 sNorfair_51_Bg1[] = {
     #include "extracted/data/rooms/norfair/norfair_51_bg1.gfx.inc"
 };
 
-const struct SpriteSpawn sNorfair_51_Spriteset0[1] = {
+const struct SpriteSpawn sNorfair_51_SpriteLayer0[1] = {
     SPRITE_SPAWN_TERMINATOR
 };
 

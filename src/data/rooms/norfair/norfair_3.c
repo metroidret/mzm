@@ -5,7 +5,7 @@ const u8 sNorfair_3_Clipdata[189] = {
     #include "extracted/data/rooms/norfair/norfair_3_clipdata.gfx.inc"
 };
 
-const struct SpriteSpawn sNorfair_3_Spriteset2[9] = {
+const struct SpriteSpawn sNorfair_3_SpriteLayer2[9] = {
     { .y = 3, .x = 21, .id = SPRITESET_IDX(3) },
     { .y = 3, .x = 23, .id = SPRITESET_IDX(3) },
     { .y = 3, .x = 69, .id = SPRITESET_IDX(3) },
@@ -21,7 +21,7 @@ const u8 sNorfair_3_Bg2[211] = {
     #include "extracted/data/rooms/norfair/norfair_3_bg2.gfx.inc"
 };
 
-const struct SpriteSpawn sNorfair_3_Spriteset1[11] = {
+const struct SpriteSpawn sNorfair_3_SpriteLayer1[11] = {
     { .y = 4, .x = 19, .id = SPRITESET_IDX(3) },
     { .y = 4, .x = 21, .id = SPRITESET_IDX(3) },
     { .y = 4, .x = 23, .id = SPRITESET_IDX(3) },
@@ -39,7 +39,7 @@ const u8 sNorfair_3_Bg1[585] = {
     #include "extracted/data/rooms/norfair/norfair_3_bg1.gfx.inc"
 };
 
-const struct SpriteSpawn sNorfair_3_Spriteset0[12] = {
+const struct SpriteSpawn sNorfair_3_SpriteLayer0[12] = {
     { .y = 3, .x = 19, .id = SPRITESET_IDX(3) },
     { .y = 3, .x = 21, .id = SPRITESET_IDX(3) },
     { .y = 3, .x = 23, .id = SPRITESET_IDX(3) },
