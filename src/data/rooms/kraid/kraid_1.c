@@ -9,25 +9,25 @@ const u8 sKraid_1_Bg2[149] = {
     #include "extracted/data/rooms/kraid/kraid_1_bg2.gfx.inc"
 };
 
-const u8 sKraid_1_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(5)] = {
-	6, 47, SPRITESET_IDX(0),
-	9, 48, SPRITESET_IDX(0),
-	12, 10, SPRITESET_IDX(1),
-	12, 56, SPRITESET_IDX(1),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sKraid_1_Spriteset1[5] = {
+    { .y = 6, .x = 47, .id = SPRITESET_IDX(0) },
+    { .y = 9, .x = 48, .id = SPRITESET_IDX(0) },
+    { .y = 12, .x = 10, .id = SPRITESET_IDX(1) },
+    { .y = 12, .x = 56, .id = SPRITESET_IDX(1) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sKraid_1_Bg1[670] = {
     #include "extracted/data/rooms/kraid/kraid_1_bg1.gfx.inc"
 };
 
-const u8 sKraid_1_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(6)] = {
-	5, 66, SPRITESET_IDX(0),
-	6, 47, SPRITESET_IDX(0),
-	8, 65, SPRITESET_IDX(0),
-	9, 48, SPRITESET_IDX(0),
-	12, 56, SPRITESET_IDX(1),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sKraid_1_Spriteset0[6] = {
+    { .y = 5, .x = 66, .id = SPRITESET_IDX(0) },
+    { .y = 6, .x = 47, .id = SPRITESET_IDX(0) },
+    { .y = 8, .x = 65, .id = SPRITESET_IDX(0) },
+    { .y = 9, .x = 48, .id = SPRITESET_IDX(0) },
+    { .y = 12, .x = 56, .id = SPRITESET_IDX(1) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sKraid_1_Bg0[121] = {
@@ -55,44 +55,44 @@ const u8 sKraid_2_Bg2[665] = {
     #include "extracted/data/rooms/kraid/kraid_2_bg2.gfx.inc"
 };
 
-const u8 sKraid_2_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(15)] = {
-	15, 14, SPRITESET_IDX(4),
-	20, 12, SPRITESET_IDX(4),
-	21, 15, SPRITESET_IDX(4),
-	25, 14, SPRITESET_IDX(4),
-	42, 14, SPRITESET_IDX(1),
-	45, 12, SPRITESET_IDX(1),
-	46, 8, SPRITESET_IDX(4),
-	48, 14, SPRITESET_IDX(1),
-	50, 6, SPRITESET_IDX(4),
-	51, 12, SPRITESET_IDX(1),
-	54, 14, SPRITESET_IDX(1),
-	55, 7, SPRITESET_IDX(4),
-	57, 12, SPRITESET_IDX(1),
-	67, 13, SPRITESET_IDX(3),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sKraid_2_Spriteset1[15] = {
+    { .y = 15, .x = 14, .id = SPRITESET_IDX(4) },
+    { .y = 20, .x = 12, .id = SPRITESET_IDX(4) },
+    { .y = 21, .x = 15, .id = SPRITESET_IDX(4) },
+    { .y = 25, .x = 14, .id = SPRITESET_IDX(4) },
+    { .y = 42, .x = 14, .id = SPRITESET_IDX(1) },
+    { .y = 45, .x = 12, .id = SPRITESET_IDX(1) },
+    { .y = 46, .x = 8, .id = SPRITESET_IDX(4) },
+    { .y = 48, .x = 14, .id = SPRITESET_IDX(1) },
+    { .y = 50, .x = 6, .id = SPRITESET_IDX(4) },
+    { .y = 51, .x = 12, .id = SPRITESET_IDX(1) },
+    { .y = 54, .x = 14, .id = SPRITESET_IDX(1) },
+    { .y = 55, .x = 7, .id = SPRITESET_IDX(4) },
+    { .y = 57, .x = 12, .id = SPRITESET_IDX(1) },
+    { .y = 67, .x = 13, .id = SPRITESET_IDX(3) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sKraid_2_Bg1[1100] = {
     #include "extracted/data/rooms/kraid/kraid_2_bg1.gfx.inc"
 };
 
-const u8 sKraid_2_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(15)] = {
-	15, 14, SPRITESET_IDX(0),
-	20, 12, SPRITESET_IDX(0),
-	21, 15, SPRITESET_IDX(0),
-	25, 14, SPRITESET_IDX(0),
-	42, 14, SPRITESET_IDX(1),
-	45, 12, SPRITESET_IDX(1),
-	46, 8, SPRITESET_IDX(0),
-	48, 14, SPRITESET_IDX(1),
-	50, 6, SPRITESET_IDX(0),
-	51, 12, SPRITESET_IDX(1),
-	54, 14, SPRITESET_IDX(1),
-	55, 7, SPRITESET_IDX(0),
-	57, 12, SPRITESET_IDX(1),
-	67, 13, SPRITESET_IDX(3),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sKraid_2_Spriteset0[15] = {
+    { .y = 15, .x = 14, .id = SPRITESET_IDX(0) },
+    { .y = 20, .x = 12, .id = SPRITESET_IDX(0) },
+    { .y = 21, .x = 15, .id = SPRITESET_IDX(0) },
+    { .y = 25, .x = 14, .id = SPRITESET_IDX(0) },
+    { .y = 42, .x = 14, .id = SPRITESET_IDX(1) },
+    { .y = 45, .x = 12, .id = SPRITESET_IDX(1) },
+    { .y = 46, .x = 8, .id = SPRITESET_IDX(0) },
+    { .y = 48, .x = 14, .id = SPRITESET_IDX(1) },
+    { .y = 50, .x = 6, .id = SPRITESET_IDX(0) },
+    { .y = 51, .x = 12, .id = SPRITESET_IDX(1) },
+    { .y = 54, .x = 14, .id = SPRITESET_IDX(1) },
+    { .y = 55, .x = 7, .id = SPRITESET_IDX(0) },
+    { .y = 57, .x = 12, .id = SPRITESET_IDX(1) },
+    { .y = 67, .x = 13, .id = SPRITESET_IDX(3) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sKraid_2_Bg0[80] = {

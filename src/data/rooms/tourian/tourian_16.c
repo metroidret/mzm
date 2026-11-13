@@ -28,42 +28,42 @@ const u8 sTourian_16_Bg2[154] = {
     #include "extracted/data/rooms/tourian/tourian_16_bg2.gfx.inc"
 };
 
-const u8 sTourian_16_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(15)] = {
-	4, 9, SPRITESET_IDX(1),
-	4, 24, SPRITESET_IDX(1),
-	16, 2, SPRITESET_IDX(1),
-	16, 31, SPRITESET_IDX(1),
-	17, 12, SPRITESET_IDX(0),
-	17, 21, SPRITESET_IDX(0),
-	18, 15, SPRITESET_IDX(0),
-	18, 18, SPRITESET_IDX(0),
-	26, 6, SPRITESET_IDX(1),
-	26, 27, SPRITESET_IDX(1),
-	28, 13, SPRITESET_IDX(0),
-	28, 21, SPRITESET_IDX(0),
-	29, 17, SPRITESET_IDX(0),
-	31, 17, SPRITESET_IDX(1),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sTourian_16_Spriteset1[15] = {
+    { .y = 4, .x = 9, .id = SPRITESET_IDX(1) },
+    { .y = 4, .x = 24, .id = SPRITESET_IDX(1) },
+    { .y = 16, .x = 2, .id = SPRITESET_IDX(1) },
+    { .y = 16, .x = 31, .id = SPRITESET_IDX(1) },
+    { .y = 17, .x = 12, .id = SPRITESET_IDX(0) },
+    { .y = 17, .x = 21, .id = SPRITESET_IDX(0) },
+    { .y = 18, .x = 15, .id = SPRITESET_IDX(0) },
+    { .y = 18, .x = 18, .id = SPRITESET_IDX(0) },
+    { .y = 26, .x = 6, .id = SPRITESET_IDX(1) },
+    { .y = 26, .x = 27, .id = SPRITESET_IDX(1) },
+    { .y = 28, .x = 13, .id = SPRITESET_IDX(0) },
+    { .y = 28, .x = 21, .id = SPRITESET_IDX(0) },
+    { .y = 29, .x = 17, .id = SPRITESET_IDX(0) },
+    { .y = 31, .x = 17, .id = SPRITESET_IDX(1) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sTourian_16_Bg1[513] = {
     #include "extracted/data/rooms/tourian/tourian_16_bg1.gfx.inc"
 };
 
-const u8 sTourian_16_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(14)] = {
-	4, 9, SPRITESET_IDX(1),
-	4, 24, SPRITESET_IDX(1),
-	16, 2, SPRITESET_IDX(1),
-	16, 6, SPRITESET_IDX(0),
-	16, 27, SPRITESET_IDX(0),
-	16, 31, SPRITESET_IDX(1),
-	17, 12, SPRITESET_IDX(0),
-	17, 21, SPRITESET_IDX(0),
-	26, 6, SPRITESET_IDX(1),
-	26, 27, SPRITESET_IDX(1),
-	28, 10, SPRITESET_IDX(0),
-	28, 24, SPRITESET_IDX(0),
-	31, 17, SPRITESET_IDX(1),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sTourian_16_Spriteset0[14] = {
+    { .y = 4, .x = 9, .id = SPRITESET_IDX(1) },
+    { .y = 4, .x = 24, .id = SPRITESET_IDX(1) },
+    { .y = 16, .x = 2, .id = SPRITESET_IDX(1) },
+    { .y = 16, .x = 6, .id = SPRITESET_IDX(0) },
+    { .y = 16, .x = 27, .id = SPRITESET_IDX(0) },
+    { .y = 16, .x = 31, .id = SPRITESET_IDX(1) },
+    { .y = 17, .x = 12, .id = SPRITESET_IDX(0) },
+    { .y = 17, .x = 21, .id = SPRITESET_IDX(0) },
+    { .y = 26, .x = 6, .id = SPRITESET_IDX(1) },
+    { .y = 26, .x = 27, .id = SPRITESET_IDX(1) },
+    { .y = 28, .x = 10, .id = SPRITESET_IDX(0) },
+    { .y = 28, .x = 24, .id = SPRITESET_IDX(0) },
+    { .y = 31, .x = 17, .id = SPRITESET_IDX(1) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

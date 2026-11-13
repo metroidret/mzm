@@ -13,9 +13,9 @@ const u8 sKraid_33_Bg1[181] = {
     #include "extracted/data/rooms/kraid/kraid_33_bg1.gfx.inc"
 };
 
-const u8 sKraid_33_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(3)] = {
-	7, 14, SPRITESET_IDX(0),
-	9, 6, SPRITESET_IDX(1),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sKraid_33_Spriteset0[3] = {
+    { .y = 7, .x = 14, .id = SPRITESET_IDX(0) },
+    { .y = 9, .x = 6, .id = SPRITESET_IDX(1) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

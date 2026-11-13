@@ -13,17 +13,17 @@ const u8 sCrateria_14_Bg1[271] = {
     #include "extracted/data/rooms/crateria/crateria_14_bg1.gfx.inc"
 };
 
-const u8 sCrateria_14_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(11)] = {
-	2, 17, SPRITESET_IDX(2),
-	2, 21, SPRITESET_IDX(2),
-	3, 12, SPRITESET_IDX(2),
-	3, 24, SPRITESET_IDX(2),
-	4, 6, SPRITESET_IDX(2),
-	6, 15, SPRITESET_IDX(1),
-	7, 17, SPRITESET_IDX(1),
-	8, 19, SPRITESET_IDX(1),
-	9, 7, SPRITESET_IDX(1),
-	9, 28, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sCrateria_14_Spriteset0[11] = {
+    { .y = 2, .x = 17, .id = SPRITESET_IDX(2) },
+    { .y = 2, .x = 21, .id = SPRITESET_IDX(2) },
+    { .y = 3, .x = 12, .id = SPRITESET_IDX(2) },
+    { .y = 3, .x = 24, .id = SPRITESET_IDX(2) },
+    { .y = 4, .x = 6, .id = SPRITESET_IDX(2) },
+    { .y = 6, .x = 15, .id = SPRITESET_IDX(1) },
+    { .y = 7, .x = 17, .id = SPRITESET_IDX(1) },
+    { .y = 8, .x = 19, .id = SPRITESET_IDX(1) },
+    { .y = 9, .x = 7, .id = SPRITESET_IDX(1) },
+    { .y = 9, .x = 28, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

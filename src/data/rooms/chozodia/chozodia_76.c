@@ -9,18 +9,18 @@ const u8 sChozodia_76_Bg2[83] = {
     #include "extracted/data/rooms/chozodia/chozodia_76_bg2.gfx.inc"
 };
 
-const u8 sChozodia_76_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(3)] = {
-	9, 7, SPRITESET_IDX(0),
-	9, 9, SPRITESET_IDX(4),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sChozodia_76_Spriteset1[3] = {
+    { .y = 9, .x = 7, .id = SPRITESET_IDX(0) },
+    { .y = 9, .x = 9, .id = SPRITESET_IDX(4) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sChozodia_76_Bg1[269] = {
     #include "extracted/data/rooms/chozodia/chozodia_76_bg1.gfx.inc"
 };
 
-const u8 sChozodia_76_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
-	9, 9, SPRITESET_IDX(2),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sChozodia_76_Spriteset0[2] = {
+    { .y = 9, .x = 9, .id = SPRITESET_IDX(2) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

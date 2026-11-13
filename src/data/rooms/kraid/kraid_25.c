@@ -28,33 +28,33 @@ const u8 sKraid_25_Bg2[229] = {
     #include "extracted/data/rooms/kraid/kraid_25_bg2.gfx.inc"
 };
 
-const u8 sKraid_25_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(10)] = {
-	3, 9, SPRITESET_IDX(4),
-	6, 6, SPRITESET_IDX(3),
-	10, 7, SPRITESET_IDX(4),
-	13, 11, SPRITESET_IDX(4),
-	14, 15, SPRITESET_IDX(3),
-	15, 11, SPRITESET_IDX(4),
-	15, 20, SPRITESET_IDX(4),
-	21, 10, SPRITESET_IDX(5),
-	21, 20, SPRITESET_IDX(5),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sKraid_25_Spriteset1[10] = {
+    { .y = 3, .x = 9, .id = SPRITESET_IDX(4) },
+    { .y = 6, .x = 6, .id = SPRITESET_IDX(3) },
+    { .y = 10, .x = 7, .id = SPRITESET_IDX(4) },
+    { .y = 13, .x = 11, .id = SPRITESET_IDX(4) },
+    { .y = 14, .x = 15, .id = SPRITESET_IDX(3) },
+    { .y = 15, .x = 11, .id = SPRITESET_IDX(4) },
+    { .y = 15, .x = 20, .id = SPRITESET_IDX(4) },
+    { .y = 21, .x = 10, .id = SPRITESET_IDX(5) },
+    { .y = 21, .x = 20, .id = SPRITESET_IDX(5) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sKraid_25_Bg1[487] = {
     #include "extracted/data/rooms/kraid/kraid_25_bg1.gfx.inc"
 };
 
-const u8 sKraid_25_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(10)] = {
-	3, 9, SPRITESET_IDX(0),
-	6, 6, SPRITESET_IDX(3),
-	10, 7, SPRITESET_IDX(0),
-	13, 11, SPRITESET_IDX(0),
-	14, 15, SPRITESET_IDX(3),
-	15, 11, SPRITESET_IDX(0),
-	15, 20, SPRITESET_IDX(0),
-	21, 10, SPRITESET_IDX(5),
-	21, 20, SPRITESET_IDX(5),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sKraid_25_Spriteset0[10] = {
+    { .y = 3, .x = 9, .id = SPRITESET_IDX(0) },
+    { .y = 6, .x = 6, .id = SPRITESET_IDX(3) },
+    { .y = 10, .x = 7, .id = SPRITESET_IDX(0) },
+    { .y = 13, .x = 11, .id = SPRITESET_IDX(0) },
+    { .y = 14, .x = 15, .id = SPRITESET_IDX(3) },
+    { .y = 15, .x = 11, .id = SPRITESET_IDX(0) },
+    { .y = 15, .x = 20, .id = SPRITESET_IDX(0) },
+    { .y = 21, .x = 10, .id = SPRITESET_IDX(5) },
+    { .y = 21, .x = 20, .id = SPRITESET_IDX(5) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

@@ -9,19 +9,19 @@ const u8 sKraid_15_Bg2[98] = {
     #include "extracted/data/rooms/kraid/kraid_15_bg2.gfx.inc"
 };
 
-const u8 sKraid_15_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(3)] = {
-	5, 7, SPRITESET_IDX(4),
-	19, 10, SPRITESET_IDX(4),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sKraid_15_Spriteset1[3] = {
+    { .y = 5, .x = 7, .id = SPRITESET_IDX(4) },
+    { .y = 19, .x = 10, .id = SPRITESET_IDX(4) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sKraid_15_Bg1[387] = {
     #include "extracted/data/rooms/kraid/kraid_15_bg1.gfx.inc"
 };
 
-const u8 sKraid_15_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(3)] = {
-	5, 7, SPRITESET_IDX(0),
+const struct SpriteDataRom sKraid_15_Spriteset0[3] = {
+    { .y = 5, .x = 7, .id = SPRITESET_IDX(0) },
 	19,	10, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

@@ -13,21 +13,21 @@ const u8 sRidley_26_Bg1[457] = {
     #include "extracted/data/rooms/ridley/ridley_26_bg1.gfx.inc"
 };
 
-const u8 sRidley_26_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(15)] = {
-	9, 33, SPRITESET_IDX(1),
-	9, 34, SPRITESET_IDX(1),
-	9, 35, SPRITESET_IDX(3),
-	9, 36, SPRITESET_IDX(1),
-	9, 37, SPRITESET_IDX(3),
-	9, 38, SPRITESET_IDX(0),
-	9, 39, SPRITESET_IDX(1),
-	10, 33, SPRITESET_IDX(0),
-	10, 34, SPRITESET_IDX(1),
-	10, 35, SPRITESET_IDX(1),
-	10, 36, SPRITESET_IDX(2),
-	10, 37, SPRITESET_IDX(1),
-	10, 38, SPRITESET_IDX(1),
-	10, 39, SPRITESET_IDX(1),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sRidley_26_Spriteset0[15] = {
+    { .y = 9, .x = 33, .id = SPRITESET_IDX(1) },
+    { .y = 9, .x = 34, .id = SPRITESET_IDX(1) },
+    { .y = 9, .x = 35, .id = SPRITESET_IDX(3) },
+    { .y = 9, .x = 36, .id = SPRITESET_IDX(1) },
+    { .y = 9, .x = 37, .id = SPRITESET_IDX(3) },
+    { .y = 9, .x = 38, .id = SPRITESET_IDX(0) },
+    { .y = 9, .x = 39, .id = SPRITESET_IDX(1) },
+    { .y = 10, .x = 33, .id = SPRITESET_IDX(0) },
+    { .y = 10, .x = 34, .id = SPRITESET_IDX(1) },
+    { .y = 10, .x = 35, .id = SPRITESET_IDX(1) },
+    { .y = 10, .x = 36, .id = SPRITESET_IDX(2) },
+    { .y = 10, .x = 37, .id = SPRITESET_IDX(1) },
+    { .y = 10, .x = 38, .id = SPRITESET_IDX(1) },
+    { .y = 10, .x = 39, .id = SPRITESET_IDX(1) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

@@ -32,9 +32,9 @@ const u8 sChozodia_77_Bg1[502] = {
     #include "extracted/data/rooms/chozodia/chozodia_77_bg1.gfx.inc"
 };
 
-const u8 sChozodia_77_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(3)] = {
-	20, 11, SPRITESET_IDX(2),
-	26, 16, SPRITESET_IDX(1),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sChozodia_77_Spriteset0[3] = {
+    { .y = 20, .x = 11, .id = SPRITESET_IDX(2) },
+    { .y = 26, .x = 16, .id = SPRITESET_IDX(1) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

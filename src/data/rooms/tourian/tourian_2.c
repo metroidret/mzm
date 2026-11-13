@@ -9,38 +9,38 @@ const u8 sTourian_2_Bg2[114] = {
     #include "extracted/data/rooms/tourian/tourian_2_bg2.gfx.inc"
 };
 
-const u8 sTourian_2_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(13)] = {
-	5, 16, SPRITESET_IDX(1),
-	10, 9, SPRITESET_IDX(0),
-	20, 16, SPRITESET_IDX(1),
-	29, 14, SPRITESET_IDX(0),
-	31, 12, SPRITESET_IDX(0),
-	34, 16, SPRITESET_IDX(1),
-	39, 10, SPRITESET_IDX(0),
-	41, 3, SPRITESET_IDX(1),
-	43, 14, SPRITESET_IDX(0),
-	44, 16, SPRITESET_IDX(1),
-	45, 5, SPRITESET_IDX(0),
-	47, 10, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sTourian_2_Spriteset1[13] = {
+    { .y = 5, .x = 16, .id = SPRITESET_IDX(1) },
+    { .y = 10, .x = 9, .id = SPRITESET_IDX(0) },
+    { .y = 20, .x = 16, .id = SPRITESET_IDX(1) },
+    { .y = 29, .x = 14, .id = SPRITESET_IDX(0) },
+    { .y = 31, .x = 12, .id = SPRITESET_IDX(0) },
+    { .y = 34, .x = 16, .id = SPRITESET_IDX(1) },
+    { .y = 39, .x = 10, .id = SPRITESET_IDX(0) },
+    { .y = 41, .x = 3, .id = SPRITESET_IDX(1) },
+    { .y = 43, .x = 14, .id = SPRITESET_IDX(0) },
+    { .y = 44, .x = 16, .id = SPRITESET_IDX(1) },
+    { .y = 45, .x = 5, .id = SPRITESET_IDX(0) },
+    { .y = 47, .x = 10, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sTourian_2_Bg1[618] = {
     #include "extracted/data/rooms/tourian/tourian_2_bg1.gfx.inc"
 };
 
-const u8 sTourian_2_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(12)] = {
-	5, 16, SPRITESET_IDX(1),
-	10, 9, SPRITESET_IDX(0),
-	20, 16, SPRITESET_IDX(1),
-	21, 10, SPRITESET_IDX(0),
-	26, 12, SPRITESET_IDX(0),
-	31, 8, SPRITESET_IDX(0),
-	34, 16, SPRITESET_IDX(1),
-	37, 9, SPRITESET_IDX(0),
-	41, 3, SPRITESET_IDX(1),
-	44, 16, SPRITESET_IDX(1),
-	47, 10, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sTourian_2_Spriteset0[12] = {
+    { .y = 5, .x = 16, .id = SPRITESET_IDX(1) },
+    { .y = 10, .x = 9, .id = SPRITESET_IDX(0) },
+    { .y = 20, .x = 16, .id = SPRITESET_IDX(1) },
+    { .y = 21, .x = 10, .id = SPRITESET_IDX(0) },
+    { .y = 26, .x = 12, .id = SPRITESET_IDX(0) },
+    { .y = 31, .x = 8, .id = SPRITESET_IDX(0) },
+    { .y = 34, .x = 16, .id = SPRITESET_IDX(1) },
+    { .y = 37, .x = 9, .id = SPRITESET_IDX(0) },
+    { .y = 41, .x = 3, .id = SPRITESET_IDX(1) },
+    { .y = 44, .x = 16, .id = SPRITESET_IDX(1) },
+    { .y = 47, .x = 10, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

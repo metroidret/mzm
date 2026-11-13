@@ -1868,14 +1868,14 @@ void SpriteLoadRoomSprites(void)
             1 | X position
             2 | Spriteset slot
         */
-        y = gCurrentRoomEntry.pEnemyRoomData[i * ENEMY_ROOM_DATA_SIZE + 0];
+        y = gCurrentRoomEntry.pEnemyRoomData[i].y;
 
         // Terminator
         if (y == UCHAR_MAX)
             break;
 
-        x = gCurrentRoomEntry.pEnemyRoomData[i * ENEMY_ROOM_DATA_SIZE + 1];
-        slot = gCurrentRoomEntry.pEnemyRoomData[i * ENEMY_ROOM_DATA_SIZE + 2];
+        x = gCurrentRoomEntry.pEnemyRoomData[i].x;
+        slot = gCurrentRoomEntry.pEnemyRoomData[i].id;
         SpriteInitPrimary(slot, y, x, i);
     }
 }

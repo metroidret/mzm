@@ -9,8 +9,8 @@ const u8 sTourian_6_Bg1[166] = {
     #include "extracted/data/rooms/tourian/tourian_6_bg1.gfx.inc"
 };
 
-const u8 sTourian_6_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(2)] = {
-	10, 9, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sTourian_6_Spriteset0[2] = {
+    { .y = 10, .x = 9, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 

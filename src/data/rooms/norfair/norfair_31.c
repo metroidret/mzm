@@ -32,10 +32,10 @@ const u8 sNorfair_31_Bg1[322] = {
     #include "extracted/data/rooms/norfair/norfair_31_bg1.gfx.inc"
 };
 
-const u8 sNorfair_31_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(3)] = {
-	14, 11, SPRITESET_IDX(2),
-	15, 14, SPRITESET_IDX(3),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sNorfair_31_Spriteset0[3] = {
+    { .y = 14, .x = 11, .id = SPRITESET_IDX(2) },
+    { .y = 15, .x = 14, .id = SPRITESET_IDX(3) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sNorfair_31_Bg0[215] = {

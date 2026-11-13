@@ -32,12 +32,12 @@ const u8 sBrinstar_24_Bg1[417] = {
     #include "extracted/data/rooms/brinstar/brinstar_24_bg1.gfx.inc"
 };
 
-const u8 sBrinstar_24_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(5)] = {
-	6, 34, SPRITESET_IDX(0),
-	6, 35, SPRITESET_IDX(0),
-	6, 36, SPRITESET_IDX(0),
-	6, 37, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sBrinstar_24_Spriteset0[5] = {
+    { .y = 6, .x = 34, .id = SPRITESET_IDX(0) },
+    { .y = 6, .x = 35, .id = SPRITESET_IDX(0) },
+    { .y = 6, .x = 36, .id = SPRITESET_IDX(0) },
+    { .y = 6, .x = 37, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sBrinstar_24_Bg0[300] = {

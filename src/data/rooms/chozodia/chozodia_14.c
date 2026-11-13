@@ -28,23 +28,23 @@ const u8 sChozodia_14_Bg2[368] = {
     #include "extracted/data/rooms/chozodia/chozodia_14_bg2.gfx.inc"
 };
 
-const u8 sChozodia_14_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(6)] = {
-	10, 6, SPRITESET_IDX(5),
-	16, 11, SPRITESET_IDX(0),
-	20, 6, SPRITESET_IDX(0),
-	28, 11, SPRITESET_IDX(3),
-	39, 7, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sChozodia_14_Spriteset1[6] = {
+    { .y = 10, .x = 6, .id = SPRITESET_IDX(5) },
+    { .y = 16, .x = 11, .id = SPRITESET_IDX(0) },
+    { .y = 20, .x = 6, .id = SPRITESET_IDX(0) },
+    { .y = 28, .x = 11, .id = SPRITESET_IDX(3) },
+    { .y = 39, .x = 7, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sChozodia_14_Bg1[776] = {
     #include "extracted/data/rooms/chozodia/chozodia_14_bg1.gfx.inc"
 };
 
-const u8 sChozodia_14_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(3)] = {
-	10, 6, SPRITESET_IDX(5),
-	20, 6, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sChozodia_14_Spriteset0[3] = {
+    { .y = 10, .x = 6, .id = SPRITESET_IDX(5) },
+    { .y = 20, .x = 6, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sChozodia_14_Bg0[185] = {

@@ -5,59 +5,59 @@ const u8 sNorfair_4_Clipdata[507] = {
     #include "extracted/data/rooms/norfair/norfair_4_clipdata.gfx.inc"
 };
 
-const u8 sNorfair_4_Spriteset2[ENEMY_ROOM_DATA_ARRAY_SIZE(17)] = {
-	4, 43, SPRITESET_IDX(1),
-	8, 49, SPRITESET_IDX(0),
-	9, 29, SPRITESET_IDX(0),
-	9, 54, SPRITESET_IDX(3),
-	10, 36, SPRITESET_IDX(1),
-	11, 53, SPRITESET_IDX(1),
-	12, 39, SPRITESET_IDX(0),
-	12, 81, SPRITESET_IDX(1),
-	14, 43, SPRITESET_IDX(0),
-	14, 49, SPRITESET_IDX(1),
-	15, 29, SPRITESET_IDX(0),
-	17, 39, SPRITESET_IDX(1),
-	18, 34, SPRITESET_IDX(3),
-	18, 37, SPRITESET_IDX(1),
-	18, 85, SPRITESET_IDX(2),
-	22, 66, SPRITESET_IDX(4),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sNorfair_4_Spriteset2[17] = {
+    { .y = 4, .x = 43, .id = SPRITESET_IDX(1) },
+    { .y = 8, .x = 49, .id = SPRITESET_IDX(0) },
+    { .y = 9, .x = 29, .id = SPRITESET_IDX(0) },
+    { .y = 9, .x = 54, .id = SPRITESET_IDX(3) },
+    { .y = 10, .x = 36, .id = SPRITESET_IDX(1) },
+    { .y = 11, .x = 53, .id = SPRITESET_IDX(1) },
+    { .y = 12, .x = 39, .id = SPRITESET_IDX(0) },
+    { .y = 12, .x = 81, .id = SPRITESET_IDX(1) },
+    { .y = 14, .x = 43, .id = SPRITESET_IDX(0) },
+    { .y = 14, .x = 49, .id = SPRITESET_IDX(1) },
+    { .y = 15, .x = 29, .id = SPRITESET_IDX(0) },
+    { .y = 17, .x = 39, .id = SPRITESET_IDX(1) },
+    { .y = 18, .x = 34, .id = SPRITESET_IDX(3) },
+    { .y = 18, .x = 37, .id = SPRITESET_IDX(1) },
+    { .y = 18, .x = 85, .id = SPRITESET_IDX(2) },
+    { .y = 22, .x = 66, .id = SPRITESET_IDX(4) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sNorfair_4_Bg2[63] = {
     #include "extracted/data/rooms/norfair/norfair_4_bg2.gfx.inc"
 };
 
-const u8 sNorfair_4_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(14)] = {
-	6, 41, SPRITESET_IDX(0),
-	7, 37, SPRITESET_IDX(0),
-	9, 54, SPRITESET_IDX(3),
-	12, 39, SPRITESET_IDX(1),
-	12, 47, SPRITESET_IDX(0),
-	12, 81, SPRITESET_IDX(1),
-	14, 50, SPRITESET_IDX(1),
-	15, 30, SPRITESET_IDX(1),
-	15, 44, SPRITESET_IDX(0),
-	17, 39, SPRITESET_IDX(1),
-	18, 34, SPRITESET_IDX(3),
-	18, 85, SPRITESET_IDX(2),
-	22, 66, SPRITESET_IDX(4),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sNorfair_4_Spriteset1[14] = {
+    { .y = 6, .x = 41, .id = SPRITESET_IDX(0) },
+    { .y = 7, .x = 37, .id = SPRITESET_IDX(0) },
+    { .y = 9, .x = 54, .id = SPRITESET_IDX(3) },
+    { .y = 12, .x = 39, .id = SPRITESET_IDX(1) },
+    { .y = 12, .x = 47, .id = SPRITESET_IDX(0) },
+    { .y = 12, .x = 81, .id = SPRITESET_IDX(1) },
+    { .y = 14, .x = 50, .id = SPRITESET_IDX(1) },
+    { .y = 15, .x = 30, .id = SPRITESET_IDX(1) },
+    { .y = 15, .x = 44, .id = SPRITESET_IDX(0) },
+    { .y = 17, .x = 39, .id = SPRITESET_IDX(1) },
+    { .y = 18, .x = 34, .id = SPRITESET_IDX(3) },
+    { .y = 18, .x = 85, .id = SPRITESET_IDX(2) },
+    { .y = 22, .x = 66, .id = SPRITESET_IDX(4) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sNorfair_4_Bg1[1198] = {
     #include "extracted/data/rooms/norfair/norfair_4_bg1.gfx.inc"
 };
 
-const u8 sNorfair_4_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(7)] = {
-	9, 54, SPRITESET_IDX(3),
-	12, 81, SPRITESET_IDX(1),
-	17, 40, SPRITESET_IDX(0),
-	18, 34, SPRITESET_IDX(3),
-	18, 85, SPRITESET_IDX(2),
-	22, 66, SPRITESET_IDX(4),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sNorfair_4_Spriteset0[7] = {
+    { .y = 9, .x = 54, .id = SPRITESET_IDX(3) },
+    { .y = 12, .x = 81, .id = SPRITESET_IDX(1) },
+    { .y = 17, .x = 40, .id = SPRITESET_IDX(0) },
+    { .y = 18, .x = 34, .id = SPRITESET_IDX(3) },
+    { .y = 18, .x = 85, .id = SPRITESET_IDX(2) },
+    { .y = 22, .x = 66, .id = SPRITESET_IDX(4) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sNorfair_4_Bg0[402] = {

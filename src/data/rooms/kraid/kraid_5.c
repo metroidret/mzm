@@ -21,24 +21,24 @@ const u8 sKraid_5_Bg2[41] = {
     #include "extracted/data/rooms/kraid/kraid_5_bg2.gfx.inc"
 };
 
-const u8 sKraid_5_Spriteset1[ENEMY_ROOM_DATA_ARRAY_SIZE(5)] = {
-	4, 21, SPRITESET_IDX(1),
-	5, 9, SPRITESET_IDX(2),
-	5, 24, SPRITESET_IDX(2),
-	13, 16, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sKraid_5_Spriteset1[5] = {
+    { .y = 4, .x = 21, .id = SPRITESET_IDX(1) },
+    { .y = 5, .x = 9, .id = SPRITESET_IDX(2) },
+    { .y = 5, .x = 24, .id = SPRITESET_IDX(2) },
+    { .y = 13, .x = 16, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
 const u8 sKraid_5_Bg1[480] = {
     #include "extracted/data/rooms/kraid/kraid_5_bg1.gfx.inc"
 };
 
-const u8 sKraid_5_Spriteset0[ENEMY_ROOM_DATA_ARRAY_SIZE(6)] = {
-	4, 21, SPRITESET_IDX(1),
-	5, 9, SPRITESET_IDX(2),
-	5, 24, SPRITESET_IDX(2),
-	6, 15, SPRITESET_IDX(0),
-	6, 18, SPRITESET_IDX(0),
-	ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteDataRom sKraid_5_Spriteset0[6] = {
+    { .y = 4, .x = 21, .id = SPRITESET_IDX(1) },
+    { .y = 5, .x = 9, .id = SPRITESET_IDX(2) },
+    { .y = 5, .x = 24, .id = SPRITESET_IDX(2) },
+    { .y = 6, .x = 15, .id = SPRITESET_IDX(0) },
+    { .y = 6, .x = 18, .id = SPRITESET_IDX(0) },
+    ROOM_SPRITE_DATA_TERMINATOR
 };
 
