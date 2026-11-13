@@ -1097,6 +1097,7 @@ RECURSIVE              = YES
 
 EXCLUDE                = tools/ \
                          data/ \
+                         include/extracted/ \
                          src/data/rooms/ \
                          src/data/tilesets/
 
