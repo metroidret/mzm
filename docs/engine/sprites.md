@@ -116,7 +116,7 @@ Most of the pose values are free to use, however there are a few that have a par
 | SPRITE_POSE_SHINESPARK_DESTROYED | 0x63 | The sprite was killed with a shinespark.
 | SPRITE_POSE_SPEEDBOOSTER_DESTROYED | 0x64 | The sprite was killed with speedbooster.
 | SPRITE_POSE_SCREW_ATTACK_DESTROYED | 0x65 | The sprite was killed with screw attack.
-| SPRITE_POSE_SUDO_SCREW_DESTROYED | 0x66 | The sprite was killed with sudo screw.
+| SPRITE_POSE_PSEUDO_SCREW_DESTROYED | 0x66 | The sprite was killed with pseudo screw.
 
 ## Samus collision
 
