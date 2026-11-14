@@ -13,8 +13,8 @@ const u8 sKraid_19_Bg1[164] = {
     #include "extracted/data/rooms/kraid/kraid_19_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sKraid_19_Spriteset0[1] = {
-    ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteSpawn sKraid_19_SpriteLayer0[1] = {
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sKraid_19_Bg0[35] = {

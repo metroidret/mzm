@@ -8,13 +8,13 @@
 #include "constants/event.h"
 #include "constants/room.h"
 
-struct PACKED SpriteDataRom {
+struct PACKED SpriteSpawn {
     u8 y;
     u8 x;
     u8 id;
 };
 
-#define ROOM_SPRITE_DATA_TERMINATOR ((struct SpriteDataRom) { .y = UCHAR_MAX, .x = UCHAR_MAX, .id = UCHAR_MAX })
+#define SPRITE_SPAWN_TERMINATOR ((struct SpriteSpawn) { .y = UCHAR_MAX, .x = UCHAR_MAX, .id = UCHAR_MAX })
 
 struct AnimatedGraphicsEntry {
     AnimatedPaletteId palette;
@@ -41,9 +41,9 @@ struct RoomEntry {
     RoomScrollFlags scrollsFlag;
     u8 bg3Scrolling;
     u8 transparency;
-    const struct SpriteDataRom* pEnemyRoomData;
-    Event firstSpritesetEvent;
-    Event secondSpritesetEvent;
+    const struct SpriteSpawn* pSpriteLayer;
+    Event firstSpriteLayerEvent;
+    Event secondSpriteLayerEvent;
     u8 mapX;
     u8 mapY;
     u8 visualEffect;
@@ -70,13 +70,13 @@ struct RoomEntryRom {
     const u8* pBg3Data;
     u8 bg3Scrolling;
     u8 transparency;
-    const struct SpriteDataRom* pDefaultSpriteData;
+    const struct SpriteSpawn* pDefaultSpriteLayer;
     u8 defaultSpriteset;
-    u8 firstSpritesetEvent;
-    const struct SpriteDataRom* pFirstSpriteData;
+    u8 firstSpriteLayerEvent;
+    const struct SpriteSpawn* pFirstSpriteLayer;
     u8 firstSpriteset;
-    u8 secondSpritesetEvent;
-    const struct SpriteDataRom* pSecondSpriteData;
+    u8 secondSpriteLayerEvent;
+    const struct SpriteSpawn* pSecondSpriteLayer;
     u8 secondSpriteset;
     u8 mapX;
     u8 mapY;

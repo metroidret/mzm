@@ -291,27 +291,27 @@ void RoomLoadEntry(void)
     gCurrentRoomEntry.effectY = (entry.effectY != UCHAR_MAX) ? entry.effectY * BLOCK_SIZE : USHORT_MAX;
 
     gSpritesetEntryUsed = 0;
-    gCurrentRoomEntry.firstSpritesetEvent = entry.firstSpritesetEvent;
-    gCurrentRoomEntry.secondSpritesetEvent = entry.secondSpritesetEvent;
+    gCurrentRoomEntry.firstSpriteLayerEvent = entry.firstSpriteLayerEvent;
+    gCurrentRoomEntry.secondSpriteLayerEvent = entry.secondSpriteLayerEvent;
 
-    if (gCurrentRoomEntry.secondSpritesetEvent != EVENT_NONE && CHECK_EVENT(gCurrentRoomEntry.secondSpritesetEvent))
+    if (gCurrentRoomEntry.secondSpriteLayerEvent != EVENT_NONE && CHECK_EVENT(gCurrentRoomEntry.secondSpriteLayerEvent))
     {
-        gCurrentRoomEntry.pEnemyRoomData = entry.pSecondSpriteData;
+        gCurrentRoomEntry.pSpriteLayer = entry.pSecondSpriteLayer;
         gSpriteset = entry.secondSpriteset;
         gSpritesetEntryUsed = 2;
     }
 
-    if (gCurrentRoomEntry.firstSpritesetEvent != EVENT_NONE && gSpritesetEntryUsed == 0
-        && CHECK_EVENT(gCurrentRoomEntry.firstSpritesetEvent))
+    if (gCurrentRoomEntry.firstSpriteLayerEvent != EVENT_NONE && gSpritesetEntryUsed == 0
+        && CHECK_EVENT(gCurrentRoomEntry.firstSpriteLayerEvent))
     {
-        gCurrentRoomEntry.pEnemyRoomData = entry.pFirstSpriteData;
+        gCurrentRoomEntry.pSpriteLayer = entry.pFirstSpriteLayer;
         gSpriteset = entry.firstSpriteset;
         gSpritesetEntryUsed = 1;
     }
 
     if (gSpritesetEntryUsed == 0)
     {
-        gCurrentRoomEntry.pEnemyRoomData = entry.pDefaultSpriteData;
+        gCurrentRoomEntry.pSpriteLayer = entry.pDefaultSpriteLayer;
         gSpriteset = entry.defaultSpriteset;
     }
 

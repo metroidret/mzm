@@ -13,8 +13,8 @@ const u8 sRidley_23_Bg1[488] = {
     #include "extracted/data/rooms/ridley/ridley_23_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sRidley_23_Spriteset0[2] = {
+const struct SpriteSpawn sRidley_23_SpriteLayer0[2] = {
     { .y = 19, .x = 14, .id = SPRITESET_IDX(2) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 

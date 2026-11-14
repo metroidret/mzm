@@ -39,10 +39,10 @@ const u8 sNorfair_16_Bg1[452] = {
     #include "extracted/data/rooms/norfair/norfair_16_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sNorfair_16_Spriteset0[4] = {
+const struct SpriteSpawn sNorfair_16_SpriteLayer0[4] = {
     { .y = 6, .x = 14, .id = SPRITESET_IDX(1) },
     { .y = 18, .x = 9, .id = SPRITESET_IDX(1) },
     { .y = 21, .x = 9, .id = SPRITESET_IDX(1) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 

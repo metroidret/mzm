@@ -25,8 +25,8 @@ const u8 sBrinstar_26_Bg1[340] = {
     #include "extracted/data/rooms/brinstar/brinstar_26_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sBrinstar_26_Spriteset0[2] = {
+const struct SpriteSpawn sBrinstar_26_SpriteLayer0[2] = {
     { .y = 9, .x = 9, .id = SPRITESET_IDX(2) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
