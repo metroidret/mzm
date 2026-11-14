@@ -35,21 +35,21 @@ const u8 sRidley_16_Bg2[1456] = {
     #include "extracted/data/rooms/ridley/ridley_16_bg2.gfx.inc"
 };
 
-const struct SpriteDataRom sRidley_16_Spriteset1[7] = {
+const struct SpriteSpawn sRidley_16_SpriteLayer1[7] = {
     { .y = 5, .x = 22, .id = SPRITESET_IDX(2) },
     { .y = 5, .x = 28, .id = SPRITESET_IDX(2) },
     { .y = 17, .x = 51, .id = SPRITESET_IDX(0) },
     { .y = 18, .x = 45, .id = SPRITESET_IDX(5) },
     { .y = 19, .x = 51, .id = SPRITESET_IDX(0) },
     { .y = 20, .x = 12, .id = SPRITESET_IDX(4) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sRidley_16_Bg1[760] = {
     #include "extracted/data/rooms/ridley/ridley_16_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sRidley_16_Spriteset0[8] = {
+const struct SpriteSpawn sRidley_16_SpriteLayer0[8] = {
     { .y = 5, .x = 22, .id = SPRITESET_IDX(2) },
     { .y = 5, .x = 25, .id = SPRITESET_IDX(2) },
     { .y = 5, .x = 28, .id = SPRITESET_IDX(2) },
@@ -57,7 +57,7 @@ const struct SpriteDataRom sRidley_16_Spriteset0[8] = {
     { .y = 18, .x = 45, .id = SPRITESET_IDX(5) },
     { .y = 19, .x = 51, .id = SPRITESET_IDX(1) },
     { .y = 20, .x = 12, .id = SPRITESET_IDX(4) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sRidley_16_Bg0[218] = {

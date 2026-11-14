@@ -25,8 +25,8 @@ const u8 sChozodia_33_Bg1[273] = {
     #include "extracted/data/rooms/chozodia/chozodia_33_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sChozodia_33_Spriteset0[1] = {
-    ROOM_SPRITE_DATA_TERMINATOR
+const struct SpriteSpawn sChozodia_33_SpriteLayer0[1] = {
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sChozodia_33_Bg0[44] = {

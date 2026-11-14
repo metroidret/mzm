@@ -21,20 +21,20 @@ const u8 sChozodia_52_Bg2[231] = {
     #include "extracted/data/rooms/chozodia/chozodia_52_bg2.gfx.inc"
 };
 
-const struct SpriteDataRom sChozodia_52_Spriteset1[2] = {
+const struct SpriteSpawn sChozodia_52_SpriteLayer1[2] = {
     { .y = 21, .x = 4, .id = SPRITESET_IDX(3) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sChozodia_52_Bg1[482] = {
     #include "extracted/data/rooms/chozodia/chozodia_52_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sChozodia_52_Spriteset0[5] = {
+const struct SpriteSpawn sChozodia_52_SpriteLayer0[5] = {
     { .y = 9, .x = 4, .id = SPRITESET_IDX(3) },
     { .y = 15, .x = 13, .id = SPRITESET_IDX(3) },
     { .y = 21, .x = 4, .id = SPRITESET_IDX(3) },
     { .y = 30, .x = 2, .id = SPRITESET_IDX(1) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 

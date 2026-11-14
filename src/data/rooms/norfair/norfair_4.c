@@ -5,7 +5,7 @@ const u8 sNorfair_4_Clipdata[507] = {
     #include "extracted/data/rooms/norfair/norfair_4_clipdata.gfx.inc"
 };
 
-const struct SpriteDataRom sNorfair_4_Spriteset2[17] = {
+const struct SpriteSpawn sNorfair_4_SpriteLayer2[17] = {
     { .y = 4, .x = 43, .id = SPRITESET_IDX(1) },
     { .y = 8, .x = 49, .id = SPRITESET_IDX(0) },
     { .y = 9, .x = 29, .id = SPRITESET_IDX(0) },
@@ -22,14 +22,14 @@ const struct SpriteDataRom sNorfair_4_Spriteset2[17] = {
     { .y = 18, .x = 37, .id = SPRITESET_IDX(1) },
     { .y = 18, .x = 85, .id = SPRITESET_IDX(2) },
     { .y = 22, .x = 66, .id = SPRITESET_IDX(4) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sNorfair_4_Bg2[63] = {
     #include "extracted/data/rooms/norfair/norfair_4_bg2.gfx.inc"
 };
 
-const struct SpriteDataRom sNorfair_4_Spriteset1[14] = {
+const struct SpriteSpawn sNorfair_4_SpriteLayer1[14] = {
     { .y = 6, .x = 41, .id = SPRITESET_IDX(0) },
     { .y = 7, .x = 37, .id = SPRITESET_IDX(0) },
     { .y = 9, .x = 54, .id = SPRITESET_IDX(3) },
@@ -43,21 +43,21 @@ const struct SpriteDataRom sNorfair_4_Spriteset1[14] = {
     { .y = 18, .x = 34, .id = SPRITESET_IDX(3) },
     { .y = 18, .x = 85, .id = SPRITESET_IDX(2) },
     { .y = 22, .x = 66, .id = SPRITESET_IDX(4) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sNorfair_4_Bg1[1198] = {
     #include "extracted/data/rooms/norfair/norfair_4_bg1.gfx.inc"
 };
 
-const struct SpriteDataRom sNorfair_4_Spriteset0[7] = {
+const struct SpriteSpawn sNorfair_4_SpriteLayer0[7] = {
     { .y = 9, .x = 54, .id = SPRITESET_IDX(3) },
     { .y = 12, .x = 81, .id = SPRITESET_IDX(1) },
     { .y = 17, .x = 40, .id = SPRITESET_IDX(0) },
     { .y = 18, .x = 34, .id = SPRITESET_IDX(3) },
     { .y = 18, .x = 85, .id = SPRITESET_IDX(2) },
     { .y = 22, .x = 66, .id = SPRITESET_IDX(4) },
-    ROOM_SPRITE_DATA_TERMINATOR
+    SPRITE_SPAWN_TERMINATOR
 };
 
 const u8 sNorfair_4_Bg0[402] = {

@@ -29,18 +29,18 @@ extern const u8 sTest_4_Clipdata[314];
 extern const u8 sTest_4_Bg2[14];
 extern const u8 sTest_4_Bg1[330];
 
-extern const struct SpriteDataRom sTest1_0_SpriteData[2];
-extern const struct SpriteDataRom sTest1_1_SpriteData[3];
-extern const struct SpriteDataRom sTest1_2_SpriteData[2];
-extern const struct SpriteDataRom sTest1_3_SpriteData[2];
-extern const struct SpriteDataRom sTest_4_SpriteData[1];
-extern const struct SpriteDataRom sTest2_0_SpriteData[2];
-extern const struct SpriteDataRom sTest2_1_SpriteData[1];
-extern const struct SpriteDataRom sTest2_2_SpriteData[1];
-extern const struct SpriteDataRom sTest2_3_SpriteData[2];
-extern const struct SpriteDataRom sTest3_0_SpriteData[7];
-extern const struct SpriteDataRom sTest3_1_SpriteData[1];
-extern const struct SpriteDataRom sTest3_2_SpriteData[1];
-extern const struct SpriteDataRom sTest3_3_SpriteData[3];
+extern const struct SpriteSpawn sTest1_0_SpriteLayer[2];
+extern const struct SpriteSpawn sTest1_1_SpriteLayer[3];
+extern const struct SpriteSpawn sTest1_2_SpriteLayer[2];
+extern const struct SpriteSpawn sTest1_3_SpriteLayer[2];
+extern const struct SpriteSpawn sTest_4_SpriteLayer[1];
+extern const struct SpriteSpawn sTest2_0_SpriteLayer[2];
+extern const struct SpriteSpawn sTest2_1_SpriteLayer[1];
+extern const struct SpriteSpawn sTest2_2_SpriteLayer[1];
+extern const struct SpriteSpawn sTest2_3_SpriteLayer[2];
+extern const struct SpriteSpawn sTest3_0_SpriteLayer[7];
+extern const struct SpriteSpawn sTest3_1_SpriteLayer[1];
+extern const struct SpriteSpawn sTest3_2_SpriteLayer[1];
+extern const struct SpriteSpawn sTest3_3_SpriteLayer[3];
 
 #endif /* TEST_ROOMS_DATA_H */
