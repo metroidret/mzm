@@ -58,9 +58,11 @@ ifeq ($(DEBUG),1)
 	CPPFLAGS += -DDEBUG
 	ASFLAGS += --defsym DEBUG=1
 	TARGET := $(TARGET)_debug
+else
+# Only retail/beta builds have a baserom
+	BASEROM := $(TARGET)_baserom.gba
 endif
 
-BASEROM := $(TARGET)_baserom.gba
 TARGET := $(TARGET).gba
 
 # Default target
@@ -70,7 +72,7 @@ all: $(TARGET)
 ELF = $(TARGET:.gba=.elf)
 MAP = $(TARGET:.gba=.map)
 SHA1FILE = $(TARGET:.gba=.sha1)
-DUMPS = $(BASEROM:.gba=.dump) $(TARGET:.gba=.dump)
+DUMPS = $(if $(BASEROM),$(BASEROM:.gba=.dump)) $(TARGET:.gba=.dump)
 LD_SCRIPT = linker.ld.pp
 
 # ROM header
@@ -157,18 +159,22 @@ ifeq ($(SETUP_PREREQS),1)
 endif
 
 
-.PHONY: check
+.PHONY: check dump diff
+
+dump: $(DUMPS)
+
+ifeq ($(DEBUG),1)
+check diff:
+	$(error '$@' needs a base ROM, which doesn't exist for DEBUG=1 builds)
+else
 check: all
 	$(MSG) SHA1SUM $(SHA1FILE)
 	$Q$(SHA1SUM) -c $(SHA1FILE)
 
-.PHONY: dump
-dump: $(DUMPS)
-
-.PHONY: diff
 diff: $(DUMPS)
 	$(MSG) DIFF $^
 	$Q$(DIFF) $^
+endif
 
 .PHONY: extract
 extract:
