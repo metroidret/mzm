@@ -26461,7 +26461,7 @@
   },
   {
     "path": "menus/erase_sram/background.pal",
-    "count": "0xEF",
+    "count": "0xD0",
     "addr": {
       "us": "0x411608",
       "eu": "0x41243C",

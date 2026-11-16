@@ -5,8 +5,22 @@
 const u16 sEraseSramMenuObjectsPal[7 * 16] = {
     #include "extracted/data/menus/erase_sram/objects.pal.inc"
 };
-const u16 sEraseSramMenuBackgroundPal[15 * 16 - 1] = {
+const u16 sEraseSramMenuBackgroundPal[13 * 16] = {
     #include "extracted/data/menus/erase_sram/background.pal.inc"
+};
+
+static const u16 sEraseSramOam_UnusedFrame_4117a8[OAM_DATA_SIZE(10)] = {
+    10,
+    OAM_ENTRY(-112, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x100, 3, 0),
+    OAM_ENTRY(-112, 32, OAM_DIMS_64x32, OAM_NO_FLIP, 0x200, 3, 0),
+    OAM_ENTRY(48, -32, OAM_DIMS_64x64, OAM_NO_FLIP, 0x104, 3, 0),
+    OAM_ENTRY(48, 32, OAM_DIMS_64x32, OAM_NO_FLIP, 0x204, 3, 0),
+    OAM_ENTRY(-48, -32, OAM_DIMS_32x64, OAM_NO_FLIP, 0x104, 3, 0),
+    OAM_ENTRY(-48, 32, OAM_DIMS_32x32, OAM_NO_FLIP, 0x204, 3, 0),
+    OAM_ENTRY(-16, -32, OAM_DIMS_32x64, OAM_NO_FLIP, 0x104, 3, 0),
+    OAM_ENTRY(-16, 32, OAM_DIMS_32x32, OAM_NO_FLIP, 0x204, 3, 0),
+    OAM_ENTRY(16, -32, OAM_DIMS_32x64, OAM_NO_FLIP, 0x104, 3, 0),
+    OAM_ENTRY(16, 32, OAM_DIMS_32x32, OAM_NO_FLIP, 0x204, 3, 0),
 };
 
 static const u16 sEraseSramOam_ConfirmWindowNoSelected_Frame0[OAM_DATA_SIZE(17)] = {
