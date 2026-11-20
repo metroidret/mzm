@@ -597,9 +597,9 @@ void RoomSetBackgroundScrolling(void)
 
     switch (gCurrentRoomEntry.bg3Scrolling)
     {
-        case 7:
-        case 8:
-        case 10:
+        case BG3_SCROLLING_X_ONLY_ACTIVE:
+        case BG3_SCROLLING_X_ONLY_ACTIVE_AGAIN:
+        case BG3_SCROLLING_NORMAL_ACTIVE:
             gBg3Movement.active = TRUE;
     }
 
