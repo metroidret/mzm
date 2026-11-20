@@ -17,7 +17,7 @@ Derived from this there is the following requirement for contributors:
 
 ## LLM Policy
 
-This is a human-driven decompilation. It is a passion project that exists to understand and document Metroid Fusion. If you use an LLM (large language model), the following rules must be followed when submitting a PR:
+This is a human-driven decompilation. It is a passion project that exists to understand and document Metroid Zero Mission. If you use an LLM (large language model), the following rules must be followed when submitting a PR:
 - You must understand every part of what you submit. Reviewers may ask you to explain any part of your PR.
 - Disclose that you used an LLM and say what it was used for.
 - PRs should ideally be limited in scope to a specific goal (ex: adding new functions to a file, renaming enum values).
