@@ -88,75 +88,75 @@ void TransparencySetRoomEffectsTransparency(void)
 
     switch (gCurrentRoomEntry.transparency)
     {
-        case 0x0:
-        case 0x1:
-        case 0x2:
-        case 0x3:
-        case 0x4:
-        case 0x8:
-        case 0xC:
-        case 0x10:
-        case 0x14:
-        case 0x18:
-        case 0x1C:
-        case 0x20:
-        case 0x24:
-        case 0x28:
-        case 0x2C:
-        case 0x30:
+        case TRANSPARENCY_NONE | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_NONE | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_NONE | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_NONE | TRANSPARENCY_BG0_LOW_PRIORITY:
+        case TRANSPARENCY_04 | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVA_07 | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVA_0A | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVA_0D | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVA_10 | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVB_00 | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVB_03 | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVB_06 | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVB_09 | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVB_0B | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVB_0D | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVB_10 | TRANSPARENCY_BG0_HIGH_PRIORITY:
         default:
             bgCnt[0] |= BGCNT_HIGH_PRIORITY;
             bgCnt[1] |= BGCNT_HIGH_MID_PRIORITY;
             bgCnt[2] |= BGCNT_LOW_MID_PRIORITY;
             break;
-     
-        case 0x5:
-        case 0x9:
-        case 0xD:
-        case 0x11:
-        case 0x15:
-        case 0x19:
-        case 0x1D:
-        case 0x21:
-        case 0x25:
-        case 0x29:
-        case 0x2D:
-        case 0x31:
+
+        case TRANSPARENCY_04 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVA_07 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVA_0A | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVA_0D | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVA_10 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVB_00 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVB_03 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVB_06 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVB_09 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVB_0B | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVB_0D | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVB_10 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
             bgCnt[0] |= BGCNT_HIGH_MID_PRIORITY;
             bgCnt[1] |= BGCNT_HIGH_PRIORITY;
             bgCnt[2] |= BGCNT_LOW_MID_PRIORITY;
             break;
 
-        case 0x6:
-        case 0xA:
-        case 0xE:
-        case 0x12:
-        case 0x16:
-        case 0x1A:
-        case 0x1E:
-        case 0x22:
-        case 0x26:
-        case 0x2A:
-        case 0x2E:
-        case 0x32:
+        case TRANSPARENCY_04 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVA_07 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVA_0A | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVA_0D | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVA_10 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVB_00 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVB_03 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVB_06 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVB_09 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVB_0B | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVB_0D | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVB_10 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
             bgCnt[0] |= BGCNT_HIGH_MID_PRIORITY;
             bgCnt[1] |= BGCNT_HIGH_PRIORITY;
             bgCnt[2] |= BGCNT_LOW_MID_PRIORITY;
             gSamusOnTopOfBackgrounds = TRUE;
             break;
 
-        case 0x7:
-        case 0xB:
-        case 0xF:
-        case 0x13:
-        case 0x17:
-        case 0x1B:
-        case 0x1F:
-        case 0x23:
-        case 0x27:
-        case 0x2B:
-        case 0x2F:
-        case 0x33:
+        case TRANSPARENCY_04 | TRANSPARENCY_BG0_LOW_PRIORITY:
+        case TRANSPARENCY_EVA_07 | TRANSPARENCY_BG0_LOW_PRIORITY:
+        case TRANSPARENCY_EVA_0A | TRANSPARENCY_BG0_LOW_PRIORITY:
+        case TRANSPARENCY_EVA_0D | TRANSPARENCY_BG0_LOW_PRIORITY:
+        case TRANSPARENCY_EVA_10 | TRANSPARENCY_BG0_LOW_PRIORITY:
+        case TRANSPARENCY_EVB_00 | TRANSPARENCY_BG0_LOW_PRIORITY:
+        case TRANSPARENCY_EVB_03 | TRANSPARENCY_BG0_LOW_PRIORITY:
+        case TRANSPARENCY_EVB_06 | TRANSPARENCY_BG0_LOW_PRIORITY:
+        case TRANSPARENCY_EVB_09 | TRANSPARENCY_BG0_LOW_PRIORITY:
+        case TRANSPARENCY_EVB_0B | TRANSPARENCY_BG0_LOW_PRIORITY:
+        case TRANSPARENCY_EVB_0D | TRANSPARENCY_BG0_LOW_PRIORITY:
+        case TRANSPARENCY_EVB_10 | TRANSPARENCY_BG0_LOW_PRIORITY:
             bgCnt[0] |= BGCNT_LOW_MID_PRIORITY;
             bgCnt[1] |= BGCNT_HIGH_PRIORITY;
             bgCnt[2] |= BGCNT_HIGH_MID_PRIORITY;
@@ -169,80 +169,80 @@ void TransparencySetRoomEffectsTransparency(void)
 
     switch (gCurrentRoomEntry.transparency)
     {
-        case 0x18:
-        case 0x19:
-        case 0x1A:
-        case 0x1B:
+        case TRANSPARENCY_EVB_00 | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVB_00 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVB_00 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVB_00 | TRANSPARENCY_BG0_LOW_PRIORITY:
             evb = 0;
             break;
 
-        case 0x1C:
-        case 0x1D:
-        case 0x1E:
-        case 0x1F:
+        case TRANSPARENCY_EVB_03 | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVB_03 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVB_03 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVB_03 | TRANSPARENCY_BG0_LOW_PRIORITY:
             evb = 3;
             break;
 
-        case 0x20:
-        case 0x21:
-        case 0x22:
-        case 0x23:
+        case TRANSPARENCY_EVB_06 | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVB_06 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVB_06 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVB_06 | TRANSPARENCY_BG0_LOW_PRIORITY:
             evb = 6;
             break;
 
-        case 0x24:
-        case 0x25:
-        case 0x26:
-        case 0x27:
+        case TRANSPARENCY_EVB_09 | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVB_09 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVB_09 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVB_09 | TRANSPARENCY_BG0_LOW_PRIORITY:
             evb = 9;
             break;
 
-        case 0x28:
-        case 0x29:
-        case 0x2A:
-        case 0x2B:
+        case TRANSPARENCY_EVB_0B | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVB_0B | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVB_0B | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVB_0B | TRANSPARENCY_BG0_LOW_PRIORITY:
             evb = 11;
             break;
 
-        case 0x2C:
-        case 0x2D:
-        case 0x2E:
-        case 0x2F:
+        case TRANSPARENCY_EVB_0D | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVB_0D | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVB_0D | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVB_0D | TRANSPARENCY_BG0_LOW_PRIORITY:
             evb = 13;
             break;
 
-        case 0x30:
-        case 0x31:
-        case 0x32:
-        case 0x33:
+        case TRANSPARENCY_EVB_10 | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVB_10 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVB_10 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVB_10 | TRANSPARENCY_BG0_LOW_PRIORITY:
             evb = 16;
             break;
 
-        case 0x8:
-        case 0x9:
-        case 0xA:
-        case 0xB:
+        case TRANSPARENCY_EVA_07 | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVA_07 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVA_07 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVA_07 | TRANSPARENCY_BG0_LOW_PRIORITY:
             eva = 7;
             break;
 
-        case 0xC:
-        case 0xD:
-        case 0xE:
-        case 0xF:
+        case TRANSPARENCY_EVA_0A | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVA_0A | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVA_0A | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVA_0A | TRANSPARENCY_BG0_LOW_PRIORITY:
             eva = 10;
             break;
 
-        case 0x10:
-        case 0x11:
-        case 0x12:
-        case 0x13:
+        case TRANSPARENCY_EVA_0D | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVA_0D | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVA_0D | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVA_0D | TRANSPARENCY_BG0_LOW_PRIORITY:
             eva = 13;
             break;
 
-        case 0x14:
-        case 0x15:
-        case 0x16:
-        case 0x17:
+        case TRANSPARENCY_EVA_10 | TRANSPARENCY_BG0_HIGH_PRIORITY:
+        case TRANSPARENCY_EVA_10 | TRANSPARENCY_BG0_HIGH_MID_PRIORITY:
+        case TRANSPARENCY_EVA_10 | TRANSPARENCY_BG0_LOW_MID_PRIORITY:
+        case TRANSPARENCY_EVA_10 | TRANSPARENCY_BG0_LOW_PRIORITY:
             eva = 16;
             break;
     }
@@ -302,7 +302,7 @@ void TransparencySetRoomEffectsTransparency(void)
     gIoRegistersBackup.BG2CNT = bgCnt[2];
     gIoRegistersBackup.BG3CNT = bgCnt[3];
 
-    if (gCurrentRoomEntry.transparency < 8)
+    if (gCurrentRoomEntry.transparency < (TRANSPARENCY_EVA_07 | TRANSPARENCY_BG0_HIGH_PRIORITY))
     {
         gDefaultTransparency.bldcnt = BLDCNT_ALPHA_BLENDING_EFFECT | BLDCNT_SCREEN_SECOND_TARGET;
     }
