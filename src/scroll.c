@@ -1042,47 +1042,47 @@ u32 ScrollGetBg3Scroll(void)
 
     switch (gCurrentRoomEntry.bg3Scrolling)
     {
-        case 0:
+        case BG3_SCROLLING_NONE:
             break;
 
-        case 1:
+        case BG3_SCROLLING_X_ONLY_HALVED:
             xScroll = BG3_SCROLLING_TYPE_HALVED;
             yScroll = BG3_SCROLLING_TYPE_NONE;
             break;
 
-        case 2:
+        case BG3_SCROLLING_Y_ONLY_HALVED:
             xScroll = BG3_SCROLLING_TYPE_NONE;
             yScroll = BG3_SCROLLING_TYPE_HALVED;
             break;
 
-        case 3:
+        case BG3_SCROLLING_HALVED:
             xScroll = BG3_SCROLLING_TYPE_HALVED;
             yScroll = BG3_SCROLLING_TYPE_HALVED;
             break;
 
-        case 4:
+        case BG3_SCROLLING_Y_HALVED:
             xScroll = BG3_SCROLLING_TYPE_NORMAL;
             yScroll = BG3_SCROLLING_TYPE_HALVED;
             break;
 
-        case 5:
+        case BG3_SCROLLING_X_HALVED:
             xScroll = BG3_SCROLLING_TYPE_HALVED;
             yScroll = BG3_SCROLLING_TYPE_NORMAL;
             break;
 
-        case 6:
-        case 10:
+        case BG3_SCROLLING_NORMAL:
+        case BG3_SCROLLING_NORMAL_ACTIVE:
             xScroll = BG3_SCROLLING_TYPE_NORMAL;
             yScroll = BG3_SCROLLING_TYPE_NORMAL;
             break;
-        
-        case 9:
+
+        case BG3_SCROLLING_X_ONLY_QUARTERED:
             xScroll = BG3_SCROLLING_TYPE_QUARTERED;
             yScroll = BG3_SCROLLING_TYPE_NONE;
             break;
 
-        case 7:
-        case 8:
+        case BG3_SCROLLING_X_ONLY_ACTIVE:
+        case BG3_SCROLLING_X_ONLY_ACTIVE_AGAIN:
             xScroll = BG3_SCROLLING_TYPE_NORMAL;
             yScroll = BG3_SCROLLING_TYPE_NONE;
     }
