@@ -25,5 +25,6 @@ include/**/*.s
 tools/*.txt
 tools/agbcc
 .vscode
+.clangd
 
 err.log
