@@ -3,6 +3,7 @@
 /sound/direct_sound_samples/*
 /nes_metroid/data/*
 /include/extracted/*
+/docs/doxygen/*
 
 *.gba
 *.gba.lz
