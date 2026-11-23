@@ -36,10 +36,10 @@ extern struct TilesetTransparentColor gTilesetTransparentColor;
 
 struct RoomEntry {
     u8 tileset;
-    u8 bg0Prop;
-    u8 bg1Prop;
-    u8 bg2Prop;
-    u8 bg3Prop;
+    BgProperty bg0Prop;
+    BgProperty bg1Prop;
+    BgProperty bg2Prop;
+    BgProperty bg3Prop;
     RoomScrollFlags scrollsFlag;
     Bg3Scrolling bg3Scrolling;
     Transparency transparency;
@@ -61,10 +61,10 @@ struct RoomEntry {
 
 struct RoomEntryRom {
     u8 tileset;
-    u8 bg0Prop;
-    u8 bg1Prop;
-    u8 bg2Prop;
-    u8 bg3Prop;
+    BgProperty bg0Prop;
+    BgProperty bg1Prop;
+    BgProperty bg2Prop;
+    BgProperty bg3Prop;
     const u8* pBg0Data;
     const u8* pBg1Data;
     const u8* pBg2Data;
