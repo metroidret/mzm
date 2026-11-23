@@ -8,6 +8,7 @@
 #include "constants/event.h"
 #include "constants/room.h"
 #include "constants/transparency.h"
+#include "structs/scroll.h"
 
 struct PACKED SpriteSpawn {
     u8 y;
@@ -40,7 +41,7 @@ struct RoomEntry {
     u8 bg2Prop;
     u8 bg3Prop;
     RoomScrollFlags scrollsFlag;
-    u8 bg3Scrolling;
+    Bg3Scrolling bg3Scrolling;
     Transparency transparency;
     const struct SpriteSpawn* pSpriteLayer;
     Event firstSpriteLayerEvent;
@@ -69,7 +70,7 @@ struct RoomEntryRom {
     const u8* pBg2Data;
     const u8* pClipData;
     const u8* pBg3Data;
-    u8 bg3Scrolling;
+    Bg3Scrolling bg3Scrolling;
     Transparency transparency;
     const struct SpriteSpawn* pDefaultSpriteLayer;
     u8 defaultSpriteset;
