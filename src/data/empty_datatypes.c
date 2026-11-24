@@ -6,6 +6,7 @@
 #include "constants/power_bomb_explosion.h"
 
 #include "structs/screen_shake.h"
+#include "structs/scroll.h"
 
 // 345868
 

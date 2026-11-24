@@ -1,30 +1,26 @@
 #include "data/rooms/brinstar_rooms_data.h"
 #include "macros.h"
 
-const u8 sBrinstar_0_Scrolls[SCROLL_DATA_SIZE(3)] = {
-	0, // Room
-	3, // Number of scrolls
-	
-	// Scroll 0
-	2, 76, // X bounds
-	22, 31, // Y bounds
-	UCHAR_MAX, UCHAR_MAX, // Breakable block position
-	UCHAR_MAX, // Breakable block direction
-	UCHAR_MAX, // Breakable block Y bound extension
-
-	// Scroll 1
-	32, 46, // X bounds
-	2, 23, // Y bounds
-	UCHAR_MAX, UCHAR_MAX, // Breakable block position
-	UCHAR_MAX, // Breakable block direction
-	UCHAR_MAX, // Breakable block Y bound extension
-
-	// Scroll 2
-	32, 46, // X bounds
-	31, 41, // Y bounds
-	UCHAR_MAX, UCHAR_MAX, // Breakable block position
-	UCHAR_MAX, // Breakable block direction
-	UCHAR_MAX, // Breakable block Y bound extension
+const struct ScrollArray(3) sBrinstar_0_Scrolls = {
+    .room = 0,
+    .scrolls_len = 3,
+    .scrolls = {
+        {
+            .x_bounds = { 2, 76 },
+            .y_bounds = { 22, 31 },
+            .extension = SCROLL_EXTENSION_NONE,
+        },
+        {
+            .x_bounds = { 32, 46 },
+            .y_bounds = { 2, 23 },
+            .extension = SCROLL_EXTENSION_NONE,
+        },
+        {
+            .x_bounds = { 32, 46 },
+            .y_bounds = { 31, 41 },
+            .extension = SCROLL_EXTENSION_NONE,
+        }
+    }
 };
 
 const u8 sBrinstar_0_Clipdata[311] = {

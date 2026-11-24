@@ -26,7 +26,7 @@ static const u8* sScrollPointer_Empty[] = {
 };
 
 static const u8* sBrinstarScrolls[] = {
-    sBrinstar_0_Scrolls,
+    (const u8*) &sBrinstar_0_Scrolls,
     sBrinstar_1_Scrolls,
     sBrinstar_2_Scrolls,
     sBrinstar_3_Scrolls,
